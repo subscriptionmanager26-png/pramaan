@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #ffffff;
+  --color-paper-2: #f7f7f8;
+  --color-ink: #0f1115;
+  --color-ink-2: #3f4550;
+  --color-ink-3: #8b919b;
+  --color-line: #eceef2;
+  --color-accent: #f97316;
+  --color-accent-2: #fff4eb;
+  --color-navy: #0f1115;
+  --color-violet: #7c6cf0;
+  --color-violet-2: #f0edff;
+  --color-gold: #f97316;
+  --color-gold-2: #fff4eb;
+  --color-white: #ffffff;
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background: #f7f7f8;
+  color: #0f1115;
+}
+
+body {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #fff4eb;
+  color: #0f1115;
+}
+
+.card {
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

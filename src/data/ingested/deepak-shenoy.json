@@ -1,0 +1,304 @@
+{
+  "fetchedAt": "2026-08-22T17:30:20.659Z",
+  "notes": {
+    "twitter": "Best-effort public reader; prefer official API for production.",
+    "youtube": "User-shared @business is Bloomberg Originals; used @CapitalmindHQ instead.",
+    "substack": "User-shared reboundcapital.substack.com is a different publication; used deepakshenoy.substack.com."
+  },
+  "creator": {
+    "slug": "deepak-shenoy",
+    "name": "Deepak Shenoy",
+    "city": "Bengaluru",
+    "headline": "Founder of Capitalmind. Writes plainly about Indian markets, funds, and regulation.",
+    "bio": "CEO of Capitalmind Mutual Fund and founder of Capitalmind. Public writing and podcasts cover Indian markets, mutual funds, and the plumbing of finance. Views in personal posts are his own.",
+    "sebi": {
+      "type": "RA",
+      "number": "INH000014003",
+      "validTill": "2027-12-31"
+    },
+    "specialties": [
+      "Markets",
+      "Mutual funds",
+      "Fixed income",
+      "Taxation"
+    ],
+    "sources": [
+      {
+        "kind": "twitter",
+        "handle": "@deepakshenoy",
+        "url": "https://x.com/deepakshenoy"
+      },
+      {
+        "kind": "substack",
+        "handle": "deepakshenoy",
+        "url": "https://deepakshenoy.substack.com"
+      },
+      {
+        "kind": "youtube",
+        "handle": "@CapitalmindHQ",
+        "url": "https://www.youtube.com/@CapitalmindHQ"
+      },
+      {
+        "kind": "podcast",
+        "handle": "Capitalmind with Deepak & Shray",
+        "url": "https://capitalmind.libsyn.com"
+      }
+    ],
+    "initials": "DS",
+    "color": "#0C4A6E"
+  },
+  "content": [
+    {
+      "slug": "deepak-shenoy-twitter-1-a-deeper-look-at-what-we-do-in-the-capit",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "thread",
+      "source": "twitter",
+      "title": "A deeper look at what we do in the @CapitalmindMF Flexi Cap fund and our investment approach.",
+      "summary": "A deeper look at what we do in the @CapitalmindMF Flexi Cap fund and our investment approach.",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-08-22T17:30:20.658Z",
+      "duration": "Post",
+      "url": "https://x.com/deepakshenoy"
+    },
+    {
+      "slug": "deepak-shenoy-twitter-2-i-have-a-different-opinion-on-this-order",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "thread",
+      "source": "twitter",
+      "title": "I have a different opinion on this order against the two entities supposedly involved in the cas auction manipulation. The outrage seems …",
+      "summary": "I have a different opinion on this order against the two entities supposedly involved in the cas auction manipulation. The outrage seems to be about this: Placed buy orders at highest possible point or sell at lowest possible point (3% higher or lower) and that is bad Because",
+      "topic": "Taxation",
+      "publishedAt": "2026-08-22T17:30:20.658Z",
+      "duration": "Post",
+      "url": "https://x.com/deepakshenoy"
+    },
+    {
+      "slug": "deepak-shenoy-twitter-3-move-follows-the-data-release-by-the-us-",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "thread",
+      "source": "twitter",
+      "title": "Move follows the data release by the US where they show UK, Norway, UAE, Japan and China selling treasuries in June. Buybacks is from tre…",
+      "summary": "Move follows the data release by the US where they show UK, Norway, UAE, Japan and China selling treasuries in June. Buybacks is from treasury (not the fed) so it doesn't add to liquidity, but they're financing it with short term TBills - so techniclaly replacing long term debt",
+      "topic": "Fixed income",
+      "publishedAt": "2026-08-22T17:30:20.658Z",
+      "duration": "Post",
+      "url": "https://x.com/deepakshenoy"
+    },
+    {
+      "slug": "deepak-shenoy-twitter-4-a-precision-temperature-sensor-manufactu",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "thread",
+      "source": "twitter",
+      "title": "A precision temperature sensor manufacturer A Metal Injection Moulding company, very few exist worldwide A sensorless motor controller/el…",
+      "summary": "A precision temperature sensor manufacturer A Metal Injection Moulding company, very few exist worldwide A sensorless motor controller/electronic fuel injection ECU maker Some of the recent IPOs are fascinating in the manufacturing space.",
+      "topic": "IPOs",
+      "publishedAt": "2026-08-22T17:30:20.658Z",
+      "duration": "Post",
+      "url": "https://x.com/deepakshenoy"
+    },
+    {
+      "slug": "deepak-shenoy-twitter-5-oh-this-will-increase-substantially-afte",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "thread",
+      "source": "twitter",
+      "title": "Oh this will increase substantially after the gold duty was increased to 15%. They will smuggle gold, do shady billing abroad and send do…",
+      "summary": "Oh this will increase substantially after the gold duty was increased to 15%. They will smuggle gold, do shady billing abroad and send dollars out.",
+      "topic": "Fixed income",
+      "publishedAt": "2026-08-22T17:30:20.658Z",
+      "duration": "Post",
+      "url": "https://x.com/deepakshenoy"
+    },
+    {
+      "slug": "deepak-shenoy-international-investing-watch-this-before-you-move-your-money",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "video",
+      "source": "youtube",
+      "title": "International Investing: Watch This Before You Move Your Money",
+      "summary": "With global markets on a ride and Indian markets still muted, should Indian investors be looking abroad? In this episode of the Capitalmind Podcast, Shray Chandra, Co-founder at Capitalmind Financial Services, speaks with Deepak Shenoy, Founder & Chairperson of Capitalmind Financ",
+      "topic": "Markets",
+      "publishedAt": "2026-08-21T14:53:02.000Z",
+      "duration": "Video",
+      "url": "https://www.youtube.com/watch?v=lIxaTMHj-5c"
+    },
+    {
+      "slug": "deepak-shenoy-uk-and-canada-nris-and-ocis-investing-in-india-taxes-matter-more-than-re",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "video",
+      "source": "youtube",
+      "title": "UK & Canada NRIs and OCIs Investing in India: Taxes Matter More Than Returns",
+      "summary": "If you're a UK or Canada-based NRI or OCI investing in India, your investment returns may depend just as much on how you invest as what you invest in. In this episode of the Capitalmind Podcast, Shray Chandra (Co-founder & Director, Capitalmind Financial Services) is joined by De",
+      "topic": "Taxation",
+      "publishedAt": "2026-08-08T07:04:19.000Z",
+      "duration": "Video",
+      "url": "https://www.youtube.com/watch?v=QGd8IvIAlQA"
+    },
+    {
+      "slug": "deepak-shenoy-nbfcs-can-t-do-on-demand-take-and-repay-loans-anymore",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "newsletter",
+      "source": "substack",
+      "title": "NBFCs can't do On-Demand take-and-repay loans anymore?",
+      "summary": "RBI asks for comments on draft regulation that removes overdraft style on-demand take/repay loans by NBFCs",
+      "topic": "Taxation",
+      "publishedAt": "2026-08-07T12:49:59.000Z",
+      "duration": "3 min read",
+      "url": "https://deepakshenoy.substack.com/p/nbfcs-cant-do-on-demand-take-and"
+    },
+    {
+      "slug": "deepak-shenoy-should-you-invest-in-a-flexi-cap-fund-ft-deepak-shenoy",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "video",
+      "source": "youtube",
+      "title": "Should You Invest in a Flexi Cap Fund? Ft. Deepak Shenoy",
+      "summary": "Should you buy a Flexi Cap fund? Or should you just build your own mix of large, mid and small cap funds? Deepak's answer is pretty simple. It depends on you. Do you have the time to track your funds? Do you enjoy doing it? Do you know how to get the mix right? If yes, you can do",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-08-07T12:29:58.000Z",
+      "duration": "Video",
+      "url": "https://www.youtube.com/shorts/aP_ioarT6-Y"
+    },
+    {
+      "slug": "deepak-shenoy-peak-pessimism-in-india-what-does-the-data-say",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "podcast",
+      "source": "podcast",
+      "title": "Peak Pessimism in India: What Does The Data Say?",
+      "summary": "Is India really becoming uninvestable, or are investors missing the bigger picture? In this episode of the Capitalmind Podcast, Shray Chandra, Co-founder at Capitalmind Financial Services, speaks with Deepak Shenoy, Founder and CEO, Capitalmind Mutual Fund, about the current pess",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-08-05T14:09:00.000Z",
+      "duration": "56:00",
+      "url": "https://capitalmind.libsyn.com/peak-pessimism-in-india-what-does-the-data-say"
+    },
+    {
+      "slug": "deepak-shenoy-ai-can-optimize-your-investments-but-is-that-your-biggest-financial-risk",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "podcast",
+      "source": "podcast",
+      "title": "AI Can Optimize Your Investments. But Is That Your Biggest Financial Risk?",
+      "summary": "What's the deal with AI? Can it manage your money? Can it make you rich? Artificial Intelligence is changing much more than how we invest. It could fundamentally reshape careers, incomes, financial advice and the way we build wealth. In this episode of the Capitalmind Podcast, Sh",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-08-05T13:48:00.000Z",
+      "duration": "01:09:59",
+      "url": "https://capitalmind.libsyn.com/ai-can-optimize-your-investments-but-is-that-your-biggest-financial-risk"
+    },
+    {
+      "slug": "deepak-shenoy-ai-can-optimize-your-investments-but-is-that-your-biggest-financial-risk",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "video",
+      "source": "youtube",
+      "title": "AI Can Optimize Your Investments. But Is That Your Biggest Financial Risk?",
+      "summary": "What's the deal with AI? Can it manage your money? Can it make you rich? Artificial Intelligence is changing much more than how we invest. It could fundamentally reshape careers, incomes, financial advice and the way we build wealth. In this episode of the Capitalmind Podcast, Sh",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-07-21T10:30:30.000Z",
+      "duration": "Video",
+      "url": "https://www.youtube.com/watch?v=uvp3V7F31k0"
+    },
+    {
+      "slug": "deepak-shenoy-peak-pessimism-in-india-what-does-the-data-say",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "video",
+      "source": "youtube",
+      "title": "Peak Pessimism in India: What Does The Data Say?",
+      "summary": "Is India really becoming uninvestable, or are investors missing the bigger picture? In this episode of the Capitalmind Podcast, Shray Chandra, Co-founder at Capitalmind Financial Services, speaks with Deepak Shenoy, Founder and CEO, Capitalmind Mutual Fund, about the current pess",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-06-24T12:30:31.000Z",
+      "duration": "Video",
+      "url": "https://www.youtube.com/watch?v=3cwhYcWtgg8"
+    },
+    {
+      "slug": "deepak-shenoy-need-cash-urgently-try-insta-redemption",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "video",
+      "source": "youtube",
+      "title": "Need Cash Urgently? Try Insta Redemption",
+      "summary": "When you need your money faster, you should get it faster. Most investors don't think about this until they need the money quickly. It may be for an unexpected expense or a payment that can't wait. Ironical that they can't use the liquidity of a liquid fund because the redemption",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-06-18T11:56:04.000Z",
+      "duration": "Video",
+      "url": "https://www.youtube.com/shorts/hPbEgN5mncs"
+    },
+    {
+      "slug": "deepak-shenoy-why-picking-the-best-mutual-fund-is-the-wrong-goal",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "podcast",
+      "source": "podcast",
+      "title": "Why Picking the \"Best\" Mutual Fund Is the Wrong Goal",
+      "summary": "Most investors obsess over finding the best mutual fund to invest in. But what if avoiding the worst fund matters far more than picking the absolute best? In this episode, host Shrey Chandra sits down with Deepak Shenoy (Founder & CEO, Capitalmind Mutual Fund) and Anoop Vijaykuma",
+      "topic": "Mutual funds",
+      "publishedAt": "2026-05-22T11:00:00.000Z",
+      "duration": "01:02:31",
+      "url": "https://capitalmind.libsyn.com/why-picking-the-best-mutual-fund-is-the-wrong-goal"
+    },
+    {
+      "slug": "deepak-shenoy-nri-investing-in-india-what-nobody-tells-you",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "podcast",
+      "source": "podcast",
+      "title": "NRI Investing in India: What Nobody Tells You",
+      "summary": "Shray sits down with Deepak Shenoy from Capitalmind to unpack the real playbook for NRIs thinking about investing in India — the taxes, the paperwork, the returns, and the traps nobody warns you about. What we uncover: The 3 types of NRIs who should invest in India — and the ones",
+      "topic": "Taxation",
+      "publishedAt": "2026-04-06T14:10:00.000Z",
+      "duration": "01:16:29",
+      "url": "https://capitalmind.libsyn.com/nri-investing-in-india-what-nobody-tells-you"
+    },
+    {
+      "slug": "deepak-shenoy-rbi-has-6-lakh-crore-of-surplus-capital",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "newsletter",
+      "source": "substack",
+      "title": "RBI has 6 lakh crore of surplus capital",
+      "summary": "But they aren't likely to pay it out",
+      "topic": "Taxation",
+      "publishedAt": "2026-02-18T14:33:00.000Z",
+      "duration": "3 min read",
+      "url": "https://deepakshenoy.substack.com/p/rbi-has-6-lakh-crore-of-surplus-capital"
+    },
+    {
+      "slug": "deepak-shenoy-rbi-allows-indian-family-fund-structures",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "newsletter",
+      "source": "substack",
+      "title": "RBI Allows Indian Family Fund Structures",
+      "summary": "Painful NBFC registration requirements are eased up for companies that serve no customers, don't borrow and have less than 1000 cr. in assets, whose business is to invest.",
+      "topic": "Taxation",
+      "publishedAt": "2026-02-18T14:29:49.000Z",
+      "duration": "3 min read",
+      "url": "https://deepakshenoy.substack.com/p/rbi-allows-indian-family-fund-structures"
+    },
+    {
+      "slug": "deepak-shenoy-a-closing-auction-for-stocks-in-india",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "newsletter",
+      "source": "substack",
+      "title": "A Closing Auction for Stocks in India",
+      "summary": "After August, the close price will be determined in an auction, not as a VWAP",
+      "topic": "Taxation",
+      "publishedAt": "2026-01-19T13:51:30.000Z",
+      "duration": "3 min read",
+      "url": "https://deepakshenoy.substack.com/p/a-closing-auction-for-stocks-in-india"
+    },
+    {
+      "slug": "deepak-shenoy-esops-to-innovatively-magically-create-operating-cash-flow",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "newsletter",
+      "source": "substack",
+      "title": "ESOPs to innovatively magically create operating cash flow",
+      "summary": "Such fun in the nuance of accounts.",
+      "topic": "Personal finance",
+      "publishedAt": "2025-12-23T13:43:15.000Z",
+      "duration": "3 min read",
+      "url": "https://deepakshenoy.substack.com/p/esops-to-innovatively-magically-create"
+    },
+    {
+      "slug": "deepak-shenoy-those-promoters-that-sell-their-shares-in-an-ipo",
+      "creatorSlug": "deepak-shenoy",
+      "kind": "newsletter",
+      "source": "substack",
+      "title": "Those promoters that sell their shares in an IPO....",
+      "summary": "...are not a problem.",
+      "topic": "IPOs",
+      "publishedAt": "2025-12-09T12:09:28.000Z",
+      "duration": "3 min read",
+      "url": "https://deepakshenoy.substack.com/p/those-promoters-that-sell-their-shares"
+    }
+  ]
+}

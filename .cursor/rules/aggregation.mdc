@@ -1,0 +1,19 @@
+---
+description: Pramaan aggregates only Twitter, Substack, YouTube, and podcasts. Events are listings; sign-up is always off-site.
+alwaysApply: true
+---
+
+# Pramaan aggregation
+
+Content is aggregated from exactly four platforms:
+
+- Twitter (label the product “Twitter”, not “X”; URLs may still be x.com)
+- Substack
+- YouTube
+- Podcasts
+
+Do not add LinkedIn or any other source. `SourceKind` is `"twitter" | "substack" | "youtube" | "podcast"`.
+
+Events are listed on Pramaan (title, time, host, format). Sign-up, tickets, and attendance always happen on the host’s page (Zoom, YouTube Live, Twitter, Substack, Google Meet, in-person). Never imply Pramaan collects registrations.
+
+This is a discovery index, not a CMS. Creators do not publish on Pramaan. Indexed pieces are outbound links only — show unfurl-scale preview (title or ≤100 characters of body, source, creator). Never host or display full post content on Pramaan.
