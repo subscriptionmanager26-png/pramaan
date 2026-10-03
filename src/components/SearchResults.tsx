@@ -45,39 +45,58 @@ export function SearchResults() {
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
           placeholder="Search names, topics, SEBI numbers"
-          className="w-full rounded-full border border-line bg-white px-4 py-2.5 text-sm outline-none"
+          className="w-full rounded-xl border border-line bg-paper-2 px-4 py-2.5 text-[14px] outline-none focus:border-accent/40 focus:bg-white"
         />
       </form>
       {!q ? (
-        <p className="mt-6 text-sm text-ink-3">Try Ananya, tax, or INA.</p>
+        <p className="mt-6 text-[13px] text-ink-3">Try Ananya, tax, or INA.</p>
       ) : (
-        <div className="mt-10 space-y-12">
+        <div className="mt-8 space-y-10">
           {matchedCreators.length ? (
             <section>
-              <h2 className="text-sm font-semibold text-navy">People <span className="font-normal text-ink-3">({matchedCreators.length})</span></h2>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <h2 className="text-section text-ink">
+                People <span className="font-normal text-ink-3">({matchedCreators.length})</span>
+              </h2>
+              <div className="mt-2 divide-y divide-line sm:mt-4 sm:grid sm:grid-cols-2 sm:gap-3 sm:divide-y-0 lg:grid-cols-3">
                 {matchedCreators.map((c) => (
-                  <CreatorCard key={c.slug} creator={c} />
+                  <div key={c.slug}>
+                    <div className="sm:hidden">
+                      <CreatorCard creator={c} variant="row" />
+                    </div>
+                    <div className="hidden sm:block">
+                      <CreatorCard creator={c} />
+                    </div>
+                  </div>
                 ))}
               </div>
             </section>
           ) : null}
           {matchedContent.length ? (
             <section>
-              <h2 className="text-sm font-semibold text-navy">Work <span className="font-normal text-ink-3">({matchedContent.length})</span></h2>
-              <div className="mt-2 divide-y divide-line">
+              <h2 className="text-section text-ink">
+                Work <span className="font-normal text-ink-3">({matchedContent.length})</span>
+              </h2>
+              <div className="mt-1 divide-y divide-line">
                 {matchedContent.map((item) => {
                   const creator = getCreator(item.creatorSlug);
                   if (!creator) return null;
-                  return <ContentCard key={item.slug} item={item} creator={creator} />;
+                  return (
+                    <ContentCard
+                      key={`${item.source}-${item.slug}-${item.url}`}
+                      item={item}
+                      creator={creator}
+                    />
+                  );
                 })}
               </div>
             </section>
           ) : null}
           {matchedEvents.length ? (
             <section>
-              <h2 className="text-sm font-semibold text-navy">Events <span className="font-normal text-ink-3">({matchedEvents.length})</span></h2>
-              <div className="mt-4 space-y-3">
+              <h2 className="text-section text-ink">
+                Events <span className="font-normal text-ink-3">({matchedEvents.length})</span>
+              </h2>
+              <div className="mt-1 divide-y divide-line">
                 {matchedEvents.map((event) => {
                   const creator = getCreator(event.creatorSlug);
                   if (!creator) return null;
@@ -87,7 +106,7 @@ export function SearchResults() {
             </section>
           ) : null}
           {!matchedCreators.length && !matchedContent.length && !matchedEvents.length ? (
-            <p className="text-sm text-ink-3">Nothing matched.</p>
+            <p className="text-[13px] text-ink-3">Nothing matched.</p>
           ) : null}
         </div>
       )}

@@ -10,8 +10,8 @@ export function FollowButton() {
       onClick={() => setOn((v) => !v)}
       className={
         on
-          ? "rounded-full border border-line bg-paper-2 px-4 py-2 text-sm font-medium text-ink-2"
-          : "offset-btn rounded-full border border-ink bg-navy px-4 py-2 text-sm font-medium text-white"
+          ? "rounded-lg border border-line bg-paper-2 px-4 py-2 text-[13px] font-medium text-ink-2"
+          : "rounded-lg bg-accent px-4 py-2 text-[13px] font-medium text-white hover:opacity-90"
       }
       aria-pressed={on}
     >

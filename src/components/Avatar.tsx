@@ -5,16 +5,18 @@ export function Avatar({
   size = "md",
 }: {
   creator: Pick<Creator, "initials" | "color" | "name">;
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
 }) {
   const dim =
-    size === "sm"
-      ? "h-9 w-9 text-xs"
-      : size === "lg"
-        ? "h-16 w-16 text-xl"
-        : size === "xl"
-          ? "h-24 w-24 text-3xl"
-          : "h-11 w-11 text-sm";
+    size === "xs"
+      ? "h-5 w-5 text-[8px]"
+      : size === "sm"
+        ? "h-8 w-8 text-[10px]"
+        : size === "lg"
+          ? "h-16 w-16 text-xl"
+          : size === "xl"
+            ? "h-24 w-24 text-3xl"
+            : "h-10 w-10 text-sm";
   return (
     <span
       className={`inline-flex shrink-0 items-center justify-center rounded-full font-medium text-white ${dim}`}

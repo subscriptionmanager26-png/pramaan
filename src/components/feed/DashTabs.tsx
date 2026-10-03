@@ -33,12 +33,12 @@ export function DashTabs({ active }: { active: DashTab }) {
             <Link
               key={tab.id}
               href={hrefFor(tab.id)}
-              className={`relative shrink-0 px-3 py-3 text-sm whitespace-nowrap ${
+              className={`relative shrink-0 px-3 py-3 text-[13.5px] whitespace-nowrap ${
                 selected ? "font-semibold text-ink" : "font-medium text-ink-3 hover:text-ink"
               }`}
             >
               {tab.label}
-              {selected ? <span className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-accent" /> : null}
+              {selected ? <span className="absolute inset-x-2 bottom-0 h-0.5 bg-accent" /> : null}
             </Link>
           );
         })}

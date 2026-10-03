@@ -10,6 +10,8 @@ export type SourceLink = {
   kind: SourceKind;
   handle: string;
   url: string;
+  /** YouTube only — alphanumeric `UC…` id for `feeds/videos.xml?channel_id=` */
+  channelId?: string;
 };
 
 export type Creator = {

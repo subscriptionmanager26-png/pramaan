@@ -4,38 +4,41 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const items = [
-  { href: "/", label: "Home", icon: "home" },
-  { href: "/discover", label: "Explore", icon: "compass" },
-  { href: "/portfolio", label: "Bookmarks", icon: "bookmark" },
-  { href: "/creators", label: "Profile", icon: "user" },
+  { href: "/news", label: "News", icon: "news" },
+  { href: "/research", label: "Research", icon: "research" },
+  { href: "/advisors", label: "Advisors", icon: "user" },
+  { href: "/guides", label: "Guides", icon: "guides" },
 ];
 
-function Icon({ name, active }: { name: string; active: boolean }) {
-  const stroke = active ? "#f97316" : "currentColor";
-  if (name === "home") {
+function Icon({ name }: { name: string }) {
+  const stroke = "currentColor";
+  if (name === "news") {
     return (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.8">
-        <path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z" />
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.85">
+        <path d="M4 5h12a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2V5z" />
+        <path d="M18 8h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2" />
+        <path d="M7 9h8M7 13h5" />
       </svg>
     );
   }
-  if (name === "compass") {
+  if (name === "research") {
     return (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.8">
-        <circle cx="12" cy="12" r="9" />
-        <path d="m15.5 8.5-2 5-5 2 2-5 5-2z" />
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.85">
+        <path d="M6 4h9l3 3v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" />
+        <path d="M14 4v4h4M8 12h8M8 16h5" />
       </svg>
     );
   }
-  if (name === "bookmark") {
+  if (name === "guides") {
     return (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.8">
-        <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3.5L6 20V5a1 1 0 0 1 1-1z" />
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.85">
+        <path d="M8 4h10a1 1 0 0 1 1 1v14l-3-2-3 2-3-2-3 2V5a1 1 0 0 1 1-1z" />
+        <path d="M10 9h6M10 13h4" />
       </svg>
     );
   }
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={stroke} strokeWidth="1.85">
       <circle cx="12" cy="8" r="3.5" />
       <path d="M5 19c1.5-3 4-4.5 7-4.5S17.5 16 19 19" />
     </svg>
@@ -47,21 +50,18 @@ export function BottomNav() {
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 backdrop-blur-md lg:hidden">
-      <div className="mx-auto flex max-w-lg items-stretch justify-between px-2 pb-[env(safe-area-inset-bottom)]">
+      <div className="mx-auto flex max-w-lg items-stretch justify-between px-1 pb-[env(safe-area-inset-bottom)]">
         {items.map((item) => {
-          const active =
-            item.href === "/"
-              ? pathname === "/"
-              : pathname === item.href || pathname.startsWith(`${item.href}/`);
+          const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
           return (
             <Link
               key={item.href}
               href={item.href}
               className={`flex flex-1 flex-col items-center gap-1 py-2.5 text-[10px] ${
-                active ? "font-semibold text-accent" : "text-ink-3"
+                active ? "font-medium text-accent" : "font-normal text-ink-3"
               }`}
             >
-              <Icon name={item.icon} active={active} />
+              <Icon name={item.icon} />
               {item.label}
             </Link>
           );

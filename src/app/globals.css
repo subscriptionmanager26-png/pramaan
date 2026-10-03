@@ -2,43 +2,54 @@
 
 @theme inline {
   --color-paper: #ffffff;
-  --color-paper-2: #f7f7f8;
-  --color-ink: #0f1115;
-  --color-ink-2: #3f4550;
-  --color-ink-3: #8b919b;
-  --color-line: #eceef2;
-  --color-accent: #f97316;
-  --color-accent-2: #fff4eb;
-  --color-navy: #0f1115;
-  --color-violet: #7c6cf0;
-  --color-violet-2: #f0edff;
-  --color-gold: #f97316;
-  --color-gold-2: #fff4eb;
+  --color-paper-2: #f8f9fb;
+  --color-ink: #111318;
+  --color-ink-2: #667085;
+  --color-ink-3: #98a2b3;
+  --color-line: #eaecf0;
+  --color-accent: #ff6719;
+  --color-accent-2: #fff4ed;
+  --color-navy: #111318;
+  --color-violet: #6b5ce0;
+  --color-violet-2: #f5f2ff;
+  --color-gold: #ff6719;
+  --color-gold-2: #fff4ed;
   --color-white: #ffffff;
-  --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
 html,
 body {
-  background: #f7f7f8;
-  color: #0f1115;
+  background: #ffffff;
+  color: #111318;
 }
 
 body {
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  letter-spacing: -0.011em;
 }
 
 ::selection {
-  background: #fff4eb;
-  color: #0f1115;
+  background: #fff4ed;
+  color: #111318;
 }
 
 .card {
   border: 1px solid var(--color-line);
-  border-radius: 14px;
+  border-radius: 12px;
   background: #fff;
+  box-shadow: none;
+}
+
+.surface-list {
+  border-top: 1px solid var(--color-line);
+}
+
+.surface-list > * + * {
+  border-top: 1px solid var(--color-line);
 }
 
 .scrollbar-none {
@@ -46,4 +57,38 @@ body {
 }
 .scrollbar-none::-webkit-scrollbar {
   display: none;
+}
+
+.text-display {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.text-section {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.text-headline {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.text-body {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.text-meta {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-ink-3);
+  line-height: 1.4;
 }

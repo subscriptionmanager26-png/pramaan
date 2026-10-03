@@ -38,7 +38,7 @@ export function CustomizeFeedButton() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-navy px-4 py-3 text-sm font-semibold text-white"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-[13.5px] font-medium text-white"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
           <circle cx="12" cy="12" r="3" />
@@ -106,7 +106,7 @@ export function CustomizeFeedButton() {
                         setTopics((prev) => (on ? prev.filter((x) => x !== t) : [...prev, t]))
                       }
                       className={`rounded-full px-3 py-1.5 text-sm ${
-                        on ? "bg-navy text-white" : "border border-line bg-white text-ink-2"
+                        on ? "bg-ink text-white" : "border border-line bg-white text-ink-2"
                       }`}
                     >
                       {t}
@@ -150,7 +150,7 @@ export function CustomizeFeedButton() {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-6 w-full rounded-xl bg-navy py-3 text-sm font-semibold text-white"
+              className="mt-6 w-full rounded-lg bg-ink py-2.5 text-[13.5px] font-medium text-white"
             >
               Apply
             </button>

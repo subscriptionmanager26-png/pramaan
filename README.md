@@ -14,16 +14,34 @@ People do not publish here. Pramaan aggregates public work from **Twitter, Subst
 ## Real content ingest
 
 ```bash
-npm run ingest
+npm run ingest              # all creators in the registry
+npm run ingest -- deepak-shenoy
 ```
 
-Pulls latest public items for Deepak Shenoy into `src/data/ingested/deepak-shenoy.json`:
+**Framework** (add creators later without rewriting parsers):
 
-| Source | How |
+| Piece | Role |
 |---|---|
-| Substack | Official RSS (`/feed`) |
-| YouTube | Atom feed via channel id |
-| Podcast | Libsyn RSS |
-| Twitter | Best-effort public reader (no API key; fragile) |
+| `src/lib/ingest/platforms.ts` | Adapters: Twitter, Substack, YouTube, podcast |
+| `src/lib/ingest/run.ts` | Run all platforms for one creator |
+| `src/data/creators/registry.ts` | Creator list — append here to monitor someone new |
 
-Parsers live in `src/lib/ingest/feeds.ts`.
+| Source | Required field | How |
+|---|---|---|
+| Substack | `publicationUrl` | Official RSS (`/feed`) |
+| YouTube | `channelId` (`UC…`) | `https://www.youtube.com/feeds/videos.xml?channel_id=UC…` |
+| Podcast | `rssUrl` | Any podcast RSS |
+| Twitter | `handle` | Best-effort public reader (no API key; fragile) |
+
+Writes `src/data/ingested/<slug>.json`.
+
+### Continuous monitoring on Supabase Edge Functions?
+
+**Yes.** A scheduled Edge Function can call the same platform adapters on a cron (e.g. every 15–60 min), upsert rows into Postgres, and treat “add a creator” as inserting sources in the DB.
+
+Practical notes:
+
+- **Substack / YouTube / podcast** — good fit for Edge (plain `fetch` + RSS/Atom).
+- **Twitter** — fine for demos via Jina; for reliable continuous monitoring use the **X API** with a secret.
+- **Limits** — Edge has wall-clock timeouts; batch or invoke one creator per run when the registry grows.
+- **Idempotency** — upsert on `(source, url)` so re-runs don’t duplicate.

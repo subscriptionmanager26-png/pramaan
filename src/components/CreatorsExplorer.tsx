@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { CreatorCard } from "@/components/CreatorCard";
+import { FilterChip, FilterChipRow, UnderlineTabs } from "@/components/ui/UnderlineTabs";
 import { creators } from "@/lib/data";
 import type { SebiType } from "@/lib/types";
 
@@ -18,25 +19,46 @@ export function CreatorsExplorer() {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2">
-        {filters.map((f) => (
-          <button
-            key={f.id}
-            type="button"
-            onClick={() => setType(f.id)}
-            className={`border-b-2 px-3 py-1.5 text-sm ${
-              type === f.id ? "border-navy bg-navy text-white" : "border-line bg-white text-ink-2 hover:border-navy/30"
-            }`}
-          >
-            {f.label} <span className="ml-1 text-xs opacity-70">{type === f.id ? list.length : ""}</span>
-          </button>
-        ))}
-      </div>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <UnderlineTabs
+        tabs={filters.map((f) => ({
+          id: f.id,
+          label: f.label,
+          count: f.id === type ? list.length : undefined,
+        }))}
+        active={type}
+        onChange={(id) => setType(id as (typeof filters)[number]["id"])}
+      />
+      <div className="mt-2 divide-y divide-line sm:mt-4 sm:grid sm:grid-cols-2 sm:gap-3 sm:divide-y-0 lg:grid-cols-3">
         {list.map((c) => (
-          <CreatorCard key={c.slug} creator={c} />
+          <div key={c.slug} className="sm:contents">
+            <div className="sm:hidden">
+              <CreatorCard creator={c} variant="row" />
+            </div>
+            <div className="hidden sm:block">
+              <CreatorCard creator={c} />
+            </div>
+          </div>
         ))}
       </div>
     </div>
+  );
+}
+
+/** Compact filter chips if a denser control is needed elsewhere */
+export function CreatorsFilterChips({
+  type,
+  onChange,
+}: {
+  type: (typeof filters)[number]["id"];
+  onChange: (id: (typeof filters)[number]["id"]) => void;
+}) {
+  return (
+    <FilterChipRow>
+      {filters.map((f) => (
+        <FilterChip key={f.id} active={type === f.id} onClick={() => onChange(f.id)}>
+          {f.label}
+        </FilterChip>
+      ))}
+    </FilterChipRow>
   );
 }
