@@ -5,23 +5,23 @@ function SeriesChart({ block }: { block: SeriesChartBlock }) {
   const max = Math.max(...allValues, 1);
   const groupCount = block.categories.length;
   const seriesCount = block.series.length;
-  const chartW = 560;
-  const chartH = 168;
-  const padL = 36;
-  const padR = 16;
-  const padT = 16;
-  const padB = 36;
+  const chartW = 480;
+  const chartH = 148;
+  const padL = 32;
+  const padR = 12;
+  const padT = 12;
+  const padB = 32;
   const innerW = chartW - padL - padR;
   const innerH = chartH - padT - padB;
   const groupW = innerW / Math.max(groupCount, 1);
-  const barW = Math.min(22, (groupW * 0.7) / Math.max(seriesCount, 1));
+  const barW = Math.min(18, (groupW * 0.7) / Math.max(seriesCount, 1));
 
   return (
-    <figure className="my-6 max-w-[32rem] overflow-hidden rounded-xl border border-line bg-paper-2/60 p-3 sm:my-8 sm:p-4">
-      <figcaption className="text-[14px] font-bold tracking-tight text-ink">{block.title}</figcaption>
+    <figure className="my-5 max-w-[19.5rem] overflow-hidden rounded-lg border border-line bg-paper-2/60 p-2.5 sm:my-6 sm:max-w-[22rem] sm:p-3">
+      <figcaption className="text-[13px] font-bold tracking-tight text-ink">{block.title}</figcaption>
       <svg
         viewBox={`0 0 ${chartW} ${chartH}`}
-        className="mt-3 h-auto w-full max-h-[11rem] sm:max-h-[12.5rem]"
+        className="mt-2.5 h-auto w-full max-h-[8.5rem] sm:max-h-[9.5rem]"
         role="img"
         aria-label={block.title}
       >
