@@ -47,7 +47,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "Data-centre demand stayed ahead of Street forecasts. Guidance lifted chip and AI-linked names across Asia.",
     source: "Reuters",
-    publishedAt: "2026-08-24T10:00:00+05:30",
+    publishedAt: "2026-10-05T10:00:00+05:30",
     topic: "companies",
     url: "https://www.reuters.com/",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
@@ -58,7 +58,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "The policy repo stay was widely expected. A modest durable liquidity injection pulled G-sec yields off session highs.",
     source: "Economic Times",
-    publishedAt: "2026-08-24T08:00:00+05:30",
+    publishedAt: "2026-10-05T08:00:00+05:30",
     topic: "economy",
     url: "https://economictimes.indiatimes.com/",
     image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80",
@@ -69,7 +69,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "Management guided for a gradual catch-up after the merger overhang. NIMs held within the guided band.",
     source: "Mint",
-    publishedAt: "2026-08-24T06:30:00+05:30",
+    publishedAt: "2026-10-05T06:30:00+05:30",
     topic: "companies",
     url: "https://www.livemint.com/",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80",
@@ -80,7 +80,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "The conglomerate reiterated a multi-year spectrum and fibre plan. Street focus stays on cash conversion in telecom.",
     source: "Bloomberg",
-    publishedAt: "2026-08-23T18:00:00+05:30",
+    publishedAt: "2026-10-04T18:00:00+05:30",
     topic: "companies",
     url: "https://www.bloomberg.com/",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
@@ -91,7 +91,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "Flows concentrated in financials and large-cap IT. Domestic institutions stayed selective in midcaps.",
     source: "Moneycontrol",
-    publishedAt: "2026-08-22T16:00:00+05:30",
+    publishedAt: "2026-10-03T16:00:00+05:30",
     topic: "markets",
     url: "https://www.moneycontrol.com/",
     image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&q=80",
@@ -102,7 +102,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "No broad rate rejig. Officials emphasised invoice matching and refund timelines for exporters.",
     source: "Hindu Business Line",
-    publishedAt: "2026-08-22T12:00:00+05:30",
+    publishedAt: "2026-10-03T12:00:00+05:30",
     topic: "policy",
     url: "https://www.thehindubusinessline.com/",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
@@ -113,7 +113,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "Bankers expect healthy subscription if secondary markets hold. Anchor books already circling two of the issues.",
     source: "Reuters",
-    publishedAt: "2026-08-22T09:00:00+05:30",
+    publishedAt: "2026-10-03T09:00:00+05:30",
     topic: "markets",
     url: "https://www.reuters.com/",
     image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&q=80",
@@ -124,7 +124,7 @@ export const newsFeed: NewsItem[] = [
     summary:
       "A softer print revived rate-cut chatter. Asian ADR baskets and semiconductor futures led the overnight move.",
     source: "Bloomberg",
-    publishedAt: "2026-08-21T21:00:00+05:30",
+    publishedAt: "2026-10-02T21:00:00+05:30",
     topic: "economy",
     url: "https://www.bloomberg.com/",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
@@ -139,7 +139,7 @@ export const researchArticles: ResearchArticle[] = [
       "A plain read on utilisation, pyramid mix, and deal TCV — without the quarterly cheerleading.",
     category: "industry",
     companyOrSector: "IT services",
-    publishedAt: "2026-08-18T10:00:00+05:30",
+    publishedAt: "2026-10-01T10:00:00+05:30",
     readMinutes: 12,
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
     body: [
@@ -155,7 +155,7 @@ export const researchArticles: ResearchArticle[] = [
       "How wholesale-funded lenders are repricing books, and which balance sheets look resilient.",
     category: "industry",
     companyOrSector: "NBFCs",
-    publishedAt: "2026-08-12T09:00:00+05:30",
+    publishedAt: "2026-09-28T09:00:00+05:30",
     readMinutes: 10,
     image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200&q=80",
     body: [
@@ -170,7 +170,7 @@ export const researchArticles: ResearchArticle[] = [
     summary: "Retail, O2C, and digital — what still funds the next decade of capex.",
     category: "company",
     companyOrSector: "Reliance Industries",
-    publishedAt: "2026-08-08T11:00:00+05:30",
+    publishedAt: "2026-09-24T11:00:00+05:30",
     readMinutes: 14,
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
     body: [
@@ -186,7 +186,7 @@ export const researchArticles: ResearchArticle[] = [
       "Loan growth, deposit costs, and what “normalisation” actually means on this balance sheet.",
     category: "company",
     companyOrSector: "HDFC Bank",
-    publishedAt: "2026-08-02T08:30:00+05:30",
+    publishedAt: "2026-09-20T08:30:00+05:30",
     readMinutes: 11,
     image: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=1200&q=80",
     body: [
@@ -201,7 +201,7 @@ export const researchArticles: ResearchArticle[] = [
     summary: "A map of where Indian portfolios actually touch the chip cycle.",
     category: "industry",
     companyOrSector: "Semiconductors",
-    publishedAt: "2026-07-28T10:00:00+05:30",
+    publishedAt: "2026-09-15T10:00:00+05:30",
     readMinutes: 9,
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
     body: [
@@ -261,7 +261,7 @@ export const guides: Guide[] = [
     title: "How to start investing globally from India",
     summary: "Brokers, LRS limits, tax basics, and a simple first portfolio.",
     kind: "guide",
-    publishedAt: "2026-08-10T10:00:00+05:30",
+    publishedAt: "2026-09-26T10:00:00+05:30",
     readMinutes: 8,
     body: [
       "Decide the job of the global sleeve first: diversification, USD income, or a specific theme.",
@@ -274,7 +274,7 @@ export const guides: Guide[] = [
     title: "Read a US 10-K in 30 minutes",
     summary: "Where to look first: business, risks, liquidity, and related parties.",
     kind: "guide",
-    publishedAt: "2026-08-01T09:00:00+05:30",
+    publishedAt: "2026-09-18T09:00:00+05:30",
     readMinutes: 6,
     body: [
       "Start with Item 1 (business) and Item 1A (risk factors).",
@@ -287,7 +287,7 @@ export const guides: Guide[] = [
     title: "LRS remittance checklist",
     summary: "A one-page checklist before you wire money abroad.",
     kind: "tool",
-    publishedAt: "2026-07-20T10:00:00+05:30",
+    publishedAt: "2026-09-10T10:00:00+05:30",
     toolUrl: "#checklist",
     body: [
       "Confirm purpose code with your bank (portfolio investment vs others).",
@@ -300,7 +300,7 @@ export const guides: Guide[] = [
     title: "Simple asset allocation worksheet",
     summary: "A lightweight sheet to split INR vs USD risk without overbuilding.",
     kind: "tool",
-    publishedAt: "2026-07-12T10:00:00+05:30",
+    publishedAt: "2026-09-05T10:00:00+05:30",
     toolUrl: "#worksheet",
     body: [
       "List goals with a year attached.",

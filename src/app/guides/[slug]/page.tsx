@@ -30,18 +30,18 @@ export default async function GuidePage({
 
   return (
     <Page width="content">
-      <Link href="/guides" className="text-[12px] font-medium text-accent hover:underline">
-        All guides
+      <Link href="/guides" className="text-[13px] font-semibold text-accent hover:underline">
+        ← All guides
       </Link>
-      <p className="mt-4 text-[12px] font-medium uppercase tracking-[0.12em] text-ink-3">
+      <p className="mt-5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink-3">
         {guide.kind === "tool" ? "Tool" : "Guide"}
       </p>
-      <h1 className="text-display mt-2 text-ink">{guide.title}</h1>
-      <p className="mt-3 text-[13px] text-ink-3">
+      <h1 className="text-section mt-2 text-ink">{guide.title}</h1>
+      <p className="text-meta mt-3">
         {formatDate(guide.publishedAt)}
         {guide.readMinutes ? ` · ${guide.readMinutes} min read` : null}
       </p>
-      <p className="mt-6 max-w-2xl text-[16px] leading-7 text-ink-2">{guide.summary}</p>
+      <p className="mt-6 text-[17px] leading-7 text-ink-2">{guide.summary}</p>
 
       {guide.kind === "tool" ? (
         <ol className="mt-8 max-w-2xl list-decimal space-y-3 pl-5 text-[15px] leading-7 text-ink">

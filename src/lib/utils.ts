@@ -35,7 +35,7 @@ export function formatTime(iso: string) {
   }).format(new Date(iso));
 }
 
-export function formatRelative(iso: string, now = new Date("2026-08-24T12:00:00+05:30")) {
+export function formatRelative(iso: string, now = new Date("2026-10-05T12:00:00+05:30")) {
   const then = new Date(iso);
   const diffMs = now.getTime() - then.getTime();
   const diffMin = Math.round(diffMs / 60000);
