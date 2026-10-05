@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Pramaan — Outthink the market",
+    default: "Pramaan — Company research memos",
     template: "%s · Pramaan",
   },
   description:
-    "Curated market news, research on industries and companies, advisors for global investing, practical guides, and AI. No login required.",
+    "Hand-built company research memos tagged by company and industry. Ask AI. No demo content.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

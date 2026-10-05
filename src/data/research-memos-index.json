@@ -1,0 +1,473 @@
+{
+  "generatedAt": "2026-10-04",
+  "memos": [
+    {
+      "slug": "exideind-midcap-memo",
+      "symbol": "EXIDEIND",
+      "title": "Exide Industries (hand tier in production app)",
+      "verdict": "hold",
+      "handTier": true
+    },
+    {
+      "slug": "360one-midcap-memo",
+      "symbol": "360ONE",
+      "title": "360 ONE (hand tier in production app)",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "sky-gold-midcap-memo",
+      "symbol": "SKYGOLD",
+      "title": "Sky Gold (hand tier in production app)",
+      "verdict": "hold",
+      "handTier": true
+    },
+    {
+      "slug": "acc-midcap-memo",
+      "symbol": "ACC",
+      "title": "ACC (hand tier in production app)",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "fact-midcap-memo",
+      "symbol": "FACT",
+      "title": "FACT: regulated fertilizer margins at a commodity-cycle trough",
+      "dek": "Phosphoric acid broke Factamfos in FY25; ₹735 prices in a recovery the base case does not yet see.",
+      "verdict": "avoid",
+      "handTier": true
+    },
+    {
+      "slug": "chambalfert-midcap-memo",
+      "symbol": "CHAMBLFERT",
+      "title": "Chambal: urea efficiency, P&K trading, and TAN optionality at a cyclical multiple",
+      "dek": "FY25 PAT rose 24% while the stock sits near 52-week lows; base FY27E PAT × P/E implies ~₹474 vs ₹399 reference.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "coromandel-midcap-memo",
+      "symbol": "COROMANDEL",
+      "title": "Coromandel: phosphatic integration and crop protection at a full multiple",
+      "dek": "Kakinada acid plants and NACL expand the moat; at ₹1,764 base FY27E offers ~8% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "deepakfert-midcap-memo",
+      "symbol": "DEEPAKFERT",
+      "title": "Deepak Fertilisers: integrated TAN, IPA, and Mahadhan at a capex crossroads",
+      "dek": "Jun 2026 margin spike flattered TTM earnings; at ₹1,301 base FY27E offers ~9% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "gnfc-midcap-memo",
+      "symbol": "GNFC",
+      "title": "GNFC: Bharuch chemicals recovery and urea policy at a single-digit multiple",
+      "dek": "TTM PAT rebounded on TDI and nitric acid spreads; at ₹589 base FY27E offers ~8% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "gsfc-midcap-memo",
+      "symbol": "GSFC",
+      "title": "GSFC: caprolactam cycle and PSU dividend yield at book discount",
+      "dek": "TTM PAT held near ₹693 cr on treasury-backed other income; at ₹147 base FY27E offers ~1% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "rcf-midcap-memo",
+      "symbol": "RCF",
+      "title": "RCF: Trombay-Thal urea and industrial chemicals at a reimbursement crossroads",
+      "dek": "TTM PAT rebounded on Mar 2026 quarter strength; at ₹107 base FY27E offers ~6% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "paradeep-midcap-memo",
+      "symbol": "PARADEEP",
+      "title": "Paradeep Phosphates: OCP-backed integration at a leverage crossroads",
+      "dek": "TTM PAT crossed ₹1,000 cr on acid debottlenecking; at ₹151 base FY27E offers ~5% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "mangalorechem-midcap-memo",
+      "symbol": "MANGCHEFER",
+      "title": "Mangalore Chemicals: west-coast urea and Paradeep merger optionality at a full multiple",
+      "dek": "Q1 FY26 PAT rebounded but trailing P/E embeds integration hope; at ₹309 base FY27E offers ~38% downside, not a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "nfl-midcap-memo",
+      "symbol": "NFL",
+      "title": "National Fertilizers: Navratna urea scale at a reimbursement crossroads",
+      "dek": "TTM PAT rebounded on seasonal quarters but FY26 CFO was negative; at ₹63.8 base FY27E offers ~7% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "zuariind-midcap-memo",
+      "symbol": "ZUARIIND",
+      "title": "Zuari Industries: Adventz holding discount versus fertilizer NAV",
+      "dek": "Quoted stakes exceed market cap but FY26 PAT is lumpy; at ₹282 base FY27E offers ~7% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "zuariagro-midcap-memo",
+      "symbol": "ZUARI",
+      "title": "Zuari Agro Chemicals: Paradeep stake marks at a holding company discount",
+      "dek": "Sep 2025 fair value drove TTM PAT; at ₹213 base FY27E offers ~7% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "piind-midcap-memo",
+      "symbol": "PIIND",
+      "title": "PI Industries: CSM export cycle and domestic agri-inputs at a de-rated multiple",
+      "dek": "FY26 sales fell but OPM held near 32%; at ₹2,236 base FY27E offers ~2% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "upl-midcap-memo",
+      "symbol": "UPL",
+      "title": "UPL: global crop protection recovery at a premium multiple",
+      "dek": "FY26 CFO was negative ₹2,243 cr but OPM rebounded on TTM; at ₹517 base FY27E offers ~8% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "rallis-midcap-memo",
+      "symbol": "RALLIS",
+      "title": "Rallis: Tata crop care and seeds recovery at a modest ROE multiple",
+      "dek": "FY26 EBITDA hit a record ₹362 cr but net CFO eased; at ₹200 base FY27E offers ~8% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "dhanuka-midcap-memo",
+      "symbol": "DHANUKA",
+      "title": "Dhanuka Agritech: 9(3) mix and high ROCE at a de-rated agchem multiple",
+      "dek": "FY26 revenue paused but OPM held near 20%; at ₹935 base FY27E offers ~15% upside to a Buy.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "insecticides-midcap-memo",
+      "symbol": "INSECTICID",
+      "title": "Insecticides India: Maharatna mix at a cyclical agchem multiple",
+      "dek": "FY26 revenue crossed ₹2,140 cr but Q1 FY27 volume softened; at ₹569 base FY27E offers ~18% upside to a Buy.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "sumichem-midcap-memo",
+      "symbol": "SUMICHEM",
+      "title": "Sumitomo Chemical India: SCC specialty mix at a full agchem multiple",
+      "dek": "FY26 OPM held near 21% but five-year sales CAGR is ~4%; at ₹418 base FY27E offers ~11% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "shardacrop-midcap-memo",
+      "symbol": "SHARDACROP",
+      "title": "Sharda Cropchem: registration moat at a cyclical export multiple",
+      "dek": "FY26 PAT rebounded to ₹681 cr but debtor days stay near 166; at ₹709 base FY27E offers ~12% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "meghmani-midcap-memo",
+      "symbol": "MOL",
+      "title": "Meghmani Organics: crop protection recovery with pigment and Brazil optionality",
+      "dek": "FY26 EBITDA rose 27% but Q1 FY27 revenue fell 12%; at ₹73 base FY27E offers ~11% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "bharatras-midcap-memo",
+      "symbol": "BHARATRAS",
+      "title": "Bharat Rasayan: technical export cycle at a deep de-rating",
+      "dek": "FY26 OPM recovered to 16% after FY24 shock; at ₹999 base FY27E offers ~18% upside to a Buy.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "astec-midcap-memo",
+      "symbol": "ASTEC",
+      "title": "Astec LifeSciences: leveraged agchem turnaround priced ahead of base recovery",
+      "dek": "FY26 revenue rebounded but PAT loss near ₹81 cr; at ₹709 base FY27E implies ~85% downside, Avoid.",
+      "verdict": "avoid",
+      "handTier": true
+    },
+    {
+      "slug": "heranba-midcap-memo",
+      "symbol": "HERANBA",
+      "title": "Heranba Industries: export agchem recovery after two loss years",
+      "dek": "Q1 FY27 OPM near 14% but TTM PAT still negative; at ₹172 base FY27E offers ~9% downside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "indofil-midcap-memo",
+      "symbol": "INDOFIL",
+      "title": "Indofil Industries: mancozeb integration at an unlisted discount",
+      "dek": "OTC reference ₹1,475 vs book ~₹2,831; base FY27E offers ~6% upside, Neutral on illiquidity.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "naclind-midcap-memo",
+      "symbol": "NACLIND",
+      "title": "NACL Industries: Coromandel control at a triple-digit earnings multiple",
+      "dek": "FY26 OP recovered but PAT was ₹5 cr; at ₹130 base FY27E implies ~70% downside, Avoid.",
+      "verdict": "avoid",
+      "handTier": true
+    },
+    {
+      "slug": "kaveri-midcap-memo",
+      "symbol": "KSCL",
+      "title": "Kaveri Seed: non-cotton hybrid mix at a de-rated seed multiple",
+      "dek": "FY26 revenue rose 16% but FY26 CFO was negative; at ₹715 base FY27E offers ~16% upside to a Buy.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "nathbiogen-midcap-memo",
+      "symbol": "NATHBIOGEN",
+      "title": "Nath Bio-Genes: hybrid seed scale-up at a book-discount multiple",
+      "dek": "FY26 sales jumped 66% but OPM fell to 12% and FY26 CFO was negative; at ₹138 base FY27E offers ~17% upside to a Buy.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "aries-midcap-memo",
+      "symbol": "ARIES",
+      "title": "Aries Agro: micronutrient bookings at a mid-teens multiple",
+      "dek": "FY26 TTM revenue near ₹779 cr; at ₹477 base FY27E offers ~16% upside to a Buy on booking conversion.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "bhagchem-midcap-memo",
+      "symbol": "BHAGCHEM",
+      "title": "Bhagiradha Chemicals: capex recovery priced at triple-digit earnings",
+      "dek": "TTM PAT rebounded but ROCE is 5% and borrowings ₹235 cr; at ₹236 base FY27E implies ~73% downside, Avoid.",
+      "verdict": "avoid",
+      "handTier": true
+    },
+    {
+      "slug": "bestagro-midcap-memo",
+      "symbol": "BESTAGRO",
+      "title": "Best Agrolife: integrated technical recovery below book value",
+      "dek": "Q1 FY27 OPM near 20% after FY26 PAT trough; at ₹17.5 base FY27E offers ~24% upside to a Buy.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "hikal-midcap-memo",
+      "symbol": "HIKAL",
+      "title": "Hikal: crop protection and pharma CDMO at an earnings trough",
+      "dek": "FY26 PAT loss near ₹49 cr despite ₹302 cr CFO; at ₹218 base FY27E implies ~55% downside, Avoid.",
+      "verdict": "avoid",
+      "handTier": true
+    },
+    {
+      "slug": "bhageria-midcap-memo",
+      "symbol": "BHAGERIA",
+      "title": "Bhageria Industries: dyes and agchem ramp at a full multiple",
+      "dek": "TTM revenue near ₹1,003 cr; at ₹382 base FY27E offers ~11% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "rossari-midcap-memo",
+      "symbol": "ROSSARI",
+      "title": "Rossari Biotech: HPPC scale-up at a de-rated specialty chemicals multiple",
+      "dek": "TTM revenue near ₹2,550 cr; at ₹428 base FY27E offers ~18% upside to a Buy on utilisation ramp.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "fineorg-midcap-memo",
+      "symbol": "FINEORG",
+      "title": "Fine Organic: oleochemical additives at a premium multiple",
+      "dek": "TTM revenue near ₹2,472 cr; at ₹5,131 base FY27E offers ~8% upside, not yet a Buy.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "galaxysurf-midcap-memo",
+      "symbol": "GALAXYSURF",
+      "title": "Galaxy Surfactants: oleo surfactants recovery at a mid-cycle multiple",
+      "dek": "TTM revenue near ₹5,752 cr; at ₹2,377 base FY27E offers ~19% upside to a Buy on margin normalisation.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "vinatiorga-midcap-memo",
+      "symbol": "VINATIORGA",
+      "title": "Vinati Organics: IBB and ATBS niches at a de-rated specialty multiple",
+      "dek": "TTM revenue near ₹2,381 cr; at ₹1,208 base FY27E offers ~20% upside to a Buy on margin and ATBS mix.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "cleansci-midcap-memo",
+      "symbol": "CLEAN",
+      "title": "Clean Science: HALS moat and Performance Chemical ramp at a de-rated multiple",
+      "dek": "TTM revenue near ₹982 cr; at ₹803 base FY27E offers ~16% upside to a Buy on margin and HALS run-rate.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "deepaknit-midcap-memo",
+      "symbol": "DEEPAKNTR",
+      "title": "Deepak Nitrite: phenolics cycle trough with Q1 FY27 margin rebound",
+      "dek": "TTM revenue near ₹8,575 cr; at ₹1,493 base FY27E offers ~17% upside to a Buy on spread recovery and capex completion.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "aartiind-midcap-memo",
+      "symbol": "AARTIIND",
+      "title": "Aarti Industries: benzene chain recovery at a leveraged specialty multiple",
+      "dek": "TTM revenue near ₹9,010 cr; at ₹465 base FY27E offers ~16% upside to a Buy on margin and PAT rebound.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "atul-midcap-memo",
+      "symbol": "ATUL",
+      "title": "Atul: crop protection recovery at a diversified chemical multiple",
+      "dek": "TTM revenue near ₹6,643 cr; at ₹5,861 base FY27E offers ~23% upside to a Buy on margin and PAT rebound.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "srf-midcap-memo",
+      "symbol": "SRF",
+      "title": "SRF: fluorochemical recovery at an integrated chemicals multiple",
+      "dek": "TTM revenue near ₹17,001 cr; at ₹2,486 base FY27E offers ~17% upside to a Buy on margin and PAT rebound.",
+      "verdict": "buy",
+      "handTier": true
+    },
+    {
+      "slug": "navinfluor-midcap-memo",
+      "symbol": "NAVINFLUOR",
+      "title": "Navin Fluorine: CDMO leverage at a premium fluorochemical multiple",
+      "dek": "TTM revenue near ₹3,634 cr; at ₹8,136 base FY27E offers ~8% upside, Neutral on trailing P/E near 52×.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "fluorochem-midcap-memo",
+      "symbol": "FLUOROCHEM",
+      "title": "Gujarat Fluorochemicals: fluoropolymers priced for battery optionality",
+      "dek": "TTM revenue near ₹5,303 cr; at ₹4,342 base FY27E offers ~5% upside, Neutral on trailing P/E near 77× and ROCE ~9.6%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "neogen-midcap-memo",
+      "symbol": "NEOGEN",
+      "title": "Neogen Chemicals: battery optionality at a triple-digit earnings multiple",
+      "dek": "TTM revenue near ₹926 cr; at ₹2,407 base FY27E offers ~6% upside, Neutral on trailing P/E near 203× and ROCE ~6.5%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "anupam-midcap-memo",
+      "symbol": "ANURAS",
+      "title": "Anupam Rasayan: life-science growth at a leveraged specialty multiple",
+      "dek": "TTM revenue near ₹2,535 cr; at ₹1,164 base FY27E offers ~8% upside, Neutral on trailing P/E near 76× and ROCE ~7.4%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "alkylamine-midcap-memo",
+      "symbol": "ALKYLAMINE",
+      "title": "Alkyl Amines: integrated amines at a quality multiple after a flat FY26",
+      "dek": "TTM revenue near ₹1,540 cr; at ₹1,997 base FY27E offers ~5% downside, Neutral on trailing P/E near 45× with net cash.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "balamines-midcap-memo",
+      "symbol": "BALAMINES",
+      "title": "Balaji Amines: methylamine leader in a capex and ROCE trough",
+      "dek": "TTM revenue near ₹1,523 cr; at ₹2,052 base FY27E offers ~6% upside, Neutral on trailing P/E near 33× and ROCE ~11%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "epigral-midcap-memo",
+      "symbol": "EPIGRAL",
+      "title": "Epigral: integrated chlor-alkali at a post-peak earnings multiple",
+      "dek": "TTM revenue near ₹2,626 cr; at ₹982 base FY27E offers ~6% upside, Neutral on trailing P/E near 16× and ROCE ~15.5%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "archean-midcap-memo",
+      "symbol": "ACI",
+      "title": "Archean Chemical: bromine cycle trough at a premium earnings multiple",
+      "dek": "TTM revenue near ₹1,116 cr; at ₹475 base FY27E offers ~2% downside, Neutral on trailing P/E near 61× and ROCE ~7.4%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "tatvchint-midcap-memo",
+      "symbol": "TATVA",
+      "title": "Tatva Chintan: PTC recovery at a premium trailing multiple",
+      "dek": "TTM revenue near ₹556 cr; at ₹1,743 base FY27E offers ~2% downside, Neutral on trailing P/E near 78× and ROCE ~7.2%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "lxchem-midcap-memo",
+      "symbol": "LXCHEM",
+      "title": "Laxmi Organic: Dahej optionality at a spread-inflated trailing multiple",
+      "dek": "TTM revenue near ₹3,122 cr; at ₹181 base FY27E offers ~8% upside, Neutral on trailing P/E near 40× and ROCE ~4.7%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "jublingrea-midcap-memo",
+      "symbol": "JUBLINGREA",
+      "title": "Jubilant Ingrevia: pyridine platform at a specialty recovery multiple",
+      "dek": "TTM revenue near ₹4,651 cr; at ₹638 base FY27E offers ~10% upside, Neutral on trailing P/E near 32× and ROCE ~11.4%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "paushak-midcap-memo",
+      "symbol": "PAUSHAKLTD",
+      "title": "Paushak: phosgene niche at a post-capex earnings trough",
+      "dek": "TTM revenue near ₹246 cr; at ₹650 base FY27E offers ~6% upside, Neutral on trailing P/E near 38× and ROCE ~8.3%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "privi-midcap-memo",
+      "symbol": "PRIVISCL",
+      "title": "Privi Speciality Chemicals: global aroma leader at a premium earnings multiple",
+      "dek": "TTM revenue near ₹2,671 cr; at ₹3,573 base FY27E offers ~9% upside, Neutral on trailing P/E near 40× and ROCE ~22.3%.",
+      "verdict": "neutral",
+      "handTier": true
+    },
+    {
+      "slug": "chemplast-midcap-memo",
+      "symbol": "CHEMPLASTS",
+      "title": "Chemplast Sanmar: PVC cycle trough with specialty paste resilience",
+      "dek": "TTM revenue near ₹4,249 cr; at ₹192 base FY27E offers ~7% upside, Neutral on TTM PAT loss and ROCE ~0.3%.",
+      "verdict": "neutral",
+      "handTier": true
+    }
+  ]
+}
