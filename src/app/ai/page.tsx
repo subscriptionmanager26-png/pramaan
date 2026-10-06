@@ -37,7 +37,7 @@ export default function AIPage() {
           <p className="text-meta uppercase tracking-[0.16em]">Pramaan AI</p>
           <h1 className="text-display mt-4 text-ink">Ask the market anything.</h1>
           <p className="mx-auto mt-5 max-w-xl text-[17px] leading-7 text-ink-2">
-            Turn news and research into a clear answer — then follow the source trail yourself.
+            Turn news and research into a clear answer, then follow the source trail yourself.
           </p>
 
           <form
@@ -82,7 +82,7 @@ export default function AIPage() {
               {(submitted === sample.question ? sample.answer : [
                 "Here’s a grounded read based on today’s Pramaan wire and research desk notes.",
                 "Markets are pricing the headline move first; second-order effects usually show up in rates, FX, and sector leadership over the next sessions.",
-                "Use this as a starting brief — then open the linked news and research to verify.",
+                "Use this as a starting brief, then open the linked news and research to verify.",
               ]).map((para) => (
                 <p key={para.slice(0, 32)}>{para}</p>
               ))}

@@ -41,6 +41,10 @@ export default async function GuidePage({
         {formatDate(guide.publishedAt)}
         {guide.readMinutes ? ` · ${guide.readMinutes} min read` : null}
       </p>
+      <div className="mt-6 max-w-xl overflow-hidden rounded-2xl border border-line bg-paper-2">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={guide.image} alt="" className="aspect-[16/9] w-full object-cover" />
+      </div>
       <p className="mt-6 text-[17px] leading-7 text-ink-2">{guide.summary}</p>
 
       {guide.kind === "tool" ? (

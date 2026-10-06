@@ -77,7 +77,7 @@ export function ResearchDossier({ research }: { research: DeepCompanyResearch })
                 <a href={s.url} target="_blank" rel="noreferrer" className="font-medium text-accent hover:underline">
                   {s.kind}
                 </a>
-                <span className="text-ink-3"> — {s.note}</span>
+                <span className="text-ink-3"> · {s.note}</span>
               </li>
             ))}
           </ul>

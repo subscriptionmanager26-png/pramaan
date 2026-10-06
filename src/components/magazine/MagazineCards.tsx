@@ -26,14 +26,25 @@ export function NewsMagazineCard({
 
   if (compact) {
     return (
-      <a href={item.url} target="_blank" rel="noreferrer" className="group block border-b border-line py-5 last:border-0">
-        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-ink-3">News</p>
-        <h3 className="text-headline mt-2 text-ink transition-colors group-hover:text-accent">{item.headline}</h3>
-        <p className="mt-2 text-[15px] leading-6 text-ink-2 line-clamp-2">{item.summary}</p>
-        <p className="text-meta mt-3">
-          {item.source} · {formatRelative(item.publishedAt)}
-        </p>
-        <TagRow tags={tags} />
+      <a
+        href={item.url}
+        className="group grid grid-cols-[88px_minmax(0,1fr)] gap-4 border-b border-line py-5 last:border-0 sm:grid-cols-[120px_minmax(0,1fr)]"
+      >
+        <div className="aspect-[5/4] overflow-hidden rounded-xl bg-paper-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={item.image} alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="min-w-0">
+          <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-ink-3">News</p>
+          <h3 className="text-headline mt-2 text-ink transition-colors group-hover:text-accent">
+            {item.headline}
+          </h3>
+          <p className="mt-2 text-[15px] leading-6 text-ink-2 line-clamp-2">{item.summary}</p>
+          <p className="text-meta mt-3">
+            {item.source} · {formatRelative(item.publishedAt)}
+          </p>
+          <TagRow tags={tags} />
+        </div>
       </a>
     );
   }

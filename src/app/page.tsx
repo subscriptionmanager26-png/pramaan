@@ -1,77 +1,207 @@
 import Link from "next/link";
+import {
+  NewsMagazineCard,
+  ResearchMagazineCard,
+  TrendingList,
+} from "@/components/magazine/MagazineCards";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
-import { SoftChip } from "@/components/shell/Page";
 import { listArticles } from "@/lib/articles/catalog";
-import { listIndustries } from "@/lib/articles/taxonomy";
+import { newsFeed, researchArticles } from "@/lib/site";
+import { formatRelative } from "@/lib/utils";
+
+function HeroCollage() {
+  return (
+    <div className="relative mx-auto mt-10 hidden h-[320px] w-full max-w-3xl md:block lg:absolute lg:right-0 lg:top-8 lg:mt-0 lg:h-[420px] lg:w-[46%]">
+      <div className="animate-float absolute left-[8%] top-6 w-[42%] overflow-hidden rounded-2xl border border-line bg-white shadow-[6px_6px_0_rgba(11,11,11,0.08)]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://picsum.photos/seed/pramaan-hero-a/800/600"
+          alt=""
+          className="aspect-[4/3] w-full object-cover"
+        />
+      </div>
+      <div className="animate-float-delayed absolute right-[4%] top-0 w-[48%] rounded-2xl bg-ink px-5 py-6 text-white shadow-[8px_8px_0_rgba(47,87,255,0.25)]">
+        <p className="text-meta text-white/55">Research desk</p>
+        <p className="mt-3 text-[1.35rem] font-bold leading-snug tracking-tight">
+          Lorem ipsum market update
+        </p>
+        <p className="mt-2 text-[13px] text-white/70">
+          Placeholder brief: margins, flows, and what changed.
+        </p>
+      </div>
+      <div className="animate-float absolute bottom-4 left-[18%] w-[44%] rounded-2xl border border-line bg-accent px-5 py-5 text-white shadow-[6px_6px_0_rgba(11,11,11,0.12)]">
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">Weekly</p>
+        <p className="mt-2 text-[1.1rem] font-bold leading-snug">AI brief for allocators</p>
+      </div>
+      <div className="animate-float-delayed absolute bottom-10 right-[2%] w-[36%] overflow-hidden rounded-2xl border border-line bg-highlight shadow-[5px_5px_0_rgba(11,11,11,0.1)]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://picsum.photos/seed/pramaan-hero-b/600/600"
+          alt=""
+          className="aspect-square w-full object-cover mix-blend-multiply"
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function HomePage() {
-  const articles = [...listArticles()].sort(
+  const sortedNews = [...newsFeed].sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
+  const ticker = sortedNews.slice(0, 5);
+  const [lead, second, ...restNews] = sortedNews;
+  const memos = [...listArticles()].sort(
     (a, b) =>
       +new Date(b.publishedAt) - +new Date(a.publishedAt) || a.company.localeCompare(b.company),
   );
-  const industries = listIndustries();
-  const buys = articles.filter((a) => a.verdict === "buy").slice(0, 4);
+  const trending = memos.slice(0, 5).map((a) => ({
+    href: `/research/${a.slug}`,
+    title: a.title,
+    meta: `${formatRelative(`${a.publishedAt}T12:00:00+05:30`)} · ${a.readMinutes} min`,
+  }));
+
+  const today = new Intl.DateTimeFormat("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date("2026-10-05T12:00:00+05:30"));
 
   return (
     <div>
       <section className="grid-paper relative overflow-hidden border-b border-line">
-        <div className="mx-auto max-w-6xl px-4 pb-14 pt-12 sm:px-6 sm:pb-16 sm:pt-16">
-          <div className="animate-fade-up max-w-2xl">
-            <p className="text-meta uppercase tracking-[0.16em] text-ink-3">Pramaan Research</p>
-            <h1 className="text-display mt-4 text-ink">Company research, written for operators.</h1>
-            <p className="mt-5 max-w-xl text-[17px] leading-7 text-ink-2">
-              {articles.length} hand-built midcap memos — tagged by company and industry. No demo
-              filler.
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:min-h-[540px]">
+          <div className="animate-fade-up relative z-10 max-w-xl">
+            <p className="text-meta uppercase tracking-[0.16em] text-ink-3">Pramaan</p>
+            <h1 className="text-display mt-4 text-ink">Outthink The Market.</h1>
+            <p className="mt-5 max-w-md text-[17px] leading-7 text-ink-2">
+            Understand what&apos;s happening in markets, and know what to do next.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/research" className="btn-primary">
-                Browse research
+                Explore research
               </Link>
               <Link href="/ai" className="btn-secondary">
-                Ask AI
+                Try AI
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {industries.map((ind) => (
-                <SoftChip key={ind} href={`/research?industry=${encodeURIComponent(ind)}`}>
-                  {ind}
-                </SoftChip>
+
+            <div className="mt-10 flex gap-3 overflow-x-auto pb-1 scrollbar-none sm:grid sm:grid-cols-3 sm:gap-0 sm:overflow-visible sm:divide-x sm:divide-line sm:rounded-2xl sm:border sm:border-line sm:bg-white/80 sm:backdrop-blur">
+              {[
+                { k: "4.9", t: "Loved by investors who want clarity, not noise" },
+                { k: "AI", t: "Ask anything. Briefs grounded in today’s wire" },
+                { k: "Global", t: "Advisors for cross-border investing, listed plainly" },
+              ].map((item) => (
+                <div
+                  key={item.k}
+                  className="min-w-[220px] rounded-2xl border border-line bg-white/90 px-4 py-4 sm:min-w-0 sm:rounded-none sm:border-0 sm:bg-transparent"
+                >
+                  <p className="text-[1.35rem] font-black tracking-tight text-ink">{item.k}</p>
+                  <p className="text-meta mt-2 leading-5 text-ink-2">{item.t}</p>
+                </div>
               ))}
             </div>
           </div>
+          <HeroCollage />
+        </div>
+      </section>
+
+      <section className="border-b border-line bg-white">
+        <div className="mx-auto flex max-w-6xl gap-6 overflow-x-auto px-4 py-4 scrollbar-none sm:px-6">
+          {ticker.map((item) => (
+            <a
+              key={item.slug}
+              href={item.url}
+              className="flex min-w-[240px] shrink-0 items-baseline gap-3 hover:opacity-80 sm:min-w-0 sm:flex-1"
+            >
+              <span className="text-meta shrink-0 text-accent">
+                {new Date(item.publishedAt).toLocaleTimeString("en-GB", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                })}
+              </span>
+              <span className="text-[13.5px] font-semibold leading-snug text-ink line-clamp-2">
+                {item.headline}
+              </span>
+            </a>
+          ))}
+          <Link
+            href="/news"
+            className="shrink-0 self-center whitespace-nowrap text-[13px] font-semibold text-accent"
+          >
+            More news →
+          </Link>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="max-w-3xl">
           <h2 className="text-section text-ink">
-            <span className="mark">Latest memos</span>
+            <span className="mark">What&apos;s Going On. And Why You Should Care.</span>
           </h2>
-          <p className="text-meta mt-3">{articles.length} articles on the desk</p>
+          <p className="text-meta mt-4">{today}</p>
+          <div className="mt-4 rounded-lg bg-sky px-4 py-2 text-center">
+            <p className="text-meta text-ink-2">Today&apos;s issue is curated · AI brief available</p>
+          </div>
         </div>
 
-        {buys.length ? (
-          <div className="mt-10">
-            <h3 className="text-[1.1rem] font-black italic tracking-tight text-ink">BUY IDEAS</h3>
-            <div className="mt-2 divide-y divide-line border-t border-line">
-              {buys.map((a) => (
-                <ResearchMemoCard key={a.slug} article={a} />
+        <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
+          <div className="min-w-0 space-y-10">
+            {lead ? <NewsMagazineCard item={lead} featured /> : null}
+            {second ? <NewsMagazineCard item={second} /> : null}
+            <div className="rounded-2xl border border-line bg-accent-2 p-5 sm:p-6">
+              <p className="text-meta uppercase tracking-[0.14em] text-accent">Pramaan AI</p>
+              <h3 className="mt-2 text-[1.35rem] font-bold tracking-tight text-ink">
+                Ask what the market move means for you
+              </h3>
+              <p className="mt-2 max-w-xl text-[15px] leading-6 text-ink-2">
+                Lorem ipsum dolor sit amet. Turn the wire into a plain answer.
+              </p>
+              <Link href="/ai" className="btn-primary mt-5">
+                Open AI
+              </Link>
+            </div>
+            <div className="divide-y divide-line border-t border-line">
+              {restNews.slice(0, 4).map((item) => (
+                <NewsMagazineCard key={item.slug} item={item} compact />
               ))}
             </div>
+            <div>
+              <div className="mb-6 flex items-end justify-between gap-3">
+                <h3 className="text-section text-ink">
+                  <span className="mark">Research</span>
+                </h3>
+                <Link href="/research" className="text-[13px] font-semibold text-accent">
+                  All research →
+                </Link>
+              </div>
+              <div className="grid gap-8 sm:grid-cols-2">
+                {memos.slice(0, 2).map((article) => (
+                  <ResearchMemoCard key={article.slug} article={article} layout="grid" />
+                ))}
+              </div>
+              {researchArticles.length ? (
+                <div className="mt-8 hidden">
+                  {researchArticles.slice(0, 2).map((article) => (
+                    <ResearchMagazineCard key={article.slug} article={article} />
+                  ))}
+                </div>
+              ) : null}
+            </div>
           </div>
-        ) : null}
-
-        <div className="mt-12">
-          <div className="mb-2 flex items-end justify-between gap-3">
-            <h3 className="text-[1.1rem] font-black italic tracking-tight text-ink">ALL RESEARCH</h3>
-            <Link href="/research" className="text-[13px] font-semibold text-accent">
-              View all →
-            </Link>
-          </div>
-          <div className="divide-y divide-line border-t border-line">
-            {articles.slice(0, 12).map((a) => (
-              <ResearchMemoCard key={a.slug} article={a} />
-            ))}
+          <div className="lg:pt-1">
+            <div className="sticky top-24 space-y-10">
+              <TrendingList items={trending} />
+              <div className="rounded-2xl border border-line bg-white p-5">
+                <p className="text-meta uppercase tracking-[0.14em]">Advisors</p>
+                <p className="mt-2 text-[15px] font-bold leading-snug text-ink">
+                  Find advisors by type. Global advisory marked separately.
+                </p>
+                <Link href="/advisors" className="btn-secondary mt-4 text-[13px]">
+                  Browse advisors
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

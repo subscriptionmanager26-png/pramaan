@@ -6,6 +6,7 @@ import { ResearchDossier } from "@/components/research/ResearchDossier";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
 import { Page } from "@/components/shell/Page";
 import { getArticle, listArticles, relatedArticles } from "@/lib/articles/catalog";
+import { articleCover } from "@/lib/articles/images";
 import { getDeepResearchForArticle } from "@/lib/research";
 import { formatDate } from "@/lib/utils";
 
@@ -78,6 +79,15 @@ export default async function ResearchArticlePage({
       <p className="text-meta mt-3">
         {formatDate(`${article.publishedAt}T12:00:00+05:30`)} · {article.readMinutes} min read
       </p>
+
+      <div className="mt-8 max-w-xl overflow-hidden rounded-2xl border border-line bg-paper-2">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={articleCover(article.slug, "hero")}
+          alt=""
+          className="aspect-[16/9] w-full object-cover"
+        />
+      </div>
 
       {article.keyTakeaways.length ? (
         <div className="mt-8 rounded-2xl border border-line bg-accent-2/50 p-5">
