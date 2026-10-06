@@ -26,7 +26,7 @@
  *   - Upserts into `content_items` keyed by (source, url) or stable slug
  *   Caveats:
  *   - Substack / YouTube / podcast RSS are Edge-friendly
- *   - Twitter via Jina is fragile; prefer X API + secret for production
+ *   - Twitter via guest GraphQL is best-effort (query IDs rotate); official X API is more stable
  *   - Edge wall-clock limits (~150s) → batch creators or fan-out per creator
  *   - Store channelId / rssUrl in DB so adding a creator is a row, not a deploy
  */

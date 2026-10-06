@@ -2,7 +2,7 @@ import type { SourceKind } from "../types";
 import {
   fetchPodcastRss,
   fetchSubstack,
-  fetchTwitterViaJina,
+  fetchTwitterViaGuest,
   fetchYoutubeChannel,
   type ParsedItem,
 } from "./feeds";
@@ -42,7 +42,7 @@ export const platforms: Record<SourceKind, PlatformAdapter> = {
     required: ["handle"],
     async fetch(source, limit) {
       if (source.kind !== "twitter") throw new Error("twitter adapter mismatch");
-      return withRetry(() => fetchTwitterViaJina(source.handle, limit), "twitter");
+      return withRetry(() => fetchTwitterViaGuest(source.handle, limit), "twitter");
     },
   },
   substack: {
