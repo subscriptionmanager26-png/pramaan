@@ -3,6 +3,9 @@
  *
  *   SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npx tsx scripts/af-sync-sources.ts
  */
+import { loadAfEnv } from "../src/lib/af/env";
+loadAfEnv();
+
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { getAfSupabase } from "../src/lib/af/supabase";

@@ -14,6 +14,9 @@
  *   AF_SKIP_BODIES=1
  *   AF_SKIP_CATEGORIES=1
  */
+import { loadAfEnv } from "../src/lib/af/env";
+loadAfEnv();
+
 import { fetchSubstack, fetchTwitterTimeline } from "../src/lib/ingest/feeds";
 import { fetchContentBody } from "../src/lib/af/bodies";
 import { categorizeDiscussion } from "../src/lib/af/categories";
