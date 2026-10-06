@@ -448,6 +448,102 @@ export async function fetchTwitterViaGuest(handle: string, limit = 6): Promise<P
   return items;
 }
 
+type TwitterViewerTweet = {
+  id?: string;
+  text?: string;
+  createdAt?: string;
+  isRetweet?: boolean;
+  author?: { handle?: string };
+};
+
+type TwitterViewerResponse = {
+  success?: boolean;
+  data?: {
+    tweets?: TwitterViewerTweet[];
+  };
+  message?: string;
+  error?: string;
+};
+
+/**
+ * Alternative public timeline via twitter-viewer.com (/api/x/user-tweets).
+ * Useful when guest GraphQL returns empty for quieter accounts.
+ */
+export async function fetchTwitterViaTwitterViewer(
+  handle: string,
+  limit = 6,
+): Promise<ParsedItem[]> {
+  const screen = handle.replace(/^@/, "");
+  const url = new URL("https://www.twitter-viewer.com/api/x/user-tweets");
+  url.searchParams.set("username", screen);
+  url.searchParams.set("cursor", "");
+
+  const res = await fetch(url, {
+    headers: {
+      accept: "application/json",
+      "user-agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      referer: "https://www.twitter-viewer.com/en/twitter-profile-viewer",
+      origin: "https://www.twitter-viewer.com",
+    },
+  });
+  if (res.status === 429) throw new Error("twitter-viewer rate limited (429)");
+  if (!res.ok) throw new Error(`twitter-viewer failed ${res.status}`);
+
+  const payload = (await res.json()) as TwitterViewerResponse;
+  if (!payload.success) {
+    throw new Error(payload.message || payload.error || "twitter-viewer returned unsuccessful");
+  }
+
+  const items: ParsedItem[] = [];
+  const seen = new Set<string>();
+  for (const tweet of payload.data?.tweets ?? []) {
+    if (!tweet?.id || !tweet.text) continue;
+    if (tweet.isRetweet) continue;
+    if (seen.has(tweet.id)) continue;
+    seen.add(tweet.id);
+
+    const author = (tweet.author?.handle || screen).replace(/^@/, "");
+    const text = decodeTweetText(tweet.text);
+    if (text.length < 8) continue;
+
+    const title = text.length > 140 ? `${text.slice(0, 137)}…` : text;
+    items.push({
+      title,
+      url: `https://x.com/${author}/status/${tweet.id}`,
+      summary: text.slice(0, 280),
+      publishedAt: twitterCreatedToIso(tweet.createdAt, tweet.id),
+    });
+    if (items.length >= limit) break;
+  }
+  return items;
+}
+
+/**
+ * Guest GraphQL first; if empty/fails, fall back to twitter-viewer.com.
+ */
+export async function fetchTwitterTimeline(handle: string, limit = 6): Promise<ParsedItem[]> {
+  let guestError: unknown;
+  try {
+    const guest = await fetchTwitterViaGuest(handle, limit);
+    if (guest.length > 0) return guest;
+  } catch (err) {
+    guestError = err;
+  }
+
+  try {
+    return await fetchTwitterViaTwitterViewer(handle, limit);
+  } catch (viewerError) {
+    if (guestError) {
+      throw new Error(
+        `Twitter fetch failed for @${handle.replace(/^@/, "")}: guest=${
+          guestError instanceof Error ? guestError.message : String(guestError)
+        }; viewer=${viewerError instanceof Error ? viewerError.message : String(viewerError)}`,
+      );
+    }
+    throw viewerError;
+  }
+}
 
 export function slugify(input: string) {
   return input

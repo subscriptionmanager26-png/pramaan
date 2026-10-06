@@ -4,12 +4,13 @@
  *   npx tsx scripts/feed-monitor-test.ts
  *
  * Samples the first N advisors with usable Twitter / Substack links,
- * fetches via guest GraphQL + Substack RSS, writes JSON under tmp/feed-monitor/.
+ * fetches via guest GraphQL → twitter-viewer.com fallback + Substack RSS,
+ * writes JSON under tmp/feed-monitor/.
  * Does not commit.
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { fetchSubstack, fetchTwitterViaGuest } from "../src/lib/ingest/feeds";
+import { fetchSubstack, fetchTwitterTimeline } from "../src/lib/ingest/feeds";
 
 type AdvisorRow = {
   id: string;
@@ -71,14 +72,14 @@ async function main() {
 
   for (const row of twitterRows) {
     try {
-      const posts = await fetchTwitterViaGuest(row.handle, postsPer);
+      const posts = await fetchTwitterTimeline(row.handle, postsPer);
       sources.push({
         advisorId: row.advisor.id,
         advisorName: row.advisor.name,
         advisorSlug: row.advisor.slug,
         platform: "twitter",
         urlOrHandle: `@${row.handle}`,
-        helper: "fetchTwitterViaGuest",
+        helper: "fetchTwitterTimeline (guest GraphQL → twitter-viewer.com)",
         success: true,
         postCount: posts.length,
         posts,
@@ -91,7 +92,7 @@ async function main() {
         advisorSlug: row.advisor.slug,
         platform: "twitter",
         urlOrHandle: `@${row.handle}`,
-        helper: "fetchTwitterViaGuest",
+        helper: "fetchTwitterTimeline (guest GraphQL → twitter-viewer.com)",
         success: false,
         error: err instanceof Error ? err.message : String(err),
         postCount: 0,
@@ -143,7 +144,7 @@ async function main() {
       startedAt,
       finishedAt,
       helpers: {
-        twitter: "fetchTwitterViaGuest (x.com guest GraphQL — not Jina)",
+        twitter: "fetchTwitterTimeline — guest GraphQL, then twitter-viewer.com",
         substack: "fetchSubstack / RSS",
       },
       selection: {

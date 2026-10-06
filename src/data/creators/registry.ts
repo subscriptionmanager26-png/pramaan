@@ -40,7 +40,7 @@ export const ingestRegistry: IngestCreator[] = [
       },
     ],
     notes: {
-      twitter: "Guest GraphQL timeline (no app key); query IDs may need occasional refresh.",
+      twitter: "Guest GraphQL first, then twitter-viewer.com as fallback.",
       youtube: "Tracked by channel id UCM9JulVK4nShhpiMWlEuIGA (@CapitalmindHQ).",
       substack: "Official publication RSS at deepakshenoy.substack.com/feed.",
     },
