@@ -8,9 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "ingest": "tsx scripts/ingest-creator.ts",
-    "feed-monitor:test": "tsx scripts/feed-monitor-test.ts"
+    "feed-monitor:test": "tsx scripts/feed-monitor-test.ts",
+    "af:sync-sources": "tsx scripts/af-sync-sources.ts",
+    "af:ingest": "tsx scripts/af-ingest.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "next": "16.3.2",
     "react": "19.2.8",
     "react-dom": "19.2.8"
