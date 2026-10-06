@@ -519,30 +519,127 @@ export async function fetchTwitterViaTwitterViewer(
   return items;
 }
 
+type TwitterViewerNetTweet = {
+  restId?: string;
+  id?: string;
+  fullText?: string;
+  text?: string;
+  createdAt?: string;
+  user?: { handle?: string };
+  author?: { handle?: string };
+  retweetedTweet?: unknown;
+  retweetOf?: unknown;
+};
+
+type TwitterViewerNetResponse = {
+  user?: { handle?: string };
+  timeline?: {
+    items?: Array<{ tweet?: TwitterViewerNetTweet; conversation?: TwitterViewerNetTweet[] }>;
+  };
+  tweets?: TwitterViewerNetTweet[];
+  code?: string;
+  message?: string;
+};
+
 /**
- * Guest GraphQL first; if empty/fails, fall back to twitter-viewer.com.
+ * Alternative via twitterviewer.net Connect-RPC JSON.
+ * Requires Cloudflare Turnstile token in header `x-anti-bot`
+ * (set env TWITTERVIEWER_NET_ANTI_BOT), otherwise the API returns permission_denied.
  */
-export async function fetchTwitterTimeline(handle: string, limit = 6): Promise<ParsedItem[]> {
-  let guestError: unknown;
-  try {
-    const guest = await fetchTwitterViaGuest(handle, limit);
-    if (guest.length > 0) return guest;
-  } catch (err) {
-    guestError = err;
+export async function fetchTwitterViaTwitterViewerNet(
+  handle: string,
+  limit = 6,
+): Promise<ParsedItem[]> {
+  const screen = handle.replace(/^@/, "");
+  const antiBot = process.env.TWITTERVIEWER_NET_ANTI_BOT?.trim();
+  const headers: Record<string, string> = {
+    accept: "application/json",
+    "content-type": "application/json",
+    "connect-protocol-version": "1",
+    "user-agent":
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    origin: "https://twitterviewer.net",
+    referer: "https://twitterviewer.net/twitter-profile-viewer",
+  };
+  if (antiBot) headers["x-anti-bot"] = antiBot;
+
+  const res = await fetch(
+    "https://api.twitterviewer.net/api/rpc/twitterviewer.v1.TimelineService/GetUserTimeline",
+    {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ handle: screen }),
+    },
+  );
+
+  const payload = (await res.json().catch(() => ({}))) as TwitterViewerNetResponse;
+  if (!res.ok) {
+    throw new Error(
+      payload.message
+        ? `twitterviewer.net failed ${res.status}: ${payload.message}`
+        : `twitterviewer.net failed ${res.status}`,
+    );
   }
 
-  try {
-    return await fetchTwitterViaTwitterViewer(handle, limit);
-  } catch (viewerError) {
-    if (guestError) {
-      throw new Error(
-        `Twitter fetch failed for @${handle.replace(/^@/, "")}: guest=${
-          guestError instanceof Error ? guestError.message : String(guestError)
-        }; viewer=${viewerError instanceof Error ? viewerError.message : String(viewerError)}`,
-      );
-    }
-    throw viewerError;
+  const rawTweets: TwitterViewerNetTweet[] = [];
+  if (Array.isArray(payload.tweets)) {
+    rawTweets.push(...payload.tweets);
   }
+  for (const item of payload.timeline?.items ?? []) {
+    if (item.tweet) rawTweets.push(item.tweet);
+    for (const reply of item.conversation ?? []) rawTweets.push(reply);
+  }
+
+  const items: ParsedItem[] = [];
+  const seen = new Set<string>();
+  for (const tweet of rawTweets) {
+    if (tweet.retweetedTweet || tweet.retweetOf) continue;
+    const statusId = tweet.restId || tweet.id;
+    const body = tweet.fullText || tweet.text;
+    if (!statusId || !body) continue;
+    if (seen.has(statusId)) continue;
+    seen.add(statusId);
+
+    const author = (tweet.user?.handle || tweet.author?.handle || screen).replace(/^@/, "");
+    const text = decodeTweetText(body);
+    if (text.length < 8) continue;
+
+    const title = text.length > 140 ? `${text.slice(0, 137)}…` : text;
+    items.push({
+      title,
+      url: `https://x.com/${author}/status/${statusId}`,
+      summary: text.slice(0, 280),
+      publishedAt: twitterCreatedToIso(tweet.createdAt, statusId),
+    });
+    if (items.length >= limit) break;
+  }
+  return items;
+}
+
+/**
+ * Guest GraphQL → twitter-viewer.com → twitterviewer.net.
+ */
+export async function fetchTwitterTimeline(handle: string, limit = 6): Promise<ParsedItem[]> {
+  const screen = handle.replace(/^@/, "");
+  const errors: string[] = [];
+
+  const sources: Array<{ name: string; run: () => Promise<ParsedItem[]> }> = [
+    { name: "guest", run: () => fetchTwitterViaGuest(screen, limit) },
+    { name: "twitter-viewer.com", run: () => fetchTwitterViaTwitterViewer(screen, limit) },
+    { name: "twitterviewer.net", run: () => fetchTwitterViaTwitterViewerNet(screen, limit) },
+  ];
+
+  for (const source of sources) {
+    try {
+      const posts = await source.run();
+      if (posts.length > 0) return posts;
+      errors.push(`${source.name}=empty`);
+    } catch (err) {
+      errors.push(`${source.name}=${err instanceof Error ? err.message : String(err)}`);
+    }
+  }
+
+  throw new Error(`Twitter fetch failed for @${screen}: ${errors.join("; ")}`);
 }
 
 export function slugify(input: string) {

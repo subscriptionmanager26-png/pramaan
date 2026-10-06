@@ -40,7 +40,7 @@ export const ingestRegistry: IngestCreator[] = [
       },
     ],
     notes: {
-      twitter: "Guest GraphQL first, then twitter-viewer.com as fallback.",
+      twitter: "Guest GraphQL → twitter-viewer.com → twitterviewer.net (Turnstile token optional via TWITTERVIEWER_NET_ANTI_BOT).",
       youtube: "Tracked by channel id UCM9JulVK4nShhpiMWlEuIGA (@CapitalmindHQ).",
       substack: "Official publication RSS at deepakshenoy.substack.com/feed.",
     },
