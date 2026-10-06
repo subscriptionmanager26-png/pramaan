@@ -91,8 +91,26 @@ export function parseAtom(xml: string, limit = 8): ParsedItem[] {
   }).filter((i) => i.title && i.url);
 }
 
+/** Normalize publication URLs; map substack.com/@handle → https://handle.substack.com */
+export function normalizeSubstackUrl(publicationUrl: string) {
+  const raw = publicationUrl.trim().replace(/\/$/, "");
+  try {
+    const u = new URL(raw.startsWith("http") ? raw : `https://${raw}`);
+    const host = u.hostname.replace(/^www\./, "").toLowerCase();
+    if (host === "substack.com") {
+      const at = u.pathname.match(/^\/@([A-Za-z0-9_-]+)/);
+      if (at?.[1]) return `https://${at[1].toLowerCase()}.substack.com`;
+    }
+    // Post / about / archive URLs → publication root
+    const path = u.pathname.replace(/\/(p|s|about|archive|notes)(\/.*)?$/i, "").replace(/\/$/, "");
+    return `${u.protocol}//${u.host}${path}`;
+  } catch {
+    return raw;
+  }
+}
+
 export async function fetchSubstack(publicationUrl: string, limit = 8) {
-  const base = publicationUrl.replace(/\/$/, "");
+  const base = normalizeSubstackUrl(publicationUrl);
   const xml = await fetchText(`${base}/feed`);
   return parseRss(xml, limit);
 }
@@ -430,10 +448,6 @@ export async function fetchTwitterViaGuest(handle: string, limit = 6): Promise<P
   return items;
 }
 
-/** @deprecated Prefer fetchTwitterViaGuest — Jina now 403s from many hosts. */
-export async function fetchTwitterViaJina(handle: string, limit = 6): Promise<ParsedItem[]> {
-  return fetchTwitterViaGuest(handle, limit);
-}
 
 export function slugify(input: string) {
   return input
