@@ -26,6 +26,88 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-debt-placement-easier",
+    title: "SEBI made it easier for big listed firms to sell bonds without a banker",
+    summary:
+      "Eligible listed issuers can skip appointing a merchant banker on some private-placement debt if they meet clean track-record tests. The change is meant to cut friction and widen retail access to highly rated paper.",
+    category: "industry",
+    companyOrSector: "SEBI / corporate bonds",
+    publishedAt: "2026-10-07T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-debt-placement-easier"),
+    keyTakeaways: [
+      "Circular dated 7 Oct 2026; effective immediately after market feedback.",
+      "Exemption only if issuer is listed 1+ year, regulated, and has no payment defaults in three years.",
+      "Default rule unchanged: ₹10,000 face-value private placements still need a merchant banker unless criteria met.",
+    ],
+    sourceNote:
+      "From SEBI circular coverage in mn_news_items (7 Oct 2026, ~12:00–18:00 UTC window). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 7 October 2026, the Securities and Exchange Board of India eased who must hire a merchant banker when a listed company raises debt through a private placement. Issuers of debt or non-convertible redeemable preference shares at a ₹10,000 face value still need a banker by default. They can opt out if they pass eligibility tests set in the circular.",
+      "What does this mean?",
+      "The regulator is trying to shrink paperwork on bond sales without dropping safeguards. Only issuers overseen by an Indian financial regulator (SEBI, RBI, IRDAI, or PFRDA) qualify. They must have been listed for at least a year, have no outstanding fines from SEBI or exchanges, and show a clean repayment record on debt, CP, deposits, and loans for the last three financial years plus the current year.",
+      "If a company clears those gates, it can go to investors with less intermediary cost. SEBI framed the move as a way to make issuance smoother while still pushing highly rated securities toward retail participation.",
+      "Why should I care?",
+      "If you buy corporate bonds or debt mutual funds, more issuers may come to market with simpler processes. That does not remove credit risk. Check the issuer’s rating and use case, not just the yield. For CFOs at eligible listed firms, the change is a real cost and timeline cut on smaller private placements. Watch whether boards actually use the exemption or stick with bankers for investor comfort.",
+    ],
+  },
+  {
+    slug: "hul-detergent-price-hike",
+    title: "HUL raised detergent prices again, and shoppers are still paying",
+    summary:
+      "Surf Excel, Rin, and Wheel packs saw another round of increases in October. Some SKUs have been marked up several times in 2026. It is a test of whether households absorb staple inflation or trade down.",
+    category: "company",
+    companyOrSector: "HUL / FMCG",
+    publishedAt: "2026-10-07T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hul-detergent-price-hike"),
+    keyTakeaways: [
+      "Surf Excel Easy Wash 1 kg: ₹167 to ₹172; 500 g: ₹85 to ₹87 in this round.",
+      "Surf Easy Wash 500 g up about 14.5% cumulatively in 2026 after four hikes.",
+      "Rin and Wheel packs also revised; bars and premium Surf lines moved too.",
+    ],
+    sourceNote:
+      "From Hindustan Unilever detergent price coverage in mn_news_items (7 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "Hindustan Unilever lifted prices across its detergent portfolio in October 2026. Entry powders and premium lines moved. Surf Excel Easy Wash’s 1 kg pack now lists at ₹172, up from ₹167. The 500 g pack is ₹87, up from ₹85. Rin powder, Rin Ala liquid, and Wheel packs saw similar nudges. Surf bars and Quick Wash variants were revised too.",
+      "What does this mean?",
+      "Detergent is a weekly basket item. HUL is betting households will pay a few rupees more per wash rather than switch brands. Surf Excel Easy Wash’s smaller pack has already seen four price increases in 2026, with the 500 g size up roughly 14.5% for the year. That is not a one-off commodity blip. It is repeated pricing power on a mass product.",
+      "The same news window still shows spending alive elsewhere. Titan reported bigger jewellery tickets. Jubilant FoodWorks posted double-digit revenue growth at Domino’s. Karnataka’s beer tax redesign lifted volumes. HUL’s move fits a pattern: companies push list prices where they can, and many consumers adjust rather than stop buying.",
+      "Why should I care?",
+      "If you manage a household budget, track pack sizes, not just sticker prices. Shrinking grammage plus higher MRP is a common combo. For investors, repeated hikes on staples support margin stories but invite trade-down to regional brands when the gap gets wide. Watch December quarter FMCG updates for volume versus value growth. If volumes hold after these hikes, inflation is still passing through to the shopper.",
+    ],
+  },
+  {
+    slug: "nbfc-fd-rates-after-rbi",
+    title: "Banks may sit on deposit rates while Bajaj Finance pays savers more",
+    summary:
+      "The RBI hiked its policy rate, but banks are flush after huge FCNR(B) inflows and may not lift deposit rates quickly. Bajaj Finance still raised FD returns by up to 40 bps, with seniors up to 8.15% on longer tenures.",
+    category: "industry",
+    companyOrSector: "Deposits / NBFCs",
+    publishedAt: "2026-10-07T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nbfc-fd-rates-after-rbi"),
+    keyTakeaways: [
+      "Bajaj Finance FDs up 15–40 bps from 7 Oct; up to 7.75% regular, 8.15% seniors on 31–60 months.",
+      "Governor Malhotra cited a large FCNR(B)-led liquidity surplus that may normalize by FY end.",
+      "As of 18 Sep, RBI swap windows had drawn $143.6 bn, mostly via FCNR(B) deposits.",
+    ],
+    sourceNote:
+      "From Bajaj Finance FD releases and post-MPC deposit-rate wraps in mn_news_items (7 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On the same day the RBI raised its repo rate to 5.50%, Bajaj Finance increased fixed-deposit rates by 15 to 40 basis points across 12- to 60-month tenures, effective 7 October 2026. Regular depositors can earn up to 7.75% on cumulative 31- to 60-month FDs. Senior citizens can earn up to 8.15% on the same bucket. Renewals get an extra 0.10% on top.",
+      "Large banks tell a different story on the deposit side. Reporting after the MPC noted that heavy FCNR(B) inflows under the RBI’s June swap package have left the system liquid. Governor Sanjay Malhotra said that surplus should normalize by the end of the financial year. Several bankers signaled they may not rush to raise deposit rates even after the hike.",
+      "What does this mean?",
+      "Policy rates and your passbook rate can diverge for months. Banks already have cheap dollar-linked deposit funding to deploy. NBFCs that rely on retail FDs compete harder for savers. Bajaj Finance weighted increases toward longer tenures so customers lock in returns on AAA-rated paper.",
+      "If you are parking cash for two to five years, compare NBFC FDs with bank FDs and small-finance bank offers. Check credit rating and deposit insurance limits. NBFC deposits are not bank deposits.",
+      "Why should I care?",
+      "Savers should shop now, not assume every lender will move in step with the RBI. Borrowers face the opposite lag on loans, covered in our separate MPC note. Watch whether public-sector banks lift retail deposit rates once FCNR(B) money is fully deployed. If they stay flat while NBFCs keep nudging up, more household savings may shift toward higher-yield FDs outside the banking core.",
+    ],
+  },
+  {
     slug: "rbi-hike-household-budget",
     title: "The RBI just made borrowing a little more expensive",
     summary:
@@ -164,6 +246,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-debt-placement-easier": "policy",
+  "hul-detergent-price-hike": "companies",
+  "nbfc-fd-rates-after-rbi": "policy",
   "rbi-hike-household-budget": "policy",
   "titan-growth-stock-fell": "companies",
   "airtel-postpaid-price-test": "companies",
