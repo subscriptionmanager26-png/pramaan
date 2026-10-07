@@ -1,0 +1,4 @@
+{
+  "install": "npm ci",
+  "start": "echo \"Supabase secrets SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required for npm run af:ingest\""
+}

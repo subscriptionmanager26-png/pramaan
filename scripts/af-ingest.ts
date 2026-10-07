@@ -44,6 +44,24 @@ function daysAgoIso(days: number) {
   return new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
 }
 
+/** PostgREST `.in()` with hundreds of UUIDs overflows HTTP headers; keep chunks small. */
+const IN_CHUNK = 80;
+
+function chunk<T>(items: T[], size: number): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < items.length; i += size) out.push(items.slice(i, i + size));
+  return out;
+}
+
+function formatErr(err: unknown): string {
+  if (err instanceof Error) return err.message;
+  if (typeof err === "object" && err !== null) {
+    const o = err as { message?: string; details?: string; hint?: string };
+    return [o.message, o.details, o.hint].filter(Boolean).join(" — ") || JSON.stringify(err);
+  }
+  return String(err);
+}
+
 async function fetchSourcePosts(source: SourceRow, limit: number): Promise<Parsed[]> {
   if (source.platform === "twitter") {
     const handle =
@@ -155,14 +173,53 @@ async function main() {
       }
     }
 
-    if (!skipBodies && newContentIds.length) {
-      const { data: needBodies, error } = await supabase
-        .from("af_content_items")
-        .select("id,platform,url,title,summary")
-        .in("id", newContentIds);
-      if (error) throw error;
+    if (!skipBodies) {
+      type BodyItem = {
+        id: string;
+        platform: string;
+        url: string;
+        title: string;
+        summary: string;
+      };
+      const needBodies = new Map<string, BodyItem>();
 
-      for (const item of needBodies ?? []) {
+      for (const ids of chunk(newContentIds, IN_CHUNK)) {
+        const { data, error } = await supabase
+          .from("af_content_items")
+          .select("id,platform,url,title,summary")
+          .in("id", ids);
+        if (error) throw error;
+        for (const row of data ?? []) needBodies.set(row.id, row);
+      }
+
+      // Recent items without a body row (e.g. prior run failed after upsert).
+      const bodyPageSize = 500;
+      for (let from = 0; ; from += bodyPageSize) {
+        const { data: recentItems, error: recentErr } = await supabase
+          .from("af_content_items")
+          .select("id,platform,url,title,summary")
+          .eq("is_retweet", false)
+          .gte("first_seen_at", windowStart)
+          .range(from, from + bodyPageSize - 1);
+        if (recentErr) throw recentErr;
+        if (!recentItems?.length) break;
+
+        const haveBody = new Set<string>();
+        for (const idChunk of chunk(recentItems.map((r) => r.id), IN_CHUNK)) {
+          const { data: bodies, error: bodiesErr } = await supabase
+            .from("af_content_bodies")
+            .select("content_id")
+            .in("content_id", idChunk);
+          if (bodiesErr) throw bodiesErr;
+          for (const b of bodies ?? []) haveBody.add(b.content_id);
+        }
+        for (const row of recentItems) {
+          if (!haveBody.has(row.id)) needBodies.set(row.id, row);
+        }
+        if (recentItems.length < bodyPageSize) break;
+      }
+
+      for (const item of needBodies.values()) {
         const body = await fetchContentBody({
           platform: item.platform as "twitter" | "substack",
           url: item.url,
@@ -188,24 +245,40 @@ async function main() {
 
     if (!skipCategories) {
       // New in last 3 days by published_at, else first_seen_at.
-      const { data: recent, error } = await supabase
-        .from("af_content_items")
-        .select("id,title,summary,published_at,first_seen_at,is_retweet")
-        .eq("is_retweet", false)
-        .or(`published_at.gte.${windowStart},first_seen_at.gte.${windowStart}`);
-      if (error) throw error;
+      const recent: {
+        id: string;
+        title: string;
+        summary: string;
+        published_at: string | null;
+        first_seen_at: string;
+        is_retweet: boolean;
+      }[] = [];
+      const pageSize = 500;
+      for (let from = 0; ; from += pageSize) {
+        const { data, error } = await supabase
+          .from("af_content_items")
+          .select("id,title,summary,published_at,first_seen_at,is_retweet")
+          .eq("is_retweet", false)
+          .or(`published_at.gte.${windowStart},first_seen_at.gte.${windowStart}`)
+          .range(from, from + pageSize - 1);
+        if (error) throw error;
+        if (!data?.length) break;
+        recent.push(...data);
+        if (data.length < pageSize) break;
+      }
 
-      const ids = (recent ?? []).map((r) => r.id);
+      const ids = recent.map((r) => r.id);
       const bodyById = new Map<string, string | null>();
-      if (ids.length) {
-        const { data: bodies } = await supabase
+      for (const idChunk of chunk(ids, IN_CHUNK)) {
+        const { data: bodies, error: bodiesErr } = await supabase
           .from("af_content_bodies")
           .select("content_id,body_text")
-          .in("content_id", ids);
+          .in("content_id", idChunk);
+        if (bodiesErr) throw bodiesErr;
         for (const b of bodies ?? []) bodyById.set(b.content_id, b.body_text);
       }
 
-      for (const item of recent ?? []) {
+      for (const item of recent) {
         const result = categorizeDiscussion({
           title: item.title,
           summary: item.summary,
@@ -275,7 +348,7 @@ async function main() {
         items_upserted: itemsUpserted,
         bodies_fetched: bodiesFetched,
         categorized,
-        error: err instanceof Error ? err.message : String(err),
+        error: formatErr(err),
       })
       .eq("id", runId);
     throw err;
