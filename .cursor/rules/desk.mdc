@@ -1,0 +1,32 @@
+---
+description: Pramaan news desk automation — notes, heroes, voice
+globs:
+  - docs/desk-brief.md
+  - docs/desk-hero-prompts.md
+  - src/lib/desk-notes.ts
+  - public/desk/**
+---
+
+# Desk automation
+
+Follow `docs/desk-brief.md` for story selection and ship path.
+
+## Hero images (required on every new note)
+
+1. Read `docs/desk-hero-prompts.md`.
+2. Fill the planning row: topic, core economic idea, primary subject, visual metaphor, left/right composition.
+3. Generate a 16:9 editorial composite (do not illustrate the headline; visualize the idea).
+4. Style: Art Deco layout (symmetry, chevrons, gold lines) plus Bauhaus primaries (red, blue, yellow on cream). Avoid default orange/peach fintech palettes unless the story demands it.
+5. Save as `public/desk/{slug}.jpg`.
+6. Set `image: deskHeroImage("{slug}")` on the note.
+
+## Voice (required on every note)
+
+Write like a human editor at a serious business magazine (think HBR: clear, calm, useful).
+
+- Short sentences. Simple words. Say what happened, then what it means for the reader.
+- No em dashes.
+- Do not write “this is not X, this is Y” or “not a … cliff / shock / theatre”.
+- Do not write how AI writes: no “moving targets”, “transmitting the hike”, “pricing power story”, “constructive to desk notes”, “lack shock value”.
+- Prefer how people talk: “If you plan to buy a house soon, shop around on loan quotes. Banks often take a few weeks to pass on an RBI rate change.”
+- Banned filler: delve, landscape, robust, leverage, synergy, paradigm, well-positioned.

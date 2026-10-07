@@ -40,6 +40,7 @@ Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper)
    - 1–2 short paragraphs (who is affected + what to watch)
 5. **readMinutes** — usually `2`
 6. **sourceNote** — cite `mn_news_items` window; “Not investment advice.”
+7. **Hero image** — `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")`. Editorial composite prompts — see [`docs/desk-hero-prompts.md`](./desk-hero-prompts.md) (subject + metaphor + composition + style; visualize the economic idea, not the headline). No picsum; no clutter; no headline text in the image.
 
 ### Coverage order (non-negotiable)
 
@@ -51,7 +52,14 @@ Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper)
 
 ### Tone
 
-Write for a sharp reader who wants clarity, not theatre. Short sentences. One idea per beat. State cause and effect explicitly. No banned filler (`delve`, `landscape`, `robust`, `leverage`, `synergy`, `paradigm`, `well-positioned`).
+Write like an editor at a serious business magazine (HBR-style): calm, direct, useful. Short sentences. Simple words.
+
+- Say what happened, then what it means for the reader.
+- No em dashes.
+- Avoid “this is not X, this is Y” framing.
+- Avoid AI cadence (“moving targets”, “transmitting the hike”, “lack shock value”, “pricing power narrative”).
+- Prefer normal speech. Example: “If you plan to buy a house soon, compare loan quotes from more than one bank. Lenders often take a few weeks to update rates after an RBI move.”
+- No banned filler: `delve`, `landscape`, `robust`, `leverage`, `synergy`, `paradigm`, `well-positioned`.
 
 ## Ship path
 
@@ -59,8 +67,9 @@ Write for a sharp reader who wants clarity, not theatre. Short sentences. One id
 2. Cluster by *event*, not ticker. Score with lenses + gates.
 3. Select 0–5 stories. If unsure, drop.
 4. Append new notes to `src/lib/desk-notes.ts` (newest first). Do not delete older desk notes unless they are broken duplicates.
-5. Open a PR titled `desk: <date> (<n> notes)` with a short summary of each slug.
-6. Do **not** push straight to `main` unless the run instructions explicitly say so.
+5. **Hero image:** for each new slug, follow [`docs/desk-hero-prompts.md`](./desk-hero-prompts.md). Generate the editorial composite, save `public/desk/{slug}.jpg`, set `image: deskHeroImage("{slug}")`. Commit the JPG with the note.
+6. Open a PR titled `desk: <date> (<n> notes)` with a short summary of each slug.
+7. Do **not** push straight to `main` unless the run instructions explicitly say so.
 
 ## Done when
 
