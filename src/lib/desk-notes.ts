@@ -11,7 +11,7 @@ export function isDeskSectionHeader(para: string): boolean {
   return (DESK_SECTION_HEADERS as readonly string[]).includes(para.trim());
 }
 
-/** Thematic hero art: commit `public/desk/{slug}.jpg` (16:9 editorial) per note. */
+/** Minimal flat hero: `public/desk/{slug}.jpg` (16:9, light modern/Bauhaus — see desk-brief). */
 export function deskHeroImage(slug: string): string {
   return `/desk/${slug}.jpg`;
 }
