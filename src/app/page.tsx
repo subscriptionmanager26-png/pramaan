@@ -181,10 +181,13 @@ export default function HomePage() {
                 ))}
               </div>
               {researchArticles.length ? (
-                <div className="mt-8 hidden">
-                  {researchArticles.slice(0, 2).map((article) => (
-                    <ResearchMagazineCard key={article.slug} article={article} />
-                  ))}
+                <div className="mt-10 space-y-6 border-t border-line pt-8">
+                  <p className="text-meta uppercase tracking-[0.14em]">Desk notes</p>
+                  <div className="grid gap-8 sm:grid-cols-2">
+                    {researchArticles.slice(0, 2).map((article) => (
+                      <ResearchMagazineCard key={article.slug} article={article} />
+                    ))}
+                  </div>
                 </div>
               ) : null}
             </div>

@@ -24,10 +24,13 @@ export function NewsMagazineCard({
 }) {
   const tags = [item.topic, item.source.toLowerCase()];
 
+  const external = /^https?:\/\//i.test(item.url);
+
   if (compact) {
     return (
       <a
         href={item.url}
+        {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
         className="group grid grid-cols-[88px_minmax(0,1fr)] gap-4 border-b border-line py-5 last:border-0 sm:grid-cols-[120px_minmax(0,1fr)]"
       >
         <div className="aspect-[5/4] overflow-hidden rounded-xl bg-paper-2">
@@ -52,8 +55,7 @@ export function NewsMagazineCard({
   return (
     <a
       href={item.url}
-      target="_blank"
-      rel="noreferrer"
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
       className={`group block ${featured ? "sm:col-span-2" : ""}`}
     >
       <div

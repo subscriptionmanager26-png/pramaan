@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ResearchMagazineCard } from "@/components/magazine/MagazineCards";
 import { ResearchFilters } from "@/components/research/ResearchFilters";
 import { Page, PageHeader } from "@/components/shell/Page";
 import { listArticles } from "@/lib/articles/catalog";
 import { listCompanies, listIndustries } from "@/lib/articles/taxonomy";
 import type { Verdict } from "@/lib/articles/types";
+import { researchArticles } from "@/lib/site";
+import { formatRelative } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -46,6 +50,8 @@ export default async function ResearchPage({
     );
   }
 
+  const showDeskNotes = !industry && !company && verdict === "all" && !q.trim();
+
   return (
     <Page>
       <PageHeader
@@ -54,18 +60,50 @@ export default async function ResearchPage({
         description={`${all.length} hand-built midcap memos. Filter by verdict, industry, or company.`}
       />
 
-      <ResearchFilters
-        verdict={verdict}
-        industry={industry}
-        company={company}
-        q={q}
-        industries={industries}
-        companies={companies}
-        industryCounts={industryCounts}
-        verdictCounts={verdictCounts}
-        totalCount={all.length}
-        articles={list}
-      />
+      {showDeskNotes && researchArticles.length ? (
+        <section className="mb-12">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-meta uppercase tracking-[0.14em]">Desk notes</p>
+              <h2 className="mt-1 text-[1.25rem] font-bold tracking-tight text-ink">
+                From the advisor-feed wire
+              </h2>
+            </div>
+            <p className="text-meta hidden sm:block">
+              {researchArticles
+                .map((a) => formatRelative(a.publishedAt))
+                .slice(0, 1)
+                .join("")}
+            </p>
+          </div>
+          <div className="mt-6 grid gap-8 sm:grid-cols-2">
+            {researchArticles.map((article) => (
+              <ResearchMagazineCard key={article.slug} article={article} />
+            ))}
+          </div>
+          <p className="text-meta mt-4">
+            Looking for a ticker memo?{" "}
+            <Link href="#memos" className="font-semibold text-accent hover:underline">
+              Jump to company filters
+            </Link>
+          </p>
+        </section>
+      ) : null}
+
+      <div id="memos">
+        <ResearchFilters
+          verdict={verdict}
+          industry={industry}
+          company={company}
+          q={q}
+          industries={industries}
+          companies={companies}
+          industryCounts={industryCounts}
+          verdictCounts={verdictCounts}
+          totalCount={all.length}
+          articles={list}
+        />
+      </div>
     </Page>
   );
 }
