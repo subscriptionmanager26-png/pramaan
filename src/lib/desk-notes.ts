@@ -18,6 +18,60 @@ export function isDeskSectionHeader(para: string): boolean {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "dominos-lfl-accelerates",
+    title: "Domino’s footfall is picking up again — without waiting for Diwali",
+    summary:
+      "Jubilant FoodWorks grew revenue 12% in Q2. Like-for-like sales at Domino’s India rose to 4.1% from 2.5% in the prior quarter. That is a shopper-behaviour turn, not just new stores.",
+    category: "company",
+    companyOrSector: "Jubilant FoodWorks / QSR",
+    publishedAt: "2026-10-07T19:05:00+05:30",
+    readMinutes: 2,
+    image: "https://picsum.photos/seed/pramaan-jublfood-q2/1200/750",
+    keyTakeaways: [
+      "Consolidated revenue +11.9% to ₹2,608.7 cr; standalone +11.6%.",
+      "Domino’s India LFL: 4.1% vs 2.5% in Q1 — same-store demand improved.",
+      "Net +108 group stores (88 Domino’s India); network 3,820 as of 30 Sep.",
+    ],
+    sourceNote:
+      "From Jubilant FoodWorks Q2 FY27 business update and wire copies in mn_news_items (7 Oct 2026, ~12:05–12:55 UTC). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 7 October 2026, Jubilant FoodWorks gave its September-quarter business update. Consolidated revenue rose 11.9% year on year to ₹2,608.7 crore. Standalone revenue rose 11.6% to ₹1,885.8 crore. Domino’s India — the core — posted like-for-like (LFL) growth of 4.1%. That compares with 2.5% in the April–June quarter. The group added a net 108 stores in the quarter, including 88 Domino’s India outlets, taking the network to 3,820 stores.",
+      "What does this mean?",
+      "LFL growth measures sales at stores open at least a year. When LFL accelerates while the company is still opening doors, it usually means existing customers are visiting or ordering more often — not that growth is only math from new pins on the map. Management has been trying to revive dine-in and takeaway, which lagged delivery; the update fits a slow repair rather than a one-day festival spike.",
+      "Put it next to other prints from the same week. Titan’s jewellery update showed fewer buyers but bigger tickets. Jubilant is the opposite shape at the margin: modest but improving same-store momentum in mass-market food. Popeyes is still small but called out as a second engine. Fuel and food-input costs remain high, so margin is a separate fight — this note is about demand on the ground.",
+      "Why should I care?",
+      "If you track Indian consumption, QSR LFL is a quick read on urban discretionary spend between big-ticket categories. Watch the full P&L for margin pressure from commodities. Watch Q3 for whether LFL holds when Diwali and winter menus land — and whether Jubilant can keep improving dine-in without giving away delivery share. A sustained LFL uptick would corroborate the “demand is alive, just mixed by category” story Titan’s update also hinted at.",
+    ],
+  },
+  {
+    slug: "coal-plants-four-day-stock",
+    title: "India’s coal buffers are nearly empty — and summer prep is on the clock",
+    summary:
+      "More than 40% of coal-fired capacity had four days of fuel or less as of 4 October. Late heat, mine rain, and rail bottlenecks drained stocks. The fix is supply logistics, not a rate cut.",
+    category: "industry",
+    companyOrSector: "Power / coal supply",
+    publishedAt: "2026-10-07T18:50:00+05:30",
+    readMinutes: 2,
+    image: "https://picsum.photos/seed/pramaan-coal-stock/1200/750",
+    keyTakeaways: [
+      "69 plants (~>40% of coal fleet) at ≤4 days stock as of 4 Oct — near five-year lows.",
+      "Drivers: warm Oct demand, mine disruptions, rail constraints; ~90% of low-stock plants far from mines.",
+      "Coal still ~70% of India power; Oct–Feb is the window to rebuild before next summer.",
+    ],
+    sourceNote:
+      "From national coal-inventory coverage in mn_news_items (7 Oct 2026, ~10:07 UTC). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "Coal stockpiles at Indian power stations slid close to a five-year low. As of 4 October 2026, 69 plants — more than two-fifths of the coal-fired fleet — held four days of fuel or less. That threshold is treated as a minimum comfort level by operators. Coal still generates nearly 70% of India’s electricity, so low buffers raise the risk of load shedding if supply or transport stumbles again.",
+      "What does this mean?",
+      "Demand stayed unusually strong for October: warm weather kept cooling and irrigation load up when the system normally eases. Supply side, heavy rain disrupted some mines, and rail capacity remained tight. Plants burned inventory instead of fresh deliveries. Most plants with critically low stocks sit far from mines — so the problem is logistics as much as digging coal out of the ground.",
+      "The calendar matters. Cooler months through February are when utilities usually rebuild stocks ahead of the next summer heatwave. Missing that window can leave the grid exposed in 2027. Analysts quoted on the wire pointed to possible short-term load management and a need for Coal India and Indian Railways to lift dispatches to power stations now, not after the first heat spike.",
+      "Why should I care?",
+      "Households and factories feel this as reliability of power, not as a Nifty headline. If you run manufacturing in states dependent on coal-heavy grids, watch state discom advisories and fuel reports through October–November. Investors often map the story to Coal India, railways, and IPPs — but the policy lever is dispatch and transport coordination. This is separate from the RBI rate hike the same day: monetary policy does not refill a stockyard.",
+    ],
+  },
+  {
     slug: "rbi-hike-household-budget",
     title: "The RBI just made borrowing a little more expensive",
     summary:
@@ -156,6 +210,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "dominos-lfl-accelerates": "companies",
+  "coal-plants-four-day-stock": "policy",
   "rbi-hike-household-budget": "policy",
   "titan-growth-stock-fell": "companies",
   "airtel-postpaid-price-test": "companies",
