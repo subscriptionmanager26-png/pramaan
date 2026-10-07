@@ -1,6 +1,6 @@
 import type { NewsItem, ResearchArticle } from "@/lib/site";
 
-/** Finimize-style section labels rendered as headings on `/research/[slug]`. */
+/** Finimize-style section labels rendered as headings on `/news/[slug]`. */
 export const DESK_SECTION_HEADERS = [
   "What's going on here?",
   "What does this mean?",
@@ -13,6 +13,10 @@ export function isDeskSectionHeader(para: string): boolean {
 
 export function deskHeroImage(slug: string): string {
   return `/desk/${slug}.jpg`;
+}
+
+export function getDeskNote(slug: string) {
+  return deskNotes.find((n) => n.slug === slug);
 }
 
 /**
@@ -174,6 +178,6 @@ export const deskNewsItems: NewsItem[] = deskNotes.map((note) => ({
   source: "Pramaan Desk",
   publishedAt: note.publishedAt,
   topic: deskTopics[note.slug] ?? "markets",
-  url: `/research/${note.slug}`,
+  url: `/news/${note.slug}`,
   image: note.image,
 }));

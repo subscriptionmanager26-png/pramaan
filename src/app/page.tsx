@@ -1,12 +1,8 @@
 import Link from "next/link";
-import {
-  NewsMagazineCard,
-  ResearchMagazineCard,
-  TrendingList,
-} from "@/components/magazine/MagazineCards";
+import { NewsMagazineCard, TrendingList } from "@/components/magazine/MagazineCards";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
 import { listArticles } from "@/lib/articles/catalog";
-import { newsFeed, researchArticles } from "@/lib/site";
+import { newsFeed } from "@/lib/site";
 import { formatRelative } from "@/lib/utils";
 
 function HeroCollage() {
@@ -180,16 +176,6 @@ export default function HomePage() {
                   <ResearchMemoCard key={article.slug} article={article} layout="grid" />
                 ))}
               </div>
-              {researchArticles.length ? (
-                <div className="mt-10 space-y-6 border-t border-line pt-8">
-                  <p className="text-meta uppercase tracking-[0.14em]">Desk notes</p>
-                  <div className="grid gap-8 sm:grid-cols-2">
-                    {researchArticles.slice(0, 2).map((article) => (
-                      <ResearchMagazineCard key={article.slug} article={article} />
-                    ))}
-                  </div>
-                </div>
-              ) : null}
             </div>
           </div>
           <div className="lg:pt-1">

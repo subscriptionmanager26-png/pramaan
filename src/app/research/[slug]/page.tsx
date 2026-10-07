@@ -9,8 +9,9 @@ import { getArticle, listArticles, relatedArticles } from "@/lib/articles/catalo
 import { articleCover } from "@/lib/articles/images";
 import { getDeepResearchForArticle } from "@/lib/research";
 import { formatDate } from "@/lib/utils";
-import { isDeskSectionHeader } from "@/lib/desk-notes";
+import { getDeskNote } from "@/lib/desk-notes";
 import { getResearch, researchArticles } from "@/lib/site";
+import { redirect } from "next/navigation";
 
 export function generateStaticParams() {
   const memoSlugs = listArticles().map((a) => ({ slug: a.slug }));
@@ -140,6 +141,10 @@ export default async function ResearchArticlePage({
     );
   }
 
+  if (getDeskNote(slug)) {
+    redirect(`/news/${slug}`);
+  }
+
   const note = getResearch(slug);
   if (!note) notFound();
 
@@ -152,7 +157,7 @@ export default async function ResearchArticlePage({
       </Link>
 
       <p className="mt-5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink-3">
-        Desk note · {note.category} · {note.companyOrSector}
+        Research brief · {note.category} · {note.companyOrSector}
       </p>
       <h1 className="text-section mt-2 text-ink">{note.title}</h1>
       <p className="mt-3 text-[17px] leading-7 text-ink-2">{note.summary}</p>
@@ -180,18 +185,9 @@ export default async function ResearchArticlePage({
       ) : null}
 
       <div className="mt-8 max-w-2xl space-y-5 text-[15px] leading-7 text-ink">
-        {note.body.map((para, i) =>
-          isDeskSectionHeader(para) ? (
-            <h2
-              key={`h-${i}-${para}`}
-              className="pt-2 text-[13px] font-bold uppercase tracking-[0.08em] text-accent"
-            >
-              {para}
-            </h2>
-          ) : (
-            <p key={`p-${i}-${para.slice(0, 40)}`}>{para}</p>
-          ),
-        )}
+        {note.body.map((para, i) => (
+          <p key={`p-${i}-${para.slice(0, 40)}`}>{para}</p>
+        ))}
       </div>
 
       {note.sourceNote ? (
@@ -200,7 +196,7 @@ export default async function ResearchArticlePage({
 
       {otherNotes.length ? (
         <section className="mt-14 border-t border-line pt-10">
-          <h2 className="text-[1.1rem] font-black italic tracking-tight text-ink">MORE DESK NOTES</h2>
+          <h2 className="text-[1.1rem] font-black italic tracking-tight text-ink">More research</h2>
           <div className="mt-4 divide-y divide-line border-t border-line">
             {otherNotes.map((a) => (
               <Link

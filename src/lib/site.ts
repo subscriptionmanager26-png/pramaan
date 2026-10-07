@@ -1,4 +1,4 @@
-import { deskNewsItems, deskNotes } from "@/lib/desk-notes";
+import { deskNewsItems } from "@/lib/desk-notes";
 
 export type NewsItem = {
   slug: string;
@@ -56,39 +56,15 @@ const LOREM_SHORT =
 const LOREM_MID =
   "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.";
 
-/** News rail — desk notes link internally to `/research/[slug]`. */
-export const newsFeed: NewsItem[] = [
-  ...deskNewsItems,
-  {
-    slug: "tata-consumption-trent-titan-q2",
-    headline: "Same festive calendar, two different machines: why Trent jumped and Titan slipped",
-    summary:
-      "Trent beat because existing stores bled less — even while opening fewer doors than expected. Titan’s jewellery miss was about fewer new buyers leaning on bigger tickets. One story is productivity healing; the other is price-heavy growth.",
-    source: "Pramaan Desk",
-    publishedAt: "2026-10-07T12:00:00+05:30",
-    topic: "companies",
-    url: "/research/tata-consumption-trent-titan-q2",
-    image: "https://picsum.photos/seed/pramaan-tata-consumption/1200/750",
-  },
-  {
-    slug: "gold-loans-surge-into-rate-hike",
-    headline: "Gold loans look like a credit boom. A lot of it is gold prices doing the work.",
-    summary:
-      "When gold rises, the same jewellery unlocks a bigger loan. That inflates AUM — then the RBI hikes rates. The boom and the risk are the same collateral.",
-    source: "Pramaan Desk",
-    publishedAt: "2026-10-07T12:30:00+05:30",
-    topic: "economy",
-    url: "/research/gold-loans-surge-into-rate-hike",
-    image: "https://picsum.photos/seed/pramaan-gold-loans/1200/750",
-  },
-];
+/** News rail — short desk notes at `/news/[slug]`. */
+export const newsFeed: NewsItem[] = [...deskNewsItems];
 
 /**
  * Thematic desk notes (multi-name / sector pieces).
  * Company deep memos live in `@/lib/articles`; these render via `/research/[slug]` fallback.
  */
+/** Long-form thematic pieces at `/research/[slug]` (not the daily news desk). */
 export const researchArticles: ResearchArticle[] = [
-  ...deskNotes,
   {
     slug: "tata-consumption-trent-titan-q2",
     title: "Same festive calendar, two different machines: why Trent jumped and Titan slipped",

@@ -19,6 +19,7 @@ Follow `docs/desk-brief.md` for story selection and ship path.
 4. Style: Art Deco layout (symmetry, chevrons, gold lines) plus Bauhaus primaries (red, blue, yellow on cream). Avoid default orange/peach fintech palettes unless the story demands it.
 5. Save as `public/desk/{slug}.jpg`.
 6. Set `image: deskHeroImage("{slug}")` on the note.
+7. Desk notes live at `/news/[slug]` only. Do not add them to `researchArticles`.
 
 ## Voice (required on every note)
 
