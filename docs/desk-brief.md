@@ -40,6 +40,7 @@ Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper)
    - 1–2 short paragraphs (who is affected + what to watch)
 5. **readMinutes** — usually `2`
 6. **sourceNote** — cite `mn_news_items` window; “Not investment advice.”
+7. **Hero image** — do **not** use `picsum.photos` (random photos). Add a thematic 16:9 editorial illustration at `public/desk/{slug}.jpg` and set `image: deskHeroImage("{slug}")` in `desk-notes.ts`. No third-party logos or trademarked marks in the art; match the story (policy, shopper, sector).
 
 ### Coverage order (non-negotiable)
 

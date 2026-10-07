@@ -11,6 +11,11 @@ export function isDeskSectionHeader(para: string): boolean {
   return (DESK_SECTION_HEADERS as readonly string[]).includes(para.trim());
 }
 
+/** Thematic hero art: commit `public/desk/{slug}.jpg` (16:9 editorial) per note. */
+export function deskHeroImage(slug: string): string {
+  return `/desk/${slug}.jpg`;
+}
+
 /**
  * Desk notes for the news rail. Keep Finimize shape:
  * What's going on here? → What does this mean? → Why should I care?
@@ -26,7 +31,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "Jubilant FoodWorks / QSR",
     publishedAt: "2026-10-07T19:05:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-jublfood-q2/1200/750",
+    image: deskHeroImage("dominos-lfl-accelerates"),
     keyTakeaways: [
       "Consolidated revenue +11.9% to ₹2,608.7 cr; standalone +11.6%.",
       "Domino’s India LFL: 4.1% vs 2.5% in Q1 — same-store demand improved.",
@@ -53,7 +58,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "Power / coal supply",
     publishedAt: "2026-10-07T18:50:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-coal-stock/1200/750",
+    image: deskHeroImage("coal-plants-four-day-stock"),
     keyTakeaways: [
       "69 plants (~>40% of coal fleet) at ≤4 days stock as of 4 Oct — near five-year lows.",
       "Drivers: warm Oct demand, mine disruptions, rail constraints; ~90% of low-stock plants far from mines.",
@@ -80,7 +85,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "RBI / rates",
     publishedAt: "2026-10-07T18:00:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-rbi-hike/1200/750",
+    image: deskHeroImage("rbi-hike-household-budget"),
     keyTakeaways: [
       "Repo rate: +25 bps to 5.50% — first hike in nearly four years.",
       "Stance: “calibrated tightening” — next move is hike or pause, not a cut.",
@@ -108,7 +113,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "Titan",
     publishedAt: "2026-10-07T17:45:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-titan-q2/1200/750",
+    image: deskHeroImage("titan-growth-stock-fell"),
     keyTakeaways: [
       "Consumer businesses +25%; jewellery ~+21%; watches +30%; eyewear +28%.",
       "Buyer growth: mid-single digits. Ticket sizes: still double digits.",
@@ -136,7 +141,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "Bharti Airtel",
     publishedAt: "2026-10-07T17:30:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-airtel-tariff/1200/750",
+    image: deskHeroImage("airtel-postpaid-price-test"),
     keyTakeaways: [
       "Postpaid prices up 3–11% from 8 October 2026; entry from ₹499.",
       "Each plan includes one free international roaming trip per year.",
@@ -163,7 +168,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "Aviation / Mumbai airports",
     publishedAt: "2026-10-07T17:15:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-mumbai-airport/1200/750",
+    image: deskHeroImage("mumbai-airport-rebuild-pause"),
     keyTakeaways: [
       "Plan: cut 265 of 770 weekly international departures from Terminal 2.",
       "IndiGo alone faced ~74 weekly international departures cut.",
@@ -190,7 +195,7 @@ export const deskNotes: ResearchArticle[] = [
     companyOrSector: "Alcohol policy / consumption",
     publishedAt: "2026-10-07T17:00:00+05:30",
     readMinutes: 2,
-    image: "https://picsum.photos/seed/pramaan-karnataka-aib/1200/750",
+    image: deskHeroImage("karnataka-beer-tax-sales"),
     keyTakeaways: [
       "AIB tax regime from 11 May 2026: excise tied more to alcohol content.",
       "Apr–Sep: beer sales +41.3%; alcohol tax collections +13.4% to ₹22,191 cr.",
