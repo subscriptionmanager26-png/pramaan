@@ -40,7 +40,7 @@ Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper)
    - 1–2 short paragraphs (who is affected + what to watch)
 5. **readMinutes** — usually `2`
 6. **sourceNote** — cite `mn_news_items` window; “Not investment advice.”
-7. **Hero image** — `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")`. **Light & minimal** (see [Looka style guide](https://looka.com/blog/graphic-design-styles/) — Modernism, Bauhaus, Minimalism, subtle Art Deco only): off-white canvas, lots of negative space, one flat geometric motif per story, 2–3 colours (charcoal, Pramaan green `#1F6B4A`, optional sand accent). No picsum, no photo realism, no gradients, no logos, no text in the image.
+7. **Hero image** — `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")`. Use **Art Deco** or **Bauhaus** only; follow the story-first prompt template in [`docs/desk-hero-prompts.md`](./desk-hero-prompts.md) (subject → visual metaphor → style lane → constraints). No picsum, no photo realism, no logos, no readable text in the image.
 
 ### Coverage order (non-negotiable)
 

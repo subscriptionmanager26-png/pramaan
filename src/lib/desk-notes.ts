@@ -11,7 +11,7 @@ export function isDeskSectionHeader(para: string): boolean {
   return (DESK_SECTION_HEADERS as readonly string[]).includes(para.trim());
 }
 
-/** Minimal flat hero: `public/desk/{slug}.jpg` (16:9, light modern/Bauhaus — see desk-brief). */
+/** Hero: `public/desk/{slug}.jpg` — prompt via docs/desk-hero-prompts.md (story first, Art Deco or Bauhaus). */
 export function deskHeroImage(slug: string): string {
   return `/desk/${slug}.jpg`;
 }
