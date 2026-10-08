@@ -1,42 +1,59 @@
 import Link from "next/link";
-import { NewsMagazineCard, TrendingList } from "@/components/magazine/MagazineCards";
+import { NewsMagazineCard, ResearchList } from "@/components/magazine/MagazineCards";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
 import { listArticles } from "@/lib/articles/catalog";
+import { articleCover } from "@/lib/articles/images";
 import { newsFeed } from "@/lib/site";
 import { formatRelative } from "@/lib/utils";
 
-function HeroCollage() {
+function HeroCollage({
+  leadHeadline,
+  leadSummary,
+  leadImage,
+  leadHref,
+  memoHref,
+  memoImage,
+}: {
+  leadHeadline: string;
+  leadSummary: string;
+  leadImage: string;
+  leadHref: string;
+  memoHref: string;
+  memoImage: string;
+}) {
   return (
     <div className="relative mx-auto mt-10 hidden h-[320px] w-full max-w-3xl md:block lg:absolute lg:right-0 lg:top-8 lg:mt-0 lg:h-[420px] lg:w-[46%]">
-      <div className="animate-float absolute left-[8%] top-6 w-[42%] overflow-hidden rounded-2xl border border-line bg-white shadow-[6px_6px_0_rgba(11,11,11,0.08)]">
+      <Link
+        href={leadHref}
+        className="animate-float absolute left-[8%] top-6 w-[42%] overflow-hidden rounded-2xl border border-line bg-white shadow-[6px_6px_0_rgba(11,11,11,0.08)]"
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://picsum.photos/seed/pramaan-hero-a/800/600"
-          alt=""
-          className="aspect-[4/3] w-full object-cover"
-        />
-      </div>
-      <div className="animate-float-delayed absolute right-[4%] top-0 w-[48%] rounded-2xl bg-ink px-5 py-6 text-white shadow-[8px_8px_0_rgba(47,87,255,0.25)]">
-        <p className="text-meta text-white/55">Research desk</p>
-        <p className="mt-3 text-[1.35rem] font-bold leading-snug tracking-tight">
-          Lorem ipsum market update
+        <img src={leadImage} alt="" className="aspect-[4/3] w-full object-cover" />
+      </Link>
+      <Link
+        href={leadHref}
+        className="animate-float-delayed absolute right-[4%] top-0 block w-[48%] rounded-2xl bg-ink px-5 py-6 text-white shadow-[8px_8px_0_rgba(47,87,255,0.25)] transition-opacity hover:opacity-95"
+      >
+        <p className="text-meta text-white/55">News desk</p>
+        <p className="mt-3 text-[1.35rem] font-bold leading-snug tracking-tight line-clamp-3">
+          {leadHeadline}
         </p>
-        <p className="mt-2 text-[13px] text-white/70">
-          Placeholder brief: margins, flows, and what changed.
-        </p>
-      </div>
-      <div className="animate-float absolute bottom-4 left-[18%] w-[44%] rounded-2xl border border-line bg-accent px-5 py-5 text-white shadow-[6px_6px_0_rgba(11,11,11,0.12)]">
-        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">Weekly</p>
-        <p className="mt-2 text-[1.1rem] font-bold leading-snug">AI brief for allocators</p>
-      </div>
-      <div className="animate-float-delayed absolute bottom-10 right-[2%] w-[36%] overflow-hidden rounded-2xl border border-line bg-highlight shadow-[5px_5px_0_rgba(11,11,11,0.1)]">
+        <p className="mt-2 text-[13px] text-white/70 line-clamp-2">{leadSummary}</p>
+      </Link>
+      <Link
+        href="/guides/global-markets-through-india"
+        className="animate-float absolute bottom-4 left-[18%] w-[44%] rounded-2xl border border-line bg-accent px-5 py-5 text-white shadow-[6px_6px_0_rgba(11,11,11,0.12)] transition-opacity hover:opacity-95"
+      >
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">Guide</p>
+        <p className="mt-2 text-[1.1rem] font-bold leading-snug">Global markets through India</p>
+      </Link>
+      <Link
+        href={memoHref}
+        className="animate-float-delayed absolute bottom-10 right-[2%] w-[36%] overflow-hidden rounded-2xl border border-line bg-highlight shadow-[5px_5px_0_rgba(11,11,11,0.1)]"
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://picsum.photos/seed/pramaan-hero-b/600/600"
-          alt=""
-          className="aspect-square w-full object-cover mix-blend-multiply"
-        />
-      </div>
+        <img src={memoImage} alt="" className="aspect-square w-full object-cover mix-blend-multiply" />
+      </Link>
     </div>
   );
 }
@@ -49,7 +66,7 @@ export default function HomePage() {
     (a, b) =>
       +new Date(b.publishedAt) - +new Date(a.publishedAt) || a.company.localeCompare(b.company),
   );
-  const trending = memos.slice(0, 5).map((a) => ({
+  const researchSidebar = memos.slice(0, 5).map((a) => ({
     href: `/research/${a.slug}`,
     title: a.title,
     meta: `${formatRelative(`${a.publishedAt}T12:00:00+05:30`)} · ${a.readMinutes} min`,
@@ -97,7 +114,14 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <HeroCollage />
+          <HeroCollage
+            leadHeadline={lead?.headline ?? "Today on the desk"}
+            leadSummary={lead?.summary ?? "Policy, companies, and what changed."}
+            leadImage={lead?.image ?? "/desk/tcs-corporate-tech-demand.jpg"}
+            leadHref={lead?.url ?? "/news"}
+            memoHref={memos[0] ? `/research/${memos[0].slug}` : "/research"}
+            memoImage={memos[0] ? articleCover(memos[0].slug, "thumb") : articleCover("research", "thumb")}
+          />
         </div>
       </section>
 
@@ -151,7 +175,8 @@ export default function HomePage() {
                 Ask what the market move means for you
               </h3>
               <p className="mt-2 max-w-xl text-[15px] leading-6 text-ink-2">
-                Lorem ipsum dolor sit amet. Turn the wire into a plain answer.
+                Turn today&apos;s wire and desk notes into a plain answer — rates, sectors, or a
+                company you follow.
               </p>
               <Link href="/ai" className="btn-primary mt-5">
                 Open AI
@@ -177,10 +202,38 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+            <div className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+              <div className="flex flex-wrap items-end justify-between gap-3">
+                <h3 className="text-section text-ink">
+                  <span className="mark">Guides</span>
+                </h3>
+                <Link href="/guides" className="text-[13px] font-semibold text-accent">
+                  All guides →
+                </Link>
+              </div>
+              <p className="mt-3 max-w-2xl text-[15px] leading-6 text-ink-2">
+                New series: invest in global markets from India — LRS limits, routes (US stocks,
+                India-listed ETFs, international funds), costs, and tax basics.
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <Link
+                  href="/guides/global-markets-through-india"
+                  className="rounded-xl border border-line bg-paper-2 px-4 py-3 text-[15px] font-semibold text-ink hover:border-accent hover:text-accent"
+                >
+                  Global markets: the map
+                </Link>
+                <Link
+                  href="/guides/taxation-global-investments-india"
+                  className="rounded-xl border border-line bg-paper-2 px-4 py-3 text-[15px] font-semibold text-ink hover:border-accent hover:text-accent"
+                >
+                  Taxation & Schedule FA
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="lg:pt-1">
             <div className="sticky top-24 space-y-10">
-              <TrendingList items={trending} />
+              <ResearchList items={researchSidebar} />
               <div className="rounded-2xl border border-line bg-white p-5">
                 <p className="text-meta uppercase tracking-[0.14em]">Advisors</p>
                 <p className="mt-2 text-[15px] font-bold leading-snug text-ink">
