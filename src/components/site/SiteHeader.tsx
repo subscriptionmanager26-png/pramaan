@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Logo } from "@/components/Logo";
 
 const nav = [
@@ -17,9 +18,79 @@ const nav = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
+  const mobileMenu =
+    open && mounted
+      ? createPortal(
+          <div className="fixed inset-0 z-[200] lg:hidden" role="dialog" aria-modal="true" aria-label="Main menu">
+            <button
+              type="button"
+              className="absolute inset-0 bg-ink/60"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+            />
+            <div
+              className="absolute inset-y-0 left-0 flex w-[min(86vw,20rem)] flex-col bg-white shadow-2xl"
+              style={{ isolation: "isolate" }}
+            >
+              <div className="flex items-center justify-between border-b border-line bg-white px-4 py-4">
+                <Logo />
+                <button
+                  type="button"
+                  className="text-[13px] font-medium text-ink-3"
+                  onClick={() => setOpen(false)}
+                >
+                  Close
+                </button>
+              </div>
+              <nav
+                className="flex flex-1 flex-col gap-1 overflow-y-auto bg-white p-3"
+                onClick={() => setOpen(false)}
+              >
+                {nav.map((item) => {
+                  const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`rounded-xl px-3 py-3 text-[15px] ${
+                        active ? "bg-accent-2 font-semibold text-accent" : "font-medium text-ink"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </nav>
+              <div className="mt-auto border-t border-line bg-white p-4">
+                <Link href="/ai" className="btn-primary w-full" onClick={() => setOpen(false)}>
+                  Ask Pramaan AI
+                </Link>
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-40 border-b border-line ${
+        open ? "bg-white" : "bg-white/90 backdrop-blur-md"
+      }`}
+    >
       <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4 sm:h-16 sm:px-6">
         <button
           type="button"
@@ -68,45 +139,7 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {open ? (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <button
-            type="button"
-            className="absolute inset-0 bg-ink/40"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-          />
-          <div className="absolute inset-y-0 left-0 flex w-[min(86vw,20rem)] flex-col bg-white shadow-xl">
-            <div className="flex items-center justify-between border-b border-line px-4 py-4">
-              <Logo />
-              <button type="button" className="text-[13px] font-medium text-ink-3" onClick={() => setOpen(false)}>
-                Close
-              </button>
-            </div>
-            <nav className="flex flex-col gap-1 p-3" onClick={() => setOpen(false)}>
-              {nav.map((item) => {
-                const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`rounded-xl px-3 py-3 text-[15px] ${
-                      active ? "bg-accent-2 font-semibold text-accent" : "font-medium text-ink"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-            <div className="mt-auto border-t border-line p-4">
-              <Link href="/ai" className="btn-primary w-full" onClick={() => setOpen(false)}>
-                Ask Pramaan AI
-              </Link>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      {mobileMenu}
     </header>
   );
 }
