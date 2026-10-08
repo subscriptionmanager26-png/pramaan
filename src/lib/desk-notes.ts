@@ -26,6 +26,88 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "upi-mdr-festive-deferral",
+    title: "India may delay UPI merchant fees until after the festivals",
+    summary:
+      "A 0.4% charge on larger UPI shop payments was set to start on 15 October 2026. Trade bodies want it pushed to January 2027. NPCI and the finance ministry are weighing the request as payment stocks sold off.",
+    category: "industry",
+    companyOrSector: "UPI / payments",
+    publishedAt: "2026-10-08T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("upi-mdr-festive-deferral"),
+    keyTakeaways: [
+      "Proposed 0.4% MDR on P2M UPI above ₹2,000; cap ₹300 on very large tickets.",
+      "Merchant groups asked to move rollout from 15 Oct 2026 to Jan 2027.",
+      "Paytm and MobiKwik fell sharply on deferral talk; Goldman still models MDR upside for Paytm.",
+    ],
+    sourceNote:
+      "From UPI MDR deferral coverage in mn_news_items (8 Oct 2026) and advisor Substack daily dashboard headline; Paytm/Goldman wraps in the same window. Not investment advice.",
+    body: [
+      "What's going on here?",
+      "India was about to start charging merchants a small fee on certain UPI payments. The merchant discount rate (MDR) was scheduled from 15 October 2026. It would apply to person-to-merchant UPI above ₹2,000 at 0.4%, with a ₹300 cap on very large tickets and a ₹5 flat rate on some categories. Traders and industry groups have asked NPCI and the finance ministry to defer the rollout to January 2027. Sources say a decision is expected within days.",
+      "What does this mean?",
+      "The fight is about who pays to keep UPI running at scale. Payment apps and banks hoped fees would finally monetise high-volume merchant traffic. Shopkeepers, especially smaller ones, worry about costs landing in the middle of the festival sales season. Critics such as NeoStrat’s Abizer Diwanji argue roughly 95% of merchant payments would see no change, with a hard cap limiting pain on the rest.",
+      "If the delay goes through, payment aggregators lose a near-term revenue line they had been modelling into FY27. Goldman Sachs still raised its Paytm target on 8 October, but noted MDR could add hundreds of crores of EBITDA later if it ever sticks. The policy signal matters as much as the stock move: repeated postponements make it harder for investors to bank on fee income.",
+      "Why should I care?",
+      "If you run a shop, watch whether NPCI confirms a January start or keeps kicking the can. Fees were never meant to hit consumers directly, but merchants fear margin pressure when footfall is already costly to win. If you use UPI daily as a shopper, nothing changes until rules are final. If you own payment or fintech names, treat MDR as a moving target tied to politics and the festive calendar, not a fixed October switch.",
+    ],
+  },
+  {
+    slug: "luxury-housing-books-strong",
+    title: "Premium home sales surged in the September quarter despite dearer loans",
+    summary:
+      "Embassy Developments reported ₹3,225 crore of pre-sales, up 272% from the June quarter, including a ₹711 crore Mumbai deal. Keystone Realtors also hit a record quarter. Buyers are still showing up for high-ticket projects even after the RBI rate hike.",
+    category: "industry",
+    companyOrSector: "Residential real estate",
+    publishedAt: "2026-10-08T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("luxury-housing-books-strong"),
+    keyTakeaways: [
+      "Embassy pre-sales ₹3,225 crore in Q2 FY27; collections ₹546 crore, up 10% sequentially.",
+      "Three new launches (₹7,500 crore GDV) saw heavy early absorption, including a ₹711 crore Juhu ticket.",
+      "Keystone pre-sales rose 84% YoY to ₹1,423 crore; Brigade guided a ₹40,000 crore three-year pipeline.",
+    ],
+    sourceNote:
+      "From Embassy, Keystone, and Brigade updates in mn_news_items (8 Oct 2026); desk cross-checked against RBI rate coverage already noted on Pramaan. Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, Embassy Developments said September-quarter pre-sales jumped 272% sequentially to ₹3,225 crore. Collections rose 10% from the June quarter to ₹546 crore. It launched three projects with ₹7,500 crore of gross development value. Two Bengaluru launches sold ₹933 crore and ₹880 crore of inventory within two weeks. Its Juhu, Mumbai project logged ₹758 crore of sales, including a ₹711 crore transaction billed as India’s largest single housing deal so far.",
+      "Keystone Realtors posted its highest-ever quarterly pre-sales, up 84% year on year to ₹1,423 crore, though collections fell 19% from a year ago. Brigade Group separately outlined about ₹40,000 crore of spending over three years to build 40 million square feet. The updates landed the same week the RBI raised rates and equities sold off.",
+      "What does this mean?",
+      "High-end housing is behaving differently from the panicked Nifty tape. Buyers with capacity are locking in scarce Mumbai and Bengaluru inventory before the next project wave. Collections lag pre-sales when instalments are staged, which is why Keystone’s cash line looks softer even as bookings scream.",
+      "The pattern fits other consumption prints from early October: organised jewellery still grew, food chains posted steady revenue, and telcos are testing price hikes. Premium real estate is another data point that demand has not vanished. It has concentrated in tickets large enough to survive a modest EMI reset.",
+      "Why should I care?",
+      "If you are hunting a home, compare loan offers soon. Banks may pass on the RBI move over the next few weeks even while luxury launches stay busy. If you track developers, watch whether collections catch up to pre-sales into the festivals. One blockbuster quarter can be launch timing. Two quarters of record bookings after a rate hike would tell you affluent buyers are absorbing tighter credit.",
+    ],
+  },
+  {
+    slug: "tcs-ai-ten-percent-revenue",
+    title: "TCS now books more than a tenth of revenue from AI work",
+    summary:
+      "The IT major closed September with a $3.1 billion annualised AI revenue run rate, up from $2.6 billion in June. AI is over 10% of sales while overall revenue grew 1.3% sequentially and deal wins hit $9.6 billion.",
+    category: "company",
+    companyOrSector: "TCS / IT services",
+    publishedAt: "2026-10-08T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tcs-ai-ten-percent-revenue"),
+    keyTakeaways: [
+      "AI revenue run rate $3.1 billion vs $2.6 billion three months earlier.",
+      "Q2 revenue ₹73,188 crore (+1.3% QoQ); net profit ₹13,884 crore.",
+      "Deal wins $9.6 billion; EBIT margin steady at 24%.",
+    ],
+    sourceNote:
+      "From TCS Q2 FY27 results and AI disclosure in mn_news_items (8 Oct 2026); order-book headlines in the same window. Not investment advice.",
+    body: [
+      "What's going on here?",
+      "Tata Consultancy Services reported September-quarter results on 8 October 2026. Revenue was ₹73,188 crore, up 1.3% from the June quarter. Net profit was ₹13,884 crore. EBIT margin held at 24%. The order book for the quarter was $9.6 billion. Management said the annualised AI revenue run rate reached $3.1 billion, compared with $2.6 billion at the end of June. That puts AI at a little over 10% of total revenue.",
+      "What does this mean?",
+      "Large Indian enterprises are still paying to embed AI into core systems, not just run pilots. TCS cited work ranging from Porsche’s manufacturing footprint to Best Buy’s India capability centre. The revenue line is growing faster than the overall company, even though margins are not expanding yet because wage reversals are being reinvested into data and AI capacity.",
+      "For the wider market, the print matters because IT has been a drag on the Nifty this year. Stable margins plus a double-digit AI mix suggest clients are buying outcomes, not freezing spend because of global bond yields or oil. That is a different message from the broad sell-off in mid- and small-caps on the same day.",
+      "Why should I care?",
+      "If you work in tech or vendor management, expect AI statements of work to show up inside existing transformation deals rather than as tiny experiments. If you invest in India IT, track whether other majors report similar AI mix next fortnight. One quarter does not prove a trend, but double-digit AI revenue at TCS sets a benchmark. Watch deal wins and attrition more than the opening stock reaction.",
+    ],
+  },
+  {
     slug: "rbi-hike-household-budget",
     title: "The RBI just made borrowing a little more expensive",
     summary:
@@ -164,6 +246,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "upi-mdr-festive-deferral": "policy",
+  "luxury-housing-books-strong": "markets",
+  "tcs-ai-ten-percent-revenue": "companies",
   "rbi-hike-household-budget": "policy",
   "titan-growth-stock-fell": "companies",
   "airtel-postpaid-price-test": "companies",
