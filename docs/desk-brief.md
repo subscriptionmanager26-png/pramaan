@@ -1,6 +1,16 @@
 # Pramaan desk brief (automation)
 
-Every run: read the last ~6–12 hours of India market news from Supabase (`india-market-news` / `mn_news_items` + `mn_news_ai_summaries`), pick only stories that clear the quality bar, write Finimize-shaped desk notes, and ship them via a pull request. **Quality beats quota.** Target up to 5 stories. Shipping 0–4 is correct when the wire is thin or repetitive.
+Every **6 hours**: read the last **6–12 hours** of signal from Supabase, pick stories that clear the quality bar, write Finimize-shaped desk notes, and **ship to production** (`main` → Vercel → `/news`). **Quality beats quota.** Target up to 5 stories. Shipping 0–4 is correct when the wire is thin or repetitive.
+
+**Operations:** [`news-desk-automation.md`](./news-desk-automation.md) (schedule, three sources, production push).
+
+## Information sources (use all three each run)
+
+1. **News wire** — `mn_news_items` + `mn_news_ai_summaries` (facts, headlines, AI bullets).
+2. **Twitter** — `af_content_items` / `af_content_bodies` where `platform = 'twitter'` (advisor timelines; ingest via existing `af:ingest` automation).
+3. **Substack** — same tables where `platform = 'substack'`.
+
+These feeds provide **information and inspiration** for what to write. You may use other verifiable public context when drafting the brief. Do not paste full creator posts into desk notes.
 
 ## Primary lenses (must hit ≥1 hard; prefer 2)
 
@@ -39,8 +49,8 @@ Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper)
    - `Why should I care?` (header string)
    - 1–2 short paragraphs (who is affected + what to watch)
 5. **readMinutes** — usually `2`
-6. **sourceNote** — cite `mn_news_items` window; “Not investment advice.”
-7. **Hero image** — `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")`. Editorial composite prompts — see [`docs/desk-hero-prompts.md`](./desk-hero-prompts.md) (subject + metaphor + composition + style; visualize the economic idea, not the headline). No picsum; no clutter; no headline text in the image.
+6. **sourceNote** — cite the window and sources used (`mn_news_items`, advisor Twitter/Substack where relevant); “Not investment advice.”
+7. **Hero image** — `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")`. Editorial composite — see [`desk-hero-prompts.md`](./desk-hero-prompts.md). No picsum; no clutter; no headline text in the image.
 
 ### Coverage order (non-negotiable)
 
@@ -61,17 +71,18 @@ Write like an editor at a serious business magazine (HBR-style): calm, direct, u
 - Prefer normal speech. Example: “If you plan to buy a house soon, compare loan quotes from more than one bank. Lenders often take a few weeks to update rates after an RBI move.”
 - No banned filler: `delve`, `landscape`, `robust`, `leverage`, `synergy`, `paradigm`, `well-positioned`.
 
-## Ship path
+## Ship path (production)
 
-1. Query Supabase for the window since the last successful run (default last 12 hours if unknown).
+1. Query Supabase for the window since the last successful run (default last 12 hours): **news wire + Twitter + Substack** (see `news-desk-automation.md`).
 2. Cluster by *event*, not ticker. Score with lenses + gates.
 3. Select 0–5 stories. If unsure, drop.
-4. Append new notes to `src/lib/desk-notes.ts` (newest first). Do not delete older desk notes unless they are broken duplicates.
-5. **Hero image:** for each new slug, follow [`docs/desk-hero-prompts.md`](./desk-hero-prompts.md). Generate the editorial composite, save `public/desk/{slug}.jpg`, set `image: deskHeroImage("{slug}")`. Commit the JPG with the note.
-6. Open a PR titled `desk: <date> (<n> notes)` with a short summary of each slug.
-7. Do **not** push straight to `main` unless the run instructions explicitly say so.
+4. Append new notes to `src/lib/desk-notes.ts` (newest first). Update `deskTopics`. Do not delete older desk notes unless broken duplicates.
+5. **Hero image** per new slug (`desk-hero-prompts.md`).
+6. Run `npm run build`; fix failures.
+7. **Commit and push to `origin/main`** so Vercel deploys production `/news`.
+8. Do **not** open-only PRs for routine desk runs unless a human asked for review.
 
 ## Done when
 
-- PR opened (or explicit “no shippable stories” note with 2–3 rejected candidates and why), and
-- Each shipped note renders on `/news` and `/research/[slug]` with Finimize headers.
+- Changes are on **`main`** and production will show new notes on **`/news`** (or explicit no-ship note with 2–3 rejected candidates and why), and
+- Each shipped note renders on `/news` and `/news/[slug]` with Finimize headers.

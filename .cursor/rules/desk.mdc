@@ -9,7 +9,19 @@ globs:
 
 # Desk automation
 
-Follow `docs/desk-brief.md` for story selection and ship path.
+Follow `docs/desk-brief.md` and `docs/news-desk-automation.md`. Runs every **6 hours**.
+
+## Data (each run)
+
+1. `mn_news_items` + `mn_news_ai_summaries` (news wire)
+2. `af_content_items` + `af_content_bodies` — `platform = twitter`
+3. `af_content_items` + `af_content_bodies` — `platform = substack`
+
+Twitter/Substack ingest is a **separate** automation (`af:ingest`). Read only; do not re-implement ingest.
+
+## Ship to production
+
+After `npm run build` passes: **commit and push to `main`** (Vercel → pramaan.pocketedge.in). Routine runs do not stop at an unmerged PR branch.
 
 ## Hero images (required on every new note)
 
