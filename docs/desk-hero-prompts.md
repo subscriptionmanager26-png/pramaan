@@ -64,6 +64,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Airport terminal silhouette |
 | Metaphor left | Pause over scaffold + diverted flight paths |
 
+### `tcs-corporate-tech-demand`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Corporate tech budgets still expanding |
+| Subject right | Abstract server / data flow motif |
+| Metaphor left | Steady upward curve (not ticker) |
+
+### `airlines-fuel-surcharge-atf`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Jet fuel cost passes into ticket surcharges |
+| Subject right | Jet silhouette / fuel gauge |
+| Metaphor left | Stepped fare bars + fuel droplet |
+
+### `gst-council-eases-penalties`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Compliance penalties scaled back |
+| Subject right | Council / policy architecture |
+| Metaphor left | Shrinking penalty scales |
+
+### `banks-lend-into-renewable-power`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Bank credit tilts to solar and wind |
+| Subject right | Bank facade |
+| Metaphor left | Pipes into sun and wind icons |
+
 ### `karnataka-beer-tax-sales`
 
 | Field | Value |
