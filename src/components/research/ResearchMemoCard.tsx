@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Article, Verdict } from "@/lib/articles/types";
+import type { ArticleSummary, Verdict } from "@/lib/articles/types";
 import { articleCover } from "@/lib/articles/images";
 import { formatRelative } from "@/lib/utils";
 
@@ -15,7 +15,7 @@ export function ResearchMemoCard({
   featured = false,
   layout = "row",
 }: {
-  article: Article;
+  article: ArticleSummary;
   featured?: boolean;
   /** `grid` = magazine card with cover; `row` = list row with thumb */
   layout?: "row" | "grid";

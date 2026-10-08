@@ -1,61 +1,6 @@
-import type { CatalogArticle } from "./types";
-import { factMemoBlocks } from "./content/fact-memo";
-import { chambalMemoBlocks } from "./content/chambal-memo";
-import { coromandelMemoBlocks } from "./content/coromandel-memo";
-import { deepakfertMemoBlocks } from "./content/deepakfert-memo";
-import { gnfcMemoBlocks } from "./content/gnfc-memo";
-import { gsfcMemoBlocks } from "./content/gsfc-memo";
-import { rcfMemoBlocks } from "./content/rcf-memo";
-import { paradeepMemoBlocks } from "./content/paradeep-memo";
-import { mangalorechemMemoBlocks } from "./content/mangalorechem-memo";
-import { nflMemoBlocks } from "./content/nfl-memo";
-import { zuariindMemoBlocks } from "./content/zuariind-memo";
-import { zuariagroMemoBlocks } from "./content/zuariagro-memo";
-import { piindMemoBlocks } from "./content/piind-memo";
-import { uplMemoBlocks } from "./content/upl-memo";
-import { rallisMemoBlocks } from "./content/rallis-memo";
-import { dhanukaMemoBlocks } from "./content/dhanuka-memo";
-import { insecticidesMemoBlocks } from "./content/insecticides-memo";
-import { sumichemMemoBlocks } from "./content/sumichem-memo";
-import { shardacropMemoBlocks } from "./content/shardacrop-memo";
-import { meghmaniMemoBlocks } from "./content/meghmani-memo";
-import { bharatrasMemoBlocks } from "./content/bharatras-memo";
-import { astecMemoBlocks } from "./content/astec-memo";
-import { heranbaMemoBlocks } from "./content/heranba-memo";
-import { indofilMemoBlocks } from "./content/indofil-memo";
-import { ariesMemoBlocks } from "./content/aries-memo";
-import { naclindMemoBlocks } from "./content/naclind-memo";
-import { kaveriMemoBlocks } from "./content/kaveri-memo";
-import { nathbiogenMemoBlocks } from "./content/nathbiogen-memo";
-import { bhagchemMemoBlocks } from "./content/bhagchem-memo";
-import { bestagroMemoBlocks } from "./content/bestagro-memo";
-import { hikalMemoBlocks } from "./content/hikal-memo";
-import { bhageriaMemoBlocks } from "./content/bhageria-memo";
-import { rossariMemoBlocks } from "./content/rossari-memo";
-import { fineorgMemoBlocks } from "./content/fineorg-memo";
-import { galaxysurfMemoBlocks } from "./content/galaxysurf-memo";
-import { vinatiorgaMemoBlocks } from "./content/vinatiorga-memo";
-import { cleansciMemoBlocks } from "./content/cleansci-memo";
-import { deepaknitMemoBlocks } from "./content/deepaknit-memo";
-import { aartiindMemoBlocks } from "./content/aartiind-memo";
-import { atulMemoBlocks } from "./content/atul-memo";
-import { srfMemoBlocks } from "./content/srf-memo";
-import { navinfluorMemoBlocks } from "./content/navinfluor-memo";
-import { fluorochemMemoBlocks } from "./content/fluorochem-memo";
-import { neogenMemoBlocks } from "./content/neogen-memo";
-import { anupamMemoBlocks } from "./content/anupam-memo";
-import { alkylamineMemoBlocks } from "./content/alkylamine-memo";
-import { balaminesMemoBlocks } from "./content/balamines-memo";
-import { epigralMemoBlocks } from "./content/epigral-memo";
-import { archeanMemoBlocks } from "./content/archean-memo";
-import { tatvchintMemoBlocks } from "./content/tatvchint-memo";
-import { lxchemMemoBlocks } from "./content/lxchem-memo";
-import { jublingreaMemoBlocks } from "./content/jublingrea-memo";
-import { paushakMemoBlocks } from "./content/paushak-memo";
-import { priviMemoBlocks } from "./content/privi-memo";
-import { chemplastMemoBlocks } from "./content/chemplast-memo";
+import type { CatalogArticleMeta } from "./types";
 
-export const deepCatalogArticles: CatalogArticle[] = [
+export const deepCatalogMeta: CatalogArticleMeta[] = [
   {
     slug: "fact-midcap-memo",
     title: "FACT: regulated fertilizer margins at a commodity-cycle trough",
@@ -68,7 +13,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT × P/E implies about ₹51 per share vs ₹735 reference (-93%).",
       "Borrowings spiked to ₹3,837 crore by Sep 2025; restructuring remains pending.",
     ],
-    blocks: factMemoBlocks,
     readMinutes: 22,
     publishedAt: "2026-10-04",
     symbol: "FACT",
@@ -85,7 +29,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹1,900 cr × 10× P/E implies ~₹474 (+19% vs ₹399 reference).",
       "Risk: Gadepan-III shutdowns and DAP price spikes compress traded fertiliser spreads.",
     ],
-    blocks: chambalMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "CHAMBLFERT",
@@ -102,7 +45,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹2,550 cr × 22× P/E implies ~₹1,902 vs ₹1,764 reference (+8%).",
       "Borrowings rose to ₹1,506 cr Mar FY26 on capex and NACL acquisition.",
     ],
-    blocks: coromandelMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "COROMANDEL",
@@ -119,7 +61,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹1,050 cr × 17× P/E implies ~₹1,415 vs ₹1,301 reference (+9%).",
       "FY26 CFO only ₹206 cr; free cash flow negative ₹1,363 cr on Screener.",
     ],
-    blocks: deepakfertMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "DEEPAKFERT",
@@ -136,7 +77,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹980 cr × 9.5× P/E implies ~₹633 vs ₹589 reference (+7.5%).",
       "Urea fixed-cost reimbursement and working capital days at 157 remain policy and WC risks.",
     ],
-    blocks: gnfcMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "GNFC",
@@ -153,7 +93,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹700 cr × 8.5× P/E implies ~₹149 vs ₹147 reference (+1.4%).",
       "Working capital days at 154 and FY26 CFO ₹136 cr remain conversion risks.",
     ],
-    blocks: gsfcMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "GSFC",
@@ -170,7 +109,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹500 cr × 12.5× P/E implies ~₹113 vs ₹107 reference (+5.6%).",
       "Interest TTM near ₹308 cr; reimbursement timing remains the key fertiliser swing.",
     ],
-    blocks: rcfMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "RCF",
@@ -187,7 +125,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹1,100 cr × 13.5× P/E implies ~₹143 vs ₹151 reference (-5.3%).",
       "700 KTPA phosphoric acid and sulphuric expansion are the key FY27 margin levers.",
     ],
-    blocks: paradeepMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "PARADEEP",
@@ -204,7 +141,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹175 cr × 13× P/E implies ~₹192 vs ₹309 reference (-38%).",
       "Paradeep amalgamation cleared CCI but was not closed by Oct 2026 reference.",
     ],
-    blocks: mangalorechemMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "MANGCHEFER",
@@ -221,7 +157,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹265 cr × 11× P/E implies ~₹59 vs ₹63.8 reference (-7%).",
       "Ramagundam Fertilizers JV and traded volumes are the main FY27 swing factors.",
     ],
-    blocks: nflMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "NFL",
@@ -238,7 +173,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Base FY27 PAT ₹92 cr × 8.5× P/E implies ~₹261 vs ₹282 reference (-7%).",
       "Paradeep via ZMPPL and Mangalore amalgamation drive group optionality, not consolidated PAT.",
     ],
-    blocks: zuariindMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ZUARIIND",
@@ -255,7 +189,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Borrowings ₹642 cr Mar FY26; contingent liabilities ₹374 cr; promoter pledge 27.6%.",
       "Base FY27 PAT ₹145 cr × 5.75× P/E implies ~₹198 vs ₹213 reference (-7%).",
     ],
-    blocks: zuariagroMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ZUARI",
@@ -272,7 +205,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "CWIP ₹875 cr Mar FY26; borrowings ₹65 cr; almost debt free balance sheet.",
       "Base FY27 PAT ₹1,520 cr × 22× P/E implies ~₹2,198 vs ₹2,236 reference (-2%).",
     ],
-    blocks: piindMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "PIIND",
@@ -289,7 +221,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Borrowings ₹869 cr vs investments ₹5,967 cr Mar FY26; almost debt free on Screener pros.",
       "Base FY27 PAT ₹1,180 cr × 34× P/E implies ~₹475 vs ₹517 reference (-8%).",
     ],
-    blocks: uplMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "UPL",
@@ -306,7 +237,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Net CFO ₹172 cr FY26; liquid balances ~₹541 cr Mar FY26 vs borrowings ~₹93 cr.",
       "Base FY27 PAT ₹200 cr × 21× P/E implies ~₹216 vs ₹200 reference (+8%).",
     ],
-    blocks: rallisMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "RALLIS",
@@ -323,7 +253,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Net CFO ~₹240 cr FY26; almost debt free on Screener.",
       "Base FY27 PAT ₹300 cr × 16× P/E implies ~₹1,076 vs ₹935 reference (+15%).",
     ],
-    blocks: dhanukaMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "DHANUKA",
@@ -340,7 +269,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Net CFO ~₹145 cr FY26; moderate leverage on Screener.",
       "Base FY27 PAT ₹150 cr × 13× P/E implies ~₹670 vs ₹569 reference (+18%).",
     ],
-    blocks: insecticidesMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "INSECTICID",
@@ -357,7 +285,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Net CFO ~₹446 cr FY26; working capital cycle remains long.",
       "Base FY27 PAT ₹640 cr × 36× P/E implies ~₹462 vs ₹418 reference (+11%).",
     ],
-    blocks: sumichemMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "SUMICHEM",
@@ -374,7 +301,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Debt free; cash and liquid investments ~₹767 cr Jun 2026.",
       "Base FY27 PAT ₹650 cr × 11× P/E implies ~₹792 vs ₹709 reference (+12%).",
     ],
-    blocks: shardacropMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "SHARDACROP",
@@ -391,7 +317,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Borrowings ~₹182 cr Mar FY26; amalgamation and Brazil setup in progress.",
       "Base FY27 PAT ₹130 cr × 15× P/E implies ~₹81 vs ₹73 reference (+11%).",
     ],
-    blocks: meghmaniMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "MOL",
@@ -408,7 +333,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Net CFO ₹132 cr FY26; working capital days near 192.",
       "Base FY27 PAT ₹170 cr × 11.5× P/E implies ~₹1,178 vs ₹999 reference (+18%).",
     ],
-    blocks: bharatrasMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "BHARATRAS",
@@ -425,7 +349,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Promoter ~72% Jun 2026; Q1 FY27 still loss-making.",
       "Base FY27 PAT ₹22 cr × 11× P/E implies ~₹109 vs ₹709 reference (-85%).",
     ],
-    blocks: astecMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ASTEC",
@@ -442,7 +365,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Book ~₹202/sh; MCap ₹689 cr on 4.01 cr shares.",
       "Base FY27 PAT ₹52 cr × 12× P/E implies ~₹156 vs ₹172 reference (-9%).",
     ],
-    blocks: heranbaMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "HERANBA",
@@ -459,7 +381,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Dealer book ~₹2,831/sh; ROE ~7%; mancozeb-led export agchem plus specialty chemicals.",
       "Base FY27 PAT ₹480 cr × 7.5× P/E implies ~₹1,567 vs ₹1,475 reference (+6%).",
     ],
-    blocks: indofilMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "INDOFIL",
@@ -476,7 +397,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹383 cr; OPM 11%; PAT ₹21 cr.",
       "Base FY27 PAT ₹65 cr × 14× P/E implies ~₹39 vs ₹130 reference (-70%).",
     ],
-    blocks: naclindMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "NACLIND",
@@ -493,7 +413,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "FY26 net CFO -₹6 cr; WC days 171; almost debt free.",
       "Base FY27 PAT ₹305 cr × 14× P/E implies ~₹831 vs ₹715 reference (+16%).",
     ],
-    blocks: kaveriMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "KSCL",
@@ -510,7 +429,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹328 cr; OPM ~11%; PAT ₹32 cr (seasonal June quarter).",
       "Base FY27 PAT ₹41 cr × 7.5× P/E implies ~₹162 vs ₹138 reference (+17%).",
     ],
-    blocks: nathbiogenMemoBlocks,
     readMinutes: 24,
     publishedAt: "2026-10-04",
     symbol: "NATHBIOGEN",
@@ -527,7 +445,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "FY26 CFO ₹86 cr; working capital days 60; borrowings ₹56 cr.",
       "Base FY27 PAT ₹52 cr × 13.5× P/E implies ~₹551 vs ₹477 reference (+16%).",
     ],
-    blocks: ariesMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ARIES",
@@ -544,7 +461,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹195 cr; OPM 16%; PAT ₹13 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹38 cr × 22× P/E implies ~₹64 vs ₹236 reference (-73%).",
     ],
-    blocks: bhagchemMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "BHAGCHEM",
@@ -561,7 +477,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "FY26 net CFO ₹97 cr; debtor days 142; ~35 cr shares.",
       "Base FY27 PAT ₹42 cr × 18× P/E implies ~₹22 vs ₹17.5 reference (+24%).",
     ],
-    blocks: bestagroMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "BESTAGRO",
@@ -578,7 +493,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹403 cr; OPM 9%; PAT -₹7.5 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹68 cr × 18× P/E implies ~₹98 vs ₹218 reference (-55%).",
     ],
-    blocks: hikalMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "HIKAL",
@@ -595,7 +509,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹286 cr; OPM 15%; PAT ₹34 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹84 cr × 22× P/E implies ~₹423 vs ₹382 reference (+11%).",
     ],
-    blocks: bhageriaMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "BHAGERIA",
@@ -612,7 +525,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹697 cr; OPM 12%; PAT ₹35 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹175 cr × 16× P/E implies ~₹506 vs ₹428 reference (+18%).",
     ],
-    blocks: rossariMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ROSSARI",
@@ -629,7 +541,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹694 cr; OPM 25%; PAT ₹138 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹500 cr × 34× P/E implies ~₹5,547 vs ₹5,131 reference (+8%).",
     ],
-    blocks: fineorgMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "FINEORG",
@@ -646,7 +557,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹1,782 cr; OPM 14%; PAT ₹166 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹455 cr × 22× P/E implies ~₹2,820 vs ₹2,377 reference (+19%).",
     ],
-    blocks: galaxysurfMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "GALAXYSURF",
@@ -663,7 +573,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹696 cr; OPM 24% (Jun 2026 quarter).",
       "Base FY27 PAT ₹500 cr × 30× P/E implies ~₹1,446 vs ₹1,208 reference (+20%).",
     ],
-    blocks: vinatiorgaMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "VINATIORGA",
@@ -680,7 +589,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹268 cr; OPM 36%; PAT ₹73 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹320 cr × 31× P/E implies ~₹933 vs ₹803 reference (+16%).",
     ],
-    blocks: cleansciMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "CLEAN",
@@ -697,7 +605,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹2,578 cr; OPM 21%; PAT ₹345 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹920 cr × 26× P/E implies ~₹1,755 vs ₹1,493 reference (+17%).",
     ],
-    blocks: deepaknitMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "DEEPAKNTR",
@@ -714,7 +621,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹2,387 cr; OPM 16%; PAT ₹155 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹700 cr × 28× P/E implies ~₹541 vs ₹465 reference (+16%).",
     ],
-    blocks: aartiindMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "AARTIIND",
@@ -731,7 +637,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹1,848 cr; OPM 21%; PAT ₹254 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹880 cr × 24× P/E implies ~₹7,184 vs ₹5,861 reference (+23%).",
     ],
-    blocks: atulMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ATUL",
@@ -748,7 +653,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹5,033 cr; OPM 25%; PAT ₹759 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹2,650 cr × 32× P/E implies ~₹2,905 vs ₹2,486 reference (+17%).",
     ],
-    blocks: srfMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "SRF",
@@ -765,7 +669,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹1,045 cr; OPM 34%; PAT ₹243 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹900 cr × 50× P/E implies ~₹8,772 vs ₹8,136 reference (+8%).",
     ],
-    blocks: navinfluorMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "NAVINFLUOR",
@@ -782,7 +685,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹1,588 cr; OPM 26%; R32 commercial from Mar 2026.",
       "Base FY27 PAT ₹650 cr × 77× P/E implies ~₹4,557 vs ₹4,342 reference (+5%).",
     ],
-    blocks: fluorochemMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "FLUOROCHEM",
@@ -799,7 +701,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹250 cr; OPM 19%; FY27 guide ₹1,250–1,350 cr consolidated.",
       "Base FY27 PAT ₹48 cr × 160× P/E implies ~₹2,560 vs ₹2,407 reference (+6%).",
     ],
-    blocks: neogenMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "NEOGEN",
@@ -816,7 +717,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹655 cr; OPM 25%; FY27 guide ₹2,700–2,800 cr.",
       "Base FY27 PAT ₹285 cr × 50× P/E implies ~₹1,252 vs ₹1,164 reference (+8%).",
     ],
-    blocks: anupamMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ANURAS",
@@ -833,7 +733,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q4 FY26 call: FY27 guide 5–10% volume growth; acetonitrile ramp key.",
       "Base FY27 PAT ₹210 cr × 46× P/E implies ~₹1,887 vs ₹1,997 reference (-5%).",
     ],
-    blocks: alkylamineMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ALKYLAMINE",
@@ -850,7 +749,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹456 cr; PAT ₹78 cr.",
       "Base FY27 PAT ₹228 cr × 31× P/E implies ~₹2,181 vs ₹2,052 reference (+6%).",
     ],
-    blocks: balaminesMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "BALAMINES",
@@ -867,7 +765,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹705 cr; PAT ₹100 cr; OPM 25%.",
       "Base FY27 PAT ₹280 cr × 16× P/E implies ~₹1,040 vs ₹982 reference (+6%).",
     ],
-    blocks: epigralMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "EPIGRAL",
@@ -884,7 +781,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹327 cr; OPM 21%; TTM PAT ₹96 cr.",
       "Base FY27 PAT ₹115 cr × 50× P/E implies ~₹465 vs ₹475 reference (-2%).",
     ],
-    blocks: archeanMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "ACI",
@@ -901,7 +797,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹131 cr; OPM 19%; PAT ₹15 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹80 cr × 50× P/E implies ~₹1,709 vs ₹1,743 reference (-2%).",
     ],
-    blocks: tatvchintMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "TATVA",
@@ -918,7 +813,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹968 cr; OPM 12%; PAT ₹68 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹210 cr × 26× P/E implies ~₹196 vs ₹181 reference (+8%).",
     ],
-    blocks: lxchemMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "LXCHEM",
@@ -935,7 +829,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹1,300 cr; OPM 15%; PAT ₹106 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹360 cr × 31× P/E implies ~₹701 vs ₹638 reference (+10%).",
     ],
-    blocks: jublingreaMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "JUBLINGREA",
@@ -952,7 +845,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹84 cr; OPM 31%; PAT ₹15 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹50 cr × 34× P/E implies ~₹688 vs ₹650 reference (+6%).",
     ],
-    blocks: paushakMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "PAUSHAKLTD",
@@ -969,7 +861,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹666 cr; OPM 23%; PAT ₹83 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹400 cr × 38× P/E implies ~₹3,887 vs ₹3,573 reference (+9%).",
     ],
-    blocks: priviMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "PRIVISCL",
@@ -986,7 +877,6 @@ export const deepCatalogArticles: CatalogArticle[] = [
       "Q1 FY27 revenue ₹1,050 cr; OPM ~4%; PAT loss ~₹75 cr (Jun 2026 quarter).",
       "Base FY27 PAT ₹170 cr × 19× P/E implies ~₹205 vs ₹192 reference (+7%).",
     ],
-    blocks: chemplastMemoBlocks,
     readMinutes: 25,
     publishedAt: "2026-10-04",
     symbol: "CHEMPLASTS",

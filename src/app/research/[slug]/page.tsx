@@ -5,7 +5,12 @@ import { ArticleBody } from "@/components/research/ArticleBody";
 import { ResearchDossier } from "@/components/research/ResearchDossier";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
 import { Page } from "@/components/shell/Page";
-import { getArticle, listArticles, relatedArticles } from "@/lib/articles/catalog";
+import {
+  getArticle,
+  getArticleSummary,
+  listArticles,
+  relatedArticles,
+} from "@/lib/articles/catalog";
 import { articleCover } from "@/lib/articles/images";
 import { getDeepResearchForArticle } from "@/lib/research";
 import { formatDate } from "@/lib/utils";
@@ -25,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = getArticleSummary(slug);
   if (article) return { title: article.title };
   const note = getResearch(slug);
   return { title: note?.title ?? "Research" };
@@ -44,7 +49,7 @@ export default async function ResearchArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = await getArticle(slug);
   const research = getDeepResearchForArticle(slug);
 
   if (article && article.blocks.length && research) {

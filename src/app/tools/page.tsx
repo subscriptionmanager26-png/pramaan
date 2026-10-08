@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Page, PageHeader } from "@/components/shell/Page";
+import { PocketEdgeLogo } from "@/components/PocketEdgeLogo";
+import { Page } from "@/components/shell/Page";
 import { guides } from "@/lib/guides";
 
 export const metadata: Metadata = {
@@ -12,12 +13,15 @@ export default function ToolsPage() {
 
   return (
     <Page>
-      <PageHeader
-        title="Tools"
-        description="Live data and screeners built on PocketEdge — ETF iNAV, gold, mutual funds, and more. Opens on pocketedge.in."
-      />
-
-      <div className="mt-4">
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <PocketEdgeLogo />
+          <h1 className="text-section mt-6 text-ink">Tools</h1>
+          <p className="mt-3 max-w-xl text-[15px] leading-6 text-ink-2">
+            Live data and screeners — ETF iNAV, gold, mutual funds, markets, and more. Each card
+            opens on pocketedge.in.
+          </p>
+        </div>
         <Link href="/guides" className="text-[13px] font-semibold text-accent hover:underline">
           Looking for guides? →
         </Link>
@@ -40,10 +44,7 @@ export default function ToolsPage() {
                 <img src={tool.image} alt="" className="h-full w-full object-cover opacity-90" />
               </div>
               <div className="p-5">
-                <p className="text-meta uppercase tracking-[0.12em] text-ink">
-                  {tool.topic ?? "Tool"}
-                  {external ? " · PocketEdge" : null}
-                </p>
+                <p className="text-meta uppercase tracking-[0.12em] text-ink">{tool.topic ?? "Tool"}</p>
                 <h3 className="mt-2 text-headline text-ink group-hover:text-accent">{tool.title}</h3>
                 <p className="mt-2 text-[15px] leading-6 text-ink-2">{tool.summary}</p>
                 {external ? (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PocketEdgeLogo } from "@/components/PocketEdgeLogo";
 import { Page } from "@/components/shell/Page";
 import { formatDate } from "@/lib/utils";
 import { getGuide, guides } from "@/lib/guides";
@@ -34,6 +35,11 @@ export default async function GuidePage({
 
   return (
     <Page width="content">
+      {externalTool ? (
+        <div className="mb-6 border-b border-line pb-6">
+          <PocketEdgeLogo />
+        </div>
+      ) : null}
       <Link href={backHref} className="text-[13px] font-semibold text-accent hover:underline">
         ← {backLabel}
       </Link>
@@ -59,7 +65,7 @@ export default async function GuidePage({
           rel="noreferrer"
           className="btn-primary mt-6 inline-flex"
         >
-          Open on PocketEdge →
+          Open tool →
         </a>
       ) : null}
 

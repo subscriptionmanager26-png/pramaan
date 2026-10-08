@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
-import type { Article } from "@/lib/articles/types";
+import type { ArticleSummary } from "@/lib/articles/types";
 
 export type FilterCompany = {
   company: string;
@@ -57,7 +57,7 @@ export function ResearchFilters({
   industryCounts: Record<string, number>;
   verdictCounts: Record<string, number>;
   totalCount: number;
-  articles: Article[];
+  articles: ArticleSummary[];
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();

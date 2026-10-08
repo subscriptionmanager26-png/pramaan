@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { NewsMagazineCard, ResearchList } from "@/components/magazine/MagazineCards";
 import { Page, SoftChip } from "@/components/shell/Page";
-import { listArticles } from "@/lib/articles/catalog";
+import { researchRailItems } from "@/lib/articles/research-rail";
 import { newsFeed } from "@/lib/site";
-import { formatRelative } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "News",
@@ -29,13 +28,7 @@ export default async function NewsPage({
   const sorted = [...items].sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
   const [featured, second, ...rest] = sorted;
 
-  const researchSidebar = listArticles()
-    .slice(0, 5)
-    .map((a) => ({
-      href: `/research/${a.slug}`,
-      title: a.title,
-      meta: `${formatRelative(`${a.publishedAt}T12:00:00+05:30`)} · ${a.readMinutes} min`,
-    }));
+  const researchSidebar = researchRailItems(5);
 
   return (
     <Page>

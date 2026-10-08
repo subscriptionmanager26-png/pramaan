@@ -20,14 +20,13 @@ export interface ParagraphBlock {
 
 export type ArticleBlock = HeadingBlock | ParagraphBlock | SeriesChartBlock;
 
-export interface Article {
+export interface ArticleSummary {
   slug: string;
   title: string;
   dek: string;
   verdict: Verdict;
   conviction: "low" | "medium" | "high";
   keyTakeaways: string[];
-  blocks: ArticleBlock[];
   readMinutes: number;
   publishedAt: string;
   symbol: string;
@@ -37,5 +36,12 @@ export interface Article {
   industry: string;
 }
 
-/** Catalog source shape before taxonomy enrichment. */
-export type CatalogArticle = Omit<Article, "company" | "companySlug" | "industry">;
+export interface Article extends ArticleSummary {
+  blocks: ArticleBlock[];
+}
+
+/** Catalog source shape before taxonomy enrichment (memo body loaded separately). */
+export type CatalogArticleMeta = Omit<ArticleSummary, "company" | "companySlug" | "industry">;
+
+/** @deprecated Use CatalogArticleMeta */
+export type CatalogArticle = CatalogArticleMeta & { blocks: ArticleBlock[] };
