@@ -26,6 +26,56 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "us-perm-it-green-card-pause",
+    title: "Washington just froze the green card queue for India’s largest IT firms",
+    summary:
+      "The US Labour Department suspended Cognizant, Infosys, TCS, Wipro, HCL, and Capgemini from the Permanent Labour Certification (PERM) programme on 8 October 2026. Microsoft and Adobe were suspended too. New and pending PERM filings for those employers will not move while the ban lasts.",
+    category: "industry",
+    companyOrSector: "IT services / US immigration",
+    publishedAt: "2026-10-08T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("us-perm-it-green-card-pause"),
+    keyTakeaways: [
+      "PERM lets US employers sponsor H-1B workers for green cards; Labour will not accept new or pending filings for the named firms.",
+      "Suspended Indian IT names include Cognizant, Infosys, TCS, Wipro, HCL, and Capgemini.",
+      "DHS also proposed steep new fees for student OPT work permits on 7 October, tightening another US hiring pipeline.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, US Labour Secretary Keith Sonderling said the department is suspending several large technology employers from the Permanent Labour Certification programme. Indian IT services firms on the list include Cognizant, Infosys, Tata Consultancy Services, Wipro, HCL, and Capgemini. Microsoft and Adobe were suspended as well, with officials citing active federal investigations. The department said it will not accept new PERM applications and will not process pending ones involving those companies.",
+      "What does this mean?",
+      "PERM is the step many US employers use before they can sponsor an H-1B worker for a green card. A suspension does not cancel existing visas overnight. It stops the permanent residency pipeline for new filings at these employers while the ban is in force. For Indian IT services firms, US revenue depends on teams that rotate between India and client sites. Slower green card processing can make US postings less attractive and push hiring toward offshore delivery centres.",
+      "The announcement landed a day after the Department of Homeland Security proposed large new fees for Optional Practical Training, another route foreign students use to work in the US after graduation. Taken together, the moves tighten legal paths from student visa to long-term US employment.",
+      "Why should I care?",
+      "If you work in IT services or plan to, client work in the US may still happen on short-term visas even when PERM is paused. Career planning for US residency through a suspended employer needs a reset. If you invest in IT stocks, this is a policy shock to how those firms staff US projects, not a comment on one quarter’s revenue. Watch whether clients shift work offshore, whether rivals not on the list gain share, and whether Washington lifts suspensions after investigations close.",
+    ],
+  },
+  {
+    slug: "ola-electric-rights-issue-choice",
+    title: "Ola Electric is asking shareholders to pay again or own less",
+    summary:
+      "Ola Electric set a ₹27 rights issue price on 8 October 2026 to raise about ₹1,000 crore, roughly four months after a ₹780 crore institutional round. Shareholders must subscribe, sell their rights, or accept dilution when the issue opens on 22 October.",
+    category: "company",
+    companyOrSector: "Ola Electric / EV",
+    publishedAt: "2026-10-08T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ola-electric-rights-issue-choice"),
+    keyTakeaways: [
+      "Rights issue: two shares for every 25 held at ₹27; record date 13 October; issue opens 22 October.",
+      "Company earmarked ₹350 crore for debt repayment and ₹400 crore for R&D, manufacturing, and sales.",
+      "September VAHAN registrations about 13,449 units, near 6.5% two-wheeler EV share.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, Ola Electric finalised terms for a ₹1,000 crore rights issue. Eligible shareholders get two new shares for every 25 they hold at ₹27 each. The record date is 13 October. The issue opens on 22 October and closes on 30 October. The price sits below the previous day’s market close, so investors face a familiar rights choice: put in more cash, sell the entitlement, or do nothing and let ownership shrink.",
+      "What does this mean?",
+      "Rights issues are a way to raise equity from people who already own the stock. Ola said about ₹350 crore will repay debt and about ₹400 crore will fund research, manufacturing, and sales infrastructure. The rest of the proceeds depend on how much call money shareholders pay over time. The fundraising follows a ₹780 crore institutional round in June. Two capital calls in one year signal the business still burns cash while it fights for scooter market share.",
+      "June-quarter revenue fell sharply year on year even as the net loss narrowed. Operating cash outflow widened. September registration data put Ola near 6.5% of India’s electric two-wheeler market, behind TVS, Bajaj, Ather, and Hero. Founder Bhavish Aggarwal pledged shares to fund his own rights subscription, which keeps control but adds scrutiny.",
+      "Why should I care?",
+      "If you hold Ola shares, read the letter of offer before the record date. Subscribing protects your stake but sends more money into a company that is still losing cash. Selling rights entitlements captures some value without subscribing. Letting rights lapse is the cheapest option today and the most dilutive tomorrow. If you only follow EVs as a buyer, the rights issue does not change showroom prices immediately. It does show how much capital the company needs while volumes remain well below last year’s peaks.",
+    ],
+  },
+  {
     slug: "tcs-corporate-tech-demand",
     title: "TCS reported another double-digit revenue quarter",
     summary:
@@ -252,6 +302,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "us-perm-it-green-card-pause": "policy",
+  "ola-electric-rights-issue-choice": "companies",
   "tcs-corporate-tech-demand": "companies",
   "airlines-fuel-surcharge-atf": "policy",
   "gst-council-eases-penalties": "policy",
