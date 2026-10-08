@@ -26,6 +26,15 @@ These feeds provide **information and inspiration** for what to write. You may u
 - Index echo headlines (“Nifty slips on…”) as the *lead* story
 - Duplicate of a desk note already in `src/lib/desk-notes.ts` for the same event
 
+## Reason before you write
+
+Do this **before** drafting `title`, `summary`, or `body`:
+
+1. **One event, one note.** Name the single turn (policy, price pass-through, earnings signal). If you cannot state it in one plain sentence, reject or split.
+2. **Causal chain only.** Each paragraph must follow from the last. If sentence B does not depend on sentence A, delete B or move it to another note. Do not stitch unrelated headlines from the same window (e.g. airport slot fights and fuel surcharges are different stories).
+3. **Title test.** Read the title aloud. It must be a normal English sentence a reader understands without context. No mixed metaphors (“hiring growth”), no desk jargon, no database or source names.
+4. **Mechanism first in “What does this mean?”** Explain how the industry works (input cost → surcharge, rate → EMI, rule change → compliance), then optional wider context that **directly** follows from that mechanism.
+
 ## Narrative gates
 
 - **Conflict or turn** — expected X, got Y; a regime ended/began
@@ -49,7 +58,7 @@ Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper)
    - `Why should I care?` (header string)
    - 1–2 short paragraphs (who is affected + what to watch)
 5. **readMinutes** — usually `2`
-6. **sourceNote** — cite the window and sources used (`mn_news_items`, advisor Twitter/Substack where relevant); “Not investment advice.”
+6. **sourceNote** — omit on routine desk notes. Do not cite internal table names, ingest paths, or “Not investment advice” boilerplate on `/news` pieces.
 7. **Hero image** — `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")`. Editorial composite — see [`desk-hero-prompts.md`](./desk-hero-prompts.md). No picsum; no clutter; no headline text in the image.
 
 ### Coverage order (non-negotiable)

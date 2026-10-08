@@ -27,9 +27,9 @@ export function getDeskNote(slug: string) {
 export const deskNotes: ResearchArticle[] = [
   {
     slug: "tcs-corporate-tech-demand",
-    title: "India’s largest IT firm is still hiring growth, not cutting back",
+    title: "TCS kept growing revenue in the same week the RBI raised rates",
     summary:
-      "Tata Consultancy Services posted an 11% rise in rupee revenue and a 15% jump in net profit for the September quarter. Management declared a ₹12 interim dividend. The print suggests large companies are still spending on tech even as borrowing costs rise.",
+      "Tata Consultancy Services posted an 11% rise in rupee revenue and a 15% jump in net profit for the September quarter, and declared a ₹12 interim dividend. For corporate buyers, that is a sign technology budgets are not frozen yet.",
     category: "company",
     companyOrSector: "TCS / IT services",
     publishedAt: "2026-10-08T19:15:00+05:30",
@@ -40,16 +40,13 @@ export const deskNotes: ResearchArticle[] = [
       "Net profit about ₹13,884 crore, up roughly 15%; results beat most Street estimates.",
       "Second interim dividend of ₹12 per share declared alongside the results.",
     ],
-    sourceNote:
-      "From TCS Q2 FY27 results coverage in mn_news_items (8 Oct 2026) and advisor Twitter results wraps. Not investment advice.",
     body: [
       "What's going on here?",
       "On 8 October 2026, Tata Consultancy Services reported results for the quarter ended 30 September 2026. Revenue reached about ₹73,188 crore, up 11% from a year earlier in rupee terms. Net profit was about ₹13,884 crore, up roughly 15%. The board declared a second interim dividend of ₹12 per share.",
       "What does this mean?",
-      "TCS is a bellwether for corporate technology budgets. Banks, retailers, and manufacturers buy software, cloud, and outsourcing from firms like TCS when they want to cut costs or launch digital products. A double-digit revenue quarter in the same week the RBI raised rates suggests many clients are still signing cheques rather than freezing projects.",
-      "Deal wins and client spending matter more than the one-day stock move. In the same news window, Tata Steel reported higher domestic deliveries and jewellery names such as Senco posted strong revenue growth. Manufacturing and consumer names are not the same as IT services, but together they paint a picture of activity that is uneven, not shut down.",
+      "TCS sells software, cloud, and outsourcing to large banks, retailers, and manufacturers. Revenue rises when those clients sign new work or renew existing contracts. An 11% rupee revenue quarter landed in the same week the RBI raised its policy rate, which usually makes finance teams scrutinise discretionary spend. The results suggest many clients approved budgets anyway, or shifted spend toward efficiency projects that still need vendors.",
       "Why should I care?",
-      "If you work in tech or sell to large enterprises, demand at the top of the stack is a useful signal. If you only own the shares, remember that one quarter does not set the year. Watch whether clients delay discretionary projects after loan rates rise further. For households, the more direct link this week is still borrowing costs and festival spending, not TCS earnings. The takeaway for the wider economy is simpler: big companies are not yet in a full spending freeze.",
+      "If you work in tech or sell to enterprises, client appetite at the largest Indian IT firm is a useful pulse check. If you only follow the stock, one quarter does not set the year: watch the next two quarters for delayed projects if loan rates keep climbing. For most households the direct story this week is still EMIs and festival spending, not TCS earnings. The wider read is narrower: corporate tech spend looked intact through September, not shut off.",
     ],
   },
   {
@@ -67,14 +64,11 @@ export const deskNotes: ResearchArticle[] = [
       "International surcharge on Akasa set at ₹2,500, per airline statement.",
       "Air India and Air India Express also revised fuel surcharges on 8 October.",
     ],
-    sourceNote:
-      "From Akasa Air and Air India statements in mn_news_items (8 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "On 8 October 2026, Akasa Air introduced a fuel surcharge on bookings because aviation turbine fuel costs have stayed elevated. Domestic routes now carry a surcharge between ₹375 and ₹1,150 depending on the sector. International flights carry a ₹2,500 surcharge. Air India and Air India Express issued separate statements the same day revising their own fuel surcharges.",
       "What does this mean?",
-      "Airlines split the ticket into base fare plus taxes plus, when needed, a fuel line item. When crude and refinery spreads move, carriers pass part of the pain through that surcharge rather than rewriting every base fare. For families planning Diwali or winter travel, the headline fare you saw last week may not be the all-in price today.",
-      "The move sits in a tougher backdrop. Global oil markets have been volatile, and Indian carriers already fought over Mumbai airport capacity this month. Higher surcharges are a way to protect margins without a full fare war.",
+      "Airlines buy aviation turbine fuel in a market linked to global crude. When that input cost stays high, margins shrink unless ticket prices move. Carriers often add or raise a separate fuel surcharge instead of changing every base fare on the website. That is why Akasa published rupee ranges and legacy carriers revised surcharges the same day. For families booking Diwali or winter trips, the fare shown in search may be lower than the total at checkout once the fuel line is added.",
       "Why should I care?",
       "If you are booking flights for the holidays, compare the final checkout price, not just the advertised fare. A ₹500–₹1,000 surcharge per leg adds up on family trips. Watch whether IndiGo and other rivals match the step. If they do, the industry is accepting that passengers will pay more for the same seat. If only one carrier moves, you still have a chance to switch. Either way, this is a household budget story before it is a stock story.",
     ],
@@ -94,8 +88,6 @@ export const deskNotes: ResearchArticle[] = [
       "Prosecution threshold raised to ₹5 crore from ₹1 crore for offences.",
       "General penalty cut to ₹10,000 from ₹25,000; late filing faces proportionate penalty only.",
     ],
-    sourceNote:
-      "From GST Council outcomes reported in mn_news_items (8 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "On 8 October 2026, the Goods and Services Tax Council met and agreed to soften several punitive rules. Tax officials will no longer have arrest powers under GST. The threshold for prosecution in GST offences rises to ₹5 crore from ₹1 crore. The standard penalty falls to ₹10,000 from ₹25,000. If a taxpayer files late, makes an error, or pays late, officials can recover tax, charge interest, and apply a proportionate penalty, but not stack open-ended punishments on top.",
@@ -119,10 +111,8 @@ export const deskNotes: ResearchArticle[] = [
     keyTakeaways: [
       "About 40% of bank loan disbursements in the sample went to power projects.",
       "Solar and wind projects dominated that lending bucket.",
-      "Signal shared via advisor Twitter citing Zerodha Capital research (8 Oct 2026).",
+      "Figure cited from Zerodha Capital analysis of bank disbursements.",
     ],
-    sourceNote:
-      "From Zerodha Capital loan-disbursement analysis shared on advisor Twitter and sector context in mn_news_items (8 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "Research circulated on 8 October 2026 pointed to a sharp tilt in bank lending. Almost 40% of loan disbursements in the dataset went to power projects, with solar and wind making up most of that slice. The numbers come from Zerodha Capital’s work on where fresh bank credit is landing.",
@@ -148,8 +138,6 @@ export const deskNotes: ResearchArticle[] = [
       "Stance moved to “calibrated tightening”; cuts look unlikely near term.",
       "FY27 growth forecast raised to 7.1%.",
     ],
-    sourceNote:
-      "Sourced from RBI MPC coverage in mn_news_items (7 Oct 2026) and bank / economist wraps. Not investment advice.",
     body: [
       "What's going on here?",
       "On 7 October 2026, the Reserve Bank of India raised its main interest rate by 0.25 percentage points to 5.50%. It also shifted its stance from “neutral” to “calibrated tightening.” Rate cuts are over for now. The next meeting is more likely to bring another small hike or a pause than a cut.",
@@ -176,8 +164,6 @@ export const deskNotes: ResearchArticle[] = [
       "Buyer growth in mid-single digits; ticket sizes still up double digits.",
       "Some festive demand likely shifted to the December quarter.",
     ],
-    sourceNote:
-      "From Titan Q2 FY27 business update and broker wraps indexed in mn_news_items (6–7 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "Titan’s July–September business update showed consumer businesses up 25% from a year ago. Domestic sales rose 22%. International sales rose 97%. Jewellery, the core line, grew about 21%. Watches grew 30%. Eyewear grew 28%. The stock still fell about 4–5% and touched a three-month low.",
@@ -204,8 +190,6 @@ export const deskNotes: ResearchArticle[] = [
       "Each plan includes one free international roaming trip per year.",
       "A similar move on prepaid, if it comes, would matter more for churn.",
     ],
-    sourceNote:
-      "From Bharti Airtel plan announcements and sector wraps in mn_news_items (7 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "Bharti Airtel raised postpaid plan prices by 3–11%, its biggest postpaid step since 2024. New prices apply from 8 October 2026. Entry plans start at ₹499. Family packs cost more too. Existing customers will be shifted to the nearest higher plan. Each plan now bundles one free international roaming trip per year (about 5GB of data, 60 minutes of calls, five-day validity).",
@@ -231,8 +215,6 @@ export const deskNotes: ResearchArticle[] = [
       "IndiGo alone faced about 74 weekly international departures at risk.",
       "Ministry pause; transition plan due 20 October; meeting on 13 October.",
     ],
-    sourceNote:
-      "From MoCA / MIAL / airline coverage in mn_news_items (7 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "Mumbai’s old Terminal 1 needs a phased rebuild from January 2027. It handles domestic traffic. While work is under way, roughly five million passengers a year need another place to check in. Mumbai International Airport (MIAL), run by Adani Airports, proposed cutting 265 of 770 weekly international departures from Terminal 2 from late October. Forty-six airlines would be affected. IndiGo alone would lose about 74 weekly international departures.",
@@ -258,8 +240,6 @@ export const deskNotes: ResearchArticle[] = [
       "Apr–Sep: beer sales +41.3%; alcohol tax collections +13.4% to ₹22,191 cr.",
       "Other states are studying the Karnataka model.",
     ],
-    sourceNote:
-      "From Brewers Association of India / Karnataka AIB coverage in mn_news_items (7 Oct 2026). Not investment advice.",
     body: [
       "What's going on here?",
       "On 11 May 2026, Karnataka moved to an Alcohol-in-Beverage (AIB) tax system. Excise tracks alcohol content more closely. There are fewer slabs. A value-based surcharge still applies. From April to September 2026, the Brewers Association of India reported alcohol tax collections up 13.4% to ₹22,191 crore, beer volumes up 41.3%, and tax from beer up 19%. Other states are looking at the same design.",

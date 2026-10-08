@@ -33,9 +33,15 @@ After `npm run build` passes: **commit and push to `main`** (Vercel → pramaan.
 6. Set `image: deskHeroImage("{slug}")` on the note.
 7. Desk notes live at `/news/[slug]` only. Do not add them to `researchArticles`.
 
+## Reasoning (before drafting)
+
+Follow **Reason before you write** in `docs/desk-brief.md`: one event per note, causal paragraphs only, title must read aloud cleanly. Do not bolt unrelated wire items into one story.
+
 ## Voice (required on every note)
 
 Write like a human editor at a serious business magazine (think HBR: clear, calm, useful).
+
+Omit `sourceNote` on routine `/news` desk pieces (no table names or “not investment advice” footer).
 
 - Short sentences. Simple words. Say what happened, then what it means for the reader.
 - No em dashes.
