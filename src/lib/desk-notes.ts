@@ -26,6 +26,114 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tcs-corporate-tech-demand",
+    title: "India’s largest IT firm is still hiring growth, not cutting back",
+    summary:
+      "Tata Consultancy Services posted an 11% rise in rupee revenue and a 15% jump in net profit for the September quarter. Management declared a ₹12 interim dividend. The print suggests large companies are still spending on tech even as borrowing costs rise.",
+    category: "company",
+    companyOrSector: "TCS / IT services",
+    publishedAt: "2026-10-08T19:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tcs-corporate-tech-demand"),
+    keyTakeaways: [
+      "Q2 FY27 revenue about ₹73,188 crore, up 11% year on year in rupee terms.",
+      "Net profit about ₹13,884 crore, up roughly 15%; results beat most Street estimates.",
+      "Second interim dividend of ₹12 per share declared alongside the results.",
+    ],
+    sourceNote:
+      "From TCS Q2 FY27 results coverage in mn_news_items (8 Oct 2026) and advisor Twitter results wraps. Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, Tata Consultancy Services reported results for the quarter ended 30 September 2026. Revenue reached about ₹73,188 crore, up 11% from a year earlier in rupee terms. Net profit was about ₹13,884 crore, up roughly 15%. The board declared a second interim dividend of ₹12 per share.",
+      "What does this mean?",
+      "TCS is a bellwether for corporate technology budgets. Banks, retailers, and manufacturers buy software, cloud, and outsourcing from firms like TCS when they want to cut costs or launch digital products. A double-digit revenue quarter in the same week the RBI raised rates suggests many clients are still signing cheques rather than freezing projects.",
+      "Deal wins and client spending matter more than the one-day stock move. In the same news window, Tata Steel reported higher domestic deliveries and jewellery names such as Senco posted strong revenue growth. Manufacturing and consumer names are not the same as IT services, but together they paint a picture of activity that is uneven, not shut down.",
+      "Why should I care?",
+      "If you work in tech or sell to large enterprises, demand at the top of the stack is a useful signal. If you only own the shares, remember that one quarter does not set the year. Watch whether clients delay discretionary projects after loan rates rise further. For households, the more direct link this week is still borrowing costs and festival spending, not TCS earnings. The takeaway for the wider economy is simpler: big companies are not yet in a full spending freeze.",
+    ],
+  },
+  {
+    slug: "airlines-fuel-surcharge-atf",
+    title: "Domestic flyers will see a separate fuel charge on tickets again",
+    summary:
+      "Akasa Air added a ₹375–₹1,150 fuel surcharge on domestic routes and ₹2,500 on international flights as aviation turbine fuel prices stay high. Air India and Air India Express also revised surcharges the same day.",
+    category: "industry",
+    companyOrSector: "Aviation / households",
+    publishedAt: "2026-10-08T18:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airlines-fuel-surcharge-atf"),
+    keyTakeaways: [
+      "Akasa set domestic fuel surcharges between ₹375 and ₹1,150 per ticket segment.",
+      "International surcharge on Akasa set at ₹2,500, per airline statement.",
+      "Air India and Air India Express also revised fuel surcharges on 8 October.",
+    ],
+    sourceNote:
+      "From Akasa Air and Air India statements in mn_news_items (8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, Akasa Air introduced a fuel surcharge on bookings because aviation turbine fuel costs have stayed elevated. Domestic routes now carry a surcharge between ₹375 and ₹1,150 depending on the sector. International flights carry a ₹2,500 surcharge. Air India and Air India Express issued separate statements the same day revising their own fuel surcharges.",
+      "What does this mean?",
+      "Airlines split the ticket into base fare plus taxes plus, when needed, a fuel line item. When crude and refinery spreads move, carriers pass part of the pain through that surcharge rather than rewriting every base fare. For families planning Diwali or winter travel, the headline fare you saw last week may not be the all-in price today.",
+      "The move sits in a tougher backdrop. Global oil markets have been volatile, and Indian carriers already fought over Mumbai airport capacity this month. Higher surcharges are a way to protect margins without a full fare war.",
+      "Why should I care?",
+      "If you are booking flights for the holidays, compare the final checkout price, not just the advertised fare. A ₹500–₹1,000 surcharge per leg adds up on family trips. Watch whether IndiGo and other rivals match the step. If they do, the industry is accepting that passengers will pay more for the same seat. If only one carrier moves, you still have a chance to switch. Either way, this is a household budget story before it is a stock story.",
+    ],
+  },
+  {
+    slug: "gst-council-eases-penalties",
+    title: "The GST Council just made honest mistakes less frightening",
+    summary:
+      "India’s GST Council limited arrest powers, raised prosecution thresholds, and cut routine penalties. Rates were left unchanged. The aim is to reduce fear-driven compliance fights for businesses.",
+    category: "industry",
+    companyOrSector: "GST / SMEs",
+    publishedAt: "2026-10-08T17:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gst-council-eases-penalties"),
+    keyTakeaways: [
+      "Arrest powers removed from GST enforcement in the Council’s Thursday package.",
+      "Prosecution threshold raised to ₹5 crore from ₹1 crore for offences.",
+      "General penalty cut to ₹10,000 from ₹25,000; late filing faces proportionate penalty only.",
+    ],
+    sourceNote:
+      "From GST Council outcomes reported in mn_news_items (8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, the Goods and Services Tax Council met and agreed to soften several punitive rules. Tax officials will no longer have arrest powers under GST. The threshold for prosecution in GST offences rises to ₹5 crore from ₹1 crore. The standard penalty falls to ₹10,000 from ₹25,000. If a taxpayer files late, makes an error, or pays late, officials can recover tax, charge interest, and apply a proportionate penalty, but not stack open-ended punishments on top.",
+      "What does this mean?",
+      "For years, small and mid-sized firms have argued that GST enforcement felt criminal for paperwork slips. The Council left tax rates unchanged and said rate decisions will be taken once a year at a dedicated meeting. That separates the politics of rates from the mechanics of compliance.",
+      "The change is policy, not a tax cut. Your invoice still carries the same GST percentages. The difference is how aggressively the state can escalate a dispute.",
+      "Why should I care?",
+      "If you run a business, update your compliance playbook with your chartered accountant. Lower fear of arrest does not mean intentional evasion is safe. If you are a salaried shopper, the near-term effect is indirect: smoother supply chains and fewer sudden shutdown stories at vendors you rely on. Watch state-level implementation. Rules written in Delhi still depend on how local officers apply them on the ground.",
+    ],
+  },
+  {
+    slug: "banks-lend-into-renewable-power",
+    title: "Four in ten new bank loans are flowing into power projects",
+    summary:
+      "Fresh data highlighted by market researchers shows nearly 40% of recent bank loan disbursements went to power projects, led by solar and wind. Capital is chasing generation assets even as policy rates rise.",
+    category: "industry",
+    companyOrSector: "Banks / renewables",
+    publishedAt: "2026-10-08T09:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("banks-lend-into-renewable-power"),
+    keyTakeaways: [
+      "About 40% of bank loan disbursements in the sample went to power projects.",
+      "Solar and wind projects dominated that lending bucket.",
+      "Signal shared via advisor Twitter citing Zerodha Capital research (8 Oct 2026).",
+    ],
+    sourceNote:
+      "From Zerodha Capital loan-disbursement analysis shared on advisor Twitter and sector context in mn_news_items (8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "Research circulated on 8 October 2026 pointed to a sharp tilt in bank lending. Almost 40% of loan disbursements in the dataset went to power projects, with solar and wind making up most of that slice. The numbers come from Zerodha Capital’s work on where fresh bank credit is landing.",
+      "What does this mean?",
+      "When the RBI raises rates, you might expect banks to pull back everywhere. Instead, lenders are still funding long-dated assets where tariffs and power purchase agreements give some visibility. Solar and wind fit that mould. Transmission and thermal projects also sit in the power bucket, but the emphasis in the note is on renewable builds.",
+      "That matters for industrial policy. India needs more electrons on the grid as factories and data centres expand. Banks are voting with disbursements even as bond yields spike on the same day’s trading.",
+      "Why should I care?",
+      "Households do not pick loan books, but they feel the outcomes. More renewable supply can stabilise power costs over time. Heavy bank concentration in one sector also raises risk questions if projects slip on timelines. If you own bank shares or work in energy, watch whether this lending pace continues after the RBI’s tightening cycle. For everyone else, read it as a sign that clean power is still getting funded, not starved, in late 2026.",
+    ],
+  },
+  {
     slug: "rbi-hike-household-budget",
     title: "The RBI just made borrowing a little more expensive",
     summary:
@@ -164,6 +272,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tcs-corporate-tech-demand": "companies",
+  "airlines-fuel-surcharge-atf": "policy",
+  "gst-council-eases-penalties": "policy",
+  "banks-lend-into-renewable-power": "markets",
   "rbi-hike-household-budget": "policy",
   "titan-growth-stock-fell": "companies",
   "airtel-postpaid-price-test": "companies",
