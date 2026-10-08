@@ -49,7 +49,6 @@ export default async function ResearchPage({
   return (
     <Page>
       <PageHeader
-        eyebrow="Research"
         title="Company research memos"
         description={`${all.length} hand-built midcap memos. Filter by verdict, industry, or company. Short news desk notes live under News.`}
       />

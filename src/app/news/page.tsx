@@ -43,12 +43,8 @@ export default async function NewsPage({
           </SoftChip>
         ))}
       </div>
-      <p className="text-meta mt-4">
-        Desk notes first — short explainers on policy, behaviour, and consumption. Open any card for
-        the full brief.
-      </p>
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
+      <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
         <div className="min-w-0 space-y-10">
           {featured ? <NewsMagazineCard item={featured} featured /> : null}
           {second ? <NewsMagazineCard item={second} /> : null}

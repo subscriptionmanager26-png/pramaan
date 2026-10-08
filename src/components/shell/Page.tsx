@@ -28,17 +28,14 @@ export function PageHeader({
   title,
   description,
   actions,
-  eyebrow,
 }: {
   title: string;
   description?: string;
   actions?: ReactNode;
-  eyebrow?: string;
 }) {
   return (
     <header className={actions ? "flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between" : undefined}>
       <div className="min-w-0">
-        {eyebrow ? <p className="text-meta mb-2 uppercase tracking-[0.14em]">{eyebrow}</p> : null}
         <h1 className="text-section text-ink">{title}</h1>
         {description ? <p className="mt-3 max-w-2xl text-[15px] leading-6 text-ink-2">{description}</p> : null}
       </div>

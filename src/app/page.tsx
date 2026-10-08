@@ -84,8 +84,7 @@ export default function HomePage() {
       <section className="grid-paper relative overflow-hidden border-b border-line">
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:min-h-[540px]">
           <div className="animate-fade-up relative z-10 max-w-xl">
-            <p className="text-meta uppercase tracking-[0.16em] text-ink-3">Pramaan</p>
-            <h1 className="text-display mt-4 text-ink">Outthink The Market.</h1>
+            <h1 className="text-display text-ink">Outthink The Market.</h1>
             <p className="mt-5 max-w-md text-[17px] leading-7 text-ink-2">
             Understand what&apos;s happening in markets, and know what to do next.
             </p>
