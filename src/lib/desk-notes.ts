@@ -27,9 +27,9 @@ export function getDeskNote(slug: string) {
 export const deskNotes: ResearchArticle[] = [
   {
     slug: "tcs-corporate-tech-demand",
-    title: "TCS kept growing revenue in the same week the RBI raised rates",
+    title: "TCS reported another double-digit revenue quarter",
     summary:
-      "Tata Consultancy Services posted an 11% rise in rupee revenue and a 15% jump in net profit for the September quarter, and declared a ₹12 interim dividend. For corporate buyers, that is a sign technology budgets are not frozen yet.",
+      "Tata Consultancy Services grew rupee revenue about 11% and net profit about 15% in the quarter to 30 September 2026. The board also declared a ₹12 interim dividend.",
     category: "company",
     companyOrSector: "TCS / IT services",
     publishedAt: "2026-10-08T19:15:00+05:30",
@@ -44,9 +44,9 @@ export const deskNotes: ResearchArticle[] = [
       "What's going on here?",
       "On 8 October 2026, Tata Consultancy Services reported results for the quarter ended 30 September 2026. Revenue reached about ₹73,188 crore, up 11% from a year earlier in rupee terms. Net profit was about ₹13,884 crore, up roughly 15%. The board declared a second interim dividend of ₹12 per share.",
       "What does this mean?",
-      "TCS sells software, cloud, and outsourcing to large banks, retailers, and manufacturers. Revenue rises when those clients sign new work or renew existing contracts. An 11% rupee revenue quarter landed in the same week the RBI raised its policy rate, which usually makes finance teams scrutinise discretionary spend. The results suggest many clients approved budgets anyway, or shifted spend toward efficiency projects that still need vendors.",
+      "TCS sells software, cloud, and outsourcing to large banks, retailers, and manufacturers. Revenue rises when those clients sign new work or renew existing contracts. The September quarter covers activity that was already booked or delivered in July, August, and September, not a single policy week in October. Double-digit growth here means those clients were still buying through the summer.",
       "Why should I care?",
-      "If you work in tech or sell to enterprises, client appetite at the largest Indian IT firm is a useful pulse check. If you only follow the stock, one quarter does not set the year: watch the next two quarters for delayed projects if loan rates keep climbing. For most households the direct story this week is still EMIs and festival spending, not TCS earnings. The wider read is narrower: corporate tech spend looked intact through September, not shut off.",
+      "If you work in tech or sell to enterprises, the largest Indian IT vendor is a rough pulse check on demand from big companies. If you only follow the stock, one quarter does not set the year. Watch whether growth slows in coming quarters if clients trim discretionary projects. This note is about corporate spending through September, not about household EMIs or day-to-day rates.",
     ],
   },
   {

@@ -32,8 +32,9 @@ Do this **before** drafting `title`, `summary`, or `body`:
 
 1. **One event, one note.** Name the single turn (policy, price pass-through, earnings signal). If you cannot state it in one plain sentence, reject or split.
 2. **Causal chain only.** Each paragraph must follow from the last. If sentence B does not depend on sentence A, delete B or move it to another note. Do not stitch unrelated headlines from the same window (e.g. airport slot fights and fuel surcharges are different stories).
-3. **Title test.** Read the title aloud. It must be a normal English sentence a reader understands without context. No mixed metaphors (“hiring growth”), no desk jargon, no database or source names.
-4. **Mechanism first in “What does this mean?”** Explain how the industry works (input cost → surcharge, rate → EMI, rule change → compliance), then optional wider context that **directly** follows from that mechanism.
+3. **Title test.** Read the title aloud. It must be a normal English sentence a reader understands without context. No mixed metaphors (“hiring growth”), no desk jargon, no database or source names. Prefer one clear fact over two ideas joined by “as / while / in the same week as”.
+4. **No fake counterfactuals.** Do not imply the market “expected” outcome X from an unrelated event Y unless the wire gives that expectation. Do not staple a macro headline (RBI, oil, Nifty) to a company print unless the story is *about* that link with evidence in the reporting period.
+5. **Mechanism first in “What does this mean?”** Explain how the industry works (input cost → surcharge, rate → EMI, rule change → compliance), then optional wider context that **directly** follows from that mechanism.
 
 ## Narrative gates
 
