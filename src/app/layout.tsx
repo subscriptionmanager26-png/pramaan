@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description:
     "Hand-built company research memos tagged by company and industry. Ask AI. No demo content.",
   icons: {
-    icon: "/pocketedge-logo.png",
-    apple: "/pocketedge-logo.png",
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "32x32" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
   },
 };
 
