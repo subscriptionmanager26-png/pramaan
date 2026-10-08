@@ -26,6 +26,114 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "upi-mdr-delay-festive",
+    title: "India may push back the new UPI fee until after the festivals",
+    summary:
+      "Regulators were set to let merchants pay 0.4% on UPI bills above ₹2,000 from 15 October. Officials are now weighing a delay so the festive shopping rush is not disrupted.",
+    category: "industry",
+    companyOrSector: "UPI / payments policy",
+    publishedAt: "2026-10-08T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("upi-mdr-delay-festive"),
+    keyTakeaways: [
+      "0.4% merchant charge on UPI transactions above ₹2,000 was due from 15 Oct 2026.",
+      "Sources say rollout may slip a few months to protect festive-season retail payments.",
+      "Payment stocks sold off on the report; merchants get more time to retool billing.",
+    ],
+    sourceNote:
+      "From Reuters and sector wraps on UPI MDR timing in mn_news_items (8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "In September, India ended the fully free UPI model for large merchant payments. NPCI rules allow a 0.4% fee when a customer pays a shop more than ₹2,000 through UPI. The charge was due to start on 15 October 2026, right as the Diwali-to-New Year spending window opens. Regulatory and industry sources told Reuters that officials are now considering a delay of a few months.",
+      "What does this mean?",
+      "More than 500 million people use UPI for tea stalls, rent, and electronics. A new line item at checkout during festivals was always going to be sensitive. Delaying the fee keeps the checkout experience unchanged while banks, payment apps, and large merchants finish routing and disclosure work.",
+      "Investors had treated the fee as the first clear way for payment firms to earn on UPI volume. A slip in timing removes that near-term boost, which is why Paytm, Pine Labs, and MobiKwik shares fell sharply on 8 October even as the policy news is friendlier to shoppers.",
+      "Why should I care?",
+      "If you run a shop, you get more time before large-ticket UPI sales might carry a merchant charge. Watch NPCI and the finance ministry for a formal date. If you use UPI only as a buyer, little changes for now. If you own payment stocks, the story shifts from “fee starts next week” to “fee timing still open,” which matters for revenue forecasts into the December quarter.",
+    ],
+  },
+  {
+    slug: "sc-pharma-doctor-gifts-review",
+    title: "The Supreme Court wants a fresh look at pharma gifts to doctors",
+    summary:
+      "The court told the Centre to form a committee on curbing expensive gifts and perks used to push prescriptions. Drug makers sold off on the order, but the real fight is over how medicines get marketed.",
+    category: "industry",
+    companyOrSector: "Pharma / regulation",
+    publishedAt: "2026-10-08T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sc-pharma-doctor-gifts-review"),
+    keyTakeaways: [
+      "Supreme Court directed a government committee on pharma incentives to doctors.",
+      "Petition dates to 2021 by medical sales representatives seeking accountability.",
+      "Mankind, Zydus, Dr Reddy’s and peers fell 1–2.5% on 8 Oct after the order.",
+    ],
+    sourceNote:
+      "From Supreme Court / pharma coverage in mn_news_items (8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, India’s Supreme Court asked the Union government to set up a committee to study how to stop pharmaceutical companies from offering costly gifts and other inducements to doctors to promote drugs. The court wants the committee’s report placed before it. The case began with a 2021 petition from the Federation of Medical and Sales Representatives Associations.",
+      "What does this mean?",
+      "India already has ethics codes and a ban on cash gifts, but enforcement on the ground has been patchy. A court-driven review raises the odds of tighter rules, sharper penalties, or clearer audit trails on marketing spend. For listed drug makers, that can mean higher compliance cost and slower brand launches if field teams lose tools they rely on today.",
+      "Shares of Mankind Pharma, Zydus Lifesciences, Dr Reddy’s, Cipla, and others slipped in morning trade. The move was modest compared with earnings shocks. The order does not change prescription rules overnight. It signals that marketing practices stay in the spotlight.",
+      "Why should I care?",
+      "If you work in pharma sales or at a hospital, expect more paperwork and scrutiny on conferences, samples, and sponsorships. If you invest in Indian drug stocks, treat marketing risk as a policy line item again, not background noise. The committee’s recommendations, when they land, will matter more than one day’s price action.",
+    ],
+  },
+  {
+    slug: "senco-gold-demand-holds",
+    title: "Senco’s quarter shows Indians are still buying jewellery, carefully",
+    summary:
+      "The regional chain posted 31% revenue growth and 19% same-store sales in Q2. High gold prices hurt affordability, but exchange volumes and wedding demand kept tills busy.",
+    category: "company",
+    companyOrSector: "Senco Gold / jewellery",
+    publishedAt: "2026-10-08T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("senco-gold-demand-holds"),
+    keyTakeaways: [
+      "Q2 revenue +31%; retail revenue +29%; same-store sales +19%.",
+      "Diamond jewellery sales value +40%; customer gold exchanges +50%.",
+      "Six new stores; network at 215 showrooms.",
+    ],
+    sourceNote:
+      "From Senco Gold Q2 business update and peer prints in mn_news_items (7–8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "Senco Gold’s September-quarter business update, filed on 7 October 2026, showed revenue up 31% year on year. Retail revenue rose 29%. Same-store sales grew 19%. Diamond jewellery sales value jumped 40% even as volumes rose 7%. Customers exchanging old gold rose 50%. The stock rallied about 11% on 8 October.",
+      "What does this mean?",
+      "Gold near record highs pushes some buyers toward lighter pieces and exchange offers instead of fresh bullion. Senco leaned into that behaviour. Management said wedding demand stays relatively price insensitive and that the festival calendar turns favourable in the December quarter.",
+      "The print fits a wider pattern from the same news window. Titan reported strong ticket sizes with slower footfall. Jubilant FoodWorks posted 12% revenue growth with Domino’s India like-for-like sales up 4%. Spending has not shut off. Shoppers are choosier about when and how they buy.",
+      "Why should I care?",
+      "If you track consumer India, jewellery is a live data point alongside food and telecom bills. Organised chains with exchange desks may keep taking share from unorganised shops while prices stay elevated. For investors, Senco’s rally is a bet that regional strength can coexist with Titan’s national scale story. Watch festival weeks for footfall, not just ticket size.",
+    ],
+  },
+  {
+    slug: "nbcc-supertech-tenders",
+    title: "NBCC finally floated ₹9,600 crore of work on stalled Supertech homes",
+    summary:
+      "Sixteen bankrupt Supertech projects across four states get 25 construction tenders. Tens of thousands of buyers have waited years since the court backed NBCC as project manager.",
+    category: "industry",
+    companyOrSector: "Housing / NBCC",
+    publishedAt: "2026-10-08T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nbcc-supertech-tenders"),
+    keyTakeaways: [
+      "25 tenders worth ₹9,620 crore across 16 Supertech projects.",
+      "About 50,962 units; 39,870 sold; 14,999 flats still undelivered.",
+      "NCLAT appointed NBCC in Dec 2024; Supreme Court upheld mandate in Feb 2026.",
+    ],
+    sourceNote:
+      "From NBCC / Supertech tender coverage in mn_news_items (8 Oct 2026). Not investment advice.",
+    body: [
+      "What's going on here?",
+      "NBCC (India) floated 25 tenders totalling about ₹9,620 crore to restart construction on 16 housing projects left behind by bankrupt developer Supertech. The sites span Uttar Pradesh, Haryana, Uttarakhand, and Karnataka. Roughly 50,962 apartments were planned, 39,870 were sold, and 14,999 units remain undelivered to buyers who paid years ago.",
+      "The National Company Law Appellate Tribunal named NBCC project management consultant in December 2024. Work stalled until legal clarity improved. The Supreme Court upheld NBCC’s role in February 2026. Completing sold flats needs about ₹1,700 crore of fresh spend against estimated receivables near ₹2,200 crore from those units.",
+      "What does this mean?",
+      "For homebuyers, tenders are the first large-scale sign that cranes may return, not just court orders on paper. For the stressed-property market, Supertech is a test case of whether a state-backed builder can finish private projects at scale.",
+      "Why should I care?",
+      "If you hold a Supertech flat, track tender awards and construction milestones on your project, not NBCC’s headline number alone. If you are shopping pre-owned in these townships, unfinished inventory affects resale pricing and maintenance. For the wider market, success here could become a template for other stuck towers; failure would keep buyer trust fragile despite the housing recovery narrative in major cities.",
+    ],
+  },
+  {
     slug: "hul-detergent-price-hike",
     title: "HUL just raised detergent prices again",
     summary:
@@ -272,6 +380,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "upi-mdr-delay-festive": "policy",
+  "sc-pharma-doctor-gifts-review": "policy",
+  "senco-gold-demand-holds": "companies",
+  "nbcc-supertech-tenders": "policy",
   "hul-detergent-price-hike": "companies",
   "tata-steel-india-demand-q2": "companies",
   "jubilant-domios-q2-revenue": "companies",
