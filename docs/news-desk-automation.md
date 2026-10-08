@@ -55,7 +55,7 @@ Sources (inspiration + facts, last 6–12h):
 - af_content_items + af_content_bodies (twitter)
 - af_content_items + af_content_bodies (substack)
 
-Pick 0–5 stories. Write desk notes. Generate heroes. npm run build.
+Pick 0–5 stories. Write desk notes (titles: simple, one true fact — see desk-brief “Titles”). Generate heroes. npm run build.
 Push to main for production (do not leave changes on a branch only).
 If nothing ships, report rejects only — no empty commit.
 ```

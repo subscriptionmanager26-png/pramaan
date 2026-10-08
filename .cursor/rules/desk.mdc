@@ -35,7 +35,11 @@ After `npm run build` passes: **commit and push to `main`** (Vercel → pramaan.
 
 ## Reasoning (before drafting)
 
-Follow **Reason before you write** in `docs/desk-brief.md`: one event per note, causal paragraphs only, title must read aloud cleanly. Do not bolt unrelated wire items into one story.
+Follow **Reason before you write** in `docs/desk-brief.md`: one event per note, causal paragraphs only. Do not bolt unrelated wire items into one story.
+
+## Titles
+
+Follow **Titles (simple, interesting, true)** in `docs/desk-brief.md`. Write the title last. One fact, plain words, no stitched macro/company plots, no claims the body cannot support.
 
 ## Voice (required on every note)
 

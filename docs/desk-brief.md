@@ -36,6 +36,45 @@ Do this **before** drafting `title`, `summary`, or `body`:
 4. **No fake counterfactuals.** Do not imply the market “expected” outcome X from an unrelated event Y unless the wire gives that expectation. Do not staple a macro headline (RBI, oil, Nifty) to a company print unless the story is *about* that link with evidence in the reporting period.
 5. **Mechanism first in “What does this mean?”** Explain how the industry works (input cost → surcharge, rate → EMI, rule change → compliance), then optional wider context that **directly** follows from that mechanism.
 
+## Titles (simple, interesting, true)
+
+The `title` is the headline on `/news`. Write it **last**, after you know the one event and the facts you will use in the body.
+
+**Simple**
+
+- One idea per title. One subject, one verb, one outcome.
+- Short words. Short sentence. Aim for roughly 6–14 words; if you need a second clause, the note may be two stories.
+- Say what happened in plain English. A busy reader should get it without reading the body.
+
+**Interesting**
+
+- Interest comes from the **fact**, not from wordplay or extra plot lines.
+- Lead with the turn readers care about: a rule changed, a bill went up, sales rose while the stock fell, a council softened penalties.
+- You may use contrast **only when the wire supports both sides** (e.g. strong sales, weak share price on the same update).
+
+**True**
+
+- Every word in the title must be supportable from the reporting in the note. If you cannot point to a sentence in “What’s going on here?”, cut it from the title.
+- Do not join two unrelated events (“in the same week as…”, “as RBI…”) unless the story is explicitly about that link and you have evidence.
+- Do not imply expectations you cannot prove (“expected to slow”, “defied the Street”) unless the wire states them.
+- Do not use the title to sneak in analysis; save mechanism for the body.
+
+**Good vs weak**
+
+| Weak | Why | Stronger |
+|------|-----|----------|
+| TCS kept growing revenue in the same week the RBI raised rates | Two unrelated events; fake tension | TCS reported another double-digit revenue quarter |
+| India’s largest IT firm is still hiring growth | Mixed metaphor; vague | Titan sold more. The stock still fell. |
+| Markets digest policy amid global headwinds | No fact | Domestic flyers will see a separate fuel charge on tickets again |
+| GST Council moves to support ease of business narrative | Jargon; no concrete turn | The GST Council just made honest mistakes less frightening |
+
+**Checklist before ship**
+
+1. Read the title aloud. Would you say this to a friend at lunch?
+2. Underline each factual claim. Is it in the first body paragraph?
+3. Delete any second storyline (macro, rival news, “what it means for markets”).
+4. If the title is boring, pick a sharper **true** fact from the same event; do not add drama.
+
 ## Narrative gates
 
 - **Conflict or turn** — expected X, got Y; a regime ended/began
@@ -48,7 +87,7 @@ Mirror [Finimize Newsroom style](https://finimize.com): short, concrete, no jarg
 
 Each note in `src/lib/desk-notes.ts` (+ matching `deskNewsItems` via the mapper):
 
-1. **Title** — plain sentence; no “shares crash X%” as the hook
+1. **Title** — see **Titles (simple, interesting, true)** above; plain sentence; no “shares crash X%” as the hook
 2. **Summary** — 1–2 sentences
 3. **keyTakeaways** — 3 concrete facts
 4. **body** — exactly this section order as separate strings:
