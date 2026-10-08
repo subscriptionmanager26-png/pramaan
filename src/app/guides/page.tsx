@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Page, PageHeader } from "@/components/shell/Page";
 import { formatRelative } from "@/lib/utils";
-import { guides } from "@/lib/site";
+import { guides } from "@/lib/guides";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -15,7 +15,7 @@ export default function GuidesPage() {
     <Page>
       <PageHeader
         title="Guides"
-        description="Short explainers. Placeholder lorem copy until real guides are connected."
+        description="Plain-language explainers on investing from India — starting with global markets, LRS, costs, and tax basics."
       />
 
       <div className="mt-4">
@@ -40,7 +40,10 @@ export default function GuidesPage() {
               />
             </div>
             <div className="p-5">
-              <h3 className="text-headline text-ink group-hover:text-accent">{guide.title}</h3>
+              {guide.topic ? (
+                <p className="text-meta uppercase tracking-[0.12em] text-accent">{guide.topic}</p>
+              ) : null}
+              <h3 className="text-headline mt-1 text-ink group-hover:text-accent">{guide.title}</h3>
               <p className="mt-2 text-[15px] leading-6 text-ink-2">{guide.summary}</p>
               <p className="text-meta mt-3">
                 {guide.readMinutes ? `${guide.readMinutes} min · ` : null}

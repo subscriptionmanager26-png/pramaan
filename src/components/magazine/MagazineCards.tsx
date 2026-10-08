@@ -157,14 +157,16 @@ export function ResearchMagazineCard({
   );
 }
 
-export function TrendingList({
+export function ResearchList({
   items,
+  title = "RESEARCH",
 }: {
   items: { href: string; title: string; meta: string }[];
+  title?: string;
 }) {
   return (
     <aside>
-      <h2 className="text-[1.35rem] font-black italic tracking-tight text-ink">TRENDING</h2>
+      <h2 className="text-[1.35rem] font-black italic tracking-tight text-ink">{title}</h2>
       <ul className="mt-5 divide-y divide-line">
         {items.map((item) => (
           <li key={item.href} className="py-4 first:pt-0">
@@ -175,6 +177,12 @@ export function TrendingList({
           </li>
         ))}
       </ul>
+      <Link href="/research" className="mt-4 inline-block text-[13px] font-semibold text-accent hover:underline">
+        All research →
+      </Link>
     </aside>
   );
 }
+
+/** @deprecated Use ResearchList */
+export const TrendingList = ResearchList;

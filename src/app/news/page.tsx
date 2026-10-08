@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { NewsMagazineCard, TrendingList } from "@/components/magazine/MagazineCards";
+import { NewsMagazineCard, ResearchList } from "@/components/magazine/MagazineCards";
 import { Page, SoftChip } from "@/components/shell/Page";
 import { listArticles } from "@/lib/articles/catalog";
 import { newsFeed } from "@/lib/site";
@@ -29,7 +29,7 @@ export default async function NewsPage({
   const sorted = [...items].sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
   const [featured, second, ...rest] = sorted;
 
-  const trending = listArticles()
+  const researchSidebar = listArticles()
     .slice(0, 5)
     .map((a) => ({
       href: `/research/${a.slug}`,
@@ -66,7 +66,7 @@ export default async function NewsPage({
           </div>
         </div>
         <div className="space-y-8">
-          <TrendingList items={trending} />
+          <ResearchList items={researchSidebar} />
           <Link href="/ai" className="block rounded-2xl border border-line bg-accent-2 p-5">
             <p className="text-meta uppercase tracking-[0.14em] text-accent">AI</p>
             <p className="mt-2 text-[15px] font-bold text-ink">Summarise today’s wire</p>
