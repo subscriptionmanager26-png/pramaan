@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   },
   description:
     "Hand-built company research memos tagged by company and industry. Ask AI. No demo content.",
+  icons: {
+    icon: "/pocketedge-logo.png",
+    apple: "/pocketedge-logo.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

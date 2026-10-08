@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PocketEdgeLogo } from "@/components/PocketEdgeLogo";
-import { Page } from "@/components/shell/Page";
+import { Page, PageHeader } from "@/components/shell/Page";
 import { guides } from "@/lib/guides";
 
 export const metadata: Metadata = {
@@ -13,15 +12,12 @@ export default function ToolsPage() {
 
   return (
     <Page>
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <PocketEdgeLogo />
-          <h1 className="text-section mt-6 text-ink">Tools</h1>
-          <p className="mt-3 max-w-xl text-[15px] leading-6 text-ink-2">
-            Live data and screeners — ETF iNAV, gold, mutual funds, markets, and more. Each card
-            opens on pocketedge.in.
-          </p>
-        </div>
+      <PageHeader
+        title="Tools"
+        description="Live data and screeners — ETF iNAV, gold, mutual funds, markets, and more. Each card opens on pocketedge.in."
+      />
+
+      <div className="mt-4">
         <Link href="/guides" className="text-[13px] font-semibold text-accent hover:underline">
           Looking for guides? →
         </Link>
