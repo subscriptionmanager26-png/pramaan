@@ -160,6 +160,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Stylised e3W on city lane |
 | Metaphor left | Pie wedge growing toward two-thirds |
 
+### `irdai-distribution-commission-reform`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Distributor pay scales shrink toward affordability |
+| Subject right | Regulator / policy architecture silhouette |
+| Metaphor left | Shrinking commission ladder toward policy stack |
+
+### `india-life-insurance-premium-h1-growth`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Households still buying protection at scale |
+| Subject right | Policy stack / protection motif |
+| Metaphor left | Rising premium collection bars |
+
+### `airlines-omc-atf-vat-refund-fight`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Fuel cost disputes spill into surcharges |
+| Subject right | Jet silhouette / fuel gauge |
+| Metaphor left | Blocked refund pipe between airline and refinery |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

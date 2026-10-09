@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "irdai-distribution-commission-reform",
+    title: "IRDAI wants to cap what insurers pay agents and brokers",
+    summary:
+      "The regulator is consulting on tighter commission and expense limits across life, health, and general insurance, with rules possibly starting in January or April 2027. The aim is to cut distribution costs that have outrun premium growth since liberalisation in 2023.",
+    category: "industry",
+    companyOrSector: "Insurance / regulation",
+    publishedAt: "2026-10-09T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("irdai-distribution-commission-reform"),
+    keyTakeaways: [
+      "Proposed commission caps could take effect from 1 January or 1 April 2027.",
+      "IRDAI also plans phased cuts to insurers’ expenses-of-management limits.",
+      "Stakeholder comments on the consultation paper are due by 25 October 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, reporting highlighted a draft Insurance Regulatory and Development Authority of India framework to reshape how distributors get paid. The regulator is weighing new caps on commissions and incentives for life, health, and general products, plus tighter limits on insurers’ own management expenses. Officials may implement the package from 1 January 2027 or 1 April 2027, after consultation closes on 25 October 2026. The push follows data showing distribution costs rising faster than premiums since rules were loosened in 2023, without a matching jump in coverage.",
+      "What does this mean?",
+      "When an agent, broker, bank, or online marketplace sells a policy, part of your premium leaves the insurer as distribution pay. If that slice keeps growing, policies stay expensive even when claim experience is stable. IRDAI wants pay linked more closely to product complexity and servicing, with extra room for sellers in towns under one million people. Digital platforms and broker networks that earn most of their margin from commissions would need new economics. Insurers would face phased expense caps, with an interim milestone in the year ending March 2029.",
+      "Why should I care?",
+      "If you buy or renew insurance, watch whether quoted premiums fall once rules bite, not just headline commission cuts. If you sell policies for a living, read the consultation paper and model how lower rates interact with rural add-ons. If you hold insurance or fintech stocks, treat one-day share moves as early sentiment. The final notification date and allowed pay levels will matter more than draft headlines.",
+    ],
+  },
+  {
+    slug: "india-life-insurance-premium-h1-growth",
+    title: "Indians bought 20% more new life insurance in the first half of this fiscal year",
+    summary:
+      "IRDAI data released on 9 October 2026 show first-year premium at ₹2.46 lakh crore in April–September FY26, up 20.6% year on year. September collections alone rose 21.3% to ₹48,781 crore.",
+    category: "industry",
+    companyOrSector: "Insurance / households",
+    publishedAt: "2026-10-09T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-life-insurance-premium-h1-growth"),
+    keyTakeaways: [
+      "H1 FY26 first-year premium: ₹2.46 lakh crore versus ₹2.04 lakh crore a year earlier.",
+      "September 2026 new business premium: ₹48,781 crore, up 21.3% year on year.",
+      "LIC’s first-year premium rose 19.3% to about ₹1.44 lakh crore in the six months.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, the Insurance Regulatory and Development Authority of India published industry statistics for the six months to September 2026. First-year premium across life insurers reached ₹2.46 lakh crore, up 20.6% from ₹2.04 lakh crore in the same period of FY25. Growth came from both regular premium plans and group single-premium business. In September alone, new premium collections hit ₹48,781 crore, a 21.3% increase from ₹40,207 crore in September 2025. Life Insurance Corporation of India still leads the market, with its first-year premium up 19.3% to roughly ₹1.44 lakh crore.",
+      "What does this mean?",
+      "Life insurance is a long-cycle product: you are measuring fresh sales, not renewals alone. A fifth straight year of strong first-year growth suggests households are still committing to protection and savings wrappers, even as regulators debate lower distribution pay. The LIC share shows the state giant is participating in the expansion, not losing all the momentum to private rivals. This print sits in the same week as highway toll gains, festive travel, and electric three-wheeler sales, another signal that large ticket household decisions are still moving.",
+      "Why should I care?",
+      "If you are shopping for term or endowment cover, compare benefits and charges, not just the premium quote. Rising industry sales do not guarantee the best deal for you. If you track financials, pair this industry data with individual insurer results for value of new business and persistency. Watch whether proposed commission caps slow new business growth from late 2027 onward.",
+    ],
+  },
+  {
+    slug: "airlines-omc-atf-vat-refund-fight",
+    title: "Airlines say oil firms are holding back jet fuel tax refunds",
+    summary:
+      "Carriers told BusinessLine on 9 October 2026 that oil marketing companies are withholding value-added tax relief linked to June’s discounted aviation fuel sales. Airlines want the Centre to release the funds as surcharges on new tickets rise again.",
+    category: "industry",
+    companyOrSector: "Aviation / fuel",
+    publishedAt: "2026-10-09T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airlines-omc-atf-vat-refund-fight"),
+    keyTakeaways: [
+      "Airlines allege OMCs are keeping VAT-related refunds to recover June ATF under-recoveries.",
+      "Delhi and Maharashtra had cut jet fuel VAT to 7% for six months from June 2026.",
+      "IndiGo, Air India, and Akasa raised fuel surcharges on new bookings in early October.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, airline sources told BusinessLine they want funds released from value-added tax relief on aviation turbine fuel. They say oil marketing companies are withholding those amounts to recover losses from selling jet fuel at reduced prices in June 2026, when domestic under-recoveries were running near ₹30 per litre. Carriers argue they were not told at the time that refunds would later be clawed back. Delhi and Maharashtra had cut jet fuel VAT to 7% for six months from June, and the Union Cabinet had cleared up to ₹10,000 crore of support for a price stabilisation fund, though reporting later said the fund lapsed when no airline signed the required agreements.",
+      "What does this mean?",
+      "Ticket prices are built from fuel, airport charges, crew, and financing. When fuel dips briefly and taxes ease, airlines can hold fares steady. If refunds never arrive, the bill shows up later as higher surcharges or trimmed routes. That is what passengers are seeing now: IndiGo, Air India, Air India Express, and Akasa lifted fuel charges on new bookings in the first week of October as global jet fuel prices climbed again. Airlines say passing June’s shortfall to today’s travellers would be unfair, but weak balance sheets may leave little choice without a government-brokered settlement.",
+      "Why should I care?",
+      "If you are booking festive travel, compare total fare including fuel surcharge, not just the base ticket. A dispute between carriers and oil firms does not guarantee refunds to you, but it explains why surcharges moved in October. Watch whether Civil Aviation Ministry talks restart the stabilisation fund with new terms, and whether OMCs confirm how VAT adjustments will be settled. Route cuts would show up as fewer seats on thinner city pairs before they show up in stock prices.",
+    ],
+  },
+  {
     slug: "nppa-cancer-drug-trade-margin-cap",
     title: "India will cap mark-ups on many cancer medicines at 30%",
     summary:
@@ -542,6 +614,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "irdai-distribution-commission-reform": "policy",
+  "india-life-insurance-premium-h1-growth": "markets",
+  "airlines-omc-atf-vat-refund-fight": "policy",
   "nppa-cancer-drug-trade-margin-cap": "policy",
   "jio-platforms-ipo-price-band": "markets",
   "irb-festive-highway-toll-travel": "companies",
