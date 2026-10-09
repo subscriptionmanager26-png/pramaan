@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fssai-glp-protein-supplement-notices",
+    title: "India’s food regulator just called out protein drinks sold on Amazon and Flipkart",
+    summary:
+      "On 8 October 2026, FSSAI issued notices to Dr Reddy’s, Nestle Health Science, Tirupati Wellness, Amazon, Flipkart, and Netmeds over Celevida GLP marketing. The regulator said pack claims about muscle, immunity, and GLP-1 therapies could mislead shoppers.",
+    category: "industry",
+    companyOrSector: "Food safety / e-commerce",
+    publishedAt: "2026-10-09T02:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-glp-protein-supplement-notices"),
+    keyTakeaways: [
+      "Notices on 8 October 2026 covered Celevida GLP sold on major e-commerce and pharmacy platforms.",
+      "FSSAI flagged claims tying the product to GLP-1/GIP therapies and lean muscle preservation.",
+      "Named parties include Dr Reddy’s, Nestle Health Science, Amazon, Flipkart, and Netmeds.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, the Food Safety and Standards Authority of India said it sent notices to Dr Reddy’s, Nestle Health Science, Tirupati Wellness, Amazon, Flipkart, and Netmeds. The case centres on Celevida GLP, a health supplement sold online. FSSAI posted on social media that advertising described the drink as high-protein support during GLP-1 and GIP therapies. Pack claims mentioned muscle strength, immunity support, and energy metabolism. The regulator said those claims could mislead buyers about what the product actually does.",
+      "What does this mean?",
+      "GLP-1 weight-loss drugs have moved from clinics into dinner-table conversation. Supplement makers often market protein powders and drinks beside that trend. FSSAI is drawing a line between food products and drug-linked promises. When a listing sits on Amazon or Flipkart, the platform and the brand both face questions about who checked the label. This is enforcement, not a new tax or ban. Shelves may stay stocked while companies respond to the notices.",
+      "Why should I care?",
+      "If you buy protein drinks or wellness powders online, read the label and the fine print on the listing. A product that mentions GLP-1 therapies is making a serious health claim. If you sell food or supplements, expect more scrutiny on marketplace copy, not just factory standards. Watch whether FSSAI widens the sweep beyond this SKU and whether platforms tighten listing rules after the notices.",
+    ],
+  },
+  {
+    slug: "smirnoff-ice-rtd-india-launch",
+    title: "United Spirits is betting India’s next drinkers want canned cocktails",
+    summary:
+      "United Spirits launched Smirnoff Ice and Smirnoff Ice Max in Goa, Bengaluru, and Mumbai on 8 October 2026. The move targets ready-to-drink cocktails as vodka sales already neared ₹250 crore in the June quarter.",
+    category: "industry",
+    companyOrSector: "Alcohol / consumer",
+    publishedAt: "2026-10-09T02:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("smirnoff-ice-rtd-india-launch"),
+    keyTakeaways: [
+      "Two RTD variants: 4% ABV Smirnoff Ice and 8% ABV Smirnoff Ice Max in jamun, cranberry, and citrus flavours.",
+      "Rollout started in Goa, Bengaluru, and Mumbai ahead of the festive season.",
+      "Smirnoff net sales value neared ₹250 crore in Q1 FY27 after about ₹350 crore in all of FY26.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, United Spirits introduced Smirnoff Ice in India’s ready-to-drink segment. The Diageo-backed company is selling Smirnoff Ice at 4% alcohol by volume and Smirnoff Ice Max at 8%, in flavours such as jamun, cranberry, and citrus. Sales began in Goa, Bengaluru, and Mumbai, with more cities planned before the festive season. Management said Smirnoff’s net sales value was already close to ₹250 crore in the first quarter of FY27, after roughly ₹350 crore across FY26.",
+      "What does this mean?",
+      "Ready-to-drink cocktails are still tiny next to beer, but they are growing faster than the global average. Indian drinkers have leaned toward stronger, flavour-led cans rather than the light seltzers that sold in the US. United Spirits is trying to catch people on new occasions, not only when they pour vodka at home. Karnataka’s recent beer tax experiment showed how rule changes can shift what people buy. This launch is a bet that younger legal-age buyers will mix formats when the product is easy to grab chilled.",
+      "Why should I care?",
+      "If you follow consumer names, RTD is a margin and shelf-space fight between beer, whisky, and canned cocktails. United Spirits did not publish a sales target for Smirnoff Ice yet. If you are a shopper, prices and availability will vary by state excise rules. Watch whether rivals such as Bacardi or local brewers push their own canned lines after the festive rollout, and whether jamun-style flavours keep winning in north India as they did for flavoured vodka.",
+    ],
+  },
+  {
+    slug: "india-bess-storage-viability-wall",
+    title: "Aggressive battery-storage bids are starting to unravel in India",
+    summary:
+      "Mint reported on 8 October 2026 that cancelled or re-tendered battery storage projects have reached about 24 GWh since 2018, while many new awards were bid below viable tariffs. Experts warn up to a third of awarded capacity may struggle to reach financial close.",
+    category: "industry",
+    companyOrSector: "Power / renewables",
+    publishedAt: "2026-10-09T01:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-bess-storage-viability-wall"),
+    keyTakeaways: [
+      "About 24 GWh of BESS capacity was cancelled or re-tendered between 2018 and 2026, per IESA data cited in reporting.",
+      "That figure is over 11% of the 208 GWh storage target for this decade.",
+      "Developers quoted sub-₹2 per unit tariffs while viable levels are closer to ₹2.4, according to industry sources in the story.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, reporting highlighted strain in India’s battery energy storage pipeline. Battery systems hold solar and wind power for use later. The government wants them bundled into future renewable tenders. Yet the India Energy Storage Alliance counted about 24 gigawatt-hours of projects cancelled or sent back for rebidding since 2018. That is more than one-tenth of the central target of 208 GWh by 2030. NTPC terminated a Maharashtra storage contract in September after the contractor missed milestones. Other states have annulled or challenged large tenders when tariffs or technical rules shifted after bids closed.",
+      "What does this mean?",
+      "Many developers bid very low tariffs, sometimes under ₹2 per kilowatt-hour, hoping battery prices would keep falling. Cell costs jumped after policy shifts in China during 2026. Viability gap funding awards also face stress when bidders underprice the work. Discoms and regulators want cheap storage, but banks need projects that can service debt. When contracts break, timelines slip and renewable firms must find other ways to balance the grid.",
+      "Why should I care?",
+      "Households feel this through power reliability and industrial tariffs, not through a stock tip. If storage slips, solar and wind farms may waste more midday power or depend on costly backups. If you work in energy or infrastructure debt, watch financial closure rates on rebid tenders. Retendered projects are quoting closer to ₹2.35 per unit in some cases, which is a sign the market is repricing risk after the cancellation wave.",
+    ],
+  },
+  {
     slug: "us-perm-it-green-card-pause",
     title: "Washington just froze the green card queue for India’s largest IT firms",
     summary:
@@ -302,6 +374,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fssai-glp-protein-supplement-notices": "policy",
+  "smirnoff-ice-rtd-india-launch": "companies",
+  "india-bess-storage-viability-wall": "policy",
   "us-perm-it-green-card-pause": "policy",
   "ola-electric-rights-issue-choice": "companies",
   "tcs-corporate-tech-demand": "companies",
