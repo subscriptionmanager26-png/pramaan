@@ -104,6 +104,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Stylised state / policy architecture |
 | Metaphor left | Multiplying bottle forms + balance scale |
 
+### `india-gold-import-bank-tax-parity`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Same GST on bullion whichever import route |
+| Subject right | Gold ingot stack |
+| Metaphor left | Two lanes converging to one toll gate |
+
+### `gst-wider-input-tax-credits`
+
+| Field | Value |
+|-------|--------|
+| Core idea | More expenses qualify for GST credit |
+| Subject right | Warehouse / factory silhouette |
+| Metaphor left | Invoice arrows returning as credit tokens |
+
+### `hindalco-odisha-mine-private-network`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Dedicated connectivity for mine safety and ops |
+| Subject right | Stylised open-pit mine |
+| Metaphor left | Protected data ring + fleet links |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

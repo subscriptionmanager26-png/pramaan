@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-gold-import-bank-tax-parity",
+    title: "Banks importing gold now pay the same GST as everyone else",
+    summary:
+      "Revenue Secretary Arvind Shrivastava told the GST Council on 8 October 2026 that India did not renew a tax break for banks on bullion imports. Lenders have been paying 3% integrated GST on gold, silver, and platinum brought in through bank channels since April.",
+    category: "industry",
+    companyOrSector: "Bullion / GST",
+    publishedAt: "2026-10-09T08:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-gold-import-bank-tax-parity"),
+    keyTakeaways: [
+      "The earlier bank-specific benefit on precious metal imports was not extended, per the revenue secretary.",
+      "Banks have faced 3% IGST on gold, silver, and platinum imports since April 2026.",
+      "Officials cited tax parity across different import routes for bullion.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, Revenue Secretary Arvind Shrivastava briefed the Goods and Services Tax Council on precious metal imports. He said the government did not extend a tax benefit that had applied to banks bringing gold, silver, and platinum into India. Local media reported that lenders have been paying a 3% integrated goods and services tax on those imports since April. The change was framed as aligning how bullion enters the country whether the buyer is a bank, a trader, or another importer.",
+      "What does this mean?",
+      "India imports most of its gold. Banks play a big role in channelling metal to jewellers and refiners. When one route enjoyed lighter tax treatment, arbitrage followed. Charging the same integrated GST on bank imports closes that gap. It is a compliance and revenue story more than a retail price shock. Jewellery shops still set prices off global rates, duties, and local margins. The shift mainly changes the economics for banks and large bullion desks that had relied on the old break.",
+      "Why should I care?",
+      "If you buy gold jewellery, watch global prices and making charges first. This rule change is about how metal lands in India, not a new festival discount. If you work in bullion banking or imports, re-check landed cost models from April onward. Watch whether other import channels report similar parity steps and whether the Council discusses bullion again at its next rate-focused meeting.",
+    ],
+  },
+  {
+    slug: "gst-wider-input-tax-credits",
+    title: "The GST Council wants more business costs to count for tax credits",
+    summary:
+      "After its 8 October 2026 meeting, the Council recommended letting firms claim input tax credit on more expenses, including staff health and life insurance, telecom towers outside factory gates, and certain free samples. Colgate-Palmolive India shares rose sharply on Friday as investors priced in easier working capital for consumer goods makers.",
+    category: "industry",
+    companyOrSector: "GST / FMCG",
+    publishedAt: "2026-10-09T07:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gst-wider-input-tax-credits"),
+    keyTakeaways: [
+      "Recommended ITC expansion covers employee health and life insurance premiums.",
+      "Telecom towers and pipelines outside factory premises could qualify for credit.",
+      "Free samples and some law-mandated write-offs may also become credit-eligible.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, the Goods and Services Tax Council met and backed a wider set of input tax credits for businesses. The package would let companies offset GST paid on more day-to-day costs. Draft recommendations include employee health and life insurance, telecom towers and pipelines that sit outside factory premises, free samples, and goods written off after expiry when law requires destruction. Officials pitched the move as cutting tax cascading and freeing working capital. Colgate-Palmolive India shares jumped as much as 8% on 9 October as the market linked the reforms to personal care and household brands with heavy marketing spend.",
+      "What does this mean?",
+      "Input tax credit is the mechanism that stops tax from piling up at every stage of production. When credits are blocked on insurance, towers, or samples, cash gets trapped until refunds clear. Opening those categories helps FMCG and infrastructure-heavy firms more than a pure software exporter. The Council’s penalty easing, announced the same day, addressed fear of enforcement. This piece addresses which invoices you can net off. Rates themselves were left unchanged.",
+      "Why should I care?",
+      "If you run a small business, ask your accountant which expenses may soon qualify once rules are notified. If you invest in consumer names, one-day stock moves are not the whole story. Watch the fine print on implementation dates and whether states ratify quickly. If credits flow as promised, margins and cash conversion can improve without a headline tax cut.",
+    ],
+  },
+  {
+    slug: "hindalco-odisha-mine-private-network",
+    title: "Hindalco is building its own mobile network inside an Odisha mine",
+    summary:
+      "Vi Business and Hindalco Industries said on 8 October 2026 they will deploy a private network at the Baphlimali bauxite mine in Odisha. The multi-year deal covers dedicated spectrum, core, radio access, and managed services for safety, fleet, and surveillance tools.",
+    category: "industry",
+    companyOrSector: "Mining / telecom",
+    publishedAt: "2026-10-09T07:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hindalco-odisha-mine-private-network"),
+    keyTakeaways: [
+      "Partnership between Vi Business and Hindalco at the Baphlimali bauxite mine.",
+      "Private network includes spectrum, core, RAN, and managed services.",
+      "Use cases include worker safety, fleet management, surveillance, and a central command centre.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 8 October 2026, Vi Business and Hindalco Industries announced a private mobile network at Hindalco’s Baphlimali bauxite mine in Odisha. The contract runs for multiple years. Vi will supply dedicated spectrum, a mobile core, radio access gear, and managed services. Hindalco called it the company’s first standalone private network at a mine site. The setup will feed an integrated command and control centre that watches trucks, workers, and equipment in real time.",
+      "What does this mean?",
+      "Open-pit mines are noisy, dusty, and spread out. Public 4G often struggles at depth or behind haul roads. A private network gives the operator control over coverage and priority for safety alerts. Fleet routing, CCTV, and environmental monitoring need stable bandwidth. Aluminium makers face pressure on costs and ESG reporting. Digitising a captive mine is a way to cut downtime and document compliance without waiting for nationwide tower upgrades.",
+      "Why should I care?",
+      "If you follow metals or mining, this is capex aimed at yield and safety, not a consumer tariff change. If you work in enterprise telecom, private 5G at factories and mines is a growing revenue line as carriers hunt beyond smartphone plans. Watch whether other ore and coal sites copy the model and whether Vi signs similar deals with rivals such as Airtel or Jio in other commodities.",
+    ],
+  },
+  {
     slug: "fssai-glp-protein-supplement-notices",
     title: "India’s food regulator just called out protein drinks sold on Amazon and Flipkart",
     summary:
@@ -374,6 +446,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-gold-import-bank-tax-parity": "policy",
+  "gst-wider-input-tax-credits": "policy",
+  "hindalco-odisha-mine-private-network": "companies",
   "fssai-glp-protein-supplement-notices": "policy",
   "smirnoff-ice-rtd-india-launch": "companies",
   "india-bess-storage-viability-wall": "policy",
