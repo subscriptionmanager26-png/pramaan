@@ -128,6 +128,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Stylised open-pit mine |
 | Metaphor left | Protected data ring + fleet links |
 
+### `nppa-cancer-drug-trade-margin-cap`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Trade margin cap lowers shelf price on oncology drugs |
+| Subject right | Hospital pharmacy counter (generic) |
+| Metaphor left | Shrinking margin ladder on medicine pack |
+
+### `jio-platforms-ipo-price-band`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Mega listing sets a public price band |
+| Subject right | Telecom tower / digital network motif |
+| Metaphor left | Stepped price ticks on offering band |
+
+### `irb-festive-highway-toll-travel`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive trips lift toll cash registers |
+| Subject right | Highway toll plaza silhouette |
+| Metaphor left | Rising traffic flow chevrons |
+
+### `india-e3w-sales-september-surge`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Electric three-wheelers dominate category share |
+| Subject right | Stylised e3W on city lane |
+| Metaphor left | Pie wedge growing toward two-thirds |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

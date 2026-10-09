@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "nppa-cancer-drug-trade-margin-cap",
+    title: "India will cap mark-ups on many cancer medicines at 30%",
+    summary:
+      "On 9 October 2026 the government said trade margins on non-scheduled anti-cancer drugs would be limited to 30%. Regulators estimate some retail prices could fall 20% to 70% once the list is notified, saving patients about ₹2,500 crore a year.",
+    category: "industry",
+    companyOrSector: "Healthcare / pricing",
+    publishedAt: "2026-10-09T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nppa-cancer-drug-trade-margin-cap"),
+    keyTakeaways: [
+      "NPPA will cap trade margins on non-scheduled oncology drugs at 30%.",
+      "Officials cite average mark-ups near 170%, with extreme cases above 700%.",
+      "An expert panel will finalise which medicines are covered before notification.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, the National Pharmaceutical Pricing Authority said India will limit trade margins on non-scheduled anti-cancer medicines to 30%. The move extends earlier margin rules that applied only to a smaller set of oncology drugs. Regulators said mark-ups on these products averaged around 170%, with some distribution chains adding far more. Officials estimate retail prices could drop roughly 20% to 70% depending on the drug and channel, and that patients could save about ₹2,500 crore annually once the policy is in force. Hospital shares rose on the news, but brokerages warned that pharmacy income inside hospitals could face pressure.",
+      "What does this mean?",
+      "Cancer treatment often mixes hospital stays with high-cost medicines bought at the desk or through retail pharmacies. When the gap between the price to the retailer and the sticker price on the pack is wide, patients pay the spread. A margin cap attacks that layer, not the factory price itself. Hospitals had already sold off after courts questioned medicine pricing inside campuses. Friday’s rule is a clearer government line on affordability, though the final medicine list and notification date are still pending.",
+      "Why should I care?",
+      "If you are on long-term oncology medicines, ask your doctor and pharmacist whether your brand sits on the upcoming list and how billing might change. If you hold hospital stocks, treat the one-day rally as sentiment, not final maths. Watch the expert committee list, the formal NPPA notification, and whether states push for similar caps on other high-cost therapies.",
+    ],
+  },
+  {
+    slug: "jio-platforms-ipo-price-band",
+    title: "Jio Platforms is said to price its IPO between ₹1,065 and ₹1,119 a share",
+    summary:
+      "Bloomberg reported on 9 October 2026 that Reliance’s digital arm could set a price band of ₹1,065 to ₹1,119 for its listing. At the top end the offer could raise about ₹30,200 crore and value the business near ₹12 lakh crore.",
+    category: "industry",
+    companyOrSector: "Telecom / IPO",
+    publishedAt: "2026-10-09T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jio-platforms-ipo-price-band"),
+    keyTakeaways: [
+      "Reported IPO band: ₹1,065 to ₹1,119 per share.",
+      "Upper end could raise roughly ₹30,200 crore for Jio Platforms.",
+      "Targeted valuation near ₹12 lakh crore at the top of the range.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, Bloomberg cited people familiar with the matter saying Jio Platforms will set its initial public offering price band between ₹1,065 and ₹1,119 per share. At the upper end, the issue could raise about ₹30,200 crore and value the Reliance-controlled digital business near ₹12 lakh crore. The band is not yet final until bankers and regulators sign off, but it sets expectations for one of India’s largest listings in years.",
+      "What does this mean?",
+      "A tight band tells institutional investors where the promoter is willing to sell and how much dilution is on offer. Jio bundles telecom, fibre, and digital services that millions of households already pay for each month. A high valuation leans on continued subscriber revenue and data use, not a single quarter of profit. For the wider market, a mega IPO can pull liquidity away from mid-cap names during the book-building window.",
+      "Why should I care?",
+      "If you plan to apply, wait for the official prospectus, not wire reports alone. Compare the band with listed peers on revenue per user and debt at the parent level. If you are a passive index investor, watch whether index providers include the stock quickly after listing and how much fresh paper hits the market in the same month as other large offers.",
+    ],
+  },
+  {
+    slug: "irb-festive-highway-toll-travel",
+    title: "Festive travel pushed IRB’s highway toll collections up 24% in September",
+    summary:
+      "IRB Group said gross toll revenue reached ₹773 crore in September 2026, up from ₹622 crore a year earlier. The Mumbai-Pune expressway and Ahmedabad-Vadodara routes led the gain as Navaratri traffic picked up.",
+    category: "industry",
+    companyOrSector: "Infrastructure / travel",
+    publishedAt: "2026-10-09T16:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("irb-festive-highway-toll-travel"),
+    keyTakeaways: [
+      "September 2026 gross toll revenue: ₹773 crore, up 24% year on year.",
+      "Mumbai-Pune expressway collections rose to ₹162.1 crore.",
+      "Management expects Navaratri and Diwali traffic to support the next two months.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, IRB Infrastructure reported that gross toll revenue across its highway portfolio reached ₹773 crore in September 2026, up 24% from ₹622 crore in September 2025. Wholly owned subsidiaries grew 17% on a like-for-like basis. The Mumbai-Pune expressway collected ₹162.1 crore versus ₹139.6 crore a year ago. Ahmedabad-Vadodara and Hyderabad outer ring assets also posted higher monthly receipts. Management linked the lift to economic activity and the start of the festive travel season.",
+      "What does this mean?",
+      "Toll receipts are a blunt read on wheeled trips: goods trucks, inter-city cars, and holiday buses. A September jump ahead of Navaratri and Diwali fits the pattern seen in other discretionary data this week, where people still spend when the occasion is clear. Not every road in the portfolio grew; a few mature assets were flat or slightly down, which is normal when comparing overlapping construction phases.",
+      "Why should I care?",
+      "If you track consumer demand, highway cash registers are a ground-level check beyond mall footfall surveys. If you invest in road operators or InvITs, one strong month does not reset traffic risk from fuel prices or monsoon disruptions. Watch October and November collections for confirmation that festive traffic sustained, and whether newer assets added in 2026 keep ramping without cannibalising older routes.",
+    ],
+  },
+  {
+    slug: "india-e3w-sales-september-surge",
+    title: "Electric three-wheelers took nearly two-thirds of India’s 3W market in September",
+    summary:
+      "FADA data for September 2026 show electric three-wheeler retail sales at 86,024 units, up 40% year on year. Their share of total three-wheeler sales rose to 64.9% from 56.7% a year earlier.",
+    category: "industry",
+    companyOrSector: "Auto / EV",
+    publishedAt: "2026-10-09T15:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-e3w-sales-september-surge"),
+    keyTakeaways: [
+      "September 2026 e3W sales: 86,024 units, up 40% year on year.",
+      "Market share within three-wheelers: 64.9% versus 56.7% in September 2025.",
+      "FADA published the retail tally on 9 October 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, the Federation of Automobile Dealers Associations released September 2026 retail data for three-wheelers. Electric models reached 86,024 units, up 40% from 61,434 units in September 2025. Their share of all three-wheeler sales climbed to 64.9% from 56.7% a year earlier, an 8.2 percentage point shift in one year. The numbers cover dealer dispatches to buyers, not factory wholesale alone.",
+      "What does this mean?",
+      "Last-mile passenger and cargo trips in Indian cities still lean heavily on three-wheelers. When the electric slice crosses nearly two-thirds of the category, it is no longer a pilot niche. Lower running costs, local subsidies, and financing for fleet buyers all pull in the same direction. Petrol three-wheelers are not gone, but each percentage point of share is a permanent change in what dealers stock and what drivers service.",
+      "Why should I care?",
+      "If you buy or operate a fleet, compare total cost of ownership, battery warranty, and charging access on your routes before switching. If you follow auto stocks, pair this print with two-wheeler and commercial vehicle data to see whether urban mobility demand is broad or isolated. Watch whether state incentive schemes change after the festive quarter and whether finance companies tighten loans on older petrol inventory.",
+    ],
+  },
+  {
     slug: "india-gold-import-bank-tax-parity",
     title: "Banks importing gold now pay the same GST as everyone else",
     summary:
@@ -446,6 +542,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "nppa-cancer-drug-trade-margin-cap": "policy",
+  "jio-platforms-ipo-price-band": "markets",
+  "irb-festive-highway-toll-travel": "companies",
+  "india-e3w-sales-september-surge": "companies",
   "india-gold-import-bank-tax-parity": "policy",
   "gst-wider-input-tax-credits": "policy",
   "hindalco-odisha-mine-private-network": "companies",
