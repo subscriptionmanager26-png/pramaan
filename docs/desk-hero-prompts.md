@@ -200,6 +200,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Abstract office / data flow motif |
 | Metaphor left | Pay ladder with upper steps greyed out |
 
+### `psu-banks-repo-linked-loan-reprice`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Repo hike passes into benchmark loan rates |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Stepped EMI bars on loan forms |
+
+### `india-retail-q2-festive-shift`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Calendar shift delays apparel; value and footwear hold |
+| Subject right | Generic high-street storefront |
+| Metaphor left | Split festival calendar + diverging foot traffic |
+
+### `rbi-forex-derivative-hedge-rules`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Tighter hedge docs and cash reserve on large FX notionals |
+| Subject right | Policy / central bank architecture |
+| Metaphor left | Narrowing gate + reserve vault blocks |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

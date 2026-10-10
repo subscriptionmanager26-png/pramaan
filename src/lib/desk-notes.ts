@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-forex-derivative-hedge-rules",
+    title: "RBI tightened the rules on rupee hedges and cancelled forex contracts",
+    summary:
+      "On 10 October 2026 the Reserve Bank of India barred rebooking of cancelled rupee forex derivative contracts, cut the no-documentation hedge threshold to $5 million, and required a 20% cash reserve with the RBI on large notionals above $2 million.",
+    category: "industry",
+    companyOrSector: "RBI / forex",
+    publishedAt: "2026-10-10T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-forex-derivative-hedge-rules"),
+    keyTakeaways: [
+      "Cancelled rupee forex derivative contracts cannot be rebooked with any authorised dealer.",
+      "Hedge-without-underlying threshold cut from $100 million to $5 million equivalent.",
+      "Dealers must park 20% of rupee notional with RBI on contracts above $2 million.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, the Reserve Bank of India issued two foreign-exchange circulars aimed at the rupee derivatives market. Authorised dealers may no longer let users rebook a cancelled rupee contract, whether deliverable or not, with any bank in India. Rollovers at maturity stay allowed under existing rules. The RBI also slashed the size at which firms can hedge contracted exposures without proving the underlying: from $100 million equivalent to $5 million across all dealers, and the same cap now applies to exchange-traded currency derivatives on recognised bourses.",
+      "What does this mean?",
+      "Large exporters and importers often run layered hedges across banks. The new undertaking rule forces them to confirm the same exposure is not hedged twice. That closes a loophole regulators worry can mask speculative positions. The $5 million gate means mid-sized corporates must show paperwork sooner, not only the biggest houses. For notionals above $2 million on certain rupee purchases against the dollar, dealers must set aside a Foreign Exchange Risk Reserve: 20% of the rupee equivalent as cash at the RBI. That raises the cost of running big books and should discourage casual use of the hedge window.",
+      "Why should I care?",
+      "If you run treasury at an importer or IT services firm, refresh your hedge policy and dealer agreements this week. Duplicate hedges and cancelled-then-rebooked trades are now compliance risks, not shortcuts. Retail investors rarely trade these products directly, but tighter rules can nudge corporates toward simpler forwards and away from stacked derivatives, which sometimes feeds into reported hedging costs in earnings calls. Watch whether the rupee volatility that prompted the step eases once the reserve rule bites.",
+    ],
+  },
+  {
+    slug: "psu-banks-repo-linked-loan-reprice",
+    title: "Public sector banks raised repo-linked loan rates by a quarter point",
+    summary:
+      "Bank of Baroda, Punjab National Bank, Indian Bank, and several peers lifted external benchmark-linked lending rates by 25 basis points after the RBI’s repo hike to 5.5%, with revisions effective from 8 October on multiple products.",
+    category: "industry",
+    companyOrSector: "Banks / households",
+    publishedAt: "2026-10-10T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("psu-banks-repo-linked-loan-reprice"),
+    keyTakeaways: [
+      "BoB’s repo-linked rate moved to 8.15% from 7.90%; PNB and IOB to 8.35% from 8.10%.",
+      "New and existing external benchmark-linked loans reprice with the published bank rate.",
+      "Deposit rates may move more slowly despite the lending pass-through.",
+    ],
+    body: [
+      "What's going on here?",
+      "In the days after the Reserve Bank of India lifted the policy repo rate to 5.5% on 7 October 2026, several public sector and mid-sized lenders published matching increases on repo-linked lending rates. Bank of Baroda raised its Baroda Repo Based Lending Rate by 25 basis points to 8.15% from 7.90%. Punjab National Bank, Indian Overseas Bank, and Bank of India moved their repo-linked rates to 8.35% from 8.10%. Indian Bank’s repo-linked benchmark reached 8.20% from 7.95%, effective 8 October. UCO Bank adjusted a suite of treasury-linked benchmarks and its UCO Float repo-linked rate to 8.30% from 8.05%.",
+      "What does this mean?",
+      "Home loans, personal loans, and many business credits priced off the repo or treasury benchmarks do not wait for a separate board meeting. When the RBI moves, the external benchmark moves, and the bank’s published lending rate follows. A 25 basis point step on an ₹50 lakh floating home loan can add a few hundred rupees to a monthly EMI once the reset date hits. Existing borrowers typically see the change within one reset cycle, often within 90 days. Deposit rates can lag because banks still hold surplus liquidity from recent foreign-currency deposit windows, so funding costs may not jump on every savings product at once.",
+      "Why should I care?",
+      "If you borrowed after the external benchmark regime became common, open your loan statement and check which rate your bank published on or after 8 October. If you are shopping for a festive-season home loan, compare the effective annual rate across two or three lenders; the spread over repo still differs by bank. Fixed-rate borrowers are insulated until renewal. Anyone building a household budget for the next year should model EMIs one notch higher, even if the RBI pauses at the next meeting, because this pass-through is already in the price list.",
+    ],
+  },
+  {
+    slug: "india-retail-q2-festive-shift",
+    title: "Festive dates pushed apparel sales into October and left Q2 looking soft",
+    summary:
+      "Elara Capital’s preview sees aggregate discretionary retail revenue up 11.8% year on year in Q2 FY27, but apparel revenue may fall 3.8% as Navratri shifts entirely into the December quarter while value chains and footwear stay strong.",
+    category: "industry",
+    companyOrSector: "Retail / consumers",
+    publishedAt: "2026-10-10T09:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-retail-q2-festive-shift"),
+    keyTakeaways: [
+      "Sector revenue growth estimated at 11.8% with EBITDA up 12.7% despite apparel drag.",
+      "Apparel revenue may contract 3.8% as Navratri timing moves versus last year.",
+      "Vishal Mega Mart and footwear names lead; ethnic specialists face weaker same-store sales.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, brokerage Elara Capital published a preview of Indian consumer discretionary earnings for the quarter ended September 2026. It expects aggregate listed retail revenue to rise 11.8% year on year and sector EBITDA to grow 12.7%. The headline masks a calendar split: Navratri began in late September in FY26 but falls entirely in October this year, after the Shraddh period delayed purchases. Elara estimates apparel revenue may shrink 3.8% with EBITDA down 5%, while value formats and footwear accelerate.",
+      "What does this mean?",
+      "Apparel chains book festive demand when shoppers buy, not when malls decorate. When the festival moves a month, September prints look empty even if October tills are busy. Bridal and ethnic names such as Vedant Fashions and Go Fashion show weak same-store sales in the preview, while Vishal Mega Mart is still opening stores and posting mid-teens revenue growth. Footwear benefits from premiumisation: Metro Brands and Campus Activewear show double-digit profit gains in the estimates, with Bata India lifting earnings on tighter discounting. Cotton inflation still pinches innerwear margins even as volumes recover.",
+      "Why should I care?",
+      "If you follow retail stocks, treat September-quarter apparel misses as partly a diary effect, not only a demand collapse. Wait for October same-store updates before calling a trend. As a shopper, deals may cluster later in the season than last year, which can help if you delayed big ticket buys. For the wider economy, value retail and footwear holding up while ethnic apparel pauses is another sign that middle India is still spending, but choosing formats and categories carefully.",
+    ],
+  },
+  {
     slug: "rbi-daily-crr-liquidity-rule",
     title: "RBI told banks to keep almost all required cash on deposit every day",
     summary:
@@ -662,6 +734,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-forex-derivative-hedge-rules": "policy",
+  "psu-banks-repo-linked-loan-reprice": "policy",
+  "india-retail-q2-festive-shift": "markets",
   "rbi-daily-crr-liquidity-rule": "policy",
   "tcs-senior-staff-bonus-withheld": "companies",
   "irdai-distribution-commission-reform": "policy",
