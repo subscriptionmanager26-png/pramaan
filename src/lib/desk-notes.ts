@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "zomato-blinkit-delivery-ev-bazaar",
+    title: "Zomato and Blinkit brought 2,500 riders to test electric scooters in Delhi",
+    summary:
+      "On 9 October 2026 Eternal’s Zomato and Blinkit hosted the third EV Bazaar in New Delhi, where more than 2,500 delivery partners compared over 30 electric two-wheeler models and met lenders, chargers, and battery-swap operators. Eternal says over 200,000 riders already use EVs across the two apps.",
+    category: "industry",
+    companyOrSector: "Gig economy / EV",
+    publishedAt: "2026-10-10T19:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("zomato-blinkit-delivery-ev-bazaar"),
+    keyTakeaways: [
+      "EV Bazaar on 9 October drew 2,500 delivery partners and 20-plus EV makers and ecosystem partners.",
+      "Riders could test-ride 30-plus electric two-wheeler models and explore buy or rent options.",
+      "Eternal reported 200,000-plus delivery partners on EVs as of 30 September 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, Zomato and Blinkit, both owned by Eternal, ran the third edition of EV Bazaar at KD Jadhav Stadium in New Delhi. More than 2,500 delivery partners attended. More than 20 electric vehicle manufacturers and ecosystem partners set up stalls. Riders could test-ride more than 30 electric two-wheeler models and talk to firms offering loans, rentals, charging, and battery swapping. Ministry of Road Transport officials also joined the event.",
+      "What does this mean?",
+      "Delivery pay depends on how many trips a rider completes and how much time the scooter spends off the road. Renting or swapping batteries can beat buying upfront when cash is tight. Eternal says more than 200,000 delivery partners across Zomato and Blinkit were already using electric two-wheelers as of 30 September 2026. In FY26 the two platforms logged 228 million deliveries on EVs. The bazaar is a push to keep that fleet growing by lowering search costs: one venue to compare models, finance, and roadside support.",
+      "Why should I care?",
+      "If you order food or groceries, faster EV turnover can mean steadier ETAs in dense cities. If you invest in quick commerce or auto, watch whether rental uptake through the in-app ‘Rent a vehicle’ feature keeps climbing. Eternal said more than 23,000 partners used that rental path in FY26. Wider rider adoption also feeds charging and swap networks that other commuters can use later. This sits in the same week as strong staples retail prints, a reminder that platform work and everyday shopping both keep moving even as rates rise.",
+    ],
+  },
+  {
+    slug: "india-overseas-etf-nav-premium",
+    title: "Some overseas ETFs on Indian exchanges traded at triple their underlying value",
+    summary:
+      "Reporting on 10 October 2026 flagged steep premiums on six international ETFs listed in India, with an estimated ₹3,094 crore of 2026 turnover above net asset value. Motilal Oswal’s Nasdaq Q50 ETF briefly traded near ₹396 against an NAV near ₹118 in September after overseas investment limits constrained fresh unit creation.",
+    category: "industry",
+    companyOrSector: "Retail investing / ETFs",
+    publishedAt: "2026-10-10T18:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-overseas-etf-nav-premium"),
+    keyTakeaways: [
+      "Six India-listed international ETFs saw heavy trading at prices above NAV in 2026, per portfolio analysis cited on 10 October.",
+      "Motilal Oswal Nasdaq Q50 ETF’s market price peaked near ₹396 versus NAV near ₹118 in mid-September.",
+      "SEBI’s $7 billion overseas securities cap and $1 billion overseas ETF cap limit new unit creation when demand surges.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, market reporting highlighted a gap between what overseas ETFs cost on Indian exchanges and what their underlying global holdings were worth. Six international ETFs listed on the NSE and BSE together turned over about ₹10,440 crore in 2026 through early October. An estimated ₹3,094 crore of that volume involved trades above net asset value. In one extreme case, Motilal Oswal’s Nasdaq Q50 ETF jumped from about ₹142 on 4 September to ₹396 on 18 September while NAV stayed near ₹118. Other funds tracking US tech, the S&P 500, and Hang Seng tech indices also traded at double-digit average premiums across recent sessions.",
+      "What does this mean?",
+      "ETFs normally stay near NAV because authorised participants create or redeem units when prices drift. India caps how much mutual funds can invest abroad: $7 billion in overseas securities and $1 billion in overseas ETFs. When global tech rallies and domestic equity returns look dull, buyers pile into the few local wrappers available. If fresh units cannot be created, the on-exchange price can detach from the portfolio inside the fund. Revised exchange trading bands, linked more closely to the prior close from September 2026, can allow sharper day-to-day moves when arbitrage is already weak.",
+      "Why should I care?",
+      "If you buy overseas exposure through Indian ETFs, check NAV on the AMC website before you trade. Paying a large premium means you are betting on both the underlying stocks and a squeeze in local supply. Discounts can hurt on the way out too. Regulators may tweak limits or market-making rules, but until supply opens up, treat wide premiums as a separate risk from the Nasdaq or S&P move itself. This is a shopper-behavior story as much as a market story: households hunting foreign returns can overpay when the shelf is small.",
+    ],
+  },
+  {
+    slug: "sebi-bond-credit-risk-o-meter",
+    title: "SEBI will make bond sellers show a traffic-light credit risk meter",
+    summary:
+      "SEBI’s 7 October 2026 circular requires issuers and online bond platforms to display a colour-coded Credit Risk-o-Meter on listed and proposed non-convertible debt, commercial paper, and similar instruments, mapping agency ratings to six bands from lowest credit risk to high default risk. Rules take effect 45 days after the circular.",
+    category: "industry",
+    companyOrSector: "SEBI / fixed income",
+    publishedAt: "2026-10-10T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-bond-credit-risk-o-meter"),
+    keyTakeaways: [
+      "Credit Risk-o-Meter must appear on offer docs, ads, and OBPP websites and apps.",
+      "Six colour bands map CRISIL-style ratings from AAA/A1+ (green) down to B-/D (red).",
+      "Multiple ratings require showing the lowest band; unsecured paper must be labelled in bold red.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 7 October 2026, the Securities and Exchange Board of India issued a circular that copies the mutual fund Risk-o-Meter idea for individual debt securities. Issuers and online bond platform providers must show a pictorial Credit Risk-o-Meter on listed and proposed-to-be-listed non-convertible bonds, commercial paper, securitised debt, security receipts, and structured or market-linked debentures sold through public issues or private placements. The meter runs from green for the safest long and short ratings through yellow and orange to red for the highest default risk. When a rating agency marks an issuer as not cooperating, the meter must flag that status. The rules become mandatory 45 days after the circular date.",
+      "What does this mean?",
+      "Retail bond buying moved online over the past few years. Credit ratings such as AAA or BBB are familiar to institutions but opaque to many first-time buyers. Translating each rating bucket into a colour strip is a disclosure rule, not investment advice. SEBI stresses the meter captures credit risk only, not interest-rate moves or liquidity. For unsecured perpetual bank bonds, extra warnings apply because price can fall to zero even when the colour looks moderate. Where two agencies disagree, the worse rating sets the needle, though all ratings may be listed in text below the graphic.",
+      "Why should I care?",
+      "If you buy corporate bonds on a platform app, you will soon see the same visual language mutual fund investors already know. Use it to screen issuers, then still read maturity, coupon, call options, and your own tax situation. A green band does not mean you should size a bond like a fixed deposit. Policy-wise, this is part of a broader push the same week as talk of closing-auction tweaks and AI guardrails for brokers. For households diversifying beyond bank FDs, clearer credit labels reduce nasty surprises, but they do not remove default risk.",
+    ],
+  },
+  {
     slug: "premier-energies-solar-order-book",
     title: "Premier Energies booked over ₹4,000 crore of solar orders in one quarter",
     summary:
@@ -806,6 +878,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "zomato-blinkit-delivery-ev-bazaar": "companies",
+  "india-overseas-etf-nav-premium": "markets",
+  "sebi-bond-credit-risk-o-meter": "policy",
   "premier-energies-solar-order-book": "companies",
   "india-office-q3-gcc-leasing": "markets",
   "dmart-q2-profit-revenue-growth": "markets",
