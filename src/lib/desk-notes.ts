@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "premier-energies-solar-order-book",
+    title: "Premier Energies booked over ₹4,000 crore of solar orders in one quarter",
+    summary:
+      "On 10 October 2026 Premier Energies said it won new orders above ₹4,000 crore in July–September FY27, spanning 2,308 MW of cells and modules plus EPC work, after lifting module capacity to 11.1 GW and cell capacity to 10.6 GW.",
+    category: "industry",
+    companyOrSector: "Solar / manufacturing",
+    publishedAt: "2026-10-10T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("premier-energies-solar-order-book"),
+    keyTakeaways: [
+      "Order intake in Q2 FY27 crossed ₹4,000 crore across cells, modules, and EPC.",
+      "Supply contracts cover 2,308 MW from power producers, module makers, and EPC clients.",
+      "Cell capacity reached 10.6 GW after a 7 GW TOPCon line at Naidupeta, Andhra Pradesh.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, Premier Energies disclosed fresh business won during the July–September 2026 quarter. The order book added more than ₹4,000 crore from utilities, module manufacturers, engineering firms, and other buyers. Roughly 2,308 MW relates to solar cell and module supply, with the balance tied to engineering, procurement, and construction execution. The update follows a capacity push: module output capacity is now 11.1 GW, nearly double the prior level, while cell capacity rose from 3.6 GW to 10.6 GW after commissioning a 7 GW TOPCon cell line at Naidupeta in Andhra Pradesh last month.",
+      "What does this mean?",
+      "India’s solar build-out still needs domestic cells and modules at scale. When a manufacturer expands fabs and immediately fills the calendar with multi-gigawatt orders, buyers are betting the new lines will ship on time. Large EPC and utility customers typically lock supply before project financial close, so a chunky quarterly intake is less a stock headline and more a read on how much utility-scale solar is still moving through the pipeline. Capacity additions without orders would be idle risk; this print suggests demand is keeping pace with the new TOPCon investment.",
+      "Why should I care?",
+      "Households see solar mostly through rooftop bills and state tenders, but utility-scale supply chains set the pace for cheaper power additions. If you follow renewables or industrial policy, watch whether Premier and peers convert these orders into shipments without margin squeeze as polysilicon and module prices move. For the wider economy, steady solar equipment orders sit alongside other affirming prints from the same morning, including strong value-retail revenue, as proof that capex-heavy green industry and consumer staples can both hum in the same week.",
+    ],
+  },
+  {
+    slug: "india-office-q3-gcc-leasing",
+    title: "Office leasing hit a nine-month high even as new supply pushed vacancy up",
+    summary:
+      "Cushman & Wakefield’s Q3 2026 Office MarketBeat shows net absorption of 14.1 million sq ft across eight cities, up 26% quarter on quarter, while new completions at 22.7 million sq ft lifted pan-India vacancy to 14.37%. Global capability centres took 42% of quarterly leasing.",
+    category: "industry",
+    companyOrSector: "Commercial real estate",
+    publishedAt: "2026-10-10T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-office-q3-gcc-leasing"),
+    keyTakeaways: [
+      "Net absorption reached 14.1 MSF in Q3, up 26% q-o-q; gross leasing was 21.9 MSF.",
+      "New completions hit a record 22.7 MSF in the quarter, lifting vacancy 63 bps to 14.37%.",
+      "GCCs leased 9.1 MSF in Q3, 42% of activity; Bengaluru and Hyderabad led absorption.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, Cushman & Wakefield published its Q3 2026 Office MarketBeat for India’s top eight cities. Tenants absorbed a net 14.1 million square feet of office space, up 26% from the previous quarter. Gross leasing volume reached 21.9 million square feet. At the same time, developers finished a record 22.7 million square feet of new buildings, so pan-India vacancy rose 63 basis points to 14.37%, the first increase after twelve quarters of tightening. Hyderabad led net absorption at 4.1 million square feet, with Bengaluru close behind at 4.02 million square feet.",
+      "What does this mean?",
+      "Companies are still signing leases even while a wave of new towers lands. Global capability centres leased 9.1 million square feet in the quarter, about 42% of gross activity, with Bengaluru, Chennai, and Pune seeing more than half of local demand from GCCs. Banks and financial firms were the largest sector at 24% of leasing, followed by IT services at 22%. Flexible workspace operators took 16% of quarterly volume, a record pace that suggests firms want optionality while they test headcount plans. Rents still rose about 2% quarter on quarter across most markets, which is unusual when vacancy ticks up and usually means tenants are paying for newer, better buildings rather than discounting older stock.",
+      "Why should I care?",
+      "If you work in tech, finance, or shared services, hiring plans show up in office demand before they show up in headlines about macro fear. A GCC-heavy leasing mix signals multinationals still building India delivery hubs despite rate hikes and geopolitical noise. Commuters in Hyderabad and Bengaluru should expect more finished campuses even as vacancy rises. Investors in listed developers should separate cities with absorption strength from those carrying supply gluts. For households, busy office districts often spill into lunch, travel, and housing demand in the same corridors, so this is another datapoint that services activity is not frozen even as manufacturing headlines wobble.",
+    ],
+  },
+  {
+    slug: "dmart-q2-profit-revenue-growth",
+    title: "D-Mart grew revenue 18% and profit 9% in the September quarter",
+    summary:
+      "Avenue Supermarts reported consolidated net profit of ₹743 crore for Q2 FY27, up 8.5% year on year, on revenue from operations of ₹19,644 crore, up 17.8%, with total expenses rising 18.3% in the same period.",
+    category: "industry",
+    companyOrSector: "Retail / consumers",
+    publishedAt: "2026-10-10T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dmart-q2-profit-revenue-growth"),
+    keyTakeaways: [
+      "Net profit reached ₹743 crore versus ₹685 crore a year earlier; revenue hit ₹19,644 crore.",
+      "Total expenses rose 18.3% to ₹18,633 crore, broadly in line with sales growth.",
+      "H1 FY27 total income was ₹38,478 crore, up 16.5% year on year.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, Avenue Supermarts, which runs the D-Mart chain, filed its results for the quarter ended September 2026. Consolidated net profit rose 8.5% year on year to ₹742.98 crore. Revenue from operations increased 17.8% to ₹19,644 crore from ₹16,676 crore in the same quarter last year. Total expenses grew 18.3% to ₹18,633 crore. Total income, including other income, was ₹19,658 crore. For the first half of FY27, total income reached ₹38,478 crore, up 16.5%.",
+      "What does this mean?",
+      "D-Mart sells everyday groceries and home basics at thin margins, so mid-teens revenue growth usually means more footfall and basket size across its existing store base, not a one-off price hike. Profit grew slightly slower than sales, which often happens when freight, store staffing, or promotional spending tick up while the chain keeps prices competitive. The print lands the same week brokers warned that apparel-heavy retailers could look weak in Q2 because Navratri shifted later; D-Mart’s basket is staples-heavy, so it is a cleaner read on whether middle-income households are still filling carts for daily needs.",
+      "Why should I care?",
+      "If you are building a view on Indian consumption, pair this with other categories instead of treating one chain as the whole economy. Still, a nearly 18% revenue step at the country’s largest listed value grocer is hard to ignore when policy rates are rising and loan EMIs are resetting. Shoppers benefit when a scale player keeps growing without obvious distress discounts. Investors comparing retail names should ask how much growth came from new stores versus same-store momentum when management speaks. Watch whether festive apparel demand in October makes up for the calendar drag others reported, while staples players like D-Mart set the floor for demand.",
+    ],
+  },
+  {
     slug: "rbi-forex-derivative-hedge-rules",
     title: "RBI tightened the rules on rupee hedges and cancelled forex contracts",
     summary:
@@ -734,6 +806,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "premier-energies-solar-order-book": "companies",
+  "india-office-q3-gcc-leasing": "markets",
+  "dmart-q2-profit-revenue-growth": "markets",
   "rbi-forex-derivative-hedge-rules": "policy",
   "psu-banks-repo-linked-loan-reprice": "policy",
   "india-retail-q2-festive-shift": "markets",
