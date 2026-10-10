@@ -184,6 +184,22 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Jet silhouette / fuel gauge |
 | Metaphor left | Blocked refund pipe between airline and refinery |
 
+### `rbi-daily-crr-liquidity-rule`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Daily cash reserve floor rises when liquidity is flush |
+| Subject right | Central bank facade (generic) |
+| Metaphor left | Calendar blocks filling toward 99% dial |
+
+### `tcs-senior-staff-bonus-withheld`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Variable pay stops for senior grades, not juniors |
+| Subject right | Abstract office / data flow motif |
+| Metaphor left | Pay ladder with upper steps greyed out |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

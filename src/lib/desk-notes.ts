@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-daily-crr-liquidity-rule",
+    title: "RBI told banks to keep almost all required cash on deposit every day",
+    summary:
+      "On 9 October 2026 the Reserve Bank of India raised the minimum daily cash reserve ratio compliance floor to 99% from 90%, effective from the fortnight ending 31 October. The headline CRR rate itself was unchanged; the move targets excess liquidity after heavy foreign-currency deposit inflows.",
+    category: "industry",
+    companyOrSector: "Banking / RBI",
+    publishedAt: "2026-10-10T01:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-daily-crr-liquidity-rule"),
+    keyTakeaways: [
+      "Minimum daily CRR compliance rises to 99% from 90% from the fortnight ending 31 October 2026.",
+      "The statutory cash reserve ratio percentage was left unchanged in the same announcement.",
+      "Officials framed the step as a way to absorb surplus banking-system liquidity.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, the Reserve Bank of India told banks they must meet a higher share of their cash reserve requirement on every single day of the fortnight. The minimum daily compliance level moves to 99% from 90%, starting with the fortnight that ends on 31 October 2026. The overall cash reserve ratio rate was not changed in that communication. Reporting tied the tweak to a recent build-up of liquidity in the banking system, including dollar inflows linked to the FCNR(B) deposit window.",
+      "What does this mean?",
+      "Indian banks must park a slice of deposits with the RBI as cash reserves. Regulators already set the percentage; they also watch whether banks meet it smoothly across each fortnight. When liquidity is flush, some banks can run with lower daily balances early in the period and catch up later. Raising the daily floor to 99% closes most of that slack. More money sits idle at the RBI on ordinary days, which can nudge short-term rates and loanable funds higher even when the headline CRR number is flat.",
+      "Why should I care?",
+      "If you borrow from a bank, watch whether term deposit rates drift up or loan spreads widen after 31 October. Tighter daily reserves are a liquidity management tool, not a full policy rate hike, but they still change how much cash lenders can deploy. If you work in treasury at a bank, expect closer daily monitoring and less room to optimise within the fortnight. Households should treat this as background plumbing unless deposit or EMI quotes move in the weeks after implementation.",
+    ],
+  },
+  {
+    slug: "tcs-senior-staff-bonus-withheld",
+    title: "TCS will not pay quarterly bonuses to its senior managers this quarter",
+    summary:
+      "A company memo reported on 9 October 2026 said Tata Consultancy Services withheld variable pay for grades C3A and above for the September 2026 quarter after performance targets were missed. Junior staff were told they would still receive 100% of eligible variable pay.",
+    category: "company",
+    companyOrSector: "TCS / IT services",
+    publishedAt: "2026-10-10T02:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tcs-senior-staff-bonus-withheld"),
+    keyTakeaways: [
+      "Variable pay for grades C3A and above was set at zero for the September 2026 quarter.",
+      "Junior employees were slated to receive 100% of eligible variable pay, per the memo.",
+      "Reporting said it was the first broad senior-level variable freeze in at least two years.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 9 October 2026, reporting citing an internal Tata Consultancy Services memo said senior managers would not receive quarterly variable pay for the three months to September 2026. The cut applied to grades C3A and above after the company missed performance targets tied to that pool. Junior employees were still on track for full eligible variable pay, according to the same memo. The disclosure landed two days after TCS reported double-digit revenue growth for the quarter, but also its weakest sequential revenue expansion in recent reporting.",
+      "What does this mean?",
+      "Large IT firms split compensation into fixed salary and a variable slice linked to company and unit results. When targets slip, the variable line is the first lever leaders pull because it preserves cash without rewriting base pay contracts. Freezing bonuses for senior grades while paying juniors in full signals where management thinks accountability should sit. For white-collar households in Bengaluru, Pune, and Chennai, a zero variable quarter at the top of the org chart is a direct hit to take-home pay even when headline revenue still grows.",
+      "Why should I care?",
+      "If you work in Indian IT, read your own employer’s variable-pay rules before assuming TCS sets the market. A missed pool at one company does not automatically copy elsewhere, but clients watching costs may press harder on rates in coming quarters. If you are hiring or negotiating an offer, ask how variable pay behaved in the latest cycle, not only the base salary number. Investors should pair this memo with deal wins and attrition data; one quarter of withheld senior bonuses is a cost signal, not a verdict on multi-year demand.",
+    ],
+  },
+  {
     slug: "irdai-distribution-commission-reform",
     title: "IRDAI wants to cap what insurers pay agents and brokers",
     summary:
@@ -614,6 +662,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-daily-crr-liquidity-rule": "policy",
+  "tcs-senior-staff-bonus-withheld": "companies",
   "irdai-distribution-commission-reform": "policy",
   "india-life-insurance-premium-h1-growth": "markets",
   "airlines-omc-atf-vat-refund-fight": "policy",
