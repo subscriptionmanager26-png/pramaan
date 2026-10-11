@@ -248,6 +248,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Blast furnace / coil motif |
 | Metaphor left | Rising capacity curve + shrinking emissions dial |
 
+### `india-satcom-security-vetting-debate`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Equal security vetting before foreign satcom serves India |
+| Subject right | Satellite dish / orbit arc |
+| Metaphor left | Matching security gates on one lane |
+
+### `chennai-metro-phase-ii-poonamallee-vadapalani`
+
+| Field | Value |
+|-------|--------|
+| Core idea | New metro corridor expands commuter reach |
+| Subject right | Elevated metro train silhouette |
+| Metaphor left | Route chevrons extending along the line |
+
+### `ntpc-industrial-cogeneration-partners`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Shared steam-and-power plants with factory equity partners |
+| Subject right | Industrial plant silhouette |
+| Metaphor left | Twin pipes to steam and power outputs |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

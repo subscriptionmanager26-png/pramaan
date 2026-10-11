@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-satcom-security-vetting-debate",
+    title: "Former ministers say every satcom entrant must clear the same security vetting",
+    summary:
+      "On 11 October 2026 policy voices pushed back on shortcuts for satellite broadband after Elon Musk criticised India’s licensing approach. Rajeev Chandrasekhar, Rajiv Kumar, Nilesh Shah, and Nitin Pai argued for equal rules, lawful-interception readiness, and faster domestic satellite capacity rather than reliance on one foreign constellation.",
+    category: "industry",
+    companyOrSector: "Telecom / satellite policy",
+    publishedAt: "2026-10-11T15:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-satcom-security-vetting-debate"),
+    keyTakeaways: [
+      "Chandrasekhar said Starlink, OneWeb, and other satcom players should face the same security review before launch.",
+      "Pai warned that one operator controls a large share of low-Earth orbit satellites, raising strategic risk for India.",
+      "Kumar suggested using the Universal Service Obligation Fund to help Indian firms build satellite networks.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, a panel of former policymakers and market veterans weighed in as satellite broadband licensing drew public heat. Elon Musk had attacked India’s approach to satellite spectrum and entry rules. In response, Rajeev Chandrasekhar, former minister of state for electronics and IT, said any satcom provider must pass the same security vetting, covering lawful interception and trusted infrastructure, before serving Indian users. Rajiv Kumar, former NITI Aayog vice chairman, urged India to build domestic satellite capability instead of reacting to social media posts. Nitin Pai of the Takshashila Institution argued that letting one company dominate low-Earth orbit access is not in India’s interest. Nilesh Shah of Kotak Mutual Fund said markets may shrug off the noise but foreign investors still want a level playing field.",
+      "What does this mean?",
+      "Satellite internet is not just another data plan. Signals can reach remote areas without fibre, but they also cross borders and are hard to monitor. India already runs competitive mobile data at low prices. The fight is over whether new space-based entrants get the same compliance path as incumbents who paid for terrestrial spectrum and rollout. Chandrasekhar’s point is procedural: Starlink, OneWeb, and domestic projects should meet identical security standards. Kumar’s pitch is industrial policy: recycle USO collections into Indian constellations so rural coverage does not depend on a single foreign vendor. That sits next to, but is not the same as, Reliance Jio’s pending listing and its own satellite venture awaiting clearances.",
+      "Why should I care?",
+      "If you live outside dense fibre zones, the outcome decides how soon satellite broadband arrives and at what price. If you work in telecom, defence electronics, or space supply chains, vetting rules and USO spending shape who wins build contracts. Households waiting on Jio’s IPO should read satellite policy as a parallel track, not a single Musk headline. Watch Department of Telecommunications orders on spectrum allocation, final security sign-offs for authorised players, and whether Budget or USO guidelines fund domestic satellites.",
+    ],
+  },
+  {
+    slug: "chennai-metro-phase-ii-poonamallee-vadapalani",
+    title: "Chennai Metro opened a new Phase II link built for about ₹4,900 crore",
+    summary:
+      "Prime Minister Narendra Modi inaugurated the Poonamallee–Vadapalani stretch of Chennai Metro Phase II on 11 October 2026. The  corridor cost roughly ₹4,900 crore and extends rapid transit in the western parts of the city.",
+    category: "industry",
+    companyOrSector: "Infrastructure / urban transit",
+    publishedAt: "2026-10-11T13:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("chennai-metro-phase-ii-poonamallee-vadapalani"),
+    keyTakeaways: [
+      "Phase II’s Poonamallee–Vadapalani section opened on 11 October 2026 with a reported cost near ₹4,900 crore.",
+      "Modi rode the line between Porur Bypass and Poonamallee Bypass stations after the inauguration.",
+      "The visit bundled highway, port, refinery, and rail projects across Tamil Nadu the same day.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, Prime Minister Narendra Modi inaugurated the Poonamallee–Vadapalani stretch of Chennai Metro Rail Phase II. Officials put the project cost at about ₹4,900 crore. After the ceremony, Modi travelled on the metro between Porur Bypass station and Poonamallee Bypass station and back. Tamil Nadu Chief Minister C Joseph Vijay joined the event. The opening adds elevated and underground capacity on a corridor that links western suburbs toward the city’s established metro grid.",
+      "What does this mean?",
+      "Metro phases are built in slices so contractors can finish civil works, signalling, and rolling stock without waiting for the entire ring. Each new segment changes commute options for tens of thousands of office and factory workers who previously relied on buses or private cars on congested arterials. Ticket revenue alone rarely pays back the capital cost quickly. The economic case rests on time saved, lower road wear, and land value near stations. For Chennai, Phase II is part of a wider state push that the same visit also advanced through national highway widenings, port yards, and railway flyovers.",
+      "Why should I care?",
+      "If you live or work along the western corridor, compare bus timings with the new stations on your daily route. Small businesses near entries often see lunch and retail footfall shift once trains run. Commuters elsewhere should note how capital stacks up: nearly ₹5,000 crore for one stretch shows the ticket price of urban rail. Watch whether ridership reports meet projections in the first year and how the next Phase II sections are timed.",
+    ],
+  },
+  {
+    slug: "ntpc-industrial-cogeneration-partners",
+    title: "NTPC wants factories to take 26% equity in shared steam-and-power plants",
+    summary:
+      "On 11 October 2026 NTPC invited expressions of interest from industrial users willing to hold 26% equity in co-generation projects that supply both steam and electricity, often paired with coal, renewables, and battery storage under long-term supply deals.",
+    category: "industry",
+    companyOrSector: "Power / industrials",
+    publishedAt: "2026-10-11T12:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ntpc-industrial-cogeneration-partners"),
+    keyTakeaways: [
+      "NTPC sought partners for 26% equity stakes in industrial co-generation plants on 11 October 2026.",
+      "Plants would deliver combined steam and power beside integrated coal, renewable, and BESS supply frames.",
+      "NTPC reported over 91 GW installed capacity with more than 35 GW under construction.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, NTPC Limited called for expressions of interest from commercial and industrial companies ready to invest 26% equity in co-generation projects. The plants would produce steam and electricity together for factory campuses, bundled with broader power supply packages that can mix coal, renewables, and battery energy storage. NTPC framed the offer as a response to industries chasing energy security, cost control, and lower emissions from a single onsite system rather than buying grid power and boiler fuel separately.",
+      "What does this mean?",
+      "Co-generation captures waste heat from power production to run process steam, which can cut fuel bills for cement, chemicals, textiles, and food plants. A public-sector generator leading the tie-up gives banks a familiar counterparty while the industrial partner shares capex and offtake risk. The 26% equity slice is large enough to align incentives without handing operators full plant control. NTPC already runs more than 91 GW of capacity with over 35 GW under construction and targets 149 GW by 2032, including 60 GW from renewables. This EOI is a commercial format experiment, not a tariff order, so terms will vary by site.",
+      "Why should I care?",
+      "If you manage a power-hungry factory, compare onsite co-gen quotes with open-access renewable contracts and grid tariffs. If you supply turbines, boilers, or storage, NTPC-led bundles could open multi-year EPC work. Households will not bid on the EOI, but steadier industrial power costs feed into prices for metals, cement, and packaged goods. Watch which sectors sign first, how regulators treat cross-subsidy between steam and power accounts, and whether state discoms challenge long-term bilateral deals.",
+    ],
+  },
+  {
     slug: "india-steel-policy-2047-capacity",
     title: "India’s draft steel plan targets 604 million tons of capacity by 2047",
     summary:
@@ -950,6 +1022,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-satcom-security-vetting-debate": "policy",
+  "chennai-metro-phase-ii-poonamallee-vadapalani": "policy",
+  "ntpc-industrial-cogeneration-partners": "companies",
   "india-steel-policy-2047-capacity": "policy",
   "indigo-domestic-forward-fares-flat": "companies",
   "vande-bharat-sleeper-overnight-fares": "policy",
