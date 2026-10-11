@@ -26,6 +26,30 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "vande-bharat-sleeper-overnight-fares",
+    title: "Vande Bharat sleepers will pack 823 berths with tickets from ₹960",
+    summary:
+      "Reporting on 10 October 2026 detailed the layout and fare bands for India’s upcoming Vande Bharat sleeper trains, including 3AC trips from ₹960 on routes up to 400 km and a first prototype now expected by 31 March 2027 after RVNL extended its earlier June 2026 target.",
+    category: "industry",
+    companyOrSector: "Railways / travel",
+    publishedAt: "2026-10-11T01:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("vande-bharat-sleeper-overnight-fares"),
+    keyTakeaways: [
+      "A 16-coach Vande Bharat sleeper set will carry 823 passengers across 1AC, 2AC, and 3AC berths.",
+      "3AC fares start at ₹960 for journeys up to 400 km; 1AC tickets can reach ₹13,300 on 3,500 km routes.",
+      "RVNL pushed the first prototype deadline from June 2026 to 31 March 2027; 120 trainsets are planned via an Indo-Russian JV.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, a walkthrough of the Vande Bharat sleeper design circulated widely. Each 16-car trainset will hold 823 travelers: 24 berths in First AC, 188 in Second AC, and 611 in Third AC. Cabins show individual air vents, reading lights, privacy curtains, charging points, and vacuum-style toilets similar to aircraft lavatories. Ticket prices start at ₹960 for 3AC trips up to 400 km and rise with distance, with 1AC seats on the longest 3,500 km routes priced up to ₹13,300. Rail Vikas Nigam Limited now expects the first prototype by 31 March 2027, after missing an earlier June 2026 goal. Coaches are to roll out of the upgraded Marathwada Rail Coach Factory in Maharashtra under Kinet Railway Solutions, an RVNL and Transmashholding joint venture targeting 120 trainsets.",
+      "What does this mean?",
+      "Indian Railways is trying to give overnight passengers a product that competes with low-cost flights on comfort, not just price. Tiered berths let families pick 3AC for shorter hops while business travelers pay up for 1AC on long intercity legs. Fares on premium routes are set above traditional Rajdhani levels, so the bet is that better bedding, privacy, and onboard info screens will pull demand from buses and full-service airlines on selected corridors. The slipped prototype date matters because fleet expansion only starts after the first set clears trials; until then, existing Rajdhani and Garib Rath stock keeps serving the routes.",
+      "Why should I care?",
+      "If you book long-distance rail often, watch when Indian Railways opens reservations on the first routes and how 3AC pricing compares with budget air on your city pair. A delay to March 2027 pushes any mass rollout further out, so plan festivals and winter travel on today’s trains. For investors, RVNL and coach suppliers tied to the Marathwada line gain visibility when production scales, but the consumer story is simpler: more choice on overnight travel, at explicit fare steps, once the trains actually arrive.",
+    ],
+  },
+  {
     slug: "zomato-blinkit-delivery-ev-bazaar",
     title: "Zomato and Blinkit brought 2,500 riders to test electric scooters in Delhi",
     summary:
@@ -878,6 +902,7 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "vande-bharat-sleeper-overnight-fares": "policy",
   "zomato-blinkit-delivery-ev-bazaar": "companies",
   "india-overseas-etf-nav-premium": "markets",
   "sebi-bond-credit-risk-o-meter": "policy",

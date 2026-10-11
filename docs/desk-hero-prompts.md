@@ -216,6 +216,14 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic high-street storefront |
 | Metaphor left | Split festival calendar + diverging foot traffic |
 
+### `vande-bharat-sleeper-overnight-fares`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Overnight rail upgrades with tiered sleeper fares |
+| Subject right | Stylised modern sleeper coach silhouette |
+| Metaphor left | Stepped fare bars along a night route curve |
+
 ### `rbi-forex-derivative-hedge-rules`
 
 | Field | Value |
