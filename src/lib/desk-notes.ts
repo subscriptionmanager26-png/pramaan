@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-steel-policy-2047-capacity",
+    title: "India’s draft steel plan targets 604 million tons of capacity by 2047",
+    summary:
+      "Late on 10 October 2026 the steel ministry released a draft national steel policy for public comment. It aims to lift installed capacity from about 220 million metric tons today to 604 million by 2047 while cutting average emissions intensity and locking in iron ore and coking coal supply.",
+    category: "industry",
+    companyOrSector: "Steel / industrial policy",
+    publishedAt: "2026-10-11T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-steel-policy-2047-capacity"),
+    keyTakeaways: [
+      "Draft policy targets 604 million metric tons of steel capacity by 2047 versus roughly 220 million tons now.",
+      "Average carbon intensity would fall to about 1.54 tonnes of CO₂ per tonne of crude steel from 2.54 today.",
+      "Ministry projects iron ore demand at 772 million tons and coking coal at 236 million tons, with overseas assets and JVs in the plan.",
+    ],
+    body: [
+      "What's going on here?",
+      "India published a draft national steel policy for consultation on the night of 10 October 2026. The document sets a capacity goal of 604 million metric tons by 2047, up from about 220 million tons at present. It also sketches how the sector should meet demand while lowering emissions. Average carbon intensity would drop to around 1.54 tonnes of carbon dioxide per tonne of crude steel by 2047, from 2.54 tonnes today, aligning with India’s 2070 net zero target. On raw materials, the ministry expects iron ore demand to reach 772 million tons and coking coal demand 236 million tons. The draft calls for securing high-grade ore at home, pursuing foreign assets, and joint ventures, plus diversifying coking coal imports through strategic outreach abroad.",
+      "What does this mean?",
+      "Steel sits at the centre of infrastructure, autos, and defence build-out. A near-tripling of capacity over two decades signals that planners expect sustained domestic demand, not a pause after the current cycle. The policy is still a draft, so numbers can change after industry feedback. Even so, it tells miners, ports, and power utilities where long-term bets may land. The emissions target pushes mills toward cleaner blast furnaces, scrap use, and efficiency upgrades rather than adding capacity at today’s carbon intensity. Coking coal remains imported for most Indian blast furnaces, so overseas mine stakes and shipping lanes become part of industrial security, not just corporate strategy.",
+      "Why should I care?",
+      "If you buy a home, a car, or appliances, steel input costs feed into those price tags over time. If you work in construction, autos, or mining, capacity additions can mean more orders but also more competition on margins. Watch the final policy text after consultation, state clearances for new plants, and whether global coal and ore prices cooperate with the import plan. This is a long-dated industrial roadmap, not a quarterly earnings surprise.",
+    ],
+  },
+  {
+    slug: "indigo-domestic-forward-fares-flat",
+    title: "Booking a Delhi–Mumbai flight months ahead now costs what tomorrow does",
+    summary:
+      "Reporting on 11 October 2026 showed economy one-way fares on the busiest domestic route holding near ₹6,200–₹6,900 whether you fly the next day or in February 2027, after years when early bookings were far cheaper. Airlines cite fewer seats, costly jet fuel, and weak rivalry after industry consolidation.",
+    category: "industry",
+    companyOrSector: "Aviation / travel",
+    publishedAt: "2026-10-11T09:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indigo-domestic-forward-fares-flat"),
+    keyTakeaways: [
+      "Delhi–Mumbai economy one-way quotes were about ₹6,200–₹6,900 for next-day and February 2027 alike in the report.",
+      "Fares that once sat near ₹3,800 for far-out dates have largely disappeared as IndiGo and Air India control most capacity.",
+      "Travel agents point to trimmed schedules, higher fuel costs, and little pressure to discount forward tickets.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, reporting on India’s domestic airline market described a break from the old revenue playbook. For years carriers rewarded passengers who booked early and charged more for last-minute seats. On the Delhi–Mumbai route, that gap has narrowed sharply. Passengers shopping for travel the next day saw economy one-way fares around ₹6,200 on Akasa Air, ₹6,500 on IndiGo, and ₹6,900 on Air India. Tickets for February 2027 on the same route carried similar price tags. A few months earlier, those far-dated seats often traded near ₹3,800. IndiGo and the Air India group now account for the bulk of domestic capacity, with smaller shares for Akasa and SpiceJet.",
+      "What does this mean?",
+      "Airlines manage revenue by forecasting demand and releasing seats in fare buckets. When competition was fiercer, they sold distant dates cheap to lock in cash. With fewer flights in the market after Jet Airways and Go First exited and Vistara and AirAsia India folded into Air India, sellers face less pressure to discount the calendar. Jet fuel prices have also jumped, partly linked to the Middle East conflict, so carriers are reluctant to commit low prices far ahead if costs stay volatile. Corporate travel agents note the pattern is domestic; some international leisure routes still show sharper advance-deal pricing.",
+      "Why should I care?",
+      "If you plan festivals, weddings, or winter holidays, compare prices early but do not assume a six-month lead will automatically save money. Flexibility on dates and airports matters more when forward fares stay high. Budget for trains or buses on dense routes if air quotes stay flat. For investors, this is a pricing-power story inside a concentrated market, not a one-day stock move. Watch whether capacity returns, fuel eases, and whether regulators or new entrants reopen fare competition.",
+    ],
+  },
+  {
     slug: "vande-bharat-sleeper-overnight-fares",
     title: "Vande Bharat sleepers will pack 823 berths with tickets from ₹960",
     summary:
@@ -902,6 +950,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-steel-policy-2047-capacity": "policy",
+  "indigo-domestic-forward-fares-flat": "companies",
   "vande-bharat-sleeper-overnight-fares": "policy",
   "zomato-blinkit-delivery-ev-bazaar": "companies",
   "india-overseas-etf-nav-premium": "markets",

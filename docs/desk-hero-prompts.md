@@ -232,6 +232,22 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Policy / central bank architecture |
 | Metaphor left | Narrowing gate + reserve vault blocks |
 
+### `indigo-domestic-forward-fares-flat`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Early booking no longer unlocks cheaper domestic air fares |
+| Subject right | Jet silhouette / route arc |
+| Metaphor left | Flat stepped fare bars across calendar months |
+
+### `india-steel-policy-2047-capacity`
+
+| Field | Value |
+|-------|--------|
+| Core idea | National steel capacity roadmap with lower carbon intensity |
+| Subject right | Blast furnace / coil motif |
+| Metaphor left | Rising capacity curve + shrinking emissions dial |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
