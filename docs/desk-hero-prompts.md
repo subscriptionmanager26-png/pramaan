@@ -272,6 +272,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Industrial plant silhouette |
 | Metaphor left | Twin pipes to steam and power outputs |
 
+### `jio-bp-pump-fuel-price-hike`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Private pump prices step up with refining margin pressure |
+| Subject right | Generic fuel pump canopy |
+| Metaphor left | Stepped price bars + fuel droplet |
+
+### `festive-emi-online-big-ticket-sales`
+
+| Field | Value |
+|-------|--------|
+| Core idea | No-cost EMI unlocks festive big-ticket baskets |
+| Subject right | Cart / gift box motif |
+| Metaphor left | Rising order bars + EMI calendar tiles |
+
+### `electric-ambulance-pm-edrive-stall`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Subsidy lane open but zero registrations |
+| Subject right | Generic ambulance silhouette |
+| Metaphor left | Empty tally dial at subsidy gate |
+
+### `india-shipbuilding-korea-japan-delegation`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Maritime policy courts East Asian yard investors |
+| Subject right | Ship hull under construction |
+| Metaphor left | Route arcs toward Japan/Korea dots |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

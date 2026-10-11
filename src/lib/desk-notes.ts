@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "jio-bp-pump-fuel-price-hike",
+    title: "Jio-bp raised petrol by ₹5 a litre at the pump on Sunday",
+    summary:
+      "Reliance-backed Jio-bp increased retail petrol by ₹5 per litre and diesel by ₹3 on 11 October 2026, matching Nayara Energy’s hike from 3 October. Dealers quoted petrol near ₹108–110 and diesel near ₹98–100 in Punjab and Haryana as private retailers pass through higher crude and export-linked margins.",
+    category: "industry",
+    companyOrSector: "Oil marketing / consumers",
+    publishedAt: "2026-10-11T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jio-bp-pump-fuel-price-hike"),
+    keyTakeaways: [
+      "Jio-bp lifted petrol by ₹5 per litre and diesel by ₹3 effective 11 October 2026.",
+      "Nayara Energy had raised pump prices by the same amounts on 3 October.",
+      "Dealers cited petrol around ₹108.54–₹109.80 and diesel around ₹97.75–₹99.19 in northern states.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, Jio-bp, the fuel retail venture backed by Reliance Industries and bp, raised petrol prices by ₹5 per litre and diesel by ₹3 per litre at its pumps. Fuel retailers in Punjab and Haryana quoted petrol at roughly ₹108.54 to ₹109.80 per litre and diesel at about ₹97.75 to ₹99.19 after the change. Jio-bp is the second major private marketer to move in ten days. Nayara Energy, backed by Russia’s Rosneft, had implemented the same rupee increases on 3 October. Both companies are also significant exporters of refined products, which influences how they balance domestic pump prices with overseas margins.",
+      "What does this mean?",
+      "Most Indian drivers still buy fuel from state-owned Indian Oil, Bharat Petroleum, and Hindustan Petroleum, which have kept headline rates steady for long stretches. When private retailers lift prices, it signals pressure on refining margins or import costs even if the big three have not yet followed. Analysts at Bank of Baroda estimate that a sustained $1 rise in crude can add roughly ₹18,000 crore to India’s annual import bill, which eventually feeds pump economics. A ₹5 move on petrol is felt immediately in cab fares, last-mile delivery, and rural transport budgets. Fleet operators who refuel at Jio-bp or Nayara networks will see the hit on the next fill.",
+      "Why should I care?",
+      "If you drive daily or run a small logistics business, track whether PSU pumps mirror these hikes in your city. Commuters should budget higher fuel spend even when global crude headlines look calm. For investors, the story is margin management at private refiners, not a one-day stock tick. Watch Ministry of Petroleum communications on domestic price alignment, export policy on diesel, and whether PSU marketers adjust rates after the festive travel rush.",
+    ],
+  },
+  {
+    slug: "festive-emi-online-big-ticket-sales",
+    title: "Festive online sales opened with no-cost EMIs on bikes and appliances",
+    summary:
+      "Amazon and Flipkart’s October 2026 festival sales drew heavy EMI use on big-ticket goods. Hero MotoCorp reported a 30-fold jump in online two-wheeler orders, Samsonite’s premium luggage sales rose about 200%, and Philips domestic appliances saw roughly tenfold demand on opening days.",
+    category: "industry",
+    companyOrSector: "Retail / consumer",
+    publishedAt: "2026-10-11T22:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("festive-emi-online-big-ticket-sales"),
+    keyTakeaways: [
+      "Hero MotoCorp’s online two-wheeler sales surged about 30-fold during the opening phase of major festive e-commerce events.",
+      "Samsonite’s premium luggage business grew roughly 200% and Philips domestic appliances about tenfold in the same window.",
+      "More than one-third of Amazon customers used EMIs; Flipkart said one in three mobile buyers chose no-cost EMI plans.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 11 October 2026 described an aggressive start to India’s festive online shopping season on Amazon and Flipkart. No-cost EMI offers and deep discounts pulled forward purchases of motorcycles, luggage, and home appliances. Hero MotoCorp said its two-wheeler sales through these channels jumped about 30-fold compared with the opening period a year earlier. Samsonite reported roughly 200% growth in its premium luggage business, while Philips clocked about tenfold demand for domestic appliances. Flipkart said more than six times the usual number of shoppers logged in during the first hour of its Big Billion Days sale. Amazon noted that over one-third of customers opted for EMI plans and that Amazon Pay Later EMI transactions doubled.",
+      "What does this mean?",
+      "Festive quarters matter because brands clear inventory and acquire new customers who may not visit physical showrooms. EMI removes the upfront sting of a ₹80,000 phone or a ₹1 lakh motorcycle, so volume can spike even when urban footfall looks mixed. The pattern fits an affirming consumption read: shoppers are still willing to commit to durable goods when financing is easy. It is not uniform across categories. Apparel can lag when the festival calendar shifts, but financed electronics and mobility are clearing fast. Marketplaces also win when sellers cross ₹1 crore in a single day; Amazon said that cohort rose more than 80% year on year.",
+      "Why should I care?",
+      "If you plan a large purchase this month, compare no-cost EMI terms across cards and wallets before checkout. Small businesses selling on marketplaces should ensure inventory and return policies can handle the opening spike. Investors should read these figures as early festival colour, not full-quarter guidance. Watch Hero and appliance makers’ official monthly sales releases, Flipkart and Amazon post-festive summaries, and whether credit costs for BNPL partners rise after the rush.",
+    ],
+  },
+  {
+    slug: "electric-ambulance-pm-edrive-stall",
+    title: "Three months in, India has registered zero subsidised electric ambulances",
+    summary:
+      "Despite ₹500 crore set aside under the PM E-DRIVE scheme for electric ambulances, VAHAN registry data cited on 11 October 2026 showed no zero-emission ambulance registrations more than three months after subsidy guidelines went live. Force Motors is the only homologated electric ambulance maker so far.",
+    category: "industry",
+    companyOrSector: "Automotive / health policy",
+    publishedAt: "2026-10-11T21:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("electric-ambulance-pm-edrive-stall"),
+    keyTakeaways: [
+      "No electric ambulances were registered under PM E-DRIVE as of reporting on 11 October 2026, per VAHAN data.",
+      "The scheme offers up to ₹30,000 per kWh of battery capacity, capped at 35% of vehicle cost.",
+      "Force Motors homologated an electric ambulance for the programme; Maruti Suzuki is still developing a hybrid ambulance.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, reporting on India’s ambulance market highlighted a gap between policy and sales. More than three months after the government issued operational rules for electric ambulance subsidies under the ₹11,900 crore PM E-DRIVE programme, VAHAN vehicle registration data showed not a single zero-emission ambulance enrolled. The dedicated ambulance pool is ₹500 crore, with incentives of up to ₹30,000 per kilowatt-hour of battery capacity and a ceiling of 35% of upfront cost. The rules cover patient transport and basic life support categories. Force Motors has homologated an electric ambulance for the scheme. Maruti Suzuki is working on a hybrid ambulance that is not yet on the market. In fiscal 2026 India registered about 15,500 new ambulances, mostly diesel and petrol.",
+      "What does this mean?",
+      "Ambulances run long shifts, carry heavy equipment, and need reliable range and charging at hospitals. A subsidy trims purchase price but does not solve uptime, service networks, or state procurement cycles. Hospitals and state health departments often buy through tenders that specify proven diesel platforms. Even when one manufacturer is ready, fleet buyers must budget charging, training, and maintenance. The zero registration count suggests those frictions outweigh the headline incentive for now. It also shows how niche vehicle segments can lag passenger EV adoption despite similar policy labels.",
+      "Why should I care?",
+      "If you manage hospital fleets or state health budgets, factor in total cost of ownership, not just the per-kWh grant. Suppliers should expect long certification and tender timelines. Policymakers may tweak incentive design or charging standards if uptake stays flat. Watch state transport department orders, Force Motors’ first commercial deliveries, and whether Maruti’s hybrid ambulance launches with a clearer procurement path.",
+    ],
+  },
+  {
+    slug: "india-shipbuilding-korea-japan-delegation",
+    title: "India will send a shipping ministry team to Japan and Korea for yard deals",
+    summary:
+      "On 11 October 2026 officials said the ministry of ports, shipping and waterways will lead industry representatives to Japan and South Korea next month to pursue shipbuilding and repair investments, including renewed talks with HD Hyundai after a stalled Tamil Nadu proposal.",
+    category: "industry",
+    companyOrSector: "Maritime / industrial policy",
+    publishedAt: "2026-10-11T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-shipbuilding-korea-japan-delegation"),
+    keyTakeaways: [
+      "A central delegation plans visits to Japan and South Korea in November 2026 to court shipyard investors.",
+      "Talks aim to secure anchor tenants for planned maritime clusters and repair capacity.",
+      "Officials expect to reopen discussions with HD Hyundai after an earlier Tamil Nadu investment plan did not close.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 11 October 2026 said India is intensifying outreach to Japanese and South Korean shipbuilders as it tries to convert maritime policy into concrete yards. The ministry of ports, shipping and waterways will lead senior officials and industry executives on a trip to both countries next month. The goal is to land investments in shipbuilding and ship repair and to populate planned maritime clusters with anchor investors. People familiar with the plan said the group will renew conversations with South Korean majors including HD Hyundai. An earlier proposed HD Hyundai investment linked to Tamil Nadu has not yet become a firm commitment.",
+      "What does this mean?",
+      "Shipbuilding is capital heavy and runs on long order books from global shipping lines. India wants more domestic construction to cut import dependence and capture jobs in steel fabrication and marine engineering. Incentives and port land alone rarely close a deal; yard operators want assured orders, skilled labour, and competitive logistics. Japan and Korea host some of the world’s most efficient builders, so a delegation is as much about technology transfer and joint ventures as greenfield plants. Success would show up in signed memoranda, equity commitments, and first hulls on slipways, not in press releases alone.",
+      "Why should I care?",
+      "If you work in ports, steel, or defence shipping, new yards can mean multi-year contracts for plates, engines, and avionics. Coastal states competing for clusters should watch what concessions follow federal talks. For most households the link is indirect through exports and employment. Track ministry announcements after the visit, Tamil Nadu and Gujarat cluster timelines, and whether HD Hyundai or Japanese yards announce binding investments rather than exploratory talks.",
+    ],
+  },
+  {
     slug: "india-satcom-security-vetting-debate",
     title: "Former ministers say every satcom entrant must clear the same security vetting",
     summary:
@@ -1022,6 +1118,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "jio-bp-pump-fuel-price-hike": "policy",
+  "festive-emi-online-big-ticket-sales": "markets",
+  "electric-ambulance-pm-edrive-stall": "policy",
+  "india-shipbuilding-korea-japan-delegation": "policy",
   "india-satcom-security-vetting-debate": "policy",
   "chennai-metro-phase-ii-poonamallee-vadapalani": "policy",
   "ntpc-industrial-cogeneration-partners": "companies",
