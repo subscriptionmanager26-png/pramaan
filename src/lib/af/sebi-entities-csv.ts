@@ -132,3 +132,85 @@ export function slugifyEntityName(name: string, rowId: string) {
   const suffix = rowId.replace(/[^a-z0-9-]/gi, "").toLowerCase();
   return `${base || "entity"}-${suffix}`;
 }
+
+export function escapeCsvField(value: string): string {
+  if (/[",\r\n]/.test(value)) {
+    return `"${value.replace(/"/g, '""')}"`;
+  }
+  return value;
+}
+
+export function formatCsvTable(rows: string[][]): string {
+  return `${rows.map((row) => row.map((cell) => escapeCsvField(cell ?? "")).join(",")).join("\n")}\n`;
+}
+
+export function defaultSebiEntitiesCsvPath() {
+  return DEFAULT_CSV_PATH;
+}
+
+type AdvisorSocial = {
+  registration: string;
+  twitter: string | null;
+  substack: string | null;
+};
+
+/** Write advisor `twitter` / `substack` back into the enrichment CSV (by registration). */
+export function refreshSebiEntitiesCsvFromAdvisors(
+  table: string[][],
+  advisors: AdvisorSocial[],
+): { table: string[][]; twitterCellsUpdated: number; substackCellsUpdated: number } {
+  if (!table.length) return { table, twitterCellsUpdated: 0, substackCellsUpdated: 0 };
+  const header = table[0];
+  const idx: Record<string, number> = {};
+  header.forEach((h, i) => {
+    idx[h] = i;
+  });
+
+  const byReg = new Map<string, AdvisorSocial>();
+  for (const a of advisors) {
+    if (!a.registration?.trim()) continue;
+    byReg.set(a.registration.trim().toUpperCase(), a);
+  }
+
+  let twitterCellsUpdated = 0;
+  let substackCellsUpdated = 0;
+  const out = table.map((line, rowIndex) => {
+    if (rowIndex === 0) return line;
+    const reg = (line[idx["Registration No."]] ?? "").trim();
+    if (!reg) return line;
+    const advisor = byReg.get(reg.toUpperCase());
+    if (!advisor) return line;
+
+    const row = [...line];
+    while (row.length < header.length) row.push("");
+
+    const handleIdx = idx.TwitterHandle;
+    const urlIdx = idx.TwitterURL;
+    const subIdx = idx.SubstackURL;
+
+    if (advisor.twitter) {
+      const handle = normalizeTwitterHandle(advisor.twitter);
+      const url = primaryTwitterUrlFromParts(advisor.twitter, advisor.twitter);
+      if (handleIdx !== undefined && handle) {
+        const next = `@${handle}`;
+        if (row[handleIdx] !== next) {
+          row[handleIdx] = next;
+          twitterCellsUpdated += 1;
+        }
+      }
+      if (urlIdx !== undefined && url && row[urlIdx] !== url) {
+        row[urlIdx] = url;
+        twitterCellsUpdated += 1;
+      }
+    }
+
+    if (advisor.substack && subIdx !== undefined && row[subIdx] !== advisor.substack) {
+      row[subIdx] = advisor.substack;
+      substackCellsUpdated += 1;
+    }
+
+    return row;
+  });
+
+  return { table: out, twitterCellsUpdated, substackCellsUpdated };
+}
