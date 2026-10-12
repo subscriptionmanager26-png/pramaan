@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "indian-gas-exchange-sebi-ipo-nod",
+    title: "SEBI cleared Indian Gas Exchange to list after a promoter share sale",
+    summary:
+      "India’s first delivery-based online natural gas trading platform received SEBI’s final observation on 12 October 2026 for an offer for sale of up to 1.67 crore shares by promoter Indian Energy Exchange, with no fresh capital going to the exchange itself.",
+    category: "industry",
+    companyOrSector: "Energy / markets",
+    publishedAt: "2026-10-12T18:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indian-gas-exchange-sebi-ipo-nod"),
+    keyTakeaways: [
+      "SEBI issued its final observation on 12 October 2026, letting Indian Gas Exchange proceed toward listing.",
+      "The IPO is entirely an offer for sale of up to 1.67 crore equity shares by promoter IEX; IGX will not receive issue proceeds.",
+      "IEX holds more than 47% of IGX and must cut its stake toward 25% under applicable rules.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, the Securities and Exchange Board of India posted a final observation letter allowing Indian Gas Exchange to launch its initial public offering. IGX runs India’s first online, delivery-based platform for trading natural gas. The proposed issue is purely an offer for sale of up to 1.67 crore equity shares by promoter Indian Energy Exchange, according to the draft red herring prospectus filed in July. Because no primary shares are on offer, the exchange operator will not receive IPO proceeds; the cash would flow to IEX as selling shareholder. The filing cited listing benefits such as visibility and a public market for the shares.",
+      "What does this mean?",
+      "Gas buyers and sellers already use exchanges to discover prices for pipeline and city-gas volumes. A listed venue can deepen participation from traders and industrial users who want transparent benchmarks, similar to how power flows through IEX’s electricity markets. The deal is also a stake-reduction exercise: IEX owns more than 47% of IGX today and must bring that holding down toward 25% under regulatory limits, so the IPO is as much about compliance as growth capital. For IEX shareholders, monetising part of the gas venture frees balance-sheet room while keeping a strategic minority.",
+      "Why should I care?",
+      "If you buy industrial gas or LNG for factories, watch whether listed IGX volumes improve price discovery in your procurement tenders. Investors comparing energy market plays should read the red herring for revenue per unit traded and how delivery obligations are settled. Employees and vendors need not treat the OFS as a cash infusion into IGX operations. Watch the price band, anchor participation, and whether other gas market reforms, such as unified tariffs or new pipeline capacity, lift activity on the platform after listing.",
+    ],
+  },
+  {
+    slug: "rbl-bank-thousand-branch-expansion",
+    title: "RBL Bank will open 1,000 branches while chasing cheaper retail deposits",
+    summary:
+      "Managing director R Subramaniakumar said on 12 October 2026 that RBL Bank plans about 1,000 new branches over two to three years to build granular retail deposits, after September-quarter standalone profit rose to ₹481.7 crore from ₹179 crore a year earlier on 42% loan growth.",
+    category: "industry",
+    companyOrSector: "Banks / households",
+    publishedAt: "2026-10-12T18:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbl-bank-thousand-branch-expansion"),
+    keyTakeaways: [
+      "RBL Bank targets roughly 1,000 new branches over the next two to three years to deepen retail deposits.",
+      "Standalone net profit was ₹481.7 crore in the September 2026 quarter versus ₹179 crore a year earlier; net interest income rose 37% to ₹2,131 crore.",
+      "Deposits grew 34% year on year, helped by foreign-currency deposits raised under the RBI’s recent FCNR(B) window.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, RBL Bank outlined an aggressive physical expansion even as it reported a sharp earnings jump for the quarter ended 30 September 2026. Managing director R Subramaniakumar told reporters the lender plans to open about 1,000 branches over the next two to three years to gather smaller retail deposits and grow secured retail lending, while continuing wholesale banking. Standalone net profit rose to ₹481.7 crore from ₹179 crore a year earlier. Net interest income increased 37% to ₹2,131 crore. Net advances grew 42% and deposits 34%, with a chunk of funding coming from foreign-currency non-resident deposits mobilised under the Reserve Bank of India’s concessional FCNR(B) scheme introduced in June. Gross bad loans fell to 1.02% of total loans from 1.30% three months earlier, and net interest margin widened to 4.61%.",
+      "What does this mean?",
+      "Private banks that relied on wholesale funding or high-cost certificates of deposit are racing to build stable current and savings accounts before the next rate cycle bites. Branches still matter for trust deposits in tier-two and tier-three towns, even as payments move to phones. RBL’s branch plan sits beside recent cuts to term and savings deposit rates, a signal that management wants cheaper liabilities to fund loan growth. The FCNR(B) inflows gave temporary funding flexibility, but retail sticks longer once customers use salary accounts and lockers. Competing lenders, including larger private banks with dense networks, will watch whether RBL can staff and supervise a thousand outlets without slipping on compliance.",
+      "Why should I care?",
+      "If you live near a new RBL outlet, compare savings and fixed-deposit rates with your existing bank, especially after the RBI’s October rate hike. Borrowers on floating loans should note that a bank growing advances quickly may keep competitive pricing on secured products such as home and gold loans to win share. Investors should separate one-quarter FCNR(B) boosts from recurring retail deposit traction. Watch branch rollout pace, deposit rate cards each month, and whether loan growth stays above 30% without asset-quality surprises.",
+    ],
+  },
+  {
+    slug: "bank-india-future-enterprises-fraud",
+    title: "Bank of India labelled Future Enterprises’ ₹575 crore loan account as fraud",
+    summary:
+      "Bank of India said on 12 October 2026 it classified Kishore Biyani-promoted Future Enterprises’ ₹575.40 crore outstanding exposure as fraud, reported the matter to the Reserve Bank of India, and had already fully provisioned for the loan.",
+    category: "industry",
+    companyOrSector: "Banks / retail",
+    publishedAt: "2026-10-12T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bank-india-future-enterprises-fraud"),
+    keyTakeaways: [
+      "Bank of India declared Future Enterprises’ ₹575.40 crore account fraudulent on 12 October 2026.",
+      "The exposure was already treated as a non-performing asset and fully provided for on the bank’s books.",
+      "The filing cited the lender’s policy on material events and followed RBI fraud-classification norms.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, state-owned Bank of India told stock exchanges it had classified the outstanding account of Future Enterprises, the Kishore Biyani-promoted company, as fraud. The exposure stood at ₹575.40 crore. The bank said the loan was already a non-performing asset and had been fully provided for, meaning earnings had absorbed the expected loss. The disclosure followed the lender’s policy on material events and fraud reporting requirements set by the Reserve Bank of India. Future Enterprises was central to the failed Reliance-Future retail deal and has been in restructuring for years as creditors chase repayment.",
+      "What does this mean?",
+      "A fraud tag is more than accounting jargon. It triggers regulatory scrutiny, can bar promoters from certain roles, and signals that the bank believes misconduct or misrepresentation played a role, not just a slow retail cycle. Because Bank of India already provisioned the full amount, Monday’s news is unlikely to shock quarterly profit, but it tightens the legal path for recovery and may encourage other lenders with Future group exposure to revisit their own classifications. For India's stressed retail conglomerate story, the move shows how long-tail bankruptcy cases keep producing headlines even after stores change hands.",
+      "Why should I care?",
+      "If you are a supplier still chasing Future group dues, fraud findings at one large creditor can influence how committees treat remaining claims. Bank stock investors should treat the hit as largely priced in but watch whether any recovery from guarantors or asset sales flows back. Shoppers are largely unaffected; the lesson is for anyone lending to highly leveraged retail roll-ups. Watch other public-sector banks’ filings on Future-linked accounts, court progress on asset sales, and whether promoters face fresh restrictions from regulators.",
+    ],
+  },
+  {
+    slug: "flipkart-esop-liquidity-ipo-delay",
+    title: "About 1,000 former Flipkart staff asked Walmart for a way to sell vested stock",
+    summary:
+      "A 10 October 2026 representation signed by roughly 1,000 former Flipkart group employees asked Walmart and Flipkart boards for clarity on monetising vested stock options, citing reports that the marketplace IPO could slip another one to two years.",
+    category: "industry",
+    companyOrSector: "E-commerce / work",
+    publishedAt: "2026-10-12T17:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("flipkart-esop-liquidity-ipo-delay"),
+    keyTakeaways: [
+      "Former employees of Flipkart, Myntra, Cleartrip and other group firms sought liquidity for vested ESOPs in a 10 October letter.",
+      "Reporting cited a possible one- to two-year delay in Flipkart’s IPO as Walmart stays cautious on timing.",
+      "A July 2026 employee buyback valued the company near $38.2 billion and let staff sell up to 5% of vested options.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 10 October 2026, around 1,000 former employees of Flipkart and its group companies sent a collective letter titled “Liquidity for Vested Employee Stock Options” to the boards of Walmart and Flipkart. Signatories included alumni from Myntra, Cleartrip, Shopsy and other units, according to reporting on 12 October 2026. They asked when they could cash out equity grants earned over years of service. People familiar with the matter told reporters Walmart may push the marketplace’s initial public offering out by another one to two years while it watches competitive and profit trends. Flipkart’s last employee buyback in July 2026 valued the firm near $38.2 billion and allowed eligible staff to sell up to 5% of vested options.",
+      "What does this mean?",
+      "Technology companies in India often pay senior talent partly in stock that only becomes money at a listing or a company-run buyback. When IPO windows stay shut, former staff carry paper wealth they cannot use for homes, school fees or new ventures. The appeal shows alumni still have enough organisation to pressure a majority owner, and it lands while listed peers such as Swiggy have already tested public markets and quick-commerce rival Zepto is preparing paperwork. Walmart has no obligation to run another buyback, but ignoring ESOP holders risks morale among current engineers who see the same exit clock.",
+      "Why should I care?",
+      "If you hold Flipkart options as a current employee, treat the letter as a signal to ask HR about the next internal liquidity window, not as a guaranteed IPO date. Job seekers weighing startup packages should compare vesting schedules, post-termination exercise periods and any history of buybacks. Investors waiting for the IPO should note that employee overhang can affect demand if many holders sell on day one. Watch Walmart’s next commentary on India listing plans, any second buyback at a fresh valuation, and whether competition from quick-commerce players changes profit timelines.",
+    ],
+  },
+  {
     slug: "hcltech-anthropic-enterprise-ai-partnership",
     title: "HCLTech will embed Anthropic’s Claude across its client and software stack",
     summary:
@@ -1310,6 +1406,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "indian-gas-exchange-sebi-ipo-nod": "markets",
+  "rbl-bank-thousand-branch-expansion": "companies",
+  "bank-india-future-enterprises-fraud": "policy",
+  "flipkart-esop-liquidity-ipo-delay": "companies",
   "hcltech-anthropic-enterprise-ai-partnership": "companies",
   "tata-stellantis-india-global-vehicle-hub": "companies",
   "india-cpi-september-554-inflation": "policy",

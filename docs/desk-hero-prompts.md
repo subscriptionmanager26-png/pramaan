@@ -368,6 +368,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Abstract server / workflow motif |
 | Metaphor left | Shielded agent nodes feeding a product stack |
 
+### `indian-gas-exchange-sebi-ipo-nod`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Gas trading venue moves toward public listing via promoter sale |
+| Subject right | Pipeline / flame stack motif |
+| Metaphor left | Stepped offering band on exchange tiles |
+
+### `rbl-bank-thousand-branch-expansion`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Branch network widens to gather retail deposits |
+| Subject right | Bank facade with many doorways |
+| Metaphor left | Small deposit coins flowing into vault |
+
+### `bank-india-future-enterprises-fraud`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Lender formally tags a deadbeat retail loan as fraud |
+| Subject right | Public-sector bank architecture |
+| Metaphor left | Sealed file stamped fraud on empty storefront |
+
+### `flipkart-esop-liquidity-ipo-delay`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Employees wait on stock wealth with no listing date |
+| Subject right | E-commerce cart / package motif |
+| Metaphor left | Locked option certificates behind calendar wall |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
