@@ -344,6 +344,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | RBI / policy architecture |
 | Metaphor left | Dollar pipe from reserves to refinery motif |
 
+### `india-cpi-september-554-inflation`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Grocery and fuel bills push CPI toward the RBI ceiling |
+| Subject right | Market basket / kitchen staples motif |
+| Metaphor left | Rising price dial nearing upper band |
+
+### `tata-stellantis-india-global-vehicle-hub`
+
+| Field | Value |
+|-------|--------|
+| Core idea | India factory exports engineered platforms globally |
+| Subject right | Auto plant silhouette at Ranjangaon |
+| Metaphor left | Route arcs to 50+ market dots |
+
+### `hcltech-anthropic-enterprise-ai-partnership`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Enterprise AI wired into software delivery with guardrails |
+| Subject right | Abstract server / workflow motif |
+| Metaphor left | Shielded agent nodes feeding a product stack |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

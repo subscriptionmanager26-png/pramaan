@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hcltech-anthropic-enterprise-ai-partnership",
+    title: "HCLTech will embed Anthropic’s Claude across its client and software stack",
+    summary:
+      "HCLTech signed a global premier partnership with Anthropic on 12 October 2026 to build a dedicated business unit and centre of excellence for agentic AI, rolling Claude, Cowork and Claude Code into client projects and products such as BigFix, AppScan and its AIForce engineering platform.",
+    category: "industry",
+    companyOrSector: "Technology / enterprise",
+    publishedAt: "2026-10-12T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hcltech-anthropic-enterprise-ai-partnership"),
+    keyTakeaways: [
+      "HCLTech will stand up an Anthropic business unit and centre of excellence focused on agentic AI deployments.",
+      "Claude capabilities will be embedded in HCLSoftware products including BigFix and AppScan, and in the AIForce engineering platform.",
+      "The deal targets regulated buyers such as banks, hospitals and manufacturers that need guardrails and human oversight on AI workflows.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, HCLTech announced a global premier partnership with Anthropic to push agentic AI from pilots into production systems. The Indian IT services firm will create a dedicated Anthropic business unit and a centre of excellence to design industry solutions on top of Claude, Cowork and Claude Code. HCLSoftware becomes an independent software vendor partner, weaving Claude into cybersecurity and automation products including HCL BigFix and HCL AppScan, and enabling Actian AI Analyst. Services teams will offer secure sandbox environments, workforce training and AI-native engineering practices. HCLTech also plans to plug Claude into AIForce for IT support, code remediation and digital employee services, with policy guardrails and human review on high-impact changes.",
+      "What does this mean?",
+      "Large enterprises have spent two years experimenting with chatbots; the next step is wiring models into ticketing, security scanning and software delivery pipelines. A systems integrator with product assets can package models, governance and change management in one contract, which matters for banks and hospitals that cannot ship raw API keys to every team. Anthropic gains distribution through HCLTech’s installed base, while HCLTech can pitch outcomes rather than hourly body shopping on AI proofs of concept. The tie-up sits beside HCLTech’s second-quarter results the same day, where revenue growth guidance for fiscal 2027 was framed at roughly 2.5% to 4% year on year, a reminder that clients still scrutinise IT budgets even as AI spend rises.",
+      "Why should I care?",
+      "If you run technology at a regulated company, ask vendors how they separate sandbox trials from production data and who signs off when an agent edits live code. Job seekers in IT services should expect more demand for prompt engineering, model evaluation and workflow design skills, not just generic cloud certifications. Investors should treat the partnership as a capability marker, not an immediate earnings kicker. Watch whether HCLTech discloses revenue tied to Anthropic deployments, how peers such as TCS and Infosys respond with their own model alliances, and whether clients slow discretionary projects while funding AI governance.",
+    ],
+  },
+  {
+    slug: "tata-stellantis-india-global-vehicle-hub",
+    title: "Tata Motors and Stellantis will develop cars in India for more than 50 markets",
+    summary:
+      "Tata Motors Passenger Vehicles and Stellantis signed a definitive agreement on 12 October 2026 to co-develop vehicle architecture in India and manufacture at their Ranjangaon joint venture for export to more than 50 countries, extending a two-decade manufacturing tie into product engineering.",
+    category: "industry",
+    companyOrSector: "Automotive / trade",
+    publishedAt: "2026-10-12T16:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-stellantis-india-global-vehicle-hub"),
+    keyTakeaways: [
+      "TMPV will share product technology and vehicle architecture; Stellantis will adapt models for regulations across more than 50 markets.",
+      "Vehicles will be built at the Fiat India Automobiles plant near Pune, which already makes Jeep and Tata models.",
+      "The companies did not disclose investment amounts, model lines or production timelines in Monday’s statement.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, Tata Motors Passenger Vehicles and Stellantis formalised an expanded partnership to develop and build vehicles in India for global sale. Under the agreement, TMPV provides product technology and architecture while Stellantis uses its engineering teams to tailor vehicles to customer tastes, safety rules and road conditions in more than 50 markets. Output will come from the Ranjangaon plant operated by Fiat India Automobiles, the 50:50 joint venture near Pune that already builds Jeep Compass and Meridian models alongside Tata Nexon, Altroz and Curvv variants. The pact follows a February memorandum on deeper manufacturing and supply-chain cooperation and marks a shift from contract assembly toward shared product development.",
+      "What does this mean?",
+      "India’s domestic market is crowded, so export engineering is one way to keep large factories loaded when local demand cycles turn. Stellantis gains a lower-cost development base and access to TMPV platforms, while Tata strengthens its role as a technology supplier rather than only a volume player at home. The Ranjangaon site already exports to markets such as Japan and South Africa, so logistics and supplier clusters exist. Success still depends on homologation timelines and whether Stellantis brands can compete in target countries without diluting margins. For workers and suppliers around Pune, the deal signals sustained investment in powertrain and body shops even as electrification shifts model mixes.",
+      "Why should I care?",
+      "If you work in auto components, follow which platforms Stellantis certifies for export, because localisation rules can open new tooling contracts. Car buyers in India may see shared parts between Tata and global Jeep derivatives over time, which can help service networks but also blur brand positioning. Investors should treat Monday’s release as a strategic framework until the firms publish capex plans and model names. Watch Stellantis quarterly updates on Asia-Pacific sourcing, TMPV export volumes from Ranjangaon, and whether other global OEMs copy the India-as-engineering-hub playbook.",
+    ],
+  },
+  {
+    slug: "india-cpi-september-554-inflation",
+    title: "India’s September inflation print came in at 5.54%",
+    summary:
+      "Retail inflation rose to 5.54% in September 2026 from 4.83% in August, the highest reading in two years and above the 5.4% consensus in a Reuters poll, keeping price growth near the top of the Reserve Bank of India’s 2% to 6% tolerance band.",
+    category: "industry",
+    companyOrSector: "Macro / households",
+    publishedAt: "2026-10-12T16:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-cpi-september-554-inflation"),
+    keyTakeaways: [
+      "Headline CPI was 5.54% in September versus 4.83% in August, the fourth straight month above the RBI’s 4% target.",
+      "Food inflation ran at 5.97% year on year, with onions more than doubling and ginger and garlic up sharply in the release.",
+      "Economists cited in reporting expect the RBI may deliver further 25 basis point hikes after last week’s repo increase to 5.5%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Official data released on 12 October 2026 showed India’s retail inflation accelerated to 5.54% in September from 4.83% in August. The print was slightly above the 5.4% median forecast in a Reuters poll and marked the highest level in two years under the current series. Food prices rose 5.97% year on year, with onions more than doubling and ginger and garlic posting large gains, while a weaker rupee and higher fuel costs pushed transport inflation to about 5%. Restaurants and personal-care categories also printed strong increases. The release landed days after the Reserve Bank of India lifted its repo rate by 25 basis points to 5.5%, its first hike in nearly four years, and governor Sanjay Malhotra flagged headline CPI averaging near 5.8% over the coming three quarters.",
+      "What does this mean?",
+      "When inflation clusters above target for several months, the central bank has less room to wait for growth data. Grocery bills and commuting costs feed straight into household budgets, especially in cities where dining and services inflation ran near 9% to 14% in the release. Base effects from softer prices a year ago amplified the September reading, but economists quoted on the day still argued that broadening pressure justifies more tightening, with some expecting two additional 25 basis point moves through early 2027. Borrowers already facing higher EMIs after the October policy meeting may see banks pass through another leg if yields stay elevated. Equity and bond markets sold off earlier in the session as traders positioned for stickier inflation.",
+      "Why should I care?",
+      "Rebuild your monthly budget around staples that moved in the release, particularly vegetables and cooking inputs that can swing week to week. If you hold floating-rate debt, compare your lender’s reset calendar with the RBI meeting schedule. Savers may eventually see better deposit rates, but banks often lag the bond market. Watch October vegetable arrivals, the next RBI policy statement, and whether core inflation eases once festival demand fades. A sustained reading near 6% would keep political attention on food supply management as well as rates.",
+    ],
+  },
+  {
     slug: "mutual-funds-trim-gilt-holdings-rbi-hike",
     title: "Mutual funds sold another ₹5,100 crore of government bonds after the RBI hike",
     summary:
@@ -1238,6 +1310,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hcltech-anthropic-enterprise-ai-partnership": "companies",
+  "tata-stellantis-india-global-vehicle-hub": "companies",
+  "india-cpi-september-554-inflation": "policy",
   "mutual-funds-trim-gilt-holdings-rbi-hike": "policy",
   "india-electric-scooter-one-third-registrations": "companies",
   "rbi-oil-marketers-dollar-window": "policy",
