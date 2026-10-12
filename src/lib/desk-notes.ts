@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "zetwerk-manufacturing-ipo-price-band",
+    title: "Zetwerk set a ₹143–151 price band for its ₹5,000 crore IPO",
+    summary:
+      "Zetwerk Manufacturing fixed the price band for a ₹5,012 crore listing that opens on 15 October 2026. The issue mixes ₹2,830 crore of fresh shares with a ₹2,182 crore promoter and investor sell-down, valuing the contract manufacturer near ₹26,000 crore at the top of the band.",
+    category: "industry",
+    companyOrSector: "Manufacturing / capital markets",
+    publishedAt: "2026-10-12T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("zetwerk-manufacturing-ipo-price-band"),
+    keyTakeaways: [
+      "The IPO price band is ₹143 to ₹151 per share; one retail lot is 99 shares, or about ₹14,949 at the upper end.",
+      "Fresh issue size is ₹2,830 crore and the offer for sale is ₹2,182.3 crore.",
+      "Subscription runs 15–19 October 2026; listing on NSE and BSE is slated for 23 October after Dussehra settlement.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 11 October 2026, Zetwerk Manufacturing Business Ltd. announced the final price band for its initial public offering. Shares will be sold between ₹143 and ₹151 apiece in a ₹5,012 crore issue that opens for bidding on Thursday, 15 October. About ₹2,830 crore is a fresh issue to fund growth, while ₹2,182.3 crore comes from existing shareholders selling stock. At the top of the band the company would be valued near ₹26,000 crore. Retail investors get 10% of the book, qualified institutions 75%, and other non-institutional bidders 15%. Employees can bid at a ₹14 discount per share. Kotak, Morgan Stanley, Goldman Sachs, Avendus, JM Financial, HSBC, and Pantomath are managing the sale.",
+      "What does this mean?",
+      "Zetwerk sits in the business of sourcing and making industrial parts for sectors from defence to railways. A large fresh issue signals capacity and working-capital needs as customers ask for more local supply. The heavy offer-for-sale slice also shows early venture backers such as Peak XV, Accel, and Lightspeed taking partial exits after years of private funding. Promoter stake would fall from about 21% to roughly 16% once the deal closes. For manufacturing, the listing is less about a one-day pop and more about whether public-market scrutiny matches order-book visibility.",
+      "Why should I care?",
+      "If you chase IPO allotments, note the tight retail quota and the holiday calendar: the issue closes on 19 October, allotment is on 21 October, and trading begins on 23 October while Dussehra falls on 20 October. Industrial suppliers and auto OEMs should watch whether Zetwerk uses fresh proceeds to deepen vendor parks or overseas plants. Investors already holding diversified manufacturing names can treat this as another test of whether India’s factory platform stories can trade at premium valuations without consumer-brand gloss.",
+    ],
+  },
+  {
+    slug: "jsw-motors-combat-suv-december-launch",
+    title: "JSW Motors delayed its first SUV launch to 4 December",
+    summary:
+      "JSW Motors will unveil its Combat plug-in hybrid SUV on 4 December 2026, later than an earlier Diwali target. The model is based on Chery’s Jetour T2, targets roughly ₹30–50 lakh, and marks the steel group’s first passenger vehicle under its own badge separate from MG Motor India.",
+    category: "industry",
+    companyOrSector: "Automotive / consumers",
+    publishedAt: "2026-10-12T04:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jsw-motors-combat-suv-december-launch"),
+    keyTakeaways: [
+      "JSW Motors plans a 4 December 2026 launch for its Combat SUV after reports of an October debut slipped.",
+      "The plug-in hybrid pairs a 1.5-litre turbo petrol engine with an 18.4 kWh battery; reported combined output is about 360 hp.",
+      "Business Today cited a ₹30 lakh to ₹50 lakh price band, placing the SUV in the premium segment.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 12 October 2026 said JSW Motors will enter India’s passenger vehicle market with its first branded SUV on 4 December. The model, widely expected to be called Combat, was earlier tipped for an October launch around Diwali but has slipped to year-end. The vehicle builds on Chery Automobile’s Jetour T2 platform and is likely to use a plug-in hybrid setup: a 1.5-litre turbo petrol engine, an 18.4 kWh battery, and two electric motors delivering a reported 360 hp and 610 Nm through a three-speed hybrid gearbox. International specs suggest roughly 90 km of electric range and about 1,100 km of combined range, though Indian homologation numbers are not final. JSW is also building a plant at Chhatrapati Sambhajinagar in Maharashtra as it separates its own automotive line from the group’s MG Motor India partnership.",
+      "What does this mean?",
+      "Plug-in hybrids matter for buyers who want electric commuting without giving up long highway trips. A December launch means JSW misses the festive showroom rush but may gain time to localise specs, pricing, and charging bundles. Using a China-developed platform speeds time to market, yet service coverage and brand trust still need to be built from scratch. The reported ₹30 lakh to ₹50 lakh band pits Combat against established premium SUVs where buyers compare warranty networks as closely as torque figures. For the wider market, another credible entrant keeps pressure on incumbents to refresh hybrid line-ups rather than rely on diesel alone.",
+      "Why should I care?",
+      "If you are shopping in the premium SUV lane, wait for Indian efficiency certificates and on-road price before booking. Fleet and corporate buyers should map charging at offices and highways, not just brochure range. Watch JSW’s December reveal for final equipment, ADAS availability, and finance tie-ups, plus progress at the Maharashtra plant. Competitors from Tata, Mahindra, and Hyundai will read the price signal quickly; their festive discounts may look sharper if Combat arrives after the peak buying weeks.",
+    ],
+  },
+  {
     slug: "jio-bp-pump-fuel-price-hike",
     title: "Jio-bp raised petrol by ₹5 a litre at the pump on Sunday",
     summary:
@@ -1118,6 +1166,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "zetwerk-manufacturing-ipo-price-band": "markets",
+  "jsw-motors-combat-suv-december-launch": "companies",
   "jio-bp-pump-fuel-price-hike": "policy",
   "festive-emi-online-big-ticket-sales": "markets",
   "electric-ambulance-pm-edrive-stall": "policy",

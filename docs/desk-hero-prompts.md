@@ -304,6 +304,22 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Ship hull under construction |
 | Metaphor left | Route arcs toward Japan/Korea dots |
 
+### `zetwerk-manufacturing-ipo-price-band`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Contract manufacturing scale meets public capital |
+| Subject right | Industrial factory / precision parts motif |
+| Metaphor left | Fresh capital pipe into expanding production lines |
+
+### `jsw-motors-combat-suv-december-launch`
+
+| Field | Value |
+|-------|--------|
+| Core idea | New automaker bets on plug-in hybrid range |
+| Subject right | Stylised boxy SUV silhouette |
+| Metaphor left | Calendar shift + dual fuel/battery range curve |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
