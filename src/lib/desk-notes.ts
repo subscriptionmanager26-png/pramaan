@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "mutual-funds-trim-gilt-holdings-rbi-hike",
+    title: "Mutual funds sold another ₹5,100 crore of government bonds after the RBI hike",
+    summary:
+      "Indian asset managers offloaded a net ₹5,100 crore of government securities in the three sessions after the Reserve Bank of India’s rate increase, adding to about ₹37,800 crore of sales between July and September as managers cut duration risk.",
+    category: "industry",
+    companyOrSector: "Debt markets / policy",
+    publishedAt: "2026-10-12T11:23:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mutual-funds-trim-gilt-holdings-rbi-hike"),
+    keyTakeaways: [
+      "Funds sold a net ₹5,100 crore of government bonds in the three sessions after the RBI rate move.",
+      "July–September sales totalled about ₹37,800 crore, or roughly $4.5 billion, before the latest leg.",
+      "The 10-year benchmark yield traded near 7.35%, its highest in nearly three years.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 12 October 2026 said Indian mutual funds are preparing to sell more government bonds after the Reserve Bank of India raised its policy rate for the first time in nearly four years and signalled further tightening to fight inflation. Fund managers told Reuters they have already cut exposure to longer-dated gilts. In the three trading sessions immediately after the hike, asset managers sold a net ₹5,100 crore of government securities. That followed roughly ₹37,800 crore of net sales between July and September, about $4.5 billion in total. The five-year government bond yield topped 7.05%, up almost 70 basis points in two months, while the 10-year yield hovered near 7.35%, the highest in nearly three years.",
+      "What does this mean?",
+      "When the central bank turns hawkish, bond prices fall and yields rise. Mutual funds that held long-maturity government paper face mark-to-market losses if they stand still, so many shift toward shorter corporate and ultra-short debt where carry is still attractive. Managers at SBI Mutual Fund, Tata Asset Management, Invesco, Axis, Aditya Birla Sun Life, and Bandhan described trimming duration, with some cutting weighted average maturity to under a year from far longer books. Heavy open market sales of bonds by the RBI last month also changed who absorbs supply. Households feel this indirectly through fixed-income fund NAVs and through higher borrowing costs as yields feed loan pricing.",
+      "Why should I care?",
+      "If you own gilt or long-duration debt funds, read the portfolio maturity in the latest factsheet and expect volatility while the hiking cycle plays out. If you rely on bank FDs, rising market yields may eventually lift deposit rates, but banks often lag the bond market. Borrowers on floating home loans should already be repricing after the repo move; bond fund losses are a separate pocket of your balance sheet. Watch the RBI’s next open market operations, monthly debt fund flow data, and whether 10-year yields push toward the 7.20–7.40% range fund managers are citing.",
+    ],
+  },
+  {
+    slug: "india-electric-scooter-one-third-registrations",
+    title: "Electric scooters made up one in three new registrations in September",
+    summary:
+      "Battery-powered scooters accounted for about 33% of India’s scooter registrations in September 2026, up from 22% a year earlier, with more than 2.07 lakh electric two-wheelers registered as upfront prices narrow against petrol rivals.",
+    category: "industry",
+    companyOrSector: "Auto / consumers",
+    publishedAt: "2026-10-12T11:13:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-electric-scooter-one-third-registrations"),
+    keyTakeaways: [
+      "Electric scooters were roughly 33% of total scooter registrations in September 2026 versus 22% in September 2025.",
+      "More than 2.07 lakh electric two-wheelers were registered in the month, a segment record.",
+      "In Delhi, TVS iQube on-road pricing near ₹1.02 lakh matched Honda Activa 110 DLX in reporting.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, reporting on India’s two-wheeler market said electric scooters reached a new share milestone in September. VAHAN registration data show battery-powered scooters made up about 33% of all scooter registrations, up 11 percentage points from roughly 22% in the same month a year earlier. More than 2.07 lakh electric two-wheelers were registered, the highest monthly tally for the segment. Manufacturers have widened model choice and competed on price while buyers compare running costs against petrol scooters. In Delhi, the effective on-road price of a TVS iQube was cited near ₹1.02 lakh, in line with a Honda Activa 110 DLX, narrowing the upfront gap that once slowed adoption.",
+      "What does this mean?",
+      "Scooters are a daily commute vehicle for millions of households, so when one in three new registrations is electric, the shift is structural rather than a subsidy blip. Lower per-kilometre energy cost matters once purchase prices look comparable. Petrol price anxiety after Middle East supply scares in early 2026 added another push in reporting. The pattern sits alongside other mobility data from the same month, including strong electric three-wheeler share, but scooters are a larger consumer category for urban middle-income buyers. Incumbents such as TVS, Bajaj, Ather, and Hero are all fighting for share; Ola Electric remains a smaller slice of the electric pie even after rights-issue fundraising.",
+      "Why should I care?",
+      "If you are choosing your next two-wheeler, compare total cost over three to five years: battery warranty, home charging, and service reach in your city. Fleet and delivery buyers should weigh resale and downtime, not just sticker price. If you invest in auto stocks, treat September as one strong print, not proof that every OEM wins equally. Watch October festive wholesale data, state subsidy tweaks, and finance company appetite for petrol inventory left on dealer lots.",
+    ],
+  },
+  {
+    slug: "rbi-oil-marketers-dollar-window",
+    title: "The RBI will meet Indian Oil, HPCL and BPCL dollar needs from 12 October",
+    summary:
+      "From 12 October 2026 the Reserve Bank of India will sell dollars to Indian Oil, Hindustan Petroleum, and Bharat Petroleum through a special window via designated banks, covering their daily foreign-exchange requirements and keeping those purchases off the spot market.",
+    category: "industry",
+    companyOrSector: "RBI / oil importers",
+    publishedAt: "2026-10-12T09:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-oil-marketers-dollar-window"),
+    keyTakeaways: [
+      "The RBI will supply the full daily dollar requirement of the three state-run oil marketing companies from 12 October 2026.",
+      "Dollars are provided through designated banks; OMC purchases leave the spot FX market.",
+      "The rupee opened near 95.76 per dollar on Monday versus 96.73 on Friday after the weekend package.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, markets opened after a Reserve Bank of India weekend package aimed at steadying the rupee. From this date the RBI will meet the entire daily dollar requirement of Indian Oil Corporation, Hindustan Petroleum Corporation, and Bharat Petroleum Corporation through a special window. Dollars are sold via designated banks, and the oil companies’ purchases are kept out of the spot foreign-exchange market. Reporting linked the step to heavy dollar demand from crude and product imports while the rupee had traded near record weakness. The rupee opened around 95.76 per dollar on Monday, about 97 paise stronger than Friday’s 96.73 close, though economists cautioned the relief may be partial if oil stays expensive and portfolio outflows continue.",
+      "What does this mean?",
+      "India imports most of its crude. State refiners and marketers are among the steadiest dollar buyers, so routing them through a central bank window removes a large, predictable slice of spot demand. That can calm short-term volatility and forward premiums even when the broader balance of payments stays pressured. Reserves, which had risen after mid-year deposit windows and then slipped toward $734 billion by early October, will be watched more closely as the RBI supplies dollars directly. BPCL separately lined up plans for up to $3 billion in international bonds to fund offshore projects and refinance maturities, but the window addresses daily import funding rather than those bond plans.",
+      "Why should I care?",
+      "A firmer rupee on the open helps importers and anyone with dollar loans, but it does not automatically cut petrol prices at the pump if global crude stays high. Travellers and students paying overseas fees still face a currency that has weakened sharply over the year. If you hedge imports, banks may pass on higher compliance costs from the companion derivative rules announced the same weekend. Watch weekly reserve data, whether PSU pump prices move after private retailers hiked rates, and if portfolio outflows ease enough for the rupee to hold Monday’s gain.",
+    ],
+  },
+  {
     slug: "zetwerk-manufacturing-ipo-price-band",
     title: "Zetwerk set a ₹143–151 price band for its ₹5,000 crore IPO",
     summary:
@@ -1166,6 +1238,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "mutual-funds-trim-gilt-holdings-rbi-hike": "policy",
+  "india-electric-scooter-one-third-registrations": "companies",
+  "rbi-oil-marketers-dollar-window": "policy",
   "zetwerk-manufacturing-ipo-price-band": "markets",
   "jsw-motors-combat-suv-december-launch": "companies",
   "jio-bp-pump-fuel-price-hike": "policy",

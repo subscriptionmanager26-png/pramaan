@@ -320,6 +320,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Stylised boxy SUV silhouette |
 | Metaphor left | Calendar shift + dual fuel/battery range curve |
 
+### `mutual-funds-trim-gilt-holdings-rbi-hike`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Duration risk cut as RBI tightens |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Shrinking gilt ladder bars |
+
+### `india-electric-scooter-one-third-registrations`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Scooter buyers cross to battery at price parity |
+| Subject right | Stylised electric scooter silhouette |
+| Metaphor left | Pie wedge at one-third share |
+
+### `rbi-oil-marketers-dollar-window`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Central bank dollars keep oil importers off spot FX |
+| Subject right | RBI / policy architecture |
+| Metaphor left | Dollar pipe from reserves to refinery motif |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
