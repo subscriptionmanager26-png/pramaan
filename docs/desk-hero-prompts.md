@@ -432,6 +432,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Auto parts / gear motif |
 | Metaphor left | Supply arc India–East Asia with component pipeline |
 
+### `paytm-first-games-gst-demand-cut`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Tax demand shrinks but compliance risk stays on gaming revenue |
+| Subject right | Abstract ledger / compliance motif |
+| Metaphor left | Shrinking penalty stack on digital tokens |
+
+### `pngrb-five-percent-hydrogen-piped-gas`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Hydrogen mixed into home piped gas under safety rules |
+| Subject right | City gas pipeline / meter motif |
+| Metaphor left | Small hydrogen molecule joining methane flow |
+
+### `sebi-tighter-ipo-proceeds-monitoring`
+
+| Field | Value |
+|-------|--------|
+| Core idea | IPO cash tracked; promoters face demat freeze risk |
+| Subject right | Policy / exchange architecture |
+| Metaphor left | Locked vault on proceeds pipe |
+
+### `pnc-infratech-nhai-debarment-stay`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Highway debarment paused while courts review |
+| Subject right | Expressway / toll plaza silhouette |
+| Metaphor left | Pause gate over contract scroll |
+
 ### `aditya-birla-renewables-shell-loan-refinance`
 
 | Field | Value |

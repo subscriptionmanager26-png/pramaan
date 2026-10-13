@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "pnc-infratech-nhai-debarment-stay",
+    title: "PNC Infratech won a Delhi High Court stay on NHAI debarment orders",
+    summary:
+      "On 13 October 2026, PNC Infratech said the Delhi High Court stayed National Highways Authority of India debarment orders issued in September against the company and its Awadh Expressway special purpose vehicle, pending further hearings.",
+    category: "industry",
+    companyOrSector: "Infrastructure / highways",
+    publishedAt: "2026-10-13T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pnc-infratech-nhai-debarment-stay"),
+    keyTakeaways: [
+      "NHAI had issued debarment orders on 3 and 11 September 2026 against Awadh Expressway and PNC Infratech.",
+      "The Delhi High Court order dated 12 October 2026 stayed the effect of both debarments until further orders.",
+      "PNC Infratech disclosed the stay on 13 October after downloading the court order from the High Court website.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, highway builder PNC Infratech told stock exchanges that the Delhi High Court has stayed debarment orders issued by the National Highways Authority of India. NHAI had barred the company and its special purpose vehicle Awadh Expressway Pvt Ltd in separate orders dated 3 September and 11 September 2026. A High Court order dated 12 October keeps those debarments in abeyance until further directions. PNC Infratech said it obtained a copy of the order from the court website on 13 October. Debarment from NHAI work can block new bids and strain cash flow on existing projects, so contractors often challenge the orders quickly.",
+      "What does this mean?",
+      "NHAI uses debarment when it believes a concessionaire or EPC contractor breached contract terms or delivery milestones. A stay does not erase the dispute; it restores the ability to bid and execute while judges review evidence. For lenders and joint-venture partners, the signal is that legal risk sits alongside engineering risk on expressway packages. Other road developers watch whether courts narrow NHAI’s discretion or uphold long bans when projects slip. The Awadh Expressway SPV sits inside the group structure, so a ban on the SPV can still ripple through consolidated order books even when the parent looks solvent.",
+      "Why should I care?",
+      "If you hold infrastructure bonds or shares tied to toll roads, read the next court dates and NHAI’s reply affidavits before assuming the stay becomes a permanent win. Subcontractors on affected projects should confirm payment security while litigation runs. Policy watchers should track whether the Centre pushes faster dispute resolution on highway contracts as India keeps adding lane kilometres. The story is about who can keep building when the client and contractor disagree on performance, not about a single day’s stock move.",
+    ],
+  },
+  {
+    slug: "sebi-tighter-ipo-proceeds-monitoring",
+    title: "SEBI wants tougher checks on how listed firms spend IPO cash",
+    summary:
+      "On 13 October 2026, the Securities and Exchange Board of India issued a consultation paper proposing mandatory monitoring agencies for all issuers, ₹50,000 fines for non-cooperation, and eventual freezes on promoters’ demat accounts if companies misuse public-issue proceeds.",
+    category: "industry",
+    companyOrSector: "Markets / regulation",
+    publishedAt: "2026-10-13T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-tighter-ipo-proceeds-monitoring"),
+    keyTakeaways: [
+      "SEBI’s 13 October consultation reviews how issuers track and disclose use of money raised through public offers.",
+      "The draft would make monitoring-agency appointments mandatory for all issuers and add penalties for stonewalling.",
+      "Promoters who keep misusing proceeds could face demat account freezes after repeated non-compliance.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, the Securities and Exchange Board of India published a consultation paper to tighten how listed companies monitor money raised from initial public offerings and follow-on issues. The draft sits under the Listing Obligations and Disclosure Requirements regulations. SEBI proposes making the appointment of an independent monitoring agency mandatory for all issuers, not only the largest deals. It also suggests ₹50,000 penalties when companies or promoters fail to cooperate with monitoring reports, escalating toward freezing promoters’ demat accounts if misuse continues. The paper asks market participants to comment on timelines, reporting formats, and how agencies should verify that cash went to stated objects such as capacity expansion or debt reduction.",
+      "What does this mean?",
+      "Retail investors often buy IPOs on growth stories; regulators worry that proceeds quietly fund unrelated ventures or promoter loans. A mandatory monitoring layer adds cost and paperwork for issuers but gives shareholders a third-party paper trail. Banks and merchant bankers may need stronger comfort letters before signing offer documents. For founders, the demat freeze threat raises the stakes on internal approvals for capex shifts after listing. The move fits a broader SEBI push seen the same week, including easier rules on revising fresh issue sizes extended to March 2027, showing regulators balancing capital-raising flexibility with post-listing discipline.",
+      "Why should I care?",
+      "If you subscribe to new listings, read future offer documents for who the monitoring agency is and what quarterly certificates they must file. Founders planning IPOs should budget for agency fees and tighter board minutes when reallocating proceeds. Existing listed firms with unused issue cash should expect sharper questions from exchanges. Watch the final rules for carve-outs on small issuers and how quickly demat freezes could bite. The change is about trust in the primary market, not day-to-day trading in secondary shares.",
+    ],
+  },
+  {
+    slug: "pngrb-five-percent-hydrogen-piped-gas",
+    title: "India’s gas regulator proposed up to 5% hydrogen in home piped gas",
+    summary:
+      "On 13 October 2026, the Petroleum and Natural Gas Regulatory Board issued draft guidelines allowing city gas distributors to blend up to 5% hydrogen by volume into natural gas sold to domestic piped-gas customers, subject to safety, metering, and appliance checks.",
+    category: "industry",
+    companyOrSector: "Energy / households",
+    publishedAt: "2026-10-13T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pngrb-five-percent-hydrogen-piped-gas"),
+    keyTakeaways: [
+      "PNGRB’s draft caps hydrogen blending at 5% by volume for domestic piped natural gas supplied through city gas networks.",
+      "Distributors must meet safety, infrastructure, appliance compatibility, metering, and billing standards before commercial supply.",
+      "The framework targets household DPNG consumers rather than industrial buyers in its first phase.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, reporting on a Petroleum and Natural Gas Regulatory Board proposal said India could allow up to 5% hydrogen blending by volume in natural gas delivered to domestic piped-gas customers through city gas distribution networks. The draft guidelines set conditions on safety systems, pipeline integrity, appliance compatibility, metering, and billing before distributors sell hydrogen-enriched gas to households. PNGRB is seeking comments as part of a wider push to use cleaner molecules in existing gas infrastructure. Blending lets utilities test hydrogen without building entirely separate last-mile networks, but kitchen burners and boilers must tolerate the mix.",
+      "What does this mean?",
+      "City gas companies such as Indraprastha Gas, Mahanagar Gas, and Gujarat Gas already pipe methane into apartments. A 5% hydrogen cap is a pilot-scale change: it can lower carbon intensity slightly while regulators learn how meters and stoves behave. Distributors will need retrofit plans for vulnerable appliances and clear customer communication because hydrogen burns hotter and can affect flame characteristics. For green hydrogen producers, the rule opens a offtake path beyond refineries and fertiliser plants. States competing for hydrogen hubs may tie incentives to utilities that meet PNGRB’s compliance checklist.",
+      "Why should I care?",
+      "If your building uses piped gas, watch distributor notices before any blend reaches your meter; landlords may need to certify appliances. Energy investors should pair this policy with state hydrogen subsidies and electrolyser costs to see if economics work at 5% blends. Industrial users are not the first target in this draft, so factories should not assume the same limits apply to their contracts. Comment periods and final notifications will set effective dates and penalties for non-compliant networks.",
+    ],
+  },
+  {
+    slug: "paytm-first-games-gst-demand-cut",
+    title: "Paytm’s gaming unit saw its GST demand cut from ₹5,712 crore to ₹704 crore",
+    summary:
+      "One97 Communications said on 13 October 2026 that tax authorities reduced a goods and services tax demand on subsidiary First Games Technology to about ₹704 crore from an earlier proposed ₹5,712 crore for April 2018 to March 2023, with penalty and interest still applicable.",
+    category: "industry",
+    companyOrSector: "Fintech / gaming",
+    publishedAt: "2026-10-13T22:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("paytm-first-games-gst-demand-cut"),
+    keyTakeaways: [
+      "The Additional Commissioner CGST Noida issued a revised order on 12 October 2026 setting tax demand at ₹703.66 crore.",
+      "The earlier show-cause notice had proposed ₹5,712 crore of tax for the five-year period on First Games.",
+      "Paytm said the revision has no material financial impact at the consolidated level but penalty equal to tax and interest remain in play.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, Paytm parent One97 Communications told exchanges that goods and services tax authorities slashed a demand on its gaming subsidiary First Games Technology Pvt Ltd. An order dated 12 October from the Additional Commissioner of Central GST in Noida set tax liability at about ₹704 crore for April 2018 through March 2023, down from a show-cause notice that had sought roughly ₹5,712 crore. The company said the order also proposes a penalty equal to the tax and applicable interest. First Games received the document on 12 October. Paytm stated there is no material financial impact on consolidated results from the revision, but the case is part of a wider tax scrutiny on online real-money gaming and platform fees.",
+      "What does this mean?",
+      "GST disputes on gaming and digital goods often hinge on whether fees qualify as actionable claims, services, or bets subject to different rates. A sharp cut suggests auditors and adjudicators narrowed the taxable base or time period, yet ₹704 crore remains a large number for a subsidiary. Payment apps with gaming or fantasy sports exposure must keep provisioning for litigation even when headlines show relief. Regulators continue to tighten permissible formats, so tax outcomes and product rules move together. Investors should separate one order from group liquidity; Paytm’s statement points investors to consolidated accounts rather than unit-level cash calls.",
+      "Why should I care?",
+      "If you use real-money gaming apps, tax cases can change fee structures or promotions if companies pass compliance costs to players. If you hold fintech listings, monitor whether other states copy Uttar Pradesh’s assessment approach and if appeals reopen higher numbers. Policy watchers should track GST Council guidance on games of skill versus chance because tax demands follow product classification. Watch appellate tribunals for the penalty and interest components even after the base tax fell.",
+    ],
+  },
+  {
     slug: "upi-mdr-fee-delay-diwali",
     title: "NPCI pushed UPI merchant fees to after Diwali",
     summary:
@@ -1598,6 +1694,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "pnc-infratech-nhai-debarment-stay": "policy",
+  "sebi-tighter-ipo-proceeds-monitoring": "policy",
+  "pngrb-five-percent-hydrogen-piped-gas": "policy",
+  "paytm-first-games-gst-demand-cut": "policy",
   "upi-mdr-fee-delay-diwali": "policy",
   "polycab-nclat-stays-insolvency-petition": "policy",
   "spicejet-pilots-salary-standoff": "companies",
