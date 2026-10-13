@@ -408,6 +408,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | E-commerce cart / package motif |
 | Metaphor left | Locked option certificates behind calendar wall |
 
+### `fssai-quick-commerce-food-labels`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Platforms accountable for food labels and dark kitchens |
+| Subject right | Delivery app / phone motif (no brand) |
+| Metaphor left | Expiry stamps + narrowing compliance gate |
+
+### `adani-dharavi-matunga-rehab-towers`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Formal rehab housing replaces informal settlement at scale |
+| Subject right | High-rise tower silhouettes |
+| Metaphor left | Foundation blocks + timeline chevrons to 2029 |
+
+### `auto-suppliers-china-sourcing-offices`
+
+| Field | Value |
+|-------|--------|
+| Core idea | OEMs move procurement closer to China component hubs |
+| Subject right | Auto parts / gear motif |
+| Metaphor left | Supply arc India–East Asia with component pipeline |
+
+### `aditya-birla-renewables-shell-loan-refinance`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Project rupee loans replace bridge debt for clean-energy M&A |
+| Subject right | Bank facade |
+| Metaphor left | Rupee pipes into solar/wind project blocks |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

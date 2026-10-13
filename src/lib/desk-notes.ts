@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fssai-quick-commerce-food-labels",
+    title: "India’s food regulator will make quick-commerce apps show expiry dates and answer for dark kitchens",
+    summary:
+      "Food Safety and Standards Authority of India chief executive Rajit Punhani said in an interview reported on 13 October 2026 that online grocery platforms face tighter listing rules, including manufacturing and expiry dates on packs, photos and addresses for dark kitchens, and accountability when sellers mislabel products.",
+    category: "industry",
+    companyOrSector: "Food / e-commerce",
+    publishedAt: "2026-10-13T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-quick-commerce-food-labels"),
+    keyTakeaways: [
+      "FSSAI plans mandatory expiry dates, batch numbers, and manufacturing details on online food listings.",
+      "Blinkit, Swiggy Instamart, Flipkart, and Amazon’s India marketplace have faced regulatory action on misbranding and licensing in recent months.",
+      "Nationwide inspections roughly doubled to about 700,000 between April and September 2026 versus a year earlier.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, reporting based on an interview with Food Safety and Standards Authority of India chief executive Rajit Punhani said e-commerce is the regulator’s next enforcement focus. FSSAI wants quick-commerce and marketplace apps to display manufacturing dates, expiry dates, and batch numbers on food listings, and to take responsibility when manufacturers make misleading claims. The authority is also weighing rules that would require photographs and street addresses for dark kitchens, plus tighter checks on dark stores so frozen and chilled items stay within temperature limits. Punhani said prosecutions tied to online platforms rose five- to sixfold over the past year even as platforms improve compliance. Blinkit, Swiggy’s Instamart, Flipkart, and Amazon’s India unit have already faced notices on issues from misbranding to invalid licenses. Grocery is a large slice of India’s roughly $80 billion online retail market, so listing standards can change how millions of households order dinner and staples.",
+      "What does this mean?",
+      "Quick delivery grew by promising speed. Regulators now treat the app as part of the food chain, not just a billboard. When a pack photo hides an old expiry date, the platform may share liability with the seller. Dark kitchens that operate without a visible address are harder to inspect; forcing location disclosure raises the cost of cutting corners. The push sits inside a wider sweep that also covers hotels, restaurants, and supplement brands, including recent action on a Dr Reddy’s–Nestle health drink over GLP-linked marketing claims. Large food companies are challenging some FSSAI notices in court, which can slow penalties but does not remove the direction of travel. For consumers, the practical change is more label information before checkout and fewer grey-area listings.",
+      "Why should I care?",
+      "If you order groceries on an app, compare expiry dates across sellers once the rules land and report listings that look off. Restaurant and cloud-kitchen operators should expect photo and address disclosures to become routine. Investors in listed platforms should watch compliance costs and any limits on SKU count if delistings rise. Policy watchers should track whether state drug and food inspectors match FSSAI’s pace, because most on-ground checks still happen outside Delhi. The test over the next two quarters is whether platforms publish the new fields without slowing delivery promises.",
+    ],
+  },
+  {
+    slug: "adani-dharavi-matunga-rehab-towers",
+    title: "Construction started on 10,432 Dharavi rehabilitation flats at a Matunga site",
+    summary:
+      "Adani Navbharat Developers held a ground-breaking ceremony on 12 October 2026 for 10 high-rise towers with 10,432 homes and 1,379 commercial units on 22 acres of railway land in Matunga, with the first five buildings slated for handover by March 2029.",
+    category: "industry",
+    companyOrSector: "Urban housing / Maharashtra",
+    publishedAt: "2026-10-13T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-dharavi-matunga-rehab-towers"),
+    keyTakeaways: [
+      "Ten towers on a 22-acre Matunga parcel will hold 10,432 rehabilitation apartments plus 1,379 commercial and industrial units.",
+      "Eligible Dharavi residents are slated to receive 350-square-foot homes under the in-situ rehabilitation plan.",
+      "The developer targets handover of the first five towers by March 2029, with remaining blocks through August 2030.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, Adani Navbharat Developers, the special-purpose vehicle for the Dharavi Redevelopment Project, held a bhoomi pujan at a 22-acre railway land parcel in Matunga, Mumbai, marking the start of construction on the rehabilitation component. The plan calls for 10 towers with 37 to 39 floors, housing 10,432 residential units and 1,379 commercial and industrial spaces for eligible Dharavi residents. Homes under the in-situ scheme are sized at 350 square feet. The developer said the first five towers should be handed to the Dharavi Redevelopment Project and Slum Rehabilitation Authority by March 2029, two more by August 2029, and the final three by August 2030. Residents from Dharavi sectors 6 and 1 are first in line for the Matunga site, followed by about 4,500 additional eligible families on a priority basis.",
+      "What does this mean?",
+      "Dharavi’s redevelopment has been debated for decades because it mixes dense informal housing with small businesses. Moving families into formal towers on separate land is a way to keep construction moving while the wider 600-acre master plan advances. High-rise rehab also frees ground space elsewhere for commercial development that cross-subsidises free homes. The schedule implies roughly three years of heavy civil work before keys change hands, so daily life in the settlement will stay noisy and dusty for years. Success depends on transparent eligibility lists, temporary transit housing, and whether commercial units truly replace lost ground-floor workshops.",
+      "Why should I care?",
+      "If you live or work in Dharavi, track eligibility notices and the order in which sectors move. Mumbai homebuyers elsewhere should not assume this parcel adds private inventory; these units are reserved for rehabilitated residents. Contractors and building-material suppliers may see sustained demand along the Central line. Watch construction milestones each quarter, court challenges to land use, and whether the Slum Rehabilitation Authority publishes handover dates block by block. The project remains politically sensitive, so delays or design changes can surface quickly in state media.",
+    ],
+  },
+  {
+    slug: "auto-suppliers-china-sourcing-offices",
+    title: "Ceat, Ather, and Lumax are opening China sourcing teams as metal costs bite",
+    summary:
+      "Reporting on 13 October 2026 said at least three Indian auto and component firms, including Ceat, Ather Energy, and Lumax Auto Technologies, are setting up subsidiaries or hiring locally in China to secure parts and manage rising aluminium and copper prices, while China’s share of India’s auto-component imports reached 36% in FY26.",
+    category: "industry",
+    companyOrSector: "Autos / supply chain",
+    publishedAt: "2026-10-13T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("auto-suppliers-china-sourcing-offices"),
+    keyTakeaways: [
+      "Ceat, Ather Energy, and Lumax Auto Technologies are building China-facing sourcing teams or local entities, per 13 October 2026 reporting.",
+      "China supplied 36% of India’s auto-component imports in FY26, up from 32% a year earlier, according to ACMA data cited in the report.",
+      "Higher aluminium and copper prices plus Chinese export controls on rare earths are pushing firms closer to suppliers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, media reports said Indian auto and ancillary companies are placing staff and legal entities in China to buy components more cheaply and reliably. Tyremaker Ceat, electric-scooter maker Ather Energy, and Lumax Auto Technologies were named among firms setting up resource centres or subsidiaries and hiring local executives. The moves come as aluminium and copper prices climbed this year on electrification demand and tight supply, squeezing margins for vehicle makers and their vendors. China’s share of India’s auto-component imports rose to 36% in the year to March 2026 from 32% a year earlier, according to the Automotive Component Manufacturers Association figures cited in the coverage. Separately, export controls Beijing introduced in April 2025 on rare earths and magnets have complicated access to materials used in motors and sensors.",
+      "What does this mean?",
+      "India still assembles millions of vehicles at home, but the bill of materials crosses borders. When metals inflate, every rupee saved on a harness or magnet matters. A China office does not mean shifting final assembly; it is procurement insurance. Firms can audit factories, negotiate in local currency, and respond faster when Beijing tweaks export permits. The strategy sits awkwardly next to government pushes for localisation, yet managers argue there is no quick domestic substitute for some precision parts. If more suppliers follow, India’s trade data may show even higher component imports even as finished vehicle exports rise.",
+      "Why should I care?",
+      "Car and two-wheeler buyers may see fewer sudden production gaps on popular models when chip or magnet supply hiccups hit. Component SMEs in India should expect tougher price benchmarks from OEMs that now compare quotes directly with Chinese plants. Investors in tyremakers and EV makers should read annual reports for capex on overseas sourcing teams, not only domestic fabs. Policy watchers should track whether New Delhi adjusts import duties or incentive schemes as firms deepen China ties while marketing ‘Make in India’ at home.",
+    ],
+  },
+  {
+    slug: "aditya-birla-renewables-shell-loan-refinance",
+    title: "Aditya Birla Renewables is lining up about $1.5 billion of rupee loans to fund its Shell renewables buy",
+    summary:
+      "Reporting on 9 October 2026 said Aditya Birla Renewables is seeking about $1.5 billion in rupee project loans from Indian banks to finance its $1.8 billion acquisition of Shell unit Solenergi Power, replacing a costlier $1.6 billion bridge facility from MUFG Bank.",
+    category: "industry",
+    companyOrSector: "Renewables / M&A",
+    publishedAt: "2026-10-13T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("aditya-birla-renewables-shell-loan-refinance"),
+    keyTakeaways: [
+      "Aditya Birla Renewables agreed in July 2026 to buy Solenergi Power, which includes Sprng Energy, for about $1.8 billion enterprise value.",
+      "Bankers told reporters the group is pitching roughly $1.5 billion of rupee term loans split across 17–20 project special-purpose vehicles.",
+      "Loan tenors could cover about 80% of project life, reducing reliance on short-term bridge debt.",
+    ],
+    body: [
+      "What's going on here?",
+      "In July 2026, Grasim Industries said its unit Aditya Birla Renewables would acquire 100% of Solenergi Power from a Shell subsidiary at an enterprise value of about $1.8 billion, bringing the Sprng Energy portfolio of Indian wind and solar assets under domestic ownership. Reporting dated 9 October 2026, citing bankers familiar with the talks, said the buyer now wants roughly $1.5 billion of rupee-denominated project finance from lenders including State Bank of India and HDFC Bank. The plan would replace or shrink a $1.6 billion bridge loan commitment from Japan’s MUFG Bank that was arranged to close the deal quickly. Because the acquisition has not yet closed, the company has time to line up longer-dated debt tied to individual plants.",
+      "What does this mean?",
+      "Bridge loans suit signing day, but they charge for urgency. Moving to 15- or 20-year rupee facilities matched to cash flows from operating and under-construction projects can cut refinancing risk. Splitting borrowings across 17 to 20 special-purpose vehicles is standard in renewables, where each wind or solar park has its own power purchase agreement and revenue stream. For Indian banks, the deal is another chance to lend into energy transition assets without taking dollar mismatch on their books. For the seller, Shell exits a portfolio while Indian conglomerates consolidate fragmented clean-power platforms.",
+      "Why should I care?",
+      "If you hold bank stocks, watch disclosure on exposure to Aditya Birla Renewables SPVs in coming quarters. Industrial power buyers may eventually contract with a larger domestic generator once integration finishes. Households see the impact indirectly through faster renewable additions if cheaper debt speeds construction. Track the closing date, final loan pricing versus the bridge, and whether regulators clear any change-of-control on existing power contracts.",
+    ],
+  },
+  {
     slug: "hcltech-q2-deal-bookings-slow-growth",
     title: "HCLTech signed $3.3 billion of new deals but posted its slowest September-quarter growth in three years",
     summary:
@@ -1430,6 +1526,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fssai-quick-commerce-food-labels": "policy",
+  "adani-dharavi-matunga-rehab-towers": "policy",
+  "auto-suppliers-china-sourcing-offices": "companies",
+  "aditya-birla-renewables-shell-loan-refinance": "companies",
   "hcltech-q2-deal-bookings-slow-growth": "companies",
   "indian-gas-exchange-sebi-ipo-nod": "markets",
   "rbl-bank-thousand-branch-expansion": "companies",
