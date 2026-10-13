@@ -368,6 +368,14 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Abstract server / workflow motif |
 | Metaphor left | Shielded agent nodes feeding a product stack |
 
+### `hcltech-q2-deal-bookings-slow-growth`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Big deal wins while legacy IT growth stays muted |
+| Subject right | Corporate tower / services campus silhouette |
+| Metaphor left | Thick contract stack beside a flat growth line |
+
 ### `indian-gas-exchange-sebi-ipo-nod`
 
 | Field | Value |

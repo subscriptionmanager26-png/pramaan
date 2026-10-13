@@ -26,6 +26,30 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hcltech-q2-deal-bookings-slow-growth",
+    title: "HCLTech signed $3.3 billion of new deals but posted its slowest September-quarter growth in three years",
+    summary:
+      "HCL Technologies reported on 12 October 2026 that new order bookings reached $3.3 billion in the September quarter, lifting first-half wins to a record $5.67 billion, even as revenue growth slowed to about 2.2% year on year in dollar terms and management flagged early-stage AI-led deflation in legacy work.",
+    category: "company",
+    companyOrSector: "HCLTech / IT services",
+    publishedAt: "2026-10-13T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hcltech-q2-deal-bookings-slow-growth"),
+    keyTakeaways: [
+      "New order bookings were $3.3 billion in the September 2026 quarter; first-half deal wins totaled $5.67 billion, which management called a record for the half.",
+      "Revenue was about $3.72 billion, up roughly 2% sequentially and 2.2% year on year, the slowest September-quarter growth in three years.",
+      "Advanced AI revenue rose about 28% sequentially to $219 million; FY27 constant-currency growth guidance was narrowed to roughly 2.5% to 4%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 12 October 2026, HCL Technologies published results for the quarter ended 30 September 2026. Revenue reached about $3.72 billion, up roughly 2% from the June quarter and about 2.2% from a year earlier in dollar terms, beating analyst estimates near $3.68 billion but marking the slowest September-quarter growth in three years. New order bookings totaled $3.3 billion, taking first-half wins to $5.67 billion, which the company described as a record for the first half. Net profit rose about 10% sequentially to $538 million. Advanced AI revenue climbed about 28% sequentially to $219 million. The board declared a second interim dividend of ₹12 per share with a record date of 16 October 2026. Headcount grew by 6,450 people in the quarter, the largest quarterly addition in 16 quarters after a net reduction in the June period.",
+      "What does this mean?",
+      "Large companies are still signing long contracts, but they are choosier about what gets funded. More than half of HCLTech’s incremental revenue in the quarter came from telecom and media clients, while management said customers prioritize AI, data and operating-model projects when the business case is clear. Chief executive C Vijayakumar said demand improved late in the quarter but remains fluid, echoing Tata Consultancy Services’ view that non-essential spending stays under review. He also argued AI-led deflation in traditional application work is still in early phases, a contrast with global peer Accenture’s view that deflation is now predictable. HCLTech raised the lower end of its fiscal 2027 constant-currency revenue growth outlook to about 2.5% to 4%, while keeping operating margin guidance at 17.5% to 18.5% after margins reached 18.2% in the quarter.",
+      "Why should I care?",
+      "If you sell software or services to big enterprises, the print shows pipelines can look healthy even when headline growth stays muted. Budget owners may fund AI and automation first and delay routine maintenance work. If you work in IT services, hiring picked up again at HCLTech after a lean June quarter, but peers may stay cautious until growth broadens beyond a few client clusters. Investors should treat record bookings as future revenue, not instant sales. Watch whether AI revenue keeps outpacing legacy lines, how telecom and media demand holds into the December quarter, and whether margin gains from AI products offset pricing pressure on older contracts.",
+    ],
+  },
+  {
     slug: "indian-gas-exchange-sebi-ipo-nod",
     title: "SEBI cleared Indian Gas Exchange to list after a promoter share sale",
     summary:
@@ -1406,6 +1430,7 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hcltech-q2-deal-bookings-slow-growth": "companies",
   "indian-gas-exchange-sebi-ipo-nod": "markets",
   "rbl-bank-thousand-branch-expansion": "companies",
   "bank-india-future-enterprises-fraud": "policy",
