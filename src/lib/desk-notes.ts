@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "upi-mdr-fee-delay-diwali",
+    title: "NPCI pushed UPI merchant fees to after Diwali",
+    summary:
+      "On 13 October 2026, the National Payments Corporation of India said its steering committee will implement merchant discount rates on select person-to-merchant UPI payments only after Diwali, not from 15 October as earlier planned, with a new start date to be announced later.",
+    category: "industry",
+    companyOrSector: "Payments / UPI",
+    publishedAt: "2026-10-13T14:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("upi-mdr-fee-delay-diwali"),
+    keyTakeaways: [
+      "NPCI deferred MDR on select P2M UPI transactions that had been slated to begin on 15 October 2026.",
+      "Reporting ahead of the statement described a 0.4% charge on many transactions above ₹2,000, with caps and flat rates for some categories.",
+      "Listed payment firms including Paytm parent One97 Communications and Pine Labs rebounded intraday after the delay was confirmed.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, the National Payments Corporation of India said the UPI and Services Steering Committee chose to wait until after Diwali before switching on merchant discount rates for select person-to-merchant UPI payments. The fees had been expected to start on 15 October. NPCI will announce the new date separately. Media reports in recent weeks had outlined a structure where many payments above ₹2,000 would face a 0.4% processing charge, with higher caps on very large tickets and flat fees for some merchant categories. Merchant groups and payment companies had argued that introducing charges during the festive shopping rush would complicate checkout flows and squeeze small retailers. After NPCI confirmed the delay on 13 October, shares of several listed payment names, including One97 Communications and Pine Labs, bounced from intraday lows.",
+      "What does this mean?",
+      "UPI grew on free person-to-merchant transfers subsidised by banks and the government. Moving to explicit merchant fees is a shift in who pays for scale. A short delay does not cancel the policy direction; it buys time for billing systems, shopkeepers, and apps to retest pricing during peak sales. Large merchants with thin margins on big-ticket items feel the threshold most. Payment apps that hoped to earn interchange on high-value scans must wait longer for that revenue line. Consumers are not billed directly on standard UPI transfers, but merchants may eventually pass part of the fee into sticker prices if competition allows.",
+      "Why should I care?",
+      "If you run a shop or online store, treat Diwali week as a fee-free window on the proposed rules and rehearse how invoices would change once NPCI sets a date. If you invest in fintech listings, the delay removes a near-term earnings bump but leaves the regulatory question open into November. Watch NPCI’s follow-up notice for the exact calendar day, any tweaks to the ₹2,000 threshold, and whether smaller merchants receive carve-outs. The broader signal is that policymakers still want UPI volume during festivals even as they inch toward monetising high-value merchant traffic.",
+    ],
+  },
+  {
+    slug: "polycab-nclat-stays-insolvency-petition",
+    title: "Polycab won a stay against a ₹2.79 crore insolvency admission order",
+    summary:
+      "Polycab India said on 13 October 2026 that the National Company Law Appellate Tribunal stayed an Ahmedabad tribunal order that had admitted an insolvency petition from Asier Metals over alleged operational dues of ₹2.79 crore, with the appeal listed for 26 October.",
+    category: "industry",
+    companyOrSector: "Polycab / insolvency law",
+    publishedAt: "2026-10-13T14:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("polycab-nclat-stays-insolvency-petition"),
+    keyTakeaways: [
+      "The NCLT Ahmedabad bench had admitted a Section 9 petition on 7 October 2026 over a ₹2.79 crore operational claim from Asier Metals.",
+      "NCLAT’s 9 October order kept that admission in abeyance until further hearings, with the next date set for 26 October 2026.",
+      "Polycab said it carries zero debt with more than ₹4,000 crore of cash and investments and net worth above ₹11,600 crore as of March 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, wires and cables maker Polycab India told exchanges that the National Company Law Appellate Tribunal has stayed a National Company Law Tribunal order that would have started corporate insolvency proceedings against the company. The underlying case is a ₹2.79 crore operational dues claim from Asier Metals Private Ltd. The Ahmedabad bench of the NCLT had admitted the petition on 7 October under the Insolvency and Bankruptcy Code. In an order dated 9 October, NCLAT directed that the admission be kept in abeyance until further orders and listed Polycab’s appeal for 26 October 2026. Polycab argues the dispute is a commercial matter, not a balance-sheet crisis, and said it filed the appeal on merits.",
+      "What does this mean?",
+      "India’s insolvency code allows relatively small creditors to trigger a process that can freeze a large company’s control if admission orders stand. Courts and tribunals have increasingly scrutinised whether tiny claims against cash-rich firms should open full resolution tracks. A stay restores normal board authority while appeals run. For suppliers, the case is a reminder that unpaid invoices can still be escalated quickly even when the counterparty looks solvent on paper. For Polycab, the immediate operational impact is reputational rather than liquidity, but legal fees and management time are real costs.",
+      "Why should I care?",
+      "If you sell components to large manufacturers, document delivery and payment terms carefully; counterparties can use insolvency filings as leverage in disputes. If you hold industrial stocks, watch whether NCLAT affirms the stay or sends the matter back to the NCLT on 26 October. Polycab’s statement emphasises net cash above ₹4,000 crore; investors should still read the eventual tribunal ruling for precedent on when micro-claims can bind mega-cap balance sheets. The episode does not change cable demand, but it shapes how aggressively creditors can knock on the door.",
+    ],
+  },
+  {
+    slug: "spicejet-pilots-salary-standoff",
+    title: "About 40 SpiceJet Q400 pilots refused to fly until back pay clears",
+    summary:
+      "Reporting on 13 October 2026 said roughly 40 SpiceJet pilots on the airline’s Bombardier Q400 fleet would not operate flights until outstanding salary dues are paid, with the Airline Pilots’ Association of India backing the stand amid ongoing financial strain at the carrier.",
+    category: "industry",
+    companyOrSector: "SpiceJet / aviation",
+    publishedAt: "2026-10-13T13:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("spicejet-pilots-salary-standoff"),
+    keyTakeaways: [
+      "Sources cited on 13 October 2026 said about 40 Q400 pilots declined to fly until pending salaries are cleared.",
+      "ALPA India said in a 9 October letter it supports the pilots and cited delayed pay plus vendors withholding essential aircraft services.",
+      "Fleet trackers listed only about 10 SpiceJet aircraft as operational, including two Q400s, with dozens parked.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, media reports citing people familiar with the matter said around 40 SpiceJet pilots who fly the airline’s Bombardier Q400 turboprops refused to operate services until outstanding salary dues are settled. The Airline Pilots’ Association of India said in a 9 October letter that it stands with the pilots and offered professional support while they press for payment. The association referenced delayed wages, unpaid benefits, and vendors declining to supply essential aircraft services, conditions it said add stress and raise safety concerns. SpiceJet did not comment in the coverage reviewed. The Directorate General of Civil Aviation has been monitoring the airline through prior financial troubles. Third-party fleet data cited in reports showed only about ten SpiceJet aircraft active, including two Q400s, with a much larger number parked.",
+      "What does this mean?",
+      "When payroll slips at an airline, crews can halt flying even if regulators have not grounded the certificate. Turboprop fleets often serve regional routes where alternatives are scarce, so a pilot stand-down can cancel multiple city pairs quickly. SpiceJet has been restructuring debts and asset sales for years; pilot action signals that front-line staff no longer accept informal promises. Competitors such as IndiGo and Air India already dominate domestic capacity, so each lost Q400 rotation cedes share on thinner routes. Vendors withholding parts tighten the spiral because aircraft need steady maintenance cash flow to stay airworthy.",
+      "Why should I care?",
+      "If you hold tickets on SpiceJet Q400 sectors, build backup plans and watch airline messages for rebooking options. Corporate travel desks should treat the carrier as high operational risk until pay and vendor disputes clear. Investors should separate equity volatility from the broader domestic aviation recovery led by larger players. Watch DGCA statements, whether ALPA negotiations produce a pay timeline, and if parked aircraft return to service after funding injections. The story is about labour leverage inside a stressed balance sheet, not about fare wars on trunk routes.",
+    ],
+  },
+  {
     slug: "fssai-quick-commerce-food-labels",
     title: "India’s food regulator will make quick-commerce apps show expiry dates and answer for dark kitchens",
     summary:
@@ -1526,6 +1598,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "upi-mdr-fee-delay-diwali": "policy",
+  "polycab-nclat-stays-insolvency-petition": "policy",
+  "spicejet-pilots-salary-standoff": "companies",
   "fssai-quick-commerce-food-labels": "policy",
   "adani-dharavi-matunga-rehab-towers": "policy",
   "auto-suppliers-china-sourcing-offices": "companies",
