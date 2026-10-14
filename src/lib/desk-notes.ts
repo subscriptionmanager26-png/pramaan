@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hyundai-motor-group-india-15-billion-pledge",
+    title: "Hyundai Motor Group pledged $15.5 billion for India through 2032",
+    summary:
+      "On 13 October 2026, Hyundai Motor Group said it will invest $15.5 billion in India from 2026 through 2032 across Hyundai Motor India and Kia, covering factory capacity, local suppliers, R&D including a new test track, and startup bets, after chair Euisun Chung met Prime Minister Narendra Modi in New Delhi.",
+    category: "industry",
+    companyOrSector: "Automobiles / manufacturing",
+    publishedAt: "2026-10-14T00:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hyundai-motor-group-india-15-billion-pledge"),
+    keyTakeaways: [
+      "The group called the pledge its largest India commitment, spanning Hyundai and Kia operations through a dedicated investment vehicle.",
+      "Plans include expanding Chennai, Pune, and Anantapur output, about $700 million for Indian R&D, and deeper localization ahead of more electric models.",
+      "The timing follows Suzuki’s earlier multi-year India capex pledge and a passenger vehicle market that grew about 8% in FY26 after GST cuts.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, South Korea’s Hyundai Motor Group published a statement saying it will put $15.5 billion into India between 2026 and 2032. The money is meant for both Hyundai Motor India and Kia India through a dedicated investment entity. Executive chair Euisun Chung discussed the plan with Prime Minister Narendra Modi in New Delhi the same day. The group said spending would cover manufacturing capacity, research and development, supplier development, and stakes in startups tied to future mobility. Hyundai already runs more than 1.4 million units of annual capacity across Chennai, Pune, and Kia’s Anantapur plant. The pledge arrives two years after Hyundai Motor India’s October 2024 initial public offering and a prior $5.4 billion commitment through FY30 announced at its first investor day.",
+      "What does this mean?",
+      "Global carmakers are racing to localize in India as volumes recover and export hubs matter again. Hyundai’s domestic sales slipped to fourth place in FY26 after a slower model refresh cycle, so fresh capex is partly about catching rivals on product cycles and electrification. The group earmarked roughly $700 million for Indian R&D, including a vehicle test track, signaling that engineering work may stay in India rather than only assembling imported kits. Supplier investments aim to lift parts localization as more electrified Kia and Hyundai models arrive. For workers and tier-two towns near the three plants, the pledge implies steadier hiring in manufacturing and engineering even if near-term retail share shifts.",
+      "Why should I care?",
+      "If you buy a car or work in auto components, watch which nameplates launch on the 26-product Hyundai roadmap and Kia’s ten-model plan through 2030. Fleet and export buyers should track whether expanded capacity lowers wait times or feeds new right-hand-drive exports. Policy watchers can compare this pledge with Suzuki’s August 2026 commitment and tax incentives on green vehicles. None of this guarantees market-share gains, but it shows India remains a board-level bet for a top global group despite one soft domestic year.",
+    ],
+  },
+  {
+    slug: "urban-company-fundraise-instahelp-rivalry",
+    title: "Urban Company will ask its board to approve a fresh fundraise on 16 October",
+    summary:
+      "On 13 October 2026, Urban Company told stock exchanges its board will meet on 16 October to consider issuing equity or convertible securities, possibly via a qualified institutions placement, as rivals Snabbit and Pronto scale instant home-help services.",
+    category: "industry",
+    companyOrSector: "Consumer services / platforms",
+    publishedAt: "2026-10-14T00:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("urban-company-fundraise-instahelp-rivalry"),
+    keyTakeaways: [
+      "The Gurugram-based marketplace disclosed the 16 October board meeting after exchange filing rules for potential capital raises.",
+      "Management has prioritized InstaHelp, where loss per order improved to ₹346 in Q1 FY27 from ₹447 in the prior quarter.",
+      "Competitor Snabbit says daily jobs have grown from about 400 to more than 1.15 lakh in under two years.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, Urban Company Ltd filed with Indian stock exchanges that its board will meet on 16 October to consider raising funds. The company may issue equity shares or convertible securities through a qualified institutions placement, preferential allotment, private placement, or a mix, subject to shareholder and regulatory approvals. Urban Company listed in September 2025 and runs beauty, repair, and instant domestic-help services through its app. The disclosure lands while newer platforms Snabbit and Pronto push fast bookings for home chores. Chief executive Abhiraj Singh Bhal said on the Q1 FY27 earnings call that Urban Company is investing aggressively in InstaHelp to defend a category he views as strategic. Revenue from operations grew 44% year on year to ₹528.3 crore in that quarter, but net loss widened to ₹92.1 crore as spending rose.",
+      "What does this mean?",
+      "Instant home help behaves like a volume game: density in each neighbourhood lowers travel time and subsidy per order. Urban Company reported 3.82 million InstaHelp orders in Q1 with a lower cash burn per trip, yet rivals are adding jobs faster on their public metrics. A QIP or similar raise would give listed-market capital to keep subsidizing growth without leaning only on pre-IPO backers. Several new-age firms have tapped QIPs after listing, including Swiggy in late 2025 and Ola Electric in mid-2026. For households, the fight can mean cheaper introductory rates and wider time slots, but also questions about worker benefits as platforms scale.",
+      "Why should I care?",
+      "If you use on-demand cleaning or repairs, compare service quality and pricing across Urban Company, Snabbit, and Pronto in your pin code before assuming one app is cheapest. Investors in consumer internet names should read the eventual term sheet for dilution, use of proceeds, and whether InstaHelp losses are still strategic or becoming structural. Employees and gig partners should watch whether fresh capital funds better insurance and training or mainly fuels discounts. The board outcome on 16 October is the next hard date.",
+    ],
+  },
+  {
+    slug: "finance-minister-ltcg-tax-consultation",
+    title: "Nirmala Sitharaman said the government will hear investors on capital gains tax",
+    summary:
+      "On 13 October 2026, finance minister Nirmala Sitharaman told the Bloomberg New Economy Forum in New Delhi that officials would listen to Indian and foreign investors on long-term capital gains tax, securities transaction tax, and whether asset classes should be taxed more evenly, without announcing any change.",
+    category: "industry",
+    companyOrSector: "Markets / tax policy",
+    publishedAt: "2026-10-14T00:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("finance-minister-ltcg-tax-consultation"),
+    keyTakeaways: [
+      "Sitharaman named long-term capital gains tax, securities transaction tax, and cross-asset parity as topics investors had raised with her.",
+      "She did not signal a cut or timeline; media reports framed the comments as openness to consultation after heavy foreign selling in 2026.",
+      "India’s July 2024 budget had raised long-term capital gains tax on several instruments, sharpening debate on competitiveness with other Asian markets.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 13 October 2026, finance minister Nirmala Sitharaman spoke at the Bloomberg New Economy Forum in New Delhi. According to media accounts of her remarks, she said the government would hear from Indian and foreign investors on how capital gains are taxed. She specifically mentioned long-term capital gains tax, securities transaction tax, and whether different asset classes should face similar treatment. She did not announce a new rate or effective date. Trading desks linked the comments to a same-day bounce in Indian equities after weeks of foreign portfolio outflows, but her words described consultation rather than a finished policy.",
+      "What does this mean?",
+      "Tax treatment changes the after-tax return on mutual funds, direct stocks, and other savings routes. Foreign funds often compare India’s capital gains rules with markets that tax equity profits lightly or not at all. Domestic wealth managers said a listening exercise could precede budget or notification changes, yet nothing is locked in. Any eventual tweak would need revenue officials to model fiscal impact and Parliament or rule-making channels to pass it. Brokers and asset managers would be early beneficiaries if trading costs fall, but households should not bank on a cut until law or notification text appears.",
+      "Why should I care?",
+      "If you rebalance a portfolio or sell a long-held stock, watch the Union budget and mid-year notifications for concrete rate changes rather than forum headlines. NRIs and foreign funds should stress-test models with today’s rules still in force. If you work at a brokerage or AMC, client conversations may shift toward tax-efficient products even before law changes. The useful signal from 13 October is political willingness to talk, not a confirmed relief package.",
+    ],
+  },
+  {
     slug: "pnc-infratech-nhai-debarment-stay",
     title: "PNC Infratech won a Delhi High Court stay on NHAI debarment orders",
     summary:
@@ -1694,6 +1766,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hyundai-motor-group-india-15-billion-pledge": "policy",
+  "urban-company-fundraise-instahelp-rivalry": "companies",
+  "finance-minister-ltcg-tax-consultation": "policy",
   "pnc-infratech-nhai-debarment-stay": "policy",
   "sebi-tighter-ipo-proceeds-monitoring": "policy",
   "pngrb-five-percent-hydrogen-piped-gas": "policy",
