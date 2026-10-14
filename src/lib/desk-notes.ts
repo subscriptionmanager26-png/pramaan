@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "idbi-bank-fairfax-strategic-sale",
+    title: "Fairfax will buy control of IDBI Bank in a ₹52,878 crore deal",
+    summary:
+      "On 14 October 2026, India’s cabinet approved selling a 60.72% stake in IDBI Bank to Canada’s Fairfax Financial at ₹81 per share, with the government and LIC together keeping 34% and Fairfax also set to merge CSB Bank into IDBI within two years.",
+    category: "industry",
+    companyOrSector: "Banking / privatisation",
+    publishedAt: "2026-10-14T17:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("idbi-bank-fairfax-strategic-sale"),
+    keyTakeaways: [
+      "CCEA cleared Fairfax as strategic buyer for 60.72% of IDBI at ₹81 a share, for total consideration of about ₹52,878 crore.",
+      "After the sale the government will hold 15% and LIC 19%; Fairfax must make an open offer and seek RBI fit-and-proper clearance.",
+      "Fairfax, which already owns roughly 40% of CSB Bank, is expected to merge CSB into IDBI within two years.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, the Cabinet Committee on Economic Affairs approved the long-delayed restructuring of IDBI Bank Ltd. Fairfax Financial Holdings of Canada was named the qualified bidder to buy 60.72% of the lender at ₹81 per share, for purchase consideration of about ₹52,878 crore. That block includes the government’s 30.48% holding and Life Insurance Corporation’s 30.24% stake. Information minister Ashwini Vaishnaw told reporters the transaction is worth more than ₹52,000 crore and described it as the largest foreign direct investment in India’s banking sector to date. Under the approved cap table, the government will retain 15% and LIC 19%, for a combined 34% in the restructured bank. Fairfax will also launch an open offer for additional shares as required under takeover rules.",
+      "What does this mean?",
+      "IDBI moves from majority state ownership toward a strategic investor with management control, while Delhi and LIC stay as large but minority shareholders. The finance ministry said the deal is meant to bring growth capital into the system and expand credit to micro, small and medium enterprises. Fairfax already controls about 40% of CSB Bank; regulators have been told CSB will be merged into IDBI within two years, which would fold a south India-focused lender into a Mumbai-headquartered bank with a wider branch network. The buyer still needs Reserve Bank of India sign-off on fit-and-proper criteria and must meet other SEBI and RBI conditions before shares change hands. For IDBI account holders and borrowers, the near-term product set should look familiar; the shift is mainly about who owns the bank and how much fresh capital can be raised for lending.",
+      "Why should I care?",
+      "If you hold IDBI Bank shares, watch the open-offer price and timeline once SEBI filings land. Depositors should still treat balances as insured under existing rules, but keep an eye on any service integration if the CSB merger proceeds. Policy watchers will read this as a test case for further PSU bank sales: pricing at ₹81 versus the market quote on 14 October, how quickly Fairfax recapitalises the balance sheet, and whether MSME loan growth actually accelerates after closing. Employees and CSB customers should track merger announcements for branch and brand changes over the next two years.",
+    ],
+  },
+  {
+    slug: "india-treasury-bill-auction-four-year-high",
+    title: "Treasury bill yields jumped as traders bet on more RBI rate hikes",
+    summary:
+      "On 14 October 2026, India’s six- and twelve-month treasury bill auctions cleared at yields about 20 basis points above the prior week, pushing the spread over the 5.5% repo rate to a four-year high as markets priced tighter policy after hawkish RBI comments.",
+    category: "industry",
+    companyOrSector: "Government debt / monetary policy",
+    publishedAt: "2026-10-14T17:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-treasury-bill-auction-four-year-high"),
+    keyTakeaways: [
+      "New Delhi sold 182-day and 364-day T-bills at cut-off yields of 6.29% and 6.49%, their highest in about 18 months.",
+      "The premium over the 5.5% repo rate reached 79 basis points on six-month paper and 99 basis points on one-year bills, levels last seen in November 2022.",
+      "Separately, SIDBI raised short-term funds at coupons above 8% for the first time in nearly a decade, Reuters reported on 14 October.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, the Indian government’s weekly treasury bill auction drew much steeper yields than traders were used to just a few months ago. The 182-day bill cleared at 6.29% and the 364-day bill at 6.49%, each up more than 20 basis points from the previous week and at roughly an 18-month high for those maturities. Because the Reserve Bank of India’s policy repo rate sits at 5.5% after an October hike, the extra yield investors demanded over the policy rate rose to 79 basis points on six-month bills and 99 basis points on one-year bills. That spread is the widest since November 2022. Reporting tied the move to governor Sanjay Malhotra’s 13 October comments that monetary policy and financial stability cannot be fully separated, on top of September inflation prints that traders think could force another hike by December.",
+      "What does this mean?",
+      "Treasury bills are how the government rolls short-term borrowing; when cut-off yields jump, every ministry and state-owned firm that funds itself in the money market pays more. The same day, the Small Industries Development Bank of India reportedly placed three-year and shorter bonds at coupons above 8%, a level Reuters said was rare in the last decade for the lender. Higher front-end yields usually flow into bank fixed deposits, commercial paper, and eventually retail loan rates, even before the RBI moves again. Bond traders were also selling longer maturities, with the 10-year yield touching about 7.40% on 14 October, so the curve is flattening as investors demand compensation for both near-term hikes and currency defence measures.",
+      "Why should I care?",
+      "If you rely on fixed deposits or short-term debt funds, compare new offers against what you locked in before the October repo hike. Companies rolling working-capital loans should expect banks to quote wider spreads over T-bill benchmarks. Home buyers on floating rates should watch overnight indexed swap levels, not just the RBI’s last decision. None of this guarantees a December hike, but the auction result shows money markets are already charging for one.",
+    ],
+  },
+  {
+    slug: "hdb-financial-q2-profit-loan-growth",
+    title: "HDB Financial grew profit 34% as its loan book expanded",
+    summary:
+      "HDFC Bank’s NBFC arm HDB Financial Services reported net profit of ₹780.2 crore for the quarter ended 30 September 2026, up 34% year on year, as assets under management rose 11.6% to ₹1.24 lakh crore and credit costs eased slightly.",
+    category: "industry",
+    companyOrSector: "NBFCs / consumer credit",
+    publishedAt: "2026-10-14T17:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hdb-financial-q2-profit-loan-growth"),
+    keyTakeaways: [
+      "Net profit reached ₹780.2 crore versus ₹581 crore a year earlier; net interest income rose 15.5% to ₹2,534 crore.",
+      "Assets under management stood at ₹1,24,638 crore on 30 September 2026, up 11.6% from the prior year.",
+      "Loan loss provisions fell about 2.5% to ₹730 crore even as the gross loan book grew 11.7%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, HDB Financial Services Ltd, the non-bank lender promoted by HDFC Bank, published results for the second quarter of fiscal 2026–27. Net profit rose 34.3% year on year to ₹780.2 crore from ₹581 crore in the same quarter last year. Net interest income, the gap between interest earned on loans and interest paid on funding, increased 15.5% to ₹2,534 crore. Total income grew 12% to ₹3,188 crore. Assets under management reached ₹1,24,638 crore at 30 September 2026, up 11.6% from ₹1,11,721 crore a year earlier, while the gross loan book expanded 11.7%. Provisions for loan losses edged down 2.5% to ₹730 crore, and pre-provisioning operating profit rose 15.9% to ₹1,774 crore.",
+      "What does this mean?",
+      "HDB sits in the slice of Indian credit between banks and small NBFCs, lending to consumers and businesses that may not qualify for the cheapest bank rates. Double-digit balance-sheet growth with only a modest drop in provisions suggests demand for unsecured and secured retail loans is still holding after the RBI’s October rate hike. Because funding costs for NBFCs track money-market yields, the treasury bill spike on the same day is a reminder that future margins depend on how quickly HDB reprices loans versus its borrowings. The HDFC Bank parentage also means HDB can tap wholesale funding and co-lending partnerships that smaller rivals lack.",
+      "Why should I care?",
+      "If you borrow from HDB or similar NBFCs for vehicles, equipment, or personal needs, compare EMI quotes after the RBI move and check whether your rate is fixed or linked to benchmarks. Investors watching HDFC Bank should treat HDB as a growth and credit-quality barometer for the group’s non-bank book. If loan growth stays near 12% while provisions stay flat, it supports the broader story that Indian households and small firms are still willing to borrow for durables and working capital heading into the festive season.",
+    ],
+  },
+  {
+    slug: "india-protein-fmcg-everyday-foods",
+    title: "Food brands are putting protein into coffee, snacks, and breakfast mixes",
+    summary:
+      "Reporting on 14 October 2026 highlighted a wave of protein-fortified everyday foods in India, from café-style cold foam and breakfast staples to ready-to-drink shakes, as companies chase shoppers who want functional nutrition outside the gym supplement aisle.",
+    category: "industry",
+    companyOrSector: "FMCG / consumer behaviour",
+    publishedAt: "2026-10-14T16:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-protein-fmcg-everyday-foods"),
+    keyTakeaways: [
+      "Brands are launching high-protein coffee formats, fortified breakfast mixes, dairy drinks, and snacks aimed at daily consumption occasions.",
+      "The push sits alongside, but is distinct from, regulator scrutiny of GLP-1-linked supplement claims on marketplaces earlier in October.",
+      "Analysts frame the trend as urban consumers trading up on convenience foods with a perceived health halo.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, trade press described how Indian food and beverage companies are embedding protein into products shoppers already buy, not only into gym tubs. Examples cited in the coverage include protein-enriched cold foam for cafés, fortified breakfast mixes, high-protein snacks, and ready-to-drink dairy beverages priced for routine use. The same week, Reliance Consumer Products launched Joyland flavoured milk in Tamil Nadu at ₹20 per pack, positioning it as an entry into ready-to-drink dairy. The stories sit in a market where protein supplement sales have risen quickly, but where regulators have also questioned aggressive health claims on online listings.",
+      "What does this mean?",
+      "When protein moves from specialty stores into ₹20–₹100 price points, companies are betting that urban consumers will pay a small premium for convenience plus a nutrition label. That is a behaviour shift: buyers want the idea of fitness or satiety in foods they already eat for breakfast or evening snacks. For incumbents, it is also a way to grow average selling price without launching entirely new categories. The risk is label clutter; shoppers may not know how much protein they actually need, and enforcement on advertising is tightening after recent Food Safety and Standards Authority of India notices on supplement claims.",
+      "Why should I care?",
+      "If you grocery shop online or in modern trade, compare the per-gram protein cost against plain milk, eggs, or lentils before paying up for fortified packs. Retail investors watching FMCG names should track whether these launches lift volumes in urban centres or simply cannibalise existing snack lines. Nutrition trends can fade quickly; what matters for the desk is whether repeat purchase data during the festive quarter shows Indians still trading up on convenience foods with a health story attached.",
+    ],
+  },
+  {
+    slug: "bonfiglioli-transmissions-ipo-price-band",
+    title: "Bonfiglioli’s India unit is launching a ₹2,534 crore IPO this week",
+    summary:
+      "Bonfiglioli Transmissions, the Indian gearbox and drive-systems subsidiary of Italy’s Bonfiglioli Group, will open a ₹2,533.66 crore offer for sale on 15 October 2026 with a price band of ₹558–586 per share.",
+    category: "industry",
+    companyOrSector: "Manufacturing / IPOs",
+    publishedAt: "2026-10-14T16:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bonfiglioli-transmissions-ipo-price-band"),
+    keyTakeaways: [
+      "The IPO is entirely an offer for sale by the Italian parent; the price band is ₹558–586 per share.",
+      "The issue opens on 15 October and closes on 19 October 2026, according to offer documents cited in media.",
+      "The company supplies gearboxes and motors for construction equipment, wind turbines, and industrial machinery.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, media coverage detailed the upcoming initial public offering of Bonfiglioli Transmissions Ltd, the Indian arm of Italy’s Bonfiglioli S.p.A. The company manufactures gearboxes, gear motors, and drive systems used in construction equipment, wind turbines, and factory machinery. The share sale is structured as a ₹2,533.66 crore offer for sale by the parent, with a price band of ₹558 to ₹586 per share. The issue is scheduled to open on Thursday, 15 October 2026, and close on Monday, 19 October 2026. Industry reporting has noted that the Indian business contributes a meaningful share of the group’s global revenue and profit, after roughly 25 years of local manufacturing investment.",
+      "What does this mean?",
+      "Industrial component makers are coming to the public market as India’s capex cycle in renewables, roads, and factories stays active. Unlike consumer internet listings, Bonfiglioli’s story is tied to OEM orders and export competitiveness. A successful subscription would give the parent partial liquidity while leaving operations in Indian hands. For investors, the read-through is whether institutions pay up for manufacturing depth and customer relationships rather than short-term consumer trends.",
+      "Why should I care?",
+      "If you apply for IPOs, read the prospectus for customer concentration, China exposure, and working-capital needs before bidding inside the band. Engineers and suppliers in industrial clusters near Bonfiglioli plants may see steadier order books if the listing funds capacity upgrades. Even if you do not subscribe, the deal is a useful marker of how public markets are pricing capital-intensive businesses while the RBI is tightening and long bond yields are rising.",
+    ],
+  },
+  {
     slug: "bank-baroda-br-shetty-fifteen-billion-suit",
     title: "Bank of Baroda will fight BR Shetty’s $15 billion Bombay High Court suit",
     summary:
@@ -1838,6 +1958,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "idbi-bank-fairfax-strategic-sale": "policy",
+  "india-treasury-bill-auction-four-year-high": "policy",
+  "hdb-financial-q2-profit-loan-growth": "companies",
+  "india-protein-fmcg-everyday-foods": "markets",
+  "bonfiglioli-transmissions-ipo-price-band": "markets",
   "bank-baroda-br-shetty-fifteen-billion-suit": "policy",
   "rupee-one-month-high-rbi-fx-pledge": "policy",
   "hyundai-tvs-electric-mini-truck-2027": "companies",
