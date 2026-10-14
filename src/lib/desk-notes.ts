@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-rajesh-exports-mehta-trading-curbs",
+    title: "SEBI kept Rajesh Mehta barred from trading in Rajesh Exports shares",
+    summary:
+      "On 14 October 2026, the Securities and Exchange Board of India confirmed interim restrictions on Rajesh Exports Ltd and managing director Rajesh Mehta, directing them to cooperate with a probe into the jeweller’s financial disclosures while trading curbs stay in force.",
+    category: "industry",
+    companyOrSector: "Markets regulation / jewellers",
+    publishedAt: "2026-10-14T23:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-rajesh-exports-mehta-trading-curbs"),
+    keyTakeaways: [
+      "SEBI upheld interim orders restricting Rajesh Exports and Rajesh Mehta from trading in the company’s securities.",
+      "The regulator cited unresolved concerns over disclosures and transactions under investigation.",
+      "Wire reports referenced a large gap between reported consolidated revenue and figures regulators could reconcile.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, the Securities and Exchange Board of India told Rajesh Exports Ltd and its managing director Rajesh Mehta that interim restrictions imposed earlier remain in place. The orders bar them from trading in the company’s shares while SEBI examines financial disclosures and related transactions. The regulator said the company and its promoter must cooperate with the ongoing investigation. Market coverage on the same day noted that officials have questioned a wide disparity between consolidated revenue figures Rajesh Exports reported and numbers investigators could verify, a theme that has kept the stock under surveillance for months.",
+      "What does this mean?",
+      "When SEBI extends trading curbs instead of lifting them, it signals that disclosure and governance questions are not closed. Jewellery exporters move large volumes across borders, which makes revenue recognition and related-party flows harder for outsiders to audit. A prolonged bar on promoter dealing limits how the company can raise equity quickly and keeps institutional investors cautious. For the wider market, the case is a reminder that extreme revenue claims eventually draw forensic scrutiny, not just sell-side upgrades.",
+      "Why should I care?",
+      "If you hold Rajesh Exports shares or track small-cap exporters, treat any corporate updates as subject to regulatory review until SEBI publishes a final order. Lenders and counterparties may tighten collateral or payment terms while the probe runs. Policy watchers should watch whether SEBI uses similar interim tools on other issuers with opaque cross-border books, and whether disclosure norms for related-party sales tighten after this episode.",
+    ],
+  },
+  {
+    slug: "groww-parent-q2-profit-broking-diversification",
+    title: "Groww’s parent company reported ₹725 crore profit in the September quarter",
+    summary:
+      "Billionbrains Garage Ventures, which owns the Groww stockbroking app, said consolidated net profit rose 54% year on year to ₹725 crore in the quarter ended 30 September 2026, even as tighter rules on equity derivatives trimmed activity industry-wide.",
+    category: "industry",
+    companyOrSector: "Fintech / retail investing",
+    publishedAt: "2026-10-14T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("groww-parent-q2-profit-broking-diversification"),
+    keyTakeaways: [
+      "Consolidated net profit reached ₹725 crore in Q2 FY27, up 54% from the year-ago quarter.",
+      "Management pointed to a broader revenue mix beyond peak derivatives volumes.",
+      "Reporting tied the result to how Indian brokers are adapting after regulatory changes on leveraged intraday products.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Billionbrains Garage Ventures Ltd, the parent of retail investing platform Groww, published results for the second quarter of fiscal 2026–27. Consolidated net profit rose 54% year on year to ₹725 crore. Coverage of the filing noted that derivatives trading volumes across the industry have cooled after regulators tightened rules on certain leveraged intraday products, a segment that had driven rapid user growth for many brokers during the post-pandemic bull market.",
+      "What does this mean?",
+      "Brokers earn from transaction fees, payment for order flow, and cross-sell products such as mutual funds and loans. When one high-velocity line slows, platforms lean on mutual fund SIPs, gold, and credit to keep average revenue per user steady. Groww’s profit growth in that environment suggests either cost discipline, higher non-derivatives revenue, or both. For households, it shows that millions of first-time investors are still active, but the mix of how they trade is shifting toward longer-hold products regulators view as less speculative.",
+      "Why should I care?",
+      "If you use Groww or rival apps, compare fees on F&O versus delivery trades and check whether your behaviour still fits your risk budget after rule changes. If you follow listed fintech peers, use Groww’s print as a benchmark for how quickly platforms can replace derivatives income. Watch SEBI circulars on product suitability, upcoming IPO filings from other brokers, and whether mutual fund distribution commissions change in the next budget cycle.",
+    ],
+  },
+  {
+    slug: "aegis-logistics-tristar-acquisition",
+    title: "Aegis Logistics agreed to buy most of Dubai’s Tristar for ₹7,700 crore",
+    summary:
+      "On 14 October 2026, Aegis Logistics said it will acquire an 89.8% stake in Dubai-based Tristar Group for about ₹7,700 crore, expanding its liquid and gas logistics footprint across ports and inland terminals in India and the Gulf.",
+    category: "industry",
+    companyOrSector: "Logistics / energy infrastructure",
+    publishedAt: "2026-10-14T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("aegis-logistics-tristar-acquisition"),
+    keyTakeaways: [
+      "Aegis will buy 89.8% of Tristar Group in a deal valued at roughly ₹7,700 crore.",
+      "Tristar operates storage and transport for petroleum and chemical products in the Middle East and other markets.",
+      "The transaction adds overseas terminals and ships to Aegis’s India-focused tank and gas network.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Aegis Logistics Ltd announced a definitive agreement to acquire 89.8% of Tristar Group, a Dubai-headquartered logistics company serving oil, gas, and chemical clients. The purchase price is about ₹7,700 crore. Tristar runs storage terminals, coastal shipping, and related services linking Gulf ports with customers in Africa and Asia. Aegis already operates liquid tank terminals and city gas infrastructure in India; the deal gives it scale outside the domestic market.",
+      "What does this mean?",
+      "Indian energy consumption still depends on imported crude and liquefied petroleum gas, so port storage and coastal movement remain strategic assets. Buying Tristar is a bet that Gulf handling volumes and chemical logistics fees will grow faster than pure domestic tank rentals. Large cheques also mean Aegis will likely fund the deal through a mix of debt and equity, which can affect leverage ratios until integration savings show up. Competitors such as Indian Oil’s logistics arms and global traders may respond with their own tie-ups.",
+      "Why should I care?",
+      "If you work in chemicals, paints, or fuels, terminal access and berth waiting times affect landed cost. If you invest in logistics or gas names, compare how Aegis plans to finance the acquisition and whether regulators in India and the UAE clear the change of control quickly. Watch the shareholder vote, competition commission filings, and any equity raise that could dilute minority holders.",
+    ],
+  },
+  {
+    slug: "ed-reliance-power-fema-asset-seizure",
+    title: "The ED seized ₹2,032 crore of Reliance Power assets in a FEMA case",
+    summary:
+      "On 14 October 2026, the Enforcement Directorate said it attached assets worth ₹2,032.81 crore belonging to Reliance Power Ltd and related units, including bank balances and the shareholding in Sasan Power, over alleged foreign-exchange violations tied to overseas fund flows.",
+    category: "industry",
+    companyOrSector: "Power / enforcement",
+    publishedAt: "2026-10-14T22:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ed-reliance-power-fema-asset-seizure"),
+    keyTakeaways: [
+      "ED attached ₹2,032.81 crore of Reliance Power group assets under the Foreign Exchange Management Act.",
+      "Attachments include bank balances and Sasan Power Ltd shareholding, per the agency’s statement.",
+      "The case centres on foreign exchange allegedly held outside India in breach of rules.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, the Enforcement Directorate announced that it had provisionally attached assets worth ₹2,032.81 crore of Anil Ambani Group companies, primarily Reliance Power Ltd. The action was taken under the Foreign Exchange Management Act. The agency said the attachments cover bank balances and the shareholding of Sasan Power Ltd, operator of a large coal-fired plant in Madhya Pradesh, equivalent in value to foreign exchange allegedly kept overseas in contravention of Indian law.",
+      "What does this mean?",
+      "FEMA attachments freeze the named assets until courts or adjudicating authorities decide whether violations occurred. Unlike criminal fraud cases, FEMA proceedings focus on whether foreign exchange was routed or retained outside India without permission. For a power generator, frozen balances and share pledges can complicate refinancing of project debt or vendor payments if the order is not lifted or modified. Lenders to Sasan and other group plants will review covenant headroom and whether cash traps apply.",
+      "Why should I care?",
+      "If you hold bonds or shares linked to the Anil Ambani Group power companies, read the ED order and any company rebuttal for timelines to contest the attachment. If you rely on Sasan-linked power supply in central India, operations typically continue during probes, but financial stress can affect maintenance spend over time. Watch Bombay High Court or tribunal hearings, any RBI or finance ministry comments on FEMA enforcement, and whether other group entities face parallel notices.",
+    ],
+  },
+  {
+    slug: "icici-lombard-q2-underwriting-loss-widens",
+    title: "ICICI Lombard’s profit rose even as claims costs pushed its combined ratio above 100%",
+    summary:
+      "ICICI Lombard General Insurance reported net profit of ₹946.40 crore for the quarter ended 30 September 2026, up 15.5% year on year, while its underwriting loss widened to ₹318 crore and the combined ratio reached 107% as motor and health claims ran hot.",
+    category: "industry",
+    companyOrSector: "Insurance",
+    publishedAt: "2026-10-14T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("icici-lombard-q2-underwriting-loss-widens"),
+    keyTakeaways: [
+      "Net profit grew 15.5% to ₹946.40 crore; net premium written rose about 17% year on year.",
+      "Underwriting loss increased 79% to ₹318.38 crore in Q2 FY27.",
+      "Combined ratio worsened to 107% from 105.1% a year earlier, meaning claims and expenses exceeded premium on underwriting alone.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, ICICI Lombard General Insurance Company published results for the second quarter of fiscal 2026–27. Net profit increased 15.48% year on year to ₹946.40 crore, helped by growth in net premium written of roughly 17%. At the same time, the insurer’s underwriting loss, the gap between premiums collected and claims plus expenses on insurance contracts, widened 78.9% to ₹318.38 crore. Its combined ratio, a standard measure of underwriting profitability, rose to 107% from 105.1% in the year-ago quarter. A ratio above 100% means the core insurance book lost money before investment income.",
+      "What does this mean?",
+      "General insurers earn on two legs: underwriting discipline and returns on the float they invest. ICICI Lombard’s profit growth shows the investment and fee side still offset higher claims in motor and health lines, where repair costs and hospital bills have inflated. When combined ratios drift above 100% for several quarters, companies typically seek premium hikes or tighter risk selection. For car and health policyholders, that can mean higher renewals or more scrutiny on claims documentation.",
+      "Why should I care?",
+      "If your motor or health policy renews this quarter, compare quotes from at least two insurers and check no-claim bonus rules before switching. If you own insurance stocks, track whether peers such as HDFC ERGO and Bajaj Allianz show similar combined ratio pressure or defend margins with price increases. Watch IRDAI filings on approved rate revisions for motor third-party pools and whether monsoon-related crop claims spill into reinsurance costs later in the year.",
+    ],
+  },
+  {
     slug: "idbi-bank-fairfax-strategic-sale",
     title: "Fairfax will buy control of IDBI Bank in a ₹52,878 crore deal",
     summary:
@@ -1958,6 +2078,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-rajesh-exports-mehta-trading-curbs": "policy",
+  "groww-parent-q2-profit-broking-diversification": "companies",
+  "aegis-logistics-tristar-acquisition": "companies",
+  "ed-reliance-power-fema-asset-seizure": "policy",
+  "icici-lombard-q2-underwriting-loss-widens": "companies",
   "idbi-bank-fairfax-strategic-sale": "policy",
   "india-treasury-bill-auction-four-year-high": "policy",
   "hdb-financial-q2-profit-loan-growth": "companies",
