@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bank-baroda-br-shetty-fifteen-billion-suit",
+    title: "Bank of Baroda will fight BR Shetty’s $15 billion Bombay High Court suit",
+    summary:
+      "On 14 October 2026, Bank of Baroda told exchanges it will defend a suit filed by NMC Healthcare founder Bavaguthu Raghuram Shetty seeking $15 billion in damages, while saying it is already pursuing roughly ₹2,800 crore of recoveries against him in India and the UAE.",
+    category: "industry",
+    companyOrSector: "Public sector banking / litigation",
+    publishedAt: "2026-10-14T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bank-baroda-br-shetty-fifteen-billion-suit"),
+    keyTakeaways: [
+      "Shetty’s plaint in the Bombay High Court seeks $5 billion each in direct damages, consequential damages, and reputational compensation.",
+      "Bank of Baroda said it had not been served and noted a similar New York suit was dismissed in July 2024.",
+      "The lender cited about ₹2,800 crore of outstanding dues and decrees obtained against Shetty, who has told courts he is insolvent.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Bank of Baroda Ltd filed with Indian stock exchanges that it will defend itself if and when it is served with a suit brought by NMC Healthcare founder BR Shetty in the Bombay High Court. Media reports say the claim totals about $15 billion, or roughly ₹1.44 lakh crore, split into three $5 billion buckets covering direct damages, consequential damages, and alleged reputational harm. The bank said it could not comment on pleadings it had not reviewed. In its statement, Bank of Baroda noted it is separately pursuing recovery and enforcement in India and the United Arab Emirates for outstanding dues of about ₹2,800 crore and has secured several decrees against Shetty. It also said Shetty had earlier sued the bank in New York with similar allegations, and that case was dismissed in July 2024. Shares of the state-run lender fell as much as about 3% in morning trade on 14 October before the exchange filing.",
+      "What does this mean?",
+      "The fight is the long tail of the NMC Healthcare collapse, where lenders, administrators, and founders still dispute who bore fraud losses. Shetty’s new suit alleges the bank and some officials facilitated fund diversion and challenges personal guarantees he says carry forged signatures; none of that is proven in court. Bank of Baroda pointed to Abu Dhabi Global Market proceedings where judgments were reserved against Shetty and former NMC chief executive Prashant Manghat, and said its own ADGM case ended in a settlement with joint administrators. Shetty’s filing also questions a reported July 2026 settlement in which the bank agreed to pay about $600 million without admitting liability, arguing he was not party to it. For a public sector bank, a headline damages number in the billions of dollars is less about immediate cash payout and more about legal risk, disclosure duties, and how investors price governance overhang on PSU lenders.",
+      "Why should I care?",
+      "If you hold Bank of Baroda shares or borrow from the lender, treat the $15 billion figure as a claim stage number until courts rule. Watch whether the bank is formally served, what interim orders emerge on asset preservation, and how provisions move in quarterly results. Depositors should remember the suit does not by itself change deposit insurance, but repeated high-profile litigation can affect management bandwidth and capital planning. The case also sits beside the finance ministry’s wider push to improve PSU bank balance sheets, so policy watchers will look for any supervisory comments on related-party exposure and recovery strategy.",
+    ],
+  },
+  {
+    slug: "rupee-one-month-high-rbi-fx-pledge",
+    title: "The rupee rose to a one-month high after the RBI pledged to keep the currency orderly",
+    summary:
+      "On 14 October 2026, the Indian rupee strengthened to about 94.91 per US dollar, its best level in over a month, as markets reacted to Reserve Bank of India governor Sanjay Malhotra’s pledge to take further steps for orderly currency moves after recent hedge and oil-dollar measures.",
+    category: "industry",
+    companyOrSector: "Currency / monetary policy",
+    publishedAt: "2026-10-14T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rupee-one-month-high-rbi-fx-pledge"),
+    keyTakeaways: [
+      "The rupee was among Asia’s top performers on 14 October, rising about 0.4% and bringing its weekly gain to roughly 2%.",
+      "Malhotra said weekend FX steps aim to curb speculation and the RBI can do more to ensure orderly rupee moves.",
+      "Indian government bond yields rose about 10 basis points to 7.40% as traders priced a steeper rate-hike path alongside currency defence.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, the Indian rupee traded near 94.9125 per US dollar, its strongest level in more than a month and up about 0.4% on the day. Reporting credited a mix of lower crude prices and confidence that the Reserve Bank of India will back the currency after a package of measures rolled out over the prior weekend. Those steps include routing oil companies’ dollar purchases through a special RBI window, tightening documentation on currency hedges, and requiring cash margins on large importer hedges. In a media interview published 14 October, RBI governor Sanjay Malhotra said the tools are meant to limit speculative pressure and that the central bank is prepared to take further action to keep rupee moves orderly. He linked financial stability to price stability but did not announce an extra rate hike solely to defend the currency.",
+      "What does this mean?",
+      "Currency defence in India now spans more than spot dollar sales. By steering oil-related demand away from the open market and making hedges costlier to cancel or stack, the RBI is trying to slow the drain on foreign-exchange reserves while still letting importers cover risk. A firmer rupee on the day helps anyone paying for imported goods, education fees, or medical bills in dollars, but swap markets still embed a hawkish path: the 10-year government bond yield rose about 10 basis points to 7.40% on 14 October, and traders were pricing roughly 90 basis points of RBI hikes over the next year. That mix matters for home loans and corporate borrowing costs even when the rupee looks calmer on screen.",
+      "Why should I care?",
+      "If you have dollar debt or import-heavy costs, track whether the rupee holds above 95 or slips back when oil prices jump again. Floating-rate borrowers should watch bond yields, not just the FX headline. Travellers and students can compare bank card rates this week against last month’s weaker prints. None of this replaces the September inflation print or the October repo hike, but it shows the RBI is willing to use both liquidity and messaging while reserves are under pressure.",
+    ],
+  },
+  {
+    slug: "hyundai-tvs-electric-mini-truck-2027",
+    title: "Hyundai and TVS are planning an electric mini truck for 2027",
+    summary:
+      "Reporting on 14 October 2026 said Hyundai Motor and TVS Motor will extend their electric three-wheeler partnership into a small cargo truck aimed at Tata Motors’ Ace segment, targeting a 2027 launch as electric goods-vehicle registrations accelerate.",
+    category: "industry",
+    companyOrSector: "Electric commercial vehicles",
+    publishedAt: "2026-10-14T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hyundai-tvs-electric-mini-truck-2027"),
+    keyTakeaways: [
+      "Executives cited by Mint said the mini truck would build on a micro four-wheeler concept shown at the January 2025 Bharat Mobility Global Expo.",
+      "Hyundai would lead design while TVS would co-develop the platform and handle India sales; the pair already pilots electric three-wheelers in Gurugram.",
+      "Government Vahan data show electric truck and light commercial registrations at 16,995 in April–September FY27, above the 14,869 counted for all of FY26.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Mint reported that Hyundai Motor Company and TVS Motor Co. plan to develop an electric mini truck to compete with Tata Motors’ Ace small commercial vehicle, with a targeted rollout in 2027. The move would extend a partnership that began with an electric three-wheeler joint development agreement signed in April 2026. Under that deal, Hyundai leads design and research while Hosur-based TVS co-develops the product on its electric platform and leads domestic sales, with manufacturing in India. The companies are already testing the three-wheeler through a pilot ride-hailing service in Gurugram. The reported four-wheeler cargo plan traces to a micro commercial concept the two brands displayed at the Bharat Mobility Global Expo in January 2025.",
+      "What does this mean?",
+      "Last-mile delivery fleets are shifting from diesel vans and small trucks to electric options where daily kilometres are high enough to recover battery costs. Vahan registration data cited in the report show electric truck and light commercial vehicle sign-ups rising from 14,869 in fiscal 2025–26 to 16,995 in just the first half of fiscal 2026–27, albeit from a low base. Tata Motors, Euler Motors, and Mahindra Last Mile Mobility already compete in the segment. For Hyundai, a mini truck would mark its first serious push into India’s small commercial market beyond passenger cars. For TVS, it would add a four-wheeled cargo product alongside two- and three-wheelers. E-commerce and quick-commerce growth keep demand for short-radius routes with predictable duty cycles, which suits smaller electric trucks.",
+      "Why should I care?",
+      "If you run a delivery fleet or buy vehicles for a small business, compare total cost of ownership on high-utilisation routes before the 2027 models arrive; incumbents may discount current electric trucks to defend share. Job seekers in automotive engineering should watch hiring around TVS’s Hosur ecosystem and Hyundai’s Chennai research base as the project matures. Policy watchers can track draft commercial-vehicle efficiency standards from the Bureau of Energy Efficiency, which could nudge more electrification in the 3.5–12 tonne band over time.",
+    ],
+  },
+  {
     slug: "hyundai-motor-group-india-15-billion-pledge",
     title: "Hyundai Motor Group pledged $15.5 billion for India through 2032",
     summary:
@@ -1766,6 +1838,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bank-baroda-br-shetty-fifteen-billion-suit": "policy",
+  "rupee-one-month-high-rbi-fx-pledge": "policy",
+  "hyundai-tvs-electric-mini-truck-2027": "companies",
   "hyundai-motor-group-india-15-billion-pledge": "policy",
   "urban-company-fundraise-instahelp-rivalry": "companies",
   "finance-minister-ltcg-tax-consultation": "policy",
