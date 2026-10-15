@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "yes-bank-at1-supreme-court-ruling",
+    title: "India’s top court restored Yes Bank’s ₹8,415 crore AT-1 bonds",
+    summary:
+      "On 15 October 2026 the Supreme Court upheld the Bombay High Court’s quashing of Yes Bank’s 2020 write-off of ₹8,415 crore in additional tier-1 bonds, ruling the administrator lacked authority and restoring bondholders’ claims at the original coupon rates.",
+    category: "industry",
+    companyOrSector: "Banks / AT-1 bonds",
+    publishedAt: "2026-10-15T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("yes-bank-at1-supreme-court-ruling"),
+    keyTakeaways: [
+      "The Supreme Court dismissed appeals by Yes Bank, the RBI, and the Centre on 15 October 2026.",
+      "The 2020 reconstruction had written off ₹8,415 crore of AT-1 bonds sold in 2016–17.",
+      "The court said the final scheme did not specifically permit the write-off; coupons of 9.5% and 9% apply again.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, a Supreme Court bench upheld the Bombay High Court’s January 2023 verdict on Yes Bank’s additional tier-1 bonds. During the lender’s March 2020 rescue, an administrator had written off ₹8,415 crore of these perpetual instruments, which mutual funds and retail investors had bought in 2016 and 2017. Bondholders challenged the move. The High Court ruled the write-off invalid. Yes Bank, the Reserve Bank of India, and the Union government appealed. The apex court agreed the administrator could not cancel the bonds because the approved reconstruction scheme contained no explicit provision allowing it.",
+      "What does this mean?",
+      "AT-1 bonds sit at the front of the loss-absorption queue when a bank fails. Regulators worldwide treat them as equity-like capital, but Indian courts have now drawn a hard line on process: even in a crisis, the legal text of the rescue plan matters. Bondholders’ claims against Yes Bank are back on the books. Reports cite coupon rates of 9.5% and 9% on the affected issues. Yes Bank shares fell sharply after the judgment as investors priced the liability and uncertainty over timing of any payout. The ruling also ripples to how future bank rescues document bond haircuts.",
+      "Why should I care?",
+      "If you hold bank debt funds or direct AT-1 paper, read the fine print on loss absorption and stay alert to litigation risk after this precedent. Yes Bank shareholders face dilution of future earnings if the lender must service restored coupons or principal. Treasury teams at other banks should expect stricter legal drafting on any future reconstruction. Watch the detailed court order on interest and repayment mechanics, Yes Bank’s exchange disclosures, and whether the RBI issues fresh guidance on AT-1 write-downs.",
+    ],
+  },
+  {
+    slug: "nestle-india-inflation-warning-after-strong-q2",
+    title: "Nestlé India’s profit rose 36% but the stock fell on food inflation",
+    summary:
+      "On 15 October 2026 Nestlé India reported September-quarter profit of ₹1,026.8 crore on 20.3% revenue growth, then warned that food inflation and volatile cocoa, sugar, and edible oil costs remain a reality, sending shares down about 7–9%.",
+    category: "industry",
+    companyOrSector: "FMCG / packaged foods",
+    publishedAt: "2026-10-15T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nestle-india-inflation-warning-after-strong-q2"),
+    keyTakeaways: [
+      "Standalone profit rose 36.3% year on year to ₹1,026.8 crore; revenue reached ₹6,788 crore.",
+      "EBITDA margin was 23.8% while advertising and marketing spend rose about 46%.",
+      "Management flagged elevated sugar, edible oils, and volatile cocoa; milk may ease after the flush season.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Nestlé India published results for the quarter ended September 2026. Standalone profit after tax climbed 36.3% year on year to ₹1,026.8 crore. Revenue from operations grew 20.3% to ₹6,788 crore, with the company citing double-digit volume growth across Maggi, coffee, confectionery, and nutrition lines. EBITDA margin held at 23.8%. Chairman and managing director Manish Tiwary said rising inflation, especially food inflation, is a reality. He pointed to sugar and edible oils stabilising at high levels, volatile cocoa on weather worries in key origins, and seasonally firm milk prices that should ease as flush supplies arrive.",
+      "What does this mean?",
+      "Shoppers still bought more noodles and chocolates, but the market punished the stock because the cost outlook limits how much of that growth can convert into future margins. Nestlé is spending heavily on brands, with marketing up sharply, while promising productivity and renovation to offset inputs. That is the standard FMCG playbook when wholesale inflation, like the double-digit WPI prints elsewhere this week, eventually reaches kitchen bills. Rivals face the same cocoa and milk curve, so price hikes on KitKat or Maggi remain an option if costs do not cool.",
+      "Why should I care?",
+      "If you manage a household budget, watch MRPs on staples you buy monthly; Nestlé’s commentary is a signal that festive discounts may not fully offset commodity pressure. Investors comparing HUL, Britannia, and Nestlé should weigh volume momentum against input risk rather than one quarter’s profit jump alone. Employees and suppliers benefit from sustained brand spend, but margin surprises can swing sentiment quickly, as Thursday’s share price move showed. Watch October retail price changes, cocoa futures, and whether Nestlé takes selective list-price increases into Diwali.",
+    ],
+  },
+  {
+    slug: "tech-mahindra-q2-bonus-dividend-fy27",
+    title: "Tech Mahindra raised profit 33% and proposed a bonus share issue",
+    summary:
+      "On 15 October 2026 Tech Mahindra reported consolidated revenue of ₹16,180 crore and profit of ₹1,586 crore for the September quarter, moved EBIT margin closer to its 15% goal, and announced a ₹15 interim dividend plus a 1:1 bonus issue subject to shareholders.",
+    category: "industry",
+    companyOrSector: "IT services",
+    publishedAt: "2026-10-15T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tech-mahindra-q2-bonus-dividend-fy27"),
+    keyTakeaways: [
+      "Consolidated revenue grew 15.6% year on year to ₹16,180.2 crore in Q2 FY2026–27.",
+      "Profit after tax rose 32.7% to ₹1,585.6 crore; basic EPS was ₹17.88 versus ₹13.48 a year earlier.",
+      "The board declared a ₹15 per share interim dividend and recommended a 1:1 bonus issue from reserves.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Tech Mahindra released audited results for the quarter ended 30 September 2026. Consolidated revenue from operations reached ₹16,180.2 crore, up 15.6% year on year. Profit after tax attributable to owners rose 32.7% to ₹1,585.6 crore. Management said operating margin moved closer to its long-stated 15% target as deal execution improved. The board declared an interim dividend of ₹15 per equity share, with a record date of 23 October 2026 and payment targeted by 13 November 2026. It also recommended a 1:1 bonus issue, capitalising about ₹490 crore from reserves, pending shareholder approval.",
+      "What does this mean?",
+      "Indian IT names are navigating slower client spending in parts of the portfolio while fighting for large transformation deals. Tech Mahindra’s profit growth outpacing revenue suggests cost discipline and mix improvement rather than a pure volume boom. Returning cash through dividends and a bonus issue signals confidence in the balance sheet, though a bonus does not change intrinsic value per share. The print lands the same day as softer outlook commentary from Wipro, so investors are splitting the sector into winners on margin and laggards on bookings.",
+      "Why should I care?",
+      "If you hold Tech Mahindra shares, mark the dividend record date and vote when the bonus resolution comes up. IT employees can read the margin trend as a hint on variable pay pools, even as peers freeze bonuses elsewhere. Enterprise buyers may see a vendor with room to invest in AI-led consulting while staying profitable. Watch the evening earnings call for deal pipeline colour, attrition, and whether the 15% margin target is within reach this financial year.",
+    ],
+  },
+  {
+    slug: "india-defence-gsat7c-varunastra-contracts",
+    title: "The defence ministry signed ₹4,106 crore in satellite and torpedo deals",
+    summary:
+      "On 15 October 2026 the Ministry of Defence awarded about ₹2,563 crore to New Space India for the GSAT-7C communications satellite for the Indian Air Force and ₹1,543 crore to Bharat Dynamics for Varunastra anti-submarine torpedoes for the Navy.",
+    category: "industry",
+    companyOrSector: "Defence / aerospace",
+    publishedAt: "2026-10-15T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-defence-gsat7c-varunastra-contracts"),
+    keyTakeaways: [
+      "GSAT-7C is an indigenously developed satellite to strengthen secure IAF communications.",
+      "Varunastra is a ship-launched heavyweight torpedo for long-range submarine engagements.",
+      "Combined contract value is about ₹4,106 crore, signed in New Delhi on 15 October 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, the Ministry of Defence signed two procurement contracts worth about ₹4,106 crore in New Delhi. A ₹2,563 crore agreement with New Space India Limited covers GSAT-7C, a dedicated communication satellite for the Indian Air Force. Officials said the spacecraft is designed and built in India to give secure, resilient links for air assets. Separately, a ₹1,543 crore contract with Bharat Dynamics Limited covers Varunastra heavyweight torpedoes for the Indian Navy. The torpedo was developed by the Naval Science and Technological Laboratory and is meant for ship-launched anti-submarine warfare at long range.",
+      "What does this mean?",
+      "Both deals fit the government’s push to source critical kit domestically rather than import off-the-shelf systems. Satellites are the backbone of networked air operations; underwater weapons address a different gap in the Navy’s deterrence toolkit. Orders of this size flow into ISRO’s commercial arm, defence public sector units, and their MSME suppliers over several years, not in one cheque. They do not by themselves change border facts overnight, but they lock budget lines and production slots that are hard to reverse.",
+      "Why should I care?",
+      "If you work in aerospace or defence manufacturing, these tenders signal steady demand for components, testing, and launch services. Investors tracking Bharat Dynamics or space-linked names should read order-book disclosures rather than react to headline contract values alone. Taxpayers see how capital spending is tilted toward communications and sea control alongside the headline grab of fighter jets. Watch GSAT-7C launch timelines, Navy induction schedules for Varunastra, and follow-on navy satellite programmes mentioned in the same policy cycle.",
+    ],
+  },
+  {
     slug: "siam-september-2026-auto-sales",
     title: "Carmakers sold 4.5 lakh passenger vehicles in India last September",
     summary:
@@ -2270,6 +2366,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "yes-bank-at1-supreme-court-ruling": "policy",
+  "nestle-india-inflation-warning-after-strong-q2": "companies",
+  "tech-mahindra-q2-bonus-dividend-fy27": "companies",
+  "india-defence-gsat7c-varunastra-contracts": "policy",
   "siam-september-2026-auto-sales": "markets",
   "ceat-tyre-price-hike-october": "companies",
   "india-wpi-inflation-september-fy27-outlook": "policy",
