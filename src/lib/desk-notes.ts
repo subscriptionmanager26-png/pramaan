@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "siam-september-2026-auto-sales",
+    title: "Carmakers sold 4.5 lakh passenger vehicles in India last September",
+    summary:
+      "On 15 October 2026, industry body SIAM said domestic passenger vehicle wholesales reached 454,574 units in September 2026, with two-wheeler sales at 2.46 million units, and flagged festive demand even as inflation and rates stay on its watch list.",
+    category: "industry",
+    companyOrSector: "Automobiles / consumer demand",
+    publishedAt: "2026-10-15T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("siam-september-2026-auto-sales"),
+    keyTakeaways: [
+      "SIAM reported 454,574 domestic passenger vehicle units sold in September 2026.",
+      "Two-wheeler wholesales stood at 2,463,103 units in the same month.",
+      "The industry body expects positive growth in the second half of FY2026–27 but warns on inflation and rates.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, the Society of Indian Automobile Manufacturers released September 2026 wholesale numbers. Domestic passenger vehicle sales totalled 454,574 units. Two-wheeler sales reached 2,463,103 units. SIAM said demand fundamentals look supportive heading into the festive season, helped by new model launches and last-mile mobility needs. It still expects the industry to maintain positive growth momentum in the second half of financial year 2026–27.",
+      "What does this mean?",
+      "Wholesale figures measure what factories dispatch to dealers, not what every buyer has already driven home. They are an early read on inventory and orders before Navratri and Diwali campaigns peak. SIAM’s tone is confident but not blind: it noted the sector remains watchful of higher inflation, which can push up loan rates, and of geopolitical shocks that affect fuel and component costs. That caution sits beside the same week’s electric three-wheeler retail surge and steady urban consumption prints elsewhere on the desk wire.",
+      "Why should I care?",
+      "If you plan a car or scooter purchase this quarter, compare on-road prices and finance offers across brands. Dealers may still have stock to clear before new-year model changes. If you work in auto supply chains, September wholesales are a volume anchor for tyre, steel, and electronics orders into the holidays. Watch October retail data from FADA, festive discounting from Maruti and Hyundai, and whether SIAM revises its outlook after the RBI’s latest rate move feeds into EMIs.",
+    ],
+  },
+  {
+    slug: "ceat-tyre-price-hike-october",
+    title: "CEAT will raise tyre prices by up to 6% after raw material costs jumped",
+    summary:
+      "On 14 October 2026, CEAT Ltd said it will lift tyre prices by 4–6% this quarter, including about 6% on commercial tyres, after rubber and petroleum-based inputs rose sharply and Q2 operating margin fell to 9.5%.",
+    category: "industry",
+    companyOrSector: "Tyres / autos",
+    publishedAt: "2026-10-15T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ceat-tyre-price-hike-october"),
+    keyTakeaways: [
+      "CEO Arnab Banerjee guided to 4–5% price increases broadly and about 6% in commercial tyres this quarter.",
+      "Raw material costs rose roughly 8% in Q2 and 23–24% between April and September 2026.",
+      "Q2 revenue grew about 26% to ₹4,762 crore but net profit fell to ₹112 crore as margins compressed.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, CEAT Ltd managing director Arnab Banerjee told reporters the tyremaker will raise prices across categories by 4–6% in the current quarter. Commercial tyres face the steeper end, near 6%. Replacement-market hikes were announced at the end of the September quarter and fresh increases will roll through October. Banerjee said earlier price moves were not enough to offset rubber and petroleum-based input inflation. Consolidated revenue for July–September 2026 rose about 26% year on year to ₹4,762 crore on higher volumes and partial pass-through, but net profit fell to ₹112 crore from ₹186 crore a year earlier as operating margin dropped 403 basis points to 9.5%.",
+      "What does this mean?",
+      "Tyres are a pass-through business: when natural rubber and carbon black costs spike, manufacturers either raise sticker prices or absorb the hit in margins. CEAT chose both in sequence, which is why revenue looked healthy while profit did not. Carmakers often recover costs through indexed OEM contracts, but the replacement buyer at the neighbourhood shop feels hikes faster. Rivals such as MRF and Apollo Tyres face the same input curve, so the industry tends to move in stages rather than one shock increase.",
+      "Why should I care?",
+      "If you are replacing car or two-wheeler tyres before a long festive drive, compare quotes now versus late October when new list prices bite. Fleet operators should budget higher per-kilometre costs on trucks and buses. Car owners are indirect beneficiaries of stable safety performance, but not of stable bills. Watch whether peers match CEAT’s October hikes and whether rubber prices ease after the northeast monsoon harvest.",
+    ],
+  },
+  {
+    slug: "india-wpi-inflation-september-fy27-outlook",
+    title: "Wholesale inflation hit 11.4% in September and may stay high this year",
+    summary:
+      "On 15 October 2026, ICICI Bank research said India’s wholesale price index inflation rose to 11.4% year on year in September from 9.9% in August, driven by fuel, manufactured goods, and food, and could remain elevated through FY2026–27.",
+    category: "industry",
+    companyOrSector: "Inflation / WPI",
+    publishedAt: "2026-10-15T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-wpi-inflation-september-fy27-outlook"),
+    keyTakeaways: [
+      "WPI inflation reached 11.4% in September 2026 versus 9.9% in August and minus 0.2% a year earlier.",
+      "Fuel and power inflation hit 26%; manufactured products inflation rose to 9.8%, a 30-month high.",
+      "ICICI Bank expects wholesale inflation to stay elevated near term on energy, food, and base effects.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, ICICI Bank economists published a note on India’s wholesale price index after September data. WPI inflation accelerated to 11.4% year on year from 9.9% in August 2026. The comparison looks sharp partly because inflation was minus 0.2% in September 2025, a low base. Fuel and power inflation reached 26%, with mineral oils up about 40%. Manufactured products inflation climbed to 9.8%, the highest in 30 months, led by basic metals, chemicals, textiles, and rubber and plastics. Food pressure persisted: primary food articles inflation was 8.1%, vegetables 16.5%, and condiments and spices hit a series high of 34.3% on items such as garlic and onions.",
+      "What does this mean?",
+      "Wholesale prices measure what factories and farms charge before retail markups and taxes. When WPI runs hot on fuel and metals, manufacturers often try to pass costs into MRPs over the following months. The bank flagged global crude averaging near USD 94.6 per barrel so far in the financial year against about USD 69 in FY26, plus a below-normal monsoon risk for cereals and pulses. That combination is why the report expects wholesale inflation to stay elevated through financial year 2026–27 even after the Reserve Bank of India tightened policy in October.",
+      "Why should I care?",
+      "Households feel WPI indirectly through fuel bills, packaged food, and durables. If you run a small factory or shop, input quotes for steel, chemicals, and transport are moving faster than last year. Fixed-income savers should note that high wholesale inflation can keep pressure on bond yields and delay rate cuts. Watch October retail CPI prints, government food releases, and whether OEMs such as CEAT announce another round of product price hikes after this WPI reading.",
+    ],
+  },
+  {
+    slug: "india-cricketer-endorsement-marketing-spend",
+    title: "Brands still spend heavily on cricketers even as creator ads grow",
+    summary:
+      "Reporting on 15 October 2026 said cricket endorsements remain near 90% of India’s sports celebrity ad market, estimated at ₹1,350 crore in 2025 and heading past ₹1,500 crore in 2026, while FMCG firms also shift budgets toward digital creators.",
+    category: "industry",
+    companyOrSector: "Marketing / consumer brands",
+    publishedAt: "2026-10-15T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-cricketer-endorsement-marketing-spend"),
+    keyTakeaways: [
+      "Industry estimates put India’s sports celebrity endorsement market at ₹1,350 crore in 2025.",
+      "Cricketers accounted for roughly 90% of that pool, with 2026 expected to cross ₹1,500 crore.",
+      "Brands are pairing star cricketers with creator-led campaigns as 15–25% of budgets shift digital.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, business press coverage said cricket-driven endorsements are holding up even as overall celebrity advertising slows. Industry estimates valued India’s sports celebrity endorsement market at about ₹1,350 crore in 2025, with cricketers taking nearly 90% of the spend. Marketers expect the tally to cross ₹1,500 crore in 2026, with close to a dozen new deals in the pipeline ahead of festive campaigns. Recent signings cited include Sachin Tendulkar promoting ChatGPT in India and MS Dhoni fronting the BHIM payments app. Virat Kohli, Rohit Sharma, and younger stars such as Shubman Gill remain on pitch for brands.",
+      "What does this mean?",
+      "Advertisers are splitting budgets rather than abandoning stars. Digital creators offer targeted reach and measurable clicks, which is why surveys cited by the Indian Influencer Governing Council show 15–25% of marketing rupees moving toward creators. FMCG majors such as Hindustan Unilever have told investors they are investing more in communities and credible voices online. Yet cricketers keep shelf space because performance on the field refreshes relevance every IPL and India match, something a viral reel cannot manufacture on demand.",
+      "Why should I care?",
+      "If you buy packaged food, phones, or finance products, the face on the ad still shapes trust, but the discount code may come from a creator you follow. For marketers, the lesson is hybrid campaigns: star power for mass awareness, creators for conversion. Shoppers can compare product facts, not just endorsers. Watch festive ad launches from consumer brands, new NPCI and fintech tie-ups, and whether Bollywood-led contracts lose share in HUL and personal-care categories.",
+    ],
+  },
+  {
     slug: "india-rail-mandatory-ticket-insurance",
     title: "Train tickets sold at counters will include insurance from 27 October",
     summary:
@@ -2174,6 +2270,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "siam-september-2026-auto-sales": "markets",
+  "ceat-tyre-price-hike-october": "companies",
+  "india-wpi-inflation-september-fy27-outlook": "policy",
+  "india-cricketer-endorsement-marketing-spend": "markets",
   "india-rail-mandatory-ticket-insurance": "policy",
   "reliance-joyland-flavoured-milk-launch": "companies",
   "biocon-roche-perjeta-biosimilar-settlement": "companies",
