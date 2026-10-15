@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-rail-mandatory-ticket-insurance",
+    title: "Train tickets sold at counters will include insurance from 27 October",
+    summary:
+      "On 14 October 2026, the Supreme Court directed Indian Railways to bundle travel insurance with every ticket sold at station counters from 27 October, extending a cover that until now applied mainly to online IRCTC bookings.",
+    category: "industry",
+    companyOrSector: "Railways / consumer protection",
+    publishedAt: "2026-10-15T01:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-rail-mandatory-ticket-insurance"),
+    keyTakeaways: [
+      "The Supreme Court ordered mandatory insurance on all counter-sold train tickets from 27 October 2026.",
+      "Online IRCTC bookings already offered optional travel cover; offline passengers lacked the same default protection.",
+      "Railways must implement the directive nationwide, affecting millions of bookings each day.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, the Supreme Court of India told Indian Railways that every train ticket sold at physical reservation counters must include travel insurance starting 27 October 2026. Wire reports said the bench acted on a public-interest petition arguing that passengers who buy tickets offline were not offered the same accident cover that online buyers could tick on the IRCTC website. Until now, insurance on train travel was largely opt-in for digital bookings. The court’s order makes the premium part of the ticket price for counter sales as well.",
+      "What does this mean?",
+      "Rail travel still carries injury risk in derailments or accidents, and ticket prices are low enough that many families buy at counters without smartphones. Bundling insurance shifts the default from uncovered to covered, with the premium likely embedded in the fare or shown as a separate line on the receipt. Railways will need to negotiate or renew policies with insurers, train counter staff on the new rule, and update printing systems before the deadline. For insurers, mandatory attachment at counters opens a high-volume, low-ticket channel similar to micro-insurance on bus tickets.",
+      "Why should I care?",
+      "If you usually queue at the station, check your receipt after 27 October for the insurance clause and keep the policy number handy when you travel. If you book online, compare whether counter and app tickets now carry the same cover and cost. Policy watchers should watch whether the Railways Board publishes tariff circulars on premium amounts and whether parliament or IRDAI sets caps on commission for these bundled products.",
+    ],
+  },
+  {
+    slug: "reliance-joyland-flavoured-milk-launch",
+    title: "Reliance is selling flavoured milk at ₹20 to take on Amul and Mother Dairy",
+    summary:
+      "On 14 October 2026, Reliance Consumer Products rolled out Joyland flavoured milk in Tamil Nadu at ₹20 per pack, entering the ready-to-drink dairy aisle against Amul, ITC, and Mother Dairy.",
+    category: "industry",
+    companyOrSector: "FMCG / dairy",
+    publishedAt: "2026-10-15T01:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("reliance-joyland-flavoured-milk-launch"),
+    keyTakeaways: [
+      "Joyland flavoured milk launched in Tamil Nadu at ₹20 for strawberry, vanilla, and pistachio variants.",
+      "Reliance Consumer Products is using its retail footprint to test mainstream dairy beyond staples.",
+      "Incumbents Amul, ITC, and Mother Dairy already sell similar RTD packs in the same price band.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Reliance Consumer Products Ltd introduced Joyland branded flavoured milk in Tamil Nadu. Retail coverage said packs are priced at ₹20 each in strawberry, vanilla, and pistachio flavours. The launch puts Reliance directly against cooperatives and FMCG majors that have sold ready-to-drink dairy for years. Joyland follows other Reliance moves into packaged foods, where the group leans on JioMart, Smart Bazaar, and neighbourhood stores for distribution rather than building a standalone dairy cooperative.",
+      "What does this mean?",
+      "Flavoured milk sits in the impulse aisle: low ticket, repeat purchase, and sensitive to cold-chain at kirana shops. At ₹20, Reliance is not discounting aggressively; it is matching the shelf price consumers already pay for Amul or Mother Dairy variants. The fight is over fridge space and brand recall during evening snack trips. For farmers, another large buyer can mean steadier offtake for milk solids, but procurement terms will matter more than launch headlines. If Tamil Nadu volumes work, expect wider state rollouts and festival-season promotions tied to Reliance retail apps.",
+      "Why should I care?",
+      "If you shop at Reliance stores, compare ingredients, fat content, and expiry dates against the brand you already buy. Kirana owners should watch credit terms and return policies on chilled stock. Investors tracking consumer names should read this as shelf-space competition, not a new category: margins stay thin unless scale and sourcing improve. Watch whether Joyland expands beyond Tamil Nadu before the December holiday peak and how cooperatives respond on price or pack size.",
+    ],
+  },
+  {
+    slug: "biocon-roche-perjeta-biosimilar-settlement",
+    title: "Biocon settled Roche’s US patent fight over a breast-cancer biosimilar",
+    summary:
+      "On 14 October 2026, Biocon Ltd said it resolved Genentech’s US lawsuit over its Perjeta biosimilar, clearing a path to launch Pebrilzo in Europe from early 2027 and in America from late 2028.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / biosimilars",
+    publishedAt: "2026-10-15T00:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("biocon-roche-perjeta-biosimilar-settlement"),
+    keyTakeaways: [
+      "Biocon and Genentech settled litigation over a proposed biosimilar to breast-cancer drug Perjeta.",
+      "Pebrilzo can launch in the EU and UK from Q1 2027 under the agreement.",
+      "US launch is slated for Q3 2028, subject to regulatory approvals.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Biocon Ltd announced that it had settled a patent dispute in the United States with Genentech, Roche’s biotechnology arm, over its biosimilar version of Perjeta, a targeted therapy used in HER2-positive breast cancer. The company said the settlement allows it to market Pebrilzo in the European Union and United Kingdom from the first quarter of 2027 and in the United States from the third quarter of 2028, pending health-authority clearances. Originators often sue biosimilar makers to delay competition; settlements typically set launch dates and sometimes royalty terms instead of a full trial.",
+      "What does this mean?",
+      "Perjeta is a high-cost biologic; even a modest price discount from a biosimilar can reduce hospital bills and out-of-pocket spend for long treatment courses. Biocon gains visibility on when it can ship product to European and American wholesalers, which helps plan manufacturing campaigns and clinical switching studies. For Roche, staggered entry dates protect near-term revenue while avoiding the uncertainty of a jury verdict. Indian patients may not see Pebrilzo immediately, but success abroad funds R&D and contract manufacturing at Biocon’s Bengaluru facilities.",
+      "Why should I care?",
+      "If you follow oncology care costs, mark the 2027 EU date as a checkpoint for whether insurers add Pebrilzo to formularies. Biocon shareholders should read the filing for any undisclosed payments or profit-sharing with Roche. Policy watchers should track whether India’s own biosimilar guidelines speed approvals once US and EU regulators accept the drug. Watch US FDA review timelines, European Commission decisions, and whether domestic hospitals tender for HER2 therapies after import parity rules change.",
+    ],
+  },
+  {
+    slug: "aditya-birla-group-30-billion-investment-pledge",
+    title: "Kumar Mangalam Birla pledged up to $30 billion of fresh group investment",
+    summary:
+      "On 14 October 2026, Aditya Birla Group chairman Kumar Mangalam Birla told reporters the conglomerate could invest up to $30 billion over the next two to three years across cement, metals, financial services, and overseas expansion despite global trade uncertainty.",
+    category: "industry",
+    companyOrSector: "Conglomerates / capex",
+    publishedAt: "2026-10-15T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("aditya-birla-group-30-billion-investment-pledge"),
+    keyTakeaways: [
+      "Birla said the group may deploy up to $30 billion in fresh capital over two to three years.",
+      "Spending spans UltraTech cement, Hindalco metals, Aditya Birla Capital, and higher US exposure.",
+      "Management framed the plan as growth-or-decline choice amid tariff and demand volatility.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 14 October 2026, Kumar Mangalam Birla, chairman of the Aditya Birla Group, said the conglomerate is prepared to invest as much as $30 billion over the next two to three years across its businesses. Speaking to reporters, he tied the pledge to expansion in cement through UltraTech, aluminium and copper via Hindalco, lending and insurance through Aditya Birla Capital, and selected overseas projects, including more spending in the United States. Coverage noted his remark that in the current environment companies must keep investing or risk falling behind, even as trade barriers and currency moves add cost.",
+      "What does this mean?",
+      "Large Indian groups fund growth from operating cash, debt, and asset sales. A public capex number signals confidence that domestic infrastructure, housing, and manufacturing demand will absorb new cement and metal capacity, while financial services can gather retail deposits at scale. Higher US spending may hedge tariff risk by locating production closer to customers. The pledge is not a single purchase order; individual board approvals at listed units will still govern each project. Competitors such as Ambuja and JSW will watch whether UltraTech accelerates kiln additions or acquisitions.",
+      "Why should I care?",
+      "If you work in construction or autos, more cement and aluminium supply can ease input costs over time, though near-term prices depend on energy and freight. Job seekers in financial services may see branch and digital hiring at Aditya Birla Capital if the capital plan includes lending growth. Investors should map the $30 billion figure to announced projects at UltraTech, Hindalco, and Grasim rather than treating it as immediate equity issuance. Watch quarterly capex disclosures, US facility announcements, and whether the group taps offshore bonds to fund the program.",
+    ],
+  },
+  {
     slug: "sebi-rajesh-exports-mehta-trading-curbs",
     title: "SEBI kept Rajesh Mehta barred from trading in Rajesh Exports shares",
     summary:
@@ -2078,6 +2174,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-rail-mandatory-ticket-insurance": "policy",
+  "reliance-joyland-flavoured-milk-launch": "companies",
+  "biocon-roche-perjeta-biosimilar-settlement": "companies",
+  "aditya-birla-group-30-billion-investment-pledge": "policy",
   "sebi-rajesh-exports-mehta-trading-curbs": "policy",
   "groww-parent-q2-profit-broking-diversification": "companies",
   "aegis-logistics-tristar-acquisition": "companies",

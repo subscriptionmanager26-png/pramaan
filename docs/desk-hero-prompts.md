@@ -464,6 +464,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Expressway / toll plaza silhouette |
 | Metaphor left | Pause gate over contract scroll |
 
+### `india-rail-mandatory-ticket-insurance`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Default travel cover on counter tickets |
+| Subject right | Stylised railway station arch |
+| Metaphor left | Shield overlay on ticket stub |
+
+### `reliance-joyland-flavoured-milk-launch`
+
+| Field | Value |
+|-------|--------|
+| Core idea | RTD dairy shelf fight at ₹20 |
+| Subject right | Chilled retail fridge silhouette |
+| Metaphor left | Three flavour droplets on price tag |
+
+### `biocon-roche-perjeta-biosimilar-settlement`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Patent gate opens on staggered launch dates |
+| Subject right | Laboratory / bioreactor motif |
+| Metaphor left | Calendar blocks to 2027 and 2028 |
+
+### `aditya-birla-group-30-billion-investment-pledge`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Conglomerate capex pipeline across sectors |
+| Subject right | Industrial skyline (cement, metal, finance) |
+| Metaphor left | Capital flow pipes into multiple project blocks |
+
 ### `aditya-birla-renewables-shell-loan-refinance`
 
 | Field | Value |
