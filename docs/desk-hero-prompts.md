@@ -496,6 +496,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Industrial skyline (cement, metal, finance) |
 | Metaphor left | Capital flow pipes into multiple project blocks |
 
+### `sebi-derivatives-vwap-closing-auction-revised`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Expiry F&O still priced on final 30-minute cash VWAP |
+| Subject right | Exchange / market architecture silhouette |
+| Metaphor left | Clock blocks 3:00–3:30 with steady VWAP curve |
+
+### `kotak-mf-suspends-credit-risk-after-at1-ruling`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Fund gates new money after AT-1 legal reversal |
+| Subject right | Mutual fund vault facade |
+| Metaphor left | Closed inflow pipe beside nil-to-recovery bond stack |
+
+### `sebi-irdai-insurance-consolidated-account-statement`
+
+| Field | Value |
+|-------|--------|
+| Core idea | One investor ledger spans markets, banks, insurance |
+| Subject right | Policy / regulator architecture |
+| Metaphor left | Layered statement sheets merging shield and demat icons |
+
+### `mankind-pharma-actx-car-t-acquisition`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Indian pharma buys overseas CAR-T research platform |
+| Subject right | Laboratory / bioreactor motif |
+| Metaphor left | Immune cell ring targeting tumour cell form |
+
 ### `aditya-birla-renewables-shell-loan-refinance`
 
 | Field | Value |

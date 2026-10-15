@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-derivatives-vwap-closing-auction-revised",
+    title: "SEBI will still settle expiring derivatives using a 30-minute average price",
+    summary:
+      "On 15 October 2026 SEBI issued a final framework that keeps the last 30 minutes of cash-market trading as the reference for expiry-day F&O settlement after broker pushback, while shortening and retiming the equity closing auction from 7 December 2026.",
+    category: "industry",
+    companyOrSector: "SEBI / derivatives",
+    publishedAt: "2026-10-15T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-derivatives-vwap-closing-auction-revised"),
+    keyTakeaways: [
+      "Expiry settlement for stock and index derivatives stays on a 30-minute VWAP in the cash session.",
+      "The closing auction session runs 3:30 pm to 3:40 pm on all trading days from 7 December 2026.",
+      "Index derivatives trade until 3:45 pm on normal days but stop at 3:30 pm on expiry days.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, the Securities and Exchange Board of India published the final rules for how India’s equity and derivatives markets close each day. After weeks of debate, the regulator kept the existing method for expiry settlement: the volume-weighted average price over the last 30 minutes of the regular cash session still sets the final settlement level for stock and index derivatives. That choice partly reverses an earlier plan that would have leaned more heavily on the separate closing auction. Alongside that decision, SEBI tightened the closing auction itself. From 7 December 2026 the session will run from 3:30 pm to 3:40 pm, with a one-minute reference-price window, five minutes when both limit and market orders are allowed, then limit-only orders until a random close between 3:38 pm and 3:40 pm.",
+      "What does this mean?",
+      "Expiry days are when index and stock futures and options convert into cash or delivery. A small change in the reference price can shift payouts for millions of contracts. Brokers and proprietary desks argued that moving away from the familiar 30-minute VWAP would inject volatility and operational risk. SEBI’s compromise keeps that anchor while still reforming the cash-market auction that feeds into closing prices. Index derivatives will continue trading until 3:45 pm on ordinary days but must stop at 3:30 pm on expiry. Stock derivatives can trade until 3:45 pm even on expiry. Unexecuted limit and iceberg orders from the continuous session will generally roll into the auction, with new rules on margins and what happens to stop-loss tickets.",
+      "Why should I care?",
+      "If you trade F&O, refresh your broker’s expiry-day checklist before December. Algos tied to the old auction window may need retuning. If you only invest in mutual funds, the change still matters indirectly because passive and arbitrage flows in the last half hour help set fair prices. Watch exchange circulars in the next seven days, how indicative expiry values print in real time after 7 December, and whether volumes cluster differently in the final 30 minutes once the shorter auction goes live.",
+    ],
+  },
+  {
+    slug: "kotak-mf-suspends-credit-risk-after-at1-ruling",
+    title: "Kotak Mutual Fund stopped new money into two funds that held Yes Bank AT-1 bonds",
+    summary:
+      "On 15 October 2026 Kotak Mutual Fund suspended fresh lumpsum, switch-in, SIP, and STP flows into its Medium Term Fund and Credit Risk Fund after the Supreme Court restored Yes Bank’s written-off AT-1 bonds, which those schemes had held at zero value.",
+    category: "industry",
+    companyOrSector: "Mutual funds / credit",
+    publishedAt: "2026-10-15T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("kotak-mf-suspends-credit-risk-after-at1-ruling"),
+    keyTakeaways: [
+      "Fresh investments are paused in Kotak Medium Term Fund and Kotak Credit Risk Fund from 15 October 2026.",
+      "Both schemes had exposure to Yes Bank additional tier-1 bonds marked at nil after the 2020 write-off.",
+      "The gate follows the Supreme Court ruling that quashed the AT-1 cancellation the same day.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Kotak Mutual Fund told unit holders it would temporarily stop accepting new money into two credit-oriented schemes. Kotak Medium Term Fund and Kotak Credit Risk Fund will not take fresh lumpsum or switch-in subscriptions, and new systematic investment or transfer plans cannot be registered for now. Redemptions and existing SIPs already running are handled under the usual rules unless the fund house issues a further notice. The company linked the step to the Supreme Court judgment that morning, which upheld bondholders and set aside Yes Bank’s 2020 write-off of ₹8,415 crore in AT-1 paper. Those perpetual bonds had been valued at zero in the portfolios after the Reserve Bank of India ordered the write-down during the lender’s rescue.",
+      "What does this mean?",
+      "Asset managers mark distressed bank capital instruments to model prices. When regulators write off AT-1 bonds, NAVs often show no recovery until courts or issuers clarify otherwise. Thursday’s verdict reopened the question of whether those bonds still have economic value and coupon claims. Pausing inflows is a standard risk tool: it stops new investors from benefiting or suffering from a NAV that may need repricing while the fund manager works out fair value, liquidity, and any recovery from Yes Bank. It does not by itself mean the schemes will gate outflows, but it signals that credit-risk funds are not business as usual the day after a landmark court outcome.",
+      "Why should I care?",
+      "If you hold units in either Kotak scheme, read the next few NAV announcements and any side-pocket or valuation updates. If you were about to start an SIP into credit risk, compare other funds’ AT-1 exposure and how they marked Yes Bank paper before the ruling. Fixed-income investors should treat AT-1 and perpetual bank debt as legal contracts, not just yield pick-ups. Watch whether other mutual funds with Yes Bank AT-1 history pause flows, how Yes Bank proposes to service restored coupons, and any Securities and Exchange Board of India guidance on valuing disputed bank capital after court orders.",
+    ],
+  },
+  {
+    slug: "sebi-irdai-insurance-consolidated-account-statement",
+    title: "SEBI wants your insurance policies on the same ledger as stocks and mutual funds",
+    summary:
+      "On 15 October 2026 SEBI chairman Tuhin Kanta Pandey said the regulator has written to IRDAI to explore adding insurance policy data to the Consolidated Account Statement, building on RBI moves to fold bank deposits into the same investor view.",
+    category: "industry",
+    companyOrSector: "Financial data / insurance",
+    publishedAt: "2026-10-15T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-irdai-insurance-consolidated-account-statement"),
+    keyTakeaways: [
+      "SEBI has asked IRDAI to study listing insurance policies on the Consolidated Account Statement.",
+      "The CAS already covers demat holdings, mutual funds, and is adding pension and bank deposit data.",
+      "Pandey spoke on 15 October 2026 at the Samvaad India Open Finance Summit in Mumbai.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Securities and Exchange Board of India chairman Tuhin Kanta Pandey said his team has written to the Insurance Regulatory and Development Authority of India to explore putting insurance policy information into the Consolidated Account Statement. The CAS is the periodic statement Indian investors receive that lists securities held in demat form and mutual fund folios across registrars. Regulators have been widening that lens. Earlier in October the Reserve Bank of India said it would help depositories include bank deposit balances. Pension-related data is also being wired in. Pandey spoke at the Samvaad India Open Finance Summit in Mumbai, framing the goal as a single financial ledger that spans markets, banking, retirement savings, and, potentially, life and health covers.",
+      "What does this mean?",
+      "Most households scatter wealth across brokers, banks, insurers, and employer retirement accounts. Each silo sends its own email or paper statement. A richer CAS does not move money by itself, but it can make gaps visible: duplicate term covers, idle cash, or equity concentration beside uninsured health risk. Implementation depends on data sharing agreements, customer consent, and IRDAI’s comfort on privacy. SEBI also highlighted account-aggregator interoperability so investors are not locked to one consent manager. None of this replaces policy documents or claim procedures, yet it could nudge more people to review insurance with the same discipline they apply to SIPs.",
+      "Why should I care?",
+      "If you already download your CAS each month, expect the PDF or email to grow more complete over the next year. Check that names, sums assured, and premium modes match what your insurer sent. If you use an account aggregator for loans or investments, ask whether your consent covers insurance when IRDAI joins the pipe. Agents and distributors may face clients who compare cover across brands more easily. Watch IRDAI’s response, pilot timelines with depositories, and whether term and health policies show up with the same clarity as mutual fund units.",
+    ],
+  },
+  {
+    slug: "mankind-pharma-actx-car-t-acquisition",
+    title: "Mankind Pharma is paying €48 million for a stake in a Belgian CAR-T cancer research firm",
+    summary:
+      "On 15 October 2026 Mankind Pharma agreed to acquire 70% of Belgium’s Armed Cell Therapeutics for €48 million through its Netherlands subsidiary, gaining experimental CAR-T programmes in blood and lung cancers.",
+    category: "industry",
+    companyOrSector: "Pharma / biotech",
+    publishedAt: "2026-10-15T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mankind-pharma-actx-car-t-acquisition"),
+    keyTakeaways: [
+      "Mankind will buy 70% of ACTx for €48 million via Mankind Pharma (Netherlands) B.V.",
+      "ACTx works on next-generation CAR-T therapies, including targets in non-Hodgkin lymphoma and small cell lung cancer.",
+      "The deal follows domestic buys such as Bharat Serums and Vaccines in 2024.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Mankind Pharma Ltd signed a definitive agreement to take a 70% stake in Armed Cell Therapeutics, a biotechnology company based in Belgium. The price is €48 million, to be invested through its Dutch subsidiary Mankind Pharma (Netherlands) B.V. ACTx researches chimeric antigen receptor T-cell therapies, which reprogramme a patient’s immune cells to attack cancer. Its pipeline includes programmes aimed at non-Hodgkin lymphoma and small cell lung cancer, diseases where standard options can run out quickly. Mankind’s earlier deals, including the 2024 acquisition of Bharat Serums and Vaccines, focused on marketed and near-market assets in India. This transaction is a bet on early science abroad.",
+      "What does this mean?",
+      "CAR-T treatments have shown strong results in some blood cancers but remain expensive and complex to manufacture. Indian patients rarely access the latest cell therapies at scale because trials, plants, and payers sit overseas. Owning a platform company gives Mankind a seat at the lab bench rather than waiting for licensing talks years later. The science is still experimental. Regulators in Europe and India will want years of safety data before any therapy reaches hospitals. Mankind exports about 15% of revenue to Europe today, so the firm already knows those markets, yet R&D spend will rise before any product sales follow.",
+      "Why should I care?",
+      "If you follow Indian pharma, compare this deal with peers who license oncology drugs instead of buying labs. Hospital chains and insurers should track whether any ACTx candidate eventually seeks trials in India, which could change high-cost cancer budgets. Employees and suppliers see management tilting capital toward innovation, not just branded generics. Watch closing conditions, how much extra EUR 50 million the board allowed for follow-on funding, and whether Mankind partners with a hospital chain for future clinical work.",
+    ],
+  },
+  {
     slug: "yes-bank-at1-supreme-court-ruling",
     title: "India’s top court restored Yes Bank’s ₹8,415 crore AT-1 bonds",
     summary:
@@ -2366,6 +2462,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-derivatives-vwap-closing-auction-revised": "policy",
+  "kotak-mf-suspends-credit-risk-after-at1-ruling": "policy",
+  "sebi-irdai-insurance-consolidated-account-statement": "policy",
+  "mankind-pharma-actx-car-t-acquisition": "companies",
   "yes-bank-at1-supreme-court-ruling": "policy",
   "nestle-india-inflation-warning-after-strong-q2": "companies",
   "tech-mahindra-q2-bonus-dividend-fy27": "companies",
