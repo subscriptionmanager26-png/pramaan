@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-windfall-tax-petrol-diesel-october-2026",
+    title: "India raised the windfall tax on petrol exports and trimmed the levy on diesel",
+    summary:
+      "A government order issued late on 15 October 2026 lifts the export duty on petrol to ₹2.5 per litre from ₹0.5 while cutting the diesel export duty to ₹8.5 per litre, effective 16 October, as refiners balance domestic pump prices with overseas margins.",
+    category: "industry",
+    companyOrSector: "Oil refining / exports",
+    publishedAt: "2026-10-16T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-windfall-tax-petrol-diesel-october-2026"),
+    keyTakeaways: [
+      "Petrol export windfall tax rises to ₹2.5 per litre from ₹0.5, effective 16 October 2026.",
+      "Diesel export duty is set at ₹8.5 per litre, lower than the prior fortnightly rate.",
+      "The fortnightly review targets refiners who earn extra on shipping fuel abroad when global cracks are wide.",
+    ],
+    body: [
+      "What's going on here?",
+      "Late on 15 October 2026, the finance ministry issued its fortnightly update to India’s windfall tax on petroleum exports. The duty on petrol shipped overseas rises to ₹2.5 per litre from ₹0.5. The levy on diesel exports is fixed at ₹8.5 per litre, a reduction from the previous fortnight’s level. The changes take effect on 16 October 2026. India introduced these export duties in 2022 to capture part of the margin refiners earn when international product prices run far above domestic pump caps. Officials reset the numbers every two weeks based on crude and product spreads.",
+      "What does this mean?",
+      "Private refiners such as Reliance Industries and Nayara Energy export large volumes of petrol and diesel when overseas prices are attractive. A higher petrol export tax nudges them to keep more product at home or accept slimmer export margins. A lower diesel export duty does the opposite, easing the tax bite on diesel shipments. The mix matters for pump economics because state-owned marketers still dominate retail sales, while private players have been more willing to lift pump prices when import-parity costs rise. Export taxes are one lever the government uses so refiners do not chase foreign cracks while domestic consumers face steady rates.",
+      "Why should I care?",
+      "If you drive a car or run a fleet, export-tax tweaks rarely show up on your bill the next morning, but they shape whether private retailers keep hiking ahead of the oil marketing companies. Investors in refining stocks should model how much margin sits in exports versus domestic sales each fortnight. Logistics firms that buy diesel in bulk may see indirect effects if refiners shift barrels between markets. Watch the next fortnightly order, global petrol and diesel cracks, and whether Nayara or Jio-bp adjust pump prices after the petrol export duty step-up.",
+    ],
+  },
+  {
+    slug: "mutual-funds-pause-gold-etf-bulk-subscriptions",
+    title: "Several large mutual funds paused bulk subscriptions into gold ETFs",
+    summary:
+      "Fund houses including Kotak Mahindra Asset Management issued notices late on 15 October 2026 suspending large lump-sum and switch-in flows into gold exchange-traded funds, just before the festive season when retail demand for bullion-linked products typically rises.",
+    category: "industry",
+    companyOrSector: "Mutual funds / gold ETFs",
+    publishedAt: "2026-10-16T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mutual-funds-pause-gold-etf-bulk-subscriptions"),
+    keyTakeaways: [
+      "Multiple asset managers halted bulk subscriptions to gold ETFs from 15 October 2026.",
+      "Notices cite operational and liquidity management ahead of peak festive gold demand.",
+      "Regular SIPs and redemptions generally continue unless a scheme issues a separate alert.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, several large Indian mutual funds published exchange notices saying they would stop accepting bulk subscriptions into their gold exchange-traded funds. Reports name houses such as Kotak Mahindra Asset Management among those acting before Diwali, when households traditionally buy gold and financial advisors often steer clients toward ETF units as a paper substitute. The suspensions typically cover very large lump-sum investments and switch-ins from other schemes, not every small retail ticket. Fund companies said the step helps them manage inflows against underlying bullion liquidity and creation-unit mechanics during a volatile price window.",
+      "What does this mean?",
+      "Gold ETFs must buy physical metal or approved proxies when new money arrives. When prices jump and festive demand surges, sudden large inflows can strain how quickly a fund can source bars without moving the market. Pausing bulk subscriptions is a risk tool similar to gating debt funds during stress: it slows new money while existing unit holders trade normally. It does not ban gold ownership, but it signals that asset managers expect heavy two-way flows as international bullion prices swing and Indian imports stay in focus after recent duty debates.",
+      "Why should I care?",
+      "If you were planning a large one-shot allocation into a gold ETF before the holidays, read your fund’s notice and ask your distributor whether switch-ins are still accepted. SIP investors should confirm their existing instructions remain live. Physical jewellery buyers face a different market, but ETF gates can push some demand back toward coins or sovereign gold bonds. Watch whether other houses follow, how long the pause lasts, and domestic gold import data through October.",
+    ],
+  },
+  {
+    slug: "delhi-electricity-subsidy-aadhaar-required",
+    title: "Delhi now requires Aadhaar verification to claim the power bill subsidy",
+    summary:
+      "The Delhi government’s power department has made Aadhaar authentication or proof of possession mandatory for consumers who want benefits under the city’s electricity subsidy scheme, according to a notification reported on 15 October 2026.",
+    category: "industry",
+    companyOrSector: "Power / households",
+    publishedAt: "2026-10-16T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("delhi-electricity-subsidy-aadhaar-required"),
+    keyTakeaways: [
+      "Consumers must complete Aadhaar authentication or show proof of possession to receive the subsidy.",
+      "The power department notification was reported on 15 October 2026.",
+      "Households that skip the step may pay the full tariff until they comply.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, media reports said the Delhi government’s power department issued a notification requiring Aadhaar authentication, or proof that a consumer holds an Aadhaar number, before granting benefits under the city’s electricity subsidy programme. The scheme has been a political flashpoint because it lowers effective tariffs for many households in the capital. Linking payouts to Aadhaar is meant to verify identity, reduce duplicate beneficiaries, and align with other welfare programmes that already use the digital ID rail.",
+      "What does this mean?",
+      "For consumers, the change is procedural but urgent. If you receive a subsidised bill today, you may need to complete an online or discom-led Aadhaar step to keep the concession on future cycles. Distribution companies will need updated customer records and help desks for residents who lack Aadhaar or face mismatched addresses. The policy does not by itself change the per-unit tariff schedule, but it can shrink the pool of subsidised accounts if people miss the deadline.",
+      "Why should I care?",
+      "If you live in Delhi, check SMS or email from your power discom and complete Aadhaar verification before the next billing cycle. Landlords who pay bills for tenants should clarify who must authenticate. Privacy advocates may watch how consent is recorded. Watch discom portals for the exact deadline, whether offline camps are offered, and any court or political challenge to making Aadhaar compulsory for an urban subsidy.",
+    ],
+  },
+  {
+    slug: "sundaram-finance-fd-rate-hike-october-2026",
+    title: "Sundaram Finance lifted fixed deposit rates with effect from 16 October",
+    summary:
+      "Non-bank lender Sundaram Finance raised interest on several fixed deposit tenures on 15 October 2026, with revised rates including up to 8% on select terms starting 16 October, as savers hunt yield after recent rate moves elsewhere in the system.",
+    category: "industry",
+    companyOrSector: "NBFCs / savers",
+    publishedAt: "2026-10-16T04:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sundaram-finance-fd-rate-hike-october-2026"),
+    keyTakeaways: [
+      "Sundaram Finance announced higher FD rates on 15 October 2026, effective 16 October.",
+      "One-year and other tenures saw increases, with top advertised rates reaching about 8% on select buckets.",
+      "The move follows other lenders nudging deposit pricing as credit demand stays firm.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Sundaram Finance Limited told depositors it would raise interest rates across multiple fixed deposit maturities. The new grid takes effect from 16 October 2026. Announcements highlighted higher payouts on one-year and other popular tenures, with promotional tables showing returns up to about 8% on certain combinations of tenure and customer category. Sundaram is among the established non-bank finance companies that fund vehicle and equipment loans partly through retail fixed deposits.",
+      "What does this mean?",
+      "When the Reserve Bank of India keeps policy rates elevated, banks and NBFCs compete for household savings. A mid-sized financier lifting deposit rates signals it wants stable liability funding before the festive credit season. Savers who ladder FDs can compare Sundaram’s grid with public-sector banks, small finance banks, and senior-citizen specials. Higher promised yield usually comes with issuer credit risk, so readers should weigh ratings and deposit insurance limits, which differ from bank deposits.",
+      "Why should I care?",
+      "If you park cash in FDs, rerun your comparison spreadsheet this week; a 25–50 basis point gap compounds over a one-year lock-in. If you borrow from Sundaram for a vehicle loan, funding costs may eventually feed pricing, though loan rates move on their own schedule. Watch whether other NBFCs match the hike, RBI liquidity operations, and any change in the company’s credit rating outlook.",
+    ],
+  },
+  {
     slug: "sebi-derivatives-vwap-closing-auction-revised",
     title: "SEBI will still settle expiring derivatives using a 30-minute average price",
     summary:
@@ -2462,6 +2558,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-windfall-tax-petrol-diesel-october-2026": "policy",
+  "mutual-funds-pause-gold-etf-bulk-subscriptions": "markets",
+  "delhi-electricity-subsidy-aadhaar-required": "policy",
+  "sundaram-finance-fd-rate-hike-october-2026": "policy",
   "sebi-derivatives-vwap-closing-auction-revised": "policy",
   "kotak-mf-suspends-credit-risk-after-at1-ruling": "policy",
   "sebi-irdai-insurance-consolidated-account-statement": "policy",
