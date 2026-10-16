@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbl-bank-emirates-nbd-amalgamation-december-2026",
+    title: "RBI approved merging Emirates NBD’s India branches into RBL Bank",
+    summary:
+      "The Reserve Bank of India said on 16 October 2026 that the Indian branches of Emirates NBD Bank will amalgamate with RBL Bank Ltd, with the merger effective from 1 December 2026.",
+    category: "industry",
+    companyOrSector: "Banking / regulation",
+    publishedAt: "2026-10-16T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbl-bank-emirates-nbd-amalgamation-december-2026"),
+    keyTakeaways: [
+      "RBI cleared amalgamation of Emirates NBD Bank P.J.S.C.’s Indian branches with RBL Bank.",
+      "The effective date is 1 December 2026, per the central bank’s exchange filing on 16 October.",
+      "RBL is already expanding retail branches; the deal folds a foreign lender’s local operations into one listed Indian bank.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, the Reserve Bank of India announced approval for the amalgamation of the Indian branches of Emirates NBD Bank P.J.S.C. with RBL Bank Ltd. The regulator set 1 December 2026 as the effective date. Emirates NBD, based in the United Arab Emirates, has operated branch banking in India for years. RBL Bank is a mid-sized private lender that reported strong loan growth in the September quarter and has outlined plans to open roughly 1,000 new branches over the next two to three years to gather retail deposits.",
+      "What does this mean?",
+      "When foreign banks fold Indian branches into a local private bank, customers, deposits, and staff typically move under the acquirer’s licence rather than staying on a branch-banking model. For RBL, the deal can add wholesale and corporate relationships tied to Emirates NBD’s India book while simplifying regulatory reporting under one entity. Consolidation also fits a wider pattern of Indian banks buying scale or niche books instead of growing only organically. Account holders at the affected branches should expect communication on when products, IFSC codes, and net-banking access switch to RBL branding, subject to integration timelines the banks will publish.",
+      "Why should I care?",
+      "If you bank with either institution, watch for notices on December 2026 cut-over dates, cheque books, and standing instructions. Borrowers should confirm whether loan terms change on paper even when rates stay the same. Investors in RBL will want the next investor presentation to spell out balance-sheet impact, capital ratios, and integration costs. Competitors will read this as another sign that mid-sized private banks are open to inorganic growth when regulators sign off.",
+    ],
+  },
+  {
+    slug: "india-drug-patent-guidelines-overhaul-october-2026",
+    title: "India drafted tougher drug patent rules to block evergreening",
+    summary:
+      "On 16 October 2026, the patent office published draft examination guidelines that demand stronger proof of medical benefit for new drug claims, aiming to stop minor tweaks from extending monopolies and to speed cheaper generics in a market that supplies about a fifth of global generic medicines.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / policy",
+    publishedAt: "2026-10-16T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-drug-patent-guidelines-overhaul-october-2026"),
+    keyTakeaways: [
+      "Draft guidelines from the Controller General of Patents tighten scrutiny on salts, polymorphs, and other incremental drug claims.",
+      "Applicants must show comparative data proving therapeutic gains, not just shelf-life or manufacturing convenience.",
+      "The move follows high-profile court fights over semaglutide and other therapies where Indian generics sought earlier access.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, the Office of the Controller General of Patents, Designs and Trade Marks issued draft guidelines to overhaul how pharmaceutical patent applications are examined in India. The document targets evergreening, where companies file follow-on patents on small changes to known molecules to delay generic competition. The draft requires practical scientific proof that a claimed invention improves treatment, not abstract wording. Variations such as new salts, crystal forms, or derivatives need comparative research showing a meaningful jump in efficacy. Commercial perks like easier manufacturing or faster absorption will not qualify unless backed by tests in living models. The framework also limits sprawling Markush claims that cover huge chemical families without synthesis detail, and it folds in court tests used since 2013 to judge novelty and obviousness.",
+      "What does this mean?",
+      "India’s drug industry runs about $60 billion in sales and ranks among the largest generic exporters by volume. When primary patents expire, local manufacturers such as Cipla, Sun Pharma, and Dr. Reddy’s can launch low-cost copies, which matters for both domestic patients and emerging-market buyers. Stricter examination makes it harder to win secondary patents that stretch exclusivity after the main compound patent ends. Innovators argue they need protection for genuine improvements; domestic associations such as the Indian Drug Manufacturers’ Association welcomed the balance toward affordability. Recent disputes over semaglutide and spinal muscular atrophy drug Risdiplam show how much revenue rides on whether a follow-on patent is treated as a real invention or a monopoly extension.",
+      "Why should I care?",
+      "If you pay out of pocket for chronic medicines, faster generic entry can eventually widen choices and pressure prices, though court battles may still delay specific launches. Investors in Indian pharma should separate pipeline bets on complex biologics from routine generic launches that benefit when examiners reject weak patents. Multinational patent holders must budget for harder evidence standards in India. Watch the comment period on the draft guidelines, Delhi High Court rulings cited in the text, and whether Parliament pairs patent tightening with separate data-protection rules some innovators are requesting.",
+    ],
+  },
+  {
+    slug: "air-india-saudi-flights-suspended-october-2026",
+    title: "Air India cancelled Saudi flights until 20 October after airport attacks",
+    summary:
+      "Air India said on 16 October 2026 that all flights to and from Riyadh, Dammam, and Jeddah are cancelled until 20 October amid drone and missile attacks on Saudi aviation infrastructure, with full refunds offered to passengers and rival carriers extending their own suspensions.",
+    category: "industry",
+    companyOrSector: "Aviation / travellers",
+    publishedAt: "2026-10-16T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("air-india-saudi-flights-suspended-october-2026"),
+    keyTakeaways: [
+      "Air India halted Saudi routes until 20 October 2026, citing an evolving security situation.",
+      "IndiGo and Akasa Air had already extended cancellations on Saudi sectors into late October.",
+      "The Indian embassy noted one Indian national died and others were injured in recent attacks on Saudi airports.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, Air India posted a travel advisory on X stating that flights to and from Riyadh, Dammam, and Jeddah remain cancelled until 20 October 2026 while the airline monitors security developments. Passengers on affected bookings are eligible for full refunds. The move follows repeated attacks on Saudi airports attributed to Yemen’s Houthi forces, including strikes on Riyadh’s King Khalid International Airport and Abha airport in the southwest. Reporting cites coalition statements on casualties and damage to civilian aviation infrastructure. Earlier in the week, IndiGo extended Saudi cancellations to 24 October and Akasa Air pushed Riyadh and Jeddah suspensions to 21 and 24 October respectively. The Indian embassy in Riyadh confirmed that an Indian national injured in an attack on 10 October later died, with other Indians still under care.",
+      "What does this mean?",
+      "Gulf routes are a core part of Indian carriers’ international networks for labour traffic, pilgrimage travel, and business links. When multiple airlines pause the same markets together, rebooking capacity through Dubai, Doha, or Bahrain becomes crowded and fares on indirect routings can jump. Full refunds protect consumers legally, but last-minute alternative tickets may still cost more or require visas for transit countries, as the embassy noted when pointing Indians to neighbouring hubs. For airlines, parked wide-body capacity on Saudi sectors bleeds revenue while insurance and crew-duty rules complicate quick restarts even if a single date is announced.",
+      "Why should I care?",
+      "If you hold tickets to Saudi Arabia before late October, check airline apps for automatic refunds or reissue options and compare one-stop routings if travel is urgent. Corporate travel desks should pause non-essential Saudi trips until carriers publish stable schedules. Investors in Indian aviation should model international yield risk alongside domestic festive demand. Watch whether Air India lifts the 20 October deadline, any further embassy advisories, and whether insurance policies cover disruption from conflict zones.",
+    ],
+  },
+  {
+    slug: "eternal-sbi-card-zomato-blinkit-october-2026",
+    title: "Eternal and SBI Card opened early access for a Zomato-Blinkit credit card",
+    summary:
+      "Eternal Ltd, owner of Zomato and Blinkit, teamed with SBI Card on 15–16 October 2026 to offer early-access sign-ups for a co-branded credit card that promises instant discounts across the group’s apps, with applications opening from 22 October on Mastercard and RuPay networks.",
+    category: "industry",
+    companyOrSector: "Consumer apps / payments",
+    publishedAt: "2026-10-16T16:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("eternal-sbi-card-zomato-blinkit-october-2026"),
+    keyTakeaways: [
+      "Users can request early access via Zomato, Blinkit, or District apps ahead of a phased launch from 22 October 2026.",
+      "SBI Card will issue the Eternal SBI Card on Mastercard and RuPay with digital onboarding through the apps or SBI Card’s site.",
+      "Marketing materials cite instant discounts across Eternal brands, with a combined monthly benefits cap reported at ₹2,000.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Eternal Ltd and SBI Card announced a co-branded credit card aimed at customers who already order food, groceries, and experiences through Zomato, Blinkit, and District. From 16 October, logged-in users could tap in-app banners to request early access with Aadhaar-linked name and phone verification. General applications are scheduled to open from 22 October 2026 in phases. The card will run on both Mastercard and RuPay rails, with a fully digital application path inside the consumer apps or on SBI Card’s website. Eternal chief financial officer Akshant Goyal said the product is meant to reward high-frequency everyday spends inside the group’s ecosystem while still offering benefits beyond those brands.",
+      "What does this mean?",
+      "Quick-commerce and food-delivery platforms want payment products that keep rewards inside their apps instead of sending users to generic bank portals. A co-brand with India’s largest standalone credit card issuer gives Eternal scale on underwriting and collections while SBI Card taps young urban spenders who may not bank with its parent lender. Discount-led cards work when users consolidate dining, grocery, and entertainment bills on one plastic to hit monthly caps efficiently. Reporting on the launch cites instant discounts subject to a combined ceiling of about ₹2,000 per month across participating brands, so heavy users should read the fine print on category limits and partner exclusions.",
+      "Why should I care?",
+      "If you already use Zomato or Blinkit weekly, compare the Eternal card’s reward math with your existing cashback or points card before switching autopay links. Check annual fees, finance charges, and whether RuPay acceptance fits your travel and online shopping mix. Competing apps and banks may respond with richer grocery or dining offers during the festive quarter. Watch the 22 October rollout for approval rates, delivery timelines for physical cards, and whether regulators raise any data-sharing questions on in-app credit onboarding.",
+    ],
+  },
+  {
     slug: "india-gold-silver-imports-september-2026-plunge",
     title: "India’s gold imports fell 81% in September after the duty hike",
     summary:
@@ -2654,6 +2750,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbl-bank-emirates-nbd-amalgamation-december-2026": "policy",
+  "india-drug-patent-guidelines-overhaul-october-2026": "policy",
+  "air-india-saudi-flights-suspended-october-2026": "policy",
+  "eternal-sbi-card-zomato-blinkit-october-2026": "companies",
   "india-gold-silver-imports-september-2026-plunge": "markets",
   "india-carmakers-input-cost-price-hikes-october-2026": "companies",
   "mahindra-xuv-3xo-cng-launch-october-2026": "companies",
