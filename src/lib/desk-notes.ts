@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "oberoi-realty-q2-profit-flat-october-2026",
+    title: "Oberoi Realty kept profit near ₹762 crore as revenue slipped 6%",
+    summary:
+      "Oberoi Realty reported on 16 October 2026 that consolidated net profit was roughly flat year on year at ₹761.65 crore for the September quarter, while revenue from operations fell 6.1% to about ₹1,671 crore and the board declared a ₹2 per share interim dividend.",
+    category: "industry",
+    companyOrSector: "Real estate / luxury housing",
+    publishedAt: "2026-10-16T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("oberoi-realty-q2-profit-flat-october-2026"),
+    keyTakeaways: [
+      "Consolidated net profit rose 0.2% year on year to ₹761.65 crore in Q2 FY27.",
+      "Revenue from operations fell 6.1% to ₹1,670.95 crore versus ₹1,779 crore a year earlier.",
+      "The board declared a second interim dividend of ₹2 per share for FY27 alongside the results.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, Oberoi Realty Ltd published results for the quarter ended September 2026. Consolidated net profit edged up 0.2% year on year to ₹761.65 crore, compared with about ₹760 crore in the year-earlier period. Revenue from operations declined 6.1% to ₹1,670.95 crore from ₹1,779 crore. EBITDA stayed near ₹1,019 crore. The Mumbai-focused developer also announced a second interim dividend of ₹2 per share for financial year 2027, with record-date details to follow in exchange filings.",
+      "What does this mean?",
+      "Luxury residential developers earn when projects reach recognition milestones, so a revenue dip in one quarter does not always mean fewer home buyers walked in. Oberoi’s profit holding steady while sales recognition slowed suggests a mix of completed inventory, steady margins on what did book, and possibly slower handovers in specific towers. For buyers in premium micro-markets such as Worli and Goregaon, the print is less about the share price move and more about whether launch pipelines and construction timelines stay on track through the festive booking season.",
+      "Why should I care?",
+      "If you are comparing high-end projects in Mumbai, ask sales teams which phases contributed to this quarter’s numbers and what is scheduled for recognition next quarter. Investors should read the segment break-up between residential, hospitality, and commercial assets and whether the dividend signals confidence in cash flows. Watch upcoming launches, debt on under-construction inventory, and whether peers in the Nifty Realty pack show similar revenue timing effects or genuine demand softness.",
+    ],
+  },
+  {
+    slug: "cult-fit-sebi-ipo-october-2026",
+    title: "Cult.fit cleared the next SEBI hurdle for a ₹950 crore IPO",
+    summary:
+      "On 16 October 2026, SEBI issued observations on Cult.fit’s draft papers for an offering that includes up to ₹950 crore of fresh shares and a 17.86 crore share sale by existing investors, as the fitness chain runs 708 centres across 77 cities.",
+    category: "industry",
+    companyOrSector: "Fitness / consumer platforms",
+    publishedAt: "2026-10-16T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cult-fit-sebi-ipo-october-2026"),
+    keyTakeaways: [
+      "The proposed IPO combines a fresh issue of up to ₹950 crore with an offer for sale of 17.86 crore shares.",
+      "Cult.fit operated 708 fitness centres in 77 Indian cities as of March 2026, per its filing materials.",
+      "FY26 revenue from operations reached ₹1,720.61 crore, up 36.3% year on year, with adjusted EBITDA margin at 8.41%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, the Securities and Exchange Board of India published observations on the draft red herring prospectus of Cult.fit, formerly Curefit Healthcare Ltd. The planned listing on the BSE and NSE includes a fresh equity issue of up to ₹950 crore and an offer for sale of 17.86 crore shares by selling shareholders. Book-running lead managers include Axis Capital, Goldman Sachs India, Jefferies, JM Financial, and Morgan Stanley India. The company says it runs 708 fitness centres across 77 cities and cites third-party data calling it India’s largest fitness-centre network by outlet count as of March 2026.",
+      "What does this mean?",
+      "Gym chains burn capital on leases, equipment, and trainers before memberships scale. Cult.fit plans to use fresh proceeds to repay borrowings, open more Cult Elite and Cult Neo centres, fund Cultsport retail stores, and spend on marketing. Its filing reports 987,020 paid transacting members in fiscal 2026 and more than 4.23 million fitness products shipped in the year, with services contributing about 70% of revenue and products the rest. An IPO at this scale tests whether urban Indians treat fitness as a recurring bill, not a post-pandemic fad. SEBI observations are a procedural green light to file final papers; they do not set the price band or guarantee listing dates.",
+      "Why should I care?",
+      "If you hold a multi-year Cult membership, watch whether expansion plans improve centre proximity or crowd peak-hour floors. Competitors and local gyms may sharpen festive offers ahead of a listed rival with fresh capital. Prospective investors should wait for the price band, promoter selling details, and how much debt the fresh issue retires. Track the red herring prospectus for unit economics by centre format and whether Cultsport stores lift margins or add lease risk.",
+    ],
+  },
+  {
+    slug: "india-ethanol-zero-sugar-diversion-2026-27",
+    title: "India told oil firms to stop buying ethanol made from surplus sugar",
+    summary:
+      "A 16 October 2026 tender from state oil marketers set sugar diversion for ethanol at zero in the 2026–27 supply year, steering bids toward corn and rice feedstock while sugar prices sit at records after weak rains in Maharashtra and Karnataka.",
+    category: "industry",
+    companyOrSector: "Energy policy / agriculture",
+    publishedAt: "2026-10-16T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-ethanol-zero-sugar-diversion-2026-27"),
+    keyTakeaways: [
+      "Indian Oil, BPCL, and HPCL sought no offers for ethanol from sugar, syrup, or B-heavy molasses in the latest 11 billion litre tender.",
+      "Government directions require zero sugar diversion for ethanol in supply year 2026–27, per the tender document.",
+      "Procurement incentives for corn-based ethanol fell to ₹2.79 per litre, cutting the reference price to ₹68.86 per litre from ₹71.86.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, Indian Oil Corporation, Bharat Petroleum Corporation, and Hindustan Petroleum Corporation issued a joint ethanol procurement tender for the supply year beginning November 2026. The document states that the Government of India directed that sugar diversion for ethanol be reduced to zero for 2026–27. Bidders were not invited to supply ethanol produced from sugarcane juice, sugar, sugar syrup, or B-heavy molasses. The tender instead covers 11 billion litres from feedstocks such as corn, broken rice, and surplus rice held by the Food Corporation of India. The procurement incentive for corn ethanol was cut to ₹2.79 per litre from ₹5.79, lowering the reference price to ₹68.86 per litre from ₹71.86.",
+      "What does this mean?",
+      "India has pushed ethanol blending to cut oil imports and meet E20 petrol nationwide, but mills have long used surplus cane to make fuel alcohol. With domestic sugar prices at records and rainfall shortfalls threatening Maharashtra and Karnataka output, policymakers are prioritising sweetener supply over another ethanol route. Oil marketing companies must now lean on grain-based ethanol, which shifts margins to distillers and farmers in corn belts while cane-heavy states see less diversion demand. Motorists on older vehicles still worry about blend compatibility, but this change is really a food-versus-fuel trade-off inside the cabinet’s supply-year rules.",
+      "Why should I care?",
+      "If you run a sugar mill or farm in western or southern cane districts, plan for weaker ethanol offtake from oil firms next season and watch state advisory prices. Commuters should expect petrol blending policy to continue, but pump economics may reflect whichever feedstock is cheapest after the incentive tweak. Investors in agri-processing and OMC stocks should compare ethanol realisations with sugar export opportunities. Follow monsoon updates, Food Corporation rice allocations, and whether the government revises incentives before bids close.",
+    ],
+  },
+  {
     slug: "rbl-bank-emirates-nbd-amalgamation-december-2026",
     title: "RBI approved merging Emirates NBD’s India branches into RBL Bank",
     summary:
@@ -2750,6 +2822,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "oberoi-realty-q2-profit-flat-october-2026": "companies",
+  "cult-fit-sebi-ipo-october-2026": "markets",
+  "india-ethanol-zero-sugar-diversion-2026-27": "policy",
   "rbl-bank-emirates-nbd-amalgamation-december-2026": "policy",
   "india-drug-patent-guidelines-overhaul-october-2026": "policy",
   "air-india-saudi-flights-suspended-october-2026": "policy",
