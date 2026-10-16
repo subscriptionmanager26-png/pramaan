@@ -1,5 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 
+import { readPocketedgeSessionRaw, tokensFromSessionJson } from "./cookie-session";
+
 export type PocketedgeUser = {
   id: string;
   email?: string;
@@ -16,9 +18,17 @@ function authEnv() {
   return { url, key };
 }
 
-/** Validates the browser's Supabase access token from Authorization: Bearer … */
+function accessTokenFromRequest(request: Request): string | undefined {
+  const header = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "").trim();
+  if (header) return header;
+  const raw = readPocketedgeSessionRaw(request.headers.get("cookie"));
+  if (!raw) return undefined;
+  return tokensFromSessionJson(raw)?.accessToken;
+}
+
+/** Validates Supabase access token from Authorization header or shared pocketedge.in session cookie. */
 export async function pocketedgeUserFromRequest(request: Request): Promise<PocketedgeUser | undefined> {
-  const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "").trim();
+  const token = accessTokenFromRequest(request);
   if (!token) return undefined;
   const env = authEnv();
   if (!env) return undefined;

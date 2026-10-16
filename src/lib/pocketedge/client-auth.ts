@@ -1,0 +1,37 @@
+import { setPostAuthRedirect } from "./auth-storage";
+import { getPocketedgeSupabase } from "./supabase-browser";
+
+/** Copy shared `.pocketedge.in` session cookie into this tab's Supabase client when possible. */
+export async function hydratePocketedgeSessionFromCookie(): Promise<boolean> {
+  const res = await fetch("/api/pocketedge/session", { credentials: "include" });
+  if (!res.ok) return false;
+  const body = (await res.json()) as { ok?: boolean; access_token?: string; refresh_token?: string };
+  if (!body.ok || !body.access_token) return false;
+  const supabase = getPocketedgeSupabase();
+  const { error } = await supabase.auth.setSession({
+    access_token: body.access_token,
+    refresh_token: body.refresh_token ?? "",
+  });
+  return !error;
+}
+
+export async function signInWithGoogleOnPramaan() {
+  const supabase = getPocketedgeSupabase();
+  const redirectTo = window.location.href.split("#")[0];
+  setPostAuthRedirect(redirectTo);
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo,
+      queryParams: { prompt: "select_account" },
+    },
+  });
+  if (error) throw error;
+}
+
+export function openPocketedgeLogin() {
+  const login =
+    process.env.NEXT_PUBLIC_POCKETEDGE_LOGIN_URL?.replace(/\/$/, "") || "https://www.pocketedge.in";
+  setPostAuthRedirect(window.location.href.split("#")[0]);
+  window.location.href = login;
+}

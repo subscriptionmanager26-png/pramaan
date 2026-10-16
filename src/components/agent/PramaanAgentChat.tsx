@@ -3,12 +3,14 @@
 import { useCallback, useEffect, useState } from "react";
 
 import type { AgentMessage } from "@/lib/agent/types";
+import {
+  hydratePocketedgeSessionFromCookie,
+  openPocketedgeLogin,
+  signInWithGoogleOnPramaan,
+} from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
 
 import { AgentBlocks } from "./AgentBlocks";
-
-const LOGIN_URL =
-  process.env.NEXT_PUBLIC_POCKETEDGE_LOGIN_URL?.replace(/\/$/, "") || "https://www.pocketedge.in";
 
 async function authHeaders() {
   const supabase = getPocketedgeSupabase();
@@ -56,12 +58,19 @@ export function PramaanAgentChat() {
 
   useEffect(() => {
     if (!pocketedgeAuthConfigured()) return;
+    let cancelled = false;
+    (async () => {
+      await hydratePocketedgeSessionFromCookie();
+      if (!cancelled) await refreshSession();
+    })();
     const supabase = getPocketedgeSupabase();
-    refreshSession();
     const { data: sub } = supabase.auth.onAuthStateChange(() => {
       refreshSession();
     });
-    return () => sub.subscription.unsubscribe();
+    return () => {
+      cancelled = true;
+      sub.subscription.unsubscribe();
+    };
   }, [refreshSession]);
 
   async function streamMessage(messageId: string, headers: Record<string, string>): Promise<AgentMessage> {
@@ -152,11 +161,25 @@ export function PramaanAgentChat() {
   if (!signedIn) {
     return (
       <div className="rounded-2xl border border-line bg-white px-6 py-12 text-center">
-        <p className="text-[17px] font-medium text-ink">Sign in with your Pocketedge account</p>
-        <p className="mt-2 text-sm text-ink-2">Use the same Google login as pocketedge.in. Your session works across Pramaan.</p>
-        <a href={LOGIN_URL} className="btn-primary mt-6 inline-flex">
-          Continue on pocketedge.in
-        </a>
+        <p className="text-[17px] font-medium text-ink">Sign in to use your agent</p>
+        <p className="mx-auto mt-2 max-w-md text-sm text-ink-2">
+          Being logged in on pocketedge.in does not always carry over to Pramaan in the same tab—each site keeps its own
+          copy of the session unless a shared cookie is present. Use the same Google account below (one-time on this page).
+        </p>
+        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <button
+            type="button"
+            className="btn-primary"
+            onClick={() => {
+              signInWithGoogleOnPramaan().catch(() => setError("Could not start Google sign-in."));
+            }}
+          >
+            Continue with Google
+          </button>
+          <button type="button" className="btn-secondary" onClick={() => openPocketedgeLogin()}>
+            Open pocketedge.in
+          </button>
+        </div>
       </div>
     );
   }
