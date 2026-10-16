@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-gold-silver-imports-september-2026-plunge",
+    title: "India’s gold imports fell 81% in September after the duty hike",
+    summary:
+      "Commerce Ministry trade data released on 15 October 2026 show gold imports dropped to about $1.8 billion in September, down 81% year on year, while silver shipments fell 49%, extending a two-month slide after import duties on precious metals rose to 15% in May.",
+    category: "industry",
+    companyOrSector: "Bullion / trade",
+    publishedAt: "2026-10-16T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-gold-silver-imports-september-2026-plunge"),
+    keyTakeaways: [
+      "Gold imports were $1.8 billion in September 2026, an 81.27% fall from a year earlier.",
+      "Silver imports dropped 49% year on year to about $665 million in the same month.",
+      "Duties on precious metals rose from 6% to 15% from 13 May 2026, and April–September gold imports are down 27% to $19.27 billion.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, the Commerce Ministry published September merchandise trade figures. Gold imports fell 81.27% year on year to $1.8 billion, the second straight monthly decline. Silver imports dropped 49.11% to about $665 million. The slide follows the government’s decision in May 2026 to raise import duties on gold, silver, and platinum from 6% to 15%. For the April–September half of FY27, gold imports totalled $19.27 billion, down 27.32% from the same period a year ago, while silver imports fell 25% to $2.4 billion. Officials have also urged households to defer discretionary bullion buying while West Asia tensions disrupt shipping lanes.",
+      "What does this mean?",
+      "Gold still accounts for more than 5% of India’s import bill and feeds the jewellery industry ahead of Diwali. A thinner import pipeline eases pressure on the trade deficit and on dollars spent overseas, which matters while the rupee has been volatile. It also lines up with mutual funds pausing bulk subscriptions into gold ETFs this week: financial and physical channels are both adjusting to higher duties and record international prices. Jewellers may lean on inventory built earlier in the year, while households weighing wedding purchases face higher landed costs even as global bullion swings.",
+      "Why should I care?",
+      "If you plan festive gold buying, compare making charges and whether your jeweller is passing through duty-led price moves. Investors in gold ETFs should read fund notices on liquidity gates alongside import data. Exporters and policymakers will watch whether the import bill stays lower without a sharp rebound in smuggling or informal flows. Track October customs data, international gold prices, and whether duty relief or festival promotions appear before peak shopping weekends.",
+    ],
+  },
+  {
+    slug: "india-carmakers-input-cost-price-hikes-october-2026",
+    title: "Carmakers warn steel and freight costs may force more price hikes after Diwali",
+    summary:
+      "Industry data cited on 16 October 2026 show hot-rolled steel and aluminium at 12-month highs, CNG pump prices up double digits in Delhi, and the Baltic Dry freight index 60% above a year ago, prompting executives from Maruti Suzuki to Toyota to say further vehicle price increases are possible once the festive season ends.",
+    category: "industry",
+    companyOrSector: "Automobiles / households",
+    publishedAt: "2026-10-16T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-carmakers-input-cost-price-hikes-october-2026"),
+    keyTakeaways: [
+      "Hot-rolled steel traded around ₹65,000–66,750 per tonne in September 2026, about 30% above a year earlier, per SIAM commodity monitors cited in reporting.",
+      "Aluminium averaged about $3,277 per tonne last month, up 23% year on year, while Delhi CNG prices were 13% higher than September 2025.",
+      "Maruti Suzuki and Toyota Kirloskar executives said they may need calibrated hikes after festivals if commodity and freight inflation persists.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 16 October 2026 highlighted mounting input costs across India’s car industry even as passenger vehicle production rose about 16% year on year in the latest monthly data. Hot-rolled steel reached ₹65,000–66,750 per tonne in September, roughly 30% higher than a year ago. Cold-rolled steel and aluminium also hit 12-month peaks. Coking coal, copper, zinc, and polymers added pressure. Delhi CNG prices in September were 13% above the prior year and at their highest in a year. The Baltic Dry Index, a gauge of bulk shipping costs, stood near 3,408 points, up about 60% from September 2025. Most large carmakers have already raised prices two or three times in 2026.",
+      "What does this mean?",
+      "Commodities make up an estimated 60–65% of an automaker’s cost base. When steel and aluminium inflate together, margins shrink unless companies pass costs to buyers or find savings in engineering. Executives told reporters they will try value engineering through the festival rush but may lift stickers again if inflation sticks. That matters for households who delayed purchases expecting GST-led discounts: the window of stable on-road prices may close once October bookings clear. Commercial fleets face the same freight index surge on top of fuel.",
+      "Why should I care?",
+      "If you are shopping for a car or SUV this month, compare on-road quotes now with post-festival lists and ask dealers whether a booked price is protected. Fleet owners should budget for both vehicle and logistics inflation. Investors should read quarterly margin commentary from Maruti, Hyundai, Tata Motors, and Toyota Kirloskar for how much cost they absorbed versus passed through. Watch SIAM’s next commodity monitor, steel mill price lists, and whether the government eases any auto-related levies in the winter session.",
+    ],
+  },
+  {
+    slug: "mahindra-xuv-3xo-cng-launch-october-2026",
+    title: "Mahindra launched its first CNG SUV at ₹9.99 lakh ex-showroom",
+    summary:
+      "Mahindra & Mahindra began selling the XUV 3XO ZNG on 16 October 2026, a turbo-petrol CNG compact SUV priced from ₹9.99 lakh to ₹12.27 lakh, claiming 24.7 km/kg efficiency and 270 litres of boot space with twin cylinders mounted under the floor.",
+    category: "industry",
+    companyOrSector: "Passenger vehicles",
+    publishedAt: "2026-10-16T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mahindra-xuv-3xo-cng-launch-october-2026"),
+    keyTakeaways: [
+      "The XUV 3XO ZNG is Mahindra’s first CNG passenger SUV, with four variants from ₹9.99 lakh to ₹12.27 lakh ex-showroom.",
+      "The 1.2-litre turbo engine is rated at 82 kW and 200 Nm in both petrol and CNG modes, with certified efficiency of 24.7 km/kg.",
+      "Bookings open on 20 October 2026 with deliveries from the same date; test drives began on 15 October.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, Mahindra & Mahindra rolled out the XUV 3XO ZNG, its first factory-fitted CNG sport utility vehicle. Prices start at ₹9.99 lakh ex-showroom for the MX Edge variant and top out at ₹12.27 lakh for the REVX A trim. The company uses a 1.2-litre turbo-petrol engine that it says delivers the same 82 kW and 200 Nm in petrol and CNG modes, with certified mileage of 24.7 km/kg. Twin CNG cylinders sit under the luggage floor, leaving 270 litres of boot space and a flat loading area. Six airbags, electronic stability control, and gas-leak detection that switches back to petrol are standard. Test drives started on 15 October; bookings and deliveries begin on 20 October.",
+      "What does this mean?",
+      "Maruti Suzuki and Tata Motors already sell CNG in compact SUVs, so Mahindra is chasing buyers who want lower per-kilometre fuel bills without giving up turbo performance. Keeping identical torque claims in CNG mode is a marketing hook, though real-world range will depend on tank size and driving style. The launch lands while CNG pump prices in major cities are at 12-month highs, so the value equation is about running cost versus petrol, not a cheap fuel fantasy. For Mahindra, the ZNG broadens the XUV 3XO lineup beyond petrol, diesel, and electric options unveiled earlier in the year.",
+      "Why should I care?",
+      "If you commute long distances, compare total cost of ownership against a hybrid or efficient diesel rival, including CNG availability in your city. Families should physically check boot space with luggage before booking. Fleet and ride-hail operators may like the dual-fuel backup when CNG stations run dry. Watch early delivery timelines, whether rivals trim prices on petrol trims, and how insurance premiums price CNG fitments on a turbo SUV.",
+    ],
+  },
+  {
+    slug: "aviation-power-bank-flight-safety-indigo-october-2026",
+    title: "Regulators banned one power bank model after an IndiGo cabin fire",
+    summary:
+      "After a fire involving a portable battery on an IndiGo flight, the Directorate General of Civil Aviation barred the MOBIKINS MK-PB-04 power bank from Indian flights from 29 September 2026, while Paytm founder Vijay Shekhar Sharma urged a wider in-flight ban in posts on 16 October.",
+    category: "industry",
+    companyOrSector: "Aviation / consumers",
+    publishedAt: "2026-10-16T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("aviation-power-bank-flight-safety-indigo-october-2026"),
+    keyTakeaways: [
+      "DGCA prohibited carriage of the MOBIKINS MK-PB-04 power bank on flights to, from, or within India from 29 September 2026.",
+      "The step followed a fire incident aboard an IndiGo aircraft linked to that model, according to regulatory notices cited in reporting.",
+      "Paytm’s Vijay Shekhar Sharma argued on 16 October for broader restrictions on power banks in cabins, beyond the single-model ban.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s aviation regulator tightened rules on portable lithium batteries after a fire on board an IndiGo flight. In a communication dated 29 September 2026, the Directorate General of Civil Aviation barred passengers from carrying or using the MOBIKINS MK-PB-04 power bank on flights operating to, from, or within India. Reporting ties the order to a recent cabin incident involving that specific model. On 16 October 2026, Paytm founder Vijay Shekhar Sharma posted on X asking why airlines and regulators allow power banks in cabins while requiring phones in airplane mode. He called for wider restrictions on flights serving India. The DGCA action stops short of a blanket ban on all power banks.",
+      "What does this mean?",
+      "Lithium cells in carry-on bags remain a known ignition risk if damaged or poorly manufactured. Regulators usually blacklist particular models after fault investigations rather than outlawing every battery pack, because passengers rely on them for phones and laptops on long sectors. A targeted ban forces airlines to update safety briefings and security screeners to watch for one SKU, while leaving other brands legal if they meet watt-hour limits. Sharma’s proposal would push India toward stricter cabin rules seen in some cargo-only lithium policies, which would affect frequent flyers and gadget-heavy travellers.",
+      "Why should I care?",
+      "Check your power bank model against the DGCA notice before flying; discard or leave banned units at home. Prefer name-brand packs within airline watt-hour caps and keep them in cabin baggage, not checked luggage. Business travellers should brief staff who fly weekly. Watch whether DGCA expands the prohibited list, how IndiGo documents the incident, and if other carriers lobby for wider limits during the winter travel peak.",
+    ],
+  },
+  {
     slug: "india-windfall-tax-petrol-diesel-october-2026",
     title: "India raised the windfall tax on petrol exports and trimmed the levy on diesel",
     summary:
@@ -2558,6 +2654,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-gold-silver-imports-september-2026-plunge": "markets",
+  "india-carmakers-input-cost-price-hikes-october-2026": "companies",
+  "mahindra-xuv-3xo-cng-launch-october-2026": "companies",
+  "aviation-power-bank-flight-safety-indigo-october-2026": "policy",
   "india-windfall-tax-petrol-diesel-october-2026": "policy",
   "mutual-funds-pause-gold-etf-bulk-subscriptions": "markets",
   "delhi-electricity-subsidy-aadhaar-required": "policy",
