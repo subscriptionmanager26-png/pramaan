@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fssai-infant-added-sugars-ban-october-2026",
+    title: "India’s food regulator wants to ban added sugars in infant foods up to six months",
+    summary:
+      "On 17 October 2026, the Food Safety and Standards Authority of India proposed ending routine use of sucrose and fructose in nutrition products for babies up to six months, keeping lactose and glucose polymers as the preferred carbohydrates.",
+    category: "industry",
+    companyOrSector: "Food policy / infant nutrition",
+    publishedAt: "2026-10-17T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-infant-added-sugars-ban-october-2026"),
+    keyTakeaways: [
+      "FSSAI proposed banning added sucrose and fructose in foods for infants up to six months of age.",
+      "Existing rules already prefer lactose and glucose polymers; sucrose and fructose are allowed only within limits when needed.",
+      "The proposal sits inside a wider enforcement push that includes front-of-pack warnings and state-level raids on eateries and warehouses.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, the Food Safety and Standards Authority of India said it wants to stop manufacturers from adding sucrose and fructose to infant nutrition products meant for children up to six months old. Current standards already list lactose and glucose polymers as the preferred carbohydrate sources for those products. Sucrose and fructose can be used today only when required and within prescribed caps. FSSAI said the change is meant to cut babies’ exposure to added sugars and to respond to obesity risks in childhood. The proposal applies within broader infant nutrition rules that cover safety and composition for children from birth to 24 months.",
+      "What does this mean?",
+      "Packaged infant formula and follow-on foods are one of the first processed meals many households buy. When regulators narrow which sweeteners are allowed, manufacturers must reformulate recipes, rerun stability tests, and refresh labels before shelves turn over. That can raise production cost but also removes a cheap way to mask bitter notes from fortifiers. The move aligns with FSSAI’s wider push on sugar, salt, and saturated fat, including a planned front-of-pack warning label that now triggers if even one nutrient of concern crosses a threshold. For parents, the practical effect is fewer discretionary sweeteners in the youngest age band, not a ban on all sugars in toddler snacks, which sit under different product categories.",
+      "Why should I care?",
+      "If you buy formula or infant cereals, watch for revised packs and ingredient lists after the draft is finalised and commented on. Retailers and paediatric brands may phase out old stock over several months. If you invest in listed food companies, track which firms rely on sweetener blends in infant SKUs and what reformulation costs they disclose. Policy watchers should compare this rule with state enforcement on warehouses and restaurants, because both threads show regulators treating packaged and fresh food chains as public health issues, not only quality paperwork.",
+    ],
+  },
+  {
+    slug: "maharashtra-fda-blinkit-reliance-expired-food-october-2026",
+    title: "Maharashtra named Blinkit and Reliance officials in an expired-food probe",
+    summary:
+      "Maharashtra’s Food and Drug Administration filed a police complaint and suspended licences at five Reliance and Eternal warehouses after alleging expired and rejected grocery packs were sent to disposal contractors that did not destroy stock, letting some items re-enter retail channels.",
+    category: "industry",
+    companyOrSector: "Quick commerce / food safety",
+    publishedAt: "2026-10-17T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maharashtra-fda-blinkit-reliance-expired-food-october-2026"),
+    keyTakeaways: [
+      "FDA Maharashtra named executives including Blinkit CEO Albinder Dhindsa in a case over expired food allegedly returning to supply chains.",
+      "Inspectors said warehouse teams could not prove contractors destroyed rejected stock; five establishment licences were suspended on 16 October.",
+      "The regulator described a chain from company warehouses through unlicensed sorting yards back to retailers and consumers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, reporting based on Maharashtra Food and Drug Administration case documents said the state agency has named officials from Reliance Retail, Reliance Consumer, Eternal’s Blinkit unit, and Zomato Hyperpure in a probe over expired and customer-rejected food. The documents cite Blinkit chief executive Albinder Dhindsa among those named as the FDA builds a police complaint. Inspectors visited distribution warehouses and alleged that disposal contractors did not verifiably destroy stock handed over for destruction. In one Hyperpure site, a representative pointed to a contractor that officials could not trace. On 16 October the FDA suspended licences at five establishments, three tied to Reliance entities and two to Eternal businesses. Agency chief Tukaram Mundhe told reporters that diverting food meant for destruction back into the market is a serious offence and that no brand is above food safety law.",
+      "What does this mean?",
+      "Quick-commerce growth depends on dark stores and large warehouses moving huge SKU counts at speed. Regulators now treat those hubs as part of the food chain, not passive landlords. When expiry dates slip or customers return packs, the legal obligation is provable destruction, not a hand-off to an unlicensed yard. The case documents describe a pattern: warehouses pass damaged stock to contractors, sorting yards salvage saleable-looking packets, and brokers feed other retailers. That raises liability questions for platforms that promise 10-minute delivery but outsource waste handling. It also sits beside FSSAI’s national push for clearer online labels and state raids on restaurants, so enforcement is coming from both Delhi frameworks and aggressive state FDA teams.",
+      "Why should I care?",
+      "If you order groceries on an app, check expiry dates on delivery and report packs that look tampered. Operators may slow SKU expansion or spend more on audited waste vendors, which can affect discounts during the festive quarter. Investors in listed consumer platforms should watch legal filings, licence reinstatements, and whether other states copy Maharashtra’s warehouse inspections. Policy watchers should track court responses from named companies and whether national rules on disposal proof become mandatory for e-commerce fulfilment centres.",
+    ],
+  },
+  {
+    slug: "jio-platforms-ipo-reserved-quotas-october-2026",
+    title: "Jio Platforms set employee and Reliance shareholder quotas for its October IPO",
+    summary:
+      "Ahead of a 21–23 October 2026 listing window, Jio Platforms reserved separate IPO pools for permanent group employees and for individuals who held Reliance Industries shares on 14 October, with up to three applications per PAN across categories.",
+    category: "industry",
+    companyOrSector: "Telecom / IPO",
+    publishedAt: "2026-10-17T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jio-platforms-ipo-reserved-quotas-october-2026"),
+    keyTakeaways: [
+      "The IPO is scheduled to open on 21 October and close on 23 October 2026, per exchange filings cited in reporting.",
+      "Reliance Industries shareholders as of 14 October 2026 can bid in a dedicated quota without a price discount.",
+      "Eligible permanent employees may apply with a ₹54-per-share discount and a higher ₹5 lakh application cap, subject to separate allotment rules.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, reporting on Jio Platforms Ltd’s initial public offering spelled out how reserved quotas will work when the issue opens on 21 October and closes on 23 October 2026. The eligibility record date for Reliance Industries shareholders is 14 October 2026, the day the red herring prospectus was filed. Individuals and Hindu undivided families who held at least one Reliance Industries share on that date may apply under the shareholder portion once bidding starts. Permanent employees of Jio Platforms, Reliance Industries, or specified subsidiaries as of 14 October qualify for an employee quota. Contract staff, employees serving notice periods, and large insider holders above 10% are excluded. At the reported upper price band of ₹1,119 per share and a lot size of 12 shares, a retail-sized application is about ₹13,428 before any employee discount.",
+      "What does this mean?",
+      "Mega IPOs in India often carve out tranches so promoters’ own shareholders and staff can participate without competing entirely with the public retail pool. Shareholders get a separate lane but not a cheaper price. Employees can receive a ₹54-per-share discount and may bid up to ₹5 lakh in their quota, though initial allotment within the employee portion is capped at ₹2 lakh unless the tranche is undersubscribed. Market commentators quoted in the coverage warned that one permanent account number can file up to three valid bids across categories, but duplicate bids inside the same category can void the whole application. Families may apply separately only with distinct PANs and demat accounts.",
+      "Why should I care?",
+      "If you hold Reliance Industries shares or work in the group, read the final prospectus for lot sizes, category codes, and payment timelines before 21 October. Compare whether bidding in the shareholder quota beats applying as a regular retail investor when both are open. If you are a passive investor, expect liquidity to shift toward the IPO during book building, which can mute other mid-cap names for a few sessions. Watch SEBI and exchange notices on bid cut-offs, any revision to the price band, and allotment results after 23 October.",
+    ],
+  },
+  {
+    slug: "renault-duster-strong-hybrid-october-2026",
+    title: "Renault priced its Duster strong hybrid from ₹16.99 lakh to chase diesel SUV buyers",
+    summary:
+      "On 17 October 2026, Renault India launched the Duster Strong Hybrid E-Tech 160 from ₹16.99 lakh, claiming 29 km/l fuel economy and 160 PS from a 1.8-litre petrol setup as it targets Toyota and Maruti Suzuki hybrid rivals and diesel crossovers.",
+    category: "industry",
+    companyOrSector: "Autos / hybrids",
+    publishedAt: "2026-10-17T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("renault-duster-strong-hybrid-october-2026"),
+    keyTakeaways: [
+      "Renault listed the Duster strong hybrid at ₹16.99 lakh ex-showroom, slightly above the entry Grand Vitara hybrid and near Toyota’s Hyryder band.",
+      "The company claims 29 km/l efficiency and electric-only driving for much of city use from a 1.4 kWh battery.",
+      "Strong-hybrid registrations rose about 9.5% to 86,403 units in January–September 2026, still a small slice of total passenger vehicles.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, Renault Group India launched the Duster Strong Hybrid E-Tech 160, pricing the variant from ₹16.99 lakh ex-showroom. The French carmaker pairs a 1.8-litre petrol engine with a dual-motor hybrid system rated at 160 PS, above the roughly 116 PS setups in Maruti Suzuki’s Grand Vitara and Toyota’s Urban Cruiser Hyryder strong hybrids. Renault claims certified fuel economy of 29 km/l and says the small 1.4 kWh battery can power electric-only driving for a large share of city trips depending on conditions. Chief executive Stéphane Deblaise told reporters the hybrid is meant to widen the Duster’s appeal beyond petrol buyers and compete directly with diesel SUVs on running costs. Industry registration data cited in coverage put India’s strong-hybrid market at about 1.23 lakh units in fiscal 2026, with January–September 2026 sales up 9.5% year on year to 86,403 units.",
+      "What does this mean?",
+      "Diesel share has shrunk after tighter emissions rules, but many families still want SUV torque and highway range without daily charging. Strong hybrids bridge that gap by using small batteries and regenerative braking rather than plug-in infrastructure. Renault enters with a power advantage and mileage claim, yet its nationwide retail share remains below 1%, so the test is service reach and trust on hybrid maintenance, not the brochure alone. Rivals already have hybrid SKUs on lots with deeper dealer networks. Renault’s wider India plan includes more CNG and electric models through 2030, but executives said adapting this hybrid hardware to smaller cars like the Kwid would need major engineering work.",
+      "Why should I care?",
+      "If you are cross-shopping compact SUVs, compare real-world fuel bills, warranty on hybrid components, and service centre density in your city before paying a diesel-like premium. Fleet and ride-hail buyers should model total cost of ownership against efficient diesel holdouts and pure petrol trims. Investors watching the auto cycle should see another signal that hybrids are taking share from diesel in the mass market, even as electric launches grab headlines. Watch early registration data for the Duster hybrid, discounting on outgoing petrol stock, and whether Toyota or Maruti respond with finance offers during the festive season.",
+    ],
+  },
+  {
+    slug: "diesel-sales-festive-october-2026",
+    title: "State fuel retailers sold 25% more diesel in the first half of October",
+    summary:
+      "Preliminary data cited on 17 October 2026 showed oil marketing companies sold 3.65 million tonnes of diesel in the first 15 days of October, up 25.4% year on year, as festive trucking, farm use, and cheaper PSU pump prices pulled buyers from private retailers.",
+    category: "industry",
+    companyOrSector: "Energy / consumption",
+    publishedAt: "2026-10-17T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("diesel-sales-festive-october-2026"),
+    keyTakeaways: [
+      "PSU marketers sold 3.65 million tonnes of diesel between 1 and 15 October 2026, a 25.4% rise versus the year-ago fortnight.",
+      "Festive inventory builds and farm demand lifted trucking; September truck sales rose about 34% month on month to 44,323 units.",
+      "State retailers kept pump prices steady since May while private outlets charged roughly ₹5 per litre more on diesel, shifting some volume to PSUs.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, industry data cited in reporting showed state-run fuel retailers sold about 3.65 million tonnes of diesel in the first half of October 2026, up 25.4% from the same period a year earlier. Analysts linked the jump to festival-season trucking as wholesalers stock goods ahead of Diwali, stronger agricultural use including diesel generator sets for irrigation, and a widening price gap between public-sector pumps and private marketers. Indian Oil, Bharat Petroleum, and Hindustan Petroleum have left retail diesel and petrol prices unchanged since May 2026 even as global product prices moved. Private players Nayara Energy and Reliance Industries’ Jio-bp raised rates and exported more product when international margins improved. Coverage cited diesel at private stations at roughly ₹5 per litre above PSU outlets and petrol about ₹3 higher. Gasoline sales at state retailers rose only 0.9% over the same fortnight to 1.55 million tonnes.",
+      "What does this mean?",
+      "Diesel demand is a real-time read on freight and farm activity. A sharp mid-October rise while petrol barely moves suggests trucks and pumps, not passenger cars, drove the volume. When private retailers price above PSUs, fleet operators reroute fills to Indian Oil, BPCL, or HPCL forecourts, which flatters PSU sales even if total national consumption is less dramatic. Rating commentary in the wire noted PSUs may be absorbing sizable per-litre losses on diesel while keeping pumps attractive, which is a policy and balance-sheet story as much as a consumption story. Truck registration data for September, with sales up about one-third from August, corroborates that more vehicles are moving goods into the festive window.",
+      "Why should I care?",
+      "If you run logistics or agriculture equipment, budget fuel spend but also compare PSU versus private quotes on your regular routes. Households mostly feel this through goods inflation if freight costs stick after the festival rush. Investors in oil marketing or refining names should separate volume gains at PSUs from margin pressure when international diesel cracks rise. Watch the second-half October sales print, any PSU price revision after Diwali, and whether the government adjusts export duties or compensation mechanisms if losses widen.",
+    ],
+  },
+  {
     slug: "igx-lng-terminal-capacity-booking-october-2026",
     title: "Gas importers can soon book spare LNG terminal slots on Indian Gas Exchange",
     summary:
@@ -2966,6 +3086,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fssai-infant-added-sugars-ban-october-2026": "policy",
+  "maharashtra-fda-blinkit-reliance-expired-food-october-2026": "policy",
+  "jio-platforms-ipo-reserved-quotas-october-2026": "markets",
+  "renault-duster-strong-hybrid-october-2026": "companies",
+  "diesel-sales-festive-october-2026": "markets",
   "igx-lng-terminal-capacity-booking-october-2026": "policy",
   "india-peak-power-demand-250gw-october-2026": "policy",
   "tata-motors-iveco-shareholder-approval-october-2026": "companies",

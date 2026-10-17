@@ -568,6 +568,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Electric scooter silhouette |
 | Metaphor left | Shield + policy stack |
 
+### `fssai-infant-added-sugars-ban-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Regulators strip added sweeteners from infant foods |
+| Subject right | Baby bottle silhouette |
+| Metaphor left | Sugar cubes behind prohibition motif |
+
+### `maharashtra-fda-blinkit-reliance-expired-food-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Expired stock must be destroyed, not resold |
+| Subject right | Warehouse shelf silhouette |
+| Metaphor left | Broken supply arrow into locked disposal bin |
+
+### `jio-platforms-ipo-reserved-quotas-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Separate IPO lanes for employees and RIL shareholders |
+| Subject right | Abstract telecom tower |
+| Metaphor left | Three ticket lanes toward listing motif |
+
+### `renault-duster-strong-hybrid-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Strong hybrids chase diesel SUV buyers |
+| Subject right | Compact SUV silhouette |
+| Metaphor left | Green-leaning fuel gauge + small battery |
+
+### `diesel-sales-festive-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive freight lifts diesel volumes |
+| Subject right | Fuel pump silhouette |
+| Metaphor left | Ascending bars on highway ribbon |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
