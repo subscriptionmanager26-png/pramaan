@@ -13,7 +13,7 @@ export default function PortfolioPage() {
     <Page width="content">
       <PageHeader
         title="Portfolio"
-        description="Your assistant runs portfolio reviews in chat (including file uploads). Completed analyses are saved here."
+        description="AI portfolio reviews from chat, plus a link to live holdings tracking on the main app during the Pramaan migration."
       />
       <div className="mt-8">
         <PortfolioSection />

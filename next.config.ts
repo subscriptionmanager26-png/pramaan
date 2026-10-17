@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+const appOrigin = (process.env.POCKETEDGE_APP_ORIGIN || process.env.NEXT_PUBLIC_POCKETEDGE_APP_URL || "")
+  .replace(/\/$/, "");
+const proxyApp = process.env.POCKETEDGE_APP_PROXY === "1" && Boolean(appOrigin);
+
 const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
@@ -9,6 +13,33 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "picsum.photos" },
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
+  },
+  async rewrites() {
+    if (!proxyApp) return [];
+    // Phase B: serve legacy Vite app on same host for unmigrated product paths.
+    // Test on pramaan.pocketedge.in before pointing www here. See docs/unification-roadmap.md.
+    return [
+      { source: "/feed", destination: `${appOrigin}/feed` },
+      { source: "/feed/:path*", destination: `${appOrigin}/feed/:path*` },
+      { source: "/ideas", destination: `${appOrigin}/ideas` },
+      { source: "/ideas/:path*", destination: `${appOrigin}/ideas/:path*` },
+      { source: "/activity", destination: `${appOrigin}/activity` },
+      { source: "/settings", destination: `${appOrigin}/settings` },
+      { source: "/stock/:path*", destination: `${appOrigin}/stock/:path*` },
+      { source: "/etf/:path*", destination: `${appOrigin}/etf/:path*` },
+      { source: "/fund/:path*", destination: `${appOrigin}/fund/:path*` },
+      { source: "/index/:path*", destination: `${appOrigin}/index/:path*` },
+      { source: "/commodity/:path*", destination: `${appOrigin}/commodity/:path*` },
+      { source: "/etf-tracker", destination: `${appOrigin}/etf-tracker` },
+      { source: "/gold-tracker", destination: `${appOrigin}/gold-tracker` },
+      { source: "/resources/:path*", destination: `${appOrigin}/resources/:path*` },
+      { source: "/business-model/:path*", destination: `${appOrigin}/business-model/:path*` },
+      { source: "/@:handle", destination: `${appOrigin}/@:handle` },
+      { source: "/@:handle/portfolio/:id", destination: `${appOrigin}/@:handle/portfolio/:id` },
+      // Pramaan-owned /portfolio (AI reviews) wins over rewrite — more specific routes are defined in app/.
+      { source: "/portfolio/holdings", destination: `${appOrigin}/portfolio` },
+      { source: "/portfolio/holdings/:path*", destination: `${appOrigin}/portfolio/:path*` },
+    ];
   },
   async redirects() {
     return [

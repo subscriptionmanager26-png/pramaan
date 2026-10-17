@@ -12,8 +12,10 @@ import {
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
+import { pocketedgeAiUrl, pocketedgePortfolioTrackingUrl } from "@/lib/product-routes";
 
-const AI_HREF = process.env.NEXT_PUBLIC_POCKETEDGE_AI_URL?.replace(/\/$/, "") || "https://www.pocketedge.in/ai";
+const AI_HREF = pocketedgeAiUrl();
+const HOLDINGS_HREF = pocketedgePortfolioTrackingUrl();
 
 function formatWhen(iso: string) {
   try {
@@ -115,9 +117,21 @@ export function PortfolioSection() {
 
   return (
     <div className="space-y-8">
+      <div className="flex flex-col gap-3 rounded-xl border border-line bg-highlight/30 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0">
+          <p className="text-[14px] font-medium text-ink">Live portfolio tracking</p>
+          <p className="mt-1 text-[13px] text-ink-2">
+            Holdings, imports, and position-level updates live on the main app until this host fully replaces it.
+          </p>
+        </div>
+        <a href={HOLDINGS_HREF} className="btn-ghost shrink-0 text-[13px]">
+          Open holdings →
+        </a>
+      </div>
+
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 py-3">
         <p className="text-[14px] text-ink-2">
-          Reviews are created in AI chat (upload CAS, Excel, or ask for a portfolio review). This page keeps your history.
+          AI reviews (upload CAS, Excel, or ask in chat) are saved below for later.
         </p>
         <Link href={AI_HREF} className="btn-primary shrink-0 text-[13px]">
           Ask AI
