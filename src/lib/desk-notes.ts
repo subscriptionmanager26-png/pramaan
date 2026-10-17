@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "yes-bank-cet1-hit-at1-restoration-october-2026",
+    title: "Yes Bank warned the AT-1 ruling could cut its core capital ratio by 250 basis points",
+    summary:
+      "In an exchange filing on 17 October 2026, Yes Bank said restoring ₹8,415 crore of written-off additional tier-1 bonds after the Supreme Court judgment could lower its Common Equity Tier 1 ratio by about 250 basis points, while it still expects overall tier-1 capital near 14% on a pro forma basis.",
+    category: "industry",
+    companyOrSector: "Banks / capital",
+    publishedAt: "2026-10-17T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("yes-bank-cet1-hit-at1-restoration-october-2026"),
+    keyTakeaways: [
+      "Yes Bank flagged a potential 250 bps hit to CET1 after the apex court upheld bondholders’ claims on AT-1 paper.",
+      "The lender said overall tier-1 capital could stay around 14% on a pro forma basis despite the equity-layer strain.",
+      "The disclosure follows the 15 October Supreme Court dismissal of appeals against the Bombay High Court AT-1 verdict.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, Yes Bank Ltd told stock exchanges that its Common Equity Tier 1 capital ratio could fall by roughly 250 basis points once it reflects the Supreme Court’s decision on additional tier-1 bonds. The court on 15 October dismissed appeals by the bank, the Reserve Bank of India, and the Union government, upholding the Bombay High Court’s quashing of the March 2020 write-off of ₹8,415 crore of AT-1 instruments. Yes Bank said it is studying the judgment and will update investors on accounting and payout timing. In the same filing it said overall tier-1 capital could remain near 14% on a pro forma basis even as the equity-quality buffer takes the hit.",
+      "What does this mean?",
+      "Regulators watch CET1 because it is the first cushion against losses on loans and trading books. AT-1 bonds count as tier-1 capital when they stay on the books, but restoring them after a court order can pull equity ratios down if the bank must treat the liability differently from the 2020 reconstruction plan. Yes Bank’s numbers give shareholders a scale for the bill: not necessarily a breach of minimum rules, but less room to grow risk-weighted assets or pay dividends until capital is rebuilt. Mutual funds that held the bonds may see a path to coupons again, while equity investors price a slower recovery of return on equity.",
+      "Why should I care?",
+      "If you own Yes Bank shares or bank-sector funds, read the next exchange updates on how the lender books the restored bonds and whether it plans a capital raise. AT-1 fund holders should track record dates and coupon reinstatement. Other private banks are not directly affected, but treasury teams will watch whether the RBI issues fresh guidance on loss-absorption language in future rescues. Follow the detailed court order on interest, any RBI supervisory response, and Yes Bank’s quarterly capital disclosure once the accounting is final.",
+    ],
+  },
+  {
+    slug: "starlink-reliance-satcom-licensing-october-2026",
+    title: "Starlink and Reliance traded public statements as India nears satellite broadband licences",
+    summary:
+      "On 16 October 2026 Starlink said it was ready to serve India with in-country gateways and approvals, after Reliance Industries welcomed satellite competition but insisted every entrant follow Indian law; communications minister Jyotiraditya Scindia said three applicants are close to final commercial licences.",
+    category: "industry",
+    companyOrSector: "Telecom / satellite policy",
+    publishedAt: "2026-10-17T03:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("starlink-reliance-satcom-licensing-october-2026"),
+    keyTakeaways: [
+      "Starlink posted on X that it has spent five years building India-only gateways and is ready to connect users.",
+      "Reliance said Jio welcomes satcom rivals including Starlink but noted Jio’s own satellite service still awaits clearances.",
+      "Union communications minister Scindia said India will not allow a monopoly and three parties are in line for final approval.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 16 October 2026, Elon Musk’s Starlink and Reliance Industries Ltd aired rival messages on X about who should enter India’s satellite broadband market. Starlink said it has worked with regulators and operators for more than five years, built dedicated gateways and other infrastructure inside India, and holds the government approvals needed to carry Indian traffic. Reliance replied that it welcomes competition, including from Starlink, but stressed that every player must follow national law and that Jio’s satellite venture is still waiting for clearances like everyone else. The exchange followed Musk’s earlier posts accusing incumbents of blocking Starlink. Union communications minister Jyotiraditya Scindia said India will not permit a monopoly in satellite communications and that three applicants are close to receiving final commercial licences, with a pricing framework decision nearing completion.",
+      "What does this mean?",
+      "Satellite internet promises coverage where fibre is costly, but entry is not a social-media race. Licences hinge on security vetting, spectrum charges, and how services are priced relative to cheap mobile data. Starlink’s pitch is that its ground segment is already India-specific; Reliance’s pitch is that domestic operators that invested in terrestrial networks should not face a lighter compliance path than foreign constellations. Scindia’s comment signals the government wants multiple licensed operators rather than a single gatekeeper. Households in remote districts may eventually get another broadband option, but only after final tariffs and service rules are published.",
+      "Why should I care?",
+      "If you live outside dense fibre zones, watch which operators receive commercial licences and what monthly plans they advertise. If you work in telecom equipment or ground-station supply chains, dual entrants mean more gateway and backhaul orders. Investors in listed telecom names should treat the X posts as positioning ahead of formal orders, not as approval itself. Track Department of Telecommunications notifications on licence grants, the final satellite spectrum pricing framework, and whether Jio and Starlink launch consumer beta plans in the same quarter.",
+    ],
+  },
+  {
     slug: "oberoi-realty-q2-profit-flat-october-2026",
     title: "Oberoi Realty kept profit near ₹762 crore as revenue slipped 6%",
     summary:
@@ -2822,6 +2870,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "yes-bank-cet1-hit-at1-restoration-october-2026": "policy",
+  "starlink-reliance-satcom-licensing-october-2026": "policy",
   "oberoi-realty-q2-profit-flat-october-2026": "companies",
   "cult-fit-sebi-ipo-october-2026": "markets",
   "india-ethanol-zero-sugar-diversion-2026-27": "policy",
