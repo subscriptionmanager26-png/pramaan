@@ -23,6 +23,8 @@ const nextConfig: NextConfig = {
       { source: "/feed/:path*", destination: `${appOrigin}/feed/:path*` },
       { source: "/ideas", destination: `${appOrigin}/ideas` },
       { source: "/ideas/:path*", destination: `${appOrigin}/ideas/:path*` },
+      { source: "/ai", destination: `${appOrigin}/ai` },
+      { source: "/ai/:path*", destination: `${appOrigin}/ai/:path*` },
       { source: "/activity", destination: `${appOrigin}/activity` },
       { source: "/settings", destination: `${appOrigin}/settings` },
       { source: "/stock/:path*", destination: `${appOrigin}/stock/:path*` },
