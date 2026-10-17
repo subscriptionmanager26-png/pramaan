@@ -1,15 +1,25 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
+import { AgentComposer } from "@/components/agent/chat/AgentComposer";
+import { ChatTurn } from "@/components/agent/chat/AgentChatMessages";
+import { ScrollAnchor } from "@/components/agent/chat/ScrollAnchor";
 import type { AgentMessage } from "@/lib/agent/types";
+import { formatBytes, MAX_FILE_BYTES } from "@/lib/agent/file-limits";
 import {
   hydratePocketedgeSessionFromCookie,
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
 
-import { AgentBlocks } from "./AgentBlocks";
+import "./chat/pe-agent.css";
+
+const SUGGESTIONS = [
+  "What moved in Indian markets today?",
+  "Summarise my portfolio risk",
+  "Explain the latest RBI stance on rates",
+];
 
 async function authHeaders() {
   const supabase = getPocketedgeSupabase();
@@ -19,14 +29,19 @@ async function authHeaders() {
   return { Authorization: `Bearer ${token}` };
 }
 
+function mergeSteps(steps: string[], label: string | undefined) {
+  if (!label) return steps;
+  const next = [...steps];
+  if (next[next.length - 1] !== label) next.push(label);
+  return next.slice(-12);
+}
+
 export function PramaanAgentChat() {
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
   const [agentState, setAgentState] = useState<"unknown" | "active" | "disabled" | "error">("unknown");
   const [messages, setMessages] = useState<AgentMessage[]>([]);
-  const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
-  const [live, setLive] = useState<AgentMessage | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const refreshSession = useCallback(async () => {
@@ -45,7 +60,7 @@ export function PramaanAgentChat() {
       const sync = await fetch("/api/agent/sync", { method: "POST", headers });
       const body = await sync.json();
       setAgentState(body.agent === "active" ? "active" : body.agent === "disabled" ? "disabled" : "error");
-      const list = await fetch("/api/agent/messages?limit=10", { headers });
+      const list = await fetch("/api/agent/messages?limit=50&threadId=main", { headers });
       if (list.ok) {
         const json = await list.json();
         setMessages((json.messages as AgentMessage[]) || []);
@@ -72,6 +87,10 @@ export function PramaanAgentChat() {
     };
   }, [refreshSession]);
 
+  const updateMessage = useCallback((id: string, patch: Partial<AgentMessage>) => {
+    setMessages((m) => m.map((x) => (x.id === id ? { ...x, ...patch } : x)));
+  }, []);
+
   async function streamMessage(messageId: string, headers: Record<string, string>): Promise<AgentMessage> {
     const res = await fetch(`/api/agent/messages/${messageId}/events`, { headers });
     if (!res.ok || !res.body) throw new Error("stream_failed");
@@ -79,14 +98,18 @@ export function PramaanAgentChat() {
     const decoder = new TextDecoder();
     let buffer = "";
     let latest: AgentMessage | null = null;
+    let steps: string[] = [];
+
     const pullFull = async () => {
       const full = await fetch(`/api/agent/messages/${messageId}`, { headers });
       if (full.ok) {
         const json = await full.json();
         latest = json.message as AgentMessage;
-        setLive(latest);
+        latest = { ...latest, steps };
+        updateMessage(messageId, latest);
       }
     };
+
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
@@ -97,7 +120,11 @@ export function PramaanAgentChat() {
         const dataLine = part.split("\n").find((l) => l.startsWith("data:"));
         if (!dataLine) continue;
         try {
-          const data = JSON.parse(dataLine.slice(5).trim());
+          const data = JSON.parse(dataLine.slice(5).trim()) as { type?: string; label?: string };
+          if (data.type === "status" && data.label) {
+            steps = mergeSteps(steps, data.label);
+            updateMessage(messageId, { steps });
+          }
           if (data.type === "block" || data.type === "action_required" || data.type === "status") {
             await pullFull();
           }
@@ -114,10 +141,9 @@ export function PramaanAgentChat() {
     throw new Error("stream_empty");
   }
 
-  async function onSend(value?: string) {
-    const q = (value ?? text).trim();
-    if (!q || busy) return;
-    setText("");
+  async function onSend(text: string, attachmentIds: string[]) {
+    const q = text.trim();
+    if ((!q && !attachmentIds.length) || busy) return false;
     setBusy(true);
     setError(null);
     try {
@@ -125,33 +151,46 @@ export function PramaanAgentChat() {
       const res = await fetch("/api/agent/messages", {
         method: "POST",
         headers: { ...headers, "Content-Type": "application/json" },
-        body: JSON.stringify({ text: q, threadId: "main" }),
+        body: JSON.stringify({
+          text: q,
+          threadId: "main",
+          attachments: attachmentIds.length ? attachmentIds : undefined,
+        }),
       });
       const json = await res.json();
       if (!res.ok) {
         setError(json?.error?.message || json?.error || "Could not send message.");
-        return;
+        return false;
       }
-      const msg = json.message as AgentMessage;
-      setLive(msg);
+      const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
       setMessages((m) => [msg, ...m]);
       const final = await streamMessage(msg.id, headers);
       setMessages((m) => m.map((x) => (x.id === final.id ? final : x)));
-      setLive(null);
+      return true;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong.");
+      return false;
     } finally {
       setBusy(false);
     }
   }
 
+  const thread = useMemo(() => [...messages].reverse(), [messages]);
+  const scrollKey = useMemo(
+    () =>
+      thread
+        .map((m) => `${m.id}:${m.status}:${m.blocks.length}:${(m.steps ?? []).join("|")}`)
+        .join(";"),
+    [thread],
+  );
+
   if (!ready) {
-    return <p className="text-center text-ink-2">Loading…</p>;
+    return <p className="text-center text-[var(--pe-text-secondary)]">Loading…</p>;
   }
 
   if (!pocketedgeAuthConfigured()) {
     return (
-      <p className="rounded-xl border border-dashed border-line bg-paper-2 px-6 py-12 text-center text-ink-2">
+      <p className="rounded-xl border border-dashed border-[var(--pe-border)] bg-[var(--pe-surface-muted)] px-6 py-12 text-center text-[var(--pe-text-secondary)]">
         Agent chat is not configured on this deployment yet.
       </p>
     );
@@ -159,80 +198,88 @@ export function PramaanAgentChat() {
 
   if (!signedIn) {
     return (
-      <div className="rounded-2xl border border-line bg-white px-6 py-12 text-center">
-        <p className="text-[17px] font-medium text-ink">Sign in to use your agent</p>
-        <p className="mx-auto mt-2 max-w-md text-sm text-ink-2">
-          Use the same Google account as Pocketedge. Your session is shared across pocketedge.in subdomains when you sign
-          in here.
+      <div className="mx-auto max-w-md rounded-2xl border border-[var(--pe-border)] bg-[var(--pe-surface)] px-6 py-10 text-center">
+        <p className="text-[17px] font-semibold text-[var(--pe-text)]">Sign in to continue</p>
+        <p className="mt-2 text-sm text-[var(--pe-text-secondary)]">
+          Use your Pocketedge Google account to open your personal agent.
         </p>
-        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <button
-            type="button"
-            className="btn-primary"
-            onClick={() => {
-              signInWithGoogleOnPramaan().catch(() => setError("Could not start Google sign-in."));
-            }}
-          >
-            Continue with Google
-          </button>
-        </div>
+        <button
+          type="button"
+          className="mt-6 inline-flex rounded-full bg-[var(--pe-accent)] px-6 py-2.5 text-sm font-medium text-white"
+          onClick={() => signInWithGoogleOnPramaan().catch(() => setError("Could not start Google sign-in."))}
+        >
+          Continue with Google
+        </button>
       </div>
     );
   }
 
   if (agentState === "disabled") {
     return (
-      <div className="rounded-2xl border border-line bg-white px-6 py-12 text-center">
-        <p className="text-[17px] font-medium text-ink">Your agent is not enabled yet</p>
-        <p className="mt-2 text-sm text-ink-2">
-          Pocketedge turns this on from your account settings. Once enabled, come back here and refresh.
+      <div className="mx-auto max-w-md rounded-2xl border border-[var(--pe-border)] bg-[var(--pe-surface)] px-6 py-10 text-center">
+        <p className="text-[17px] font-semibold text-[var(--pe-text)]">Your agent is not enabled yet</p>
+        <p className="mt-2 text-sm text-[var(--pe-text-secondary)]">
+          Pocketedge turns this on from your account. Once enabled, refresh this page.
         </p>
-        <button type="button" className="btn-secondary mt-6" onClick={() => refreshSession()}>
+        <button
+          type="button"
+          className="mt-6 rounded-full border border-[var(--pe-border)] px-5 py-2 text-sm font-medium"
+          onClick={() => refreshSession()}
+        >
           Check again
         </button>
       </div>
     );
   }
 
-  const show = live || messages[0];
+  const chatActive = agentState === "active";
 
   return (
-    <div className="space-y-8">
-      {error && <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</p>}
+    <div className="pe-agent flex min-h-[min(72vh,720px)] flex-col">
+      <div className="mb-4 flex items-center gap-2 border-b border-[var(--pe-border)] pb-3">
+        <span className="flex size-8 items-center justify-center rounded-lg bg-[var(--pe-accent-soft)] text-[var(--pe-accent)]">
+          ✦
+        </span>
+        <div>
+          <h2 className="text-base font-semibold text-[var(--pe-text)]">Pocketedge AI</h2>
+          <p className="text-[12px] text-[var(--pe-text-secondary)]">Private agent · not investment advice</p>
+        </div>
+      </div>
 
-      {show && (
-        <article className="rounded-2xl border border-line bg-white p-6 sm:p-8">
-          <p className="text-meta uppercase tracking-[0.14em] text-accent">Your question</p>
-          <h2 className="mt-2 text-[1.2rem] font-bold text-ink">{show.text}</h2>
-          {show.status === "working" && (
-            <p className="mt-4 text-sm text-ink-2">Working on your answer…</p>
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-[var(--pe-border)] bg-[var(--pe-surface)]">
+        <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+          {!thread.length ? (
+            <div className="flex min-h-[40vh] flex-col items-center justify-center text-center">
+              <p className="text-xl font-semibold text-[var(--pe-text)]">What can I help you with?</p>
+              <p className="mt-2 max-w-sm text-sm text-[var(--pe-text-secondary)]">
+                Ask about markets, upload a CAS or holdings file, or dig into a stock — your agent remembers this thread.
+              </p>
+            </div>
+          ) : (
+            <div className="mx-auto max-w-3xl space-y-10">
+              {thread.map((message) => (
+                <ChatTurn key={message.id} message={message} />
+              ))}
+              <ScrollAnchor version={scrollKey} />
+            </div>
           )}
-          {show.error && <p className="mt-4 text-sm text-red-700">{show.error}</p>}
-          <div className="mt-6">
-            <AgentBlocks blocks={show.blocks} actions={show.actions} />
-          </div>
-        </article>
-      )}
+        </div>
 
-      <form
-        className="mx-auto flex max-w-2xl flex-col gap-3 sm:flex-row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          onSend();
-        }}
-      >
-        <input
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          disabled={busy || agentState !== "active"}
-          placeholder="Ask about rates, sectors, or your portfolio…"
-          className="h-12 flex-1 rounded-full border border-ink/20 bg-white px-5 text-[15px] outline-none ring-accent focus:ring-2 disabled:opacity-60"
-        />
-        <button type="submit" disabled={busy || agentState !== "active"} className="btn-primary h-12 px-6 disabled:opacity-60">
-          {busy ? "Thinking…" : "Ask"}
-        </button>
-      </form>
-      <p className="text-center text-meta text-ink-2">Not investment advice. Powered by your private Pocketedge agent.</p>
+        <div className="border-t border-[var(--pe-border)] bg-gradient-to-t from-[var(--pe-surface-muted)] to-[var(--pe-surface)] px-4 py-4 sm:px-6">
+          {error && (
+            <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</p>
+          )}
+          <div className="mx-auto max-w-3xl">
+            <AgentComposer
+              disabled={!chatActive || busy}
+              getAuthHeaders={authHeaders}
+              onSend={onSend}
+              suggestions={thread.length ? undefined : SUGGESTIONS}
+              hint={`PDF, CSV and Excel up to ${formatBytes(MAX_FILE_BYTES)}.`}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

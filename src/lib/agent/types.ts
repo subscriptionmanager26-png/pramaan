@@ -20,14 +20,24 @@ export type AgentAction =
   | { kind: "connection_login"; service: string; url: string; message?: string }
   | { kind: "order_confirmation"; orderId: string; order: unknown; rationale: string; expiresAt: string };
 
+export type JobAttachment = {
+  id: string;
+  name: string;
+  kind: string;
+  size: number;
+};
+
 export type AgentMessage = {
   id: string;
   threadId: string;
   text: string;
+  attachments?: JobAttachment[];
   status: "working" | "completed" | "failed";
   createdAt: string;
   completedAt?: string;
   blocks: UiBlock[];
   actions: AgentAction[];
   error?: string;
+  /** Client-side progress labels while streaming. */
+  steps?: string[];
 };

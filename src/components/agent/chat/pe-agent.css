@@ -1,0 +1,24 @@
+.pe-agent {
+  --pe-accent: #ff6719;
+  --pe-accent-soft: rgba(255, 103, 25, 0.12);
+  --pe-text: #0b0b0b;
+  --pe-text-secondary: #6b6b6b;
+  --pe-border: #e8e8e8;
+  --pe-surface: #ffffff;
+  --pe-surface-muted: #f5f5f7;
+}
+
+.pe-agent .pe-shimmer {
+  background: linear-gradient(90deg, var(--pe-text) 0%, #9ca3af 50%, var(--pe-text) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pe-shimmer 2s linear infinite;
+}
+
+@keyframes pe-shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
