@@ -7,6 +7,7 @@ import { Logo } from "@/components/Logo";
 const nav = [
   { href: "/news", label: "News", icon: "news" },
   { href: "/research", label: "Research", icon: "research" },
+  { href: "/portfolio", label: "Portfolio", icon: "portfolio" },
   { href: "/advisors", label: "Advisors", icon: "user" },
   { href: "/guides", label: "Guides", icon: "guides" },
 ];
@@ -35,6 +36,14 @@ function NavIcon({ name, className = "h-4 w-4" }: { name: string; className?: st
       <svg viewBox="0 0 24 24" className={className} fill="none" stroke={stroke} strokeWidth="1.85">
         <path d="M8 4h10a1 1 0 0 1 1 1v14l-3-2-3 2-3-2-3 2V5a1 1 0 0 1 1-1z" />
         <path d="M10 9h6M10 13h4" />
+      </svg>
+    );
+  }
+  if (name === "portfolio") {
+    return (
+      <svg viewBox="0 0 24 24" className={className} fill="none" stroke={stroke} strokeWidth="1.85">
+        <path d="M4 19V5a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" />
+        <path d="M8 11h8M8 15h5" />
       </svg>
     );
   }

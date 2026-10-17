@@ -9,6 +9,7 @@ import { Logo } from "@/components/Logo";
 const nav = [
   { href: "/news", label: "News" },
   { href: "/research", label: "Research" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/advisors", label: "Advisors" },
   { href: "/guides", label: "Guides" },
   { href: "/tools", label: "Tools" },
