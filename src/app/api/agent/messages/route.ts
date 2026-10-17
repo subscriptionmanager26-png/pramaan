@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { userHasAgentAccess } from "@/lib/pocketedge/agent-access";
-import { pocketedgeUserFromRequest } from "@/lib/pocketedge/session";
+import { accessTokenFromRequest, pocketedgeUserFromRequest } from "@/lib/pocketedge/session";
 import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
@@ -9,7 +9,8 @@ export const dynamic = "force-dynamic";
 async function requireAgentUser(request: Request) {
   const user = await pocketedgeUserFromRequest(request);
   if (!user) return { response: NextResponse.json({ error: "unauthorized" }, { status: 401 }) };
-  if (!(await userHasAgentAccess(user.id, user.metadata))) {
+  const token = accessTokenFromRequest(request);
+  if (!(await userHasAgentAccess(user.id, user.metadata, token))) {
     return { response: NextResponse.json({ error: "agent_not_enabled" }, { status: 403 }) };
   }
   return { user };

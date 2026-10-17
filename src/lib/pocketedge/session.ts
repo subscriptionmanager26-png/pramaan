@@ -18,7 +18,7 @@ function authEnv() {
   return { url, key };
 }
 
-function accessTokenFromRequest(request: Request): string | undefined {
+export function accessTokenFromRequest(request: Request): string | undefined {
   const header = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "").trim();
   if (header) return header;
   const raw = readPocketedgeSessionRaw(request.headers.get("cookie"));

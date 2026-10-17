@@ -1,5 +1,5 @@
 import { userHasAgentAccess } from "@/lib/pocketedge/agent-access";
-import { pocketedgeUserFromRequest } from "@/lib/pocketedge/session";
+import { accessTokenFromRequest, pocketedgeUserFromRequest } from "@/lib/pocketedge/session";
 import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
@@ -12,7 +12,8 @@ export async function GET(request: Request, { params }: Params) {
   }
   const user = await pocketedgeUserFromRequest(request);
   if (!user) return new Response("unauthorized", { status: 401 });
-  if (!(await userHasAgentAccess(user.id, user.metadata))) {
+  const token = accessTokenFromRequest(request);
+  if (!(await userHasAgentAccess(user.id, user.metadata, token))) {
     return new Response("agent_not_enabled", { status: 403 });
   }
   const { id } = await params;
