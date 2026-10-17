@@ -18,13 +18,13 @@ function AttachmentList({ attachments }: { attachments: JobAttachment[] }) {
       {attachments.map((a) => (
         <span
           key={a.id}
-          className="flex max-w-full items-center gap-2 rounded-lg border border-[var(--pe-border)] bg-[var(--pe-surface)] py-1 pr-2.5 pl-1.5 text-xs text-[var(--pe-text)]"
+          className="flex max-w-full items-center gap-2 rounded-lg border border-line bg-white py-1 pr-2.5 pl-1.5 text-xs text-ink"
         >
-          <span className="flex size-6 items-center justify-center rounded-md bg-[var(--pe-accent-soft)] text-[var(--pe-accent)]">
+          <span className="flex size-6 items-center justify-center rounded-md bg-accent-2 text-[10px] font-bold text-accent">
             {a.kind === "pdf" ? "PDF" : "CSV"}
           </span>
           <span className="max-w-48 truncate font-medium">{a.name}</span>
-          <span className="text-[var(--pe-text-secondary)]">{formatBytes(a.size)}</span>
+          <span className="text-ink-3">{formatBytes(a.size)}</span>
         </span>
       ))}
     </div>
@@ -33,9 +33,9 @@ function AttachmentList({ attachments }: { attachments: JobAttachment[] }) {
 
 export function UserMessage({ text, attachments }: { text: string; attachments?: JobAttachment[] }) {
   return (
-    <div className="rounded-2xl border border-[var(--pe-border)] bg-[var(--pe-surface-muted)] px-4 py-3">
+    <div className="ml-auto max-w-[min(100%,36rem)] rounded-2xl border border-line bg-white px-4 py-3 shadow-[4px_4px_0_rgba(11,11,11,0.05)]">
       <AttachmentList attachments={attachments ?? []} />
-      <p className="text-[15px] leading-7 whitespace-pre-wrap text-[var(--pe-text)] [overflow-wrap:anywhere]">{text}</p>
+      <p className="text-[15px] leading-7 whitespace-pre-wrap text-ink [overflow-wrap:anywhere]">{text}</p>
     </div>
   );
 }
@@ -46,7 +46,7 @@ function Elapsed({ since }: { since: string }) {
     const id = window.setInterval(() => tick((n) => n + 1), 1000);
     return () => window.clearInterval(id);
   }, []);
-  return <span className="text-xs tabular-nums text-[var(--pe-text-secondary)]">{duration(since)}</span>;
+  return <span className="text-xs tabular-nums text-ink-3">{duration(since)}</span>;
 }
 
 function WorkingSteps({ steps, startedAt }: { steps: string[]; startedAt: string }) {
@@ -55,14 +55,14 @@ function WorkingSteps({ steps, startedAt }: { steps: string[]; startedAt: string
   return (
     <div role="status" aria-live="polite" className="space-y-1.5 text-sm">
       {done.map((s, i) => (
-        <p key={`${s}-${i}`} className="flex items-center gap-2 text-[var(--pe-text-secondary)]">
-          <span className="text-emerald-600" aria-hidden>✓</span>
+        <p key={`${s}-${i}`} className="flex items-center gap-2 text-ink-3">
+          <span className="text-accent" aria-hidden>✓</span>
           {s}
         </p>
       ))}
-      <p className="flex items-center gap-2 text-[var(--pe-text)]">
-        <span className="inline-block size-3.5 animate-spin rounded-full border-2 border-[var(--pe-border)] border-t-[var(--pe-accent)]" />
-        <span className="pe-shimmer font-medium">{current.replace(/…$/, "")}</span>
+      <p className="flex items-center gap-2 text-ink">
+        <span className="inline-block size-3.5 animate-spin rounded-full border-2 border-line border-t-accent" />
+        <span className="agent-shimmer font-medium">{current.replace(/…$/, "")}</span>
         <Elapsed since={startedAt} />
       </p>
     </div>
@@ -71,16 +71,14 @@ function WorkingSteps({ steps, startedAt }: { steps: string[]; startedAt: string
 
 function StepsSummary({ steps, from, to }: { steps: string[]; from: string; to?: string }) {
   const label = `Worked for ${duration(from, to)}`;
-  if (!steps.length) return <p className="text-xs text-[var(--pe-text-secondary)]">{label}</p>;
+  if (!steps.length) return <p className="text-xs text-ink-3">{label}</p>;
   return (
-    <details className="text-xs text-[var(--pe-text-secondary)]">
-      <summary className="cursor-pointer hover:text-[var(--pe-text)]">
-        {label} · {steps.length} {steps.length === 1 ? "step" : "steps"}
-      </summary>
-      <ul className="mt-2 space-y-1.5 border-l border-[var(--pe-border)] pl-3">
+    <details className="text-xs text-ink-3">
+      <summary className="cursor-pointer hover:text-ink">{label} · {steps.length} steps</summary>
+      <ul className="mt-2 space-y-1.5 border-l border-line pl-3">
         {steps.map((s, i) => (
           <li key={`${s}-${i}`} className="flex items-center gap-2">
-            <span className="text-emerald-600">✓</span>
+            <span className="text-accent">✓</span>
             {s}
           </li>
         ))}
@@ -96,7 +94,7 @@ function CopyReply({ message }: { message: AgentMessage }) {
   return (
     <button
       type="button"
-      className="text-xs text-[var(--pe-text-secondary)] hover:text-[var(--pe-text)]"
+      className="text-xs text-ink-3 hover:text-ink"
       onClick={() => {
         void navigator.clipboard.writeText(copyText).then(() => {
           setCopied(true);
@@ -121,22 +119,20 @@ export function AssistantMessage({
   const working = message.status === "working";
   const steps = message.steps ?? [];
   return (
-    <div className="space-y-4">
+    <div className="max-w-[min(100%,42rem)] space-y-4">
       {working ? (
         <WorkingSteps steps={steps.length ? steps : ["Thinking…"]} startedAt={message.createdAt} />
       ) : (
         <StepsSummary steps={steps} from={message.createdAt} to={message.completedAt} />
       )}
       {message.blocks.length > 0 || message.actions.length > 0 ? (
-        <div className="pe-agent-blocks">
-          <AgentBlocks
-            blocks={message.blocks}
-            actions={message.actions}
-            theme="pramaan"
-            orders={orders}
-            onDecide={onDecide}
-          />
-        </div>
+        <AgentBlocks
+          blocks={message.blocks}
+          actions={message.actions}
+          theme="pramaan"
+          orders={orders}
+          onDecide={onDecide}
+        />
       ) : null}
       {message.status === "failed" && (
         <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
@@ -158,7 +154,7 @@ export function ChatTurn({
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
 }) {
   return (
-    <section className="space-y-4">
+    <section className="flex flex-col gap-5">
       <UserMessage text={message.text} attachments={message.attachments} />
       <AssistantMessage message={message} orders={orders} onDecide={onDecide} />
     </section>

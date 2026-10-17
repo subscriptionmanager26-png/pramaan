@@ -1,19 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import {
   AgentShellContext,
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
+import { mergeThreadLists } from "@/lib/agent/threads-from-messages";
 import { newThreadId } from "@/lib/agent/thread-id";
 import {
   hydratePocketedgeSessionFromCookie,
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
+
+const LOCAL_KEY = "pe-agent-threads";
 
 async function authHeaders() {
   const supabase = getPocketedgeSupabase();
@@ -36,6 +39,25 @@ function formatThreadWhen(iso: string) {
   return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
+function loadLocalThreads(userId: string): AgentThreadSummary[] {
+  try {
+    const raw = sessionStorage.getItem(`${LOCAL_KEY}:${userId}`);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as AgentThreadSummary[];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveLocalThreads(userId: string, threads: AgentThreadSummary[]) {
+  try {
+    sessionStorage.setItem(`${LOCAL_KEY}:${userId}`, JSON.stringify(threads.slice(0, 60)));
+  } catch {
+    /* ignore */
+  }
+}
+
 function AgentSidebar({
   threads,
   activeThreadId,
@@ -51,44 +73,30 @@ function AgentSidebar({
   const onConnections = pathname === "/ai/connections";
 
   return (
-    <aside className="flex h-full w-full flex-col border-r border-line bg-paper-2">
-      <div className="flex items-center justify-between gap-2 border-b border-line px-4 py-3">
-        <p className="text-headline text-base">Agent</p>
+    <aside className="flex h-full w-full flex-col bg-paper-2">
+      <div className="flex items-center gap-2 p-3">
+        <button type="button" className="btn-primary flex-1 justify-center text-sm" onClick={onNewChat}>
+          <span aria-hidden>+</span>
+          New chat
+        </button>
         {onCloseMobile && (
-          <button type="button" className="text-sm text-ink-3 lg:hidden" onClick={onCloseMobile}>
-            Close
+          <button
+            type="button"
+            className="btn-ghost px-3 py-2 text-xs lg:hidden"
+            onClick={onCloseMobile}
+            aria-label="Close sidebar"
+          >
+            ✕
           </button>
         )}
       </div>
-      <nav className="flex flex-col gap-0.5 p-2">
-        <Link
-          href="/ai"
-          onClick={onCloseMobile}
-          className={`rounded-xl px-3 py-2.5 text-sm font-medium ${
-            !onConnections ? "bg-white text-accent shadow-sm ring-1 ring-line" : "text-ink hover:bg-white/70"
-          }`}
-        >
-          Chats
-        </Link>
-        <Link
-          href="/ai/connections"
-          onClick={onCloseMobile}
-          className={`rounded-xl px-3 py-2.5 text-sm font-medium ${
-            onConnections ? "bg-white text-accent shadow-sm ring-1 ring-line" : "text-ink hover:bg-white/70"
-          }`}
-        >
-          Connections
-        </Link>
-      </nav>
-      <div className="px-3 pb-2">
-        <button type="button" className="btn-secondary w-full text-sm" onClick={onNewChat}>
-          New chat
-        </button>
-      </div>
-      <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-3">
-        <p className="px-2 py-1 text-meta uppercase tracking-wide">Recent</p>
+
+      <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-2">
+        <p className="px-2 py-1.5 text-meta">Your chats</p>
         {!threads.length ? (
-          <p className="px-2 py-4 text-sm text-ink-3">No conversations yet.</p>
+          <p className="px-2 py-6 text-sm leading-relaxed text-ink-3">
+            Start a conversation — it will show up here.
+          </p>
         ) : (
           <ul className="space-y-0.5">
             {threads.map((t) => {
@@ -98,17 +106,19 @@ function AgentSidebar({
                   <Link
                     href={`/ai?t=${encodeURIComponent(t.id)}`}
                     onClick={onCloseMobile}
-                    className={`block rounded-xl px-3 py-2.5 text-left transition-colors ${
-                      active ? "bg-accent-2 text-accent" : "text-ink hover:bg-white/80"
+                    className={`group block rounded-xl px-3 py-2.5 text-left transition-colors ${
+                      active
+                        ? "bg-white text-ink shadow-[3px_3px_0_rgba(11,11,11,0.06)] ring-1 ring-line"
+                        : "text-ink-2 hover:bg-white/90 hover:text-ink"
                     }`}
                   >
-                    <p className="truncate text-sm font-medium">{t.title}</p>
-                    <p className="mt-0.5 flex items-center gap-2 text-xs text-ink-3">
+                    <p className="truncate text-[13px] font-medium leading-snug">{t.title}</p>
+                    <p className="mt-1 flex items-center gap-2 text-[11px] text-ink-3">
                       {formatThreadWhen(t.updatedAt)}
                       {t.working && (
-                        <span className="inline-flex items-center gap-1 text-accent">
+                        <span className="inline-flex items-center gap-1 font-medium text-accent">
                           <span className="size-1.5 animate-pulse rounded-full bg-accent" />
-                          Working
+                          Live
                         </span>
                       )}
                     </p>
@@ -119,29 +129,61 @@ function AgentSidebar({
           </ul>
         )}
       </div>
-      <p className="border-t border-line px-4 py-3 text-[11px] leading-relaxed text-ink-3">
-        Not investment advice. Trades need your confirmation.
-      </p>
+
+      <div className="mt-auto space-y-0.5 border-t border-line p-2">
+        <Link
+          href="/ai/connections"
+          onClick={onCloseMobile}
+          className={`block rounded-xl px-3 py-2.5 text-[13px] font-medium ${
+            onConnections ? "bg-white text-accent ring-1 ring-line" : "text-ink-2 hover:bg-white/80 hover:text-ink"
+          }`}
+        >
+          Connections
+        </Link>
+        <p className="px-3 py-2 text-[10px] leading-relaxed text-ink-3">
+          Not investment advice. You confirm every trade.
+        </p>
+      </div>
     </aside>
   );
 }
 
 export function AgentWorkspace({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const activeThreadId = searchParams.get("t") || "main";
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
-  const [threads, setThreads] = useState<AgentThreadSummary[]>([]);
+  const [userId, setUserId] = useState<string | null>(null);
+  const [serverThreads, setServerThreads] = useState<AgentThreadSummary[]>([]);
+  const [localThreads, setLocalThreads] = useState<AgentThreadSummary[]>([]);
   const [filesOpen, setFilesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const threads = useMemo(
+    () => mergeThreadLists(serverThreads, localThreads),
+    [serverThreads, localThreads],
+  );
+
+  const upsertThread = useCallback(
+    (thread: AgentThreadSummary) => {
+      if (!userId) return;
+      setLocalThreads((prev) => {
+        const next = mergeThreadLists(prev, [thread]);
+        saveLocalThreads(userId, next);
+        return next;
+      });
+    },
+    [userId],
+  );
 
   const loadThreads = useCallback(async () => {
     try {
       const headers = await authHeaders();
-      const res = await fetch("/api/agent/threads", { headers });
+      const res = await fetch("/api/agent/threads", { headers, cache: "no-store" });
       if (!res.ok) return;
       const json = await res.json();
-      setThreads(json.threads ?? []);
+      setServerThreads(json.threads ?? []);
     } catch {
       /* ignore */
     }
@@ -154,14 +196,18 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     }
     const supabase = getPocketedgeSupabase();
     const { data } = await supabase.auth.getSession();
-    const ok = Boolean(data.session?.user);
+    const user = data.session?.user;
+    const ok = Boolean(user);
     setSignedIn(ok);
+    if (user) {
+      setUserId(user.id);
+      setLocalThreads(loadLocalThreads(user.id));
+    }
     setReady(true);
     if (!ok) return;
     try {
       const headers = await authHeaders();
-      const sync = await fetch("/api/agent/sync", { method: "POST", headers });
-      await sync.json();
+      await fetch("/api/agent/sync", { method: "POST", headers });
       await loadThreads();
     } catch {
       /* ignore */
@@ -189,7 +235,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!signedIn) return;
     void loadThreads();
-    const id = window.setInterval(() => void loadThreads(), anyWorking ? 4000 : 30000);
+    const id = window.setInterval(() => void loadThreads(), anyWorking ? 3000 : 20000);
     return () => window.clearInterval(id);
   }, [signedIn, anyWorking, loadThreads]);
 
@@ -197,16 +243,20 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     () => ({
       threads,
       refreshThreads: loadThreads,
+      upsertThread,
       filesOpen,
       setFilesOpen,
       sidebarOpen,
       setSidebarOpen,
     }),
-    [threads, loadThreads, filesOpen, sidebarOpen],
+    [threads, loadThreads, upsertThread, filesOpen, sidebarOpen],
   );
 
   function startNewChat() {
-    window.location.href = `/ai?t=${newThreadId()}`;
+    const id = newThreadId();
+    upsertThread({ id, title: "New chat", updatedAt: new Date().toISOString(), working: false });
+    router.push(`/ai?t=${encodeURIComponent(id)}`);
+    setSidebarOpen(false);
   }
 
   if (!ready) {
@@ -229,13 +279,15 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
 
   if (!signedIn) {
     return (
-      <div className="flex flex-1 items-center justify-center p-6">
-        <div className="max-w-md rounded-2xl border border-line bg-white px-6 py-10 text-center shadow-sm">
-          <p className="text-headline">Sign in to your agent</p>
-          <p className="mt-2 text-sm text-ink-2">
-            Use the same Google account as Pocketedge. Your chats and connections stay private to you.
+      <div className="grid-paper flex flex-1 items-center justify-center p-6">
+        <div className="max-w-md rounded-2xl border border-line bg-white px-6 py-10 text-center shadow-[8px_8px_0_rgba(11,11,11,0.08)]">
+          <p className="text-section text-2xl">
+            Your <span className="mark">private</span> market agent
           </p>
-          <button type="button" className="btn-primary mt-6" onClick={() => signInWithGoogleOnPramaan()}>
+          <p className="mt-3 text-sm text-ink-2">
+            Same Google account as Pocketedge. Chats, files, and broker connections stay yours alone.
+          </p>
+          <button type="button" className="btn-primary mt-8" onClick={() => signInWithGoogleOnPramaan()}>
             Continue with Google
           </button>
         </div>
@@ -246,18 +298,18 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   return (
     <AgentShellContext.Provider value={shellValue}>
       <div className="flex min-h-0 flex-1 overflow-hidden">
-        <div className="hidden h-full w-[min(100%,17.5rem)] shrink-0 lg:block">
+        <div className="hidden h-full w-[min(100%,15.5rem)] shrink-0 border-r border-line lg:block xl:w-64">
           <AgentSidebar threads={threads} activeThreadId={activeThreadId} onNewChat={startNewChat} />
         </div>
         {sidebarOpen && (
           <>
             <button
               type="button"
-              className="fixed inset-0 z-40 bg-ink/50 lg:hidden"
+              className="fixed inset-0 z-40 bg-ink/40 lg:hidden"
               aria-label="Close menu"
               onClick={() => setSidebarOpen(false)}
             />
-            <div className="fixed inset-y-0 left-0 z-50 w-[min(88vw,18rem)] shadow-2xl lg:hidden">
+            <div className="fixed inset-y-12 left-0 z-50 w-[min(88vw,17rem)] border-r border-line shadow-2xl lg:hidden">
               <AgentSidebar
                 threads={threads}
                 activeThreadId={activeThreadId}
@@ -267,14 +319,14 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
             </div>
           </>
         )}
-        <div className="flex min-h-0 min-w-0 flex-1 flex-col bg-white">
-          <div className="flex items-center gap-2 border-b border-line px-3 py-2 lg:hidden">
+        <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">
+          <div className="flex items-center gap-2 border-b border-line/80 bg-white/80 px-3 py-2 backdrop-blur-sm lg:hidden">
             <button
               type="button"
               className="btn-ghost px-3 py-1.5 text-xs"
               onClick={() => setSidebarOpen(true)}
             >
-              Menu
+              Chats
             </button>
           </div>
           {children}

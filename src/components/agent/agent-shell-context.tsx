@@ -12,6 +12,7 @@ export type AgentThreadSummary = {
 type AgentShellContextValue = {
   threads: AgentThreadSummary[];
   refreshThreads: () => void;
+  upsertThread: (thread: AgentThreadSummary) => void;
   filesOpen: boolean;
   setFilesOpen: (open: boolean) => void;
   sidebarOpen: boolean;

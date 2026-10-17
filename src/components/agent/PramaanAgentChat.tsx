@@ -37,7 +37,7 @@ function mergeSteps(steps: string[], label: string | undefined) {
 export function PramaanAgentChat() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { filesOpen, setFilesOpen, refreshThreads } = useAgentShell();
+  const { filesOpen, setFilesOpen, refreshThreads, upsertThread } = useAgentShell();
   const threadParam = searchParams.get("t");
   const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "main";
 
@@ -193,6 +193,13 @@ export function PramaanAgentChat() {
       }
       const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
       setMessages((m) => [msg, ...m]);
+      const title = q.trim() || "New chat";
+      upsertThread({
+        id: threadId,
+        title: title.length > 72 ? `${title.slice(0, 72)}…` : title,
+        updatedAt: new Date().toISOString(),
+        working: true,
+      });
       refreshThreads();
       const final = await streamMessage(msg.id, headers);
       setMessages((m) => m.map((x) => (x.id === final.id ? final : x)));
@@ -261,36 +268,28 @@ export function PramaanAgentChat() {
   }
 
   const chatActive = agentState === "active";
-  const threadLabel = threadId === "main" ? "Main" : threadId.slice(0, 8);
 
   return (
     <div className="flex min-h-0 flex-1 overflow-hidden">
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex items-center justify-end border-b border-line px-3 py-2 sm:hidden">
+        <div className="flex items-center justify-end gap-2 px-3 py-2 sm:px-5">
           <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
             Files
           </button>
         </div>
-        <header className="hidden items-center justify-between gap-3 border-b border-line px-4 py-3 sm:flex sm:px-6">
-          <div>
-            <p className="text-headline text-base">Chat</p>
-            <p className="text-meta text-ink-3">{threadLabel}</p>
-          </div>
-          <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
-            Files
-          </button>
-        </header>
 
-        <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+        <div className="flex-1 overflow-y-auto px-4 pb-4 sm:px-6">
           {!thread.length ? (
-            <div className="flex min-h-[40vh] flex-col items-center justify-center text-center">
-              <p className="text-section text-2xl">What can I help you with?</p>
-              <p className="mt-2 max-w-md text-sm text-ink-2">
-                Markets, portfolio questions, research — with uploads and trade proposals you confirm.
+            <div className="flex min-h-[min(52vh,28rem)] flex-col items-center justify-center px-4 text-center">
+              <p className="text-display text-[clamp(1.75rem,4vw,2.5rem)]">
+                Ask about <span className="mark">markets</span>
+              </p>
+              <p className="mt-4 max-w-md text-body">
+                Portfolio context, research, uploads, and trade ideas — always with your confirmation before orders.
               </p>
             </div>
           ) : (
-            <div className="mx-auto max-w-3xl space-y-10">
+            <div className="mx-auto max-w-3xl space-y-12 py-2">
               {thread.map((message) => (
                 <ChatTurn key={message.id} message={message} orders={orders} onDecide={onDecide} />
               ))}
@@ -299,7 +298,7 @@ export function PramaanAgentChat() {
           )}
         </div>
 
-        <div className="border-t border-line bg-gradient-to-t from-paper-2 to-white px-4 py-4 sm:px-6">
+        <div className="border-t border-line/70 bg-white/90 px-4 py-4 backdrop-blur-sm sm:px-6">
           {error && (
             <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</p>
           )}

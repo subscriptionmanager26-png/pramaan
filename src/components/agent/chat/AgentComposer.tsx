@@ -147,7 +147,7 @@ export function AgentComposer({
           setDragging(false);
           void addFiles(e.dataTransfer.files);
         }}
-        className={`rounded-2xl border bg-white shadow-sm transition-colors ${
+        className={`rounded-2xl border bg-white shadow-[6px_6px_0_rgba(11,11,11,0.07)] transition-colors ${
           dragging ? "border-accent bg-accent-2" : "border-line"
         }`}
       >
