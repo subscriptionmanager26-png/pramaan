@@ -8,7 +8,6 @@ import type { AgentMessage } from "@/lib/agent/types";
 import { portfolioReviewsFromMessages } from "@/lib/portfolio/reviews";
 import {
   hydratePocketedgeSessionFromCookie,
-  openPocketedgeLogin,
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
@@ -103,9 +102,6 @@ export function PortfolioSection() {
         <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
           <button type="button" className="btn-primary" onClick={() => void signInWithGoogleOnPramaan()}>
             Continue with Google
-          </button>
-          <button type="button" className="btn-ghost" onClick={() => openPocketedgeLogin()}>
-            Sign in on Pocketedge
           </button>
         </div>
         <Link href={AI_HREF} className="mt-4 inline-block text-[13px] font-semibold text-accent hover:underline">

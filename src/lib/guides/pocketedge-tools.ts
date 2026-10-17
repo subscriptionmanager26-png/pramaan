@@ -1,8 +1,9 @@
 import type { Guide } from "./types";
+import { pocketedgeAppOrigin } from "@/lib/product-routes";
 
-const PE = "https://www.pocketedge.in";
+const PE = pocketedgeAppOrigin();
 
-/** Live calculators and data tools built on PocketEdge — opened on pocketedge.in. */
+/** Live calculators and data tools on the legacy app host (pramaan.pocketedge.in after domain flip). */
 export const pocketedgeTools: Guide[] = [
   {
     slug: "etf-inav-tracker",

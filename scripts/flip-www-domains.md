@@ -1,4 +1,11 @@
-# Domain flip: Pramaan on www, legacy app on pramaan.pocketedge.in
+# Domain flip
+
+| Host | Serves |
+|------|--------|
+| **www.pocketedge.in** | Pramaan (Next.js) |
+| **pramaan.pocketedge.in** | Legacy app (Vite / `social-pocketedge`) |
+
+Legacy traffic that used to live on www moves to **pramaan.pocketedge.in**; www becomes the unified Pramaan shell (with optional path proxy to the legacy host).
 
 Run these in the Vercel dashboard (team **Kushagra's projects**) or with a logged-in CLI (`vercel login`).
 
@@ -8,7 +15,6 @@ Project → **social-pocketedge** → Settings → Domains → remove:
 
 - `www.pocketedge.in`
 - `pocketedge.in` (apex redirect)
-- `pramaan.pocketedge.in` (only after step 3)
 
 Leave redirects (`social.pocketedge.in`, `saffronai.in`, …) pointing at **`www.pocketedge.in`** (Pramaan after flip).
 

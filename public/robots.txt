@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /settings
+Disallow: /activity
+Disallow: /portfolio/holdings
+Disallow: /feed
+
+Sitemap: https://www.pocketedge.in/sitemap.xml

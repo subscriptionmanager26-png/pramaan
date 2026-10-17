@@ -17,8 +17,9 @@ export async function hydratePocketedgeSessionFromCookie(): Promise<boolean> {
 
 export async function signInWithGoogleOnPramaan() {
   const supabase = getPocketedgeSupabase();
-  const redirectTo = window.location.href.split("#")[0];
-  setPostAuthRedirect(redirectTo);
+  const returnTo = window.location.href.split("#")[0];
+  const redirectTo = `${window.location.origin}/auth/callback`;
+  setPostAuthRedirect(returnTo);
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
@@ -29,9 +30,8 @@ export async function signInWithGoogleOnPramaan() {
   if (error) throw error;
 }
 
+/** Same Google account as pocketedge.in — opens native sign-in on www. */
 export function openPocketedgeLogin() {
-  const login =
-    process.env.NEXT_PUBLIC_POCKETEDGE_LOGIN_URL?.replace(/\/$/, "") || "https://www.pocketedge.in";
   setPostAuthRedirect(window.location.href.split("#")[0]);
-  window.location.href = login;
+  window.location.href = "/ai";
 }

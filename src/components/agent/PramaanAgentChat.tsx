@@ -5,7 +5,6 @@ import { useCallback, useEffect, useState } from "react";
 import type { AgentMessage } from "@/lib/agent/types";
 import {
   hydratePocketedgeSessionFromCookie,
-  openPocketedgeLogin,
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
@@ -163,8 +162,8 @@ export function PramaanAgentChat() {
       <div className="rounded-2xl border border-line bg-white px-6 py-12 text-center">
         <p className="text-[17px] font-medium text-ink">Sign in to use your agent</p>
         <p className="mx-auto mt-2 max-w-md text-sm text-ink-2">
-          Being logged in on pocketedge.in does not always carry over to Pramaan in the same tab—each site keeps its own
-          copy of the session unless a shared cookie is present. Use the same Google account below (one-time on this page).
+          Use the same Google account as Pocketedge. Your session is shared across pocketedge.in subdomains when you sign
+          in here.
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <button
@@ -175,9 +174,6 @@ export function PramaanAgentChat() {
             }}
           >
             Continue with Google
-          </button>
-          <button type="button" className="btn-secondary" onClick={() => openPocketedgeLogin()}>
-            Open pocketedge.in
           </button>
         </div>
       </div>

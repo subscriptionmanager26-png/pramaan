@@ -40,17 +40,20 @@ Pramaan should **not** reimplement Supabase or agent backends — only UI and ro
 
 ## Recommended hosting model (phased)
 
-### Phase A — **Dual host, shared auth** (now)
+### Phase A — **Dual host, shared auth** (pre-flip)
 
-- **pramaan.pocketedge.in** — editorial + `/portfolio` (AI archive) + nav links to app zone.
-- **www.pocketedge.in** — full Vite app unchanged.
-- Shared: Supabase Google login, `pe_sb_*` cookies on `.pocketedge.in`, Personal Agents keys on both Vercel projects where needed.
+- **pramaan.pocketedge.in** — editorial staging.
+- **www.pocketedge.in** — legacy Vite app (`social-pocketedge`).
 
-Use `NEXT_PUBLIC_POCKETEDGE_APP_URL` on Pramaan (default `https://www.pocketedge.in`) for “open live app” links.
+### Phase B — **www = Pramaan, legacy on pramaan subdomain** (target now)
 
-### Phase B — **Single domain, path-based proxy** (next)
+- **www.pocketedge.in** — **Pramaan** Vercel project (editorial + `/portfolio` AI archive).
+- **pramaan.pocketedge.in** — **legacy** Vite app (`social-pocketedge`): feed, ideas, live portfolio, `/ai`, stock pages.
+- Shared: Supabase Google login, `pe_sb_*` cookies on `.pocketedge.in`, Personal Agents on both projects.
 
-Point **www** (or a canary host) at the **pramaan** Vercel project. In `next.config.ts`, add rewrites for unmigrated product paths to `social-pocketedge` deployment URL:
+`NEXT_PUBLIC_POCKETEDGE_APP_URL` / proxy origin → `https://pramaan.pocketedge.in`. Login and marketing canonical → `https://www.pocketedge.in`.
+
+On **www**, `next.config.ts` rewrites (`POCKETEDGE_APP_PROXY=1`) proxy unmigrated paths to the legacy host:
 
 - `/feed`, `/ideas`, `/portfolio`, `/ai`, `/stock/:path*`, `/etf-tracker`, …
 
@@ -59,7 +62,7 @@ Requirements:
 - Rewrites must preserve **path and query**; test Vite asset paths (`/assets/*`) — may need additional rewrite rules or deploy Vite under a subpath prefix (e.g. `/app/*`) to avoid breaking.
 - Auth cookies already scoped to `.pocketedge.in` — works when www serves from Pramaan.
 
-Validate on **pramaan.pocketedge.in** first with `POCKETEDGE_APP_PROXY=1` (see `next.config.ts`).
+Cutover steps: `scripts/flip-www-domains.md` (swap Vercel domains, then redeploy).
 
 ### Phase C — **Port high-value surfaces into Next** (incremental)
 

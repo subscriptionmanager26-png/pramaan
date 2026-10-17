@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppShell } from "@/components/shell/AppShell";
+import { siteUrl } from "@/lib/site-url";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -14,17 +15,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl()),
   title: {
-    default: "Pramaan · Company research memos",
-    template: "%s · Pramaan",
+    default: "PocketEdge — Markets, research, and your AI assistant",
+    template: "%s · PocketEdge",
   },
   description:
-    "Hand-built company research memos tagged by company and industry. Ask AI. No demo content.",
+    "Indian markets desk, company research, advisors, and your private Pocketedge AI — sign in with Google on pocketedge.in.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "PocketEdge",
+    locale: "en_IN",
+    url: siteUrl(),
+    title: "PocketEdge — See what real investors own and say",
+    description:
+      "Browse Indian stocks, mutual funds, and ETFs. Read research, track ideas, and chat with your AI assistant.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "PocketEdge" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PocketEdge — See what real investors own and say",
+    description:
+      "Browse Indian stocks, mutual funds, and ETFs. Read research and chat with your AI assistant.",
+    images: ["/og-image.jpg"],
+  },
   icons: {
     icon: [{ url: "/icon.png", type: "image/png", sizes: "32x32" }],
     apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
   },
+  ...(googleVerification ? { verification: { google: googleVerification } } : {}),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

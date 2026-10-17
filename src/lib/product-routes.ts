@@ -20,10 +20,12 @@ export function pocketedgePortfolioTrackingUrl() {
   return pocketedgeAppPath("/portfolio");
 }
 
+/** Native Pramaan AI chat on www (not the legacy SPA). */
 export function pocketedgeAiUrl() {
-  return (
-    process.env.NEXT_PUBLIC_POCKETEDGE_AI_URL?.replace(/\/$/, "") || pocketedgeAppPath("/ai")
-  );
+  const fromEnv = process.env.NEXT_PUBLIC_POCKETEDGE_AI_URL?.replace(/\/$/, "");
+  if (fromEnv) return fromEnv;
+  const site = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.pocketedge.in").replace(/\/$/, "");
+  return `${site}/ai`;
 }
 
 export function pocketedgeFeedUrl() {
@@ -38,7 +40,6 @@ export function pocketedgeIdeasUrl() {
 export const POCKETEDGE_PROXY_PATHS = [
   "/feed",
   "/ideas",
-  "/ai",
   "/activity",
   "/settings",
   "/portfolio",

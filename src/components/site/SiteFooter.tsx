@@ -35,9 +35,14 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-meta sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} Pramaan</p>
-          <p>Not investment advice. Verify with licensed professionals.</p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-meta sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <p>© {new Date().getFullYear()} PocketEdge</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/disclosures/privacy" className="hover:text-accent">Privacy</Link>
+            <Link href="/disclosures/terms" className="hover:text-accent">Terms</Link>
+            <Link href="/disclosures" className="hover:text-accent">Legal</Link>
+          </div>
+          <p className="sm:text-right">Not investment advice. Verify with licensed professionals.</p>
         </div>
       </div>
     </footer>
