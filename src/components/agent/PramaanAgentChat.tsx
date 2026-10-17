@@ -11,6 +11,8 @@ import { ScrollAnchor } from "@/components/agent/chat/ScrollAnchor";
 import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { formatBytes, MAX_FILE_BYTES } from "@/lib/agent/file-limits";
 import { isValidThreadId, newThreadId } from "@/lib/agent/thread-id";
+import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
+import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
 
 const SUGGESTIONS = [
@@ -25,13 +27,6 @@ async function authHeaders() {
   const token = data.session?.access_token;
   if (!token) throw new Error("not_signed_in");
   return { Authorization: `Bearer ${token}` };
-}
-
-function mergeSteps(steps: string[], label: string | undefined) {
-  if (!label) return steps;
-  const next = [...steps];
-  if (next[next.length - 1] !== label) next.push(label);
-  return next.slice(-12);
 }
 
 export function PramaanAgentChat() {
@@ -109,63 +104,71 @@ export function PramaanAgentChat() {
 
   const working = messages.some((m) => m.status === "working");
   useEffect(() => {
-    if (!working) return;
+    if (!working || busy) return;
     const id = window.setInterval(() => {
       void authHeaders().then((headers) => loadThread(headers));
     }, 4000);
     return () => window.clearInterval(id);
-  }, [working, loadThread]);
+  }, [working, busy, loadThread]);
 
   const updateMessage = useCallback((id: string, patch: Partial<AgentMessage>) => {
     setMessages((m) => m.map((x) => (x.id === id ? { ...x, ...patch } : x)));
   }, []);
 
   async function streamMessage(messageId: string, headers: Record<string, string>): Promise<AgentMessage> {
-    const res = await fetch(`/api/agent/messages/${messageId}/events`, { headers });
+    const res = await fetch(`/api/agent/messages/${messageId}/events`, {
+      headers: { ...headers, Accept: "text/event-stream" },
+    });
     if (!res.ok || !res.body) throw new Error("stream_failed");
-    const reader = res.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = "";
+
     let latest: AgentMessage | null = null;
-    let steps: string[] = [];
+    const apply = (event: ReturnType<typeof parseStreamEvent>) => {
+      if (!event) return;
+      setMessages((list) =>
+        list.map((m) => {
+          if (m.id !== messageId) return m;
+          const next = applyStreamEvent(m, event);
+          latest = next;
+          return next;
+        }),
+      );
+    };
 
     const pullFull = async () => {
       const full = await fetch(`/api/agent/messages/${messageId}`, { headers });
-      if (full.ok) {
-        const json = await full.json();
-        latest = json.message as AgentMessage;
-        latest = { ...latest, steps };
-        updateMessage(messageId, latest);
-      }
+      if (!full.ok) return;
+      const json = await full.json();
+      const msg = json.message as AgentMessage;
+      latest = msg;
+      updateMessage(messageId, msg);
     };
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
 
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
-      buffer += decoder.decode(value, { stream: true });
-      const parts = buffer.split("\n\n");
-      buffer = parts.pop() || "";
-      for (const part of parts) {
-        const dataLine = part.split("\n").find((l) => l.startsWith("data:"));
-        if (!dataLine) continue;
-        try {
-          const data = JSON.parse(dataLine.slice(5).trim()) as { type?: string; label?: string };
-          if (data.type === "status" && data.label) {
-            steps = mergeSteps(steps, data.label);
-            updateMessage(messageId, { steps });
-          }
-          if (data.type === "block" || data.type === "action_required" || data.type === "status") {
-            await pullFull();
-          }
-          if (data.type === "done" || data.type === "error") {
+      buffer += decoder.decode(value, { stream: true }).replace(/\r\n/g, "\n");
+      let boundary = buffer.indexOf("\n\n");
+      while (boundary !== -1) {
+        const part = buffer.slice(0, boundary);
+        buffer = buffer.slice(boundary + 2);
+        const frame = parseSseFrame(part);
+        if (frame) {
+          const event = parseStreamEvent(frame);
+          apply(event);
+          if (event?.type === "done" || event?.type === "error") {
             await pullFull();
             if (latest) return latest;
           }
-        } catch {
-          /* ignore */
         }
+        boundary = buffer.indexOf("\n\n");
       }
     }
+
+    await pullFull();
     if (latest) return latest;
     throw new Error("stream_empty");
   }

@@ -28,9 +28,10 @@ export async function GET(request: Request, { params }: Params) {
   return new Response(upstream.body, {
     status: upstream.status,
     headers: {
-      "Content-Type": upstream.headers.get("Content-Type") || "text/event-stream",
+      "Content-Type": upstream.headers.get("Content-Type") || "text/event-stream; charset=utf-8",
       "Cache-Control": "no-cache, no-transform",
       Connection: "keep-alive",
+      "X-Accel-Buffering": "no",
     },
   });
 }

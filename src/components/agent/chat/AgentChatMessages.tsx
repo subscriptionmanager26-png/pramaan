@@ -118,14 +118,17 @@ export function AssistantMessage({
 }) {
   const working = message.status === "working";
   const steps = message.steps ?? [];
+  const showSteps = working || steps.length > 0;
+
   return (
     <div className="max-w-[min(100%,42rem)] space-y-4">
-      {working ? (
-        <WorkingSteps steps={steps.length ? steps : ["Thinking…"]} startedAt={message.createdAt} />
-      ) : (
-        <StepsSummary steps={steps} from={message.createdAt} to={message.completedAt} />
-      )}
-      {message.blocks.length > 0 || message.actions.length > 0 ? (
+      {showSteps &&
+        (working ? (
+          <WorkingSteps steps={steps.length ? steps : ["Thinking…"]} startedAt={message.createdAt} />
+        ) : (
+          <StepsSummary steps={steps} from={message.createdAt} to={message.completedAt} />
+        ))}
+      {(message.blocks.length > 0 || message.actions.length > 0) && (
         <AgentBlocks
           blocks={message.blocks}
           actions={message.actions}
@@ -133,7 +136,7 @@ export function AssistantMessage({
           orders={orders}
           onDecide={onDecide}
         />
-      ) : null}
+      )}
       {message.status === "failed" && (
         <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
           {message.error || "The agent could not finish this message."}

@@ -22,7 +22,13 @@ type Item = {
 
 async function errorMessage(res: Response) {
   const body = await res.json().catch(() => undefined);
-  return (body as { error?: { message?: string } })?.error?.message || `Upload failed (${res.status})`;
+  if (body && typeof body === "object") {
+    const err = (body as { error?: { message?: string } | string }).error;
+    if (typeof err === "string" && err) return err;
+    if (err && typeof err === "object" && err.message) return err.message;
+    if (typeof (body as { message?: string }).message === "string") return (body as { message: string }).message;
+  }
+  return `Upload failed (${res.status})`;
 }
 
 export function AgentComposer({
@@ -42,6 +48,7 @@ export function AgentComposer({
   const [items, setItems] = useState<Item[]>([]);
   const [dragging, setDragging] = useState(false);
   const [sending, setSending] = useState(false);
+  const [attachError, setAttachError] = useState<string | null>(null);
   const picker = useRef<HTMLInputElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
 
@@ -67,23 +74,37 @@ export function AgentComposer({
   };
 
   const addFiles = async (list: FileList | File[]) => {
-    const headers = await getAuthHeaders();
-    const files = Array.from(list);
-    const room = MAX_ATTACHMENTS - items.length;
-    const added: Item[] = files.slice(0, Math.max(0, room)).map((f) => {
-      const ext = f.name.slice(f.name.lastIndexOf(".")).toLowerCase();
-      const key = `${f.name}-${f.size}-${Math.random().toString(36).slice(2)}`;
-      const error = !ACCEPTED_EXTENSIONS.includes(ext)
-        ? "Only PDF, CSV and Excel files"
-        : f.size > MAX_FILE_BYTES
-          ? `Larger than ${formatBytes(MAX_FILE_BYTES)}`
-          : undefined;
-      return { key, name: f.name, size: f.size, status: error ? "error" : "uploading", error };
-    });
-    setItems((cur) => [...cur, ...added]);
-    added.forEach((item, i) => {
-      if (item.status === "uploading") void upload(files[i], item.key, headers);
-    });
+    setAttachError(null);
+    try {
+      const headers = await getAuthHeaders();
+      const files = Array.from(list);
+      const room = MAX_ATTACHMENTS - items.length;
+      if (room <= 0) {
+        setAttachError(`You can attach up to ${MAX_ATTACHMENTS} files.`);
+        return;
+      }
+      const batch = files.slice(0, room);
+      const added: Item[] = batch.map((f) => {
+        const dot = f.name.lastIndexOf(".");
+        const ext = dot >= 0 ? f.name.slice(dot).toLowerCase() : "";
+        const key = `${f.name}-${f.size}-${Math.random().toString(36).slice(2)}`;
+        const error = !ACCEPTED_EXTENSIONS.includes(ext)
+          ? "Only PDF, CSV and Excel files"
+          : f.size > MAX_FILE_BYTES
+            ? `Larger than ${formatBytes(MAX_FILE_BYTES)}`
+            : undefined;
+        return { key, name: f.name, size: f.size, status: error ? "error" : "uploading", error };
+      });
+      setItems((cur) => [...cur, ...added]);
+      for (let i = 0; i < added.length; i++) {
+        if (added[i].status === "uploading") void upload(batch[i], added[i].key, headers);
+      }
+      if (files.length > room) {
+        setAttachError(`Only ${room} more file${room === 1 ? "" : "s"} fit in this message.`);
+      }
+    } catch {
+      setAttachError("Could not start upload. Sign in again and retry.");
+    }
   };
 
   const unlock = async (item: Item, headers: Record<string, string>) => {
@@ -104,6 +125,9 @@ export function AgentComposer({
 
   return (
     <div className="space-y-2">
+      {attachError && (
+        <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-950">{attachError}</p>
+      )}
       {suggestions && suggestions.length > 0 && !text && !items.length && (
         <div className="flex flex-wrap gap-2">
           {suggestions.map((s) => (
@@ -161,6 +185,11 @@ export function AgentComposer({
                 }`}
               >
                 <span className="max-w-40 truncate font-medium">{item.name}</span>
+                {item.status === "uploading" && (
+                  <span className="text-ink-3">Uploading…</span>
+                )}
+                {item.status === "unlocking" && <span className="text-ink-3">Unlocking…</span>}
+                {item.status === "ready" && <span className="font-medium text-accent">Ready</span>}
                 {item.status === "needs_password" && (
                   <>
                     <input

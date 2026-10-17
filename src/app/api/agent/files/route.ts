@@ -17,13 +17,22 @@ export async function GET(request: Request) {
   return NextResponse.json(body, { status: res.status });
 }
 
+/** Proxy multipart uploads without re-parsing (keeps file bytes intact). */
 export async function POST(request: Request) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
-  const form = await request.formData();
+  const contentType = request.headers.get("content-type") || "";
+  if (!contentType.toLowerCase().includes("multipart/form-data")) {
+    return NextResponse.json(
+      { error: { message: "Upload must be multipart form data with a file field." } },
+      { status: 400 },
+    );
+  }
+  const bytes = await request.arrayBuffer();
   const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/files`, {
     method: "POST",
-    body: form,
+    headers: { "Content-Type": contentType },
+    body: bytes,
   });
   const body = await res.json().catch(() => ({}));
   return NextResponse.json(body, { status: res.status });
