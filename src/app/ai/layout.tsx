@@ -1,10 +1,3 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "AI",
-  description: "Ask Pramaan AI about markets, news, and research.",
-};
-
-export default function AILayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default function AiLayout({ children }: { children: React.ReactNode }) {
+  return <div className="flex min-h-[calc(100dvh-4rem)] flex-1 flex-col">{children}</div>;
 }

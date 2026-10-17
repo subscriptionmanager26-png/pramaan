@@ -1,4 +1,5 @@
-import type { AgentAction, UiBlock } from "@/lib/agent/types";
+import { AgentMarkdown } from "@/components/agent/chat/AgentMarkdown";
+import type { AgentAction, OrderState, UiBlock } from "@/lib/agent/types";
 
 function formatCell(value: string | number | null, format?: string) {
   if (value === null || value === undefined || value === "") return "—";
@@ -8,7 +9,17 @@ function formatCell(value: string | number | null, format?: string) {
   return value.toLocaleString("en-IN");
 }
 
-function ActionCard({ action, pe }: { action: AgentAction; pe: boolean }) {
+function ActionCard({
+  action,
+  pe,
+  order,
+  onDecide,
+}: {
+  action: AgentAction;
+  pe: boolean;
+  order?: OrderState;
+  onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+}) {
   if (action.kind === "connection_login") {
     return (
       <div className="rounded-xl border border-amber-200 bg-amber-50/80 p-4">
@@ -31,11 +42,57 @@ function ActionCard({ action, pe }: { action: AgentAction; pe: boolean }) {
       </div>
     );
   }
+  const o = action.order;
+  const status = order?.status ?? "proposed";
+  const buy = o.side === "BUY";
   return (
-    <div
-      className={`rounded-xl border p-4 text-sm ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface-muted)] text-[var(--pe-text-secondary)]" : "border-line bg-paper-2 text-ink-2"}`}
-    >
-      Review the order proposal in the app to confirm or reject.
+    <div className={`overflow-hidden rounded-xl border ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface)]" : "border-line bg-white"}`}>
+      <div className="flex items-start gap-3 p-4">
+        <span
+          className={`rounded-md px-2 py-1 text-xs font-semibold ${buy ? "bg-emerald-100 text-emerald-800" : "bg-red-100 text-red-800"}`}
+        >
+          {o.side}
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className={`font-medium ${pe ? "text-[var(--pe-text)]" : "text-ink"}`}>
+            {o.quantity} × {o.symbol}
+            <span className={`ml-2 text-sm font-normal ${pe ? "text-[var(--pe-text-secondary)]" : "text-ink-2"}`}>
+              {o.exchange} · {o.product === "CNC" ? "Delivery" : "Intraday"} ·{" "}
+              {o.orderType === "LIMIT" ? `Limit ₹${o.price?.toLocaleString("en-IN")}` : "Market"}
+            </span>
+          </p>
+          <p className={`mt-1 text-sm ${pe ? "text-[var(--pe-text-secondary)]" : "text-ink-2"}`}>{action.rationale}</p>
+        </div>
+      </div>
+      <div
+        className={`flex flex-wrap items-center justify-between gap-3 border-t px-4 py-2.5 ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface-muted)]" : "border-line bg-paper-2"}`}
+      >
+        {status === "proposed" && onDecide ? (
+          <>
+            <span className="text-xs text-[var(--pe-text-secondary)]">Not placed until you confirm</span>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                className="rounded-full px-3 py-1.5 text-sm font-medium text-[var(--pe-text-secondary)] hover:bg-white"
+                onClick={() => onDecide(action.orderId, "reject")}
+              >
+                Reject
+              </button>
+              <button
+                type="button"
+                className="rounded-full bg-[var(--pe-accent)] px-3 py-1.5 text-sm font-medium text-white"
+                onClick={() => onDecide(action.orderId, "confirm")}
+              >
+                Confirm order
+              </button>
+            </div>
+          </>
+        ) : (
+          <span className={`text-xs font-medium ${status === "executed" ? "text-emerald-700" : "text-[var(--pe-text-secondary)]"}`}>
+            {status === "executed" ? `Placed · broker id ${order?.brokerOrderId ?? "—"}` : status[0].toUpperCase() + status.slice(1)}
+          </span>
+        )}
+      </div>
     </div>
   );
 }
@@ -44,10 +101,14 @@ export function AgentBlocks({
   blocks,
   actions,
   theme = "pramaan",
+  orders,
+  onDecide,
 }: {
   blocks: UiBlock[];
   actions: AgentAction[];
   theme?: "pramaan" | "pocketedge";
+  orders?: Record<string, OrderState>;
+  onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
 }) {
   const pe = theme === "pocketedge";
   const border = pe ? "border-[var(--pe-border)]" : "border-line";
@@ -58,7 +119,9 @@ export function AgentBlocks({
     <div className="space-y-4">
       {blocks.map((block, i) => {
         if (block.kind === "markdown") {
-          return (
+          return pe ? (
+            <AgentMarkdown key={i} text={block.text} />
+          ) : (
             <div key={i} className={`prose prose-sm max-w-none whitespace-pre-wrap ${text2}`}>
               {block.text}
             </div>
@@ -114,7 +177,13 @@ export function AgentBlocks({
         return null;
       })}
       {actions.map((action, i) => (
-        <ActionCard key={i} action={action} pe={pe} />
+        <ActionCard
+          key={i}
+          action={action}
+          pe={pe}
+          order={action.kind === "order_confirmation" ? orders?.[action.orderId] : undefined}
+          onDecide={onDecide}
+        />
       ))}
     </div>
   );

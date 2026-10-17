@@ -16,9 +16,21 @@ export type UiBlock =
       data: Record<string, string | number>[];
     };
 
+export type OrderRequest = {
+  exchange: string;
+  symbol: string;
+  side: string;
+  quantity: number;
+  orderType: string;
+  price?: number;
+  product: string;
+};
+
 export type AgentAction =
   | { kind: "connection_login"; service: string; url: string; message?: string }
-  | { kind: "order_confirmation"; orderId: string; order: unknown; rationale: string; expiresAt: string };
+  | { kind: "order_confirmation"; orderId: string; order: OrderRequest; rationale: string; expiresAt: string };
+
+export type OrderState = { status: string; brokerOrderId?: string };
 
 export type JobAttachment = {
   id: string;

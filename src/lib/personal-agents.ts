@@ -31,8 +31,13 @@ export async function syncAgentUser(
 }
 
 export async function paFetch(path: string, init?: RequestInit) {
-  const merged = { ...headers(), ...(init?.headers as Record<string, string> | undefined) };
-  if (init?.body instanceof FormData) delete merged["Content-Type"];
+  const baseHeaders = headers();
+  const extra = init?.headers as Record<string, string> | undefined;
+  const merged: Record<string, string> = { ...baseHeaders, ...extra };
+  if (init?.body instanceof FormData) {
+    const { "Content-Type": _drop, ...rest } = merged;
+    return fetch(`${base()}${path}`, { ...init, headers: rest });
+  }
   const res = await fetch(`${base()}${path}`, {
     ...init,
     headers: merged,

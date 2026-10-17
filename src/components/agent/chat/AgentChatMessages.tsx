@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { AgentBlocks } from "@/components/agent/AgentBlocks";
-import type { AgentMessage, JobAttachment } from "@/lib/agent/types";
+import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { formatBytes } from "@/lib/agent/file-limits";
 
 function duration(from: string, to?: string) {
@@ -89,7 +89,35 @@ function StepsSummary({ steps, from, to }: { steps: string[]; from: string; to?:
   );
 }
 
-export function AssistantMessage({ message }: { message: AgentMessage }) {
+function CopyReply({ message }: { message: AgentMessage }) {
+  const [copied, setCopied] = useState(false);
+  const copyText = message.blocks.flatMap((b) => (b.kind === "markdown" ? [b.text] : [])).join("\n\n");
+  if (!copyText || message.status === "working") return null;
+  return (
+    <button
+      type="button"
+      className="text-xs text-[var(--pe-text-secondary)] hover:text-[var(--pe-text)]"
+      onClick={() => {
+        void navigator.clipboard.writeText(copyText).then(() => {
+          setCopied(true);
+          window.setTimeout(() => setCopied(false), 1500);
+        });
+      }}
+    >
+      {copied ? "Copied" : "Copy reply"}
+    </button>
+  );
+}
+
+export function AssistantMessage({
+  message,
+  orders,
+  onDecide,
+}: {
+  message: AgentMessage;
+  orders?: Record<string, OrderState>;
+  onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+}) {
   const working = message.status === "working";
   const steps = message.steps ?? [];
   return (
@@ -101,7 +129,13 @@ export function AssistantMessage({ message }: { message: AgentMessage }) {
       )}
       {message.blocks.length > 0 || message.actions.length > 0 ? (
         <div className="pe-agent-blocks">
-          <AgentBlocks blocks={message.blocks} actions={message.actions} theme="pocketedge" />
+          <AgentBlocks
+            blocks={message.blocks}
+            actions={message.actions}
+            theme="pocketedge"
+            orders={orders}
+            onDecide={onDecide}
+          />
         </div>
       ) : null}
       {message.status === "failed" && (
@@ -109,15 +143,24 @@ export function AssistantMessage({ message }: { message: AgentMessage }) {
           {message.error || "The agent could not finish this message."}
         </div>
       )}
+      <CopyReply message={message} />
     </div>
   );
 }
 
-export function ChatTurn({ message }: { message: AgentMessage }) {
+export function ChatTurn({
+  message,
+  orders,
+  onDecide,
+}: {
+  message: AgentMessage;
+  orders?: Record<string, OrderState>;
+  onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+}) {
   return (
     <section className="space-y-4">
       <UserMessage text={message.text} attachments={message.attachments} />
-      <AssistantMessage message={message} />
+      <AssistantMessage message={message} orders={orders} onDecide={onDecide} />
     </section>
   );
 }
