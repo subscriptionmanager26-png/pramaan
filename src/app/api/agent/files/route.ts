@@ -4,6 +4,7 @@ import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 export async function GET(request: Request) {
   const auth = await requireAgentUser(request);
@@ -17,23 +18,48 @@ export async function GET(request: Request) {
   return NextResponse.json(body, { status: res.status });
 }
 
-/** Proxy multipart uploads without re-parsing (keeps file bytes intact). */
 export async function POST(request: Request) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
-  const contentType = request.headers.get("content-type") || "";
-  if (!contentType.toLowerCase().includes("multipart/form-data")) {
+
+  let incoming: FormData;
+  try {
+    incoming = await request.formData();
+  } catch {
     return NextResponse.json(
-      { error: { message: "Upload must be multipart form data with a file field." } },
+      { error: { code: "invalid_upload", message: "Could not read the upload. Try a smaller file or refresh the page." } },
       { status: 400 },
     );
   }
-  const bytes = await request.arrayBuffer();
+
+  const raw = incoming.get("file");
+  if (!raw || typeof raw === "string") {
+    return NextResponse.json(
+      { error: { code: "missing_file", message: "Choose a PDF, CSV, or Excel file to attach." } },
+      { status: 400 },
+    );
+  }
+
+  const filename = raw instanceof File && raw.name ? raw.name : "upload";
+  const outbound = new FormData();
+  outbound.append("file", raw, filename);
+
   const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/files`, {
     method: "POST",
-    headers: { "Content-Type": contentType },
-    body: bytes,
+    body: outbound,
   });
-  const body = await res.json().catch(() => ({}));
+
+  const text = await res.text();
+  let body: unknown = {};
+  try {
+    body = text ? JSON.parse(text) : {};
+  } catch {
+    body = {
+      error: {
+        code: "upstream_error",
+        message: res.ok ? "Upload response was invalid." : `Upload failed (${res.status}).`,
+      },
+    };
+  }
   return NextResponse.json(body, { status: res.status });
 }

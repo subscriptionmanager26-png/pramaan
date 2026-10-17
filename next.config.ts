@@ -5,6 +5,11 @@ const appOrigin = (process.env.POCKETEDGE_APP_ORIGIN || process.env.NEXT_PUBLIC_
 const proxyApp = process.env.POCKETEDGE_APP_PROXY === "1" && Boolean(appOrigin);
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Route handlers + multipart uploads (PDFs up to agent limit).
+    serverActions: { bodySizeLimit: "10mb" },
+    proxyClientMaxBodySize: "10mb",
+  },
   turbopack: {
     root: process.cwd(),
   },

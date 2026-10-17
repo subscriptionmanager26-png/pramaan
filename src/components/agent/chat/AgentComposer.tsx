@@ -23,11 +23,18 @@ type Item = {
 async function errorMessage(res: Response) {
   const body = await res.json().catch(() => undefined);
   if (body && typeof body === "object") {
-    const err = (body as { error?: { message?: string } | string }).error;
+    const err = (body as { error?: { message?: string; code?: string } | string }).error;
     if (typeof err === "string" && err) return err;
-    if (err && typeof err === "object" && err.message) return err.message;
+    if (err && typeof err === "object" && err.message) {
+      if (err.code === "uploads_unavailable" || res.status === 503) {
+        return "File uploads are not available on the agent server yet. Try again later or contact support.";
+      }
+      return err.message;
+    }
     if (typeof (body as { message?: string }).message === "string") return (body as { message: string }).message;
   }
+  if (res.status === 413) return "File is too large for upload.";
+  if (res.status === 401) return "Sign in again to upload files.";
   return `Upload failed (${res.status})`;
 }
 
@@ -59,7 +66,12 @@ export function AgentComposer({
     const body = new FormData();
     body.append("file", file);
     try {
-      const res = await fetch("/api/agent/files", { method: "POST", headers, body });
+      const res = await fetch("/api/agent/files", {
+        method: "POST",
+        headers,
+        body,
+        credentials: "same-origin",
+      });
       if (!res.ok) return patch(key, { status: "error", error: await errorMessage(res) });
       const json = (await res.json()) as { file?: { id: string; status: string } };
       const uploaded = json.file;
@@ -75,35 +87,46 @@ export function AgentComposer({
 
   const addFiles = async (list: FileList | File[]) => {
     setAttachError(null);
+    const files = Array.from(list);
+    const room = MAX_ATTACHMENTS - items.length;
+    if (room <= 0) {
+      setAttachError(`You can attach up to ${MAX_ATTACHMENTS} files.`);
+      return;
+    }
+    const batch = files.slice(0, room);
+    const added: Item[] = batch.map((f) => {
+      const dot = f.name.lastIndexOf(".");
+      const ext = dot >= 0 ? f.name.slice(dot).toLowerCase() : "";
+      const key = `${f.name}-${f.size}-${Math.random().toString(36).slice(2)}`;
+      const error = !ACCEPTED_EXTENSIONS.includes(ext)
+        ? "Only PDF, CSV and Excel files"
+        : f.size > MAX_FILE_BYTES
+          ? `Larger than ${formatBytes(MAX_FILE_BYTES)}`
+          : undefined;
+      return { key, name: f.name, size: f.size, status: error ? "error" : "uploading", error };
+    });
+    setItems((cur) => [...cur, ...added]);
+    if (files.length > room) {
+      setAttachError(`Only ${room} more file${room === 1 ? "" : "s"} fit in this message.`);
+    }
+
+    const pending = added
+      .map((item, i) => ({ item, file: batch[i] }))
+      .filter(({ item }) => item.status === "uploading");
+    if (!pending.length) return;
+
     try {
       const headers = await getAuthHeaders();
-      const files = Array.from(list);
-      const room = MAX_ATTACHMENTS - items.length;
-      if (room <= 0) {
-        setAttachError(`You can attach up to ${MAX_ATTACHMENTS} files.`);
-        return;
-      }
-      const batch = files.slice(0, room);
-      const added: Item[] = batch.map((f) => {
-        const dot = f.name.lastIndexOf(".");
-        const ext = dot >= 0 ? f.name.slice(dot).toLowerCase() : "";
-        const key = `${f.name}-${f.size}-${Math.random().toString(36).slice(2)}`;
-        const error = !ACCEPTED_EXTENSIONS.includes(ext)
-          ? "Only PDF, CSV and Excel files"
-          : f.size > MAX_FILE_BYTES
-            ? `Larger than ${formatBytes(MAX_FILE_BYTES)}`
-            : undefined;
-        return { key, name: f.name, size: f.size, status: error ? "error" : "uploading", error };
-      });
-      setItems((cur) => [...cur, ...added]);
-      for (let i = 0; i < added.length; i++) {
-        if (added[i].status === "uploading") void upload(batch[i], added[i].key, headers);
-      }
-      if (files.length > room) {
-        setAttachError(`Only ${room} more file${room === 1 ? "" : "s"} fit in this message.`);
+      for (const { item, file } of pending) {
+        void upload(file, item.key, headers);
       }
     } catch {
       setAttachError("Could not start upload. Sign in again and retry.");
+      setItems((cur) =>
+        cur.map((i) =>
+          pending.some((p) => p.item.key === i.key) ? { ...i, status: "error", error: "Sign in required" } : i,
+        ),
+      );
     }
   };
 
