@@ -114,7 +114,7 @@ export function AgentComposer({
                 setText(s);
                 input.current?.focus();
               }}
-              className="rounded-full border border-[var(--pe-border)] bg-[var(--pe-surface)] px-3 py-1.5 text-xs text-[var(--pe-text-secondary)] transition-colors hover:border-[var(--pe-accent)] hover:text-[var(--pe-text)]"
+              className="rounded-full border border-line bg-white px-3 py-1.5 text-xs text-ink-2 transition-colors hover:border-accent hover:text-ink"
             >
               {s}
             </button>
@@ -147,8 +147,8 @@ export function AgentComposer({
           setDragging(false);
           void addFiles(e.dataTransfer.files);
         }}
-        className={`rounded-2xl border bg-[var(--pe-surface)] shadow-sm transition-colors ${
-          dragging ? "border-[var(--pe-accent)] bg-[var(--pe-accent-soft)]" : "border-[var(--pe-border)]"
+        className={`rounded-2xl border bg-white shadow-sm transition-colors ${
+          dragging ? "border-accent bg-accent-2" : "border-line"
         }`}
       >
         {items.length > 0 && (
@@ -157,7 +157,7 @@ export function AgentComposer({
               <div
                 key={item.key}
                 className={`flex max-w-full items-center gap-2 rounded-lg border py-1 pr-2 pl-1 text-xs ${
-                  item.status === "error" ? "border-red-300 text-red-700" : "border-[var(--pe-border)]"
+                  item.status === "error" ? "border-red-300 text-red-700" : "border-line"
                 }`}
               >
                 <span className="max-w-40 truncate font-medium">{item.name}</span>
@@ -166,13 +166,13 @@ export function AgentComposer({
                     <input
                       type="password"
                       placeholder="PDF password"
-                      className="h-6 w-28 rounded border border-[var(--pe-border)] px-1"
+                      className="h-6 w-28 rounded border border-line px-1"
                       value={item.password ?? ""}
                       onChange={(e) => patch(item.key, { password: e.target.value })}
                     />
                     <button
                       type="button"
-                      className="rounded-full bg-[var(--pe-accent)] px-2 py-0.5 text-white"
+                      className="rounded-full bg-accent px-2 py-0.5 text-white"
                       onClick={() => {
                         void getAuthHeaders().then((h) => unlock(item, h));
                       }}
@@ -185,7 +185,7 @@ export function AgentComposer({
                 <button
                   type="button"
                   aria-label={`Remove ${item.name}`}
-                  className="text-[var(--pe-text-secondary)]"
+                  className="text-ink-2"
                   onClick={() => setItems((cur) => cur.filter((i) => i.key !== item.key))}
                 >
                   ×
@@ -201,7 +201,7 @@ export function AgentComposer({
           rows={1}
           placeholder="Message your agent…"
           disabled={disabled}
-          className="max-h-60 min-h-14 w-full resize-none border-0 bg-transparent px-4 pt-3.5 text-[15px] text-[var(--pe-text)] outline-none"
+          className="max-h-60 min-h-14 w-full resize-none border-0 bg-transparent px-4 pt-3.5 text-[15px] text-ink outline-none"
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
               e.preventDefault();
@@ -225,7 +225,7 @@ export function AgentComposer({
             type="button"
             aria-label="Attach files"
             disabled={items.length >= MAX_ATTACHMENTS || disabled}
-            className="rounded-full px-3 py-2 text-sm text-[var(--pe-text-secondary)] hover:bg-[var(--pe-surface-muted)]"
+            className="rounded-full px-3 py-2 text-sm text-ink-2 hover:bg-paper-2"
             onClick={() => picker.current?.click()}
           >
             Attach
@@ -234,13 +234,13 @@ export function AgentComposer({
             type="submit"
             disabled={!canSend}
             aria-label="Send"
-            className="flex size-9 items-center justify-center rounded-full bg-[var(--pe-accent)] text-white disabled:opacity-40"
+            className="flex size-9 items-center justify-center rounded-full bg-accent text-white disabled:opacity-40"
           >
             {sending ? "…" : "↑"}
           </button>
         </div>
       </form>
-      {hint && <p className="px-1 text-center text-[11px] text-[var(--pe-text-secondary)]">{hint}</p>}
+      {hint && <p className="px-1 text-center text-[11px] text-ink-2">{hint}</p>}
     </div>
   );
 }

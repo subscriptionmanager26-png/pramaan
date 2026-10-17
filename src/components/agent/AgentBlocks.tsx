@@ -119,13 +119,7 @@ export function AgentBlocks({
     <div className="space-y-4">
       {blocks.map((block, i) => {
         if (block.kind === "markdown") {
-          return pe ? (
-            <AgentMarkdown key={i} text={block.text} />
-          ) : (
-            <div key={i} className={`prose prose-sm max-w-none whitespace-pre-wrap ${text2}`}>
-              {block.text}
-            </div>
-          );
+          return <AgentMarkdown key={i} text={block.text} />;
         }
         if (block.kind === "card") {
           return (

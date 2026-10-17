@@ -132,7 +132,7 @@ export function AssistantMessage({
           <AgentBlocks
             blocks={message.blocks}
             actions={message.actions}
-            theme="pocketedge"
+            theme="pramaan"
             orders={orders}
             onDecide={onDecide}
           />

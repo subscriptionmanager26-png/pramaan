@@ -13,10 +13,8 @@ export const metadata: Metadata = {
 
 export default function AiPage() {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-4 sm:px-6 sm:py-6">
-      <Suspense fallback={<p className="text-center text-ink-2">Loading chat…</p>}>
-        <PramaanAgentChat />
-      </Suspense>
-    </div>
+    <Suspense fallback={<p className="p-8 text-center text-ink-2">Loading chat…</p>}>
+      <PramaanAgentChat />
+    </Suspense>
   );
 }
