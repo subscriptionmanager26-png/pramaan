@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Logo } from "@/components/Logo";
+import { SiteAccountMenu } from "@/components/site/SiteAccountMenu";
 
 const nav = [
   { href: "/news", label: "News" },
@@ -75,8 +76,14 @@ export function SiteHeader() {
                   );
                 })}
               </nav>
-              <div className="mt-auto border-t border-line bg-white p-4">
-                <Link href="/ai" className="btn-primary w-full" onClick={() => setOpen(false)}>
+              <div className="mt-auto space-y-3 border-t border-line bg-white p-4">
+                <div className="flex justify-center">
+                  <SiteAccountMenu onNavigate={() => setOpen(false)} />
+                </div>
+                <Link href="/account" className="btn-secondary block w-full text-center" onClick={() => setOpen(false)}>
+                  Account
+                </Link>
+                <Link href="/ai" className="btn-primary block w-full text-center" onClick={() => setOpen(false)}>
                   Ask Pramaan AI
                 </Link>
               </div>
@@ -126,7 +133,8 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/ai" className="btn-ghost">
+          <SiteAccountMenu />
+          <Link href="/ai" className="btn-ghost hidden sm:inline-flex">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
               <path
                 d="M8 2.5v2M8 11.5v2M2.5 8h2M11.5 8h2M4.2 4.2l1.4 1.4M10.4 10.4l1.4 1.4M4.2 11.8l1.4-1.4M10.4 5.6l1.4-1.4"
