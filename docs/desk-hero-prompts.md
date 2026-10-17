@@ -536,6 +536,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Bank facade |
 | Metaphor left | Rupee pipes into solar/wind project blocks |
 
+### `igx-lng-terminal-capacity-booking-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Idle LNG regas slots listed and booked transparently |
+| Subject right | LNG import terminal silhouette |
+| Metaphor left | Stepped capacity calendar + booking arrows |
+
+### `india-peak-power-demand-250gw-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Grid load stays near summer peaks into autumn |
+| Subject right | Transmission tower / demand curve |
+| Metaphor left | Rising watt dial + heat calendar blocks |
+
+### `tata-motors-iveco-shareholder-approval-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Global CV takeover clears shareholder vote |
+| Subject right | Stylised heavy truck silhouette |
+| Metaphor left | Merging factory pipes / integration chevrons |
+
+### `ather-insurance-irdai-corporate-agent-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | EV maker earns recurring insurance distribution fees |
+| Subject right | Electric scooter silhouette |
+| Metaphor left | Shield + policy stack |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "igx-lng-terminal-capacity-booking-october-2026",
+    title: "Gas importers can soon book spare LNG terminal slots on Indian Gas Exchange",
+    summary:
+      "On 17 October 2026, the Petroleum and Natural Gas Regulatory Board said Indian Gas Exchange received approval to run a capacity-booking platform for liquefied natural gas import terminals, giving buyers a central way to list and reserve idle regasification capacity.",
+    category: "industry",
+    companyOrSector: "Energy / gas markets",
+    publishedAt: "2026-10-17T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("igx-lng-terminal-capacity-booking-october-2026"),
+    keyTakeaways: [
+      "PNGRB cleared IGX to set up a platform for booking unutilised LNG terminal regasification capacity.",
+      "Participation is voluntary and sits alongside existing bilateral terminal contracts.",
+      "Regulators said several terminals report poor utilisation and could attract cargoes through transparent regasification charges.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, the Petroleum and Natural Gas Regulatory Board announced that Indian Gas Exchange has regulatory approval to launch a capacity booking platform for LNG import terminals. The exchange will list spare regasification capacity so market participants can see what is available and book slots according to their needs. PNGRB said the facility is voluntary. Terminals can still sign bilateral deals with users, but they gain an extra route to fill idle hours. The regulator noted that many terminals run below full utilisation and could draw more cargoes if regasification fees are discovered openly rather than only in private negotiations.",
+      "What does this mean?",
+      "India imports most of its gas as LNG. Terminal capacity is often locked years ahead, yet utilisation swings with industrial demand and pipeline connectivity. A listed booking market works like an airline selling empty seats: the asset already exists, and transparent pricing can pull in spot cargoes that would otherwise skip India. For city gas distributors and factories, easier access to spare slots can shorten procurement cycles when pipeline gas is tight. For terminal owners, higher throughput spreads fixed costs across more molecules without building new jetties immediately. IGX already trades delivery-based gas; this layer addresses physical access before molecules hit the exchange screen.",
+      "Why should I care?",
+      "If you buy gas for a plant or run a CGD franchise, watch when IGX publishes platform rules and which terminals post capacity first. Industrial users should compare regasification quotes from bilateral contracts against exchange bookings once trading starts. Investors in gas infrastructure names should track utilisation disclosures after the platform goes live. Follow PNGRB implementation circulars, IGX onboarding notices, and whether importers shift spot LNG toward terminals that advertise open slots.",
+    ],
+  },
+  {
+    slug: "india-peak-power-demand-250gw-october-2026",
+    title: "India’s peak power demand stayed above 250 GW through most of September",
+    summary:
+      "Grid data cited on 17 October 2026 showed domestic peak electricity demand exceeding 250 gigawatts on most September days, near summer levels, as weak monsoon rains kept irrigation pumps and cooling loads high and day-ahead power prices on IEX stayed above ₹7 per unit.",
+    category: "industry",
+    companyOrSector: "Power / utilities",
+    publishedAt: "2026-10-17T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-peak-power-demand-250gw-october-2026"),
+    keyTakeaways: [
+      "Peak demand met topped 250 GW on most days in September 2026, with October 5 setting a record 260 GW.",
+      "Power consumption in September rose about 11% year on year, helped by irrigation and cooling needs after below-normal rainfall.",
+      "Coal stocks at domestic coal-based plants fell to about 18 million tonnes by mid-October as supply and rains disrupted mines.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 17 October 2026 cited official grid figures showing India’s peak power demand stayed unusually high through September 2026. On most days the system served more than 250 gigawatts, a level normally associated with peak summer rather than the post-monsoon shoulder season. Demand on 5 October reached about 260 GW, a record for that month. September consumption rose roughly 11% year on year, with officials linking the load to irrigation pumps and air cooling after rainfall ran below normal in several regions. Day-ahead prices on the Indian Energy Exchange have traded above ₹7 per kilowatt-hour for much of October. Coal inventory at domestic coal-fired plants slipped to about 18 million tonnes by 15 October from higher levels at the start of the month.",
+      "What does this mean?",
+      "When the grid still runs hot in October, planners cannot assume a sharp seasonal dip before winter. Discoms must keep more thermal units on call, and generators burn coal faster than mines replenish stocks after heavy rain in coal belts. Weak monsoons push farmers to run pumps longer, which shows up as evening peaks even as urban cooling eases. Higher exchange prices signal tight real-time balance, not just a one-day spike. Policymakers have already said India needs more baseload from conventional plants alongside renewables to meet rising load; this autumn stretch is a live stress test of that argument.",
+      "Why should I care?",
+      "Households may see fewer off-peak rebates if discoms buy costly short-term power to avoid cuts. Factories on open access should budget for volatile exchange tariffs through the festive quarter. If you invest in power or coal names, watch weekly coal stock reports and plant outage schedules. Track monsoon updates for rabi sowing, regional load despatch data for sustained 240 GW-plus peaks, and whether the government releases additional coal rakes or import tenders to rebuild inventories before winter.",
+    ],
+  },
+  {
+    slug: "tata-motors-iveco-shareholder-approval-october-2026",
+    title: "Iveco shareholders approved Tata Motors’ takeover bid at the higher price",
+    summary:
+      "On 17 October 2026, Tata Motors said Iveco Group shareholders backed all board resolutions on its voluntary tender offer, including articles changes and a possible demerger, after the Indian company raised its bid to €14.40 per share on 9 October.",
+    category: "industry",
+    companyOrSector: "Autos / commercial vehicles",
+    publishedAt: "2026-10-17T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-motors-iveco-shareholder-approval-october-2026"),
+    keyTakeaways: [
+      "Iveco holders approved resolutions tied to Tata Motors’ offer at an extraordinary general meeting in Amsterdam.",
+      "Tata Motors lifted its offer to €14.40 per share on 9 October from €14.10, with the acceptance period set to close on 26 October.",
+      "The €3.8 billion deal excludes Iveco’s defence business and includes Exor’s 27.06% stake; demerger steps apply if Tata crosses about 80% ownership.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, Tata Motors Ltd said shareholders of Italy’s Iveco Group approved every board resolution connected to its voluntary public tender offer. The vote at an extraordinary general meeting in Amsterdam covered amendments to Iveco’s articles, conversion to a private company after delisting, and steps toward a demerger if the acquirer secures roughly 80% of ordinary shares. Tata Motors first announced the roughly €3.8 billion acquisition of Iveco’s commercial vehicle business in July 2025, excluding defence assets sold separately to Leonardo. It also agreed to buy Exor’s 27.06% stake. After opening the tender at €14.10, Tata Motors raised the price to €14.40 on 9 October and declared the offer final, with the window scheduled to end on 26 October 2026.",
+      "What does this mean?",
+      "Shareholder approval removes a major closing condition, though regulatory clearances and acceptances still matter. For Tata’s truck and bus business, Iveco brings European brands, engine families, and a distribution network outside India’s price-sensitive market. Integration planning can shift from courtship to factory and platform decisions once the tender settles. A higher final price signals competition for control or resistance from holders who wanted a premium. Demerger resolutions give Tata optionality to carve assets after it crosses the threshold, which can simplify brand ownership or separate non-core units.",
+      "Why should I care?",
+      "If you work in auto components or dealerships, watch which Iveco platforms Tata prioritises for India exports versus local assembly. Fleet buyers comparing Bharat Stage VI trucks should track whether Tata bundles Iveco technology into new launches. Investors in Tata Motors should read acceptance levels after 26 October and any funding mix for the euro-denominated payout. Follow tender results, Competition Commission filings in Europe, and Tata’s post-close guidance on synergies and debt.",
+    ],
+  },
+  {
+    slug: "ather-insurance-irdai-corporate-agent-october-2026",
+    title: "Ather Energy’s insurance arm can now sell life, health, and motor policies",
+    summary:
+      "IRDAI granted Ather Insurance a corporate agent (composite) registration on 15 October 2026, allowing the electric two-wheeler maker’s wholly owned subsidiary to distribute and service insurance without underwriting its own policies.",
+    category: "industry",
+    companyOrSector: "EVs / insurance distribution",
+    publishedAt: "2026-10-17T05:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ather-insurance-irdai-corporate-agent-october-2026"),
+    keyTakeaways: [
+      "Ather Insurance received IRDAI registration on 15 October to act as a corporate agent covering life, general, and health lines.",
+      "The unit will distribute and service policies; Ather Energy said it expects recurring revenue from the existing customer base.",
+      "Ather ranked third in India’s electric two-wheeler market in September with 30,479 registrations and a 14.71% share, per Vahan data cited in filings.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, the Insurance Regulatory and Development Authority of India registered Ather Insurance as a corporate agent (composite). Ather Energy Ltd, the Bengaluru-based electric scooter maker, owns the subsidiary fully. The certificate lets the unit distribute and service life, general, and health insurance products sold by partner insurers. Ather told stock exchanges on 16 October that it has not named insurer partners yet and did not quantify expected revenue. The company said the move diversifies income and taps its installed base of riders. Separate market data placed Ather third in electric two-wheeler registrations in September 2026, with 30,479 units and a 14.71% share.",
+      "What does this mean?",
+      "Vehicle makers increasingly earn beyond the first hardware sale through financing, extended warranties, and insurance commissions. A corporate agent model keeps balance-sheet risk with licensed insurers while Ather captures a slice of premium for every policy sold through its app or showrooms. Scooter buyers may see bundled cover at purchase, similar to car dealers, which can lift attachment rates compared with hunting policies online. For insurers, Ather’s young urban customer file is a distribution channel; for Ather, recurring fees can smooth swings in scooter volumes. The registration is not a manufacturing subsidy; it is a regulated sales licence that must be renewed and audited like any other agent.",
+      "Why should I care?",
+      "If you ride an Ather or plan to buy one, compare bundled insurance quotes with standalone policies on price, IDV, and claim service before checkout. Rivals such as Ola and TVS may respond with their own tie-ups, which can improve choice for EV owners. Investors should watch disclosure on non-vehicle revenue share, which Ather said was 12% of FY25 sales versus 10% a year earlier. Track named insurer partners, commission rates in annual reports, and whether IRDAI raises conduct rules for OEM-linked agents.",
+    ],
+  },
+  {
     slug: "yes-bank-cet1-hit-at1-restoration-october-2026",
     title: "Yes Bank warned the AT-1 ruling could cut its core capital ratio by 250 basis points",
     summary:
@@ -2870,6 +2966,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "igx-lng-terminal-capacity-booking-october-2026": "policy",
+  "india-peak-power-demand-250gw-october-2026": "policy",
+  "tata-motors-iveco-shareholder-approval-october-2026": "companies",
+  "ather-insurance-irdai-corporate-agent-october-2026": "companies",
   "yes-bank-cet1-hit-at1-restoration-october-2026": "policy",
   "starlink-reliance-satcom-licensing-october-2026": "policy",
   "oberoi-realty-q2-profit-flat-october-2026": "companies",
