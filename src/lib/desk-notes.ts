@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fssai-nestle-hul-misleading-claims-october-2026",
+    title: "FSSAI sent Nestlé and Hindustan Unilever notices over pack and ad claims",
+    summary:
+      "On 17 October 2026, the Food Safety and Standards Authority of India said it issued notices to Nestlé India and Hindustan Unilever for inconsistent labels and health claims on drinks sold online, and suspended licences at two smaller food businesses after audits.",
+    category: "industry",
+    companyOrSector: "Food policy / FMCG",
+    publishedAt: "2026-10-17T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-nestle-hul-misleading-claims-october-2026"),
+    keyTakeaways: [
+      "FSSAI flagged Nestlé’s Nescafé chilled coffee drinks for mismatched front and back labels versus e-commerce listings.",
+      "Separate notices covered a Nestlé renal nutrition powder sold without the special-product approval FSSAI requires.",
+      "Hindustan Unilever’s Horlicks Women’s Plus and Mother’s Plus SKUs were cited for bone and birth-weight claims regulators called misleading.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, the Food Safety and Standards Authority of India said it issued enforcement notices to Nestlé India and Hindustan Unilever after inspections and audits of packaged foods sold in stores and on e-commerce platforms. For Nestlé, the regulator cited Nescafé Intense Café, Choco Mocha, and Chilled Latte variants where the front of the pack called the product flavoured milk while the back declared a proprietary dairy drink category. Online listings described the drinks as coffee-flavoured milk with copy about double-toned milk that did not match the declared composition, which FSSAI said breached advertising and labelling rules from 2018 and 2020. In a second notice, FSSAI said Nestlé’s renal resource vanilla powder is meant for a special medical condition and needs prior authority approval that the company had not obtained. Hindustan Unilever received two notices on Horlicks Women’s Plus and Horlicks Mother’s Plus Kesar over claims such as clinically proven bone strength, use of the word healthy, and healthy birth weight in ads. FSSAI also suspended licences at Sukhdarshan Pharma and Bala Ji Food Products for hygiene and safety violations.",
+      "What does this mean?",
+      "India’s food regulator is no longer limiting scrutiny to small eateries or warehouse raids. Large FMCG brands now face the same label-by-label checks on what appears on the pack, in the ad, and on the app tile. When front-of-pack category words disagree with the legal product class, companies risk notices even if the ingredient list is unchanged. Health and medical positioning draws tighter review after FSSAI’s rules on nutrient claims and special foods. E-commerce marketplaces are treated as part of the advertising chain, so inconsistent product descriptions can trigger action alongside the manufacturer. The Horlicks notices show regulators pushing back on bone and pregnancy claims that go beyond what evidence filings support. Compliance teams will need to reconcile creative copy with approved nutrition panels before festive campaigns scale.",
+      "Why should I care?",
+      "If you buy nutrition drinks or chilled coffee online, compare the pack photo with the legal product name in the fine print before checkout. Shoppers should expect more delistings or label refreshes on apps when regulators spot mismatches. Investors in listed FMCG names should watch whether notices turn into penalties, product recalls, or simply paperwork delays. The pattern matches FSSAI’s wider October push on infant sugars, front-of-pack warnings, and state-level food safety cases. Track company responses, any court challenges, and whether retailers pause affected SKUs during Diwali stocking.",
+    ],
+  },
+  {
+    slug: "hero-motocorp-xtreme-premium-october-2026",
+    title: "Hero MotoCorp refreshed its Xtreme bikes with cruise control and a quickshifter",
+    summary:
+      "On 17 October 2026, Hero MotoCorp launched updated Xtreme 160R 4V and Xtreme 250R models with cruise control, a bi-directional quickshifter on the larger bike, and introductory prices from ₹1.27 lakh and ₹1.98 lakh ex-showroom Delhi.",
+    category: "industry",
+    companyOrSector: "Autos / two-wheelers",
+    publishedAt: "2026-10-17T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hero-motocorp-xtreme-premium-october-2026"),
+    keyTakeaways: [
+      "Xtreme 160R 4V starts at ₹1.27 lakh with Standard, Pro, and Carbon trims; bookings opened 17 October with deliveries from 1 November.",
+      "Refreshed Xtreme 250R is priced from ₹1.98 lakh and adds Hero’s first sensorless bi-directional quickshifter for clutchless shifts.",
+      "Hero said premiumisation is a core growth lever and will sell the 250R through Premia dealerships while widening 160R availability.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, Hero MotoCorp unveiled the Xtreme 160R 4V and a refreshed Xtreme 250R aimed at buyers who want sportier commuter and entry-premium motorcycles. The 160R 4V carries a four-valve 150cc engine, updated braking, and cruise control, with introductory ex-showroom Delhi prices of ₹1.27 lakh for the Standard trim, ₹1.37 lakh for Pro, and ₹1.41 lakh for Carbon. The 250R refresh is listed from ₹1.98 lakh, with a lower XTREME 250R variant at ₹1.84 lakh. Hero added more than 50 fit-and-finish tweaks on the 250R, including braided cables and a new swingarm cover, plus cruise control and a sensorless bi-directional quickshifter that allows upshifts and downshifts without clutch use. Bookings opened the same day; deliveries are scheduled from 1 November 2026. Chief business officer for the premium segment Anuj Dua told reporters that premiumisation remains a major growth opportunity and that the Xtreme family is central to that plan.",
+      "What does this mean?",
+      "Indian two-wheeler demand is splitting between price-sensitive commuters and riders willing to pay for features once reserved for larger bikes. Cruise control and quickshifters signal that Hero is chasing the same upgrade path as rivals in the 200cc-plus bracket, not only chasing volume on bare-bones 100cc models. Selling the 250R through Premia outlets while keeping wider 160R availability lets the company test higher-touch retail without moving the entire network upscale. The price ladder places Hero near other premium commuters launched this festive season, including strong hybrids and refreshed sport nakeds. For the industry, it is another data point that festival demand is pulling buyers toward better-spec machines, echoing sharp online order growth other OEMs reported earlier in October.",
+      "Why should I care?",
+      "If you are shopping for a daily rider with weekend highway use, compare on-road prices in your city, service intervals, and warranty on electronic rider aids before paying for Carbon or quickshifter trims. Test rides should cover low-speed traffic behaviour because cruise and quickshifter systems feel different from basic commuter bikes. Investors tracking Hero should watch initial registration data after 1 November and whether Premia outlets lift average selling prices without hurting mass-market share. Also watch finance offers during Diwali and how Yamaha, TVS, and Bajaj respond on feature lists in the same price bands.",
+    ],
+  },
+  {
+    slug: "canada-fertiliser-potash-india-trade-october-2026",
+    title: "Canada pitched more fertiliser and potash exports as India targets a 2026 trade pact",
+    summary:
+      "On 17 October 2026, Canada’s trade minister said Ottawa sees room to ship more fertiliser and potash to India, linking the pitch to Fairfax’s IDBI stake plan as both governments aim to finish a comprehensive economic partnership agreement by end-2026.",
+    category: "industry",
+    companyOrSector: "Agriculture / trade",
+    publishedAt: "2026-10-17T20:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("canada-fertiliser-potash-india-trade-october-2026"),
+    keyTakeaways: [
+      "Canadian minister Maninder Sidhu named fertiliser and potash supplies as cooperation areas that could lift Indian farm productivity.",
+      "He tied deeper engagement to Fairfax’s approved plan to buy a majority stake in IDBI Bank, calling it a flagship cross-border financial deal.",
+      "India and Canada signed commercial MOUs on 17 October while reaffirming a CEPA target by December 2026; the next negotiating round is set for early November in New Delhi.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, reporting on India–Canada trade talks quoted Canadian Minister of International Trade Maninder Sidhu saying Ottawa wants to expand fertiliser and potash exports to India. Sidhu framed the supplies as support for agricultural productivity while both countries work toward a Comprehensive Economic Partnership Agreement by the end of 2026. He also highlighted Fairfax Financial Holdings’ proposed acquisition of a 60.7% stake in IDBI Bank, which Indian authorities approved earlier in the week, as a signal that Canada is ready for deeper supply-chain and financial ties. Indian and Canadian entities signed several commercial agreements and memoranda of understanding the same day. Negotiators held a fifth CEPA round in Ottawa from 5 to 9 October covering goods, services, investment, rules of origin, intellectual property, and trade remedies. The next round is scheduled in New Delhi in early November. Government estimates cited in coverage suggest a deal could add several billion dollars to bilateral trade over the next decade.",
+      "What does this mean?",
+      "Farm input costs move with global potash and fertiliser prices and with how smoothly cargo clears ports. A trade pact that lowers friction on Canadian nutrients could give Indian importers more predictable supply, especially when domestic demand spikes before planting seasons. Linking the story to Fairfax’s IDBI transaction shows Ottawa bundling financial and commodity diplomacy after a rocky political period between the capitals. For fertiliser companies and cooperatives, the near-term change is still negotiation text, not new shipments, but the public positioning matters for long-term sourcing contracts. If CEPA talks advance in November, watch whether agriculture market access and investment rules appear alongside nutrient supply commitments.",
+      "Why should I care?",
+      "If you farm or buy inputs for an agribusiness, track landed potash prices and whether Indian importers diversify away from single-country dependence when Canada markets more volume. Households feel this indirectly through food prices if nutrient costs ease or spike during rabi planning. Investors in fertiliser retailers or port logistics should monitor CEPA headlines after the New Delhi round and any tariff changes on crop nutrients. Policy watchers should compare this channel with India’s other potash suppliers and with domestic urea subsidy politics, which still dominate farmer cash outlays.",
+    ],
+  },
+  {
     slug: "fssai-infant-added-sugars-ban-october-2026",
     title: "India’s food regulator wants to ban added sugars in infant foods up to six months",
     summary:
@@ -3086,6 +3158,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fssai-nestle-hul-misleading-claims-october-2026": "policy",
+  "hero-motocorp-xtreme-premium-october-2026": "companies",
+  "canada-fertiliser-potash-india-trade-october-2026": "policy",
   "fssai-infant-added-sugars-ban-october-2026": "policy",
   "maharashtra-fda-blinkit-reliance-expired-food-october-2026": "policy",
   "jio-platforms-ipo-reserved-quotas-october-2026": "markets",
