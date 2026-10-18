@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hdfc-bank-bharucha-resignation-october-2026",
+    title: "HDFC Bank’s deputy managing director will leave after the RBI picked someone else as CEO",
+    summary:
+      "Kaizad Bharucha, a founding-era executive at HDFC Bank, has asked to step down as deputy managing director effective 31 December 2026, weeks after the Reserve Bank of India approved Anup Bagchi to succeed Sashidhar Jagdishan as managing director and chief executive.",
+    category: "industry",
+    companyOrSector: "Banking / leadership",
+    publishedAt: "2026-10-18T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hdfc-bank-bharucha-resignation-october-2026"),
+    keyTakeaways: [
+      "Bharucha was one of two internal names HDFC Bank submitted to the RBI for the CEO role; the central bank approved Anup Bagchi instead.",
+      "The bank said Bharucha’s candidacy ran into RBI rules that cap continuous tenure as managing director, chief executive, or whole-time director at 15 years.",
+      "The board accepted his resignation request and will seek RBI approval for his exit by year-end.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 18 October 2026 said HDFC Bank deputy managing director Kaizad Bharucha has sought to resign effective 31 December 2026. Bharucha joined the lender in its early years and has overseen large parts of retail and wholesale banking. The bank had submitted two internal candidates to the Reserve Bank of India to replace managing director and chief executive Sashidhar Jagdishan. The RBI approved Anup Bagchi for the top job in the same month. Bharucha was the other shortlisted insider. The bank told exchanges his CEO candidacy faced a tenure constraint under central bank rules that limit how long one person can serve continuously as managing director, chief executive, or whole-time director, typically at 15 years. The board accepted his resignation and will forward it to the RBI for sign-off.",
+      "What does this mean?",
+      "India’s largest private bank by balance sheet size depends on a small bench of long-tenured executives who understand its merged HDFC Ltd franchise. RBI approval is not a rubber stamp: tenure caps are meant to refresh leadership and reduce concentration risk in key decision makers. When an internal favourite cannot take the CEO chair because of those clocks, the bank loses a deputy who still holds operating knowledge even if the new CEO is also a veteran. For branches and corporate clients, products and rates rarely flip overnight, but succession gaps at the top can slow big technology or risk projects while roles are reshuffled.",
+      "Why should I care?",
+      "If you bank with HDFC or hold its shares, watch who fills Bharucha’s portfolio and whether Bagchi names a new deputy bench by the December exit date. Depositors should still treat balances as insured under existing rules, but service quality during leadership transitions is worth monitoring if you rely on relationship managers for large loans. Investors often price Indian private banks on stability of the top team; another senior exit after a bruising year for the stock raises questions about how quickly the post-merger integration story can be retold under fresh leadership.",
+    ],
+  },
+  {
+    slug: "family-offices-pilgrimage-hotels-october-2026",
+    title: "Family offices are backing branded hotels around India’s big pilgrimage towns",
+    summary:
+      "Reporting on 18 October 2026 said wealthy families have committed close to ₹2,000 crore over the past 12–18 months to hospitality assets near major religious destinations, from Udupi and Mathura to Deoghar and Salasar Balaji, as operators chase organised stays for faith travellers.",
+    category: "industry",
+    companyOrSector: "Hospitality / consumption",
+    publishedAt: "2026-10-18T10:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("family-offices-pilgrimage-hotels-october-2026"),
+    keyTakeaways: [
+      "Advisers cited deals such as a Mumbai family office buying an upscale Udupi hotel and RR Kabel investing near Salasar Balaji.",
+      "Noesis Hotel Advisors estimated roughly ₹2,000 crore of family-office capital targeting branded properties around key pilgrimage centres in the last year and a half.",
+      "Operators are pitching mid-scale and upscale rooms to devotees who previously relied on dharamshalas or unorganised lodges.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, reporting from Mumbai described a wave of family-office money flowing into hotels around India’s busiest pilgrimage circuits. Examples in the coverage included a Mumbai-based family office acquiring a nearly completed upscale property in Udupi and cable maker RR Kabel backing hospitality near Salasar Balaji in Rajasthan. Similar interest showed up around Mathura, Deoghar, and parts of Saurashtra, according to hotel advisers quoted in the story. Noesis Hotel Advisors estimated that close to ₹2,000 crore has been committed across these religious destinations over the past 12 to 18 months. The pitch is simple: millions of devotees travel each year, festivals create predictable spikes, and many towns still lack enough clean, branded rooms with online booking and consistent service standards.",
+      "What does this mean?",
+      "Religious tourism is not new, but the capital source is shifting from local hoteliers and public-sector tourism corporations toward private family wealth that wants long-dated real assets. Branded operators can standardise safety, air conditioning, and digital payments in markets where travellers once accepted basic lodges. That can lift average room rates and length of stay when families upgrade from same-day visits to overnight trips. For cable, manufacturing, and trading dynasties, a hotel near a shrine is also a way to diversify without leaving sectors they understand, such as construction supply or local retail tie-ups. The risk is oversupply if every town sees the same festival calendar story and multiple upscale keys open in the same two-year window.",
+      "Why should I care?",
+      "If you operate a consumer brand, pilgrimage routes are becoming structured retail corridors where organised hotels, food chains, and transport apps can reach middle-income travellers. Job seekers in hospitality may find more general-manager roles outside metro airports. Investors in listed hotel chains should watch whether private family capital competes on acquisitions or becomes a partner on management contracts. Travellers planning temple trips can expect more branded options, but compare festival-week pricing early because new supply often launches with promotional rates before settling higher.",
+    ],
+  },
+  {
+    slug: "idbi-union-hunger-strike-privatisation-october-2026",
+    title: "IDBI Bank unions will hunger strike on 2–3 November over the Fairfax sale",
+    summary:
+      "On 18 October 2026, the United Forum of IDBI Officers and Employees called a two-day nationwide hunger strike on 2 and 3 November 2026 to protest the government’s plan to sell a majority stake in IDBI Bank to Fairfax Financial Holdings, demanding the Centre retain at least 51% ownership and written job protections.",
+    category: "industry",
+    companyOrSector: "Banking / privatisation",
+    publishedAt: "2026-10-18T09:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("idbi-union-hunger-strike-privatisation-october-2026"),
+    keyTakeaways: [
+      "Unions set a hunger strike for 2–3 November 2026 at branches and offices nationwide against the Fairfax-led privatisation.",
+      "They want the government to buy enough shares from LIC or the market to keep at least 51% public ownership, citing 2003 parliamentary assurances.",
+      "The forum also demanded statutory guarantees on service conditions, pensions, reservations, and the public-sector character of jobs.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, the United Forum of IDBI Officers and Employees, combining the All India IDBI Officers’ Association and the All India Industrial Development Bank Employees’ Association, issued notice of a two-day nationwide hunger strike on 2 and 3 November 2026. The target is the Centre’s approved sale of a 60.72% stake in IDBI Bank to Canada’s Fairfax Financial Holdings, a transaction valued at about ₹52,878 crore that the Cabinet Committee on Economic Affairs cleared on 14 October 2026. Union convenors demanded that the government purchase at least an additional 6% stake, either from Life Insurance Corporation or in the open market, so combined public ownership stays at or above 51%, referencing assurances they say were given in Parliament in December 2003. They also sought written statutory protection for existing service rules, welfare benefits, pensions, and reservation policies, and vowed to defend the public-sector character of employment. The notice warned of longer strikes, including an indefinite stoppage, if demands are ignored.",
+      "What does this mean?",
+      "Strategic sales in Indian banking rarely close quietly when unions still identify as public-sector workers. Fairfax has management control in the approved structure, while the government and LIC together retain 34%, so employees fear pension and promotion rules could shift toward private-sector norms. Hunger strikes are a high-visibility tactic meant to pull the finance ministry back to the negotiating table before share transfer agreements are signed. For Fairfax and regulators, labour peace is a practical condition for integrating CSB Bank, which the buyer is expected to merge into IDBI within two years. Depositors usually see service continuity during strikes, but branch counters can face delays if agitation widens beyond the initial two days.",
+      "Why should I care?",
+      "If you work at IDBI or hold its shares, track whether the government offers a formal employee charter as part of the share purchase agreement. Borrowers and MSME clients should keep alternate payment channels ready around early November in case branch operations slow. Policy watchers will read this as a test of how aggressively Delhi will push remaining PSU bank sales after the largest cross-border banking deal cleared cabinet. Investors in Fairfax or LIC should monitor whether strike action delays RBI fit-and-proper approvals or the open offer timeline.",
+    ],
+  },
+  {
     slug: "sbi-fd-maturity-consumer-order-october-2026",
     title: "A Hyderabad forum ordered SBI to repay a senior citizen’s fixed deposit with interest",
     summary:
@@ -3230,6 +3302,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hdfc-bank-bharucha-resignation-october-2026": "companies",
+  "family-offices-pilgrimage-hotels-october-2026": "markets",
+  "idbi-union-hunger-strike-privatisation-october-2026": "policy",
   "sbi-fd-maturity-consumer-order-october-2026": "policy",
   "fssai-priyagold-cattle-feed-bran-october-2026": "policy",
   "india-us-trade-preferential-treatment-october-2026": "policy",

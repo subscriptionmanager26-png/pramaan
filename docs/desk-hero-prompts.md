@@ -632,6 +632,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Abstract bilateral architecture |
 | Metaphor left | Tariff steps narrowing to preferential lane |
 
+### `idbi-union-hunger-strike-privatisation-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Employee unions resist strategic sale timeline |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Paused handshake / November calendar blocks |
+
+### `family-offices-pilgrimage-hotels-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Faith tourism draws private capital into branded stays |
+| Subject right | Pilgrimage town skyline |
+| Metaphor left | Route chevrons feeding hotel keys |
+
+### `hdfc-bank-bharucha-resignation-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | RBI tenure rules shape who can run the bank |
+| Subject right | Generic bank facade |
+| Metaphor left | Tenure ladder with top step blocked |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
