@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fmcg-post-diwali-price-hikes-october-2026",
+    title: "Packaged food makers may raise prices after Diwali as palm oil and sugar stay costly",
+    summary:
+      "Reporting on 18 October 2026 said large FMCG companies face margin pressure in the second half of FY27 as palm oil, sugar, and packaging costs climb, with many brands absorbing part of the hit so far but considering list-price increases once the festive season ends.",
+    category: "industry",
+    companyOrSector: "FMCG / retail prices",
+    publishedAt: "2026-10-18T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fmcg-post-diwali-price-hikes-october-2026"),
+    keyTakeaways: [
+      "Industry commentary cited palm oil roughly 21% higher year on year in September and sugar still about 18% above prior-year levels.",
+      "Analyst estimates pointed to operating-margin compression of about 45 basis points across major staples names, with some firms facing up to 150 basis points.",
+      "Manufacturers in mass-market and rural segments have limited room to pass costs through immediately without hurting volumes.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, trade press said fast-moving consumer goods companies expect a tougher profit backdrop in the second half of fiscal 2027 as input costs re-accelerate. Palm oil, sugar, crude-linked packaging materials, and freight have all moved up after a brief easing earlier in the year. Grant Thornton Bharat’s consumer practice lead Naveen Malpani told reporters that higher costs have not been fully offset by price hikes or efficiency drives, squeezing operating margins. Pre-results estimates for a basket of large staples names pointed to margin compression of roughly 45 basis points year on year, with some companies facing declines of up to 150 basis points. Many firms have absorbed part of the inflation through procurement tweaks and cost controls rather than lifting maximum retail prices ahead of Diwali, when shoppers are sensitive to small rupee changes on biscuits, soaps, and cooking oil.",
+      "What does this mean?",
+      "Kitchen inflation does not hit every brand on the same day. Large players with national distribution can stagger increases by pack size or region, while regional rivals may undercut on promo packs to protect shelf space. When palm and sugar stay elevated, the usual playbook is to wait until festive demand peaks, then reset prices on high-rotation SKUs. That timing matters for rural buyers who track ₹5 and ₹10 moves on daily staples. The same week brought strong volume updates from jewellery and apparel chains, which suggests middle-income wallets are still open for discretionary items even as commodity costs bite packaged food margins.",
+      "Why should I care?",
+      "If you stock up for the winter, compare unit prices on the packs you buy every month and watch whether post-Diwali MRP stickers appear on cooking oil, noodles, or snacks. Small shopkeepers should plan working capital for possible supplier price lists in November. Investors in listed consumer names should read margin guidance alongside volume growth, not just one strong festival quarter. Watch company commentary after Diwali, global palm and cocoa futures, and whether competitors match or delay hikes in mass-market categories.",
+    ],
+  },
+  {
+    slug: "oil-india-coal-bed-methane-singrauli-october-2026",
+    title: "Oil India signed a coal-bed methane contract for a 272 sq km block in Singrauli",
+    summary:
+      "On 18 October 2026 Oil India Ltd told exchanges it signed a revenue-sharing contract on 15 October for a special coal-bed methane block covering 272 sq km in the Singrauli coalfield, marking its return to unconventional gas exploration with seams expected around 600–800 metres deep.",
+    category: "industry",
+    companyOrSector: "Oil & gas / energy security",
+    publishedAt: "2026-10-18T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("oil-india-coal-bed-methane-singrauli-october-2026"),
+    keyTakeaways: [
+      "The revenue-sharing contract covers block SR-ONHP-(CBM)-2026/1 in Madhya Pradesh’s Singrauli coalfield region.",
+      "Oil India cited expected coal seams at 600–800 metre depths with average thickness near 40 metres.",
+      "Union petroleum minister Hardeep Singh Puri attended the signing ceremony alongside petroleum secretary Neeraj Mittal.",
+    ],
+    body: [
+      "What's going on here?",
+      "In a regulatory filing on 18 October 2026, state-owned Oil India Ltd said it signed a revenue-sharing contract on 15 October 2026 for a 272.14 square kilometre special coal-bed methane block in the Singrauli coalfield. Coal-bed methane is natural gas trapped in coal seams and can be produced domestically to supplement conventional fields and imported liquefied natural gas. Oil India described the award as a landmark return to CBM exploration after prior rounds, with geological work pointing to promising seams at depths of about 600 to 800 metres and average thickness near 40 metres. The signing was attended by petroleum and natural gas minister Hardeep Singh Puri, petroleum secretary Neeraj Mittal, and senior officials from the Directorate General of Hydrocarbons.",
+      "What does this mean?",
+      "India’s gas demand keeps rising for power, fertiliser, city gas, and industry, yet import bills swing with global prices and shipping routes. CBM blocks in coal-rich belts like Singrauli let a national explorer tap gas that might otherwise vent or stay unused while coal is mined nearby. Revenue-sharing contracts align the government take with production rather than fixed royalties alone, which is the same broad model used in other hydrocarbon auctions. Success still depends on drilling results, water handling, pipeline access, and how quickly gas can reach buyers in northern and central India. For Oil India, the block adds unconventional volume to a portfolio weighted toward Assam and overseas assets.",
+      "Why should I care?",
+      "If you follow energy policy, watch appraisal wells and any pipeline tie-in announcements over the next two years; CBM projects often move slowly from contract to commercial flow. Industrial users in the region may eventually see another domestic gas source if production scales. Investors in Oil India should treat the signing as a long-dated option, not near-term earnings. Compare progress with other unconventional rounds and with the company’s conventional exploration spend in the same fiscal year.",
+    ],
+  },
+  {
+    slug: "airtel-voice-only-prepaid-trai-october-2026",
+    title: "Airtel now sells voice-only prepaid plans from ₹185 after TRAI’s new rules",
+    summary:
+      "On 18 October 2026 reporting said Bharti Airtel became the first operator to list prepaid plans with unlimited calls and SMS but no mobile data, priced at ₹185, ₹203, and ₹206, following Telecom Regulatory Authority of India norms that require such offerings.",
+    category: "industry",
+    companyOrSector: "Telecom / consumer bills",
+    publishedAt: "2026-10-18T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airtel-voice-only-prepaid-trai-october-2026"),
+    keyTakeaways: [
+      "Three plans offer unlimited local, STD, and roaming voice plus 300 SMS, with validity of 28 days, 30 days, or one calendar month.",
+      "The entry ₹185 plan is live on Airtel’s app and website; rivals had not matched the voice-only packs in the same reports.",
+      "TRAI’s mandate aims to give customers who do not need data a cheaper prepaid option separate from bundled gigabytes.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, industry coverage said Bharti Airtel listed India's first voice-and-SMS-only prepaid packs after new Telecom Regulatory Authority of India rules. The three plans cost ₹185, ₹203, and ₹206. Each includes unlimited local, STD, and roaming calls, 300 SMS, and free HelloTunes, but no bundled mobile data. The ₹185 plan runs 28 days, the ₹203 plan runs 30 days, and the ₹206 plan renews on the same calendar date each month. Listings appeared on Airtel’s app and website. Sources quoted in the story said other operators had not yet launched equivalent voice-only tariffs at the time of reporting.",
+      "What does this mean?",
+      "Most prepaid recharge marketing in recent years pushed data buckets because smartphone usage dominates revenue. Regulators still hear from users who mainly call and text, especially on secondary SIMs or basic phones, and who do not want to pay for unused gigabytes. A mandated voice-only shelf gives those customers a visible price point and makes it easier to compare operators on talk time rather than on ₹-per-GB maths. For Airtel, launching first can capture press and shopkeeper mindshare, though rivals may undercut quickly once their product teams file tariffs. The move sits alongside other October telecom stories, including postpaid price increases, showing carriers adjusting both premium and entry segments.",
+      "Why should I care?",
+      "If you or family members use prepaid mainly for calls, check whether a voice-only plan beats your current combo pack once you strip out unused data. Compare the 28-day and calendar-month options if your recharge date matters for budgeting. Retailers should update tariff charts at recharge counters so staff can explain the no-data plans. Watch whether Jio and Vi publish matching voice-only tariffs and whether TRAI monitors compliance on SMS and roaming terms in the fine print.",
+    ],
+  },
+  {
+    slug: "bank-farm-loans-cautious-rural-october-2026",
+    title: "Several banks are shrinking farm loan books as rural rainfall worries mount",
+    summary:
+      "Reporting on 18 October 2026 said agriculture and rural lending lost share in many banks’ loan books in the September quarter of FY27, with lenders including RBL Bank and Federal Bank pulling back while deficient rainfall and El Niño risks make farm credit harder to underwrite.",
+    category: "industry",
+    companyOrSector: "Banking / rural credit",
+    publishedAt: "2026-10-18T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bank-farm-loans-cautious-rural-october-2026"),
+    keyTakeaways: [
+      "RBL Bank’s agricultural loan book fell about 12% year on year to ₹1,367 crore in Q2 FY27, cutting the segment’s share of advances to 0.96% from 1.54%.",
+      "Federal Bank reported a near 3% decline in agri loans to ₹8,065 crore, with the portfolio’s share of total advances down 50 basis points.",
+      "ICICI Bank’s farm book grew only 1.7% year on year to ₹32,333 crore, while Axis Bank and HDFC Bank were among lenders still expanding rural exposure.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, business press reviewed September-quarter results and found agriculture and rural lending losing share at several lenders. RBL Bank’s farm loan book shrank about 12% year on year to ₹1,367 crore in the second quarter of fiscal 2027, dropping the segment to 0.96% of total advances from 1.54% a year earlier. Federal Bank’s agricultural loans fell nearly 3% to ₹8,065 crore, reducing the share of overall advances by about 50 basis points. ICICI Bank’s agriculture portfolio grew just 1.7% to ₹32,333 crore, a muted pace compared with overall credit growth. Axis Bank and HDFC Bank were exceptions, with farm books expanding about 20% and 6.5% respectively in the same reports. Federal Bank chief executive KVS Manian told analysts the lender had not pushed growth in agriculture and would stay watchful on rainfall outcomes, geopolitics, rates, and inflation.",
+      "What does this mean?",
+      "Farm credit is not a single market. Well-irrigated districts with diversified crops behave differently from rain-fed blocks where one weak monsoon can delay repayments. When lenders see deficient rainfall headlines and talk of El Niño effects, credit committees often tighten scorecards, shorten tenors, or shift focus to secured warehouse and dairy flows rather than fresh crop loans. That shows up as slower growth even when headline GDP looks steady. Borrowers in stressed pockets may face higher collateral demands or rely more on cooperative societies and NBFCs that specialize in rural collections. Policy schemes still exist, but commercial banks vote with their balance sheets quarter by quarter.",
+      "Why should I care?",
+      "If you farm or run a rural small business, shop early for pre-season finance and compare terms across banks, NBFCs, and cooperative channels; a branch that chased agri growth last year may be selective today. Input dealers should watch whether tighter credit slows fertilizer and seed purchases after the festival season. Investors in bank stocks should read agri growth as a risk dial, not just a social mandate. Track monsoon updates, state crop-loan waiver chatter, and whether the cautious lenders re-accelerate once rainfall data firms up.",
+    ],
+  },
+  {
     slug: "dlf-luxury-housing-pipeline-october-2026",
     title: "DLF plans ₹58,000 crore of new luxury homes in Delhi-NCR and Mumbai",
     summary:
@@ -3398,6 +3494,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fmcg-post-diwali-price-hikes-october-2026": "markets",
+  "oil-india-coal-bed-methane-singrauli-october-2026": "policy",
+  "airtel-voice-only-prepaid-trai-october-2026": "policy",
+  "bank-farm-loans-cautious-rural-october-2026": "policy",
   "dlf-luxury-housing-pipeline-october-2026": "markets",
   "jewellery-retailers-q2-growth-october-2026": "markets",
   "apple-pay-india-axis-bank-october-2026": "companies",
