@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sbi-fd-maturity-consumer-order-october-2026",
+    title: "A Hyderabad forum ordered SBI to repay a senior citizen’s fixed deposit with interest",
+    summary:
+      "On 7 October 2026, the Hyderabad district consumer disputes commission directed State Bank of India to return a retired scientist’s ₹15 lakh fixed deposit with 8.5% interest through maturity and pay compensation after the bank failed to alert him when the five-year receipt matured in December 2023.",
+    category: "industry",
+    companyOrSector: "Banking / consumer protection",
+    publishedAt: "2026-10-18T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-fd-maturity-consumer-order-october-2026"),
+    keyTakeaways: [
+      "The complainant parked ₹15 lakh from retirement benefits in a five-year fixed deposit at 8.5% under the senior citizen savings scheme in December 2018.",
+      "SBI neither credited his savings account nor clearly renewed the deposit when it matured on 12 December 2023; his online view later showed a 2028 maturity date at 0% interest.",
+      "The commission ordered repayment with contractual interest, savings-rate interest until payment, ₹25,000 compensation, and ₹10,000 in litigation costs.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 7 October 2026, the Hyderabad district consumer disputes redressal commission ruled against State Bank of India in a case brought by a retired scientist who invested ₹15 lakh in a fixed deposit receipt in December 2018. The deposit carried an 8.5% annual rate under the senior citizen savings scheme and was due to mature on 12 December 2023 with an option to extend for another five years. The complainant said the bank never told him the receipt had matured and did not move the principal into his savings account. When he checked SBI’s online portal later, it showed a new maturity date of 12 December 2028 with zero per cent interest. He approached the branch and was told the scheme is government-run and that no interest accrued after maturity, even though the cash had not been returned. SBI argued it could retain the balance without fresh instructions and blamed the portal display on a technical glitch. The commission found deficiency in service and ordered SBI to repay the principal with 8.5% interest until the contractual maturity date, pay savings-deposit interest until actual repayment, and award ₹25,000 for mental agony plus ₹10,000 toward costs.",
+      "What does this mean?",
+      "Fixed deposits still anchor many retirement plans in India because the rate is locked and the product feels simple. The case shows what happens when maturity passes without a clear bank message or an automatic credit to a savings account. Senior citizen schemes have government rules on renewal and interest, but customers still depend on branch alerts, SMS, or accurate online statements to act within renewal windows. A wrong screen that shows zero interest and a distant maturity date can leave a depositor assuming money is still earning when it is not. Consumer forums treat that confusion as the bank’s service failure, not only the depositor’s duty to track dates on a passbook.",
+      "Why should I care?",
+      "If you hold maturing fixed deposits, set your own calendar reminder a month before the date and confirm where the principal lands on maturity day. Ask the branch whether renewal is automatic or needs a fresh form, especially for government-linked senior products. Keep screenshots if the net-banking view disagrees with your receipt. Savers at any bank should treat portal glitches as a reason to call the branch, not as proof the money is safely reinvested. Investors in lenders should note that retail service lapses can become legal payouts even when the underlying scheme rules are complex.",
+    ],
+  },
+  {
+    slug: "fssai-priyagold-cattle-feed-bran-october-2026",
+    title: "FSSAI is prosecuting Priyagold’s maker for using cattle-feed bran in biscuits",
+    summary:
+      "On 17 October 2026, the Food Safety and Standards Authority of India said inspections found bran meant for cattle feed in Priyagold biscuit production and initiated prosecution against Surya Food & Agro after earlier suspending the company’s licence.",
+    category: "industry",
+    companyOrSector: "Food policy / packaged snacks",
+    publishedAt: "2026-10-18T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-priyagold-cattle-feed-bran-october-2026"),
+    keyTakeaways: [
+      "FSSAI said bran designated for cattle feed, not human consumption, was used as a fibre source in Priyagold biscuit manufacturing.",
+      "Inspectors also flagged hygiene, maintenance, and handling of intermediate mixes at the site, after which the regulator had already suspended Surya Food & Agro’s licence.",
+      "The same enforcement push included prosecution over substandard Dodla Dairy full-cream milk and pesticide residues in UEIR Organic Foods raisins.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, the Food Safety and Standards Authority of India posted that it has begun prosecution against Surya Food & Agro, the company behind Priyagold biscuits, following inspections that found serious compliance gaps. Regulators said bran intended for cattle feed and not labelled for human use was being used as a raw material in biscuit production as a source of fibre. The visit also raised concerns about hygiene, upkeep of the premises, and how semi-finished mixes were stored and handled. FSSAI had already suspended the firm’s licence after those non-compliances surfaced. In parallel announcements the same day, the authority said it sanctioned prosecution against Dodla Dairy after referral-lab tests confirmed detergent or caustic soda in a full-cream milk sample that also fell short on milk fat, and against UEIR Organic Foods after pesticide residues showed up in yellow raisins.",
+      "What does this mean?",
+      "Packaged biscuits sit in millions of school bags and office pantries, so regulators treat fibre claims and ingredient sourcing as safety issues, not just marketing. Animal-feed grade inputs carry different contamination and handling rules than food-grade wheat bran. When auditors find that line crossed, the response escalates from licence suspension to court-backed prosecution. The Dodla and raisin cases show the same enforcement wave is testing liquid dairy and dried fruit imports, not only salty snacks. For grocers and distributors, suspended licences can force sudden delistings until courts or fresh audits clear a plant.",
+      "Why should I care?",
+      "If you buy Priyagold or other Surya Food brands, watch store shelves and company statements for recalls or reformulation notices while the case moves. Parents packing biscuits for children may prefer brands with recent clean audit disclosures during this enforcement cycle. Retailers should verify supplier licences before festive bulk orders. Investors in listed FMCG names should read these actions as part of FSSAI’s wider October push on labels, infant foods, and state-level warehouse raids, not as an isolated biscuit headline.",
+    ],
+  },
+  {
+    slug: "india-us-trade-preferential-treatment-october-2026",
+    title: "India says it will not sign a US trade deal without preferential treatment",
+    summary:
+      "On 17 October 2026, former diplomat Veena Sikri told reporters New Delhi will withhold a bilateral trade pact until Washington offers preferential access, as US Secretary of State Marco Rubio prepared a Mumbai and Jamnagar trip focused on energy and investment ties.",
+    category: "industry",
+    companyOrSector: "Trade policy / India-US",
+    publishedAt: "2026-10-18T04:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-us-trade-preferential-treatment-october-2026"),
+    keyTakeaways: [
+      "Sikri said India is watching tariff and energy diplomacy closely and will not close a trade deal without the preferential treatment Indian negotiators have demanded.",
+      "Rubio is scheduled to visit Mumbai and Jamnagar from 18 October, with External Affairs Minister S. Jaishankar hosting talks on 20 October alongside US independence anniversary events.",
+      "Washington has linked energy cooperation to large Indian investments, including Reliance Industries’ planned refinery project at Port of Brownsville, Texas, announced in March 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, former Indian ambassador Veena Sikri told ANI that New Delhi will not sign a trade agreement with the United States unless the text grants India the preferential market access negotiators have been seeking. Her comments landed as the US State Department confirmed Secretary of State Marco Rubio will travel to India from 18 October, with stops in Mumbai and Jamnagar as well as meetings on energy, trade, investment, and regional security. External Affairs Minister S. Jaishankar is set to host Rubio in Mumbai on 20 October during celebrations marking the 250th anniversary of US independence. Ministry briefings said Jaishankar will also meet UAE Foreign Minister Abdullah bin Zayed Al Nahyan on 19 and 20 October to review energy, trade, and West Asia developments. Sikri tied Rubio’s Gujarat refinery visit to Reliance Industries’ March 2026 announcement of a large downstream investment in Texas, while noting parallel US moves on Russian oil sanctions and domestic fuel prices ahead of American elections.",
+      "What does this mean?",
+      "Trade deals move when both sides can sell concessions at home. India’s public line that preferential treatment is non-negotiable sets a high bar for any quick signing ceremony during Rubio’s visit. Energy ties offer a separate track: refinery partnerships and LNG discussions can advance even while tariff chapters stall. For importers and exporters, the practical near-term lever is still duty levels and quota windows, not diplomatic headlines. If negotiators bridge the preferential-access gap, sectors from textiles to engineering goods could see clearer US entry rules, but companies should plan around existing tariffs until text is published.",
+      "Why should I care?",
+      "If your business ships to the United States or competes with American imports, track whether any Mumbai announcements change actual duty lines or only framework language. Households feel trade politics indirectly through fuel, electronics, and farm input prices linked to energy cooperation. Investors should separate refinery and defence deals, which can close on their own timelines, from a comprehensive trade pact that may wait on election calendars in both countries. Watch the Jaishankar-Rubio readout after 20 October and any Indian commerce ministry follow-up on preferential access items.",
+    ],
+  },
+  {
     slug: "fssai-nestle-hul-misleading-claims-october-2026",
     title: "FSSAI sent Nestlé and Hindustan Unilever notices over pack and ad claims",
     summary:
@@ -3158,6 +3230,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sbi-fd-maturity-consumer-order-october-2026": "policy",
+  "fssai-priyagold-cattle-feed-bran-october-2026": "policy",
+  "india-us-trade-preferential-treatment-october-2026": "policy",
   "fssai-nestle-hul-misleading-claims-october-2026": "policy",
   "hero-motocorp-xtreme-premium-october-2026": "companies",
   "canada-fertiliser-potash-india-trade-october-2026": "policy",

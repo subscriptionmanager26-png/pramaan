@@ -608,6 +608,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Fuel pump silhouette |
 | Metaphor left | Ascending bars on highway ribbon |
 
+### `sbi-fd-maturity-consumer-order-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Silent maturity costs depositor interest |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Calendar blocks + broken alert bell |
+
+### `fssai-priyagold-cattle-feed-bran-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Animal-feed grade input crossed into human snacks |
+| Subject right | Biscuit pack / warehouse shelf |
+| Metaphor left | Cattle-feed sack blocked from food lane |
+
+### `india-us-trade-preferential-treatment-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Trade pact waits on preferential US access |
+| Subject right | Abstract bilateral architecture |
+| Metaphor left | Tariff steps narrowing to preferential lane |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
