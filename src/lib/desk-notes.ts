@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "dlf-luxury-housing-pipeline-october-2026",
+    title: "DLF plans ₹58,000 crore of new luxury homes in Delhi-NCR and Mumbai",
+    summary:
+      "On 18 October 2026, India’s largest listed developer said it will launch about 24 million square feet of housing with sales potential above ₹58,000 crore over the next two to three years, riding demand for high-end projects after selling out a Gurugram senior-living block for nearly ₹2,000 crore in the September quarter.",
+    category: "industry",
+    companyOrSector: "Real estate / consumption",
+    publishedAt: "2026-10-18T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dlf-luxury-housing-pipeline-october-2026"),
+    keyTakeaways: [
+      "DLF told investors it still has a ₹58,000 crore-plus launch pipeline after bringing 14 million sq ft to market in the past two and a half years.",
+      "Managing director Aakash Ohri flagged luxury launches in Mumbai and Gurugram in the second half of FY27, including projects already seeing sharp price appreciation.",
+      "The firm sold properties worth ₹4,457 crore in the first half of FY27 and fully sold a 172-unit senior living project in Gurugram for ₹1,985 crore in Q2.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 18 October 2026 said DLF Ltd, India’s biggest realty company by market value, will roll out roughly 24 million square feet of residential space over the next two to three years with an estimated sales value above ₹58,000 crore. That pipeline sits on top of 14 million square feet already launched since early FY25 with revenue potential of more than ₹56,000 crore. On an analyst call, DLF Home Developers managing director Aakash Ohri said the company is preparing luxury launches in Mumbai and Gurugram in the second half of the current fiscal. In the September quarter it opened a 4.17-acre senior living project, The Aureva, in Gurugram with 172 homes; every unit sold for a combined ₹1,985 crore. Ohri also cited strong absorption at the super-luxury Dahlias project in Gurugram, where about 275 of 420 flats and penthouses had sold by September and a 17,200 square foot penthouse changed hands for ₹271 crore in August.",
+      "What does this mean?",
+      "Luxury housing in India’s top cities is behaving less like a cyclical trade and more like a scarcity play for wealthy end users and investors who want large formats, branded amenities, and locations with limited new land. DLF’s numbers show buyers willing to commit large sums upfront even as mortgage rates stay elevated, which supports the company’s decision to front-load launches in the National Capital Region and Mumbai rather than wait for a broader middle-income recovery. Senior living and ultra-premium towers also diversify the customer base beyond traditional family apartments. The risk is concentration: if sentiment in Gurugram or Bandra-Kurla softens, a ₹58,000 crore pipeline cannot be repriced quickly without hurting brand perception.",
+      "Why should I care?",
+      "If you are shopping for a home in these cities, compare launch prices with recent resale prints in the same micro-markets; DLF’s own commentary points to sharp appreciation at Dahlias over two years. Cement, tile, and home-loan distributors should watch whether other developers follow with similar luxury inventory or stay in affordable segments. Investors in real estate stocks should track DLF’s launch calendar against its ₹4,457 crore sales in the first half of FY27 and whether Mumbai entries diversify revenue away from Gurugram. Policy watchers should note that demand at this price point is less sensitive to small rate tweaks but still reacts to stamp-duty changes and approval delays.",
+    ],
+  },
+  {
+    slug: "jewellery-retailers-q2-growth-october-2026",
+    title: "Listed jewellers grew sales about a quarter in Q2 even with Navratri shifting later",
+    summary:
+      "Business updates filed around 18 October 2026 showed leading jewellery chains posting roughly 22% to 28% revenue growth in the July–September quarter, with Kalyan Jewellers citing about 27% growth in India and strong same-store sales despite Navratri moving into the December quarter this year.",
+    category: "industry",
+    companyOrSector: "Retail / consumption",
+    publishedAt: "2026-10-18T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jewellery-retailers-q2-growth-october-2026"),
+    keyTakeaways: [
+      "Kalyan Jewellers reported about 27% revenue growth in India and roughly 20% same-store sales growth in Q2 FY27.",
+      "Peers including Titan, P N Gadgil Jewellers, and PC Jeweller also posted double-digit revenue increases in quarterly updates.",
+      "Management commentary treated the festive calendar shift as a timing issue, not a demand break, ahead of the main wedding season.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, exchange filings and business updates from major jewellery retailers showed double-digit revenue growth in the September quarter of FY27. Kalyan Jewellers said India revenue rose about 27% year on year, helped by roughly 20% same-store sales growth; its international business grew 18% and lifestyle brand Candere rose 64%. Titan, P N Gadgil Jewellers, and PC Jeweller reported similar 22% to 28% ranges in their updates. Navratri and related buying traditionally land in the September quarter, but this year much of the festival calendar shifts toward December. Executives still described the quarter as strong, pointing to wedding bookings, studded jewellery, and higher average tickets even when footfall growth was moderate.",
+      "What does this mean?",
+      "Gold prices near record highs have not stopped Indian households from buying jewellery for weddings and festivals, though the mix tilts toward studded pieces where margins are healthier for retailers. When festivals slip a quarter, some sales simply move with the calendar rather than disappearing, which is what these updates suggest. Same-store growth in the high teens or twenties implies existing showrooms are comping well without relying only on new store openings. That pattern fits other consumption signals from the same month, including strong updates from apparel and electronics retailers, even as equity investors debate whether stocks already price in a perfect festive season.",
+      "Why should I care?",
+      "If you are planning large jewellery purchases, compare making charges and exchange policies across chains; competition stays intense even when headline gold rates are volatile. Small investors watching Titan or Kalyan should read same-store numbers alongside store expansion plans. Suppliers of diamonds and lightweight gold designs benefit when studded growth outpaces plain bullion. Watch November and December updates to see whether the delayed Navratri cluster shows up as an even bigger spike or whether Q2 simply pulled demand forward.",
+    ],
+  },
+  {
+    slug: "apple-pay-india-axis-bank-october-2026",
+    title: "Apple Pay is live in India but only for Axis Bank Visa and Mastercard credit cards",
+    summary:
+      "Reporting on 18 October 2026 said Apple’s tap-to-pay service, which rolled out in late September 2026, lets iPhone, iPad, and Apple Watch users pay at terminals using Face ID or Touch ID without entering a PIN or OTP, starting with Axis Bank-issued Visa and Mastercard credit cards while talks continue with other lenders.",
+    category: "industry",
+    companyOrSector: "Payments / consumer tech",
+    publishedAt: "2026-10-18T16:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("apple-pay-india-axis-bank-october-2026"),
+    keyTakeaways: [
+      "Apple Pay in India supports in-store tap payments and streamlined online checkout through the native Wallet app.",
+      "The first phase is limited to Axis Bank Visa and Mastercard credit cards; coverage for other banks is still in discussion.",
+      "Authentication uses biometrics on the device rather than card PINs or one-time passwords at the point of sale.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, coverage of Apple Pay’s India launch explained that the service went live in late September 2026 for users of iPhones, iPads, and Apple Watches. Shoppers can tap to pay at contactless terminals and check out on participating apps and websites without retyping card numbers. Apple Pay vice president Jennifer Bailey said the goal is everyday payments that feel simple and private, using Face ID or Touch ID on the device instead of a separate PIN or OTP step at checkout. For now, only Axis Bank-issued Visa and Mastercard credit cards work in the wallet, though reports said Apple is talking to other large domestic banks about joining.",
+      "What does this mean?",
+      "India already has UPI for peer-to-peer and many merchant payments, but card-based tap-to-pay at modern terminals has been patchy because issuers and networks had to wire up tokenisation and risk rules with Apple’s secure element. Starting with one bank’s credit cards lets Apple test fraud rates and customer support load before a wider rollout. Biometric approval can speed checkout at coffee shops, airports, and quick-service restaurants where typing OTPs is awkward. It also nudges card issuers to compete on rewards and limits inside Apple Wallet, not just on their own apps.",
+      "Why should I care?",
+      "If you carry an iPhone and an Axis Bank credit card, check the Wallet app to add your card and look for the contactless symbol at checkout. If you bank elsewhere, you may need to wait or keep using UPI and physical cards for now. Merchants with NFC terminals should train staff that phone taps are valid even when customers do not pull out a plastic card. Watch which banks sign next and whether debit cards or UPI interoperability follow, because that will determine how broad Apple Pay becomes beyond premium credit users.",
+    ],
+  },
+  {
+    slug: "jsw-steel-odisha-mining-penalty-quashed-october-2026",
+    title: "An Odisha court threw out a ₹696 crore mining penalty on JSW Steel",
+    summary:
+      "On 18 October 2026 JSW Steel said the Odisha High Court quashed a ₹696 crore demand from Joda mining authorities over dispatch shortfalls at its Jajang iron ore block and sent a separate ₹1,473 crore penalty back for fresh evaluation, easing a long-running dispute tied to production agreements signed in 2020.",
+    category: "industry",
+    companyOrSector: "Steel / mining regulation",
+    publishedAt: "2026-10-18T15:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jsw-steel-odisha-mining-penalty-quashed-october-2026"),
+    keyTakeaways: [
+      "The high court pronounced judgments on 16 October 2026 on JSW Steel petitions against Joda mining authority demands.",
+      "A ₹696.32 crore penalty linked to year-one dispatch shortfalls under a 2020 mine agreement was quashed outright.",
+      "A ₹1,473 crore penalty was set aside and remanded for re-evaluation rather than enforced immediately.",
+    ],
+    body: [
+      "What's going on here?",
+      "In a stock exchange filing on 18 October 2026, JSW Steel Ltd said the Odisha High Court quashed a ₹696 crore penalty levied by mining authorities in Joda and set aside a separate ₹1,473 crore penalty for re-evaluation. The court heard the matter on 16 October 2026. The disputes relate to assessments of shortfalls in mineral dispatch from JSW’s Jajang iron ore block under a Mine Development and Production Agreement that began in June 2020. The company had received a demand letter in September 2021 for ₹696.32 crore tied to the first contract year and later faced additional claims that it challenged through separate petitions.",
+      "What does this mean?",
+      "Integrated steelmakers depend on captive ore in Odisha to feed blast furnaces and control input costs. When state mining offices allege dispatch shortfalls, penalties can run into hundreds of crores and hit cash flows long before appeals finish. A full quash on the ₹696 crore demand removes an immediate liability, while remanding the larger penalty gives JSW another chance to argue compliance metrics and force majeure clauses. The rulings do not change royalty rates for the industry, but they signal courts will scrutinise how authorities calculate production shortfalls under newer auction-linked contracts.",
+      "Why should I care?",
+      "If you hold JSW Steel or other miners with Odisha blocks, monitor whether authorities appeal or reissue the remanded demand with clearer calculations. Downstream, stable ore costs support steel pricing for autos and construction, though global coking coal still drives margins. Policy watchers should track whether Odisha tightens reporting rules after losses in court or instead simplifies dispatch measurement to avoid repeated litigation. Competitors with similar MDPA contracts may cite these judgments in their own disputes.",
+    ],
+  },
+  {
     slug: "hdfc-bank-bharucha-resignation-october-2026",
     title: "HDFC Bank’s deputy managing director will leave after the RBI picked someone else as CEO",
     summary:
@@ -3302,6 +3398,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "dlf-luxury-housing-pipeline-october-2026": "markets",
+  "jewellery-retailers-q2-growth-october-2026": "markets",
+  "apple-pay-india-axis-bank-october-2026": "companies",
+  "jsw-steel-odisha-mining-penalty-quashed-october-2026": "policy",
   "hdfc-bank-bharucha-resignation-october-2026": "companies",
   "family-offices-pilgrimage-hotels-october-2026": "markets",
   "idbi-union-hunger-strike-privatisation-october-2026": "policy",
