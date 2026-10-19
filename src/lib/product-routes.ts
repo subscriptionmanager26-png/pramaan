@@ -51,6 +51,7 @@ export const POCKETEDGE_PROXY_PATHS = [
   "/logo.png",
   "/manifest.webmanifest",
   "/sw.js",
+  "/data/:path*",
   "/feed",
   "/ideas",
   "/activity",

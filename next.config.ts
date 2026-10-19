@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
       { source: "/logo.png", destination: `${appOrigin}/logo.png` },
       { source: "/manifest.webmanifest", destination: `${appOrigin}/manifest.webmanifest` },
       { source: "/sw.js", destination: `${appOrigin}/sw.js` },
+      { source: "/data/:path*", destination: `${appOrigin}/data/:path*` },
       { source: "/feed", destination: `${appOrigin}/feed` },
       { source: "/feed/:path*", destination: `${appOrigin}/feed/:path*` },
       { source: "/ideas", destination: `${appOrigin}/ideas` },
