@@ -26,6 +26,30 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "nri-fcnr-itat-yen-rupee-october-2026",
+    title: "A Dubai NRI won tax relief after officials treated yen FCNR deposits as rupees",
+    summary:
+      "Reporting on 18 October 2026 said the Income Tax Appellate Tribunal in Jaipur deleted a ₹3.41 crore unexplained-money addition against Kavita Khanwani after finding that an assessing officer had read Japanese yen principal on two IndusInd Bank FCNR deposits as if it were Indian rupees.",
+    category: "industry",
+    companyOrSector: "Tax / NRIs",
+    publishedAt: "2026-10-19T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nri-fcnr-itat-yen-rupee-october-2026"),
+    keyTakeaways: [
+      "The tribunal’s 22 September 2026 order in Deputy Commissioner of Income Tax v. Kavita Khanwani upheld deletion of a Section 69A addition for assessment year 2018-19.",
+      "Two joint FCNR deposits held about 1.726 crore yen and 1.658 crore yen, funded from an NRE account with roughly ₹1 crore debits traced to banking-channel credits.",
+      "The department had already accepted the same deposits’ source in the first holder’s assessment; Khanwani was the second holder on the accounts.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 18 October 2026, business press covered an Income Tax Appellate Tribunal ruling that deleted a ₹3.41 crore income tax addition against Dubai-based non-resident Indian Kavita Khanwani. The Jaipur bench’s order dated 22 September 2026, in Deputy Commissioner of Income Tax v. Kavita Khanwani, dealt with assessment year 2018-19 and Section 69A of the Income-tax Act, which taxes unexplained money when officials are not satisfied with a taxpayer’s explanation. Khanwani and her husband Kishan Chand held two Foreign Currency Non-Resident term deposits at IndusInd Bank, denominated in Japanese yen and opened in October 2017 and February 2018. Bank statements showed each deposit was funded by a debit of about ₹1 crore from a joint Non-Resident External savings account, with matching credits through normal banking channels in Chand’s name. The assessing officer, however, treated the yen principal figures as rupee amounts and added ₹3.41 crore to Khanwani’s income. The tribunal found the rupee investment was closer to ₹2 crore and that the disputed addition did not match any rupee balance in her possession.",
+      "What does this mean?",
+      "NRI families often park surplus dollars, yen, or other currencies in FCNR products while keeping rupee liquidity in NRE accounts. Tax scrutiny hinges on whether the money’s path can be traced on bank records and whether each holder’s share of the story is assessed consistently. Here, Chand was the first holder and had already explained the deposits in his own case, which the department accepted. Khanwani, as second holder, faced a fresh unexplained-money tag built on a currency misread. The tribunal noted IndusInd Bank’s responses under Section 133(6) in November 2022 confirming the transactions. Section 69A is a blunt tool: if the source story fails, the whole sum can be added to income. When the source is documented and accepted for the primary account holder, treating the same inflows as unexplained for a joint holder is harder to defend, especially for a non-resident whose India tax footprint is limited to income received or accruing here.",
+      "Why should I care?",
+      "If you hold NRE or FCNR accounts jointly with a spouse, keep a clear paper trail from the overseas income that funds each credit and make sure both assessments tell the same story. Ask your bank for statements that show currency, principal, and rupee equivalent at funding. Respond early to scrutiny notices with those records rather than only narrative explanations. Chartered accountants say yen, dollar, and dirham figures should be labelled explicitly in replies so assessing officers do not confuse denomination with rupee value. Watch whether the tax department issues internal guidance after this order, and whether more tribunals cite it where FCNR principal is involved. The ruling binds the parties in this case; other facts could produce different outcomes.",
+    ],
+  },
+  {
     slug: "fmcg-post-diwali-price-hikes-october-2026",
     title: "Packaged food makers may raise prices after Diwali as palm oil and sugar stay costly",
     summary:
@@ -3494,6 +3518,7 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "nri-fcnr-itat-yen-rupee-october-2026": "policy",
   "fmcg-post-diwali-price-hikes-october-2026": "markets",
   "oil-india-coal-bed-methane-singrauli-october-2026": "policy",
   "airtel-voice-only-prepaid-trai-october-2026": "policy",

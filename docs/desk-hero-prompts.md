@@ -656,6 +656,14 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic bank facade |
 | Metaphor left | Tenure ladder with top step blocked |
 
+### `nri-fcnr-itat-yen-rupee-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Currency denomination error in tax scrutiny |
+| Subject right | Generic bank facade |
+| Metaphor left | Yen symbol vs rupee symbol with magnifying glass |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
