@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "convenience-stores-quick-commerce-squeeze-october-2026",
+    title: "Grab-and-go chains are losing shoppers to ten-minute grocery apps",
+    summary:
+      "Reporting on 19 October 2026 said organised convenience stores face an existential squeeze as quick-commerce deliveries cover daily needs, highlighted by the closure of all 31 remaining 7-Eleven outlets in India on 30 September after Reliance Retail’s franchise ended.",
+    category: "industry",
+    companyOrSector: "Retail / quick commerce",
+    publishedAt: "2026-10-19T12:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("convenience-stores-quick-commerce-squeeze-october-2026"),
+    keyTakeaways: [
+      "Seven & i Holdings’ 7-Eleven brand shut its last 31 Indian stores on 30 September 2026 when the Reliance Retail franchise lapsed; the chain had peaked near 60 outlets after entering in 2021.",
+      "A 7 October Redseer–Google study cited in the coverage found quick commerce still captures under 5% of monthly grocery stock-up spend among occasional users but 15–20% of immediate daily-needs baskets.",
+      "Operators such as The New Shop and Wellness Forever are shifting to franchise models, smaller food ranges, or pharmacy-led advice to justify rent on 600–800 sq ft high-street sites.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, trade press described how India’s quick-commerce boom is reshaping neighbourhood shopping. Organised convenience chains that sell grab-and-go food and late-night essentials are caught between low-cost kiranas and apps that promise delivery in ten to thirty minutes. The story pointed to the 30 September 2026 closure of all 31 remaining 7-Eleven stores nationwide after Reliance Retail’s franchise agreement with Japanese parent Seven & i Holdings ended. Godfrey Phillips India had already exited its 24Seven format in April 2024. Consultants quoted in the piece said convenience outlets only began struggling in earnest once quick-commerce platforms scaled in major cities, because many of the same SKUs now arrive at the doorstep faster than a walk to the corner store.",
+      "What does this mean?",
+      "Convenience retail economics depend on high footfall per square foot and impulse baskets. When delivery apps subsidise speed, the reason to pay branded-store rents weakens unless the outlet offers something apps cannot, such as metro-station impulse food, pharmacist advice, or EV charging. Survivors are adapting: The New Shop founder Aastha Alamast said the chain became profitable after roughly 110 franchise-led stores with setup costs under ₹20 lakh each, while Wellness Forever is shrinking food aisles as cold-drink and ready-meal sales shift online and leaning harder on pharma SKUs and in-store pharmacists. Japanese rival Lawson still plans five Mumbai stores in 2027 and about 100 by 2030, betting a different operating playbook can work where 7-Eleven did not.",
+      "Why should I care?",
+      "If you run a small food or essentials shop, compare whether your edge is speed, advice, or price against the delivery radius of Blinkit, Zepto, or Instamart in your pin code. Landlords pricing high-street corners for “convenience” rents should stress-test tenant sales data from 2024 onward, not pre-quick-commerce peaks. Investors in listed retail or delivery platforms should read format closures as a sign that not every global convenience template transfers to India, even as overall grocery demand stays strong. Watch Lawson’s India entry, franchise disclosure from domestic chains, and whether regulators tighten dark-store rules that indirectly shape how fast apps can undercut walk-in stores.",
+    ],
+  },
+  {
+    slug: "india-airfare-rules-no-price-caps-october-2026",
+    title: "New aviation rules will not cap domestic ticket prices, officials said",
+    summary:
+      "Reporting on 19 October 2026 quoted a senior civil aviation official saying India has no plan to regulate routine airfares under forthcoming rules under the Bharatiya Vayuyan Adhiniyam, 2024, though government could set limits only in extraordinary situations such as natural disasters.",
+    category: "industry",
+    companyOrSector: "Aviation / consumer travel",
+    publishedAt: "2026-10-19T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-airfare-rules-no-price-caps-october-2026"),
+    keyTakeaways: [
+      "The Centre told the Supreme Court on 17 October 2026 that air-fare rules under the 2024 aviation act had received administrative approval and would be published within about two weeks.",
+      "A senior government official told Economic Times that policymakers do not intend to interfere with demand-based pricing for ordinary flights.",
+      "The official said the framework would still allow fare limits during extraordinary events, without spelling out trigger criteria in the interview.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, coverage of India’s airline policy clarified what upcoming fare regulations will not do. The government had told the Supreme Court on 17 October 2026 that rules under the Bharatiya Vayuyan Adhiniyam, 2024, had secured administrative approval and should appear within roughly two weeks. That filing stirred speculation that Delhi might cap domestic ticket prices after years of complaints about festive-season spikes. A senior civil aviation official told Economic Times there are no plans to override the market mechanism that sets fares from supply, demand, and fuel costs. The official added that the law would let authorities fix limits only in extraordinary situations, such as natural calamities, not for routine peak travel weekends.",
+      "What does this mean?",
+      "Indian domestic aviation has operated without pre-approval of fares since the Air Corporations Act era ended in 1994. Carriers use dynamic pricing buckets that can move sharply when schools break for holidays or when one airline pulls capacity. A formal rule book under the 2024 act mainly updates how the regulator supervises safety, consumer complaints, and airline finances rather than turning tickets into a utility tariff. Keeping ordinary pricing commercial means households still need to book early or flex dates to avoid the steepest buckets, while airlines retain room to recover when jet fuel or airport charges rise. The carve-out for emergencies preserves a tool if a crisis grounds fleets or strands passengers, without committing to festival caps that carriers argue would discourage capacity additions.",
+      "Why should I care?",
+      "If you fly domestically during Diwali or year-end holidays, compare fares across dates and nearby airports rather than waiting for a government ceiling. Corporate travel desks should keep advance-purchase policies because last-minute spikes remain legal. Investors in listed carriers should separate courtroom headlines from the operational rule text once it is published, especially sections on consumer redress and extraordinary fare controls. Watch the gazette notification for precise wording on emergency caps, any parliamentary debate, and whether opposition states push for tighter consumer protections after high-profile fare complaints.",
+    ],
+  },
+  {
+    slug: "lt-tashkent-airport-epc-october-2026",
+    title: "L&T started design work on a new international airport outside Tashkent",
+    summary:
+      "On 19 October 2026 Larsen & Toubro said its airports vertical began initial engineering and procurement planning for the greenfield New Tashkent International Airport in Uzbekistan after receiving a limited notice to proceed on an ultra-mega EPC contract valued above ₹15,000 crore.",
+    category: "industry",
+    companyOrSector: "Infrastructure / engineering exports",
+    publishedAt: "2026-10-19T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lt-tashkent-airport-epc-october-2026"),
+    keyTakeaways: [
+      "L&T classified the passenger-terminal EPC award as ultra-mega, its label for projects above ₹15,000 crore.",
+      "The limited notice to proceed on 19 October 2026 covers detailed design, planning, and pre-construction work; full construction awaits a final notice after contractual conditions are met.",
+      "Uzbekistan positions the airport as a Central Asian hub for passenger, cargo, and logistics traffic under its long-term transport plan.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, Larsen & Toubro told stock exchanges that its public spaces, airports and health business has begun initial activities on the New Tashkent International Airport in Uzbekistan. The company received a limited notice to proceed from the public-private partnership consortium developing the greenfield site. L&T had already been awarded an engineering, procurement and construction contract for the passenger terminal and associated landside infrastructure. The notice triggers detailed engineering, design, procurement preparation, and other pre-construction work. L&T tags orders above ₹15,000 crore as ultra-mega; exchange filings described this award in that band. A full notice to proceed for the entire scope will follow once agreed conditions precedent are satisfied, after which main construction can start on site.",
+      "What does this mean?",
+      "Indian engineering firms increasingly export complex building and transport projects when domestic order books are competitive but margin-thin. A Central Asian airport hub fits L&T’s strategy of bidding for large, multi-year EPC jobs that use the same project-management skills as Indian metros, refineries, and defence campuses. For Uzbekistan, the airport is part of a wider plan to lift regional connectivity and cargo flows. For India’s trade data, the win is services and capital goods shipped abroad rather than commodity exports. Execution risk sits in currency, local approvals, and consortium coordination, which is why contractors often stage limited notices before mobilising heavy equipment.",
+      "Why should I care?",
+      "If you work in construction, aerospace logistics, or industrial supply chains, watch which Indian subcontractors and equipment vendors join the Tashkent bill of materials as design firms. Investors in L&T should treat the announcement as a long-dated revenue pipeline item, with profit recognition tied to milestone billing rather than the headline order size on day one. Policy readers can compare this export win with other overseas airport and metro awards Indian firms chase in the Gulf and Southeast Asia. Follow the consortium’s final notice to proceed, Uzbekistan’s financing arrangements, and L&T’s quarterly commentary on international EPC margins when results arrive on 27 October 2026.",
+    ],
+  },
+  {
     slug: "nri-fcnr-itat-yen-rupee-october-2026",
     title: "A Dubai NRI won tax relief after officials treated yen FCNR deposits as rupees",
     summary:
@@ -3518,6 +3590,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "convenience-stores-quick-commerce-squeeze-october-2026": "markets",
+  "india-airfare-rules-no-price-caps-october-2026": "policy",
+  "lt-tashkent-airport-epc-october-2026": "companies",
   "nri-fcnr-itat-yen-rupee-october-2026": "policy",
   "fmcg-post-diwali-price-hikes-october-2026": "markets",
   "oil-india-coal-bed-methane-singrauli-october-2026": "policy",
