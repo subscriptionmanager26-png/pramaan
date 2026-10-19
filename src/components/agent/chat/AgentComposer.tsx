@@ -172,12 +172,14 @@ export function AgentComposer({
         onSubmit={async (e) => {
           e.preventDefault();
           if (!canSend) return;
+          const message = text;
+          const attachmentIds = ready.map((i) => i.id!);
+          setText("");
+          setItems([]);
           setSending(true);
           try {
-            if (await onSend(text, ready.map((i) => i.id!))) {
-              setText("");
-              setItems([]);
-            }
+            const ok = await onSend(message, attachmentIds);
+            if (!ok) setText(message);
           } finally {
             setSending(false);
           }

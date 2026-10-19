@@ -1,3 +1,5 @@
+import { siteUrl } from "@/lib/site-url";
+
 /**
  * Where the legacy Pocketedge SPA (social-pocketedge) lives during unification.
  * Pramaan editorial routes stay on this origin; product paths link or proxy here until ported.
@@ -7,6 +9,13 @@ const DEFAULT_APP = "https://pramaan.pocketedge.in";
 
 export function pocketedgeAppOrigin() {
   return (process.env.NEXT_PUBLIC_POCKETEDGE_APP_URL || DEFAULT_APP).replace(/\/$/, "");
+}
+
+/** Public www host — use for tools proxied onto www (see next.config rewrites). */
+export function pocketedgeSitePath(path: string) {
+  const base = siteUrl();
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${p}`;
 }
 
 export function pocketedgeAppPath(path: string) {

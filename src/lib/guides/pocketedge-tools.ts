@@ -1,5 +1,5 @@
 import type { Guide } from "./types";
-import { pocketedgeAppOrigin } from "@/lib/product-routes";
+import { pocketedgeAppOrigin, pocketedgeSitePath } from "@/lib/product-routes";
 
 const PE = pocketedgeAppOrigin();
 
@@ -15,7 +15,7 @@ export const pocketedgeTools: Guide[] = [
     publishedAt: "2026-09-20T10:00:00+05:30",
     image:
       "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1200&q=80",
-    toolUrl: `${PE}/etf-tracker`,
+    toolUrl: pocketedgeSitePath("/etf-tracker"),
     body: [
       "Compare last traded price to iNAV for hundreds of NSE-listed ETFs.",
       "Useful when buying global index feeders, gold ETFs, or sector ETFs where intraday premium matters.",
@@ -32,7 +32,7 @@ export const pocketedgeTools: Guide[] = [
     publishedAt: "2026-09-18T10:00:00+05:30",
     image:
       "https://images.unsplash.com/photo-1610375461246-83c859bc4ea4?auto=format&fit=crop&w=1200&q=80",
-    toolUrl: `${PE}/gold-tracker`,
+    toolUrl: pocketedgeSitePath("/gold-tracker"),
     body: [
       "Consolidates gold-linked instruments for quick comparison.",
       "Pair with the iNAV tracker when choosing between gold ETFs.",
@@ -48,7 +48,7 @@ export const pocketedgeTools: Guide[] = [
     publishedAt: "2026-09-15T10:00:00+05:30",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    toolUrl: `${PE}/resources/mf-screener`,
+    toolUrl: pocketedgeSitePath("/resources/mf-screener"),
     body: [
       "Shortlist international funds without opening five AMC sites.",
       "Cross-check TER and benchmark before you SIP.",

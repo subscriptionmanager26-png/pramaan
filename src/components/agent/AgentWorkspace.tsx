@@ -309,7 +309,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
               aria-label="Close menu"
               onClick={() => setSidebarOpen(false)}
             />
-            <div className="fixed inset-y-12 left-0 z-50 w-[min(88vw,17rem)] border-r border-line shadow-2xl lg:hidden">
+            <div className="fixed bottom-0 left-0 top-14 z-50 w-[min(88vw,17rem)] border-r border-line bg-paper-2 shadow-2xl sm:top-16 lg:hidden">
               <AgentSidebar
                 threads={threads}
                 activeThreadId={activeThreadId}
