@@ -47,6 +47,10 @@ export function pocketedgeIdeasUrl() {
 
 /** Product paths we intend to proxy onto the Pramaan host in Phase B (see docs/unification-roadmap.md). */
 export const POCKETEDGE_PROXY_PATHS = [
+  "/assets/:path*",
+  "/logo.png",
+  "/manifest.webmanifest",
+  "/sw.js",
   "/feed",
   "/ideas",
   "/activity",
@@ -59,7 +63,10 @@ export const POCKETEDGE_PROXY_PATHS = [
   "/commodity/:path*",
   "/etf-tracker",
   "/gold-tracker",
+  "/markets",
+  "/explore",
   "/resources/:path*",
+  "/business-model",
   "/business-model/:path*",
   "/@:handle",
 ] as const;
