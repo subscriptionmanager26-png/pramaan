@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sahaj-solar-bess-manufacturing-gujarat-october-2026",
+    title: "Sahaj Solar approved a 1.8 GWh battery factory in Gujarat",
+    summary:
+      "On 19 October 2026 Sahaj Solar Ltd told exchanges its board approved a new battery energy storage manufacturing facility in Gujarat with 1.8 gigawatt-hours of annual capacity, backed by an initial ₹25 crore investment as India tries to localise grid-scale storage.",
+    category: "industry",
+    companyOrSector: "Renewables / manufacturing",
+    publishedAt: "2026-10-19T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sahaj-solar-bess-manufacturing-gujarat-october-2026"),
+    keyTakeaways: [
+      "The board resolution on 19 October 2026 targets 1.8 GWh of annual battery energy storage system production capacity in Gujarat.",
+      "Sahaj Solar earmarked ₹25 crore for the first phase of the manufacturing setup, per its exchange filing.",
+      "The company is already expanding overseas module capacity, including a 750 MW TOPCon line in Abu Dhabi through a joint venture announced earlier in October 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, Sahaj Solar Ltd informed stock exchanges that its board approved setting up a new manufacturing facility for battery energy storage systems in Gujarat. The plant is designed for 1.8 gigawatt-hours of annual production capacity. The company allocated ₹25 crore for the initial investment in the facility. Sahaj Solar is a solar equipment maker that has been broadening beyond modules into storage and overseas production. Earlier in October 2026 it announced a 50:50 joint venture with Clarion Investments for a 750 megawatt solar module line in Abu Dhabi using TOPCon technology, with commercial operations targeted for the first quarter of 2027.",
+      "What does this mean?",
+      "Grid-scale batteries let utilities and renewable developers store solar and wind output for evening peaks, but India still imports much of the cell and pack stack. Domestic fabs reduce forex exposure and shorten supply chains when state tenders bundle storage with solar parks. The 1.8 GWh label is modest next to the central 208 GWh storage target for 2030, yet each new line helps bidders offer firmer delivery timelines. Sahaj Solar’s dual push, modules abroad and BESS at home, mirrors how mid-sized manufacturers chase margin in export markets while anchoring capacity where policy demand is clearest.",
+      "Why should I care?",
+      "If you buy rooftop solar or track power bills, cheaper local storage can eventually smooth renewable integration and reduce reliance on costly peak tariffs. Investors in listed solar names should read BESS capex as a bet on tender pipelines, not instant revenue. EPC firms and discoms should map which Gujarat suppliers can certify packs for utility tenders. Watch Sahaj Solar’s project timelines, state storage auctions, and whether financing for the remaining capex beyond ₹25 crore is disclosed in coming quarters.",
+    ],
+  },
+  {
+    slug: "even-healthcare-khosla-bengaluru-hospitals-october-2026",
+    title: "Even Healthcare raised $50 million to open more Bengaluru hospitals",
+    summary:
+      "Reporting on 19 October 2026 said managed-care startup Even Healthcare closed a $50 million Series B led by Khosla Ventures to expand its hospital network in Bengaluru, where it already runs two facilities and plans five by early 2027.",
+    category: "industry",
+    companyOrSector: "Healthcare / startups",
+    publishedAt: "2026-10-19T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("even-healthcare-khosla-bengaluru-hospitals-october-2026"),
+    keyTakeaways: [
+      "Even Healthcare raised $50 million in Series B funding on 19 October 2026, led by Khosla Ventures with Alpha Wave participating, taking total funding to about $136 million.",
+      "Co-founder and chief executive Mayank Banerjee said two hospitals are operating and a third is under construction; the company aims for five sites by the first or second quarter of 2027 so residents are within about 5 km of a facility.",
+      "FY25 revenue reached $3.2 million from $1 million a year earlier while losses widened to $10.7 million from $8.7 million, per reporting on the round.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, Mint reported that Bengaluru-based Even Healthcare raised $50 million in a Series B round led by US investor Khosla Ventures, with Alpha Wave also participating. The company positions itself as a managed-care operator that combines hospitals, clinics, and telemedicine rather than running standalone fee-for-service campuses. Chief executive Mayank Banerjee said two hospitals are already open and a third is coming up soon. The fresh capital will mostly fund more hospitals in Bengaluru. Management wants five facilities by the first or second quarter of 2027 so that no resident is more than about five kilometres from an Even site. Each hospital is meant to handle most common procedures locally while routing complex transplants or niche surgeries to a designated centre.",
+      "What does this mean?",
+      "Health insurance premiums in India are projected to grow at a mid-teens annual pace, but affordability worries can push households to skip renewals. Startups and hospital chains are testing integrated models where primary care, diagnostics, and insurance-like subscriptions sit under one brand, hoping fewer emergency admissions lower claims costs over time. Even’s FY25 revenue rose to $3.2 million from $1 million while losses widened to $10.7 million, showing the model is still in build-out mode. Rivals are moving on similar lines: Narayana Health sells retail insurance after securing Irdai approval, and PB Health, backed by PB Fintech, has disclosed large hospital expansion plans with insurer tie-ups.",
+      "Why should I care?",
+      "If you live in Bengaluru and buy employer or retail health cover, a denser hospital network can change where you are steered for planned care and how much you pay out of pocket. Employers designing corporate wellness plans should compare network breadth and referral rules before signing multi-year contracts. Investors in listed hospital or insurance names should treat these startups as competition for outpatient volume, not only as IPO candidates. Watch Even’s third hospital opening, published tariff cards, and whether insurers sign preferred-provider deals that actually trim premiums for members.",
+    ],
+  },
+  {
+    slug: "india-coal-import-mandate-shelved-october-2026",
+    title: "Delhi shelved a plan to force power plants to import more coal",
+    summary:
+      "Bloomberg reported on 19 October 2026 that India has dropped a proposal to mandate imported coal blending at power stations, opting instead to push Coal India and railways to lift domestic supply as stocks run low ahead of peak demand.",
+    category: "industry",
+    companyOrSector: "Power / energy policy",
+    publishedAt: "2026-10-19T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-coal-import-mandate-shelved-october-2026"),
+    keyTakeaways: [
+      "Officials recently discussed requiring generators to blend imported thermal coal with domestic fuel to rebuild inventories, but that mandate is no longer moving forward, Bloomberg reported on 19 October 2026 citing people familiar with the talks.",
+      "Policymakers instead asked Coal India to raise output and Indian Railways to prioritise coal rakes to power stations, the report said.",
+      "The debate sits alongside an existing order for more than 100 captive coal plants to run at maximum capacity through year-end 2026 as electricity demand stays elevated.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, Bloomberg reported that India has shelved a proposal to require power plants to import coal for blending with domestic supplies. People familiar with government discussions told the news service that officials had recently weighed such a mandate to ease tight fuel stockpiles at thermal stations. Reuters noted it could not immediately verify the report. Global seaborne thermal coal prices have been elevated, and India’s energy import bill is already under pressure from higher crude prices linked to Middle East conflict. Rather than force costly imports, the government has asked state miner Coal India to increase production and directed Indian Railways to help move more domestic coal to plants, according to the Bloomberg account. Separately, Delhi had earlier ordered captive coal-fired units above 50 megawatts to operate at maximum available capacity from 1 October through 31 December 2026 under emergency provisions of the Electricity Act.",
+      "What does this mean?",
+      "Import mandates are a familiar tool when mine output or logistics lag behind summer or post-monsoon demand, but they pass global price spikes straight into generator costs and can widen the current account deficit. Shelving the idea signals a preference to squeeze more tonnes from domestic mines and rail networks first, even though many plants are still running on thin coal stocks after hot weather and irrigation load stretched the grid into October. If domestic dispatch falls short, policymakers retain the option to revisit imports or other emergency steps, but the immediate message to utilities is to lean on Coal India and rake availability rather than spot LNG or coal markets.",
+      "Why should I care?",
+      "Households and factories depend on stable coal-fired generation for a large share of India’s power mix, so fuel logistics still shape the risk of shortages or costly merchant power purchases on exchanges. If you follow Coal India, rail, or independent power producers, watch weekly coal stock data at plants, rake loading figures, and any fresh ministry orders on blending or imports. Discoms in states with weak mine linkage should stress-test festive-season demand. A return to mandated imports would be a clear signal that domestic supply is not catching up.",
+    ],
+  },
+  {
     slug: "convenience-stores-quick-commerce-squeeze-october-2026",
     title: "Grab-and-go chains are losing shoppers to ten-minute grocery apps",
     summary:
@@ -3590,6 +3662,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sahaj-solar-bess-manufacturing-gujarat-october-2026": "companies",
+  "even-healthcare-khosla-bengaluru-hospitals-october-2026": "companies",
+  "india-coal-import-mandate-shelved-october-2026": "policy",
   "convenience-stores-quick-commerce-squeeze-october-2026": "markets",
   "india-airfare-rules-no-price-caps-october-2026": "policy",
   "lt-tashkent-airport-epc-october-2026": "companies",
