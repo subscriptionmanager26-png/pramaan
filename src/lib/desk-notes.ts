@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fm-sitharaman-global-capital-us-ai-october-2026",
+    title: "Nirmala Sitharaman warned that global money is crowding into US and AI bets",
+    summary:
+      "Speaking to CNBC on 17 October 2026 on the sidelines of IMF–World Bank meetings, finance minister Nirmala Sitharaman said the flight of capital toward artificial intelligence and the United States is a concern for India as foreign investors pull from domestic equities amid oil, rates, and dollar pressure.",
+    category: "industry",
+    companyOrSector: "Markets / policy",
+    publishedAt: "2026-10-19T19:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fm-sitharaman-global-capital-us-ai-october-2026"),
+    keyTakeaways: [
+      "Sitharaman told CNBC on 17 October 2026 that capital otherwise spread across countries and sectors is concentrating on US and AI-linked markets, calling that pattern a concern for India.",
+      "Foreign portfolio investors withdrew about ₹52,100 crore from Indian equities in October 2026 through mid-month, after roughly ₹35,861 crore in September, with cumulative 2026 outflows near ₹3.12 lakh crore per CDSL data cited in reporting.",
+      "She said India’s real economy fundamentals remain sound and that a sharp unwind in the global AI rally would not hurt India on the same scale because inflows into domestic AI infrastructure have been smaller than in Taiwan or South Korea.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 17 October 2026, finance minister Nirmala Sitharaman spoke to CNBC during the IMF and World Bank annual meetings in Washington. Coverage on 19 October quoted her saying the redirection of global investments toward the United States and artificial intelligence-linked markets is worrying for India. She noted that capital that once scattered across regions and sectors is now clustering in a handful of AI supply-chain stories. The remarks landed as Indian benchmarks traded roughly 12% below year-ago levels despite steady domestic growth, and as foreign portfolio investors sold about ₹52,100 crore of Indian equities in October 2026 through mid-month. That followed net sales of roughly ₹35,861 crore in September, pushing cumulative 2026 outflows to about ₹3.12 lakh crore according to Central Depository Services data cited in the wire.",
+      "What does this mean?",
+      "Portfolio flows chase growth narratives and liquid benchmarks. Taiwan and South Korea now dominate MSCI Asia ex-Japan weights because chipmakers and AI infrastructure names attract passive money, while India’s index share has slipped toward about 10% from nearly 19% a few years ago in Goldman Sachs commentary relayed by the press. Higher US bond yields, a stronger dollar, and elevated crude have made Indian equities less attractive on a relative basis even when GDP prints stay resilient. Sitharaman’s point is structural as well as cyclical: if global savings keep funding US tech capex, emerging markets that are not direct AI suppliers may see thinner foreign inflows until domestic savers or policy steps fill the gap.",
+      "Why should I care?",
+      "If you hold mutual funds or stocks that depend on foreign liquidity, expect more volatility when US rates or oil move, even on days with no domestic news. SIP investors should separate long-term allocation from short-term FPI swings. Policy watchers should listen for steps that make India easier to index, such as depth in new-economy listings, without assuming an immediate tax tweak. Track monthly FPI data, rupee moves, and whether large IPOs like Jio Platforms absorb local capital that might otherwise chase overseas AI ETFs.",
+    ],
+  },
+  {
+    slug: "oyo-prism-ipo-debt-repayment-october-2026",
+    title: "Oyo’s parent may raise ₹6,650 crore in November mostly to repay loans",
+    summary:
+      "Moneycontrol reported on 19 October 2026 that Prism, which owns the Oyo hospitality platform, is likely to launch a ₹6,650 crore fresh-issue IPO in November, with about three-quarters earmarked to retire borrowings at its Singapore subsidiary rather than for a promoter sell-down.",
+    category: "industry",
+    companyOrSector: "Hospitality / IPOs",
+    publishedAt: "2026-10-19T18:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("oyo-prism-ipo-debt-repayment-october-2026"),
+    keyTakeaways: [
+      "Prism’s updated draft red herring prospectus dated 29 June 2026 proposes raising up to ₹6,650 crore entirely through new shares, with no planned offer-for-sale by existing shareholders, per reporting on 19 October 2026.",
+      "About ₹4,987.5 crore is slated to flow into subsidiary Oravel Stays Singapore to prepay or pay off specified loans; the balance would fund general corporate purposes.",
+      "Consolidated finance costs were about ₹1,089.3 crore in the nine months ended December 2025 versus ₹959.2 crore in FY25, underscoring why the listing is framed as a balance-sheet repair exercise.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, Moneycontrol reported that Prism, the parent of Oyo, is in talks with investors and could open its initial public offering in November 2026. Timing remains subject to market conditions, book-runner recommendations, and regulatory clearances. The company’s June 2026 draft red herring prospectus outlines a ₹6,650 crore fresh issue with no promoter share sale. Most proceeds, about ₹4,987.5 crore, would be invested in Oravel Stays Singapore to repay or prepay certain loans. The rest would cover general corporate needs. Oyo operates hotels, vacation rentals, and subscription listings across more than 35 countries, with brands such as Oyo, Motel 6, and Belvilla.",
+      "What does this mean?",
+      "Hospitality platforms scaled quickly on debt and lease commitments during the recovery from pandemic lows. When finance costs top ₹1,000 crore in nine months, equity markets become a tool to swap expensive loans for permanent capital. A pure fresh issue signals founders are not cashing out at the IPO; instead they ask public shareholders to fund deleveraging. Investors will still scrutinise operating profit before tax, which was a loss in FY25 despite headline net profit boosted by deferred tax credits in filings cited by the wire. The November window also competes with other large listings, including Jio Platforms, for domestic institutional bandwidth.",
+      "Why should I care?",
+      "Hotel owners and travellers may see steadier service investments if debt service falls, but room tariffs depend more on local demand than IPO proceeds. If you follow consumer internet listings, compare Prism’s use-of-funds table with other travel names and watch whether anchor books price the story as a growth bet or a bond substitute. Employees and franchise partners should read the final prospectus for covenant changes at Oravel Stays Singapore. Track SEBI observations, the price band, and whether November market volatility pushes the launch into December.",
+    ],
+  },
+  {
+    slug: "ccpa-online-explosives-marketplaces-october-2026",
+    title: "India delisted nearly 4,000 sellers caught listing explosives online",
+    summary:
+      "On 19 October 2026 the consumer affairs ministry said the Central Consumer Protection Authority forced seven B2B marketplaces to remove 3,940 listings for regulated explosives such as ammonium nitrate and imposed ₹30 lakh in penalties on two platforms after investigations into hazardous online sales.",
+    category: "industry",
+    companyOrSector: "E-commerce / regulation",
+    publishedAt: "2026-10-19T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ccpa-online-explosives-marketplaces-october-2026"),
+    keyTakeaways: [
+      "The CCPA action on 19 October 2026 covered IndiaMART, TradeIndia, Dial4Trade, Justdial, Sigma-Aldrich India, ExportersIndia, and Ibuychemikals, delisting 3,940 sellers or entries tied to explosives regulated under the Explosives Act, 1884.",
+      "IndiaMART accounted for 3,092 delistings; penalties of ₹10 lakh each hit Dial4Trade and ExportersIndia on specific ammonium nitrate and PETN listings, while NCDRC upheld the Dial4Trade order on 9 October 2026.",
+      "Lawful trade requires Petroleum and Explosives Safety Organisation licences; platforms must verify seller and buyer credentials, with IndiaMART and Justdial cases still in court and a Justdial hearing set for 23 October 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, the Ministry of Consumer Affairs said the Central Consumer Protection Authority took enforcement action against seven online platforms that hosted listings for hazardous explosive materials. The sweep removed 3,940 sellers or product entries. Platforms named include IndiaMART, TradeIndia, Dial4Trade, Justdial, Sigma-Aldrich India, ExportersIndia, and Ibuychemikals. Regulators flagged substances such as ammonium nitrate, gunpowder, picric acid, and PETN, which are controlled under the Explosives Act, 1884 and need licences from the Petroleum and Explosives Safety Organisation. Penalties totalling ₹30 lakh landed on Dial4Trade and ExportersIndia for facilitating specific listings. The National Consumer Disputes Redressal Commission dismissed Dial4Trade’s appeal on 9 October 2026, calling the ads misleading and unfair under the Consumer Protection Act, 2019.",
+      "What does this mean?",
+      "Business-to-business marketplaces grew by aggregating small manufacturers, but safety rules treat explosives like aviation fuel: no anonymous checkout. The CCPA is pushing platforms to police licence uploads and buyer verification, not just disclaim liability in footnotes. IndiaMART carried the bulk of delisted entries, which suggests either higher listing volume or slower compliance filters. Continuing court cases mean the final liability split between platforms and sellers is unsettled, yet the direction is clear: consumer regulators will use delisting and fines before a physical mishap forces a criminal probe.",
+      "Why should I care?",
+      "If you procure industrial chemicals or mining supplies online, expect stricter KYC and licence checks that may slow repeat orders but reduce fraud risk. Marketplace operators should budget for compliance teams and automated document checks, because penalties and reputational hits now arrive from both CCPA and NCDRC. Investors in listed internet names should read these orders as operating costs, not one-off fines. Watch outcomes in the Delhi High Court for IndiaMART, the 23 October Justdial hearing, and whether PESO publishes clearer digital verification APIs for sellers.",
+    ],
+  },
+  {
+    slug: "jsw-dulux-gst-itc-demand-cut-october-2026",
+    title: "Karnataka cut JSW Dulux’s disputed GST credit claim to ₹42 crore",
+    summary:
+      "JSW Dulux said on 19 October 2026 that Karnataka commercial tax authorities trimmed a FY21 input tax credit dispute from ₹118.33 crore to ₹42.04 crore, though the paint maker is still preparing a further response and the matter is not closed.",
+    category: "industry",
+    companyOrSector: "Tax / consumer goods",
+    publishedAt: "2026-10-19T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jsw-dulux-gst-itc-demand-cut-october-2026"),
+    keyTakeaways: [
+      "An order dated 15 October 2026 from the Assistant Commissioner, LGSTO LTU Bengaluru, reduced total demand on JSW Dulux to ₹42.04 crore from ₹118.33 crore proposed in an August 2026 show-cause notice for April 2020–March 2021.",
+      "The revised demand includes about ₹14.07 crore tax, ₹13.90 crore interest, and ₹14.07 crore penalty, versus roughly ₹40.09 crore tax in the original proposal.",
+      "The company received the order on 19 October 2026 and said it may file additional submissions; shares closed at ₹3,058.60 on the NSE that day, down 0.45%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, JSW Dulux Ltd informed exchanges that Karnataka GST authorities issued a fresh order on 15 October in a long-running input tax credit dispute covering fiscal 2021. The Assistant Commissioner of Commercial Taxes at LGSTO LTU Bengaluru cut the total demand to ₹42.04 crore from ₹118.33 crore floated in an August 2026 show-cause notice. The case sits under Section 74 of the Central and State GST laws, which deals with wrongful credit claims and can attract tax, interest, and penalties. JSW Dulux, formerly Akzo Nobel India, had filed documents within the earlier deadline. The company noted the order still allows further representations and that it is preparing the next response.",
+      "What does this mean?",
+      "Input tax credit is the mechanism that lets manufacturers offset GST paid on raw materials and services against tax on paint sales. When auditors disallow credits, working capital gets tied up in deposits and legal fees long before courts finish. A 64% reduction on paper eases the cash shock but leaves ₹42 crore on the table, so the fight is not over. For the broader consumer sector, aggressive state audits on FY21 books remain common as governments reconcile pandemic-era returns with post-reform data. Outcomes vary by evidence on invoices and supply chain documentation.",
+      "Why should I care?",
+      "Paint and home-improvement shoppers rarely see GST disputes, but sustained tax demands can delay brand spending or shift working capital away from promotions. Finance teams at listed FMCG and chemical names should stress-test FY21 credits still under review. Investors in JSW Dulux should treat the order as a partial win until a final appellate outcome. Watch whether the company discloses cash deposits, interest accrual, and any settlement talks in upcoming results.",
+    ],
+  },
+  {
     slug: "sahaj-solar-bess-manufacturing-gujarat-october-2026",
     title: "Sahaj Solar approved a 1.8 GWh battery factory in Gujarat",
     summary:
@@ -3662,6 +3758,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fm-sitharaman-global-capital-us-ai-october-2026": "policy",
+  "oyo-prism-ipo-debt-repayment-october-2026": "markets",
+  "ccpa-online-explosives-marketplaces-october-2026": "policy",
+  "jsw-dulux-gst-itc-demand-cut-october-2026": "policy",
   "sahaj-solar-bess-manufacturing-gujarat-october-2026": "companies",
   "even-healthcare-khosla-bengaluru-hospitals-october-2026": "companies",
   "india-coal-import-mandate-shelved-october-2026": "policy",
