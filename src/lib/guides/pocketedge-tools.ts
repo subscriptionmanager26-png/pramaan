@@ -31,7 +31,7 @@ export const pocketedgeTools: Guide[] = [
     topic: "Commodities",
     publishedAt: "2026-09-18T10:00:00+05:30",
     image:
-      "https://images.unsplash.com/photo-1610375461246-83c859bc4ea4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=1200&q=80",
     toolUrl: pocketedgeSitePath("/gold-tracker"),
     body: [
       "Consolidates gold-linked instruments for quick comparison.",
