@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "gold-loans-nbfc-double-digit-october-2026",
+    title: "Gold loans now make up a tenth of several large NBFC books",
+    summary:
+      "Reporting on 20 October 2026 said gold-backed credit is the fastest-growing slice at Bajaj Finance, HDB Financial Services, L&T Finance, and IIFL Finance, with the combined gold-loan share near 10% in the September 2026 quarter as lenders tilt toward secured lending while unsecured and microfinance portfolios stay under stress.",
+    category: "industry",
+    companyOrSector: "NBFCs / household credit",
+    publishedAt: "2026-10-20T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gold-loans-nbfc-double-digit-october-2026"),
+    keyTakeaways: [
+      "Gold loans accounted for nearly 10% of the combined loan book at Bajaj Finance, HDB Financial Services, L&T Finance, and IIFL Finance in the quarter ended September 2026, up from 9.3% in the prior quarter and 6.23% a year earlier, per coverage dated 20 October 2026.",
+      "The same report described gold lending as the fastest-growing segment for those NBFCs as they pivot toward jewellery-backed credit.",
+      "The shift comes while unsecured consumer and microfinance books face repayment stress, making collateralised gold a preferred growth lane.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, market data coverage said several large non-bank lenders are leaning harder on gold loans. Bajaj Finance, HDB Financial Services, L&T Finance, and IIFL Finance together carried gold-backed credit at close to 10% of their combined loan books in the September 2026 quarter. That share was about 9.3% in the June quarter and roughly 6.23% in the year-ago period. Reporters framed the segment as the fastest-growing line at those firms, even as unsecured personal loans and microfinance portfolios show strain from slower collections and tighter underwriting.",
+      "What does this mean?",
+      "When unsecured credit cools, NBFCs still need assets that clear internal risk committees. Gold loans use pledged jewellery as collateral, which lets lenders lend quickly without relying only on salary slips or bureau scores. Borrowers often use the cash for working capital, medical bills, or festival spending, then repay when cash flow improves. For households, it is a way to unlock value from idle gold without selling heirlooms. For lenders, growth in secured books can offset slower disbursements in card and personal loan lines, though auction risk rises if gold prices swing or borrowers default.",
+      "Why should I care?",
+      "If you borrow from an NBFC, compare gold-loan rates, processing fees, and auction clauses with personal loan quotes before pledging family jewellery. If you invest in NBFC stocks, read quarterly mix data: rising gold share can stabilise credit costs but may signal weaker appetite for unsecured growth. Watch RBI guidance on loan-to-value norms, gold price trends into Diwali, and whether smaller NBFCs copy the same pivot and compete away margins.",
+    ],
+  },
+  {
+    slug: "motorcycle-festive-discounts-october-2026",
+    title: "Bike makers are handing out festive bonuses to undo this year’s price hikes",
+    summary:
+      "Coverage on 20 October 2026 said TVS Motor, Hero MotoCorp, and Bajaj Auto are advertising cash discounts of roughly ₹6,000–₹11,000 on popular 125–250cc models after list prices rose up to about 8% in a year, as input-cost inflation meets a festive selling season.",
+    category: "industry",
+    companyOrSector: "Two-wheelers / consumers",
+    publishedAt: "2026-10-20T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("motorcycle-festive-discounts-october-2026"),
+    keyTakeaways: [
+      "TVS Motor’s Raider, launched near ₹95,600 a year ago, listed around ₹1,03,170 on 20 October 2026, with advertised festive savings up to ₹11,000, per the same-day report.",
+      "Hero MotoCorp offered up to ₹10,000 in cash benefits on the Xtreme 160R, while Bajaj Auto listed combined benefits of ₹6,000–₹8,900 on several Pulsar variants.",
+      "The discount wave sits in India’s 125–250cc segment, where commuters balance EMI affordability against sticker prices that moved up with commodity and freight costs in 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, reporting on India’s motorcycle market described a festive-season price contest. TVS Motor’s top Raider trim, launched about a year earlier near ₹95,600, now lists around ₹1,03,170, an increase of roughly 8%. For Diwali promotions, the company is advertising savings up to ₹11,000, enough to offset more than a year of list-price moves for eligible buyers. Hero MotoCorp is pitching up to ₹10,000 in cash benefits on the Xtreme 160R. Bajaj Auto is offering combined benefits between ₹6,000 and ₹8,900 on several Pulsar models. The battle sits in the 125–250cc band where young commuters and first-time buyers are sensitive to on-road EMI math.",
+      "What does this mean?",
+      "Manufacturers raised prices through 2026 as steel, aluminium, and logistics costs climbed, but festive volume still matters for plant utilisation and dealer payouts. Short-term cash bonuses let brands show a headline discount without permanently rolling back stickers. Dealers can clear inventory before new-year price lists arrive. Shoppers see a familiar pattern: pay more on paper, then negotiate festive extras. If commodities stay high, bonuses may shrink after October bookings even as underlying list prices remain elevated.",
+      "Why should I care?",
+      "If you are buying a bike this month, compare ex-showroom price, cash discount, insurance, and finance subvention in one worksheet. A ₹10,000 bonus does not help if the loan tenure or processing fee moved. If you follow auto stocks, treat festive schemes as a volume lever, not a margin gift: watch December discounting and January price circulars from Hero, Bajaj, and TVS. Track commodity monitors from SIAM and whether rural footfall data supports sustained two-wheeler demand after the festival rush.",
+    ],
+  },
+  {
+    slug: "tcs-best-buy-gcc-acquisition-october-2026",
+    title: "TCS bought Best Buy’s India tech centre to run retail AI work",
+    summary:
+      "Tata Consultancy Services said on 15 October 2026 it completed the purchase of Best Buy’s Bengaluru global capability centre, BBY Services India LLP, making the unit a wholly owned subsidiary under a multi-year deal to combine the US retailer’s domain knowledge with TCS delivery and AI engineering.",
+    category: "industry",
+    companyOrSector: "IT services / retail",
+    publishedAt: "2026-10-20T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tcs-best-buy-gcc-acquisition-october-2026"),
+    keyTakeaways: [
+      "TCS acquired a 100% interest in BBY Services India LLP, Best Buy’s India global capability centre, with closing on 15 October 2026 after conditions were met, per the company’s exchange filing cited on 20 October 2026.",
+      "The firms signed a multi-year strategic agreement pairing Best Buy’s retail and enterprise expertise with TCS technology and engineering delivery.",
+      "Legal advisers on the transaction included AZB & Partners, led by partner Bhuvana Veeraragavan, according to the same disclosure.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 15 October 2026, Tata Consultancy Services told exchanges it had completed the acquisition of BBY Services India LLP, the India global capability centre that supported US electronics retailer Best Buy. TCS now owns 100% of the partnership interest, and the entity is a wholly owned subsidiary. The deal follows a multi-year strategic agreement that pairs Best Buy’s retail operations know-how with TCS engineering, cloud, and analytics capacity. Reporting on 20 October 2026 noted AZB & Partners acted as legal counsel. The arrangement is part of a wider pattern in which Western retailers keep core brand and store decisions at home while scaling technology, data, and AI programmes through Indian captives that large IT vendors can operate.",
+      "What does this mean?",
+      "Retailers need AI-assisted forecasting, supply chain visibility, and customer analytics, but building and retaining large engineering teams in the United States is expensive. Selling or transferring an existing India centre to TCS gives Best Buy a specialist operator while preserving access to the same talent pool under service-level contracts. For TCS, owning the centre adds a captive revenue base and a reference story in omni-channel retail at a time when legacy outsourcing growth is uneven. Employees at the centre may see changed reporting lines and performance metrics even if day-to-day projects continue.",
+      "Why should I care?",
+      "If you work in Indian IT, GCC carve-outs and vendor takeovers are a hiring and compensation benchmark in Bengaluru. If you invest in TCS or peers, compare how much revenue comes from captives versus traditional client projects, and whether AI-native positioning wins new retail logos. Shoppers in India are indirect beneficiaries when backend systems improve availability and returns, but the near-term impact is corporate, not shelf price. Watch TCS disclosures on integration costs, Best Buy’s US capex commentary, and whether other retailers copy the model.",
+    ],
+  },
+  {
+    slug: "acme-solar-seci-peak-power-october-2026",
+    title: "ACME Solar signed a 300 MW deal to supply peak power with batteries",
+    summary:
+      "ACME Solar Holdings said it executed a power purchase agreement with SECI on 6 October 2026 to deliver 300 MW of assured peak power backed by 1,200 MWh of storage under the FDRE-IX programme at a tariff of ₹6 per unit through subsidiary ACME Greentech Twenty.",
+    category: "industry",
+    companyOrSector: "Renewable power",
+    publishedAt: "2026-10-20T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("acme-solar-seci-peak-power-october-2026"),
+    keyTakeaways: [
+      "The agreement with the Solar Energy Corporation of India covers 300 MW of peak power supported by 1,200 MWh of energy storage, effective 6 October 2026, per ACME’s 20 October 2026 disclosure.",
+      "The project sits under SECI’s Firm and Dispatchable Renewable Energy (FDRE)-IX tranche with a tariff of ₹6 per kilowatt-hour.",
+      "The deal targets evening and night-time demand with renewable generation paired to batteries rather than standalone daytime solar.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, ACME Solar Holdings announced it had signed a power purchase agreement with the Solar Energy Corporation of India (SECI) through wholly owned subsidiary ACME Greentech Twenty Pvt Ltd. The contract covers 300 megawatts of assured peak power backed by 1,200 megawatt-hours of energy storage. It falls under SECI’s Firm and Dispatchable Renewable Energy (FDRE)-IX tranche, carries a tariff of ₹6 per unit, and took effect on 6 October 2026. The structure is meant to supply electricity when evening and night demand spikes, not only when the sun is up.",
+      "What does this mean?",
+      "India’s renewable push is moving from lowest-cost daytime solar auctions toward projects that utilities can schedule like conventional plants. Pairing batteries with solar lets developers bid into peak slots and reduces curtailment risk when the grid is saturated at noon. For discoms, firm renewable blocks can replace part of expensive gas or coal peak generation if storage costs keep falling. For ACME, winning an FDRE tranche adds a long-dated revenue line and signals execution capability on storage integration, which is becoming a gating skill for new auctions.",
+      "Why should I care?",
+      "If you pay industrial or commercial power bills, peak tariffs and open-access renewable contracts may increasingly include storage-backed blocks. If you follow clean-energy stocks, compare ACME’s project pipeline with peers bidding into FDRE rounds. Households still benefit indirectly through cleaner peak supply and fewer shortages on hot evenings. Watch SECI’s next FDRE auction calendars, battery cost trends, and state transmission rules that decide whether stored solar can reach load centres without curtailment.",
+    ],
+  },
+  {
     slug: "delhi-airport-record-h1-traffic-october-2026",
     title: "Delhi airport handled 38.5 million passengers in the first half of this fiscal year",
     summary:
@@ -4022,6 +4118,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "gold-loans-nbfc-double-digit-october-2026": "policy",
+  "motorcycle-festive-discounts-october-2026": "markets",
+  "tcs-best-buy-gcc-acquisition-october-2026": "companies",
+  "acme-solar-seci-peak-power-october-2026": "policy",
   "delhi-airport-record-h1-traffic-october-2026": "markets",
   "upi-qr-kirana-cashless-shift-october-2026": "policy",
   "auto-components-global-jv-premium-ev-october-2026": "companies",
