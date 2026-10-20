@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Logo } from "@/components/Logo";
 import { SiteAccountMenu } from "@/components/site/SiteAccountMenu";
+import { openAgentSidebar } from "@/lib/agent/open-sidebar";
 
 const nav = [
   { href: "/news", label: "News" },
@@ -17,8 +18,12 @@ const nav = [
   { href: "/ai", label: "AI" },
 ] as const;
 
+const askAiClass =
+  "btn-ghost hidden min-w-[6.75rem] shrink-0 sm:inline-flex";
+
 export function SiteHeader() {
   const pathname = usePathname();
+  const onAi = pathname?.startsWith("/ai") ?? false;
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -67,8 +72,8 @@ export function SiteHeader() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`rounded-xl px-3 py-3 text-[15px] ${
-                        active ? "bg-accent-2 font-semibold text-accent" : "font-medium text-ink"
+                      className={`rounded-xl px-3 py-3 text-[15px] font-medium ${
+                        active ? "bg-accent-2 text-accent" : "text-ink"
                       }`}
                     >
                       {item.label}
@@ -99,54 +104,70 @@ export function SiteHeader() {
         open ? "bg-white" : "bg-white/90 backdrop-blur-md"
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4 sm:h-16 sm:px-6">
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink lg:hidden"
-          aria-label="Open menu"
-          onClick={() => setOpen(true)}
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
-            <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-        </button>
-
-        <div className="flex flex-1 justify-center lg:flex-none lg:justify-start">
-          <Logo />
+      <div
+        className="mx-auto grid h-14 max-w-6xl grid-cols-3 items-center gap-2 px-4 sm:h-16 sm:px-6 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-6"
+      >
+        <div className="flex items-center gap-1 justify-self-start">
+          {onAi ? (
+            <button
+              type="button"
+              className="inline-flex h-10 items-center justify-center rounded-lg px-2 text-[13px] font-semibold text-ink lg:hidden"
+              onClick={() => openAgentSidebar()}
+            >
+              Chats
+            </button>
+          ) : null}
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-ink lg:hidden"
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
+              <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </button>
+          <Logo className="hidden lg:inline-flex" />
         </div>
 
-        <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex" aria-label="Main">
-          {nav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`rounded-full px-3.5 py-2 text-[14px] transition-colors ${
-                  active ? "bg-accent-2 font-semibold text-accent" : "font-medium text-ink-2 hover:text-ink"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+        <div className="flex justify-center justify-self-center lg:justify-self-stretch">
+          <Logo className="lg:hidden" />
+          <nav className="hidden w-full items-center justify-center gap-1 lg:flex" aria-label="Main">
+            {nav.map((item) => {
+              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors ${
+                    active ? "bg-accent-2 text-accent" : "text-ink-2 hover:text-ink"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-end gap-2 justify-self-end lg:min-w-[10.5rem]">
           <SiteAccountMenu />
-          {!pathname?.startsWith("/ai") && (
-            <Link href="/ai" className="btn-ghost hidden sm:inline-flex">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
-                <path
-                  d="M8 2.5v2M8 11.5v2M2.5 8h2M11.5 8h2M4.2 4.2l1.4 1.4M10.4 10.4l1.4 1.4M4.2 11.8l1.4-1.4M10.4 5.6l1.4-1.4"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                />
-              </svg>
-              Ask AI
-            </Link>
-          )}
+          <Link
+            href="/ai"
+            className={`${askAiClass} ${onAi ? "pointer-events-none invisible" : ""}`}
+            aria-hidden={onAi}
+            tabIndex={onAi ? -1 : undefined}
+          >
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <path
+                d="M8 2.5v2M8 11.5v2M2.5 8h2M11.5 8h2M4.2 4.2l1.4 1.4M10.4 10.4l1.4 1.4M4.2 11.8l1.4-1.4M10.4 5.6l1.4-1.4"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+              />
+            </svg>
+            Ask AI
+          </Link>
         </div>
       </div>
 

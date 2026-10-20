@@ -8,6 +8,7 @@ import {
   AgentShellContext,
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
+import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
 import { mergeThreadLists } from "@/lib/agent/threads-from-messages";
 import { newThreadId } from "@/lib/agent/thread-id";
 import {
@@ -159,6 +160,12 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const [localThreads, setLocalThreads] = useState<AgentThreadSummary[]>([]);
   const [filesOpen, setFilesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    const open = () => setSidebarOpen(true);
+    window.addEventListener(AGENT_OPEN_SIDEBAR_EVENT, open);
+    return () => window.removeEventListener(AGENT_OPEN_SIDEBAR_EVENT, open);
+  }, []);
 
   const threads = useMemo(
     () => mergeThreadLists(serverThreads, localThreads),
@@ -319,18 +326,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
             </div>
           </>
         )}
-        <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">
-          <div className="flex items-center gap-2 border-b border-line/80 bg-white/80 px-3 py-2 backdrop-blur-sm lg:hidden">
-            <button
-              type="button"
-              className="btn-ghost px-3 py-1.5 text-xs"
-              onClick={() => setSidebarOpen(true)}
-            >
-              Chats
-            </button>
-          </div>
-          {children}
-        </div>
+        <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">{children}</div>
       </div>
     </AgentShellContext.Provider>
   );
