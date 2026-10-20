@@ -41,14 +41,30 @@ export function AgentConnections() {
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/connections", { headers });
-      const json = await res.json();
+      const text = await res.text();
+      let json: Record<string, unknown> = {};
+      try {
+        json = text ? (JSON.parse(text) as Record<string, unknown>) : {};
+      } catch {
+        setError(
+          res.status === 404
+            ? "Connections API is not available yet. The agent backend may need an update."
+            : "Could not load connections (invalid response from server).",
+        );
+        return;
+      }
       if (!res.ok) {
-        setError(json?.error?.message || json?.error || "Could not load connections.");
+        const err = json.error as { message?: string } | string | undefined;
+        setError(
+          (typeof err === "object" && err?.message) ||
+            (typeof err === "string" ? err : null) ||
+            "Could not load connections.",
+        );
         return;
       }
       setView(json as ConnectionsView);
     } catch {
-      setError("Could not load connections.");
+      setError("Could not load connections. Check your network and try again.");
     }
   }, []);
 

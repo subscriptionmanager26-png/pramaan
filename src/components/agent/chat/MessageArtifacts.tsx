@@ -3,10 +3,10 @@
 import { useCallback, useEffect, useState } from "react";
 
 import {
-  artifactDisplayName,
-  artifactDownloadPath,
-  type AgentArtifact,
-} from "@/lib/agent/artifacts";
+  ArtifactDownloadButton,
+  useArtifactDownloads,
+} from "@/components/agent/chat/ArtifactDownloadButton";
+import { artifactDisplayName, type AgentArtifact } from "@/lib/agent/artifacts";
 
 async function loadArtifacts(messageId: string, headers: Record<string, string>) {
   const res = await fetch(`/api/agent/messages/${encodeURIComponent(messageId)}/artifacts`, {
@@ -58,36 +58,46 @@ export function MessageArtifacts({
   items: AgentArtifact[];
   getAuthHeaders: () => Promise<Record<string, string>>;
 }) {
-  if (!items.length) return null;
+  const { download, activeKey, savedKey, error, setError } = useArtifactDownloads(getAuthHeaders);
 
-  async function download(path: string) {
-    const headers = await getAuthHeaders();
-    const res = await fetch(artifactDownloadPath(messageId, path), { headers });
-    if (!res.ok) return;
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = artifactDisplayName(path);
-    a.click();
-    URL.revokeObjectURL(url);
-  }
+  if (!items.length) return null;
 
   const shown = items.slice(0, 4);
   return (
-    <div className="mt-3 flex flex-wrap items-center gap-1.5">
-      {shown.map((item) => (
-        <button
-          key={item.path}
-          type="button"
-          onClick={() => void download(item.path)}
-          className="flex max-w-60 items-center gap-1.5 rounded-lg border border-line bg-white px-2.5 py-1.5 text-xs text-ink-2 transition-colors hover:bg-paper-2 hover:text-ink"
-        >
-          <span className="truncate font-medium">{artifactDisplayName(item.path)}</span>
-        </button>
-      ))}
+    <div className="mt-3 space-y-2">
+      <p className="text-meta">Files from this reply</p>
+      {error ? (
+        <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs text-red-800" role="alert">
+          {error}
+          <button type="button" className="ml-2 font-semibold underline" onClick={() => setError(null)}>
+            Dismiss
+          </button>
+        </p>
+      ) : null}
+      <ul className="space-y-1.5">
+        {shown.map((item) => (
+          <li
+            key={item.path}
+            className="flex items-center gap-2 rounded-lg border border-line bg-white px-2.5 py-2"
+          >
+            <span
+              className="min-w-0 flex-1 truncate text-xs font-medium text-ink"
+              title={artifactDisplayName(item.path)}
+            >
+              {artifactDisplayName(item.path)}
+            </span>
+            <ArtifactDownloadButton
+              messageId={messageId}
+              path={item.path}
+              activeKey={activeKey}
+              savedKey={savedKey}
+              onDownload={download}
+            />
+          </li>
+        ))}
+      </ul>
       {items.length > shown.length ? (
-        <span className="text-xs text-ink-3">+{items.length - shown.length} more in Files</span>
+        <p className="text-xs text-ink-3">+{items.length - shown.length} more in Files (sidebar)</p>
       ) : null}
     </div>
   );

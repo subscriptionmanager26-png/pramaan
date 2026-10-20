@@ -1,8 +1,12 @@
 "use client";
 
-import { formatBytes } from "@/lib/agent/file-limits";
-import { artifactDisplayName, artifactDownloadPath } from "@/lib/agent/artifacts";
+import {
+  ArtifactFileRow,
+  artifactMetaLine,
+  useArtifactDownloads,
+} from "@/components/agent/chat/ArtifactDownloadButton";
 import type { AgentArtifact } from "@/lib/agent/artifacts";
+import { formatBytes } from "@/lib/agent/file-limits";
 import type { JobAttachment } from "@/lib/agent/types";
 
 export function AgentFilesPanel({
@@ -20,6 +24,8 @@ export function AgentFilesPanel({
   agentArtifacts: { messageId: string; artifact: AgentArtifact }[];
   getAuthHeaders: () => Promise<Record<string, string>>;
 }) {
+  const { download, activeKey, savedKey, error, setError } = useArtifactDownloads(getAuthHeaders);
+
   if (!open) return null;
 
   const byId = new Map<string, JobAttachment>();
@@ -32,19 +38,6 @@ export function AgentFilesPanel({
     messageId,
     artifact,
   }));
-
-  async function downloadArtifact(messageId: string, path: string) {
-    const headers = await getAuthHeaders();
-    const res = await fetch(artifactDownloadPath(messageId, path), { headers });
-    if (!res.ok) return;
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = artifactDisplayName(path);
-    a.click();
-    URL.revokeObjectURL(url);
-  }
 
   return (
     <>
@@ -61,27 +54,33 @@ export function AgentFilesPanel({
         <div className="flex-1 overflow-y-auto p-3">
           {!uploads.length && !artifactRows.length ? (
             <p className="text-sm text-ink-2">
-              Files you attach in chat and files the agent creates appear here.
+              Files you attach in chat and files the agent creates appear here. Use <strong>Download</strong> on each
+              agent file — nothing saves until you click it.
             </p>
           ) : (
             <div className="space-y-4">
+              {error ? (
+                <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs text-red-800" role="alert">
+                  {error}
+                  <button type="button" className="ml-2 font-semibold underline" onClick={() => setError(null)}>
+                    Dismiss
+                  </button>
+                </p>
+              ) : null}
               {artifactRows.length > 0 && (
                 <div>
                   <p className="px-1 text-meta">From the agent</p>
                   <ul className="mt-2 space-y-2">
                     {artifactRows.map(({ key, messageId, artifact }) => (
                       <li key={key}>
-                        <button
-                          type="button"
-                          onClick={() => void downloadArtifact(messageId, artifact.path)}
-                          className="w-full rounded-xl border border-line px-3 py-2 text-left text-sm text-ink transition-colors hover:bg-paper-2"
-                        >
-                          <p className="truncate font-medium">{artifactDisplayName(artifact.path)}</p>
-                          <p className="text-xs text-ink-2">
-                            {artifact.kind.toUpperCase()}
-                            {artifact.sizeBytes != null ? ` · ${formatBytes(artifact.sizeBytes)}` : ""}
-                          </p>
-                        </button>
+                        <ArtifactFileRow
+                          messageId={messageId}
+                          artifact={artifact}
+                          activeKey={activeKey}
+                          savedKey={savedKey}
+                          onDownload={download}
+                          meta={artifactMetaLine(artifact)}
+                        />
                       </li>
                     ))}
                   </ul>
