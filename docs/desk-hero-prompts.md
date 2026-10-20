@@ -696,6 +696,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Circuit board / avionics motif |
 | Metaphor left | Hourglass / waiting queue |
 
+### `delhi-airport-record-h1-traffic-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Air travel demand rebounds at India’s busiest hub |
+| Subject right | Airport terminal silhouette |
+| Metaphor left | Rising passenger flow chevrons |
+
+### `upi-qr-kirana-cashless-shift-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | QR UPI replaces cash change at small shops |
+| Subject right | Kirana storefront (generic) |
+| Metaphor left | QR tile + fading coin jar |
+
+### `auto-components-global-jv-premium-ev-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Local suppliers buy EV/ADAS tech via JVs |
+| Subject right | Gear / motor motif |
+| Metaphor left | Partnership pipes into battery + sensor icons |
+
+### `canara-bank-yields-festive-credit-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Bond MTM pain vs festive retail loan demand |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Falling gilt curve + rising home/car loan icons |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

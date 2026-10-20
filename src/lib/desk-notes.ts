@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "delhi-airport-record-h1-traffic-october-2026",
+    title: "Delhi airport handled 38.5 million passengers in the first half of this fiscal year",
+    summary:
+      "GMR Airports data cited on 20 October 2026 showed Indira Gandhi International Airport passenger traffic rose 5% to 38.5 million in April–September 2026, with domestic flyers at 28.1 million and international at 10.4 million, after flight disruptions and runway work weighed on the year-ago half.",
+    category: "industry",
+    companyOrSector: "Aviation / Delhi airports",
+    publishedAt: "2026-10-20T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("delhi-airport-record-h1-traffic-october-2026"),
+    keyTakeaways: [
+      "Delhi International Airport Ltd, run by GMR, reported 38.5 million passengers in the first half of fiscal 2026–27 versus 36.7 million in the same period a year earlier, per coverage on 20 October 2026.",
+      "Domestic traffic reached 28.1 million and international traffic 10.4 million; air traffic movements rose 6.9% to 233,331 in the half.",
+      "GMR said monthly traffic averaged about 6.5 million and called the half a record for the airport, which handled 78.7 million passengers in full-year 2025–26 across three terminals and four runways.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, reporting on Delhi’s main airport cited GMR Airports regulatory filings showing passenger traffic at Indira Gandhi International Airport rose 5% to 38.5 million in the six months ended September 2026. Domestic travellers accounted for 28.1 million of the total and international passengers 10.4 million. Air traffic movements climbed 6.9% to 233,331 in the half. The airport is operated by Delhi International Airport Ltd, part of GMR Airports. In the first half of 2025–26, traffic had slipped to 36.7 million after temporary flight curbs, geopolitical disruptions, and upgrade work on runway 10/28. GMR said average monthly traffic was about 6.5 million and described the latest half as the highest ever for the April–September window.",
+      "What does this mean?",
+      "When runway closures and airspace limits fade, demand shows up quickly in the headline count. Domestic leisure and business trips are doing most of the lifting, while international volumes are recovering alongside wider network additions. For airlines, more movements at India’s busiest hub mean better aircraft utilisation if slots are available, but also ground-handling pressure during peak hours. The contrast with last year’s weak half is a reminder that airport numbers are as much about operability as about macro sentiment.",
+      "Why should I care?",
+      "If you fly from Delhi, expect busy security and parking lines when monthly traffic sits near 6.5 million. Corporate travel planners should compare on-time performance across terminals during the festive rush. Investors watching GMR or airline yields can treat the rebound as a real-demand signal, not only a low-base effect, but should still cross-check with on-time data and fare trends into the winter schedule. Watch whether international growth keeps pace as carriers add capacity and whether any new runway or terminal projects slip back into the traffic story.",
+    ],
+  },
+  {
+    slug: "upi-qr-kirana-cashless-shift-october-2026",
+    title: "UPI and QR codes are replacing the kirana shop’s change-and-candy jar",
+    summary:
+      "A 20 October 2026 essay in the business press traced how person-to-merchant UPI payments, accelerated by static QR codes from 2015 onward, let small shops skip card terminals and coin shortages, with merchants citing fewer cash-handling costs even as policymakers debate merchant discount rates.",
+    category: "industry",
+    companyOrSector: "Payments / retail",
+    publishedAt: "2026-10-20T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("upi-qr-kirana-cashless-shift-october-2026"),
+    keyTakeaways: [
+      "The piece dated 20 October 2026 described how kirana stores and pharmacies once handed customers toffees when exact change was missing, a habit that faded as digital payments spread.",
+      "Static QR codes, widely adopted around 2015, let tea stalls and tyre shops accept UPI without renting point-of-sale machines or managing card paperwork.",
+      "The article framed today’s merchant discount rate debate against that baseline, arguing small merchants moved because cash handling, handwritten ledgers, and connectivity failures on card terminals were costly.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, a long-form business essay revisited how India’s person-to-merchant payments changed neighbourhood retail. For decades, kirana owners kept jars of candies to settle bills when they lacked coins. Customers without exact change would buy less, take informal credit, or accept sweets instead of rupees. Card acceptance required paperwork, terminal rentals, patchy connectivity, and merchant fees that made little sense on a ₹20 tea sale. The essay pointed to static QR codes, which took off around 2015, as the unlock: a printed code linked to the shopkeeper’s bank account, readable by any UPI app. Tea sellers, vegetable vendors, and small workshops could display one code and receive instant bank transfers without a dedicated device. UPI’s subsequent decade of growth made that workflow normal in cities and towns.",
+      "What does this mean?",
+      "Consumer behaviour shifted because the friction moved from the buyer to the network. Shoppers no longer need exact cash; merchants no longer run to the bank with bags of notes each evening. The piece argued that today’s argument over merchant discount rates on UPI should be read against that history: many micro-merchants joined because cash was expensive, not because subsidies were generous. If policymakers reintroduce fees, the question is whether small sellers revert partially to cash or absorb costs through higher sticker prices.",
+      "Why should I care?",
+      "If you run a small shop, compare total cost of cash handling, missed sales from change shortages, and any new UPI charges before switching back to notes. Households budgeting festive spends should remember that digital trails make informal credit harder, which can be good for discipline or bad for flexibility. Investors in payments and quick-commerce should watch NPCI volume data, any MDR rule changes, and whether rural kirana adoption keeps climbing after the candy-jar era ends.",
+    ],
+  },
+  {
+    slug: "auto-components-global-jv-premium-ev-october-2026",
+    title: "Indian auto parts firms are signing global JVs to catch up on EV and ADAS tech",
+    summary:
+      "Reporting on 20 October 2026 said Sona Comstar, Gabriel India, and Varroc Engineering announced partnerships with Denso, HL Klemove, Forvia, Tolyy Optronics, and Forsee Power to localise powertrains, ADAS, seating, cockpits, and battery packs as carmakers push premium and electric models in India.",
+    category: "industry",
+    companyOrSector: "Auto components",
+    publishedAt: "2026-10-20T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("auto-components-global-jv-premium-ev-october-2026"),
+    keyTakeaways: [
+      "Sona Comstar tied up with Japan’s Denso on automotive powertrain technologies, Gabriel India partnered with South Korea’s HL Klemove on ADAS and electronics and with France’s Forvia on advanced seating, per the 20 October 2026 report.",
+      "Varroc Engineering linked with China’s Suzhou Tolyy Optronics to localise digital cockpit displays and with France’s Forsee Power on electric-vehicle battery packs.",
+      "Industry commentator Avik Chattopadhyay told reporters the domestic component sector must compete on proprietary design, not only manufacturing scale, as global OEMs expand India sourcing.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, New Delhi–based coverage said at least three listed Indian auto component makers unveiled foreign partnerships in quick succession to upgrade technology portfolios. Sona Comstar announced a collaboration with Japan’s Denso on powertrain systems suited to hybrids and electrics. Gabriel India signed with South Korea’s HL Klemove for advanced driver assistance and automotive electronics, and with France’s Forvia for premium seating architectures. Varroc Engineering paired with Suzhou Tolyy Optronics of China to build local capacity for digital cockpit displays aimed at global vehicle programmes, and with France’s Forsee Power on battery packs for electric models. The deals span electric and hybrid drivetrains, ADAS sensors and software, cockpit electronics, and energy storage. Joint ventures are familiar in the sector, but the clustering this fiscal year signals urgency as Indian carmakers launch richer trims and battery variants.",
+      "What does this mean?",
+      "Global automakers still want India as a sourcing hub, yet they increasingly specify electronics and lightweight modules that domestic suppliers cannot copy overnight. Partnerships transfer design rules, testing protocols, and supplier qualifications faster than solo R&D. For car buyers, the link shows up later as safer driver-assist features, better seats, and more localized battery packs on mid-priced models. For vendors, margin pressure on commodity castings pushes them toward engineered content where pricing is stickier.",
+      "Why should I care?",
+      "If you invest in auto ancillaries, compare which names are buying technology versus selling metal. Fleet and retail buyers of EVs and hybrids should ask dealers how much content is locally validated, because recall and service networks depend on it. Watch quarterly order books from Sona, Gabriel, and Varroc, plus OEM launch calendars for ADAS trims. Policy shifts on China sourcing or battery localisation could speed or slow these JVs.",
+    ],
+  },
+  {
+    slug: "canara-bank-yields-festive-credit-october-2026",
+    title: "Canara Bank is watching bond losses even as it bets on festive home and car loans",
+    summary:
+      "Managing director Brajesh Kumar Singh told Mint on 20 October 2026 that rising government bond yields could mean mark-to-market provisioning over the next six months, even as the lender expects strong festive demand for housing and vehicle credit after September-quarter net profit rose 8.4% to ₹5,175 crore.",
+    category: "industry",
+    companyOrSector: "Banking",
+    publishedAt: "2026-10-20T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("canara-bank-yields-festive-credit-october-2026"),
+    keyTakeaways: [
+      "Singh said the 10-year government bond yield moved from about 6.75% in June to roughly 7.38% by October 2026 amid oil prices and inflation, creating potential MTM risk on Canara’s investment book.",
+      "Canara Bank reported ₹5,175 crore net profit for the quarter ended September 2026, up 8.4% year on year, with net interest income up 20.39% to ₹11,005 crore.",
+      "Treasury income fell 68.48% to ₹499 crore and profit on sale of investments dropped 87.43% to ₹153 crore versus the year-ago quarter, while Singh still flagged upbeat festive pipelines for home and auto loans.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, Mint quoted Canara Bank managing director and chief executive Brajesh Kumar Singh on two forces pulling at the lender. Government bond yields have climbed as crude prices and inflation worries linger, and the Reserve Bank of India’s recent rate increase added pressure. Singh said the 10-year benchmark moved from about 6.75% in June to roughly 7.38%, which can reduce the market value of fixed-income securities banks hold and trigger mark-to-market charges depending on accounting buckets. He plans to assess the impact over the next six months and noted any hit would be small relative to a balance sheet near ₹30 trillion. In the September 2026 quarter, Canara reported net profit of ₹5,175 crore, up 8.4% year on year, while net interest income rose 20.39% to ₹11,005 crore. Treasury income slid 68.48% to ₹499 crore and profit on investment sales fell 87.43% to ₹153 crore. Despite that trading pain, Singh said he expects brisk festive-season demand for housing and vehicle loans.",
+      "What does this mean?",
+      "When yields rise, banks earn more on new loans but can book losses on older bonds sitting in available-for-sale portfolios. Public-sector lenders still rely on treasury gains in weak credit cycles, so a yield spike shows up quickly in the P&L even while retail demand is healthy. Singh’s festive loan comment fits broader industry chatter that Diwali footfall is translating into EMI-led purchases. The net story is split: core lending margins benefit from higher rates, securities books take a interim knock.",
+      "Why should I care?",
+      "If you are shopping for a home or car loan this season, compare public-sector bank festive schemes against private lenders, and check whether rates are linked to repo benchmarks that already repriced. Fixed-deposit savers may see slightly better offers as banks hunt stable funding. Equity investors in PSU banks should read treasury line items alongside loan growth, not just net interest margin headlines. Watch the 10-year yield into the RBI’s next policy review and whether Canara redeploys liquidity into shorter-duration paper to limit MTM swings.",
+    ],
+  },
+  {
     slug: "trai-uniform-otp-format-october-2026",
     title: "TRAI wants every bank OTP text to look the same so scams stand out",
     summary:
@@ -3926,6 +4022,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "delhi-airport-record-h1-traffic-october-2026": "markets",
+  "upi-qr-kirana-cashless-shift-october-2026": "policy",
+  "auto-components-global-jv-premium-ev-october-2026": "companies",
+  "canara-bank-yields-festive-credit-october-2026": "policy",
   "trai-uniform-otp-format-october-2026": "policy",
   "ed-whatsapp-stock-manipulation-october-2026": "policy",
   "festive-temporary-manufacturing-jobs-october-2026": "markets",
