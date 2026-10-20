@@ -8,6 +8,7 @@ import { AgentComposer } from "@/components/agent/chat/AgentComposer";
 import { ChatTurn } from "@/components/agent/chat/AgentChatMessages";
 import { AgentFilesPanel } from "@/components/agent/chat/AgentFilesPanel";
 import { ScrollAnchor } from "@/components/agent/chat/ScrollAnchor";
+import { useThreadArtifacts } from "@/components/agent/chat/MessageArtifacts";
 import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { formatBytes, MAX_FILE_BYTES } from "@/lib/agent/file-limits";
 import { isValidThreadId, newThreadId } from "@/lib/agent/thread-id";
@@ -21,20 +22,20 @@ const SUGGESTIONS = [
   "Explain the latest RBI stance on rates",
 ];
 
-async function authHeaders() {
-  const supabase = getPocketedgeSupabase();
-  const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
-  if (!token) throw new Error("not_signed_in");
-  return { Authorization: `Bearer ${token}` };
-}
-
 export function PramaanAgentChat() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { filesOpen, setFilesOpen, refreshThreads, upsertThread } = useAgentShell();
   const threadParam = searchParams.get("t");
   const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "main";
+
+  const authHeaders = useCallback(async () => {
+    const supabase = getPocketedgeSupabase();
+    const { data } = await supabase.auth.getSession();
+    const token = data.session?.access_token;
+    if (!token) throw new Error("not_signed_in");
+    return { Authorization: `Bearer ${token}` };
+  }, []);
 
   useEffect(() => {
     if (threadParam === "new") {
@@ -207,6 +208,7 @@ export function PramaanAgentChat() {
       const final = await streamMessage(msg.id, headers);
       setMessages((m) => m.map((x) => (x.id === final.id ? final : x)));
       await loadThread(headers);
+      await refreshArtifacts();
       refreshThreads();
       return true;
     } catch (e) {
@@ -234,6 +236,7 @@ export function PramaanAgentChat() {
   }
 
   const thread = useMemo(() => [...messages].reverse(), [messages]);
+  const { byMessage: artifactsByMessage, refresh: refreshArtifacts } = useThreadArtifacts(messages, authHeaders);
   const threadUploads = useMemo(
     () => [...new Map(thread.flatMap((m) => m.attachments ?? []).map((a) => [a.id, a])).values()],
     [thread],
@@ -294,7 +297,14 @@ export function PramaanAgentChat() {
           ) : (
             <div className="mx-auto max-w-3xl space-y-12 py-2">
               {thread.map((message) => (
-                <ChatTurn key={message.id} message={message} orders={orders} onDecide={onDecide} />
+                <ChatTurn
+                  key={message.id}
+                  message={message}
+                  orders={orders}
+                  onDecide={onDecide}
+                  artifacts={artifactsByMessage[message.id]}
+                  getAuthHeaders={authHeaders}
+                />
               ))}
               <ScrollAnchor version={scrollKey} />
             </div>
@@ -322,6 +332,10 @@ export function PramaanAgentChat() {
         onClose={() => setFilesOpen(false)}
         threadUploads={threadUploads}
         library={fileLibrary}
+        agentArtifacts={messages.flatMap((m) =>
+          (artifactsByMessage[m.id] ?? []).map((a) => ({ messageId: m.id, artifact: a })),
+        )}
+        getAuthHeaders={authHeaders}
       />
     </div>
   );

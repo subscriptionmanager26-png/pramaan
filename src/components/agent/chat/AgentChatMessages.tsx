@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 
 import { AgentBlocks } from "@/components/agent/AgentBlocks";
+import { MessageArtifacts } from "@/components/agent/chat/MessageArtifacts";
+import type { AgentArtifact } from "@/lib/agent/artifacts";
 import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { formatBytes } from "@/lib/agent/file-limits";
 
@@ -111,10 +113,14 @@ export function AssistantMessage({
   message,
   orders,
   onDecide,
+  artifacts,
+  getAuthHeaders,
 }: {
   message: AgentMessage;
   orders?: Record<string, OrderState>;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+  artifacts?: AgentArtifact[];
+  getAuthHeaders?: () => Promise<Record<string, string>>;
 }) {
   const working = message.status === "working";
   const steps = message.steps ?? [];
@@ -142,6 +148,9 @@ export function AssistantMessage({
           {message.error || "The agent could not finish this message."}
         </div>
       )}
+      {artifacts?.length && getAuthHeaders ? (
+        <MessageArtifacts messageId={message.id} items={artifacts} getAuthHeaders={getAuthHeaders} />
+      ) : null}
       <CopyReply message={message} />
     </div>
   );
@@ -151,15 +160,25 @@ export function ChatTurn({
   message,
   orders,
   onDecide,
+  artifacts,
+  getAuthHeaders,
 }: {
   message: AgentMessage;
   orders?: Record<string, OrderState>;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+  artifacts?: AgentArtifact[];
+  getAuthHeaders?: () => Promise<Record<string, string>>;
 }) {
   return (
     <section className="flex flex-col gap-5">
       <UserMessage text={message.text} attachments={message.attachments} />
-      <AssistantMessage message={message} orders={orders} onDecide={onDecide} />
+      <AssistantMessage
+        message={message}
+        orders={orders}
+        onDecide={onDecide}
+        artifacts={artifacts}
+        getAuthHeaders={getAuthHeaders}
+      />
     </section>
   );
 }
