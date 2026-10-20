@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bajaj-finance-multi-loan-tightening-october-2026",
+    title: "Bajaj Finance will lend less to people juggling three or more loans",
+    summary:
+      "On its 19 October 2026 earnings call, managing director Rajeev Jain said Bajaj Finance plans to cut new loans to customers with three or more lending relationships from about 7% of originations today to 3.5% by March 2027, while booking an extra ₹337 crore macro provision as unsecured portfolios face oil and inflation stress.",
+    category: "industry",
+    companyOrSector: "Consumer credit / NBFCs",
+    publishedAt: "2026-10-20T06:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bajaj-finance-multi-loan-tightening-october-2026"),
+    keyTakeaways: [
+      "Rajeev Jain said on 19 October 2026 that loans to borrowers with three or more credit relationships will fall from roughly 7% of new originations to 3.5% within six months, down from 14% earlier.",
+      "Bajaj Finance booked a ₹337 crore macro-economic provision in the September 2026 quarter, lifting total loan losses and provisions to ₹2,166 crore versus ₹2,080 crore a year earlier.",
+      "Stage 2 and 3 assets rose to 2.02% of loans from 1.87% sequentially, including a ₹1,047 crore jump in gold loans tied to short-tenor schemes regulators no longer allow.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, Bajaj Finance Ltd reported September-quarter results and used the earnings call to tighten underwriting on India's largest unsecured book. Managing director Rajeev Jain said the lender will halve the share of new loans going to customers who already have three or more personal loans. That bucket fell from 14% of originations to 7% and is targeted at 3.5% by March 2027. Jain called multiple unsecured relationships a single metric that still troubles credit teams because those borrowers show higher default tendencies. The company also made a ₹337 crore macro-economic provision, citing stress tests on unsecured and non-salaried portfolios that could feel higher oil prices and inflation. Reported loan losses and provisions reached ₹2,166 crore for the quarter. Stage 2 and 3 assets climbed to 2.02% of loans from 1.87%, partly because gold loans on discontinued short-tenor schemes moved into stage 2.",
+      "What does this mean?",
+      "Non-bank lenders grew quickly by offering instant personal loans through apps and dealer tie-ups. When the Reserve Bank of India worries about household leverage, the first response inside large NBFCs is to starve the riskiest origination mix while profits still look healthy. Cutting multi-loan customers is a volume trade for lower future credit costs. The extra provision signals management does not want to surprise investors if festive-season borrowers slip on repayments. Gold loans are collateralised, but regulatory changes on tenor and loan-to-value can push paper into stage 2 even before defaults appear. Other consumer lenders may copy the three-loan screen if their own early delinquency ticks up.",
+      "Why should I care?",
+      "If you rely on stacked personal loans or credit lines, expect tighter approvals and smaller ticket sizes from Bajaj Finance and peers that follow. Shop for consolidation before applying for another top-up. If you invest in NBFC shares, treat strong net profit growth as less important than origination mix and provision lines this quarter. Watch whether rivals disclose similar multi-loan caps, RBI speeches on retail unsecured credit, and Bajaj Finance's March 2027 target for the 3.5% share.",
+    ],
+  },
+  {
+    slug: "ultratech-cement-fuel-cost-pressure-october-2026",
+    title: "UltraTech says petcoke and diesel costs are harder to predict than the West Asia war",
+    summary:
+      "After posting September-quarter results on 19 October 2026, UltraTech Cement's finance chief Atul Daga warned that petcoke and industrial diesel prices remain volatile while the Middle East conflict drags on, squeezing margins even as volumes grow and leaving smaller cement rivals with less room to absorb the same fuel bill.",
+    category: "industry",
+    companyOrSector: "Cement / construction inputs",
+    publishedAt: "2026-10-20T06:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ultratech-cement-fuel-cost-pressure-october-2026"),
+    keyTakeaways: [
+      "CFO Atul Daga said on 19 October 2026 that forecasting West Asia outcomes feels harder than rolling dice after petcoke prices shot up and industrial diesel hit record highs.",
+      "UltraTech's consolidated net profit rose about 21% year on year to roughly ₹1,494 crore in Q2 FY27 but missed Bloomberg's consensus near ₹1,604 crore as fuel, freight, and raw material costs climbed.",
+      "A weak monsoon kept construction activity going in the September 2026 quarter, lifting volumes even as input costs rose, a mix Daga said smaller cement makers struggle to pass through.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, UltraTech Cement Ltd, India's largest cement producer, reported September-quarter earnings and hosted an analyst call dominated by fuel anxiety. Chief financial officer Atul Daga said petcoke prices had shot through the roof and industrial diesel, used in mining and trucking, sits at an all-time high after repeated government increases. He joked that predicting the West Asia crisis outcome is harder than rolling dice, after the company had hoped crude would ease last quarter. Consolidated net profit attributable to shareholders rose about 21% year on year to roughly ₹1,493.8 crore, but that fell short of a Bloomberg poll near ₹1,604 crore because freight and raw materials also inflated. Volumes grew on a weak monsoon that kept sites active longer than usual, yet margin pressure persisted. Shares closed about 2.4% lower on the day while the Nifty fell roughly 1.1%.",
+      "What does this mean?",
+      "Cement kilns burn petcoke and coal to reach clinker temperatures, then move tonnes by diesel trucks. When war risk keeps global fuel elevated, the cost hits before builders renegotiate project budgets. UltraTech's scale lets it mix imports, petcoke, and alternative fuels and push price increases with a lag. Regional players with thinner balance sheets feel the same diesel and petcoke invoices without the same pricing power, which is why Daga said the industry's smaller names face a tougher absorption problem. Housing demand can stay firm while profits wobble if input inflation outruns announced cement price hikes.",
+      "Why should I care?",
+      "If you are building or buying a home, watch whether local dealers raise cement bags again after this cost spike, especially outside metro markets where logistics matter. Contractors should lock quotes quickly when diesel surcharges move. Investors in mid-cap cement names should stress-test margins against petcoke rather than only volume growth. Track weekly petcoke import prices, government diesel revisions, and whether UltraTech and peers announce another round of cement price increases into the festive construction season.",
+    ],
+  },
+  {
+    slug: "india-solar-transmission-curtailment-october-2026",
+    title: "India's solar boom is hitting grid bottlenecks and fewer new auctions",
+    summary:
+      "Reporting on 19 October 2026 said renewable project awards slowed to about 4.7 gigawatts by mid-August in FY27 from far higher levels in prior years, as transmission congestion and solar curtailment force operators to idle panels even when the sun is strong.",
+    category: "industry",
+    companyOrSector: "Power / renewables",
+    publishedAt: "2026-10-20T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-solar-transmission-curtailment-october-2026"),
+    keyTakeaways: [
+      "India reached about 168 gigawatts of installed solar capacity by 31 August 2026 after adding nearly 50 gigawatts in 2025, but grid operators increasingly curtail solar output when lines are congested.",
+      "Icra data cited on 19 October 2026 show only 4.7 gigawatts of renewable capacity awarded by 10 August in FY27 versus 40.6 gigawatts in FY25 and 47.3 gigawatts in FY24.",
+      "Transmission build-out is rising, with 4,301 circuit kilometres added in FY26, while executives such as Resonia CEO Prashant Sinha flagged congestion and balancing stress without calling the grid unstable.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, coverage of India's clean-power push described a new bottleneck. Solar installations crossed 168 gigawatts by 31 August 2026 after a record build year, yet the transmission network cannot always move midday solar power to demand centres. Grid operators have asked some plants to back off generation, known as curtailment, even in bright weather, because lines are full or frequency must be kept in band. Rating agency Icra figures quoted in the story show renewable auctions slowing: only about 4.7 gigawatts awarded by 10 August in fiscal 2027, down from 40.6 gigawatts in fiscal 2025 and 47.3 gigawatts in fiscal 2024. At the same time, India added 4,301 circuit kilometres of transmission lines in fiscal 2026, signalling policy focus is shifting toward wires and substations, not only panels.",
+      "What does this mean?",
+      "Solar projects earn when electrons reach paying customers. Curtailment eats revenue without a weather excuse, which makes bankers cautious on new gigawatt-scale bids. Developers then offer fewer ultra-low tariffs that assumed ever-cheaper modules and unlimited grid access. The slowdown in awarded capacity is a market response to real infrastructure lag, not a collapse in climate goals. Storage and hybrid tenders help, but batteries remain expensive relative to the cancelled or rebid projects seen elsewhere in 2026. Until more interstate corridors and storage come online, the pace of fresh solar auctions may stay uneven even as rooftops and legacy projects keep generating.",
+      "Why should I care?",
+      "Households still benefit from cheaper solar power where it reaches the grid, but industrial buyers should check whether their open-access solar contracts include curtailment risk. If you work in renewables or transmission EPC, the next growth leg is wires, substations, and storage more than another record module import year. Policy watchers should compare central auction calendars with state transmission plans. Track quarterly curtailment statistics, major line commissioning dates, and whether FY27 award volumes recover after the mid-August trough.",
+    ],
+  },
+  {
     slug: "fm-sitharaman-global-capital-us-ai-october-2026",
     title: "Nirmala Sitharaman warned that global money is crowding into US and AI bets",
     summary:
@@ -3758,6 +3830,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bajaj-finance-multi-loan-tightening-october-2026": "policy",
+  "ultratech-cement-fuel-cost-pressure-october-2026": "companies",
+  "india-solar-transmission-curtailment-october-2026": "policy",
   "fm-sitharaman-global-capital-us-ai-october-2026": "policy",
   "oyo-prism-ipo-debt-repayment-october-2026": "markets",
   "ccpa-online-explosives-marketplaces-october-2026": "policy",
