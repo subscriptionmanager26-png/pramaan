@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "trai-uniform-otp-format-october-2026",
+    title: "TRAI wants every bank OTP text to look the same so scams stand out",
+    summary:
+      "Reporting on 20 October 2026 said the Telecom Regulatory Authority of India is discussing a standard template for one-time password SMS messages, including clearer sender labels and validity windows, after financial fraud complaints on the national cybercrime portal jumped to 2.4 million in 2025 from 262,000 in 2021.",
+    category: "industry",
+    companyOrSector: "Telecom / digital payments",
+    publishedAt: "2026-10-20T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("trai-uniform-otp-format-october-2026"),
+    keyTakeaways: [
+      "People familiar with TRAI talks told reporters on 20 October 2026 that the regulator has met telecom operators about a common OTP SMS format and may issue a consultation paper.",
+      "The proposed template could spell out why the OTP was sent, who sent it, and how long the code stays valid, instead of letting each bank or app use a different layout.",
+      "Home ministry data cited in the story put financial fraud complaints on the National Cyber Crime Reporting Portal at 2.402 million in 2025 versus 262,000 in 2021, with reported amounts rising to about ₹22,495 crore from ₹551 crore.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, coverage of India's digital fraud fight said the Telecom Regulatory Authority of India is weighing a single layout for one-time password text messages. Two people aware of the talks said TRAI has discussed the idea with Bharti Airtel, Reliance Jio, and Vodafone Idea through industry forums. Banks, payment apps, and e-commerce sites currently send OTPs in different styles. Some codes pop up in the lock-screen preview while others hide inside the full message, which makes it harder for users to spot a fake alert that mimics a familiar brand. The regulator is also expected to publish a formal consultation paper, according to the same sources. Queries to TRAI and the Cellular Operators Association of India had not drawn a public response by press time.",
+      "What does this mean?",
+      "OTP texts are still the default gate for UPI limits, card transactions, and loan approvals. Scammers copy bank names and urgency lines because the underlying format is inconsistent. A mandated template can push senders to register clearer headers and stop codes from appearing in previews, which reduces shoulder-surfing and accidental leaks. Telecom operators already block messages that do not match registered templates, so standardization builds on existing pipes rather than inventing a new channel. Analysts quoted in the story warned that fraudsters could still clone a uniform look, and overseas apps may resist changing global templates. TRAI will need to balance user clarity with compliance costs if it tries to dictate digit patterns inside the code itself.",
+      "Why should I care?",
+      "If you bank or shop on your phone, watch for OTP texts that break the expected layout once rules firm up. Treat any code request on WhatsApp or a random link as suspicious even if SMS fraud falls. Businesses that send bulk OTPs should budget for template re-registration with carriers. Policy watchers should track the consultation paper, any preview-blocking mandate, and whether the Department of Telecommunications ties the move to its ASTR SIM-verification drive, which disconnected more than 8.2 million fraudulent connections by early October 2026.",
+    ],
+  },
+  {
+    slug: "ed-whatsapp-stock-manipulation-october-2026",
+    title: "The ED froze trading accounts tied to a WhatsApp stock tip scheme",
+    summary:
+      "On 20 October 2026 the Enforcement Directorate said it froze accounts holding shares worth about ₹200 crore after searches across six cities in an alleged money-laundering case involving preferential allotments at R M Drip and Sprinklers Systems and R&B Denims that were later promoted on WhatsApp-style campaigns.",
+    category: "industry",
+    companyOrSector: "Markets / enforcement",
+    publishedAt: "2026-10-20T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ed-whatsapp-stock-manipulation-october-2026"),
+    keyTakeaways: [
+      "The ED's Mumbai zone searched 29 premises in Mumbai, Nashik, Ahmedabad, Gandhinagar, Surat, and Bhavnagar last week under the Prevention of Money Laundering Act, the agency said on 20 October 2026.",
+      "Investigators linked the case to R M Drip and Sprinklers Systems and R&B Denims, which allegedly issued more than 35 million shares and convertible warrants through preferential allotments between April 2023 and March 2024.",
+      "The agency said a small circle of connected lenders and firms funded the allotments, promoted the stocks to lift prices, and then sold part of the holdings, leaving frozen accounts with roughly ₹200 crore of shares.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, the Enforcement Directorate announced that it had frozen trading accounts containing shares worth about ₹200 crore in an alleged WhatsApp-driven manipulation ring. The Mumbai unit had raided 29 locations across six cities the previous week under the Prevention of Money Laundering Act. The probe centres on two listed names: R M Drip and Sprinklers Systems and R&B Denims. According to the ED, the companies issued more than 35 million shares and convertible warrants through preferential allotments between April 2023 and March 2024. The agency said much of the subscription money came from a tight network of linked individuals, firms, and lenders rather than arm's-length investors. It suspects coordinated promotion, including social messaging campaigns, pushed prices higher so preferential allottees could exit part of their stock.",
+      "What does this mean?",
+      "Small-cap preferential issues can flood the market with cheap paper if governance is weak. When tips circulate on WhatsApp or Telegram groups, retail buyers often arrive after insiders have already locked in allotments. Freezing brokerage accounts is an early step to stop further sales while investigators trace cash trails. The case does not change everyday investing rules, but it shows regulators treating chat-room hype as part of the laundering story, not a side joke. Listed companies with repeated warrant issues and thin floats remain the highest-risk corner for this playbook.",
+      "Why should I care?",
+      "If you follow unsolicited stock tips on messaging apps, treat sudden spikes in obscure listings as a red flag, especially after preferential allotments. Check exchange disclosures on warrant conversions and promoter pledges before chasing momentum. Compliance teams at brokers may tighten surveillance on coordinated buy patterns in micro-cap names. Watch whether the ED names intermediaries beyond the two issuers and whether markets regulator Sebi files parallel trading-ban orders.",
+    ],
+  },
+  {
+    slug: "festive-temporary-manufacturing-jobs-october-2026",
+    title: "Factories may add 100,000 temporary workers this festive season",
+    summary:
+      "A CIEL HR Services study for Economic Times on 20 October 2026 estimated about 100,000 short-term manufacturing jobs during the 2026 festive season, up from nearly 85,000 a year earlier, with staffing firms citing stronger demand for electronics, autos, FMCG, and plant-floor roles across Gujarat, Maharashtra, and southern industrial states.",
+    category: "industry",
+    companyOrSector: "Manufacturing / employment",
+    publishedAt: "2026-10-20T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("festive-temporary-manufacturing-jobs-october-2026"),
+    keyTakeaways: [
+      "CIEL HR Services reviewed more than 50,000 job records across 5,000 employers and projected roughly 100,000 temporary manufacturing hires this festive season versus about 85,000 last year.",
+      "TeamLease and Adecco India told reporters they expect 15–20% higher seasonal staffing, with 57% of plant-floor postings in fabrication and CNC roles per CIEL's Aditya Mishra.",
+      "Quess Corp said it had about 8,877 open factory postings in September 2026, roughly 71% above the September 2025 level, concentrated in auto, electronics, and semiconductor clients.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, reporting on India's festive hiring wave cited a CIEL HR Services study commissioned by Economic Times. The firm scanned more than 50,000 job records from over 5,000 employers and estimated that manufacturers will add about 100,000 temporary workers this season, compared with nearly 85,000 a year ago. Chief executive Aditya Mishra said 57% of plant-floor openings sit in fabrication and computer numerical control roles. Staffing peers TeamLease Services and Adecco India expect seasonal headcount to rise 15–20%. Quess Corp pegged open factory and plant roles at about 8,877 in September 2026, roughly 71% higher than the 5,180 positions it saw in September 2025. Demand spans consumer electronics, FMCG, food processing, automotive components, industrial equipment, and packaging, with incentives such as attendance bonuses, overtime, and production-linked pay.",
+      "What does this mean?",
+      "Festive demand is not only showing up in mall footfall. Plants that feed smartphones, appliances, and vehicles are adding shift workers even when export headlines stay noisy. Temporary hiring lets companies scale output without permanent wage commitments if orders fade after Diwali. Industrial states such as Gujarat, Maharashtra, Uttar Pradesh, Telangana, Tamil Nadu, Jharkhand, Karnataka, and Andhra Pradesh accounted for about 94% of Quess manufacturing offers in September, reflecting where new capacity is landing. TeamLease's outlook survey said 69% of manufacturing employers plan to increase headcount, a corroborating signal that the pickup is broad rather than isolated to one sector.",
+      "Why should I care?",
+      "If you work on factory floors or through staffing agencies, compare attendance and retention bonuses across employers before signing a short contract. Rural migrants should verify transport and dormitory support because many roles are shift-based. Investors watching consumer names can read temp hiring as a real-time proxy for order books ahead of quarterly updates. Track October and November production data from electronics and auto suppliers, and whether hiring moderates after the festive peak as companies digest inventory.",
+    ],
+  },
+  {
+    slug: "data-patterns-defence-inspection-delays-october-2026",
+    title: "Data Patterns says defence inspection teams are delaying shipped orders",
+    summary:
+      "On 20 October 2026 chairman S Rangarajan told reporters that Data Patterns Limited is ready to deliver military electronics but customer inspection teams are arriving late, widening the gap between a ₹2,654 crore order book as of 30 June 2026 and revenue recognition on indigenous defence programmes.",
+    category: "industry",
+    companyOrSector: "Defence manufacturing",
+    publishedAt: "2026-10-20T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("data-patterns-defence-inspection-delays-october-2026"),
+    keyTakeaways: [
+      "Rangarajan said on 20 October 2026 that finished defence products sometimes sit idle because government inspection personnel do not show up on schedule, echoing delays that previously stretched one major programme by more than 18 months.",
+      "Data Patterns reported an order book of ₹2,654 crore on 30 June 2026, including ₹920 crore in firm contracts and ₹1,726 crore still under negotiation, with a target of ₹2,000 crore in fresh orders this year.",
+      "Kotak Institutional Equities cited in coverage expects India's defence capital expenditure to grow about 11% annually through 2029–30 while acceptance-of-necessity approvals jumped to about ₹9.3 lakh crore in 2025–26.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, coverage of India's defence supply chain quoted Data Patterns Limited chairman and managing director S Rangarajan on a familiar bottleneck. The company makes electronic subsystems for the military and says the push for indigenous content has opened thousands of crores in potential orders. Yet finished goods can wait on customer inspection teams before they ship. Rangarajan said products were ready in the past while inspectors were tied up on other deliveries, stretching one large programme by more than a year and a half and later by another six months, with customers now seeking a further two-month extension. As of 30 June 2026 the order book stood at ₹2,654 crore, of which ₹920 crore was firm and ₹1,726 crore remained under negotiation. The company is targeting ₹2,000 crore in fresh orders in the current year and is reportedly in talks for a ₹1,300 crore Hindustan Aeronautics contract where it is said to be the lowest bidder, though Rangarajan declined to comment on that deal.",
+      "What does this mean?",
+      "Defence localisation is not only about designing parts in India. Acceptance inspections at user depots gate when revenue hits the vendor's books. When manpower is thin, even strong order books convert slowly, which frustrates investors who see headline policy targets of 70% self-reliance by 2030. Broader data in the story show acceptance-of-necessity approvals surging to about ₹9.3 lakh crore in 2025–26, but analysts note such milestones typically precede signed contracts by one to two years. Companies with diversified programmes and execution track records can weather the lag better than single-contract bets.",
+      "Why should I care?",
+      "If you supply into defence or aerospace, build inspection scheduling into delivery contracts and cash-flow plans. Investors in pure-play electronics makers should weigh order-book growth against historical conversion times, not just policy headlines. Policy watchers should ask whether the defence ministry expands inspection capacity or delegates more checks to third-party agencies as domestic procurement accelerates. Track quarterly revenue recognition at Data Patterns, HAL contract announcements, and ministry comments on acceptance timelines.",
+    ],
+  },
+  {
     slug: "bajaj-finance-multi-loan-tightening-october-2026",
     title: "Bajaj Finance will lend less to people juggling three or more loans",
     summary:
@@ -3830,6 +3926,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "trai-uniform-otp-format-october-2026": "policy",
+  "ed-whatsapp-stock-manipulation-october-2026": "policy",
+  "festive-temporary-manufacturing-jobs-october-2026": "markets",
+  "data-patterns-defence-inspection-delays-october-2026": "policy",
   "bajaj-finance-multi-loan-tightening-october-2026": "policy",
   "ultratech-cement-fuel-cost-pressure-october-2026": "companies",
   "india-solar-transmission-curtailment-october-2026": "policy",

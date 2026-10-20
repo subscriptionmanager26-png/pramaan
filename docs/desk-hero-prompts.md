@@ -664,6 +664,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic bank facade |
 | Metaphor left | Yen symbol vs rupee symbol with magnifying glass |
 
+### `trai-uniform-otp-format-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | One OTP SMS template so fakes are easier to spot |
+| Subject right | Smartphone silhouette / message bubbles |
+| Metaphor left | Shield over uniform chevron lines |
+
+### `ed-whatsapp-stock-manipulation-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Chat-room tips feeding rigged small-cap floats |
+| Subject right | Frozen padlock over abstract chart |
+| Metaphor left | Chat bubble network funnel |
+
+### `festive-temporary-manufacturing-jobs-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Seasonal factory headcount for festive output |
+| Subject right | Factory silhouette |
+| Metaphor left | Ascending geometric worker forms |
+
+### `data-patterns-defence-inspection-delays-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Indigenous orders stuck at inspection gate |
+| Subject right | Circuit board / avionics motif |
+| Metaphor left | Hourglass / waiting queue |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
