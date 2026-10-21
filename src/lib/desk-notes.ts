@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-mpc-minutes-more-hikes-october-2026",
+    title: "RBI minutes warn the rate-hiking cycle may not be over",
+    summary:
+      "Minutes of the Reserve Bank of India's 5–7 October 2026 monetary policy meeting, published on 21 October, said broadening price pressures and import costs could keep inflation above target through much of FY27, with Governor Sanjay Malhotra signalling further hikes or pauses rather than cuts.",
+    category: "industry",
+    companyOrSector: "RBI / household borrowing",
+    publishedAt: "2026-10-21T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-mpc-minutes-more-hikes-october-2026"),
+    keyTakeaways: [
+      "MPC minutes released on 21 October 2026 show policymakers worried that the share of CPI items rising more than 4% climbed to 37% in August from 20% in March.",
+      "The six-member panel had already raised the repo rate 25 basis points to 5.50% on 7 October and shifted stance to calibrated tightening; external members Nagesh Kumar and Ram Singh backed the hike but wanted to stay neutral on stance.",
+      "Governor Malhotra said headline CPI could touch the upper tolerance band in the December 2026 quarter and stay above 5% in the following two quarters, with core inflation at 4.2% in August.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, the Reserve Bank of India published minutes from its monetary policy committee meeting held on 5–7 October. The document fleshes out why the panel unanimously raised the policy repo rate by 25 basis points to 5.50% and moved its stance from neutral to calibrated tightening. Governor Sanjay Malhotra noted that inflation is broadening: the share of consumer price index items recording increases above 4% rose to 37% in August from 20% in March. He flagged elevated global oil and commodity prices and a weaker rupee as risks that could keep import costs high. External members Nagesh Kumar and Ram Singh supported the rate increase but opposed the stance change, arguing for a neutral label while data evolve.",
+      "What does this mean?",
+      "Minutes matter because they tell households and businesses what comes after the first hike. Malhotra said the duration of the tightening cycle depends on underlying inflation, second-round effects from supply shocks, and demand impulses. He projected headline CPI could brush the upper tolerance band in the December quarter and remain materially above 5% in the next two quarters. Core inflation excluding precious metals is also expected to move above target. That language usually means lenders will keep repricing floating home and business loans, and that the RBI's next meetings are live for another small hike or a hold, not a cut. Brokerage commentary cited in the same day's press, including expectations of up to 50 basis points more in the cycle, reflects that read.",
+      "Why should I care?",
+      "If you carry a floating-rate mortgage or plan a festive-season purchase on EMI, compare bank quotes now and ask when your lender last reset its repo-linked benchmark. Fixed-deposit savers may see slightly better offers over time, but the minutes stress inflation, not just growth. Equity and bond investors should treat the release as confirmation that cuts are off the table near term. Watch the November inflation print, oil import bills, and whether core services inflation eases after the monsoon food shock fades.",
+    ],
+  },
+  {
+    slug: "navratri-festive-vehicle-retail-october-2026",
+    title: "Navratri vehicle sales dipped on the calendar but EV share hit 10.5%",
+    summary:
+      "Federation of Automobile Dealers Associations data cited on 21 October 2026 showed total Navratri retail volumes fell about 6.5% year on year to roughly 11.23 lakh units as the festival ran one fewer day and faced a tough comparison with GST 2.0-driven demand in 2025, while electric vehicles grew about 27% and reached about 10.5% of festive sales.",
+    category: "industry",
+    companyOrSector: "Auto retail / consumers",
+    publishedAt: "2026-10-21T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("navratri-festive-vehicle-retail-october-2026"),
+    keyTakeaways: [
+      "FADA said Navratri 2026 retail sales were about 11,23,086 units versus roughly 12,01,479 units a year earlier, a 6.5% decline the lobby attributed partly to 10 festival days this year versus 11 last year.",
+      "Passenger vehicle retail fell about 22% year on year to roughly 1,82,728 units, while electric vehicle retails rose about 27% to about 1,17,437 units, lifting EVs to near 10.5% of festive sales from about 7.7%.",
+      "FADA president Sai Giridhar described the headline dip as largely optical and said dealers remain cautiously optimistic heading into Dhanteras and Diwali.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, trade press published Federation of Automobile Dealers Associations commentary on Navratri showroom activity. FADA reported that total vehicle retail sales during the festival window fell about 6.5% year on year to roughly 11.23 lakh units from about 12.01 lakh units in Navratri 2025. The association said the comparison is distorted: last year's festival ran 11 days against 10 this year, and the late-2025 GST 2.0 rollout pulled pent-up demand into an unusually strong window. Within the mix, passenger vehicle retails dropped about 22% to roughly 1.83 lakh units, while two-wheeler retails were down about 7.5%. Electric vehicle retails rose about 27% to roughly 1.17 lakh units, lifting EVs to about 10.5% of festive sales from about 7.7% a year earlier, with growth in both electric cars and two-wheelers.",
+      "What does this mean?",
+      "Dealer data capture what left showrooms during the festival, not factory dispatches alone. A mid-single-digit total decline with a sharp PV drop often reflects calendar noise plus a high base rather than a collapse in aspiration. The EV share crossing one-tenth of festive volume is the structural signal: subsidies, model launches, and charging access are showing up in retail mix even when petrol and diesel nameplates look softer on year-on-year math. Maruti Suzuki executives quoted in the same reports described strong pending orders heading into Dhanteras, which suggests some demand is timing-driven rather than missing.",
+      "Why should I care?",
+      "If you delayed a car or scooter purchase until after Navratri, compare on-road prices and waiting periods across brands; discounts may reappear if PV inventory builds. Fleet buyers and financiers should watch whether the EV share gain persists into Diwali tallies. Investors in auto retail or OEM stocks should read FADA's total retail line alongside SIAM wholesale figures to avoid double-counting a calendar effect. Watch Dhanteras weekend numbers, finance company approval rates, and whether two-wheeler recovery catches up to EV momentum.",
+    ],
+  },
+  {
+    slug: "bajaj-consumer-care-price-hike-october-2026",
+    title: "Bajaj Consumer Care will lift prices about 5% this quarter",
+    summary:
+      "Bajaj Consumer Care said on 21 October 2026 it will raise consumer prices and trim pack sizes in the third quarter of FY27, targeting an overall increase of about 5% split roughly evenly between list-price hikes and smaller packs, while keeping quick commerce and premium personal care as growth priorities.",
+    category: "industry",
+    companyOrSector: "FMCG / household goods",
+    publishedAt: "2026-10-21T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bajaj-consumer-care-price-hike-october-2026"),
+    keyTakeaways: [
+      "The hair-oil and personal-care maker plans a roughly 5% effective price increase in Q3 FY27 through a mix of direct hikes and smaller packs, per reporting on 21 October 2026.",
+      "Management said it will split the adjustment about equally between sticker prices and gramnage reductions.",
+      "Quick-commerce channels and premium personal-care lines remain focus areas for volume growth, according to the same updates.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, business media reported that Bajaj Consumer Care will adjust pricing in the third quarter of financial year 2027. The company plans an overall increase of about 5% for consumers, achieved partly through higher shelf prices and partly through smaller pack sizes. Executives said the split would be roughly half and half. Bajaj Consumer Care sells mass-market hair oils and personal-care products where households notice even small rupee changes. The announcement lands in the same week other FMCG names have warned about input costs and festive demand timing.",
+      "What does this mean?",
+      "When margins compress on palm derivatives, packaging, and logistics, mid-tier FMCG firms often blend visible price hikes with shrinkflation so loyal buyers do not abandon the brand in one step. A 5% blended move is large enough to protect margins but small enough that pantry restocking may continue, especially if competitors follow. Quick-commerce listings amplify the effect because basket sizes are smaller and price comparisons are instant. Premium personal-care SKUs give the company a place to grow average selling price without pushing the entire portfolio up at once.",
+      "Why should I care?",
+      "If you buy Bajaj Almond Drops or other branded oils regularly, check per-gram pricing on the label, not just the MRP. Retailers may run short-term deals that mask the structural change. Investors comparing FMCG names should track whether volume holds after the Q3 reset. Watch peer announcements from Marico and Dabur, palm oil futures, and whether rural demand softens after the festive pantry fill.",
+    ],
+  },
+  {
+    slug: "adani-green-grid-curtailment-october-2026",
+    title: "Adani Green grew sales 45% but the grid forced it to waste power",
+    summary:
+      "Adani Green Energy reported on 21 October 2026 that revenue from power supply rose 45% year on year to about ₹4,019 crore in the September quarter while EBITDA from supply grew 51% to about ₹3,835 crore, but management said transmission bottlenecks led to curtailment that weighed on margins even as operational renewable capacity reached 20.8 GW.",
+    category: "industry",
+    companyOrSector: "Renewable power / grid",
+    publishedAt: "2026-10-21T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-green-grid-curtailment-october-2026"),
+    keyTakeaways: [
+      "AGEL said Q2 FY27 revenue from power supply rose 45% to about ₹4,019 crore and EBITDA from supply rose 51% to about ₹3,835 crore, with energy sales up 33% to about 12,090 million units.",
+      "Operational renewable capacity reached 20.8 GW, up 24% year on year, including large solar and wind additions at Khavda in Gujarat.",
+      "Reporting on 21 October highlighted grid constraints that prompted the company to curtail output during the quarter, pressuring profitability despite strong top-line growth.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, Adani Green Energy Ltd released results for the quarter ended September 2026. Revenue from power supply increased about 45% year on year to roughly ₹4,019 crore, while EBITDA from power supply rose about 51% to roughly ₹3,835 crore. Energy sales grew about 33% to roughly 12,090 million units. The company's operational renewable portfolio reached 20.8 GW, 24% higher than a year earlier, after adding hundreds of megawatts of solar, wind, and hybrid capacity, much of it at the Khavda cluster in Gujarat. Battery storage capacity also expanded, with the company citing more than 6.6 GWh operational. Press coverage the same day noted that India's transmission network could not absorb all the new generation, leading Adani Green to curtail output during the period and dent margins even as headline growth looked strong.",
+      "What does this mean?",
+      "Renewable developers earn when electrons reach paying customers. Building gigawatts in desert clusters is only half the story; without timely transmission lines and state-level scheduling discipline, plants must back down and forego revenue. Curtailment shows up as softer profit growth than sales growth, exactly what Adani Green reported when profit attributable to shareholders rose more slowly than revenue in some summaries. The issue is sector-wide: solar and wind targets race ahead of interstate corridors and grid flexibility. Storage additions help locally but do not replace long-distance evacuation.",
+      "Why should I care?",
+      "Households and factories still benefit when more green power connects, but curtailment risk can delay tariff relief if developers pause new bids. If you invest in renewable or utility stocks, read management comments on transmission availability alongside capacity milestones. Policy watchers should track Power Grid commissioning timelines and state DISCOM payment behaviour. Watch whether Adani Green's FY27 storage guidance above 10 GWh eases local curtailment, and whether the government fast-tracks lines out of western generation hubs.",
+    ],
+  },
+  {
     slug: "india-infrastructure-output-september-2026",
     title: "India's infrastructure output rose 7.9% in September",
     summary:
@@ -4358,6 +4454,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-mpc-minutes-more-hikes-october-2026": "policy",
+  "navratri-festive-vehicle-retail-october-2026": "markets",
+  "bajaj-consumer-care-price-hike-october-2026": "markets",
+  "adani-green-grid-curtailment-october-2026": "policy",
   "india-infrastructure-output-september-2026": "policy",
   "motor-tp-insurance-homemaker-ruling-october-2026": "policy",
   "sun-pharma-organon-bond-raise-october-2026": "companies",
