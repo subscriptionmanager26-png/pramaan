@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "prestige-estates-festive-launch-pipeline-october-2026",
+    title: "Prestige Estates plans ₹40,000 crore of home launches after Diwali",
+    summary:
+      "On 20 October 2026, Prestige Estates Projects said it will launch residential projects worth about ₹40,000 crore in the second half of FY27, roughly 2.5 times the ₹16,200 crore launch value it recorded in April–September, targeting festive demand across Bengaluru, Mumbai, Delhi-NCR, Chennai, and Hyderabad.",
+    category: "industry",
+    companyOrSector: "Residential real estate / consumers",
+    publishedAt: "2026-10-21T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("prestige-estates-festive-launch-pipeline-october-2026"),
+    keyTakeaways: [
+      "Prestige Estates said on 20 October 2026 it plans residential launches worth about ₹40,000 crore in H2 FY27, versus more than ₹16,200 crore of launches across 23.14 million square feet in April–September FY27.",
+      "Chairman Irfan Razack told PTI the pipeline spans Bengaluru, Mumbai, Delhi-NCR, Chennai, and Hyderabad over the next two quarters.",
+      "The update positions the Bengaluru-based developer to lean into festival-season home buying after a first half that already cleared sizeable launch inventory.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, Prestige Estates Projects Ltd shared an operational update that signals a sharp step-up in new home supply. The Bengaluru-based developer said it launched residential projects covering 23.14 million square feet between April and September of FY27, with estimated revenue potential above ₹16,200 crore. For the second half of the fiscal year, it plans launches worth about ₹40,000 crore, nearly 2.5 times the first-half launch value. Chairman Irfan Razack told PTI the pipeline is spread across Bengaluru, Mumbai, Delhi-NCR, Chennai, and Hyderabad over the coming two quarters, as the company tries to capture festive-season demand from buyers who have been comparing EMIs, stamp duty windows, and project completion timelines.",
+      "What does this mean?",
+      "Large developers do not ramp launch calendars unless site approvals, construction finance, and booking trends look workable at the same time. A ₹40,000 crore pipeline is a bet that middle and upper-middle income buyers will still commit to under-construction homes when developers bundle payment plans, club memberships, and location premiums. It also shows confidence that banks and housing finance companies will keep disbursing to grade-A names even as unsecured retail credit cools elsewhere. For the wider market, Prestige’s pace is a datapoint on premium and mid-premium housing demand in the five metros it named, not a guarantee that every micro-market will clear inventory at the same speed.",
+      "Why should I care?",
+      "If you are shopping for a home in those cities, compare launch prices with ready inventory and factor in GST, registration, and possession dates before festive offers close. If you hold real estate or building-material stocks, treat one developer’s pipeline as a demand signal to cross-check with cement, mortgage, and broker data for the same cities. Watch Prestige’s quarterly sales velocity, RBI home-loan rate moves, and whether other listed developers publish similar H2 launch guides after Diwali.",
+    ],
+  },
+  {
+    slug: "schaeffler-ceo-custody-factory-deaths-october-2026",
+    title: "Schaeffler India’s CEO is in police custody after two workers died on site",
+    summary:
+      "Schaeffler India told exchanges on 20 October 2026 that CEO and managing director Harsha Gopal Kadam was taken into custody on 19 October for investigation into a 9 June 2026 accident at its Talegaon, Pune plant that killed two workers.",
+    category: "industry",
+    companyOrSector: "Auto components / labour safety",
+    publishedAt: "2026-10-21T05:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("schaeffler-ceo-custody-factory-deaths-october-2026"),
+    keyTakeaways: [
+      "Schaeffler India’s 20 October 2026 filing said Harsha Gopal Kadam was taken into custody late on 19 October by Talegaon MIDC Police for investigation into a factory incident on 9 June 2026 that killed two workers.",
+      "The accident occurred at the company’s Talegaon, Pune premises, per the exchange disclosure cited in reporting the same day.",
+      "The custody order lands on a listed auto-components maker whose customers include major car and industrial equipment producers that audit supplier safety records.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, Schaeffler India Ltd informed stock exchanges that chief executive and managing director Harsha Gopal Kadam was taken into police custody on 19 October. Talegaon MIDC Police Station is investigating a factory accident on 9 June 2026 at the company’s Talegaon, Pune site that killed two workers. The filing did not spell out charges in the public summary, and the company said more details would follow. Schaeffler supplies bearings and precision components to automakers and industrial clients, so the case sits at the intersection of workplace safety law, local police powers, and corporate governance at a Nifty-listed manufacturer.",
+      "What does this mean?",
+      "When fatalities occur on a plant floor, Indian authorities can move beyond fines and labour inspections toward personal liability for senior managers if investigators believe safety systems failed. Custody of a CEO, even for questioning, signals the police treat the June incident as serious enough to warrant direct executive involvement. Customers may trigger extra audits of the Talegaon plant, and insurers could revisit liability coverage. For workers and unions, the episode reinforces that high-profile leadership is not shielded from local criminal process when deaths are involved, though courts will ultimately decide responsibility.",
+      "Why should I care?",
+      "If you work in manufacturing, refresh incident reporting, contractor supervision, and machine-guarding checks before year-end production peaks. If you invest in auto-component stocks, read safety disclosures in annual reports and watch whether Schaeffler issues a detailed accident review or leadership change. Employees and neighbours near industrial estates should track Maharashtra labour department orders on the Talegaon site. Watch court and police updates, any worker-compensation settlements, and whether OEM customers comment on alternate sourcing.",
+    ],
+  },
+  {
+    slug: "sbi-alleged-customer-data-leak-october-2026",
+    title: "A hacker claimed to leak thousands of alleged SBI customer records",
+    summary:
+      "Reporting on 20 October 2026 said a threat actor called Siriusim claimed to have published 375,000 CSV rows and 2,722 PDF documents with personal and loan-related details tied to State Bank of India customers; SBI had not publicly confirmed the leak and the authenticity of the data remained unverified.",
+    category: "industry",
+    companyOrSector: "Banking / cybersecurity",
+    publishedAt: "2026-10-21T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-alleged-customer-data-leak-october-2026"),
+    keyTakeaways: [
+      "CyberPulse56 flagged on X that Siriusim claimed on 16 October 2026 to have released customer documents allegedly linked to State Bank of India, including 375,000 CSV rows and 2,722 PDFs with loan and account-opening details, per coverage dated 20 October 2026.",
+      "The report stressed that neither the bank nor independent auditors had verified the dataset at press time.",
+      "The claim landed the same week CERT-In warned on 9 October 2026 about campaigns targeting NBFCs, payment firms, and APIs that move money using stolen partner-bank credentials.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 20 October 2026, Mint cited cybersecurity monitors who said a threat actor using the name Siriusim claimed to have leaked customer information tied to State Bank of India. The post, surfaced by the CyberPulse56 account on X, dated the alleged release to 16 October 2026. The claimed cache includes about 375,000 comma-separated rows and 2,722 PDF files with personal details, loan applications, supporting documents, addresses, and other onboarding paperwork. The actor described it as a first tranche and did not explain how the files were obtained. Reporters noted that the authenticity of the dump and any breach at SBI were unverified, and the bank had not issued a public confirmation by the time the story ran. The headline sits beside wider October warnings that Indian lenders and fintech partners face credential-theft attacks on payment APIs.",
+      "What does this mean?",
+      "Even unverified leak claims can trigger phishing waves if criminals reuse real-looking account numbers or old application forms. Banks typically investigate by matching sample records to internal logs, rotating API keys, and alerting regulators if personal data is confirmed exposed. Customers should treat unexpected loan-offer calls or KYC reset messages as suspicious until the bank publishes official guidance. For the sector, the episode adds pressure on state-run and private lenders to tighten vendor access, log retention, and breach disclosure timelines under India’s digital personal data rules.",
+      "Why should I care?",
+      "If you bank with SBI or recently applied for a loan there, watch only official SMS, app, and website notices before sharing OTPs or documents. Enable transaction alerts, change passwords if you reused them on third-party sites, and report unfamiliar credit inquiries. If you work at a lender or fintech, rerun API key reviews and partner-bank credential maps in light of CERT-In’s 9 October advisory. Track any SBI exchange or regulator statement, police cyber-cell updates, and whether CERT-In elevates the incident from social-media claim to confirmed breach.",
+    ],
+  },
+  {
     slug: "gold-loans-nbfc-double-digit-october-2026",
     title: "Gold loans now make up a tenth of several large NBFC books",
     summary:
@@ -4118,6 +4190,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "prestige-estates-festive-launch-pipeline-october-2026": "markets",
+  "schaeffler-ceo-custody-factory-deaths-october-2026": "companies",
+  "sbi-alleged-customer-data-leak-october-2026": "policy",
   "gold-loans-nbfc-double-digit-october-2026": "policy",
   "motorcycle-festive-discounts-october-2026": "markets",
   "tcs-best-buy-gcc-acquisition-october-2026": "companies",
