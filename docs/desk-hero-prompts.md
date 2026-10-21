@@ -720,6 +720,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Gear / motor motif |
 | Metaphor left | Partnership pipes into battery + sensor icons |
 
+### `state-oilcos-retail-fuel-under-recovery-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Retail fuel sold below import-parity cost |
+| Subject right | Generic fuel pump canopy (state marketer) |
+| Metaphor left | Leaking rupee droplets from diesel nozzle gauge |
+
+### `emudhra-certificate-emergency-blocks-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Broken chain of trust in digital certificates |
+| Subject right | Padlock / trust seal architecture |
+| Metaphor left | Shattered certificate chain links |
+
+### `angel-one-us-stocks-rollout-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Domestic brokers open a dollar equity lane |
+| Subject right | Smartphone trading motif (no brand) |
+| Metaphor left | Rupee coin crossing bridge to US market tiles |
+
 ### `canara-bank-yields-festive-credit-october-2026`
 
 | Field | Value |

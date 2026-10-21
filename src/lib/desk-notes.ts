@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "state-oilcos-retail-fuel-under-recovery-october-2026",
+    title: "State oil firms are losing up to ₹25 a litre on diesel sales",
+    summary:
+      "Sources told reporters on 21 October 2026 that Indian state-owned oil marketing companies are booking revenue losses of about ₹20–25 per litre on diesel, ₹4–5 on petrol, and ₹500–600 on each 14.2 kg LPG cylinder while global crude stays elevated; Indian Oil Corp has also paused a planned trading joint venture with Vitol and trimmed some term crude buys.",
+    category: "industry",
+    companyOrSector: "Oil marketing / consumers",
+    publishedAt: "2026-10-21T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("state-oilcos-retail-fuel-under-recovery-october-2026"),
+    keyTakeaways: [
+      "Reporting on 21 October 2026 cited sources saying state oil marketing companies face roughly ₹20–25 per litre revenue losses on diesel, ₹4–5 on petrol, and ₹500–600 per 14.2 kg LPG cylinder at current import-parity costs.",
+      "Indian Oil Corporation Ltd is said to have held back a planned trading joint venture with Vitol, slightly reduced Middle East term crude for 2027–28, and paused plans to buy two very large gas carriers.",
+      "The leak lands as Brent trades above $110 and private fuel retailers have been more willing than state marketers to lift pump prices when margins compress.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, wire reports citing industry sources described the scale of losses state-owned oil marketing companies are carrying on regulated retail fuels. Diesel sales are said to be underwater by about ₹20–25 per litre, petrol by ₹4–5, and subsidised LPG cylinders by ₹500–600 for each 14.2 kg unit. The numbers reflect the gap between import-parity costs after taxes and the pump prices marketers are allowed to charge consumers. Separately, sources said Indian Oil Corporation Ltd has paused a planned trading joint venture with global trader Vitol, will slightly cut term crude purchases from Middle East producers for 2027–28, and has shelved plans to buy two very large gas carriers. None of the state firms issued a detailed public breakdown in the same headlines, but the story matches a week when crude stayed above $110 and private retailers such as Nayara and Jio-bp had already nudged pump tariffs.",
+      "What does this mean?",
+      "India still prices most retail petrol and diesel through state marketers even when global oil spikes. When international product prices run ahead of domestic caps, marketers absorb the difference on their books until the government allows a pass-through or compensates them. Large per-litre losses on diesel matter because trucks, farms, and factories buy most of their fuel from the three state companies. LPG losses hit household budgets directly because cylinder subsidies are politically sensitive. Pausing a Vitol trading venture and trimming long-term crude commitments are signs IOCL is protecting balance-sheet flexibility rather than chasing margin abroad while home-market losses mount. Private retailers can move prices faster, which is why their pumps often look dearer even when state outlets look frozen.",
+      "Why should I care?",
+      "If you drive or heat your kitchen with LPG, compare state and private pump prices before long festive trips. A frozen state price is not a free lunch; it shows up later as under-recovery reports, possible excise tweaks, or staggered hikes when officials allow them. Fleet operators should budget diesel as if margins can reset abruptly after policy meetings. Investors in oil marketing and refining stocks should read quarterly marketing margins alongside export-tax changes already covered this month. Watch fortnightly windfall-tax orders, any cabinet note on LPG subsidies, and whether IOCL or its peers confirm the source figures in exchange filings.",
+    ],
+  },
+  {
+    slug: "emudhra-certificate-emergency-blocks-october-2026",
+    title: "Browser makers blocked eight eMudhra certificates after keys were exposed",
+    summary:
+      "Mozilla and major browser vendors deployed emergency protections on 21 October 2026 against eight intermediate digital certificates issued by India’s eMudhra after private keys were compromised, a flaw that could let attackers impersonate legitimate websites; eMudhra shares fell sharply as the company acknowledged the issue.",
+    category: "industry",
+    companyOrSector: "Digital trust / compliance",
+    publishedAt: "2026-10-21T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("emudhra-certificate-emergency-blocks-october-2026"),
+    keyTakeaways: [
+      "Mozilla’s public security blog flagged insufficient protection of private keys tied to eight eMudhra intermediate certificates, prompting emergency blocks by major browser developers by 21 October 2026.",
+      "eMudhra Ltd, a listed certifying authority used for GST, company filings, and e-sign workflows, cited Mozilla’s post in its own statement and said it was working with partners on remediation.",
+      "Shares of eMudhra fell as much as about 20% in early trade on 21 October as investors weighed reputational and regulatory risk for India’s digital-signature supply chain.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, technology news outlets reported that browser makers had rushed out protections against eight intermediate digital certificates issued by eMudhra Ltd, one of India’s licensed certifying authorities. Mozilla’s security team published details showing private keys linked to those certificates were not adequately safeguarded. If attackers obtained the keys, they could mint fraudulent TLS certificates that browsers would trust, enabling phishing sites to masquerade as banks, government portals, or vendor logins. By Tuesday, major browser developers had deployed blocks so the vulnerable intermediates could not chain to live websites. eMudhra acknowledged the Mozilla disclosure in a blog post on its site and said it was coordinating with ecosystem partners. The NSE-listed company’s stock slid sharply in Wednesday’s session as traders priced in audit, customer churn, and regulator scrutiny.",
+      "What does this mean?",
+      "Digital certificates are the quiet plumbing behind GST e-invoices, MCA filings, tender submissions, and countless B2B logins. A certifying authority does not need a headline data breach for damage: trust evaporates when browsers no longer accept its chain. Emergency distrust lists force customers to re-issue certificates, pause integrations, and prove to auditors that their signing keys were never crossed with the compromised intermediates. For SMEs, the practical risk is downtime on e-sign flows and delayed compliance filings until IT teams swap to fresh certs. For large enterprises, security teams must scan outbound links and API callbacks that relied on eMudhra-issued TLS assets. India's Controller of Certifying Authorities typically investigates key-management failures with suspension or penalty powers.",
+      "Why should I care?",
+      "If your company uses eMudhra for DSC tokens, SSL, or document signing, ask your IT vendor today which certificate serial numbers were in production and whether replacements are already issued. Do not click through browser warnings on government or banking sites during the remediation window. Procurement teams should keep a backup certifying authority qualified for critical workflows. Investors in compliance-tech names should separate one-off remediation costs from lasting share loss. Watch CCA orders, eMudhra exchange disclosures, and whether other Indian CAs publish independent key-management audits after this episode.",
+    ],
+  },
+  {
+    slug: "angel-one-us-stocks-rollout-october-2026",
+    title: "Angel One has started offering US stock investing to select clients",
+    summary:
+      "Angel One Ltd told reporters on 21 October 2026 that it began a phased rollout of US equity investing for a limited customer set and plans wider access within about 45 days after testing operations, extending its brokerage beyond domestic cash and derivatives.",
+    category: "industry",
+    companyOrSector: "Broking / retail investors",
+    publishedAt: "2026-10-21T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("angel-one-us-stocks-rollout-october-2026"),
+    keyTakeaways: [
+      "Group CEO Ambarish Kenghe said Angel One opened US stock investing to a select cohort first and will broaden access after operational checks, with a media report on 21 October 2026 citing a roughly 45-day horizon for wider availability.",
+      "The product adds overseas equities to a platform known for discount broking and active derivatives participation in India.",
+      "Rivals including ICICI Direct, HDFC Securities, and fintech apps already market US access, so Angel One’s rollout tests how fast zero-commission domestic brokers can cross-sell dollar assets.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, business media quoted Angel One Ltd group chief executive Ambarish Kenghe saying the brokerage has begun offering US stock investing to a limited set of customers. The company intends to expand eligibility after operational and compliance checks, with reporting pointing to a window of about 45 days before broader access. Angel One built its brand on low-cost Indian equity and derivatives trading; adding Nasdaq and NYSE names lets it compete with banks and fintechs that already pitch overseas diversification to the same young investor base. The phased start mirrors how other brokers first test dollar settlement, tax reporting, and customer support before marketing US names on the home screen.",
+      "What does this mean?",
+      "Retail flows into US technology and ETF tickers have been a recurring theme since the pandemic-era bull market, even when the rupee weakens and the Liberalised Remittance Scheme cap stays at $250,000 per person per year. Brokers earn from platform fees, FX conversion spreads, and cross-sell into mutual funds or margin products once a client holds both markets. A measured rollout reduces the risk of support queues when first trades fail on LRS documentation or W-8BEN errors. For Angel One, US access is also a retention tool: active traders who already pay attention to US futures on business channels may consolidate wallets instead of opening a second international account.",
+      "Why should I care?",
+      "If you already trade with Angel One, watch the app for an invite rather than assuming day-one access. Before you buy US shares, map the full cost stack: FX markup, custody charges, and how dividends are taxed in India. If you use another broker for overseas stocks, compare whether switching saves fees or just duplicates accounts. Regulators still expect you to stay within LRS limits and report foreign assets at tax time. Follow Angel One’s exchange updates on partner banks, the full fee card at launch, and whether peers cut FX spreads to match the rollout.",
+    ],
+  },
+  {
     slug: "prestige-estates-festive-launch-pipeline-october-2026",
     title: "Prestige Estates plans ₹40,000 crore of home launches after Diwali",
     summary:
@@ -4190,6 +4262,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "state-oilcos-retail-fuel-under-recovery-october-2026": "policy",
+  "emudhra-certificate-emergency-blocks-october-2026": "policy",
+  "angel-one-us-stocks-rollout-october-2026": "markets",
   "prestige-estates-festive-launch-pipeline-october-2026": "markets",
   "schaeffler-ceo-custody-factory-deaths-october-2026": "companies",
   "sbi-alleged-customer-data-leak-october-2026": "policy",
