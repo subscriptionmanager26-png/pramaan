@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 
-import { PortfolioSection } from "@/components/portfolio/PortfolioSection";
+import { PortfolioDashboard } from "@/components/portfolio/PortfolioDashboard";
 import { Page, PageHeader } from "@/components/shell/Page";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Portfolio reviews from your AI assistant — saved from chat for later.",
+  description: "Portfolio dashboard — allocation, performance, and holdings. Ask questions in AI chat.",
 };
 
 export default function PortfolioPage() {
   return (
-    <Page width="content">
+    <Page width="dash">
       <PageHeader
         title="Portfolio"
-        description="AI portfolio reviews from chat, plus a link to live holdings tracking on the main app during the Pramaan migration."
+        description="A fixed dashboard for how you're invested. For reviews, statements, and what-if questions, use the AI assistant."
       />
       <div className="mt-8">
-        <PortfolioSection />
+        <PortfolioDashboard />
       </div>
     </Page>
   );

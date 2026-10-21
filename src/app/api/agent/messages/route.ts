@@ -12,10 +12,12 @@ export async function GET(request: Request) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
   const url = new URL(request.url);
-  const threadId = url.searchParams.get("threadId") || "main";
+  const threadId = url.searchParams.get("threadId");
   const limit = url.searchParams.get("limit") || "20";
+  const qs = new URLSearchParams({ limit });
+  if (threadId) qs.set("threadId", threadId);
   const res = await paFetch(
-    `/api/v1/users/${encodeURIComponent(auth.user.id)}/messages?threadId=${encodeURIComponent(threadId)}&limit=${limit}`,
+    `/api/v1/users/${encodeURIComponent(auth.user.id)}/messages?${qs.toString()}`,
   );
   const body = await res.json().catch(() => ({}));
   return NextResponse.json(body, { status: res.status });

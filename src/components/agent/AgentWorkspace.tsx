@@ -9,15 +9,13 @@ import {
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
-import { mergeThreadLists } from "@/lib/agent/threads-from-messages";
+import { mergeThreadLists, prunePendingThreads } from "@/lib/agent/threads-from-messages";
 import { newThreadId } from "@/lib/agent/thread-id";
 import {
   hydratePocketedgeSessionFromCookie,
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
-
-const LOCAL_KEY = "pe-agent-threads";
 
 async function authHeaders() {
   const supabase = getPocketedgeSupabase();
@@ -40,33 +38,18 @@ function formatThreadWhen(iso: string) {
   return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
-function loadLocalThreads(userId: string): AgentThreadSummary[] {
-  try {
-    const raw = sessionStorage.getItem(`${LOCAL_KEY}:${userId}`);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw) as AgentThreadSummary[];
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveLocalThreads(userId: string, threads: AgentThreadSummary[]) {
-  try {
-    sessionStorage.setItem(`${LOCAL_KEY}:${userId}`, JSON.stringify(threads.slice(0, 60)));
-  } catch {
-    /* ignore */
-  }
-}
-
 function AgentSidebar({
   threads,
   activeThreadId,
+  threadsError,
+  onRetryThreads,
   onNewChat,
   onCloseMobile,
 }: {
   threads: AgentThreadSummary[];
   activeThreadId: string;
+  threadsError: string | null;
+  onRetryThreads: () => void;
   onNewChat: () => void;
   onCloseMobile?: () => void;
 }) {
@@ -94,11 +77,20 @@ function AgentSidebar({
 
       <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-2">
         <p className="px-2 py-1.5 text-meta">Your chats</p>
-        {!threads.length ? (
+        {threadsError ? (
+          <div className="mx-2 mb-2 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2.5 text-[12px] leading-relaxed text-rose-900">
+            {threadsError}
+            <button type="button" className="mt-2 block font-semibold text-rose-950 underline" onClick={onRetryThreads}>
+              Try again
+            </button>
+          </div>
+        ) : null}
+        {!threads.length && !threadsError ? (
           <p className="px-2 py-6 text-sm leading-relaxed text-ink-3">
-            Start a conversation — it will show up here.
+            Start a conversation — it will show up here on every device once you send a message.
           </p>
-        ) : (
+        ) : null}
+        {threads.length ? (
           <ul className="space-y-0.5">
             {threads.map((t) => {
               const active = !onConnections && t.id === activeThreadId;
@@ -128,7 +120,7 @@ function AgentSidebar({
               );
             })}
           </ul>
-        )}
+        ) : null}
       </div>
 
       <div className="mt-auto space-y-0.5 border-t border-line p-2">
@@ -155,9 +147,9 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const activeThreadId = searchParams.get("t") || "main";
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
   const [serverThreads, setServerThreads] = useState<AgentThreadSummary[]>([]);
-  const [localThreads, setLocalThreads] = useState<AgentThreadSummary[]>([]);
+  const [pendingThreads, setPendingThreads] = useState<AgentThreadSummary[]>([]);
+  const [threadsError, setThreadsError] = useState<string | null>(null);
   const [filesOpen, setFilesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -168,33 +160,37 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   }, []);
 
   const threads = useMemo(
-    () => mergeThreadLists(serverThreads, localThreads),
-    [serverThreads, localThreads],
-  );
-
-  const upsertThread = useCallback(
-    (thread: AgentThreadSummary) => {
-      if (!userId) return;
-      setLocalThreads((prev) => {
-        const next = mergeThreadLists(prev, [thread]);
-        saveLocalThreads(userId, next);
-        return next;
-      });
-    },
-    [userId],
+    () => mergeThreadLists(serverThreads, pendingThreads),
+    [serverThreads, pendingThreads],
   );
 
   const loadThreads = useCallback(async () => {
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/threads", { headers, cache: "no-store" });
-      if (!res.ok) return;
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        const msg =
+          (body as { error?: { message?: string } }).error?.message ||
+          (body as { error?: string }).error ||
+          `Could not load chats (${res.status})`;
+        setThreadsError(msg);
+        return;
+      }
       const json = await res.json();
-      setServerThreads(json.threads ?? []);
+      const next = (json.threads as AgentThreadSummary[]) ?? [];
+      setServerThreads(next);
+      setPendingThreads((pending) => prunePendingThreads(next, pending));
+      setThreadsError(null);
     } catch {
-      /* ignore */
+      setThreadsError("Could not load chats. Check your connection and try again.");
     }
   }, []);
+
+  const upsertThread = useCallback((thread: AgentThreadSummary) => {
+    setPendingThreads((prev) => mergeThreadLists(prev, [thread]));
+    void loadThreads();
+  }, [loadThreads]);
 
   const refreshSession = useCallback(async () => {
     if (!pocketedgeAuthConfigured()) {
@@ -206,9 +202,10 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     const user = data.session?.user;
     const ok = Boolean(user);
     setSignedIn(ok);
-    if (user) {
-      setUserId(user.id);
-      setLocalThreads(loadLocalThreads(user.id));
+    if (!ok) {
+      setServerThreads([]);
+      setPendingThreads([]);
+      setThreadsError(null);
     }
     setReady(true);
     if (!ok) return;
@@ -217,7 +214,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       await fetch("/api/agent/sync", { method: "POST", headers });
       await loadThreads();
     } catch {
-      /* ignore */
+      /* sync errors are non-fatal; thread load surfaces its own error */
     }
   }, [loadThreads]);
 
@@ -246,6 +243,20 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     return () => window.clearInterval(id);
   }, [signedIn, anyWorking, loadThreads]);
 
+  useEffect(() => {
+    if (!signedIn) return;
+    const refresh = () => void loadThreads();
+    window.addEventListener("focus", refresh);
+    const onVis = () => {
+      if (document.visibilityState === "visible") refresh();
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", onVis);
+    };
+  }, [signedIn, loadThreads]);
+
   const shellValue = useMemo(
     () => ({
       threads,
@@ -261,7 +272,9 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
 
   function startNewChat() {
     const id = newThreadId();
-    upsertThread({ id, title: "New chat", updatedAt: new Date().toISOString(), working: false });
+    setPendingThreads((prev) =>
+      mergeThreadLists(prev, [{ id, title: "New chat", updatedAt: new Date().toISOString(), working: false }]),
+    );
     router.push(`/ai?t=${encodeURIComponent(id)}`);
     setSidebarOpen(false);
   }
@@ -292,9 +305,9 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
             Your <span className="mark">private</span> market agent
           </p>
           <p className="mt-3 text-sm text-ink-2">
-            Same Google account as Pocketedge. Chats, files, and broker connections stay yours alone.
+            Same Google account as Pocketedge. Chats sync to your account and appear on any device you sign into.
           </p>
-          <button type="button" className="btn-primary mt-8" onClick={() => signInWithGoogleOnPramaan()}>
+          <button type="button" className="btn-primary mt-8" onClick={() => void signInWithGoogleOnPramaan()}>
             Continue with Google
           </button>
         </div>
@@ -302,11 +315,19 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     );
   }
 
+  const sidebarProps = {
+    threads,
+    activeThreadId,
+    threadsError,
+    onRetryThreads: () => void loadThreads(),
+    onNewChat: startNewChat,
+  };
+
   return (
     <AgentShellContext.Provider value={shellValue}>
       <div className="flex min-h-0 flex-1 overflow-hidden">
         <div className="hidden h-full w-[min(100%,15.5rem)] shrink-0 border-r border-line lg:block xl:w-64">
-          <AgentSidebar threads={threads} activeThreadId={activeThreadId} onNewChat={startNewChat} />
+          <AgentSidebar {...sidebarProps} />
         </div>
         {sidebarOpen && (
           <>
@@ -317,12 +338,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
               onClick={() => setSidebarOpen(false)}
             />
             <div className="fixed bottom-0 left-0 top-14 z-50 w-[min(88vw,17rem)] border-r border-line bg-paper-2 shadow-2xl sm:top-16 lg:hidden">
-              <AgentSidebar
-                threads={threads}
-                activeThreadId={activeThreadId}
-                onNewChat={startNewChat}
-                onCloseMobile={() => setSidebarOpen(false)}
-              />
+              <AgentSidebar {...sidebarProps} onCloseMobile={() => setSidebarOpen(false)} />
             </div>
           </>
         )}

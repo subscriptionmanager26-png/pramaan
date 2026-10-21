@@ -38,6 +38,13 @@ export function threadsFromMessages(messages: AgentMessage[], limit = 40): Threa
     .slice(0, limit);
 }
 
+/** Drop optimistic sidebar rows once the backend has the same thread id. */
+export function prunePendingThreads(server: ThreadSummary[], pending: ThreadSummary[]) {
+  if (!pending.length) return pending;
+  const onServer = new Set(server.map((t) => t.id));
+  return pending.filter((t) => !onServer.has(t.id));
+}
+
 export function mergeThreadLists(
   server: ThreadSummary[],
   local: ThreadSummary[],

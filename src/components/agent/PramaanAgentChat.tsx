@@ -25,7 +25,7 @@ const SUGGESTIONS = [
 export function PramaanAgentChat() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { filesOpen, setFilesOpen, refreshThreads, upsertThread } = useAgentShell();
+  const { threads, filesOpen, setFilesOpen, refreshThreads, upsertThread } = useAgentShell();
   const threadParam = searchParams.get("t");
   const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "main";
 
@@ -40,8 +40,14 @@ export function PramaanAgentChat() {
   useEffect(() => {
     if (threadParam === "new") {
       router.replace(`/ai?t=${newThreadId()}`);
+      return;
     }
-  }, [threadParam, router]);
+    if (threadParam && isValidThreadId(threadParam)) return;
+    const newest = threads[0]?.id;
+    if (newest && newest !== "main") {
+      router.replace(`/ai?t=${encodeURIComponent(newest)}`);
+    }
+  }, [threadParam, threads, router]);
 
   const [ready, setReady] = useState(false);
   const [agentState, setAgentState] = useState<"unknown" | "active" | "disabled" | "error">("unknown");
