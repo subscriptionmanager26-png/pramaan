@@ -9,8 +9,8 @@ export type ThreadSummary = {
 
 const ACTIVE = new Set(["working"]);
 
-function titleFrom(text: string) {
-  const t = text.replace(/\s+/g, " ").trim();
+function titleFrom(text: string | undefined) {
+  const t = (text ?? "").replace(/\s+/g, " ").trim();
   if (!t) return "New chat";
   return t.length > 72 ? `${t.slice(0, 72)}…` : t;
 }
@@ -20,7 +20,7 @@ export function threadsFromMessages(messages: AgentMessage[], limit = 40): Threa
   const map = new Map<string, ThreadSummary>();
   for (const m of messages) {
     const id = m.threadId || "main";
-    const at = m.completedAt || m.createdAt;
+    const at = m.completedAt || m.createdAt || new Date(0).toISOString();
     const working = ACTIVE.has(m.status);
     const existing = map.get(id);
     if (!existing) {
@@ -34,7 +34,7 @@ export function threadsFromMessages(messages: AgentMessage[], limit = 40): Threa
     existing.working ||= working;
   }
   return [...map.values()]
-    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
+    .sort((a, b) => (b.updatedAt || "").localeCompare(a.updatedAt || ""))
     .slice(0, limit);
 }
 
@@ -56,11 +56,13 @@ export function mergeThreadLists(
       map.set(t.id, t);
       continue;
     }
-    if (t.updatedAt.localeCompare(prev.updatedAt) > 0) {
+    const tAt = t.updatedAt || "";
+    const prevAt = prev.updatedAt || "";
+    if (tAt.localeCompare(prevAt) > 0) {
       prev.updatedAt = t.updatedAt;
       prev.title = t.title;
     }
     prev.working ||= t.working;
   }
-  return [...map.values()].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  return [...map.values()].sort((a, b) => (b.updatedAt || "").localeCompare(a.updatedAt || ""));
 }

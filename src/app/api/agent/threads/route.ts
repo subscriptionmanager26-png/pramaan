@@ -20,22 +20,30 @@ export async function GET(request: Request) {
   const threadsRes = await paFetch(`${userPath}/threads`);
   if (threadsRes.ok) {
     const body = await threadsRes.json().catch(() => ({}));
-    fromThreads = body.threads ?? [];
+    const raw = body.threads;
+    fromThreads = Array.isArray(raw) ? raw : [];
   }
 
-  const msgRes = await paFetch(`${userPath}/messages?limit=200`);
-  if (!msgRes.ok && !fromThreads.length) {
+  let fromMessages: ReturnType<typeof threadsFromMessages> = [];
+  let messagesFailed = false;
+  const msgRes = await paFetch(`${userPath}/messages?limit=100`);
+  if (msgRes.ok) {
+    const msgBody = await msgRes.json().catch(() => ({}));
+    const raw = msgBody.messages;
+    const messages = Array.isArray(raw) ? (raw as AgentMessage[]) : [];
+    fromMessages = threadsFromMessages(messages, 60);
+  } else {
+    messagesFailed = true;
+  }
+
+  const threads = mergeThreadLists(fromThreads, fromMessages);
+  if (!threads.length && messagesFailed && !threadsRes.ok) {
     const err = await msgRes.json().catch(() => ({}));
     return NextResponse.json(err, { status: msgRes.status });
   }
 
-  let fromMessages: ReturnType<typeof threadsFromMessages> = [];
-  if (msgRes.ok) {
-    const msgBody = await msgRes.json().catch(() => ({}));
-    const messages = (msgBody.messages as AgentMessage[]) ?? [];
-    fromMessages = threadsFromMessages(messages, 60);
-  }
-
-  const threads = mergeThreadLists(fromThreads, fromMessages);
-  return NextResponse.json({ threads });
+  return NextResponse.json({
+    threads,
+    ...(messagesFailed && threads.length ? { warnings: ["message_index_unavailable"] } : {}),
+  });
 }
