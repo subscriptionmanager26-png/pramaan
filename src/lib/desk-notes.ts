@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-infrastructure-output-september-2026",
+    title: "India's infrastructure output rose 7.9% in September",
+    summary:
+      "Government data released on 21 October 2026 showed the infrastructure index, which tracks nine sectors that feed about a third of industrial production, grew 7.9% year on year in September, the strongest print since the series was rebased to 2022–23, led by electricity and refinery products while cement and steel also expanded.",
+    category: "industry",
+    companyOrSector: "Infrastructure / industrial activity",
+    publishedAt: "2026-10-21T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-infrastructure-output-september-2026"),
+    keyTakeaways: [
+      "The infrastructure output index rose 7.9% in September 2026 from a year earlier, versus a revised 5.9% in August, per government releases cited on 21 October.",
+      "Electricity and refinery products led the gain; cement output rose 9.8% and steel production increased 4.9% in the same release.",
+      "The September reading is the highest since officials revised the series with 2022–23 as the base year in June 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, the commerce ministry published September readings for India's infrastructure output index, a gauge that spans coal, crude oil, natural gas, refinery products, steel, cement, fertilisers, electricity, and steel-related activity. The composite measure rose 7.9% from September 2025, accelerating from a revised 5.9% in August. Reporting highlighted electricity generation and refinery throughput as the main drivers, with cement output up 9.8% and steel production up 4.9% in the same tables. The print is the strongest since the government rebased the series to 2022–23 earlier in 2026, when officials also restated historical growth rates.",
+      "What does this mean?",
+      "The index is a monthly pulse on physical activity, not stock prices. When power and refined fuel output climb together, it usually means factories, grids, and logistics are running harder ahead of the festive quarter. Cement and steel gains point to construction and capex still absorbing material even as financing costs stay elevated. Because the gauge feeds industrial production data, a strong September print can lift expectations for broader factory output unless downstream surveys show inventories piling up. It does not, by itself, prove consumer demand, but it corroborates other signals this week such as highway toll traffic and airport passenger counts that travel and building cycles are still active.",
+      "Why should I care?",
+      "If you work in construction, power, or logistics, treat the release as confirmation that input volumes are moving, then cross-check your own order book for pricing power. Households planning home repairs or vehicle purchases should still compare quotes, because material strength does not guarantee stable retail prices when energy costs are high. Investors in cement, metals, or capital goods should read the ministry tables alongside company guidance rather than trading the headline alone. Watch October infrastructure prints, monsoon-delayed project timelines, and whether refinery runs stay high if crude import bills keep rising.",
+    ],
+  },
+  {
+    slug: "motor-tp-insurance-homemaker-ruling-october-2026",
+    title: "Motor third-party premium growth slowed to 9% after a homemaker pay ruling",
+    summary:
+      "Kotak Institutional Equities research cited on 21 October 2026 said motor third-party insurance premium growth stayed at about 9% year on year in September, with insurers possibly pulling back from the segment after the Supreme Court's June 2026 order to count unpaid homemaker work when fixing accident compensation.",
+    category: "industry",
+    companyOrSector: "Motor insurance / households",
+    publishedAt: "2026-10-21T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("motor-tp-insurance-homemaker-ruling-october-2026"),
+    keyTakeaways: [
+      "Motor third-party premium collections grew about 9% year on year in September 2026, a sluggish pace Kotak's 21 October note linked to insurer caution after a Supreme Court compensation ruling.",
+      "In June 2026 the Supreme Court said courts should recognise the economic value of unpaid domestic work by homemakers when awarding damages in motor accident cases.",
+      "Third-party motor pools are regulated tariffs; when expected claim sizes rise, insurers can limit exposure by writing less business or pushing portfolio changes.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, business media summarised a Kotak Institutional Equities research report on India's motor insurance market. The note said growth in motor third-party premium income remained modest at about 9% in September 2026 compared with a year earlier. Analysts suggested insurers may be reducing focus on the segment after a Supreme Court judgment in June 2026 that instructed tribunals to value unpaid household work performed by homemakers when calculating compensation in motor accident claims. Third-party motor cover is the legally mandated policy that pays victims when a driver is at fault; premiums are heavily regulated and claim awards can swing industry loss ratios.",
+      "What does this mean?",
+      "When courts raise the economic weight attached to non-wage caregiving, insurers must reserve for larger payouts on serious injury cases. Motor third-party pools cannot always pass higher expected losses into premiums overnight because tariffs are politically sensitive. Insurers respond by underwriting less third-party business, cross-subsidising from own-damage policies, or lobbying for tariff revisions. Sluggish 9% premium growth alongside rising compensation norms is the friction showing up in the data, not a one-day stock move. For vehicle owners, the practical risk is tighter scrutiny at renewal and fewer discounting wars on basic liability cover if insurers retreat from the segment.",
+      "Why should I care?",
+      "If your car policy renews this quarter, compare third-party quotes from at least two insurers and read no-claim bonus rules before switching. Families should know that accident claims involving homemakers may now carry higher documented economic value, which is a social policy choice with premium consequences. Investors in general insurers should track IRDAI filings on third-party pool results and any tariff revision petitions, not only quarterly investment income. Watch whether premium growth re-accelerates after actuarial reviews, and whether regulators adjust the motor third-party tariff order in response to court precedents.",
+    ],
+  },
+  {
+    slug: "sun-pharma-organon-bond-raise-october-2026",
+    title: "Sun Pharma raised ₹10,000 crore in bonds to fund its Organon deal",
+    summary:
+      "Media reports on 21 October 2026 said Sun Pharmaceutical Industries priced two rupee-denominated bond tranches totalling ₹10,000 crore, with coupons of 8.20% and 8.05%, to partly refinance bridge loans for its $11.75 billion acquisition of US healthcare firm Organon after board approval for up to ₹15,000 crore of non-convertible debentures.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / corporate bonds",
+    publishedAt: "2026-10-21T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sun-pharma-organon-bond-raise-october-2026"),
+    keyTakeaways: [
+      "Sun Pharma is raising ₹10,000 crore through two NCD tranches maturing in 2031, with coupons of 8.20% on ₹7,000 crore and 8.05% on ₹3,000 crore that includes a 2028 put option, per 21 October reporting.",
+      "Proceeds will partly refinance bridge loans tied to the Organon acquisition agreed in April 2026 at an enterprise value of $11.75 billion.",
+      "Crisil assigned an AAA/Stable rating to the proposed debentures, with insurance and pension funds cited among likely buyers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, press reports citing people familiar with the transaction said Sun Pharmaceutical Industries has priced ₹10,000 crore of rupee bonds in two tranches to support financing for its Organon acquisition. A ₹7,000 crore slice carries an 8.20% coupon and a ₹3,000 crore slice carries 8.05%, with the smaller tranche including a put option in 2028. Both tranches mature in 2031. The fundraising follows the drugmaker's board approval last week to issue up to ₹15,000 crore of non-convertible debentures and comes after Sun agreed in April 2026 to buy US-based Organon for an enterprise value of $11.75 billion. Organon, spun out of Merck, focuses on women's health and established brands; Sun has said it will fund part of the deal from cash and accruals and the balance from debt.",
+      "What does this mean?",
+      "Large cross-border pharma deals ultimately land in India's corporate bond market when rupee liquidity is deep and ratings are investment grade. Sun is swapping short bridge bank lines for longer public debt, which spreads repayment risk across institutional holders such as insurers and pension funds. Coupon levels near 8% show where AAA industrial issuers price in late 2026 when global rates stay elevated. For Sun, locking Organon financing in rupees reduces rollover drama but raises fixed interest costs that must be covered by Organon's roughly $6.2 billion revenue base cited in rating commentary. Competing Indian drugmakers watching women's health and US generics will read the bond reception as a vote of confidence in integration plans.",
+      "Why should I care?",
+      "If you hold Sun Pharma shares or bonds, map how much of the $9.5–10 billion debt stack still needs marketing after this ₹10,000 crore slice. Fixed-income investors should compare the 2031 Sun paper with other AAA pharma and FMCG issuers before bidding in primary auctions. Patients and hospitals are indirect stakeholders: leverage choices affect how aggressively Sun invests in Organon's portfolio after close. Watch exchange filings on tranche closures, any offshore dollar bond plans, and regulatory milestones for the Organon takeover in the US and India.",
+    ],
+  },
+  {
+    slug: "indian-hotels-q2-travel-demand-october-2026",
+    title: "Indian Hotels grew revenue 22% in the September quarter",
+    summary:
+      "Indian Hotels Company Ltd reported on 21 October 2026 that consolidated net profit rose 19.5% year on year to ₹380 crore in the quarter ended September 2026, with revenue from operations up 21.7% to ₹2,484 crore and EBITDA up 23.9%, even as reported EBITDA margin eased from the year-ago period.",
+    category: "industry",
+    companyOrSector: "Hotels / travel demand",
+    publishedAt: "2026-10-21T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indian-hotels-q2-travel-demand-october-2026"),
+    keyTakeaways: [
+      "Indian Hotels posted Q2 FY27 consolidated net profit of ₹380 crore, up 19.5% from ₹318 crore a year earlier, with revenue from operations at ₹2,484 crore versus ₹2,041 crore, per exchange filings on 21 October 2026.",
+      "EBITDA rose 23.9% to ₹706 crore, while the company reported EBITDA margin at about 19.95% compared with 27.9% in the year-ago quarter.",
+      "The Tata Group hotelier's update lands the same week Delhi airport reported record first-half passenger traffic, pointing to sustained leisure and business travel.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, Indian Hotels Company Ltd, the Tata Group hospitality firm behind the Taj brand, released consolidated results for the quarter ended September 2026. Net profit rose 19.5% year on year to ₹380 crore from ₹318 crore. Revenue from operations increased 21.7% to ₹2,484 crore from ₹2,041 crore. EBITDA grew 23.9% to ₹706 crore from ₹570 crore. The company said EBITDA margin was about 19.95%, lower than the roughly 27.9% margin reported for the same quarter last year, reflecting a mix of renovation costs, brand spending, and the Brij acquisition that added provisional goodwill in earlier filings. Exchange data also cited hotel services as the lead segment in the half-year update.",
+      "What does this mean?",
+      "Top-line growth in the high teens shows room rates and occupancy are still expanding even as margins normalize from post-pandemic peaks. Hotels earn when corporate travel resumes, wedding calendars fill, and international inbound returns; Indian Hotels' footprint across luxury and upscale tiers captures that spread better than a single-city operator. Margin compression versus last year does not cancel the volume story: it often reflects reinvestment in properties and acquisitions rather than collapsing demand. The print aligns with other October datapoints such as record Delhi airport passenger counts and strong highway toll collections during the festive build-up.",
+      "Why should I care?",
+      "If you are planning year-end travel, book early but compare branded rates with boutique options because average daily rates can still move with event clusters. Event planners should lock room blocks before city-wide conferences squeeze supply. Investors comparing hospitality names should read Indian Hotels' segment commentary on management contracts versus owned assets, and track leverage after the Brij deal. Watch November and December occupancy updates, competitor pricing in Goa and metro wedding markets, and whether margin guidance stabilises as renovation cycles complete.",
+    ],
+  },
+  {
     slug: "state-oilcos-retail-fuel-under-recovery-october-2026",
     title: "State oil firms are losing up to ₹25 a litre on diesel sales",
     summary:
@@ -4262,6 +4358,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-infrastructure-output-september-2026": "policy",
+  "motor-tp-insurance-homemaker-ruling-october-2026": "policy",
+  "sun-pharma-organon-bond-raise-october-2026": "companies",
+  "indian-hotels-q2-travel-demand-october-2026": "markets",
   "state-oilcos-retail-fuel-under-recovery-october-2026": "policy",
   "emudhra-certificate-emergency-blocks-october-2026": "policy",
   "angel-one-us-stocks-rollout-october-2026": "markets",
