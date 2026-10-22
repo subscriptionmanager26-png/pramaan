@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "jio-platforms-ipo-retail-quota-fills-october-2026",
+    title: "Jio Platforms’ IPO filled its retail quota on the second day of bidding",
+    summary:
+      "On 22 October 2026, exchange data showed Jio Platforms’ ₹30,213 crore issue had drawn about ₹3.73 lakh crore of total bids by late evening on Day 2, with the retail portion oversubscribed and market commentators citing diverted cash from other listed stocks during the book build.",
+    category: "industry",
+    companyOrSector: "Telecom / IPO",
+    publishedAt: "2026-10-22T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jio-platforms-ipo-retail-quota-fills-october-2026"),
+    keyTakeaways: [
+      "Reporting on 22 October 2026 cited total IPO demand of about ₹3.73 lakh crore by 6:30 pm on Day 2, against an issue size of roughly ₹30,213 crore including the anchor tranche.",
+      "Retail investor bids exceeded about ₹14,500 crore, with the retail category described as fully covered before the issue closed on 23 October.",
+      "Qualified institutional buyers led demand at roughly 13 times their quota, while coverage said secondary-market turnover softened as investors parked funds for the listing.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, the second day of book building for Jio Platforms Ltd’s initial public offering, exchange filings and wire tallies pointed to heavy demand across investor categories. Reporters cited total bids of about ₹3.73 lakh crore against an issue size near ₹30,213 crore, including the anchor portion that priced before the public offer opened. Retail demand alone crossed about ₹14,500 crore, enough to cover the retail quota well before the scheduled close on 23 October. Qualified institutional buyers bid roughly 13 times their allocation, and non-institutional investors also logged strong interest. The issue is billed as India’s largest-ever IPO, so even partial allotments can tie up meaningful cash in application amounts until refunds flow after listing.",
+      "What does this mean?",
+      "Mega listings pull liquidity out of the secondary market for a few sessions. Brokers and strategists quoted in same-day coverage linked softer turnover in mid-cap names to money parked in IPO applications, alongside unrelated pressure from crude above $110. Retail participation matters because Jio’s user base overlaps with millions of households already paying monthly telecom and fibre bills; many applicants treat the stock as a consumer brand bet, not a typical telecom utility. Oversubscription does not guarantee listing-day gains, but it signals that domestic institutions and individuals were willing to prioritize this book over incremental buying elsewhere during the window.",
+      "Why should I care?",
+      "If you applied, track refund timelines and listing-day settlement rules on your broker app. If you did not apply but trade actively, expect choppy liquidity until the issue closes and anchor-plus-retail money returns to the pool. Long-term investors should separate one-week flows from Jio’s operating metrics in telecom, fibre, and digital services. Watch final subscription statistics after 23 October, the listing price versus the ₹1,119 upper band cited in earlier filings, and whether mid-cap volumes recover in the week after refunds.",
+    ],
+  },
+  {
+    slug: "sebi-exchange-investment-flexibility-october-2026",
+    title: "SEBI wants exchanges to invest in related businesses without case-by-case approval",
+    summary:
+      "On 22 October 2026, the Securities and Exchange Board of India proposed letting stock exchanges and depositories fund core-market and regulator-mandated initiatives without prior approval for each ticket, while keeping board oversight and financial safeguards and inviting comments until 12 November.",
+    category: "industry",
+    companyOrSector: "SEBI / market infrastructure",
+    publishedAt: "2026-10-22T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-exchange-investment-flexibility-october-2026"),
+    keyTakeaways: [
+      "SEBI’s 22 October 2026 consultation would allow exchanges and depositories to invest in businesses tied to core market functions without seeking prior approval for every transaction.",
+      "The draft also waives advance clearance for stakes in SEBI-mandated initiatives, internally funded subsidiary deals, and investments in entities regulated by other financial regulators, subject to board supervision.",
+      "Comments are open until 12 November 2026; SEBI said current rules treat small and strategic investments alike, which slows listed market infrastructure firms pursuing new revenue lines.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, India’s markets regulator published a consultation paper that would change how stock exchanges and depositories approve investments. The Securities and Exchange Board of India proposed that these institutions could fund businesses linked to core market functions without filing for prior approval on each deal. The plan would also drop advance sign-off for investments in SEBI-mandated projects, for stakes funded from internally generated cash through subsidiaries, and for tickets in companies supervised by other financial regulators. Board committees would still oversee the spending, and financial safeguards would remain. SEBI asked market participants to send comments by 12 November 2026. Several exchange operators are now publicly listed, so the rulebook affects both market plumbing and shareholder returns.",
+      "What does this mean?",
+      "Exchanges earn fees from trading, clearing, and data, but they also incubate adjacent businesses such as index licensing, fintech partnerships, and international linkages. Under today’s framework, even relatively small strategic cheques can trigger the same lengthy approval path as large bets, which executives argue does not match the risk. A lighter process could speed product launches that depend on exchange technology, provided boards document rationale and capital limits. The trade-off is regulatory trust: market infrastructure firms sit at the centre of price discovery, so SEBI still wants visibility through governance rather than micromanaging each rupee. The proposal does not automatically approve any live deal; it only sketches the process after comments are weighed.",
+      "Why should I care?",
+      "If you invest in listed exchange or depository stocks, read the consultation for caps on related-party deals and how boards must disclose new ventures. Active traders may eventually see faster rollout of tools tied to core trading rails if investments clear sooner. If you work at a market-tech vendor, a simpler approval path could mean more partnership pilots with bourses. Submit comments before 12 November if your firm has a view. Watch the final circular, any dissent from institutional investors, and whether rival regulators flag conflicts on cross-holdings.",
+    ],
+  },
+  {
+    slug: "flipkart-eat-in-food-delivery-pilot-october-2026",
+    title: "Flipkart is piloting a food delivery service for thousands of Bengaluru staff",
+    summary:
+      "On 22 October 2026, reporting said Flipkart is testing an internal food delivery product called Eat-in by Minutes with more than 8,000 employees in Bengaluru, using Ekart logistics as it prepares to compete with Zomato and Swiggy in meal delivery.",
+    category: "industry",
+    companyOrSector: "E-commerce / food delivery",
+    publishedAt: "2026-10-22T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("flipkart-eat-in-food-delivery-pilot-october-2026"),
+    keyTakeaways: [
+      "Tech press coverage on 22 October 2026 described Flipkart testing Eat-in by Minutes with over 8,000 employees in Bengaluru before any public consumer launch.",
+      "The pilot routes orders through Flipkart’s Ekart delivery network, reusing last-mile capacity built for e-commerce parcels.",
+      "Zomato and Swiggy already dominate urban meal delivery, while Swiggy’s recent results highlighted heavy quick-commerce spending; a Flipkart entry would add another well-funded rival.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, technology news outlets reported that Flipkart has begun an employee-only trial of a food delivery service branded Eat-in by Minutes. The Bengaluru-based marketplace is said to have enrolled more than 8,000 staff in the pilot, which routes meals through Ekart, the in-house logistics arm that handles parcels for Flipkart’s core shopping app. The coverage framed the test as a step toward challenging Zomato and Swiggy in India’s crowded meal-delivery market. Flipkart has not announced consumer pricing or city rollout dates in the reports cited. Walmart-backed Flipkart already competes fiercely in festive e-commerce, so meal delivery would extend its fight for share of wallet in urban households.",
+      "What does this mean?",
+      "Food delivery is a frequency game: apps win when riders, restaurant partners, and diner discounts scale together. Incumbents subsidize delivery fees and marketing to keep users from switching. A marketplace with Ekart trucks and dark-store experience could bundle meal runs with grocery or general merchandise routes, though restaurant food needs tighter time windows than many parcel SKUs. Employee pilots let product teams test routing, heat bags, and restaurant onboarding without public ratings storms. For diners, another national entrant could mean sharper promotions, but only if Flipkart commits capital the way it has in Big Billion Days discounts. Restaurant owners may gain negotiating leverage if three platforms bid for the same kitchen capacity.",
+      "Why should I care?",
+      "If you run a restaurant or cloud kitchen, watch whether Flipkart approaches Bengaluru partners with different commission structures than existing apps. Office workers in cities with pilots may see invite-only apps before a broad launch. Investors in listed food-tech names should treat the pilot as a signal that competition may not ease soon, echoing Swiggy’s own commentary that quick-commerce rivalry stays intense. Track any Flipkart blog post moving the test beyond employees, Ekart job listings for meal riders, and whether Walmart comments on India food delivery in earnings calls.",
+    ],
+  },
+  {
+    slug: "emudhra-exits-global-ssl-business-october-2026",
+    title: "eMudhra’s board voted to leave the global website certificate business",
+    summary:
+      "On 22 October 2026, eMudhra Ltd said its board will voluntarily withdraw from the global SSL/TLS certificate segment after a key-security incident on eight intermediate certificates, citing compliance cost and weak economics while stressing that other digital-trust services continue.",
+    category: "industry",
+    companyOrSector: "Digital trust / compliance",
+    publishedAt: "2026-10-22T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("emudhra-exits-global-ssl-business-october-2026"),
+    keyTakeaways: [
+      "eMudhra announced on 22 October 2026 that its board decided to exit the global SSL/TLS certificate business following a security incident involving eight intermediate certificates under its public-key infrastructure.",
+      "The company cited rising compliance burdens, operational complexity, and declining commercial viability in that segment, while saying core Indian digital-signature and trust services are unaffected.",
+      "Browser vendors had already blocked the affected intermediates after Mozilla flagged insufficient protection of private keys earlier in the week.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, eMudhra Ltd told exchanges that its board approved a voluntary withdrawal from the global SSL/TLS website certificate business. The decision follows a security incident in which private keys tied to eight intermediate certificates were not adequately protected, prompting emergency blocks from major browser developers after Mozilla published technical details. eMudhra said compliance costs, operational complexity, and shrinking economics in that product line drove the exit call, while other digital-trust offerings in India would keep running. The move comes days after the same company’s shares sold off when the browser distrust list first appeared. Customers use eMudhra for digital signatures, GST workflows, and corporate filings even when they never buy a public TLS cert.",
+      "What does this mean?",
+      "Certificate authorities compete on price for commodity TLS products while carrying heavy audit and insurance overhead. One key-management failure can erase years of margin. Exiting the global SSL segment lets management shrink the attack surface and focus on domestic signature and identity products where regulation creates stickier demand. Enterprises that bought TLS certs from eMudhra must migrate to another authority before renewals expire, which IT teams often treat as a standard playbook after distrust events. The announcement does not by itself replace browser blocks; customers still need fresh certificate chains issued under a still-trusted root.",
+      "Why should I care?",
+      "If your website or API still presents an eMudhra-issued TLS certificate in the global chain, schedule replacement with your hosting provider now. Compliance officers should confirm digital signature tokens and MCA filings use products outside the exited segment. Procurement teams may rebid trust vendors with stronger key-management attestations. Investors should model revenue mix without low-margin TLS renewals. Watch customer migration disclosures, any orders from India’s Controller of Certifying Authorities, and whether peers publish independent security audits after this episode.",
+    ],
+  },
+  {
     slug: "india-eu-trade-deal-early-2027-october-2026",
     title: "India’s trade minister says the EU pact could take effect in early 2027",
     summary:
@@ -4694,6 +4790,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "jio-platforms-ipo-retail-quota-fills-october-2026": "markets",
+  "sebi-exchange-investment-flexibility-october-2026": "policy",
+  "flipkart-eat-in-food-delivery-pilot-october-2026": "markets",
+  "emudhra-exits-global-ssl-business-october-2026": "policy",
   "india-eu-trade-deal-early-2027-october-2026": "policy",
   "swiggy-q2-food-delivery-profit-october-2026": "markets",
   "sapphire-foods-q2-restaurant-sales-october-2026": "markets",
