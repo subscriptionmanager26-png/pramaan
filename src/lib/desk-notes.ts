@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-tbill-auction-no-bids-october-2026",
+    title: "The RBI rejected every bid at Thursday’s treasury bill auction",
+    summary:
+      "On 22 October 2026, the Reserve Bank of India accepted no bids at the scheduled sale of short-dated government treasury bills, the first full cancellation in about seven months, as investors demanded higher yields amid a bond selloff, oil-linked inflation fears, and expectations of more rate hikes after October’s policy minutes.",
+    category: "industry",
+    companyOrSector: "RBI / government borrowing",
+    publishedAt: "2026-10-22T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-tbill-auction-no-bids-october-2026"),
+    keyTakeaways: [
+      "The RBI said on 22 October 2026 that no bids were accepted at the treasury bill sale for which the government had planned to raise about ₹23,000 crore in short-maturity paper.",
+      "Treasury officials and traders cited in same-day reporting said investors likely bid at yields the debt office was unwilling to pay, with the 10-year benchmark yield up about 24 basis points this month.",
+      "Banking-system liquidity had already been drained through bond sales and forex swaps, with surplus cash reported near ₹57,000 crore on 20 October versus about ₹5 lakh crore at the start of October.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, India’s debt managers hit an unusual roadblock. The Reserve Bank of India, which runs weekly auctions of federal treasury bills, announced that it accepted none of the bids submitted for that day’s sale. The government had aimed to raise roughly ₹23,000 crore through the short-dated notes, which mature within a year. This was the first time since late March 2026 that an entire treasury bill auction was scrapped. Reporting on the decision quoted treasury heads saying investors probably asked for yields high enough that officials chose to walk away rather than lock in those borrowing costs. The cancellation landed in the same week that October monetary policy minutes reinforced worries about inflation broadening and the possibility of further repo rate increases.",
+      "What does this mean?",
+      "Treasury bills are the government’s rolling overdraft in the money market. When an auction fails, it does not erase the borrowing need; it usually means the state will try again later, possibly at even steeper yields if traders keep selling. Shorter bonds are the first place rate-hike expectations show up, because their prices reset quickly when the Reserve Bank of India signals tighter policy or when oil prices push import costs higher. The failed sale sat alongside a wider bond rout: benchmark 10-year yields touched multi-year highs on 21–22 October, and five-year yields had jumped about 30 basis points since end-September, according to traders cited in wire reports. Separately, the central bank has been pulling excess cash out of the banking system through bond sales and large forex swaps after a surge of deposits from a diaspora scheme, which can also make banks less eager to park money in low-yielding short paper.",
+      "Why should I care?",
+      "If you hold short-term debt funds or roll three- to six-month fixed deposits, watch the next few bill auctions for the yields that finally clear. Companies funding working capital through commercial paper may see banks widen spreads even before another official rate move. Home buyers on floating loans should remember that money markets can reprice faster than the RBI’s meeting calendar. None of this guarantees another hike, but a rejected auction is a plain signal that lenders want more compensation to hold government paper right now.",
+    ],
+  },
+  {
+    slug: "shiprocket-restaurant-direct-orders-october-2026",
+    title: "Shiprocket is helping restaurants take orders without the aggregator",
+    summary:
+      "Shiprocket said on 22 October 2026 it is piloting a direct-ordering stack with Delhi-NCR chains Punjabi Angithi and Bikkgane Biryani, using its fastrr checkout and identity tools plus Shiprocket Quick deliveries so restaurants can chase repeat diners while paying less in third-party commission.",
+    category: "industry",
+    companyOrSector: "Restaurants / e-commerce logistics",
+    publishedAt: "2026-10-22T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("shiprocket-restaurant-direct-orders-october-2026"),
+    keyTakeaways: [
+      "Coverage on 22 October 2026 said Shiprocket tied up with Vegorama Group brands Punjabi Angithi and Bikkgane Biryani to run marketing, checkout, and delivery outside aggregator apps.",
+      "Shiprocket executives argued restaurants should own the customer relationship; an NCAER study cited in reporting put average food-aggregator commission at about 24.6% of order value in 2023, up from 9.6% in 2019.",
+      "Shiprocket Quick will route doorstep delivery through third-party fleets such as Ola, Porter, Borzo, and Shadowfax at advertised rates starting near ₹10 per kilometre without surge pricing.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, logistics firm Shiprocket moved into restaurant commerce with a pilot aimed at keeping more of each meal’s rupee with the kitchen. The company said it partnered with Vegorama Group, which runs Punjabi Angithi and Bikkgane Biryani in the Delhi-National Capital Region. Shiprocket’s fastrr tools will identify returning diners, while WhatsApp reminders and targeted offers try to convert one-time aggregator users into direct repeat buyers. Shiprocket Quick, its delivery layer, will assign riders from partner fleets including Ola, Porter, Borzo, and Shadowfax Local, with live tracking and per-kilometre pricing that Shiprocket advertises from about ₹10 without surge fees. Executives framed the push as a way for brands to hold customer data instead of renting discovery solely from Swiggy- or Zomato-style platforms.",
+      "What does this mean?",
+      "Food delivery aggregators solved demand for restaurants, but their take of the bill has risen. Reporting referenced an NCAER study, conducted with Prosus, which estimated average platform commission at 24.6% in 2023 versus 9.6% in 2019. On every ₹1 crore of commissionable gross merchandise value, that gap is the difference between roughly ₹9.6 lakh and ₹24.6 lakh before marketing discounts and payment fees. Direct ordering does not remove those costs entirely; restaurants still pay for ads, payment gateways, and riders. The bet is that repeat diners acquired once through an aggregator can be cheaper to serve on a owned channel. Shiprocket enters a crowded field: DotPe, uEngage, Rebel Foods’ EatSure, and the Open Network for Digital Commerce already pitch similar ideas. Both pilot chains already run apps built by uEngage, so Shiprocket is layering marketing and delivery on existing digital storefronts rather than starting from zero.",
+      "Why should I care?",
+      "If you eat out often, compare prices on a restaurant’s own site or app with the aggregator quote before checkout; repeat-order discounts may only appear on the direct channel. Restaurant owners should model commission, delivery, and marketing as one stack, not just the platform fee line. Investors in listed food-tech and logistics names should watch whether post-IPO Shiprocket can cross-sell checkout software beyond shipping labels. Track whether chains report higher repeat rates, if aggregators respond with sharper merchant incentives, and whether ONDC restaurant flows pick up in the same cities.",
+    ],
+  },
+  {
+    slug: "transrail-solar-generation-pm-kusum-october-2026",
+    title: "Transrail Lighting is buying into a 990 MW solar portfolio in Maharashtra",
+    summary:
+      "Transrail Lighting said on 22 October 2026 it will invest about ₹20 crore for a 49% stake in NOPL Pace Green Energy, giving the transmission EPC firm a foothold in roughly 990 MW of solar projects tied to Maharashtra’s farm electrification scheme and a 25-year state utility power purchase contract at ₹3.10 per unit.",
+    category: "industry",
+    companyOrSector: "Power / renewables",
+    publishedAt: "2026-10-22T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("transrail-solar-generation-pm-kusum-october-2026"),
+    keyTakeaways: [
+      "On 22 October 2026, Transrail Lighting’s board approved about ₹20 crore to acquire 49% of NOPL Pace Green Energy, linked to an approximate 990 MW solar portfolio in Maharashtra.",
+      "The projects sit under Component C of the central PM-KUSUM farm-solar programme, with a 25-year power purchase agreement at a fixed ₹3.10 per unit with Maharashtra State Electricity Distribution Company.",
+      "Reporting cited an indicative development cost near ₹3,900 crore for the portfolio, with scope for Transrail to raise its stake toward 100% subject to approvals and terms with Onix Renewable.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, Transrail Lighting, known for transmission and distribution engineering contracts, said it will pay about ₹20 crore for a 49% stake in NOPL Pace Green Energy. The target owns or is developing an solar portfolio of roughly 990 megawatts in Maharashtra. The assets are tied to Component C of the Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan scheme, which pushes solar pumps and daytime farm power. Maharashtra State Electricity Distribution Company has signed a 25-year power purchase agreement at a fixed tariff of ₹3.10 per unit. Wire reports put the indicative cost to build the portfolio near ₹3,900 crore, mostly debt-funded, while Transrail’s equity cheque covers only its minority share. The deal is subject to regulatory approvals and conditions with partner Onix Renewable, which could allow Transrail to increase ownership toward 100% later.",
+      "What does this mean?",
+      "Engineering firms that only build lines and substations earn fees when projects finish. Owning generation adds recurring cash flows if plants commission on time and tariffs hold. For Transrail, the move mirrors peers that blend EPC skill with operating assets, especially when long-term state utility contracts back the revenue line. PM-KUSUM projects aim to align irrigation demand with solar output, which can reduce diesel pump use in villages. The fixed ₹3.10 tariff locks in revenue visibility but leaves execution risk on grid connections, land, and financing spreads. Transrail’s small initial equity bet lets it test returns before committing more capital.",
+      "Why should I care?",
+      "If you invest in power EPC or renewable developers, compare how much of each company’s order book is construction-only versus generation ownership. Farmers and rural cooperatives in Maharashtra should track whether daytime power actually improves as these arrays connect. Watch commission dates, debt drawdowns, and any tariff renegotiation chatter at MSEDCL. For Transrail shareholders, the key read-through is whether management can run plants as reliably as it delivers transmission lines.",
+    ],
+  },
+  {
+    slug: "vishal-mega-mart-q2-same-store-october-2026",
+    title: "Vishal Mega Mart grew same-store sales 5.4% in the September quarter",
+    summary:
+      "Brokerage updates on 22 October 2026 cited Vishal Mega Mart’s Q2 FY27 revenue up about 14% year on year with same-store sales growth of 5.4%, while profit and EBITDA rose more slowly as the value retailer kept opening stores ahead of the festive calendar.",
+    category: "industry",
+    companyOrSector: "Value retail / consumers",
+    publishedAt: "2026-10-22T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("vishal-mega-mart-q2-same-store-october-2026"),
+    keyTakeaways: [
+      "ICICI Securities research on 22 October 2026 cited Vishal Mega Mart Q2 FY27 revenue growth of about 14% year on year and same-store sales growth of 5.4%.",
+      "EBITDA and profit after tax rose about 4.4% and 3.7% year on year respectively in the same brokerage summary, with margins pressured versus the faster top line.",
+      "The retailer continues a store-expansion playbook in tier two and tier three cities while ethnic apparel specialists reported weaker festive timing in the same earnings season.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, equity research on Vishal Mega Mart’s September-quarter results painted a steady value-retail picture. ICICI Securities noted consolidated revenue up about 14% year on year, with same-store sales growth of 5.4% in the quarter. EBITDA and net profit climbed more slowly, about 4.4% and 3.7% respectively, as the company absorbed costs from new outlets and competitive pricing. Vishal Mega Mart targets budget shoppers with apparel, home, and daily needs formats spread across hundreds of cities. The print arrived in the same week other consumer names debated whether a shifted festive calendar made September look soft while October footfall recovers.",
+      "What does this mean?",
+      "Same-store sales strip out the boost from new square footage, so a mid-single-digit comp suggests existing aisles are busier, not just wider. That is a useful check when investors worry that discount chains only grow by planting flags on new high streets. Slower profit growth than revenue hints that promotions, rent, or wage lines ate part of the festive buildup. Vishal’s model depends on tight sourcing and rapid inventory turns; margin wobble can be temporary if October festivals deliver the traffic management expects. The contrast with weaker ethnic-wear comps elsewhere supports the idea that value formats are still capturing pantry and clothing trips from cautious middle-income shoppers.",
+      "Why should I care?",
+      "If you shop at Vishal Mega Mart, watch whether festive offers deepen after the September margin squeeze. Competitors in value apparel and general merchandise should benchmark their comps against Vishal’s 5.4% read. Investors comparing retail names should pair this print with store-opening guidance and working-capital days in the full exchange filing when it lands. Track October same-store updates, inventory markdowns after Diwali, and whether quick-commerce snack and staple promos steal basket share in Vishal’s core towns.",
+    ],
+  },
+  {
     slug: "fssai-children-nutrition-claims-october-2026",
     title: "FSSAI sent Nestlé, Zydus, and Abbott notices over kids’ nutrition claims",
     summary:
@@ -4526,6 +4622,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-tbill-auction-no-bids-october-2026": "policy",
+  "shiprocket-restaurant-direct-orders-october-2026": "markets",
+  "transrail-solar-generation-pm-kusum-october-2026": "policy",
+  "vishal-mega-mart-q2-same-store-october-2026": "markets",
   "fssai-children-nutrition-claims-october-2026": "policy",
   "mahindra-finance-q2-rural-lending-october-2026": "policy",
   "lt-cpwd-secretariat-amaravati-towers-october-2026": "policy",

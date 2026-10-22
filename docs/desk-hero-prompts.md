@@ -768,6 +768,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Office tower silhouettes |
 | Metaphor left | Scaffold and crane chevrons |
 
+### `rbi-tbill-auction-no-bids-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Short-term debt auction fails when yields jump |
+| Subject right | Policy / central bank architecture |
+| Metaphor left | Empty bid tray + rising yield bars |
+
+### `shiprocket-restaurant-direct-orders-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Restaurants keep margin via direct orders |
+| Subject right | Generic restaurant storefront |
+| Metaphor left | Shrinking aggregator commission bar |
+
+### `transrail-solar-generation-pm-kusum-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | EPC firm adds contracted solar generation |
+| Subject right | Transmission tower silhouette |
+| Metaphor left | Solar array + long PPA timeline |
+
+### `vishal-mega-mart-q2-same-store-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Same stores busier, not only new openings |
+| Subject right | Value retail storefront |
+| Metaphor left | Foot-traffic chevrons on one floorplan |
+
 ### `canara-bank-yields-festive-credit-october-2026`
 
 | Field | Value |
