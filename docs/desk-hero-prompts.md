@@ -808,6 +808,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Public-sector bank facade |
 | Metaphor left | Falling gilt curve + rising home/car loan icons |
 
+### `india-eu-trade-deal-early-2027-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Tariff barriers narrowing between India and Europe |
+| Subject right | Abstract bilateral trade architecture |
+| Metaphor left | Tariff steps narrowing to preferential lane |
+
+### `swiggy-q2-food-delivery-profit-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Profitable meal delivery funding quick-commerce expansion |
+| Subject right | Generic restaurant storefront |
+| Metaphor left | Split order bars: profitable lane vs loss lane |
+
+### `sapphire-foods-q2-restaurant-sales-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive diners return to branded fast food |
+| Subject right | Generic quick-service restaurant storefront |
+| Metaphor left | Rising foot-traffic chevrons on one floorplan |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

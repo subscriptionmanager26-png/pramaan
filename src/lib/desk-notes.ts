@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-eu-trade-deal-early-2027-october-2026",
+    title: "India’s trade minister says the EU pact could take effect in early 2027",
+    summary:
+      "Commerce minister Piyush Goyal said on 22 October 2026 that India’s proposed free-trade agreement with the European Union could become operational within four to five months after signing, with the deal expected to be inked before year-end during his visit to Germany.",
+    category: "industry",
+    companyOrSector: "Trade policy / exports",
+    publishedAt: "2026-10-22T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-eu-trade-deal-early-2027-october-2026"),
+    keyTakeaways: [
+      "On 22 October 2026, Piyush Goyal told reporters the India-EU FTA could be operational four to five months after signature, pointing to a possible early-2027 start if the pact is signed before December 2026.",
+      "Goyal was speaking during a visit to Germany and framed the agreement as widening market access and investment flows between India and the 27-member EU bloc.",
+      "Negotiations have run for years; a signed text would still need ratification steps on both sides before tariff schedules and rules of origin change for exporters.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, India’s commerce and industry minister Piyush Goyal gave a timeline for the long-running free-trade talks with the European Union. Speaking during a visit to Germany, he said the agreement could become operational within four to five months after it is signed. Goyal added that officials expect to sign the pact before the end of 2026. If that schedule holds, exporters could see lower tariffs and clearer rules of origin in early 2027 rather than waiting another full year. The EU is India’s second-largest trading partner after the United States, so even partial tariff relief on industrial goods, spirits, or auto components can shift sourcing decisions for factories that sell into both markets.",
+      "What does this mean?",
+      "A trade deal is not a single switch. Negotiators must finish legal scrubbing, cabinets must approve the text, and parliaments or the European Parliament may need to ratify chapters that touch investment or intellectual property. The four-to-five-month window Goyal cited likely assumes those steps move in parallel once the political deal is done. For Indian apparel, pharma, and engineering exporters, the payoff is fewer duty disadvantages versus competitors from Vietnam or Bangladesh in EU retail chains. European wine, cheese, and capital-goods makers want reciprocal access in India. Until notification dates are published, companies should treat Goyal’s comment as guidance, not a customs circular.",
+      "Why should I care?",
+      "If you run an export-oriented plant, ask your trade compliance team which EU tariff lines still hit your product category and whether rules-of-origin paperwork is ready for a faster lane. Importers of European machinery or ingredients should watch for phased tariff cuts that could reopen India-EU price gaps. Investors in logistics, cold chain, and certification firms often see early volume when new FTAs kick in. Track the formal signing ceremony, EU ratification votes, and any last-minute carve-outs on agriculture or autos before you rework long-term contracts.",
+    ],
+  },
+  {
+    slug: "swiggy-q2-food-delivery-profit-october-2026",
+    title: "Swiggy’s meal delivery unit made a record profit while Instamart losses widened",
+    summary:
+      "Swiggy reported on 22 October 2026 that September-quarter revenue rose 36% to about ₹7,571 crore and the consolidated net loss narrowed to ₹922 crore, as food delivery posted record adjusted core profit of about ₹349 crore while quick-commerce Instamart lost about ₹764 crore at the segment level amid heavier discounting and 69 new dark stores.",
+    category: "industry",
+    companyOrSector: "Food delivery / quick commerce",
+    publishedAt: "2026-10-22T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("swiggy-q2-food-delivery-profit-october-2026"),
+    keyTakeaways: [
+      "Swiggy’s Q2 FY27 revenue from operations rose about 36% year on year to ₹7,571 crore, ahead of analyst estimates near ₹7,281 crore, while consolidated net loss was ₹922 crore versus ₹1,092 crore a year earlier.",
+      "The food delivery business reported adjusted core profit of about ₹341 crore, up from ₹240 crore, helped by advertising and delivery efficiencies; Instamart’s adjusted core loss widened to about ₹895 crore from ₹849 crore.",
+      "Instamart added 69 net dark stores to reach 1,240 across 133 cities; quick-commerce contribution margin slipped to negative 1% of gross order value from negative 0.2% in the prior quarter.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, Swiggy published September-quarter results that split its story in two. Consolidated revenue from operations grew about 36% year on year to roughly ₹7,571 crore, beating the consensus estimate near ₹7,281 crore compiled by LSEG. The net loss narrowed to about ₹922 crore from ₹1,092 crore a year earlier, though analysts had hoped for a smaller ₹792 crore loss. The food delivery arm, which still carries most of the brand recognition, delivered record adjusted core profit of about ₹341 crore, up from ₹240 crore, as higher advertising revenue and route efficiency helped. Instamart, the quick-commerce business that delivers groceries and general merchandise from neighbourhood warehouses, widened its adjusted core loss to about ₹895 crore even as gross order value rose about 35% to ₹6,594 crore. Management added 69 net dark stores in the quarter, taking the network to 1,240 sites across 133 cities, and said transitioning to an Indian-owned and controlled corporate structure should add about 80 basis points to net margin over time.",
+      "What does this mean?",
+      "Listed food-tech firms are funding a land grab in ten-minute grocery delivery. Swiggy’s meal business is now profitable enough on an adjusted basis to help pay for that expansion, but not enough to offset Instamart’s burn in one quarter. Contribution margin per quick-commerce order turned more negative, moving to about minus 1% of gross order value from minus 0.2% in the June quarter, which points to sharper discounts and retention offers as Blinkit and Zepto add stores faster. Rival Eternal’s Blinkit added 308 net stores in the same period and said it would keep expanding without chasing margin improvement immediately. For households, the fight shows up as cheaper baskets and wider SKU lists on apps, but also as questions about how long subsidies last after IPO scrutiny.",
+      "Why should I care?",
+      "If you order groceries on Instamart or competitor apps, compare unit prices and delivery fees across platforms during the festive week; promotional pricing may not match the economics Swiggy disclosed to shareholders. Restaurant partners should note that Swiggy’s core meal profit gives it room to keep bidding for diner traffic even while grocery losses run high. Investors should read segment accounts, not just consolidated loss narrowing. Watch Instamart contribution margin next quarter, dark-store rollout pace versus Blinkit, and whether the 80-basis-point corporate-structure benefit flows through as promised.",
+    ],
+  },
+  {
+    slug: "sapphire-foods-q2-restaurant-sales-october-2026",
+    title: "Sapphire Foods posted its strongest restaurant sales growth in four years",
+    summary:
+      "KFC and Pizza Hut operator Sapphire Foods India said on 22 October 2026 that September-quarter consolidated restaurant sales rose 20% year on year to about ₹885 crore, with KFC India same-store sales up 14% and adjusted EBITDA margin expanding 100 basis points to 7.1% even as the listed stock remained far below its 52-week high.",
+    category: "industry",
+    companyOrSector: "Quick-service restaurants / consumers",
+    publishedAt: "2026-10-22T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sapphire-foods-q2-restaurant-sales-october-2026"),
+    keyTakeaways: [
+      "Sapphire Foods reported Q2 FY27 consolidated restaurant sales of about ₹885 crore, up 20% year on year, calling it the strongest revenue growth quarter since the Covid era.",
+      "KFC India revenue rose 26% with same-store sales growth of 14% and restaurant EBITDA margin up 70 basis points to 14.5%; Pizza Hut India grew revenue 7% with 5% same-store sales growth.",
+      "Adjusted EBITDA grew 39% to about ₹62 crore at a 7.1% margin; reported net loss narrowed to about ₹1.5 crore while shares still traded down about 35% from the 52-week high.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, Sapphire Foods India, the listed operator of KFC, Pizza Hut, and Taco Bell stores in India and Sri Lanka, reported September-quarter numbers that showed diners returning to branded fast food at a pace not seen since before the pandemic disruption. Consolidated restaurant sales rose 20% year on year to about ₹885 crore. Management described the period as the best for revenue and adjusted EBITDA growth in 16 quarters. KFC India led with 26% revenue growth and same-store sales growth of 14%, helped by more transactions per outlet. Pizza Hut India posted 7% revenue growth and 5% same-store sales growth, supported by value bundles such as a ₹99 four-course meal and buy-one-get-one promotions. Adjusted EBITDA increased 39% to about ₹62 crore, with margin expanding 100 basis points to 7.1%. The reported net loss narrowed to roughly ₹1.5 crore from a deeper loss a year earlier.",
+      "What does this mean?",
+      "Same-store sales growth tells you existing restaurants are busier, not just that new malls opened. A mid-teens comp at KFC during a quarter when some apparel retailers blamed a shifted festive calendar suggests quick-service chains can still capture impulse dining and family outings. Pizza Hut’s positive comps but negative restaurant EBITDA margin show value pricing can fill seats while energy and food inflation eat the kitchen line. Sapphire’s store count reached 1,086 outlets, with KFC India at 606 versus 529 a year ago, so part of the 20% sales jump still comes from expansion. The stock reaction was muted: shares fell slightly on result day and remain about 35% below the 52-week high, which means investors may be weighing debt, royalty costs, or competition more than one strong traffic quarter.",
+      "Why should I care?",
+      "If you follow consumer spending, pair Sapphire’s KFC comps with value retail and travel prints from the same week to see whether middle-income households are trading up on small treats while postponing big-ticket buys. Franchise operators should study which price points drove transaction growth. Investors comparing QSR names should look at restaurant-level EBITDA, not only consolidated sales. Watch Pizza Hut’s margin path, Sri Lanka wage pressure, and whether Sapphire’s proposed merger with a peer advances regulatory approvals without distracting store execution.",
+    ],
+  },
+  {
     slug: "rbi-tbill-auction-no-bids-october-2026",
     title: "The RBI rejected every bid at Thursday’s treasury bill auction",
     summary:
@@ -4622,6 +4694,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-eu-trade-deal-early-2027-october-2026": "policy",
+  "swiggy-q2-food-delivery-profit-october-2026": "markets",
+  "sapphire-foods-q2-restaurant-sales-october-2026": "markets",
   "rbi-tbill-auction-no-bids-october-2026": "policy",
   "shiprocket-restaurant-direct-orders-october-2026": "markets",
   "transrail-solar-generation-pm-kusum-october-2026": "policy",
