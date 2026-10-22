@@ -744,6 +744,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Smartphone trading motif (no brand) |
 | Metaphor left | Rupee coin crossing bridge to US market tiles |
 
+### `fssai-children-nutrition-claims-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Kids’ nutrition marketing must match evidence |
+| Subject right | Baby bottle / nutrition pack silhouettes |
+| Metaphor left | Shrinking exaggerated growth chart at compliance gate |
+
+### `mahindra-finance-q2-rural-lending-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Rural vehicle loans still growing |
+| Subject right | Tractor / two-wheeler silhouettes |
+| Metaphor left | Rising disbursement bars |
+
+### `lt-cpwd-secretariat-amaravati-towers-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Government office capex in Delhi and Amaravati |
+| Subject right | Office tower silhouettes |
+| Metaphor left | Scaffold and crane chevrons |
+
 ### `canara-bank-yields-festive-credit-october-2026`
 
 | Field | Value |

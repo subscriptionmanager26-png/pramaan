@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fssai-children-nutrition-claims-october-2026",
+    title: "FSSAI sent Nestlé, Zydus, and Abbott notices over kids’ nutrition claims",
+    summary:
+      "On 21 October 2026, the Food Safety and Standards Authority of India issued enforcement notices to Nestlé India, Zydus Wellness, Abbott Healthcare, and others over promotional claims on infant and children’s products, including Complan, Lactogen Pro 1, and NAN Excella Pro Stage 1, days after proposing a ban on added sugars in infant foods up to six months.",
+    category: "industry",
+    companyOrSector: "Packaged food / regulation",
+    publishedAt: "2026-10-22T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-children-nutrition-claims-october-2026"),
+    keyTakeaways: [
+      "FSSAI said on 21 October 2026 it issued notices over products including Complan, Lactogen Pro 1 Powder, NAN Excella Pro Stage 1, and infant milk substitutes where marketing allegedly breached food safety and advertising rules.",
+      "Nestlé India was asked to substantiate digestive and immune-benefit claims on Lactogen Pro 1 and NAN Excella Pro Stage 1; the company said the post repeated September label issues it had already answered.",
+      "Zydus Wellness was told to justify Complan claims such as “grow taller, faster” and “clinically proven 2X growth,” and regulators also flagged an Instagram reel on infant milk substitutes involving influencer Ira Fathima.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, India’s food safety regulator issued fresh enforcement notices to large packaged-food companies over how they market products aimed at infants and children. The Food Safety and Standards Authority of India named Nestlé India, Zydus Wellness, Abbott Healthcare, and other parties in actions tied to items such as Complan, Lactogen Pro 1 Powder, and NAN Excella Pro Stage 1 infant formula. Regulators asked Nestlé to back claims about digestive and immune benefits on its infant powders. Zydus was told to provide scientific justification for Complan slogans promising faster height growth. FSSAI also moved against social media promotion of infant milk substitutes, citing an Instagram reel and issuing notices to influencer Ira Fathima alongside corporate respondents. Abbott said it was not involved in the reel and does not endorse the claims shown. The wave lands days after FSSAI proposed banning added sucrose and fructose in foods for babies up to six months and as the authority pushes harder on front-of-pack warning labels across the packaged food industry.",
+      "What does this mean?",
+      "When regulators question both pack copy and influencer posts, compliance is no longer a factory-floor checklist. Marketing teams must match what appears on the label, in the ad, on the e-commerce tile, and in a creator’s video. Infant formula and children’s nutrition sit in a tighter box because mis-stated health promises touch young consumers. Notices do not automatically pull products from shelves, but they signal that Delhi is willing to name global brands in public posts and demand evidence files. Nestlé’s response that September label issues were already answered shows companies will argue process, while FSSAI is building a paper trail ahead of possible penalties or reformulation orders. The pattern fits October’s wider sweep on infant sugars, warehouse raids, and misleading claims against other FMCG names.",
+      "Why should I care?",
+      "If you buy Complan, lactogen-style formula, or toddler drinks, compare pack claims with the legal product category in the fine print before you stock up for the festive pantry run. Parents should treat influencer reels on infant foods as advertising subject to the same rules as television spots. Retailers and quick-commerce operators may see more delistings or label refreshes on apps while cases move. Investors in listed food companies should watch whether notices convert into fines, recalls, or simply legal fees. Track company responses in exchange filings, court challenges to FSSAI’s label push, and whether smaller brands face the same scrutiny as multinationals.",
+    ],
+  },
+  {
+    slug: "mahindra-finance-q2-rural-lending-october-2026",
+    title: "Mahindra Finance grew disbursements 22% in the September quarter",
+    summary:
+      "Mahindra & Mahindra Financial Services reported on 21 October 2026 that second-quarter disbursements rose about 22% year on year, assets under management grew about 15%, and profit after tax jumped about 55% to roughly ₹882 crore, with credit costs at about 1.6% even as management flagged higher funding costs and rural weather risks.",
+    category: "industry",
+    companyOrSector: "Rural finance / consumers",
+    publishedAt: "2026-10-22T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mahindra-finance-q2-rural-lending-october-2026"),
+    keyTakeaways: [
+      "Reporting on 21 October 2026 cited Mahindra Finance Q2 FY27 disbursements up about 22%, AUM up about 15%, and PAT up about 55% to roughly ₹882 crore.",
+      "Credit costs were reported at about 1.6% for the quarter, with management reiterating medium-term targets of about 16%–18% AUM growth and return on assets of about 2.2%–2.5%.",
+      "Commentary paired the growth print with caution on funding costs and rural weather risks heading into the second half of the fiscal year.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, updates on Mahindra & Mahindra Financial Services’ September-quarter results showed rural and semi-urban borrowers still taking vehicle and equipment loans at a brisk pace. Disbursements rose about 22% year on year in the quarter, assets under management grew about 15%, and profit after tax increased about 55% to roughly ₹882 crore. Credit costs were reported near 1.6%, a figure investors watch closely after two years of stress in unsecured and microfinance books at other lenders. Management restated ambitions to grow the loan book about 16%–18% over the medium term while holding return on assets in a roughly 2.2%–2.5% band. The release landed in the same week other NBFCs highlighted gold-backed lending growth and tighter underwriting on multi-loan borrowers, so Mahindra Finance’s numbers read as a check on whether secured rural demand is still expanding.",
+      "What does this mean?",
+      "Mahindra Finance earns when farmers and small-town buyers finance tractors, utility vehicles, and commercial assets. Strong disbursement growth with contained credit costs suggests collateral and dealer networks are still converting foot traffic into booked loans even as the Reserve Bank of India keeps policy tight. The profit jump also reflects a larger balance sheet and prior provisioning work, not a sudden change in household income overnight. Management’s nod to funding costs matters because NBFCs borrow in bond and bank markets; when rates stay elevated, margin on new loans can compress unless yields reprice. Rural weather risk is the other swing factor: a poor monsoon tail or delayed harvest cash flows can show up in collections two quarters later, which is why the company paired upbeat growth with caution.",
+      "Why should I care?",
+      "If you are shopping for a tractor, pickup, or commercial vehicle loan outside the big cities, compare Mahindra Finance offers with public-sector bank schemes and check processing fees, not just the headline rate. Borrowers should ask how EMIs move if benchmark rates rise again. Investors comparing NBFC stocks should read Mahindra Finance’s mix of vehicle finance versus other secured products and track whether credit costs stay near 1.6% through the festive season. Watch November collection trends, management commentary on bond spreads, and whether rival rural lenders report similar disbursement momentum or pull back.",
+    ],
+  },
+  {
+    slug: "lt-cpwd-secretariat-amaravati-towers-october-2026",
+    title: "L&T won two large government office contracts in Delhi and Amaravati",
+    summary:
+      "Larsen & Toubro said on 21 October 2026 that its public-spaces vertical secured two construction orders it classifies as large, worth roughly ₹2,500–5,000 crore each: Common Central Secretariat buildings 4 and 5 along Kartavya Path for the CPWD in New Delhi and twin 47-storey office towers beside the Amaravati Quantum Computing Centre in Andhra Pradesh.",
+    category: "industry",
+    companyOrSector: "Construction / public capex",
+    publishedAt: "2026-10-22T05:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lt-cpwd-secretariat-amaravati-towers-october-2026"),
+    keyTakeaways: [
+      "L&T announced on 21 October 2026 two orders in its large bucket (₹2,500–5,000 crore each) without disclosing exact values.",
+      "The CPWD contract covers two Common Central Secretariat buildings along Kartavya Path with about 32.8 lakh square feet combined, EPC execution, and a 24-month build plus five years of operations and maintenance.",
+      "Andhra Pradesh awarded a design-and-build package for two 47-floor towers near the Amaravati Quantum Computing Centre with about 37.5 lakh square feet total area.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 21 October 2026, Larsen & Toubro told exchanges its Public Spaces, Airports & Health business won two major government construction mandates. The company tags contracts between roughly ₹2,500 crore and ₹5,000 crore as large but did not pin precise amounts. The first job, from the Central Public Works Department, covers Common Central Secretariat buildings 4 and 5 along Kartavya Path in New Delhi. Each structure includes a basement, ground level, and seven upper floors, with combined built-up area of about 32.8 lakh square feet. L&T will handle structural, architectural, and MEP work on an engineering, procurement, and construction basis, target completion within 24 months, and then run operations and maintenance for five years. The second award, from the Andhra Pradesh government, is a design-and-build contract for two office towers flanking the Amaravati Quantum Computing Centre. Each tower rises 47 floors above a basement and ground level, together offering about 37.5 lakh square feet of office space in the state capital region.",
+      "What does this mean?",
+      "Central government office builds along Kartavya Path are part of a long-running plan to consolidate ministries near the power corridor in Lutyens’ Delhi. Awarding two more secretariat blocks keeps civil works demand alive for steel, cement, and electrical contractors even as private real estate developers complain about slow luxury sales in some metros. The Amaravati towers show Andhra Pradesh still investing in flagship administrative real estate around its quantum computing hub, which supports construction jobs and supplier orders even when residential launches elsewhere look uneven. For L&T, twin large-bucket wins in one day improve order-book visibility and utilise the same project-management teams that bid on airports and hospitals.",
+      "Why should I care?",
+      "If you work in building materials, interiors, or construction services, these projects feed multi-year tender pipelines in Delhi-NCR and Andhra Pradesh. Home buyers in those cities should not confuse government office towers with residential supply; the spillover is mainly jobs and vendor payments. Investors in engineering and construction stocks should read L&T’s order inflow alongside highway and defence awards already announced this month. Watch CPWD milestone payments, Andhra Pradesh land and utility clearances, and whether other EPC majors bid aggressively enough to compress margins on the next central-government campus jobs.",
+    ],
+  },
+  {
     slug: "rbi-mpc-minutes-more-hikes-october-2026",
     title: "RBI minutes warn the rate-hiking cycle may not be over",
     summary:
@@ -4454,6 +4526,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fssai-children-nutrition-claims-october-2026": "policy",
+  "mahindra-finance-q2-rural-lending-october-2026": "policy",
+  "lt-cpwd-secretariat-amaravati-towers-october-2026": "policy",
   "rbi-mpc-minutes-more-hikes-october-2026": "policy",
   "navratri-festive-vehicle-retail-october-2026": "markets",
   "bajaj-consumer-care-price-hike-october-2026": "markets",
