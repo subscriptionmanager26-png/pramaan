@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-avadhut-sathe-refund-penalty-october-2026",
+    title: "Sebi ordered a trading academy to refund ₹546 crore to investors",
+    summary:
+      "Markets regulator Sebi said on 23 October 2026 that Avadhut Sathe Trading Academy and founder Avadhut Sathe must return ₹546.17 crore collected for unregistered investment advisory and research services, plus about ₹67.87 crore in interest, and pay an ₹11.5 crore penalty while staying out of the securities market for two years.",
+    category: "industry",
+    companyOrSector: "Capital markets regulation",
+    publishedAt: "2026-10-23T23:11:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-avadhut-sathe-refund-penalty-october-2026"),
+    keyTakeaways: [
+      "Sebi’s 23 October 2026 order directed Avadhut Sathe Trading Academy Pvt Ltd and Avadhut Sathe to refund ₹546.17 crore with interest of about ₹67.87 crore after finding unregistered investment advisory and research analyst activity.",
+      "The regulator imposed an ₹11.5 crore penalty and barred the academy and Sathe from accessing the securities market for two years or until completion of refunds, whichever is later.",
+      "The case reinforces that paid stock tips, workshops, and research sold without Sebi registration can be unwound years later with compound interest.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, the Securities and Exchange Board of India passed a final order against Avadhut Sathe Trading Academy Pvt Ltd and its founder Avadhut Sathe. Wire reports said Sebi found the firm collected about ₹546.17 crore from participants for investment advisory and research analyst services without holding the required registrations. The regulator directed a refund of those collections plus interest of roughly ₹67.87 crore. It also levied a penalty of ₹11.5 crore and barred the academy and Sathe from the securities market for two years, or until refunds are completed, depending on which condition applies longer. The order caps a long-running enforcement matter over paid trading education marketed to retail investors.",
+      "What does this mean?",
+      "Sebi treats investment advice and research as licensed activities. When a promoter sells strategies, stock lists, or mentorship for a fee without registration, the regulator can claw back the full fee pool, not just future income. Interest on refunds raises the cost of delay for both the business and participants waiting for cash. The market ban blocks fresh capital-raising or broking tie-ups tied to securities activity. For the wider tips-and-courses industry, the size of the refund line sends a signal that scale does not shield operators from retroactive liability. Recovery still depends on enforcement and investor claims processes, so timelines may stretch even after the order.",
+      "Why should I care?",
+      "If you paid for any trading course or Telegram-style research, check whether the provider is on Sebi’s registered investment adviser or research analyst lists before renewing subscriptions. Refund orders can take years to translate into bank credits, so do not treat a headline victory as instant cash. Investors comparing influencer pitches should weigh regulatory status alongside past returns screenshots. Watch Sebi’s follow-up on refund compliance, any appeals, and whether similar cases against other education brands accelerate after this quantum.",
+    ],
+  },
+  {
+    slug: "india-smartphone-q3-slump-october-2026",
+    title: "India’s smartphone market just posted its weakest quarter in a decade",
+    summary:
+      "Counterpoint Research estimated on 23 October 2026 that India’s smartphone shipments fell about 20% year on year in the July–September quarter, the steepest third-quarter drop in roughly ten years, as shoppers delayed upgrades despite festive marketing.",
+    category: "industry",
+    companyOrSector: "Consumer electronics",
+    publishedAt: "2026-10-23T23:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-smartphone-q3-slump-october-2026"),
+    keyTakeaways: [
+      "Coverage on 23 October 2026 cited Counterpoint Research saying India’s smartphone market declined about 20% year on year in Q3 2026, the poorest third-quarter performance in about a decade.",
+      "Analysts linked the drop to stretched replacement cycles, cautious urban spending, and heavy discounting that failed to pull forward upgrades ahead of Diwali.",
+      "The print matters for brands such as Xiaomi, Samsung, and Vivo, and for component suppliers that had been hiring temporary factory workers for festive builds.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, industry trackers said India’s smartphone shipments recorded a sharp third-quarter setback. Counterpoint Research estimated volumes fell about 20% compared with the same quarter a year earlier, marking the weakest Q3 in roughly ten years of its data. Reporting tied the slump to consumers holding phones longer, mixed income sentiment in cities, and promotions that did not convince buyers to upgrade early for the festival season. The update landed the same week handset makers and online retailers were advertising exchange bonuses and no-cost EMI, suggesting marketing spend is rising even as unit sales shrink.",
+      "What does this mean?",
+      "Smartphones are a bellwether for discretionary cash because most Indian buyers pay upfront or through EMIs tied to personal balance sheets. When replacement cycles stretch from two years toward three, brands fight on margin through channel subsidies rather than on volume growth. A weak Q3 also ripples to distributors sitting on inventory and to plants that ramped temporary staffing for expected Diwali demand. Premium tiers can still grow while the mass market stalls, but a double-digit market decline usually means share battles intensify in the ₹10,000–₹20,000 bands where most Indians trade.",
+      "Why should I care?",
+      "If you planned to upgrade, compare festive offers against likely post-Diwali price cuts because brands may clear stock aggressively. Retail investors in consumer electronics supply chains should read management commentary on inventory days, not just headline launch events. Job seekers in handset assembly should note that weak shipments can pause overtime even when marketing looks loud. Watch October and November sell-through data from Counterpoint and IDC, Amazon and Flipkart festive sale tallies, and whether brands redirect ad budgets toward wearables or financing schemes.",
+    ],
+  },
+  {
+    slug: "dr-reddys-semaglutide-supply-restart-october-2026",
+    title: "Dr Reddy’s expects to restart semaglutide supplies from November",
+    summary:
+      "Dr Reddy’s Laboratories told reporters on 23 October 2026 that it resolved active pharmaceutical ingredient issues that had disrupted semaglutide rollout earlier in the year and expects to resume supplies across key international markets from November, with Canada likely to account for much of the initial volume.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / GLP-1 generics",
+    publishedAt: "2026-10-23T22:53:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dr-reddys-semaglutide-supply-restart-october-2026"),
+    keyTakeaways: [
+      "Management said on 23 October 2026 that manufacturing issues affecting semaglutide API were fixed and shipments should restart from November 2026.",
+      "Canada is expected to take the bulk of early volumes after the disruption slowed the company’s international generic rollout.",
+      "The update sits alongside September-quarter results where lower lenalidomide sales weighed on revenue even as underlying base business grew at double-digit rates.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Dr Reddy’s Laboratories Ltd told journalists it is on track to resume semaglutide supplies after resolving active pharmaceutical ingredient problems that had interrupted the product’s rollout earlier in 2026. Executives said shipments to key international markets should restart from November, with Canada likely to drive most of the first wave of volumes. Semaglutide is the molecule behind blockbuster GLP-1 therapies for diabetes and obesity; Indian manufacturers have been racing to supply licensed generic versions where patents allow. The supply restart update came as the company discussed September-quarter earnings, where revenue was pressured by falling lenalidomide sales even as management highlighted double-digit growth in the underlying base portfolio.",
+      "What does this mean?",
+      "API quality or scale issues can pause a high-profile launch even when demand and regulatory approvals are in place. Fixing the molecule supply chain unlocks revenue that was stuck in the factory rather than lost to rivals permanently. Canada as the lead market suggests Dr Reddy’s will stage volumes where pricing and channel partnerships are already cleared before widening to other geographies. For patients abroad on GLP-1 therapies, a reliable Indian generic supplier can ease shortages, but launch timing still depends on local approvals and distributor contracts. Investors will watch whether restarted sales lift margin mix in the second half of the fiscal year.",
+      "Why should I care?",
+      "If you follow Indian pharma exporters, treat semaglutide as a capacity and compliance story, not just a patent headline. Healthcare buyers outside India should track distributor notices for stock availability rather than assuming instant shelf presence. Competitors with their own GLP-1 filings may accelerate launches if Dr Reddy’s stumbles again. Watch November shipment disclosures, any US or Europe timeline commentary on earnings calls, and regulatory updates on obesity-label generics in India.",
+    ],
+  },
+  {
+    slug: "tata-motors-q2-profit-cv-demand-october-2026",
+    title: "Tata Motors returned to profit as commercial vehicle sales jumped 42%",
+    summary:
+      "Tata Motors Ltd reported on 23 October 2026 a consolidated net profit of about ₹1,254 crore for the quarter ended 30 September 2026 as commercial vehicle volumes rose 42%, supported by festive freight demand and a smaller loss on its Tata Capital investment.",
+    category: "industry",
+    companyOrSector: "Automobiles / commercial vehicles",
+    publishedAt: "2026-10-23T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-motors-q2-profit-cv-demand-october-2026"),
+    keyTakeaways: [
+      "Exchange reporting on 23 October 2026 put Tata Motors’ Q2 FY27 consolidated net profit at about ₹1,254 crore as the company swung back from prior-year losses.",
+      "Commercial vehicle sales rose 42% year on year in the quarter, helped by construction, mining, and pre-festive goods movement.",
+      "Management said it expects to begin integrating Italian truck maker Iveco Group into operations in the January–March 2026 quarter after shareholder approvals.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Tata Motors Ltd announced results for the quarter ended 30 September 2026, reporting a consolidated net profit of about ₹1,254 crore. Wire copy said the Mumbai-based truck and bus maker returned to the black as commercial vehicle volumes climbed 42% year on year, reflecting stronger freight and infrastructure-linked demand ahead of the festival season. A smaller loss on the company’s equity stake in Tata Capital also supported the bottom line compared with earlier periods when financial services valuations weighed on earnings. Executives reiterated that integration of Iveco Group, approved by shareholders earlier in October, is slated to begin in the January–March quarter. The print follows separate updates that Tata Motors clocked tens of thousands of retail deliveries during Navratri, showing both wholesale and retail momentum in CVs.",
+      "What does this mean?",
+      "Commercial vehicle earnings track highway tonnage, cement and steel output, and e-commerce parcel flows more closely than passenger car fashion cycles. A 42% volume jump suggests fleet owners are replacing ageing trucks or adding capacity while financing costs are still digestible. Profit recovery also depends on mix: heavy trucks and tippers carry better margins than small commercial vans. The Iveco integration timeline matters because global platforms can share components and export markets, but near-term costs can rise during merger accounting. Passenger vehicle performance was not the headline driver this quarter, keeping the story focused on logistics demand.",
+      "Why should I care?",
+      "If you run a logistics or construction business, CV availability and lead times often loosen when OEMs post strong wholesale numbers, but check dealer discounts before locking purchases. Investors should compare Tata Motors’ CV growth with Ashok Leyland and Eicher results in the same week for share-shift clues. Lenders to fleet operators may see better repayment trends when utilisation rises. Watch October retail tallies, monthly wholesale releases from SIAM, and management guidance on Iveco synergy costs in the next call.",
+    ],
+  },
+  {
+    slug: "delhi-winter-pollution-vehicle-curbs-october-2026",
+    title: "Delhi will tighten winter curbs on older petrol and diesel cars from November",
+    summary:
+      "Reporting on 23 October 2026 said Delhi’s air pollution control measures will stiffen from 1 November 2026, including restrictions on non-BS-VI vehicles, a step analysts said could nudge commuters toward newer cars, scooters, and electric options in the capital region.",
+    category: "industry",
+    companyOrSector: "Automobiles / air quality policy",
+    publishedAt: "2026-10-23T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("delhi-winter-pollution-vehicle-curbs-october-2026"),
+    keyTakeaways: [
+      "Wire reports on 23 October 2026 said Delhi’s graded response plan will tighten from 1 November, with curbs that include limits on non-BS-VI petrol and diesel vehicles when air quality worsens.",
+      "Analyst commentary linked the rules to potential demand support for BS-VI compliant cars, two-wheelers, and electric models from commuters who must keep daily mobility in the NCR.",
+      "The policy sits in the same week automakers reported festive retail momentum nationally, but the capital faces extra compliance costs for older fleets.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, coverage of Delhi’s winter air quality plan said stricter measures take effect from 1 November 2026 under the city’s graded response framework. Among the steps discussed were restrictions on non-BS-VI petrol and diesel vehicles when pollution levels trigger higher grades of the plan. BS-VI emission norms apply to models sold from April 2020 onward, so many older but still common cars face limits on peak smog days. Market commentary the same day asked whether the curbs would alter buying patterns for automakers such as Tata Motors, Maruti Suzuki, Hyundai, and two-wheeler firms including TVS Motor, Bajaj Auto, and Ather Energy, because commuters may upgrade or switch modes rather than risk fines or bans.",
+      "What does this mean?",
+      "Air quality rules act like a shadow registration tax on ageing vehicles in the capital region. Fleet owners who cannot park an older diesel during bad-air days may accelerate replacements into compliant petrol, CNG, or electric options. For OEMs, Delhi-NCR is a dense showroom market, so even a regional rule can shift monthly retail mixes. Electric two-wheelers and cars gain when running costs and access perks align with compliance needs, though charging infrastructure still varies by locality. The measures do not ban national sales of older stock overnight, but they change the economics of keeping a pre-BS-VI car inside the city during winter.",
+      "Why should I care?",
+      "If you commute within Delhi-NCR, check your vehicle’s emission standard on the registration document before November and plan backups such as metro or carpools for high-pollution days. Buyers eyeing used cars should discount pre-BS-VI listings in the capital even if prices look cheap. Investors can treat the rule as a regional demand tailwind for compliant models without assuming a national upgrade wave. Watch official notifications on which GRAP stages trigger driving bans, enforcement on peripheral highways, and festive discounting on BS-VI and electric inventory.",
+    ],
+  },
+  {
     slug: "adani-total-gas-cng-price-hike-october-2026",
     title: "Adani Total Gas raised CNG prices by ₹4.45 per kg on costly LNG",
     summary:
@@ -5054,6 +5174,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-avadhut-sathe-refund-penalty-october-2026": "policy",
+  "india-smartphone-q3-slump-october-2026": "markets",
+  "dr-reddys-semaglutide-supply-restart-october-2026": "companies",
+  "tata-motors-q2-profit-cv-demand-october-2026": "companies",
+  "delhi-winter-pollution-vehicle-curbs-october-2026": "policy",
   "adani-total-gas-cng-price-hike-october-2026": "policy",
   "india-plfs-gig-unpaid-work-survey-october-2026": "policy",
   "rbi-bank-leverage-ratio-april-2027-october-2026": "policy",
