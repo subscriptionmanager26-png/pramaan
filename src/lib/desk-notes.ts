@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-total-gas-cng-price-hike-october-2026",
+    title: "Adani Total Gas raised CNG prices by ₹4.45 per kg on costly LNG",
+    summary:
+      "Adani Total Gas Ltd said on 23 October 2026 that it lifted compressed natural gas prices by ₹4.45 per kg across its network, citing spot liquefied natural gas near $30 per million British thermal units, tighter domestic gas allocation, and upstream supply curtailments that pushed weighted procurement costs higher.",
+    category: "industry",
+    companyOrSector: "City gas / transport fuel",
+    publishedAt: "2026-10-23T17:24:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-total-gas-cng-price-hike-october-2026"),
+    keyTakeaways: [
+      "ATGL’s 23 October 2026 statement raised CNG by ₹4.45 per kg, taking Ahmedabad retail to ₹98.47 per kg, Faridabad to ₹102.60, and Jalandhar to about ₹100, according to prices listed on its website.",
+      "The company blamed international spot LNG near $30 per MMBtu versus roughly $10–12 in February 2026, plus lower new-well gas from ONGC and reduced high-pressure high-temperature supplies after a government order.",
+      "CNG remains widely used by taxis, autos, and light commercial fleets; distributors said the hike partly offsets procurement costs while keeping pumps supplied when cheaper domestic molecules are scarce.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Adani Total Gas Ltd, a city gas distributor active in Gujarat, Uttar Pradesh, Haryana, and Punjab, announced a ₹4.45 per kilogram increase in compressed natural gas prices. Updated pump rates on its website showed Ahmedabad at ₹98.47 per kg, Faridabad at ₹102.60, and Jalandhar near ₹100. In a media statement, the company said global spot liquefied natural gas had surged to about $30 per million British thermal units from roughly $10–12 in February 2026, lifting the cost of imported molecules it must blend into the mix. It also cited reduced availability of lower-cost new-well gas from state producers such as ONGC and curtailments on high-pressure, high-temperature domestic fields following a government allocation order. ATGL described the move as a calibrated step to partly absorb higher procurement expenses while maintaining supply.",
+      "What does this mean?",
+      "City gas distributors buy a basket of regulated domestic gas and pricier spot LNG. When cheaper domestic volumes shrink, the weighted average cost rises even if headline CNG still looks cheaper than petrol on a per-kilometre basis. Fleet operators and daily commuters feel the change immediately at the pump, while piped cooking gas customers on ATGL’s network face separate tariff rules. The hike lands during a week when other fuel costs are also in focus: state oil companies told analysts that liquefied petroleum gas under-recoveries widened, and crude-linked products remain volatile. ATGL’s statement stressed it is trying to limit consumer impact, but margin pressure on distributors is real when spot LNG stays elevated.",
+      "Why should I care?",
+      "If you drive a CNG car or run a taxi fleet, budget higher per-trip fuel bills and compare pump prices across cities before locking monthly contracts. Logistics firms should rerun route economics because a few rupees per kg adds up across high-mileage vehicles. Investors in city gas names should read quarterly margin commentary alongside government gas allocation notices, not just retail tariffs. Watch domestic gas pool revisions, any further ATGL price circulars, competitor tariffs from Indraprastha Gas or Mahanagar Gas, and whether spot LNG retreats after winter demand peaks.",
+    ],
+  },
+  {
+    slug: "india-plfs-gig-unpaid-work-survey-october-2026",
+    title: "India will start counting gig workers and unpaid work in its jobs survey",
+    summary:
+      "The statistics ministry said on 23 October 2026 that it proposed changes to the Periodic Labour Force Survey from January 2027 to add a digital platform gig category and questions on unpaid household, caregiving, and volunteer work, with fresh samples in 2027–28 and a 15-day public comment window.",
+    category: "industry",
+    companyOrSector: "Labour statistics / gig economy",
+    publishedAt: "2026-10-23T17:07:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-plfs-gig-unpaid-work-survey-october-2026"),
+    keyTakeaways: [
+      "Wire reports on 23 October 2026 said the ministry will ask rural and urban households whether members earn on digital platforms, creating a separate gig bucket that prior surveys undercounted.",
+      "The overhaul will also track unpaid activities such as goods produced for own use, household chores, caregiving, and volunteer work, starting with new samples for 2027–28.",
+      "India’s January 2026 economic survey had estimated gig workers rose about 55% over five years to 2025–26 and could reach roughly 2% of the workforce, while headline unemployment sat near 5%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, the Ministry of Statistics and Programme Implementation outlined draft revisions to the Periodic Labour Force Survey, India’s main household jobs poll. Reporting by Reuters said officials want a dedicated category for digital platform gig workers because existing questions missed many app-based earners. Enumerators will ask a wider set of rural and urban households whether members deliver food, drive rides, or perform other platform tasks. The proposal also expands measurement of unpaid work, including production for own consumption, caregiving, household maintenance, and volunteer roles. Changes take effect from January 2027 with fresh sampling for 2027–28, which will break direct comparisons with older series. The government invited expert and public feedback within 15 days.",
+      "What does this mean?",
+      "Policy debates on jobs quality often clash because the official unemployment rate can look tame while many workers report irregular hours or side gigs. Capturing platform earners separately should show how much informal app work sits alongside formal payroll jobs. Tracking unpaid labour, long advocated by labour economists, could eventually influence how national accounts value household production, though officials cautioned that comparisons with past data will need care. Labour economist K.R. Shyam Sundar told reporters the gig step is helpful but still partial because many informal gig workers never touch a branded platform. Better data can still guide skilling programmes, social security talks, and state rules on delivery and ride-hail partners.",
+      "Why should I care?",
+      "If you freelance on apps or hire gig workers, future survey releases may finally reflect how common your work model is, which can shape welfare and insurance proposals. HR teams planning campus hiring should remember that headline jobless rates may understate underemployment. Investors in consumer internet and logistics names can pair PLFS updates with company rider counts. Watch the comment window closing, the final methodology note, and whether the next economic survey revises gig estimates once new fieldwork begins.",
+    ],
+  },
+  {
+    slug: "rbi-bank-leverage-ratio-april-2027-october-2026",
+    title: "The RBI set tougher bank leverage rules that start in April 2027",
+    summary:
+      "The Reserve Bank of India issued final leverage-ratio rules on 23 October 2026 requiring global systemically important banks in India to hold at least 3.5% tier-1 capital against total assets from 1 April 2027, above the 3% Basel floor banks had sought, with profit distribution curbs if lenders miss the bar.",
+    category: "industry",
+    companyOrSector: "Banking regulation",
+    publishedAt: "2026-10-23T17:06:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-bank-leverage-ratio-april-2027-october-2026"),
+    keyTakeaways: [
+      "The RBI’s 23 October 2026 circular finalised leverage-ratio standards first drafted in August, setting a 3.5% minimum for India’s global systemically important banks versus the 3% Basel reference level industry groups had requested.",
+      "A bank’s leverage ratio equals tier-1 capital divided by total exposure; breaching the minimum can trigger restrictions on paying dividends or repatriating profits until buffers are restored.",
+      "Officials rejected pleas for a later start date, keeping the 1 April 2027 effective timeline despite stakeholder comments asking for more preparation time.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, the Reserve Bank of India published final rules on the leverage ratio, a backstop that compares core capital with total assets regardless of risk weights. The framework follows an August 2026 draft and sets a 3.5% minimum for global systemically important banks operating in India, effective 1 April 2027. Industry feedback had asked to align that bar with the 3% Basel minimum; the central bank said it did not accept that suggestion. The circular also spells out consequences when lenders slip below the threshold, including limits on capital distributions such as dividends and profit repatriation until ratios recover. Banks had also requested more implementation time; the RBI kept the April 2027 start.",
+      "What does this mean?",
+      "Risk-weighted capital rules let banks hold less capital against assets deemed safer; the leverage ratio caps how thin overall buffers can get. A 3.5% floor for the largest systemic lenders forces them to carry more equity per rupee of loans, derivatives, and securities, which can slow balance-sheet growth or push them toward retained earnings instead of payouts. Smaller banks face their own calibrated thresholds in the same package. The timing matters because Indian lenders are already navigating tighter liquidity, higher bond yields, and RBI rate hikes aimed at inflation. Extra capital rules reduce the chance that a fast-growing book outruns loss-absorbing capacity, but they can also make large banks more selective on corporate and retail lending growth.",
+      "Why should I care?",
+      "If you own bank shares for dividends, read next year’s payout policies against the new leverage timetable. Borrowers seeking big-ticket loans from systemic banks may see stricter internal limits even when headline credit policies look open. Fixed-income investors should treat stronger leverage standards as modestly positive for senior bondholders because equity cushions thicken. Watch which Indian banks are classified as global systemically important, quarterly leverage disclosures in FY27, and whether lenders pre-emptively raise tier-1 capital before April 2027.",
+    ],
+  },
+  {
+    slug: "infosys-fy27-guidance-trim-october-2026",
+    title: "Infosys cut its revenue growth outlook to 1%–2% for the year",
+    summary:
+      "Infosys Ltd narrowed its fiscal 2027 revenue growth guidance to 1%–2% in constant currency as it reported September-quarter results on 23 October 2026, a softer band that weighed on its US depositary receipt in pre-market trade even as management highlighted large deals and artificial-intelligence-linked work.",
+    category: "industry",
+    companyOrSector: "IT services",
+    publishedAt: "2026-10-23T16:43:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("infosys-fy27-guidance-trim-october-2026"),
+    keyTakeaways: [
+      "Exchange and wire reports on 23 October 2026 said Infosys guided fiscal 2027 revenue growth at 1%–2% in constant currency after the September quarter, trimming a range that had previously sat higher.",
+      "The company’s American depositary receipt fell about 6% in pre-market trading, according to coverage of the results session, even as executives cited large-deal momentum and AI-related project pipelines.",
+      "The update arrived on a heavy earnings day for Indian IT, with investors already comparing margin and deal commentary from Tata Consultancy Services and other peers reporting in the same week.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Infosys Ltd reported results for the quarter ended 30 September 2026 and reset its full-year revenue growth outlook to 1%–2% in constant currency. Wire services said the narrower band disappointed investors who had hoped AI-linked contracts would translate into faster top-line expansion this fiscal year. Infosys also flagged large-deal wins and continued client spending on automation and cloud programmes, but the guidance cut suggested macro caution among global enterprises still matters. US-listed depositary receipts slid about 6% in pre-market trading, according to market reports tied to the release. The print landed amid a cluster of IT earnings in India, making it easier for fund managers to rotate between names based on who protected margins versus who trimmed forecasts.",
+      "What does this mean?",
+      "Indian IT exporters earn mostly in dollars and euros while paying a large share of costs in rupees, so constant-currency growth strips out forex noise. A 1%–2% band implies flattish demand after a long stretch when double-digit growth was common pre-pandemic. Clients in banking, retail, and manufacturing are still buying digital projects, but deal sizes are scrutinised and discretionary work can slip when customers face their own rate and wage pressures. AI revenue lines are growing in commentary, yet they are not large enough yet to offset slower legacy application work. For employees, softer guidance can mean slower bench absorption and tighter hiring on fresh campus intake even when attrition normalises.",
+      "Why should I care?",
+      "If you work in IT services, compare your employer’s next guidance with Infosys’s band before negotiating raises or project transfers. Stockholders should weigh whether the pre-market move already prices in a low-growth year or leaves room if December-quarter pipelines improve. Business customers can use a cautious Infosys outlook as leverage in contract renewals but should also check delivery quality on existing statements of work. Watch October deal announcements, peer results from TCS and HCLTech, and any client commentary on US and Europe tech budgets in the next month.",
+    ],
+  },
+  {
     slug: "cipla-invagen-usfda-zero-observations-october-2026",
     title: "US regulators finished a Cipla plant inspection with zero Form 483 findings",
     summary:
@@ -4958,6 +5054,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-total-gas-cng-price-hike-october-2026": "policy",
+  "india-plfs-gig-unpaid-work-survey-october-2026": "policy",
+  "rbi-bank-leverage-ratio-april-2027-october-2026": "policy",
+  "infosys-fy27-guidance-trim-october-2026": "markets",
   "cipla-invagen-usfda-zero-observations-october-2026": "companies",
   "india-pmi-october-services-growth-hiring-stall-october-2026": "markets",
   "icra-power-demand-forecast-coal-buffer-october-2026": "policy",
