@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "yes-bank-at1-coupon-hold-review-petition-october-2026",
+    title: "Yes Bank may skip AT-1 coupon payments even after the Supreme Court ruling",
+    summary:
+      "Reuters reported on 22 October 2026 that Yes Bank is unlikely to pay coupons due this year on its restored additional tier-1 bonds while it prepares to seek a review of the apex court judgment, leaving mutual-fund and retail holders pressing for cash that has been unpaid since the 2020 write-off.",
+    category: "industry",
+    companyOrSector: "Banking / capital markets",
+    publishedAt: "2026-10-23T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("yes-bank-at1-coupon-hold-review-petition-october-2026"),
+    keyTakeaways: [
+      "Wire reports on 22 October 2026 cited people familiar with the matter saying Yes Bank does not plan to pay 2026 coupons on AT-1 bonds even after the Supreme Court upheld bondholders’ claims on the ₹8,415 crore instruments.",
+      "The lender is said to be preparing to seek a review of the ruling that set aside the March 2020 write-off, while bondholders continue to demand payment on coupons that stopped when the bonds were cancelled during the rescue.",
+      "Yes Bank did not respond to Reuters’ request for comment; the stand-off prolongs uncertainty for credit funds that marked the paper at nil and for equity investors who already priced a capital hit after the 15 October judgment.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, Reuters reported that Yes Bank Ltd is unlikely to pay coupons due this year on its additional tier-1 bonds, despite the Supreme Court’s decision last week to restore those instruments. Two people familiar with the bank’s thinking told the news agency that management is preparing to seek a review of the apex court order while bondholders push for coupon payments that have been frozen since the lender wrote off ₹8,415 crore of AT-1 paper during its March 2020 reconstruction. The Supreme Court had upheld a Bombay High Court verdict quashing that write-off, a setback for Yes Bank and the Reserve Bank of India, which had defended the cancellation as part of the rescue plan. Yes Bank did not reply to an emailed request for comment from Reuters.",
+      "What does this mean?",
+      "AT-1 bonds are meant to absorb losses before equity, but they still carry contractual coupon dates. A court win for bondholders does not automatically restart cash payments if the bank disputes the timeline or accounting treatment while it appeals. Pausing coupons again would keep mutual funds and direct holders in limbo on accrued interest, even as they argue the judgment revived their claims at the original 9% and 9.5% rates cited in earlier coverage. For Yes Bank shareholders, every month of legal wrangling delays clarity on how much tier-1 capital must be recognised and whether fresh equity is needed. Other banks are watching because the case sets a precedent on how Indian rescues treat perpetual debt.",
+      "Why should I care?",
+      "If you hold Yes Bank shares or bank-sector funds, treat exchange filings on any review petition and coupon notices as mandatory reading. AT-1 fund investors should check whether their schemes still carry zero marks or have begun to reprice the bonds. Fixed-income buyers should remember that high-yield bank perpetuals combine credit risk with litigation risk, not just RBI rules on paper. Watch the Supreme Court docket for a review filing, Yes Bank’s next capital disclosure, and whether bondholder groups escalate to recovery proceedings if coupons stay unpaid through year-end.",
+    ],
+  },
+  {
+    slug: "nlc-india-odisha-thermal-power-pact-october-2026",
+    title: "NLC India signed up for a ₹35,000 crore coal power project in Odisha",
+    summary:
+      "On 22 October 2026, NLC India Ltd told exchanges it signed a pact with Odisha’s state investment agency to pursue a 3,200 megawatt ultra-supercritical thermal plant, a coal-gasification study linked to fertilizer output, and a beach-sand minerals processing unit.",
+    category: "industry",
+    companyOrSector: "Power / mining",
+    publishedAt: "2026-10-23T00:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nlc-india-odisha-thermal-power-pact-october-2026"),
+    keyTakeaways: [
+      "NLC India’s 22 October 2026 filing said it signed memoranda with the Industrial Promotion and Investment Corporation of Odisha for a 3,200 MW coal-based thermal plant with potential investment of about ₹35,000 crore.",
+      "The same pact covers exploration of coal gasification for synthesis gas used in fertilizer production and a beach-sand mineral processing facility with tentative investment of about ₹2,000 crore.",
+      "The company estimated roughly 4,000 jobs from the power project and about 500 from the minerals unit, framing the package as a multi-year capex push in eastern India.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, NLC India Ltd, the Chennai-based state-owned miner and power producer, announced agreements with Odisha’s Industrial Promotion and Investment Corporation to advance three industrial projects. Exchange filings and wire copy described a 3,200 megawatt ultra-supercritical coal-fired power plant with potential investment of about ₹35,000 crore, a study on coal gasification to produce synthesis gas for the fertilizer sector, and a beach-sand mineral processing unit with tentative investment near ₹2,000 crore. Beach-sand minerals such as ilmenite and rutile feed pigments, ceramics, and titanium supply chains. NLC said the thermal project could employ about 4,000 people and the minerals facility about 500. The move comes as India’s electricity demand runs near record peaks and states compete to land large baseload plants even as clean-energy targets stay on the books.",
+      "What does this mean?",
+      "Ultra-supercritical coal plants burn fuel more efficiently than older units, but they still anchor multi-decade power purchase and fuel-supply planning. A ₹35,000 crore ticket implies years of engineering, land acquisition, and lender syndication before electrons flow. Pairing the plant with coal gasification studies signals that NLC wants downstream chemical revenue, not only merchant power sales. Odisha gains construction jobs and downstream processing; NLC spreads its generation footprint beyond Tamil Nadu lignite mines. For industrial users in the east, extra gigawatts can ease tight peak pricing if the plant connects to the regional grid on schedule. Environmental scrutiny will focus on emissions permits and water use, because large thermal units face tighter oversight even when labeled efficient.",
+      "Why should I care?",
+      "If you buy power for a factory in eastern India, track whether Odisha and the centre publish tariff assumptions and commissioning timelines for the 3,200 MW block. Investors in NLC India should read future filings on equity contribution, debt tie-ups, and fuel linkages before treating the ₹35,000 crore figure as firm capex. Communities near proposed sites should watch environmental impact assessments and hiring plans. Follow NLC’s quarterly updates on financial closure, any central government clearances for the gasification leg, and competing renewable bids that could change dispatch economics once the plant is built.",
+    ],
+  },
+  {
+    slug: "mahindra-lifespaces-h1-presales-october-2026",
+    title: "Mahindra Lifespaces grew first-half pre-sales by two-thirds year on year",
+    summary:
+      "Mahindra Lifespaces Developers reported on 22 October 2026 that residential pre-sales in the first half of fiscal 2026 rose about 66% year on year to roughly ₹1,988 crore, with about ₹7,100 crore of gross development value added and management guiding ₹4,500–₹5,000 crore of pre-sales for the full year.",
+    category: "industry",
+    companyOrSector: "Residential real estate",
+    publishedAt: "2026-10-23T00:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mahindra-lifespaces-h1-presales-october-2026"),
+    keyTakeaways: [
+      "Mahindra Lifespaces said H1 FY26 residential pre-sales reached about ₹1,988 crore, up roughly 66% from a year earlier, with about ₹7,100 crore of gross development value added to the pipeline.",
+      "Reported profit after tax for the half year was about ₹102 crore; management guided full-year pre-sales of ₹4,500–₹5,000 crore while flagging selective launches amid high land prices and uneven sales velocity in some micro-markets.",
+      "The update landed during the festive home-buying season, when developers typically push inventory in Mumbai, Pune, and Bengaluru corridors.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, Mahindra Lifespaces Developers Ltd published first-half results that showed residential pre-sales of about ₹1,988 crore, a roughly 66% increase from the same period a year earlier. The company said it added about ₹7,100 crore of gross development value to its launch pipeline and reported profit after tax near ₹102 crore for the six months. Management reiterated guidance for ₹4,500–₹5,000 crore of pre-sales in fiscal 2026 but stressed a selective launch strategy, citing elevated land prices and slower sales velocity in pockets of the market. The numbers arrived as other listed developers also highlighted festive demand, suggesting that buyers who postponed purchases earlier in the year are returning for configured apartments in major metros.",
+      "What does this mean?",
+      "Pre-sales measure customer cheques booked before construction finishes, so a two-thirds jump signals that buyers are willing to commit despite higher home loan rates than the pandemic-era trough. Mahindra Lifespaces focuses on mid-premium housing under the Mahindra brand, which tends to attract salaried buyers using bank finance rather than pure investor inventory. Adding ₹7,100 crore of GDV gives the company projects to bill over the next few years if construction keeps pace. Management’s caution on land costs shows developers are not blindly buying parcels at any price; they are timing launches to match affordability in each city. For the wider market, one strong H1 does not guarantee uniform recovery, but it adds to evidence that urban housing demand is still active heading into Diwali offers.",
+      "Why should I care?",
+      "If you are shopping for a home in markets where Mahindra Lifespaces sells, compare festive payment plans and all-in costs against rival projects launched this quarter. Home loan borrowers should run EMI math at today’s rates, not last year’s teasers. Investors in listed real estate stocks should read whether pre-sales convert to collections and construction spend in the second half. Watch Mahindra Lifespaces’ next launch calendar, competitor pricing in Pune and Mumbai suburbs, and RBI commentary on housing loans if rates move again.",
+    ],
+  },
+  {
     slug: "jio-platforms-ipo-retail-quota-fills-october-2026",
     title: "Jio Platforms’ IPO filled its retail quota on the second day of bidding",
     summary:
@@ -4790,6 +4862,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "yes-bank-at1-coupon-hold-review-petition-october-2026": "policy",
+  "nlc-india-odisha-thermal-power-pact-october-2026": "policy",
+  "mahindra-lifespaces-h1-presales-october-2026": "markets",
   "jio-platforms-ipo-retail-quota-fills-october-2026": "markets",
   "sebi-exchange-investment-flexibility-october-2026": "policy",
   "flipkart-eat-in-food-delivery-pilot-october-2026": "markets",
