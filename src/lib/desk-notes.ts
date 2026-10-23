@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "cipla-invagen-usfda-zero-observations-october-2026",
+    title: "US regulators finished a Cipla plant inspection with zero Form 483 findings",
+    summary:
+      "Cipla said on 23 October 2026 that the US Food and Drug Administration closed a routine cGMP inspection at its wholly owned InvaGen Pharmaceuticals facility in New York on 22 October with no Form 483 observations, a clean outcome for a site that supplies oral solid doses to the US generic market.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / US exports",
+    publishedAt: "2026-10-23T06:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cipla-invagen-usfda-zero-observations-october-2026"),
+    keyTakeaways: [
+      "Cipla’s 23 October 2026 exchange filing said the USFDA inspected InvaGen Pharmaceuticals’ New York manufacturing site from 19 to 22 October 2026 and concluded with zero Form 483 observations.",
+      "Form 483 notices flag potential manufacturing or quality-control issues; a clean close reduces immediate remediation risk for batches already filed or shipped from the plant.",
+      "InvaGen is among Cipla’s US-facing subsidiaries; sustained compliance at owned sites matters as Indian generics compete on price while regulators keep overseas plants on shorter inspection cycles.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Cipla Ltd told Indian exchanges that the United States Food and Drug Administration completed a routine current good manufacturing practice inspection at InvaGen Pharmaceuticals Inc., its wholly owned US subsidiary, with no Form 483 observations. The regulator’s visit ran from 19 October through 22 October at the New York manufacturing site. FDA inspectors issue Form 483 when they see conditions that may violate manufacturing rules; a close without observations means the team did not record objectionable findings at the end of the review. Cipla did not disclose product lines or batch volumes tied to the facility in the brief filing, but InvaGen has historically supplied oral dosage forms for the US market. The update landed during a busy earnings week for large Indian drug makers, when investors are tracking both domestic growth and US approval pipelines.",
+      "What does this mean?",
+      "US sales remain a large profit pool for Indian generics, and every plant inspection can delay launches or trigger import alerts if problems appear. A zero-observation close keeps InvaGen’s quality record intact and avoids the cost and time of formal corrective action plans. It does not guarantee future approvals, but it removes one near-term overhang for products manufactured on those lines. Rivals that recently received 483 letters often must cap shipments until fixes are verified, which hands share to competitors with clean files. For Cipla, stacking compliant US sites alongside India-based API and formulation plants supports a diversified export footprint rather than betting on a single factory.",
+      "Why should I care?",
+      "If you hold Cipla or other listed generics, read the next US product-specific approvals and any import alerts on the FDA website; inspections are plant-wide but commercial impact shows up product by product. Patients and hospital buyers rarely see inspection outcomes directly, but clean files help keep chronic therapies in stock without surprise shortages. Watch whether Cipla cites InvaGen capacity in upcoming investor calls, any new US filings that list the New York site, and peer results from Dr. Reddy’s, Sun Pharma, and Lupin during the same week for signs of broader US demand or pricing pressure.",
+    ],
+  },
+  {
+    slug: "india-pmi-october-services-growth-hiring-stall-october-2026",
+    title: "India’s October business surveys hit a four-month high while hiring stalled",
+    summary:
+      "HSBC’s flash India composite PMI compiled by S&P Global rose to 56.7 in October 2026 from 55.9 in September, the fastest private-sector growth in four months, even as employment stopped expanding for the first time in nine months as firms used existing staff to cover higher orders.",
+    category: "industry",
+    companyOrSector: "Services / labour market",
+    publishedAt: "2026-10-23T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-pmi-october-services-growth-hiring-stall-october-2026"),
+    keyTakeaways: [
+      "The flash India composite PMI climbed to 56.7 in October 2026 from September’s 55.9 final reading, above a Reuters poll median near 56.1 and the strongest pace since June on the 50-point growth threshold scale.",
+      "The services PMI rose to 56.2 from 55.2 and drove most of the acceleration, while manufacturing output edged up even as input-cost pressures stayed elevated in survey comments.",
+      "Employment was unchanged month on month, ending a nine-month streak of hiring gains as companies met stronger workloads without adding headcount.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, preliminary purchasing managers’ index data for India showed private-sector activity picking up early in the month. HSBC’s flash composite PMI, compiled by S&P Global, increased to 56.7 from September’s final 55.9, beating economist expectations near 56.1 in a Reuters poll. Readings above 50 signal expansion. The services index rose to 56.2 from 55.2 and accounted for most of the improvement, consistent with festive-season demand for travel, dining, and professional services. Manufacturing output also edged higher, although several respondents flagged lingering cost pressure on inputs. The notable wrinkle was employment: the survey reported no net hiring growth in October, breaking a nine-month run of job additions. Firms said they handled more orders with existing teams rather than expanding payrolls.",
+      "What does this mean?",
+      "PMI flashes are sentiment and activity snapshots, not GDP prints, but they show how managers feel before official data arrive. Stronger orders with flat hiring often mean productivity gains, overtime, or caution about sustaining demand after the festival quarter. Services leading the move fits patterns from airlines, hotels, and consumer companies that have cited steady urban footfall. If hiring stays flat while output keeps rising, wage pressure may ease for employers but slow income growth for fresh graduates entering the market. The survey does not split rural versus urban demand, so weak monsoon regions may still lag even as national composites look healthy.",
+      "Why should I care?",
+      "If you run a services business, compare your October bookings with the PMI signal: are you also stretching current staff rather than hiring? Job seekers should expect selective openings in IT and consumer services while manufacturing recruiters may stay cautious until input costs cool. Investors watching consumer names can pair PMI flashes with company commentary on festive sales due later this month. Watch the final October PMI release, September-quarter earnings calls from banks and retailers, and any RBI commentary on growth versus employment in the next policy statement.",
+    ],
+  },
+  {
+    slug: "icra-power-demand-forecast-coal-buffer-october-2026",
+    title: "Icra lifted its power demand forecast while coal stocks sat near six days of use",
+    summary:
+      "Rating agency Icra raised its fiscal 2027 electricity demand growth outlook to about 8.5% from 6.5% in an October 2026 note, even as coal inventories at power plants stood near six days of consumption versus a 19–20 day norm and domestic mine output fell 3.2% in the first five months of the year.",
+    category: "industry",
+    companyOrSector: "Power / coal",
+    publishedAt: "2026-10-23T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("icra-power-demand-forecast-coal-buffer-october-2026"),
+    keyTakeaways: [
+      "Icra’s October 2026 note lifted its FY27 all-India electricity demand growth forecast to about 8.5% from an earlier 6.5% estimate as consumption stayed firm.",
+      "Coal stocks at power plants were around six days of consumption as of 10 October 2026, well below the normative 19–20 day buffer, despite a 4% rise in coal supplies to generators in the first five months of FY27.",
+      "Average day-ahead power prices on the Indian Energy Exchange were about ₹7.7 per unit as of 10 October, higher than ₹2.6 per unit in October 2025 though slightly below September 2026 levels.",
+    ],
+    body: [
+      "What's going on here?",
+      "Coverage on 23 October 2026 cited a fresh Icra note on India’s power sector that pairs a brighter demand outlook with thin fuel cover at thermal plants. The rating agency raised its fiscal 2027 electricity demand growth forecast to about 8.5% from 6.5%, reflecting sustained load even after an unusually hot monsoon season. At the same time, coal inventories at power stations stood near six days of consumption as of 10 October, far under the 19–20 day guideline regulators use as a comfort band. Domestic coal production fell about 3.2% year on year in the April–August stretch of FY27, with Coal India output cited as a drag, while shipments to power plants still rose about 4%. Average spot tariffs on the Indian Energy Exchange hovered around ₹7.7 per kilowatt-hour on 10 October, down slightly from September but well above year-ago levels near ₹2.6.",
+      "What does this mean?",
+      "Higher demand forecasts tell generators and policymakers to plan for more megawatt-hours, but low pithead-to-plant stocks cap how comfortably they can meet peaks without leaning on imports or expensive merchant power. Six days of coal is a narrow cushion if rains disrupt mining again or festive load spikes. Icra warned that further inventory drops, especially alongside weaker domestic production, could limit plants during peak hours. Exchange prices show buyers already paying a premium for real-time balance. Discoms may pass through fuel costs over time, while industrial users on open access feel volatility immediately.",
+      "Why should I care?",
+      "Households should watch state discom fuel surcharge notices and festive outage schedules, not just headline inflation prints. Factories should stress-test power budgets at ₹7-plus exchange levels. Investors in Coal India, NTPC, or independent power producers should track weekly coal stock dashboards and rake loading data. Follow any ministry orders on import blending, Icra’s next demand revision, and whether mine output recovers enough to rebuild buffers before winter evening peaks.",
+    ],
+  },
+  {
+    slug: "welspun-us-pipeline-hyperscaler-gas-october-2026",
+    title: "Welspun won a ₹5,500 crore US pipe order tied to a hyperscaler data centre",
+    summary:
+      "Welspun Corp said on 23 October 2026 that its US subsidiary Welspun Tubular LLC secured an order worth about ₹5,500 crore to supply coated line pipe for a Permian Basin natural gas pipeline serving a data centre campus run by a top-tier global hyperscaler, lifting its global order book to a record $5.25 billion.",
+    category: "industry",
+    companyOrSector: "Steel pipes / energy infrastructure",
+    publishedAt: "2026-10-23T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("welspun-us-pipeline-hyperscaler-gas-october-2026"),
+    keyTakeaways: [
+      "Welspun Corp’s 23 October 2026 statement said Welspun Tubular LLC won roughly ₹5,500 crore of coated line pipe work for a Permian natural gas pipeline awarded by a major US midstream operator.",
+      "The pipeline will feed a data centre complex operated by a leading global hyperscaler, which Welspun did not name, linking AI-era power demand to new gas infrastructure orders.",
+      "Welspun reported a record global order book of about $5.25 billion after the win, extending its US exposure beyond traditional oilfield customers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Welspun Corp Ltd announced that its American unit, Welspun Tubular LLC, has won an order worth approximately ₹5,500 crore to supply coated line pipe for a natural gas pipeline in the Permian Basin of the United States. Exchange filings and wire copy said a large midstream company placed the award. The line will serve a data centre campus operated by one of the world’s top-tier hyperscalers, though Welspun did not identify the technology customer. Management said the contract pushes Welspun’s global order book to a record $5.25 billion. The deal highlights how digital infrastructure builders are securing dedicated gas supply to run power-hungry server farms, even as renewables expand elsewhere on the grid.",
+      "What does this mean?",
+      "Line-pipe orders are lumpy, multi-year revenue streams that depend on US shale gas economics and infrastructure permitting. Linking a pipe project to a hyperscaler campus shows that cloud operators want firm gas delivery, not only grid power, to keep uptime promises. For Welspun, the US subsidiary diversifies beyond oil producers toward midstream and technology-driven demand. Indian investors see export earnings and capacity utilisation at coated-pipe mills. Competitors in the US and Korea will watch execution timelines and margin disclosure in upcoming results.",
+      "Why should I care?",
+      "If you follow industrial exporters, read Welspun’s next quarterly update for delivery schedules, advance payments, and currency hedging on the dollar contract. Energy analysts should map whether more data centre clusters in Texas and the Midwest trigger similar gas pipeline bids. Customers in India’s own data centre build-out should note the global pattern of pairing on-site gas with grid imports. Watch US permitting news on the Permian project, Welspun’s order book commentary, and peer pipe awards from Jindal Saw or Ratnamani on cross-border energy jobs.",
+    ],
+  },
+  {
     slug: "yes-bank-at1-coupon-hold-review-petition-october-2026",
     title: "Yes Bank may skip AT-1 coupon payments even after the Supreme Court ruling",
     summary:
@@ -4862,6 +4958,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "cipla-invagen-usfda-zero-observations-october-2026": "companies",
+  "india-pmi-october-services-growth-hiring-stall-october-2026": "markets",
+  "icra-power-demand-forecast-coal-buffer-october-2026": "policy",
+  "welspun-us-pipeline-hyperscaler-gas-october-2026": "companies",
   "yes-bank-at1-coupon-hold-review-petition-october-2026": "policy",
   "nlc-india-odisha-thermal-power-pact-october-2026": "policy",
   "mahindra-lifespaces-h1-presales-october-2026": "markets",
