@@ -8,6 +8,9 @@
  *
  *   SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npm run af:ingest
  *
+ * Sync sources first (`npm run af:sync-sources`) so Twitter handles match
+ * `src/data/sebi-registered-entities.csv` (661 unique primary X handles).
+ *
  * Optional:
  *   AF_LIMIT_SOURCES=20     # smoke-test subset
  *   AF_POSTS_PER_SOURCE=6
