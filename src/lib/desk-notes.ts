@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "pirelli-bkt-premium-tyres-india-october-2026",
+    title: "Pirelli will build up to 800,000 premium car tyres in India with BKT",
+    summary:
+      "Pirelli and Balkrishna Industries said on 23 October 2026 they signed a manufacturing pact to produce as many as 800,000 Pirelli-branded premium car tyres in India by 2030, with the first phase using a new BKT plant as the Italian tyremaker sets up local capacity.",
+    category: "industry",
+    companyOrSector: "Tyres / autos",
+    publishedAt: "2026-10-24T01:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pirelli-bkt-premium-tyres-india-october-2026"),
+    keyTakeaways: [
+      "Pirelli and BKT announced on 23 October 2026 an agreement to manufacture up to 800,000 Pirelli-branded premium passenger car tyres in India by 2030.",
+      "Phase one will use production at one of BKT’s newly built plants, giving Pirelli a domestic base rather than relying only on imports for high-end fitments.",
+      "The tie-up sits in a market where replacement and OEM tyre demand is rising with vehicle sales, while raw-material inflation has pushed domestic makers to raise prices through 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Pirelli and Balkrishna Industries Ltd (BKT) said they signed a long-term manufacturing agreement for premium passenger car tyres sold under the Pirelli brand in India. Wire reports put the target volume at up to 800,000 units by 2030. Under the first phase, BKT will produce the tyres at one of its newly constructed plants, marking Pirelli’s push to establish local manufacturing rather than shipping every high-end size from overseas. BKT is already a large Indian tyremaker focused on off-highway and commercial lines; the deal gives it access to Pirelli’s premium car segment technology and branding. Carmakers and replacement buyers in the premium and luxury segments often specify Pirelli fitments, so domestic output can shorten lead times when import logistics or duties move.",
+      "What does this mean?",
+      "Global tyre brands typically partner with local manufacturers when import costs, lead times, or fleet contracts make full offshore supply uneconomic. Contract manufacturing lets Pirelli keep brand and product standards while BKT utilises fresh plant capacity built for export and domestic growth. For Indian buyers, more local premium supply can stabilise availability on popular SUV and sedan sizes, though sticker prices still track rubber and petroleum-based inputs that domestic peers have been passing through in 4–6% hikes this quarter. OEM contracts with luxury and mass-premium car plants may be easier to bid when tyres are made in-country. The 2030 volume target is a ceiling, not a day-one flood, so ramp-up and model approvals will pace how quickly showrooms feel the change.",
+      "Why should I care?",
+      "If you own a premium car or plan to replace tyres after festive travel, ask dealers whether Indian-made Pirelli stock is listed for your size and compare warranties with imported batches. Auto component investors should watch whether other global brands copy the contract-manufacturing model with Indian partners. BKT shareholders will read execution risk on quality audits and royalty economics. Policy watchers should note the deal as another import-substitution story in autos without waiting for a new tariff announcement. Track phase-one plant location disclosures, homologation on top-selling car models, and whether rivals such as Michelin or Bridgestone respond with similar local alliances.",
+    ],
+  },
+  {
+    slug: "idbi-dipam-employee-protections-october-2026",
+    title: "Delhi told IDBI Bank staff their jobs stay safe after the Fairfax sale",
+    summary:
+      "Department of Investment and Public Asset Management secretary Arunish Chawla said on 23 October 2026 that service conditions for IDBI Bank employees and pensioners will not change after the government sells a majority stake to Canada’s Fairfax Financial Holdings, seeking to calm labour unions ahead of a planned hunger strike.",
+    category: "industry",
+    companyOrSector: "Banking / privatisation",
+    publishedAt: "2026-10-24T01:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("idbi-dipam-employee-protections-october-2026"),
+    keyTakeaways: [
+      "DIPAM secretary Arunish Chawla said on 23 October 2026 that existing staff and pensioners at IDBI Bank have nothing to fear from the ₹52,878 crore strategic sale of over 60% to Fairfax.",
+      "He stressed that employee service conditions will remain unchanged even after the transaction closes, according to wire reports from the day.",
+      "The reassurance lands as officer unions prepare a nationwide hunger strike on 2–3 November 2026 demanding written statutory protections and higher government ownership.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, Arunish Chawla, secretary at the Department of Investment and Public Asset Management, told reporters that service conditions for IDBI Bank employees will remain unchanged after the lender is sold to Fairfax Financial Holdings. Coverage said he addressed both current staff and pensioners, arguing they have nothing to fear from the ₹52,878 crore deal in which the government is divesting a stake of over 60% in the bank. The cabinet had cleared the strategic sale earlier in October, with Fairfax set to take management control while the government and Life Insurance Corporation together retain about 34%. Chawla’s comments came days before the United Forum of IDBI Officers and Employees called a two-day nationwide hunger strike starting 2 November to protest the privatisation and demand written guarantees on jobs, pensions, and reservation policies.",
+      "What does this mean?",
+      "Strategic sales in Indian banking hinge as much on labour peace as on bidder price. Unions treat IDBI as a public-sector employer even after decades of listed status, so any shift toward private-sector HR rules triggers political pressure. A senior divestment official speaking on the record is an attempt to narrow the strike agenda before share-transfer paperwork advances. Verbal assurances, however, are not the same as clauses embedded in the share purchase agreement or an employee charter filed with regulators. Fairfax has also agreed to merge CSB Bank into IDBI within about two years, which adds integration risk for branches and back-office roles. Depositors usually see uninterrupted service during agitations, but counters can slow if strikes widen beyond the initial two days.",
+      "Why should I care?",
+      "If you work at IDBI or hold its shares, watch whether the government publishes a formal employee-protection annex before the open offer closes. Borrowers should keep digital channels ready around early November in case branch hours shrink. Investors in Fairfax or LIC should treat labour headlines as a timeline risk, not just noise. Policy watchers will read this as a test case for remaining PSU bank sales after the largest cross-border banking deal cleared cabinet. Track union strike turnout, any written charter from DIPAM or the finance ministry, and Reserve Bank of India fit-and-proper timelines for the new controlling owner.",
+    ],
+  },
+  {
+    slug: "indusind-q2-double-digit-growth-october-2026",
+    title: "IndusInd Bank’s loans and deposits are growing in double digits again",
+    summary:
+      "IndusInd Bank Ltd said in its September-quarter update on 23 October 2026 that deposits and advances returned to double-digit year-on-year growth, profit after tax rose to about ₹1,242 crore, and management still expects second-half momentum even as foreign-currency deposit inflows squeezed net interest margins.",
+    category: "industry",
+    companyOrSector: "Banking",
+    publishedAt: "2026-10-24T01:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indusind-q2-double-digit-growth-october-2026"),
+    keyTakeaways: [
+      "Business updates on 23 October 2026 showed IndusInd Bank’s deposits and advances back in double-digit year-on-year growth with improved asset quality.",
+      "Profit after tax was about ₹1,242 crore for the quarter, while foreign-currency non-resident inflows supported funding but pressured net interest margins.",
+      "Management guided toward about 1% return on assets by the exit of FY27 and said it expects growth momentum to continue in the second half.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026, IndusInd Bank Ltd published its results and commentary for the quarter ended 30 September 2026. The lender said deposits and advances both returned to double-digit year-on-year growth after a softer stretch, while profitability improved and profit after tax reached about ₹1,242 crore. Reporting tied part of the funding story to foreign-currency non-resident deposits, which added liquidity but also weighed on net interest margins because those liabilities reprice differently from core rupee books. Executives maintained a target of roughly 1% return on assets by the time FY27 ends and said they expect loan and deposit momentum to carry into the second half of the fiscal year. The update landed in a week when several private and small finance banks posted strong festive-season credit demand.",
+      "What does this mean?",
+      "When a mid-sized private bank accelerates both sides of the balance sheet, it usually signals corporate working-capital demand and retail unsecured or vehicle loans picking up ahead of festivals. FCNR inflows help dollar liquidity but can compress margins if the bank cannot deploy them into equally attractive assets quickly. Improved asset quality in the same release suggests prior stress books are seasoning rather than ballooning. For borrowers, double-digit growth often comes with competitive pricing on home, personal, and MSME loans, though rate cards still reflect the Reserve Bank of India’s tighter policy through 2026. Investors weigh margin pressure against volume recovery when valuing the stock.",
+      "Why should I care?",
+      "If you are shopping for a car loan, personal loan, or MSME overdraft this festive season, compare IndusInd quotes with other private banks; growth targets can mean sharper processing offers. Savers should check whether FCNR products fit their currency exposure before chasing headline rates. Depositors in the bank should read any service notices around branch digital upgrades. Watch December-quarter updates for margin stabilisation, management commentary on unsecured book mix, and whether rivals such as Axis or Kotak post similar double-digit growth or pull back on risk.",
+    ],
+  },
+  {
     slug: "sebi-avadhut-sathe-refund-penalty-october-2026",
     title: "Sebi ordered a trading academy to refund ₹546 crore to investors",
     summary:
@@ -5174,6 +5246,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "pirelli-bkt-premium-tyres-india-october-2026": "companies",
+  "idbi-dipam-employee-protections-october-2026": "policy",
+  "indusind-q2-double-digit-growth-october-2026": "policy",
   "sebi-avadhut-sathe-refund-penalty-october-2026": "policy",
   "india-smartphone-q3-slump-october-2026": "markets",
   "dr-reddys-semaglutide-supply-restart-october-2026": "companies",

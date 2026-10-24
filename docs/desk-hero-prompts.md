@@ -832,6 +832,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic quick-service restaurant storefront |
 | Metaphor left | Rising foot-traffic chevrons on one floorplan |
 
+### `pirelli-bkt-premium-tyres-india-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Global premium brand localises tyre output in India |
+| Subject right | Tyre factory / production line silhouette |
+| Metaphor left | Partnership pipes converging on car wheel motif |
+
+### `idbi-dipam-employee-protections-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Job rules promised stable through strategic sale |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Shield over employment contract scroll |
+
+### `indusind-q2-double-digit-growth-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Credit books re-accelerate; FCNR funding squeezes NIM |
+| Subject right | Generic private bank facade |
+| Metaphor left | Rising loan/deposit bars + currency dial |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
