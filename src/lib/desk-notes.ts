@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "eps-95-bombay-hc-higher-pension-october-2026",
+    title: "Bombay High Court told EPFO to accept higher pension forms from private trust employees",
+    summary:
+      "In a 19 October 2026 judgment reported on 24 October, Justice Sandeep V. Marne set aside Employees’ Provident Fund Organisation orders that blocked joint-option applications from more than 40 private-sector workers at exempted PF trusts, directing EPFO to process higher pension claims within eight weeks even when trust rules capped contributions at the statutory wage ceiling.",
+    category: "industry",
+    companyOrSector: "Retirement benefits / labour",
+    publishedAt: "2026-10-24T18:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("eps-95-bombay-hc-higher-pension-october-2026"),
+    keyTakeaways: [
+      "The Bombay High Court ruled on 19 October 2026 that EPFO cannot reject higher-pension applications solely because an exempted employer’s PF trust rules limit contributions to the statutory wage ceiling.",
+      "The bench set aside rejections affecting employees of establishments including Abbott India, Tata Communications, Raymond Steel and BEST Undertaking and gave EPFO eight weeks to process their joint-option filings under the Employees’ Pension Scheme, 1995.",
+      "The dispute sits after Parliament raised the EPS wage ceiling to ₹25,000 a month from 17 September 2026, while many salaried workers who contributed on full salaries above older caps still fight to pension on those higher wages.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 19 October 2026, the Bombay High Court delivered a judgment that private-sector employees at exempted provident fund trusts can press ahead with applications for a higher pension under the Employees’ Pension Scheme, 1995. Justice Sandeep V. Marne set aside EPFO orders that had refused joint-option forms filed by more than 40 workers at companies such as Abbott India, Tata Communications, Raymond Steel and BEST Undertaking. The court said the Employees’ Provident Fund Organisation cannot throw out those applications merely because the employer’s trust deed caps contributions at the statutory wage ceiling or does not spell out higher pension contributions. EPFO must process the petitions within eight weeks. Reporting on 24 October 2026 placed the ruling in context of the September 2026 move that lifted the EPS ceiling to ₹25,000 a month, up from ₹15,000 since 2014.",
+      "What does this mean?",
+      "Exempted establishments run their own PF trusts but still route pension benefits through EPFO’s scheme rules. When salaries ran above the legal cap but contributions were deducted on actual pay, employees could file a joint option with the employer to calculate pension on higher wages. Trust-level paperwork often lagged central law, and EPFO rejections left workers stuck with smaller monthly pensions after retirement. The court treated paragraph 11(3) and 11(4) of the EPS as controlling, not internal trust limits that were never updated. For human resources teams, the order is a prompt to reconcile trust deeds with central notifications before the eight-week clock expires. For retirees and late-career staff, it revives hope of larger annuity cheques without a fresh legislative battle, though each case still needs contribution history proof.",
+      "Why should I care?",
+      "If you worked at a large private employer with its own PF trust and earned above the statutory ceiling, pull your service records and check whether you filed the joint option before earlier deadlines. Ex-employees nearing retirement should ask HR whether the trust will co-sign fresh forms within the court’s eight-week window. Younger salaried readers should track whether EPFO publishes a standard circular for exempted trusts so the fight does not repeat company by company. Investors in staffing-heavy sectors should treat pension compliance as an operating risk, not a distant legacy issue. Watch EPFO’s compliance filings, any Supreme Court appeal, and whether Parliament clarifies trust deeds versus central EPS text in the next labour-code rollout.",
+    ],
+  },
+  {
+    slug: "cbi-canara-ilfs-energy-fraud-october-2026",
+    title: "CBI registered a ₹212 crore fraud case against IL&FS Energy Development",
+    summary:
+      "On 24 October 2026 the Central Bureau of Investigation filed a case on Canara Bank’s complaint against IL&FS Energy Development Company and former directors, alleging a ₹100 crore Mumbai term loan and a $50 million London facility were diverted through associate firms rather than used as sanctioned, with searches in Mumbai, Delhi and Noida.",
+    category: "industry",
+    companyOrSector: "Banking / infrastructure finance",
+    publishedAt: "2026-10-24T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cbi-canara-ilfs-energy-fraud-october-2026"),
+    keyTakeaways: [
+      "CBI registered an FIR on 24 October 2026 after Canara Bank’s Bandra circle office alleged wrongful loss of ₹212.34 crore tied to credit extended to IL&FS Energy Development Company Ltd.",
+      "Investigators said the borrower drew ₹100 crore from erstwhile Syndicate Bank’s Mumbai large-corporate branch and $50 million from the London branch, then siphoned funds through associate companies instead of the stated purpose.",
+      "Named accused include former managing directors Sunil Wadhwa, Anoop Seth, Hari Sankaran and Ramesh Chandra Bawa; raids recovered bank ledgers, mutual fund statements and property papers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, the Central Bureau of Investigation announced a new case against IL&FS Energy Development Company Ltd. and several of its former managing directors and directors, acting on a complaint from Canara Bank’s circle office in Bandra, Mumbai. The agency alleges criminal conspiracy, cheating and offences under the Prevention of Corruption Act tied to credit that began when Syndicate Bank, now merged into Canara, sanctioned a ₹100 crore term loan at its Mumbai large-corporate branch and a $50 million facility through the London branch. CBI said the company did not deploy the money for the purpose stated in loan papers and instead routed funds through associate entities, causing an alleged wrongful loss of ₹212.34 crore to the lender. Searches ran at premises linked to the accused in Mumbai, Delhi and Noida, where investigators seized ledgers, deposit slips, mutual fund portfolios and property records.",
+      "What does this mean?",
+      "IL&FS group defaults in 2018 already forced banks to provision billions and rewrote how project finance is monitored, yet energy subsidiaries keep surfacing in fresh FIRs when old exposures are re-examined. A dual-currency fraud allegation matters because offshore drawdowns can bypass domestic project-milestone checks if overseas branches lack the same site visits as Indian credit teams. Canara’s decision to pursue criminal routes, not only recovery tribunals, signals patience with informal settlements has run out for this tranche. For other lenders still carrying IL&FS-era lines, the case is a reminder that merged balance sheets inherit investigative risk years after the headline default. It does not by itself change Canara’s near-term capital ratios, but legal costs and attachment battles can linger across election cycles.",
+      "Why should I care?",
+      "If you hold Canara Bank shares or its bonds, treat this as legacy asset-quality noise unless management quantifies fresh provisions on the next earnings call. Corporate borrowers should expect sharper end-use certificates on foreign currency loans after CBI publicity. Employees at infrastructure finance arms should document project spend in real time because delayed audits now trigger criminal references, not just rating downgrades. Watch whether courts grant travel curbs on accused directors, if the bank files parallel insolvency claims, and whether other IL&FS subsidiaries face similar complaints this quarter.",
+    ],
+  },
+  {
+    slug: "maruti-victoris-150k-sales-october-2026",
+    title: "Maruti’s Victoris crossed 1.5 lakh sales in its first year",
+    summary:
+      "Maruti Suzuki said on 24 October 2026 that its Victoris SUV passed 1.5 lakh cumulative units since its September 2025 launch, pairing the milestone with an Aurum accessory pack at ₹22,990 on the strong-hybrid variant as festive demand tests whether mid-size family buyers still upgrade despite tighter loan rates.",
+    category: "industry",
+    companyOrSector: "Passenger vehicles / retail",
+    publishedAt: "2026-10-24T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maruti-victoris-150k-sales-october-2026"),
+    keyTakeaways: [
+      "Maruti Suzuki reported on 24 October 2026 that Victoris cumulative sales crossed 1.5 lakh units after roughly one year on the market, with company data through September 2026 at 147,602 units before October retails tipped the total over the mark.",
+      "The Aurum Edition accessory kit for the Victoris Strong Hybrid is priced at ₹22,990 excluding the vehicle, adding copper exterior accents, chrome trim and all-weather cabin mats rather than mechanical changes.",
+      "The Victoris sits in the crowded mid-SUV segment where Maruti leans on hybrid fuel economy and dealer reach while rivals push diesel torque and feature wars.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, Maruti Suzuki India Ltd. marked the first anniversary of its Victoris SUV by launching an Aurum Edition accessory line and confirming cumulative sales above 1.5 lakh units since the model’s debut in September 2025. Company figures through September 2026 counted 147,602 retails, with October deliveries pushing the total past the milestone. The Aurum pack targets the strong-hybrid variant with copper-coloured skid plates, extra chrome on the grille and bumpers, and a ₹22,990 bundle of cabin and boot mats. Bollywood actor Shahid Kapoor fronts the campaign. The news lands amid Navratri and pre-Diwali showroom traffic, when automakers chase exchange bonuses and finance subventions even as the Reserve Bank of India keeps policy rates elevated.",
+      "What does this mean?",
+      "Fifteen months to 1.5 lakh units is brisk for a new Maruti nameplate in a segment crowded with Hyundai, Tata and Mahindra offerings. The pace suggests urban families still trade up to higher seating and hybrid badges when the monthly payment fits, even if Godrej Properties and other discretionary prints looked uneven this earnings season. Accessory editions let Maruti lift effective ticket size without discounting the metal, which protects margin when commodity costs swing. Hybrid inventory also helps Maruti meet corporate average fuel efficiency rules while petrol prices stay politically sensitive. Rivals may answer with their own anniversary packs, but Maruti’s distribution depth in tier-two cities remains the harder moat to copy.",
+      "Why should I care?",
+      "If you are shopping for a family SUV this festive quarter, compare on-road prices including mandatory accessories against rival hybrids that bundle features in the base trim. Fleet and ride-hailing buyers should watch whether long waiting periods persist on the strong-hybrid Victoris after the sales spike. Investors tracking auto ancillaries can read the milestone alongside Navratri vehicle retail surveys for confirmation that passenger demand is patchy but not collapsed. Watch November wholesale numbers, whether Maruti extends finance schemes, and how Hyundai Creta and Tata Curvv respond on hybrid pricing.",
+    ],
+  },
+  {
+    slug: "adani-wind-third-party-gw-october-2026",
+    title: "Adani Wind’s third-party order book crossed one gigawatt",
+    summary:
+      "Adani Wind, the turbine arm of Adani New Industries, booked 696.2 megawatts of fresh orders from five independent power producers reported on 24 October 2026, lifting sales outside the Adani Group past one gigawatt with contracts spanning NTPC Renewable Energy, Jindal India Power and Purvah Green Power projects in Karnataka, Gujarat and Maharashtra.",
+    category: "industry",
+    companyOrSector: "Renewable energy / manufacturing",
+    publishedAt: "2026-10-24T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-wind-third-party-gw-october-2026"),
+    keyTakeaways: [
+      "Media reports on 24 October 2026 said Adani Wind secured 696.2 MW of turbine orders from NTPC Renewable Energy, Jindal India Power, Purvah Green Power, Aditya Birla Renewables and Integrum Energy.",
+      "Purvah Green Power’s 300 MW order for Bellary, Karnataka, is the largest tranche, using sixty 5 MW machines; NTPC Renewable Energy ordered twenty-one 5.2 MW turbines for Khavda, Gujarat.",
+      "Cumulative third-party bookings beyond Adani’s own power projects now exceed one gigawatt, a threshold the company cites as proof domestic developers will buy Indian-made high-capacity turbines.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, coverage of India’s wind supply chain said Adani Wind, the turbine business of Adani New Industries Ltd., signed 696.2 megawatts of new equipment orders from five power producers outside the Adani Group. Purvah Green Power, part of the RP-Sanjiv Goenka Group, booked 300 MW of five-megawatt turbines for Bellary in Karnataka. Jindal India Power ordered 155 MW for Davanagere, also in Karnataka. NTPC Renewable Energy took 109.2 MW through twenty-one 5.2 MW units aimed at its Khavda project in Gujarat. Aditya Birla Renewables and Integrum Energy picked 3.3 MW platforms for sites in Bhuj, Gujarat, and Nandurbar, Maharashtra. The announcements push Adani Wind’s cumulative third-party order book above one gigawatt, a milestone the company has highlighted as it competes with Siemens Gamesa, Suzlon and Envision for India's shift toward taller, higher-capacity machines.",
+      "What does this mean?",
+      "Wind developers used to import most multi-megawatt turbines; a gigawatt of domestic third-party sales shows buyers are willing to bet on local assembly, service depots and tariff competitiveness, not only on group-affiliated projects. Larger rotor diameters on 5 MW and 5.2 MW platforms squeeze more kilowatt-hours from the same land parcel, which matters as Karnataka and Gujarat auction sites with strict capacity factors. For NTPC’s renewable arm, locking Indian supply can de-risk timelines when port congestion or currency moves hit European imports. The order flow does not remove execution risk: blades, towers and grid connections must still arrive on schedule for financial closure. Rivals will watch whether Adani Wind can repeat the Purvah-scale win without margin-crushing discounts.",
+      "Why should I care?",
+      "If you invest in renewable energy developers or engineering, procurement and construction firms, turbine localization changes bid assumptions for 2027 auctions. State governments chasing manufacturing jobs may extend capital subsidies to wind component plants that mirror solar module policies. Communities near Bellary or Nandurbar should expect heavier truck traffic during installation peaks. Watch commissioning dates on the Karnataka clusters, whether SECI hybrid tenders specify Indian content, and competitor press releases from Suzlon or Siemens Gamesa in the same megawatt bands.",
+    ],
+  },
+  {
     slug: "patanjali-mp-ghee-recall-october-2026",
     title: "Madhya Pradesh ordered Patanjali to recall a cow ghee batch",
     summary:
@@ -5414,6 +5510,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "eps-95-bombay-hc-higher-pension-october-2026": "policy",
+  "cbi-canara-ilfs-energy-fraud-october-2026": "policy",
+  "maruti-victoris-150k-sales-october-2026": "markets",
+  "adani-wind-third-party-gw-october-2026": "companies",
   "patanjali-mp-ghee-recall-october-2026": "policy",
   "ccpa-britannia-whole-wheat-claim-october-2026": "policy",
   "bihar-bank-performance-index-october-2026": "policy",

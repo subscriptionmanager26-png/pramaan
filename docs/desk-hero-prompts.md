@@ -904,6 +904,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Bread loaf / label motif |
 | Metaphor left | Shrinking truth ladder front-to-back |
 
+### `eps-95-bombay-hc-higher-pension-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Pension based on real wages, not trust caps |
+| Subject right | Courthouse columns / scales motif |
+| Metaphor left | Rising ledger bars + joint stamp |
+
+### `cbi-canara-ilfs-energy-fraud-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Loan proceeds diverted from project use |
+| Subject right | Bank vault silhouette |
+| Metaphor left | Split arrow into shadow boxes |
+
+### `maruti-victoris-150k-sales-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive family SUV demand still upgrading |
+| Subject right | Generic SUV on showroom plinth |
+| Metaphor left | Odometer-style rising tally bars |
+
+### `adani-wind-third-party-gw-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Domestic turbines win third-party GW orders |
+| Subject right | Wind turbine on ridge |
+| Metaphor left | Stacked MW capacity blocks |
+
 ### `patanjali-mp-ghee-recall-october-2026`
 
 | Field | Value |
