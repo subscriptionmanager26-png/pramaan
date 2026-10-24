@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "dgca-pilot-rest-extension-march-2027-october-2026",
+    title: "India pushed full pilot rest rules back to March 2027",
+    summary:
+      "The Directorate General of Civil Aviation extended the deadline for airlines to fully implement revised pilot rest and duty-time rules by five months to 31 March 2027, wire reports said on 24 October 2026, marking the third delay as carriers cite crew availability and cost pressure after IndiGo’s disruption last winter.",
+    category: "industry",
+    companyOrSector: "Aviation regulation",
+    publishedAt: "2026-10-24T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dgca-pilot-rest-extension-march-2027-october-2026"),
+    keyTakeaways: [
+      "Reporting on 24 October 2026 said the DGCA pushed the full rollout of updated pilot rest rules to 31 March 2027, five months beyond the prior deadline.",
+      "Coverage described the move as the third extension, with airlines arguing stricter rest limits would tighten cockpit supply while fuel and lease costs stay elevated.",
+      "The regulator had tightened rest standards after IndiGo cancelled thousands of flights in December 2025 when crew rosters could not keep pace with demand.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, business newspapers reported that India’s Directorate General of Civil Aviation granted airlines another five months before revised pilot rest and duty-time rules must be fully implemented, setting a new deadline of 31 March 2027. People familiar with the matter told reporters this was the third extension since the guidelines were first announced. Carriers have argued that stricter minimum rest between flights reduces how many sectors a pilot can legally operate each month, which raises hiring needs and overtime bills at a time when jet fuel and dollar leases remain expensive. The rest overhaul gained urgency after IndiGo, the country’s largest airline, grounded large parts of its schedule in December 2025 when rostering fell behind a surge in winter travel. Regulators want fatigue limits aligned with global norms; airlines want more time to hire, train, and rebuild buffers.",
+      "What does this mean?",
+      "Pilot rest rules trade passenger safety against schedule reliability. Tighter limits mean fewer back-to-back late-night legs and more hotel nights for crew, which is safer but costs money. When implementation slips, airlines keep flying under transitional norms, so travellers may not yet see the full schedule thinning some executives warned about. Delays also postpone the day when smaller carriers must match the same rostering software and reserve-pilot pools that larger rivals are building. For employees, extensions can mean existing duty patterns persist longer, while unions that pushed for stronger rest standards may challenge further slippage. Airport peak-hour congestion does not pause while regulators and airlines negotiate timelines.",
+      "Why should I care?",
+      "If you fly often during festivals or year-end holidays, build extra connection time until carriers publish stable winter rosters under the final rules. Pilots and cabin crew should read internal bulletins on which rest clauses are already mandatory versus still phased. Corporate travel desks can ask airlines for contingency plans if March 2027 compliance forces flight cuts on thin routes. Investors in listed carriers should treat extensions as near-term capacity relief but not as permanent cost avoidance. Watch DGCA circulars, union court petitions, and whether hiring pipelines for first officers accelerate before the new deadline.",
+    ],
+  },
+  {
+    slug: "maharashtra-wadhavan-chemicals-hub-october-2026",
+    title: "Maharashtra plans a chemicals park on up to 5,000 acres near Wadhavan port",
+    summary:
+      "Chief Minister Devendra Fadnavis said on 23 October 2026 that Maharashtra is finalising a dedicated chemicals sector policy for release in early November and exploring 2,500–5,000 acres near the upcoming Wadhavan port in Palghar for a chemicals park as the state chases a national goal of a USD 1 trillion chemicals industry by 2040.",
+    category: "industry",
+    companyOrSector: "Chemicals / industrial policy",
+    publishedAt: "2026-10-24T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maharashtra-wadhavan-chemicals-hub-october-2026"),
+    keyTakeaways: [
+      "Wire reports on 24 October 2026 quoted Fadnavis telling an industry forum that Maharashtra’s chemicals policy is in its final stage with an announcement targeted for the first week of November 2026.",
+      "The state is studying land acquisition of roughly 2,500–5,000 acres adjacent to the Wadhavan deep-draft port project in Palghar district for a dedicated chemicals manufacturing zone.",
+      "Officials linked the plan to India’s broader ambition of scaling chemicals output toward USD 1 trillion by 2040, a sector that feeds plastics, pharmaceuticals, and specialty exports.",
+    ],
+    body: [
+      "What's going on here?",
+      "Speaking at a Federation of Indian Chambers of Commerce and Industry event covered on 24 October 2026, Maharashtra Chief Minister Devendra Fadnavis said the state is in the final stage of drafting a standalone chemicals sector policy and aims to unveil it in the first week of November. He added that the government is exploring acquisition of between about 2,500 and 5,000 acres near the Wadhavan port under development in Palghar, north of Mumbai, to host a dedicated chemicals park. The port is meant to handle larger vessels than Mumbai’s existing harbour, easing imports of feedstock and exports of finished products. State leaders framed the push alongside India’s national target of building a USD 1 trillion chemicals industry by 2040. Chemicals clusters need pipeline networks, effluent treatment, and proximity to ports or rail sidings, so tying the park to Wadhavan is an attempt to bundle logistics with greenfield plots.",
+      "What does this mean?",
+      "When a coastal state parcels thousands of acres for chemicals, it is betting that global firms will localise specialty and intermediate production even as China remains a competitor. Land acquisition near a major metro can take years if rehabilitation and environmental clearances slip, so the November policy will matter more if it spells incentives, single-window approvals, and liability rules for hazardous units. Downstream users such as paint, agrochemical, and pharma formulators could see shorter supply chains if intermediates are made in-state rather than trucked from Gujarat or imported. Residents and fishing communities near Palghar will watch effluent standards and traffic on coastal roads. For the Centre, a Maharashtra hub complements existing belts in Gujarat and Odisha but also intensifies competition for the same multinational capex dollars.",
+      "Why should I care?",
+      "If you run a factory that buys solvents, adhesives, or specialty inputs, track whether Maharashtra’s policy offers GST or power tariffs that beat your current supplier state. Chemical engineers and plant operators should monitor hiring once land parcels are demarcated. Real-estate buyers in Palghar and Vasai should expect industrial zoning debates long before housing premiums move. Investors in listed chemical names should separate headline acreage announcements from actual capital expenditure timelines. Watch the November policy text, Wadhavan port commissioning milestones, and any environmental impact public hearings for the proposed park.",
+    ],
+  },
+  {
+    slug: "sbi-cards-q2-profit-credit-costs-october-2026",
+    title: "SBI Cards nearly doubled profit as bad-debt charges fell",
+    summary:
+      "SBI Cards and Payment Services Ltd said on 24 October 2026 that net profit rose about 75% year on year to ₹778 crore in the September quarter as impairment losses dropped 37% to ₹819 crore, even as total income grew only 3% and corporate card spends softened.",
+    category: "industry",
+    companyOrSector: "Credit cards / consumer credit",
+    publishedAt: "2026-10-24T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-cards-q2-profit-credit-costs-october-2026"),
+    keyTakeaways: [
+      "Exchange filings on 24 October 2026 showed SBI Cards’ net profit at ₹778 crore for the quarter ended 30 September 2026 versus ₹445 crore a year earlier.",
+      "Impairment and bad-debt expenses fell to ₹819 crore from ₹1,293 crore, providing most of the earnings lift while total income edged up 3% to ₹5,302 crore.",
+      "Management commentary in wire reports noted softer corporate card usage and a decline in outstanding receivables alongside improved asset quality metrics.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, SBI Cards and Payment Services Ltd reported results for the quarter ended 30 September 2026. Net profit jumped about 75% year on year to ₹778 crore from ₹445 crore in the same period last year. Total income rose roughly 3% to ₹5,302 crore. The standout swing was credit cost: impairment losses and bad-debt provisions declined 37% to ₹819 crore from ₹1,293 crore, meaning fewer rupees were set aside for customers who had already fallen behind on payments. Reporting added that corporate card spending contracted and overall receivables outstanding dipped, even as the lender highlighted better asset quality. The update lands during India’s festive shopping season, when issuers usually compete on rewards and no-cost EMI tie-ups with retailers.",
+      "What does this mean?",
+      "Card lenders earn from interchange fees, interest on revolving balances, and late fees, but a quarter’s profit can move sharply when last year’s delinquencies age out of the provision math. Lower impairment charges often mean prior underwriting tightening or collections catching up after the post-pandemic spike in unsecured stress. Slower corporate card growth can reflect companies cutting travel and entertainment budgets even as consumer malls fill up. Flat top-line growth with falling credit costs produces a strong profit print but signals that spend volumes are not accelerating as fast as shareholders might hope. Rivals such as HDFC Bank’s card book and fintech co-branded programs will watch whether SBI Cards reopens marketing to chase receivables growth now that buffers look healthier.",
+      "Why should I care?",
+      "If you carry a credit card, improved issuer profits do not automatically mean easier approvals; banks may still prefer salaried customers with bureau scores above their cut-offs. Festive EMI offers may stay competitive because lenders want fresh revolving balances after cleaning older NPAs. If you run a shop, interchange negotiations depend on network volumes, so a issuer growing profits without growing spends may keep merchant fees sticky. Investors should separate one-quarter provision releases from sustained spend momentum. Watch December-quarter receivables, reward war announcements, and RBI consumer-credit growth data for unsecured loans.",
+    ],
+  },
+  {
+    slug: "carlsberg-india-volume-share-october-2026",
+    title: "Carlsberg India sold more beer while reported revenue slipped 2%",
+    summary:
+      "Annual filings cited on 24 October 2026 showed Carlsberg India’s total income fell 2.3% to ₹8,815 crore in FY26 even as volumes and market share improved and net profit rose 22% to ₹535 crore, a mix that complicates the Danish brewer’s planned USD 700 million IPO of the Indian unit.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages / consumer",
+    publishedAt: "2026-10-24T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("carlsberg-india-volume-share-october-2026"),
+    keyTakeaways: [
+      "Media reports on 24 October 2026 parsed Registrar of Companies filings showing Carlsberg India’s FY26 total income down 2.3% year on year to ₹8,815 crore.",
+      "The company still reported 22% higher net profit at ₹535 crore, exceeding United Breweries’ ₹413 crore profit figure cited in the same coverage.",
+      "Management said volumes and market share rose alongside better brand performance and working capital, even as top-line rupees dipped ahead of a mooted USD 700 million India IPO.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, retail and business press reviewed annual filings Carlsberg India submitted to the Registrar of Companies for financial year 2026. Total income declined about 2.3% to ₹8,815 crore even though net profit climbed 22% to ₹535 crore, a figure reporters said surpassed market leader United Breweries’ ₹413 crore profit in the same comparison. The maker of Tuborg and Carlsberg brands stated that volume growth and market share gains continued, with stronger brand metrics and working-capital discipline. Coverage linked the revenue dip to the pricing and state-tax mix brewers navigate across India, not to a collapse in pint demand. Carlsberg’s global parent has been preparing a USD 700 million initial public offering of the Indian business, so investors are sensitive to whether rupee sales lines accelerate or lag volume trends.",
+      "What does this mean?",
+      "Beer economics in India are shaped as much by state excise and route-to-market rules as by brand marketing. You can ship more cases yet book lower rupee revenue if average realisations fall, promotional depth rises, or excise classifications shift toward lower-taxed beer versus spirits. Rising profit on flat revenue usually points to cost control, mix shift toward premium cans, or lower input inflation versus the prior year. Share gains against incumbents suggest Carlsberg is winning shelf space in key states even before an IPO roadshow. For shoppers, the practical signal is continued competition on promotions and pack sizes during festivals. For the industry, the filing is another datapoint that urban discretionary drinking held up while reported sales lines look uneven.",
+      "Why should I care?",
+      "If you follow consumer stocks, compare volume commentary from Carlsberg with United Breweries and regional liquor names before assuming weakness from a single revenue line. Pub and restaurant operators should expect continued wholesale competition as brands fight for tap handles ahead of a potential listing. Policy watchers should note that state tax tweaks can move reported industry revenue without changing how many bottles leave depots. Investors awaiting the India IPO should model scenarios where profit growth outpaces top line if excise maps stay favourable. Watch IPO filing updates, state excise budgets this winter, and festive quarter volume disclosures from listed peers.",
+    ],
+  },
+  {
     slug: "pirelli-bkt-premium-tyres-india-october-2026",
     title: "Pirelli will build up to 800,000 premium car tyres in India with BKT",
     summary:
@@ -5246,6 +5342,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "dgca-pilot-rest-extension-march-2027-october-2026": "policy",
+  "maharashtra-wadhavan-chemicals-hub-october-2026": "policy",
+  "sbi-cards-q2-profit-credit-costs-october-2026": "markets",
+  "carlsberg-india-volume-share-october-2026": "markets",
   "pirelli-bkt-premium-tyres-india-october-2026": "companies",
   "idbi-dipam-employee-protections-october-2026": "policy",
   "indusind-q2-double-digit-growth-october-2026": "policy",

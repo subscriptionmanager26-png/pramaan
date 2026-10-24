@@ -856,6 +856,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic private bank facade |
 | Metaphor left | Rising loan/deposit bars + currency dial |
 
+### `dgca-pilot-rest-extension-march-2027-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Stricter pilot rest delayed to March 2027 |
+| Subject right | Jet silhouette / cockpit clock motif |
+| Metaphor left | Calendar blocks sliding toward March 2027 |
+
+### `maharashtra-wadhavan-chemicals-hub-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Coastal chemicals park tied to new port |
+| Subject right | Port cranes / pipeline stacks |
+| Metaphor left | Expanding acreage grid chevrons |
+
+### `sbi-cards-q2-profit-credit-costs-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Lower provisions lift card issuer profit |
+| Subject right | Generic payment card / POS motif |
+| Metaphor left | Shrinking impairment bars |
+
+### `carlsberg-india-volume-share-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Volumes up, rupee revenue line flatter |
+| Subject right | Chilled beverage shelf silhouette |
+| Metaphor left | Rising volume chevrons beside flat revenue bar |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
