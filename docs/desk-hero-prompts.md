@@ -888,6 +888,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Chilled beverage shelf silhouette |
 | Metaphor left | Rising volume chevrons beside flat revenue bar |
 
+### `bihar-bank-performance-index-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | State scorecard ties local deposits to credit delivery |
+| Subject right | Public-sector bank facade |
+| Metaphor left | 100-point gauge with green/yellow/red zones |
+
+### `ccpa-britannia-whole-wheat-claim-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Bold “100%” claim vs actual flour share |
+| Subject right | Bread loaf / label motif |
+| Metaphor left | Shrinking truth ladder front-to-back |
+
+### `patanjali-mp-ghee-recall-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Failed sample triggers batch recall |
+| Subject right | Ghee jar on shelf |
+| Metaphor left | Recall arrow into sealed disposal bin |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

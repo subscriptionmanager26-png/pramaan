@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "patanjali-mp-ghee-recall-october-2026",
+    title: "Madhya Pradesh ordered Patanjali to recall a cow ghee batch",
+    summary:
+      "Patanjali Foods told exchanges on 24 October 2026 that Madhya Pradesh’s Food and Drug Administration directed it to recall one batch of cow ghee after a Burhanpur sample failed food-safety standards, though the company said the hit is immaterial beyond that batch and that it will appeal.",
+    category: "industry",
+    companyOrSector: "Food safety / FMCG",
+    publishedAt: "2026-10-24T12:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("patanjali-mp-ghee-recall-october-2026"),
+    keyTakeaways: [
+      "A Burhanpur FDA order dated in October 2026 declared a sampled batch of Patanjali cow ghee unsafe under the Food Safety and Standards Act, 2006, triggering a recall directive covered in the company’s 24 October exchange filing.",
+      "Patanjali said the recall would not materially affect finances or operations apart from the value of the affected batch and that it is filing an appeal against the order.",
+      "The case lands as FSSAI and state drug administrations tighten scrutiny of dairy labels and adulteration, including recent actions on “100%” claims and Maharashtra seizures of suspect ghee and khoya.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, Patanjali Foods Ltd. informed the stock exchanges that the Food and Drug Administration in Madhya Pradesh had ordered a recall of cow ghee from a specific batch. The designated officer in Burhanpur district issued the order after a sample did not meet requirements under the Food Safety and Standards (Food Products Standards and Food Additives) Regulations, 2011, including rules on contaminants, toxins and residues. The filing described the product as unsafe under the Food Safety and Standards Act, 2006. Patanjali said the financial and operational impact would be limited to the value of that batch and that it intends to challenge the order in appeal. The notice arrives during a broader enforcement wave on packaged foods, from national advisories against absolute “100%” claims to state-level raids on adulterated dairy sweets.",
+      "What does this mean?",
+      "Ghee sits in millions of festival kitchens, so a failed sample in one district can still travel nationally through social media even when the company calls the sum small. State FDA officers can order recalls without waiting for a central headline, which means brands must trace batch codes quickly and keep test records for each plant line. An appeal signals Patanjali will argue the finding or procedure, but shelves may already be cleared in the affected geography regardless. For rivals, the episode is a reminder that premium ayurvedic branding does not relax analytical standards on fat purity or adulterants. Retailers may ask for fresher lab certificates before restocking, lengthening working capital cycles for smaller distributors.",
+      "Why should I care?",
+      "If you buy branded ghee for Diwali cooking, check batch numbers on the label and follow retailer recall notices in Madhya Pradesh even if you purchased elsewhere. Kirana owners should isolate notified lots instead of discounting them quietly. Investors in listed FMCG names should watch whether this stays a single-batch dispute or invites wider sampling across Patanjali’s dairy network. Households already confused by competing “100%” claims on oils and honey should expect more front-label policing through 2026. Watch the appellate outcome in Madhya Pradesh, any parallel FSSAI commentary, and whether other states resample Patanjali dairy SKUs after Maharashtra’s adulteration drive.",
+    ],
+  },
+  {
+    slug: "ccpa-britannia-whole-wheat-claim-october-2026",
+    title: "Britannia must pull “100% whole wheat” bread ads after a CCPA order",
+    summary:
+      "The Central Consumer Protection Authority fined Britannia Industries ₹1 lakh on 22 October 2026 and told it to stop advertising its bread as “100% Whole Wheat” because the loaf contains 62% whole wheat flour, below the 75% threshold FSSAI sets for that label, with a fine-print flour-basis disclaimer deemed inadequate.",
+    category: "industry",
+    companyOrSector: "Packaged food / advertising",
+    publishedAt: "2026-10-24T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ccpa-britannia-whole-wheat-claim-october-2026"),
+    keyTakeaways: [
+      "A CCPA order dated 22 October 2026 penalised Britannia ₹1 lakh for misleading ads and unfair trade practices tied to “100% Whole Wheat Bread” packaging and online promotions.",
+      "The authority found the product contained 62% whole wheat flour, under the 75% minimum FSSAI prescribes for calling a loaf “Whole Wheat Bread,” and rejected Britannia’s argument that the claim referred only to flour composition.",
+      "Britannia must discontinue the ads immediately and file a compliance report within 15 days; the case cited an FSSAI advisory from May 2025 urging food companies to drop standalone “100%” claims on labels.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 22 October 2026, the Central Consumer Protection Authority issued an order against Britannia Industries Ltd. over its “100% Whole Wheat Bread.” The regulator said the front label and digital creatives implied the loaf was entirely whole wheat flour, while laboratory findings put whole wheat flour at 62% of the product, with the balance water, yeast, bran and other ingredients. Under the Food Safety and Standards (Labelling and Display) rules cited in the order, whole wheat flour must be at least 75% of the prescribed composition for the “Whole Wheat Bread” name. Britannia argued the phrase “100%” described the flour mix rather than the finished bread and pointed to a reverse-side note that the bread was “made from 100% whole wheat flour on flour basis.” The CCPA said that disclaimer, linked by a small symbol, did not cure the bold front claim and noted FSSAI had advised food business operators in May 2025 to stop using “100%” on packaging. The authority ordered Britannia to halt the advertising, pay ₹1 lakh, and report compliance within 15 days.",
+      "What does this mean?",
+      "Packaged bread is a weekly basket item, so label fights are really fights over trust in everyday staples. Regulators now judge the impression an ordinary shopper gets in two seconds at the shelf, not the technical footnote on the back panel. A “0% maida” badge does not offset a numerical claim that overstates wheat content. For Britannia and peers, redesign costs, e-commerce image swaps, and legal fees are the immediate bill; the strategic bill is whether consumers switch to bakeries or rival loaves that meet the 75% rule outright. The order also shows CCPA and FSSAI moving in tandem, using investigation reports and food standards in one enforcement package. Expect more scans of Instagram posts and brand websites, not just physical packs.",
+      "Why should I care?",
+      "If you buy whole wheat bread for household breakfasts, read the ingredient list and percentage declarations rather than hero numbers on the front. Retailers should pull non-compliant creatives from quick-commerce listings as soon as suppliers send new artwork. Investors in listed FMCG stocks should treat label compliance as an ongoing operating cost after Dabur and other “100%” disputes this month. Parents comparing fibre claims for children should look for the legal product name “Whole Wheat Bread” and the flour percentage, not marketing synonyms. Watch Britannia’s compliance filing, whether FSSAI escalates to prohibition orders on remaining packs, and if other bakers pre-emptively reformulate to the 75% line.",
+    ],
+  },
+  {
+    slug: "bihar-bank-performance-index-october-2026",
+    title: "Bihar will score banks on how much credit they lend in the state",
+    summary:
+      "Bihar’s finance department said on 24 October 2026 it introduced a 100-point performance index ranking lenders, with IDFC FIRST Bank leading at 74 points and several large public-sector banks in the “red” zone, as officials push banks to meet a ₹4.95 lakh crore annual credit plan after disbursing only 38% through September.",
+    category: "industry",
+    companyOrSector: "State credit policy / banking",
+    publishedAt: "2026-10-24T11:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bihar-bank-performance-index-october-2026"),
+    keyTakeaways: [
+      "Bihar unveiled a 100-point bank performance assessment index on 24 October 2026, classifying lenders into green (50+ points), yellow, and red zones; 11 banks sit in the green zone while major public-sector names lag.",
+      "IDFC FIRST Bank topped the table with 74 points, according to Development Commissioner Mihir Kumar Singh at a State Level Bankers’ Committee review.",
+      "Banks disbursed ₹1.89 lakh crore against a ₹4.95 lakh crore annual credit plan target for 2026-27 by 30 September, about 38% of the goal, with MSME lending at 52.7% of its sub-target and farm credit at 28%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 24 October 2026, Bihar’s finance department announced a new 100-point performance assessment index to rank banks operating in the state, a step officials said had not been tried there before. Development Commissioner Mihir Kumar Singh told a State Level Bankers’ Committee review that IDFC FIRST Bank leads with 74 points. Eleven banks scored 50 or above and land in a green zone denoting strong performance; seven are in a yellow band and several others, including prominent public-sector lenders, sit in a red zone indicating weaker delivery. The state set an annual credit plan of ₹4.95 lakh crore for fiscal 2026-27. By 30 September, banks had disbursed ₹1.89 lakh crore, roughly 38.25% of that target, though the figure was about ₹46,228 crore higher than the same period a year earlier. MSME credit reached ₹84,091 crore, about 52.7% of its sub-target, while farm lending stood at ₹43,967 crore, near 28% of goal. Singh stressed that deposits raised in Bihar should be reinvested locally and asked banks to work in mission mode through the rest of the year.",
+      "What does this mean?",
+      "State governments cannot set RBI interest rates, but they can shame and reward banks that lag on priority-sector plans agreed at bankers’ committee meetings. A public scorecard turns abstract “credit growth” into a political metric ahead of assembly budgets and election-season job promises. Red-zone tagging for large PSU banks signals friction between Delhi-headquartered lenders and Patna’s demand for faster branch-level lending to farms and small factories. A high score for a newer private bank shows aggressive micro-market focus can beat legacy deposit share on this index. MSME achievement above half-way while farm credit trails may steer district collectors toward agricultural camps in the second half. Banks that improve scores will likely push secured MSME and KCC loans where documentation is easier than large corporate tickets.",
+      "Why should I care?",
+      "If you run a small business or farm in Bihar, a tougher state scorecard can mean more branch outreach, festive loan melas, and faster processing to lift a bank’s ranking before March. Savers should still compare deposit rates; a bank’s lending zeal does not automatically mean better payout on your fixed deposit. Entrepreneurs elsewhere should watch whether other states copy Bihar’s index as competition for credit allocation intensifies. Bank employees may face sharper weekly targets tied to zone colours. Watch December SLBC minutes for revised disbursement numbers, any RBI commentary on state pressure tactics, and whether red-zone PSU banks publish branch-level plans to exit the bottom tier.",
+    ],
+  },
+  {
     slug: "dgca-pilot-rest-extension-march-2027-october-2026",
     title: "India pushed full pilot rest rules back to March 2027",
     summary:
@@ -5342,6 +5414,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "patanjali-mp-ghee-recall-october-2026": "policy",
+  "ccpa-britannia-whole-wheat-claim-october-2026": "policy",
+  "bihar-bank-performance-index-october-2026": "policy",
   "dgca-pilot-rest-extension-march-2027-october-2026": "policy",
   "maharashtra-wadhavan-chemicals-hub-october-2026": "policy",
   "sbi-cards-q2-profit-credit-costs-october-2026": "markets",
