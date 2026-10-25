@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "navi-mumbai-phased-flight-move-october-2026",
+    title: "IndiGo and Air India agreed to shift some Mumbai flights to Navi Mumbai from February 2027",
+    summary:
+      "On 25 October 2026, Air India and IndiGo said they will begin a phased move of selected operations from Mumbai’s main airport to Adani’s Navi Mumbai airport starting February 2027, including some West Asia services, after weeks of dispute over how to free capacity for a Terminal 1 rebuild.",
+    category: "industry",
+    companyOrSector: "Aviation / Mumbai passengers",
+    publishedAt: "2026-10-25T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("navi-mumbai-phased-flight-move-october-2026"),
+    keyTakeaways: [
+      "Wire copy on 25 October said IndiGo and Air India will move some flights to Navi Mumbai from February 2027, including a portion of West Asia departures now handled at Mumbai’s primary airport.",
+      "Air India Group and Adani Airports framed the shift as a phased transition rather than the abrupt international slot cuts proposed earlier in October when Terminal 1 reconstruction was on the table.",
+      "The deal lands after the civil aviation ministry paused a plan to slash hundreds of weekly international departures from Terminal 2, giving airlines more time to reticket passengers and reassign crew.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, exchange filings and wire headlines said InterGlobe Aviation’s IndiGo and Tata-owned Air India will relocate some Mumbai flights to the new Navi Mumbai international airport operated by Adani Airports, with the transition starting in February 2027. Reporting specified that part of the West Asia network now using Mumbai’s main airport would move across the harbour. Air India said its group and Adani Airports announced a phased transition of flight operations between the two airports. The statements follow an October standoff in which Mumbai International Airport proposed cutting hundreds of weekly international departures from Terminal 2 to make room for a phased rebuild of ageing Terminal 1 from January 2027. Airlines rejected the short-notice cuts, and the ministry paused that plan while asking for a workable schedule by 20 October.",
+      "What does this mean?",
+      "Mumbai’s passenger crunch is not solved by one new runway; it is managed by splitting traffic between two airports and timing the handover so tickets, crews and ground staff can move in step. A February 2027 start gives IndiGo and Air India two winter seasons to sell connections with clearer airport labels on itineraries. West Asia routes are a logical first bundle because they often use wide-body jets that compete for the same Terminal 2 gates as European and long-haul services. For Adani, filling Navi Mumbai is the commercial payoff on a greenfield asset. For flyers, the practical risk is booking a Mumbai ticket that actually departs from Navi Mumbai, a separate road trip across the trans-harbour link unless surface transport keeps pace.",
+      "Why should I care?",
+      "If you fly to or from Mumbai on Gulf carriers or Indian airlines’ West Asia services, check airport codes on tickets issued for travel after early 2027 and build extra ground time into connections. Corporate travel desks should refresh policy on which airport counts as Mumbai for car allowances and late-arrival insurance. Investors watching Adani Airports or airline yields should track how quickly Navi Mumbai absorbs departures without pushing yields down through duplicate capacity. Watch ministry comments on Terminal 1 reconstruction, winter 2026 schedule filings, and any further route lists beyond the initial West Asia bundle.",
+    ],
+  },
+  {
+    slug: "hdfc-bank-ev-body-battery-loan-split-october-2026",
+    title: "HDFC Bank will finance an electric car’s body and battery on different loan tenors",
+    summary:
+      "HDFC Bank said on 25 October 2026 it launched a flexi green electric vehicle loan that splits funding between the car body and the battery pack, letting borrowers stretch battery repayments over a longer term to smooth monthly EMIs as EV sticker prices stay above comparable petrol models.",
+    category: "industry",
+    companyOrSector: "Retail banking / electric vehicles",
+    publishedAt: "2026-10-25T16:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hdfc-bank-ev-body-battery-loan-split-october-2026"),
+    keyTakeaways: [
+      "The bank’s 25 October statement described a flexi green electric car loan with separate loan proportions and tenors for the vehicle body and the battery module.",
+      "HDFC Bank said the structure is meant to customise EMI outflows because EV acquisition costs remain higher than internal-combustion equivalents at current pricing.",
+      "The product lands as more mass-market brands add battery-electric variants and shoppers compare total cost of ownership against rising petrol bills.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, HDFC Bank announced a flexi green electric car loan that treats the vehicle body and the battery as distinct financed components. The bank said customers can take different loan proportions and repayment periods for each part, with the battery slice eligible for a longer tenor so monthly instalments can be smoothed. In its statement, India’s largest private lender noted that today’s EV cost structure keeps upfront prices above comparable petrol cars, which has been a common objection in showroom conversations even as running costs fall. The product is a retail-banking response to how OEMs price packs separately in some fleets and how residual values on batteries are still debated in the secondary market.",
+      "What does this mean?",
+      "Car loans usually wrap the entire vehicle into one EMI. When the expensive part of the car, the battery, depreciates on a different curve than the chassis, a single tenor either overcharges early years or leaves the bank exposed later. Splitting tenors lets the lender align repayments closer to how buyers think about usable range and warranty life, and it gives branch staff a concrete answer when a customer balks at a ₹15–20 lakh sticker. Other banks may copy the structure if HDFC’s pull-through rises, much as no-cost EMI offers spread across consumer durables. It does not cut the total interest paid unless rates differ by tranche, so shoppers still need to compare annual percentage rates on both legs.",
+      "Why should I care?",
+      "If you are comparing a festive-season EV upgrade with a petrol sedan, ask your banker for a side-by-side EMI quote under the split structure and under a traditional car loan. Check whether the battery tranche survives if you sell the car early or swap packs under warranty. Fleet buyers should see if OEM battery-leasing schemes still beat bank finance after tax. Watch whether State Bank of India, ICICI Bank and NBFC captives launch similar green flexi products and whether RBI consumer-credit circulars treat battery loans differently for risk weights.",
+    ],
+  },
+  {
+    slug: "india-private-capex-pipeline-concentration-october-2026",
+    title: "India’s private project pipeline is four times larger than in 2014, but banks face concentration risk",
+    summary:
+      "A Union Bank of India research note cited on 25 October 2026 put India’s outstanding private capital expenditure pipeline at about ₹99.7 lakh crore in September 2026, roughly 4.1 times the March 2014 stock, while warning that geographic and sector clustering plus larger ticket sizes raise execution and lending risks.",
+    category: "industry",
+    companyOrSector: "Corporate investment / bank credit",
+    publishedAt: "2026-10-25T15:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-private-capex-pipeline-concentration-october-2026"),
+    keyTakeaways: [
+      "Union Bank of India’s report, relayed by business press on 25 October, estimated the private capex pipeline at ₹99.7 lakh crore as of September 2026, up 39% year on year and about 4.1 times the March 2014 level.",
+      "Authors flagged rising concentration in a handful of states and sectors, bigger individual projects, and the possibility of delays that can strain lender exposure.",
+      "Advisor commentary in the same window highlighted the same Union Bank figure, framing the boom as a test for credit underwriting rather than a uniform growth story.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, multiple outlets summarised a Union Bank of India research report on private capital expenditure. The study put the outstanding pipeline of announced and underway projects at about ₹99.7 lakh crore as of September 2026, 39% higher than a year earlier and roughly 4.1 times the stock researchers calculated for March 2014. That is a different lens from daily equity moves: it measures how much steel, cement, power and logistics capacity companies still plan to add. The same write-ups quoted the bank’s warning that projects are clustering in select states and industries, individual approvals are getting larger, and slippage on timelines could hurt lenders that have already lined up sanctions. Substack commentary from market strategists in the morning window echoed the headline number, arguing the risk is uneven exposure rather than a lack of ambition.",
+      "What does this mean?",
+      "A bigger pipeline does not automatically mean a bigger GDP print next quarter. Banks book commitments when boards approve capex, but cash spends only when civil work starts and suppliers invoice. When too many rupees chase the same coastal steel or renewable cluster, one delayed environmental clearance or port bottleneck can leave several loans in the same risk bucket. Regulators have been pushing lenders to watch sectoral limits after previous cycles where infrastructure non-performing assets took years to resolve. For industry, the report is a reminder that policy incentives on manufacturing and energy transition are showing up in project announcements faster than in revenue lines.",
+      "Why should I care?",
+      "If you work at a mid-sized bank, ask credit committees where your top ten project exposures sit by state and sub-sector before sanctioning another plate-mill or solar park in the same district. Corporate treasurers bidding for new plants should expect tighter covenants and more frequent progress certificates. Equity investors should read order books at capital-goods firms against this pipeline, not against Nifty headlines. Watch Union Bank’s full publication for state-wise tables, RBI sectoral guidance, and quarterly commentary from SBI and HDFC Bank on project loan growth versus retail.",
+    ],
+  },
+  {
+    slug: "centre-psu-bank-stake-sale-consolidation-october-2026",
+    title: "The Centre may cut its stake in four public sector banks to 75%",
+    summary:
+      "Media reports on 25 October 2026 said the government is weighing reductions in its shareholding to 75% in Central Bank of India, UCO Bank, Punjab & Sind Bank and Indian Overseas Bank to meet minimum public-float rules, alongside another round of state-bank consolidation that could include privatisation candidates named by NITI Aayog.",
+    category: "industry",
+    companyOrSector: "Public sector banking",
+    publishedAt: "2026-10-25T14:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("centre-psu-bank-stake-sale-consolidation-october-2026"),
+    keyTakeaways: [
+      "Press reports on 25 October said officials are considering bringing the government stake down to 75% in four mid-sized PSU lenders to comply with minimum public shareholding norms.",
+      "Coverage named Central Bank of India, UCO Bank, Punjab & Sind Bank and Indian Overseas Bank as part of that float discussion.",
+      "The same articles said NITI Aayog has shortlisted Central Bank of India and Indian Overseas Bank among names that could feature in a fresh privatisation or consolidation push, without a final cabinet decision.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, business newspapers reported that the Union government is exploring a cut in its ownership to 75% in four public sector banks so their free float meets stock-exchange rules. Reports identified Central Bank of India, UCO Bank, Punjab & Sind Bank and Indian Overseas Bank as lenders where the stake sale is under discussion. Separately, the same coverage said policymakers are preparing another consolidation wave among state-owned banks and that NITI Aayog has short-listed Central Bank of India and Indian Overseas Bank as potential privatisation candidates. No cabinet note or exchange filing confirmed timetables; the story rests on government sources speaking to reporters. It arrives weeks after DIPAM assured IDBI Bank unions about service conditions during that lender’s strategic sale and amid ongoing debate over how far divestment should go in banking.",
+      "What does this mean?",
+      "Minimum public shareholding forces the government to sell stock even when it would rather keep control. A move to 75% would add supply in thinly traded PSU counters and signal that Delhi is willing to let private investors set marginal prices for those franchises. Consolidation talk matters because merged banks can close duplicate branches and rationalise technology spend, but they also trigger union pushback and customer disruption if account migrations are rushed. Privatisation is the sharper tool: it changes governance outright, yet requires parliamentary capital and a buyer willing to absorb legacy branches. None of the four banks named is systemic on the scale of State Bank of India, but together they touch millions of salary accounts and small enterprises.",
+      "Why should I care?",
+      "If you hold shares in any of the four lenders, treat the headlines as a prompt to read future offer-for-sale documents rather than a done deal. Account holders should watch for branch branding changes only after formal merger announcements, not on speculation alone. Bond investors should track whether stake sales fund fiscal deficit reduction or recapitalise weaker siblings. Watch DIPAM and finance ministry press briefings, NITI Aayog lists tabled in Parliament, and union strike calendars similar to the IDBI protests scheduled for early November.",
+    ],
+  },
+  {
     slug: "omcs-lpg-distributor-commission-october-2026",
     title: "State oil firms agreed to recommend a higher LPG distributor commission",
     summary:
@@ -5558,6 +5654,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "navi-mumbai-phased-flight-move-october-2026": "policy",
+  "hdfc-bank-ev-body-battery-loan-split-october-2026": "policy",
+  "india-private-capex-pipeline-concentration-october-2026": "policy",
+  "centre-psu-bank-stake-sale-consolidation-october-2026": "policy",
   "omcs-lpg-distributor-commission-october-2026": "policy",
   "india-chinese-phone-share-memory-chips-october-2026": "markets",
   "eps-95-bombay-hc-higher-pension-october-2026": "policy",
