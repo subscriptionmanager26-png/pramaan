@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "kec-pgcil-transmission-order-october-2026",
+    title: "KEC International won a ₹2,872 crore Power Grid order for 765 kV lines",
+    summary:
+      "On 25 October 2026, KEC International said Power Grid Corporation of India Ltd awarded it turnkey contracts worth ₹2,872 crore to design, supply and install 765 kV transmission lines tied to evacuating about 8.5 GW of power, marking the largest single India transmission and distribution order in the RPG Group company’s history.",
+    category: "industry",
+    companyOrSector: "Power transmission / infrastructure",
+    publishedAt: "2026-10-25T22:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("kec-pgcil-transmission-order-october-2026"),
+    keyTakeaways: [
+      "KEC International announced on 25 October 2026 that PGCIL placed turnkey orders worth ₹2,872 crore for 765 kV transmission line work.",
+      "The company said the projects support evacuation of about 8.5 GW and represent its biggest-ever India T&D contract.",
+      "Management noted year-to-date order intake had crossed roughly ₹13,500 crore before the latest win, deepening its backlog in interstate grid work.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, KEC International Ltd told exchanges that Power Grid Corporation of India Ltd awarded it multiple turnkey contracts totalling about ₹2,872 crore. The scope covers design, supply and installation of 765 kilovolt transmission lines. In its statement, KEC said the work is linked to evacuating roughly 8.5 gigawatts of generation and described the package as the largest order its India transmission and distribution business has ever booked. Wire copy ahead of Monday’s session said the RPG Group engineering firm had already crossed about ₹13,500 crore of orders in calendar 2026 before this award. The deal is execution-heavy civil and electrical work rather than a one-quarter revenue spike, but it extends a run of grid orders as India adds renewable and thermal capacity far from load centres.",
+      "What does this mean?",
+      "Renewable parks and new thermal units in eastern and western clusters need high-voltage corridors before electrons reach cities. PGCIL tenders 765 kV lines when it wants scale and lower losses over long distances. For KEC, a chunky PGCIL win de-risks the order book for the next few years and signals that lenders are comfortable funding large letters of credit for the same contractor. Competitors such as Kalpataru Projects, Tata Projects and L&T Transmission still bid aggressively, so pricing discipline on future tenders matters as much as headline rupees. For the wider economy, transmission awards are a lagging indicator: steel and conductor demand rises when lines are strung, not when headlines hit the wire.",
+      "Why should I care?",
+      "If you work at a supplier of conductors, insulators or EPC subcontractors, ask your sales team which 765 kV packages are moving from bid to notice to proceed this quarter. State discoms and industrial buyers in power-short regions should track whether evacuation timelines slip when right-of-way disputes slow tower erection. Equity investors in KEC should read the fine print on execution margins and foreign-currency exposure on imported gear, not just the order number. Watch PGCIL’s next interstate corridor tenders, Ministry of Power comments on renewable integration, and quarterly revenue recognition at KEC as towers go live.",
+    ],
+  },
+  {
+    slug: "jsw-steel-domestic-ore-bottleneck-october-2026",
+    title: "JSW Steel wants idle iron ore leases mined faster as India targets 600 million tonnes of capacity",
+    summary:
+      "JSW Steel executives said on 25 October 2026 that India must unblock domestic iron ore supply and invest in coal washeries if steelmakers are to approach the country’s 600 million tonne capacity ambition, warning that allocated mines should not sit idle while imports fill the gap.",
+    category: "industry",
+    companyOrSector: "Steel / mining policy",
+    publishedAt: "2026-10-25T21:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jsw-steel-domestic-ore-bottleneck-october-2026"),
+    keyTakeaways: [
+      "Reporting on 25 October quoted JSW Steel management calling for faster development of domestic iron ore mines and washeries to support long-term capacity growth.",
+      "The comments tied raw material bottlenecks to India’s national steel policy goal of roughly 600 million tonnes of capacity by 2047.",
+      "Executives said resources should not remain non-functional after allocation, framing idle leases as a drag on import dependence for coking coal and ore.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, business press summarised remarks from JSW Steel Ltd leaders on India’s raw material map. Management said the country holds ample iron ore but needs to remove bottlenecks that keep ore out of furnaces, including mines that stay non-operational after blocks are allotted. They also pressed for investment in coal washeries so blast furnaces can use more domestic coking coal instead of leaning on imports. The comments landed the same weekend as separate coverage of JSW expecting higher second-half steel volumes to offset rising input costs, and as policymakers continue to market a draft national steel road map that targets about 604 million metric tonnes of capacity by 2047. JSW is among the largest private producers expanding coastal and inland plants, so its ore and coal views carry weight in state mining auctions.",
+      "What does this mean?",
+      "Steel margins are a tug of war between selling prices and the cost of ore, pellets and coking coal. When leases are awarded but production lags, mills truck ore longer distances or import blends, which shows up in working capital before it hits the spot price. Washeries matter because Indian coal often needs beneficiation to reach the quality blast furnaces expect; without them, even large coal reserves do not translate into furnace-ready fuel. JSW’s public push aligns with ministry talking points on securing high-grade ore and diversifying coking coal sources, but it also puts pressure on state governments to revoke or reallocate dormant blocks. For households, the link is indirect: cheaper domestic raw materials can slow the pass-through of global commodity spikes into rebars and appliances, though not overnight.",
+      "Why should I care?",
+      "If you buy steel for construction or manufacturing, track ore auction calendars in Odisha, Chhattisgarh and Karnataka as leading indicators of future input costs. Mining contractors and logistics firms should watch whether JSW and peers accelerate captive mine development versus merchant purchases. Policy readers should compare these remarks with the consultation draft on the 2047 steel plan and any Mines Ministry deadlines for production milestones on allocated blocks. Watch quarterly cost-of-goods commentary from JSW, SAIL and Tata Steel, coking coal import data, and state-level action against non-producing leaseholders.",
+    ],
+  },
+  {
+    slug: "jk-bank-government-staff-insurance-crore-october-2026",
+    title: "J&K Bank raised accident cover for permanent state employees to ₹1 crore",
+    summary:
+      "Jammu & Kashmir Bank signed a five-year pact with the Union Territory administration on 23 October 2026 to lift group personal accident insurance for permanent government staff from ₹25 lakh to ₹1 crore, alongside expanded disability benefits and preferential loan terms.",
+    category: "industry",
+    companyOrSector: "Public sector banking / employee benefits",
+    publishedAt: "2026-10-25T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jk-bank-government-staff-insurance-crore-october-2026"),
+    keyTakeaways: [
+      "Wire reports on 25 October said J&K Bank and the UT government agreed on 23 October to increase group personal accident cover for permanent employees from ₹25 lakh to ₹1 crore.",
+      "The five-year arrangement also includes stronger disability benefits, financial assistance for families, and preferential loan facilities for eligible staff.",
+      "J&K Bank acts as the banking partner for salary accounts in the region, so benefit upgrades can influence where employees route borrowings.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, media coverage described a fresh five-year agreement between Jammu & Kashmir Bank and the Union Territory administration signed on 23 October 2026. Under the pact, group personal accident insurance for permanent J&K government employees rises from ₹25 lakh to ₹1 crore. Officials framed the package as a broader welfare refresh: enhanced disability benefits, financial support for families, and preferential loan concessions tied to the bank’s government salary account franchise. J&K Bank is the dominant public-sector lender in the region, so benefit changes often arrive alongside stickier salary credit relationships. The move does not alter national pension rules, but it does reset the safety net for a large block of civil servants in a UT that relies heavily on central transfers and local administration payrolls.",
+      "What does this mean?",
+      "Accident cover is a silent part of compensation. When cover jumps fourfold, the premium cost is usually borne by the employer or shared through a banking package, while employees gain peace of mind for high-risk travel in hilly terrain. Banks compete for government salary mandates because they anchor low-cost deposits and cross-sell retail loans. Sweetening insurance and loan pricing is a way to defend share without cutting base lending rates for everyone. For families, the practical test is claims friction: higher sums insured only help if nomination records and documentation are current. Other state banks may face union demands to match richer accident pools as elections and pay commissions approach in different regions.",
+      "Why should I care?",
+      "If you are a J&K government employee, update nominee details at the branch or net-banking portal and read the disability definitions in the new policy circular. If you work in HR or unions elsewhere, use the ₹1 crore benchmark when negotiating group insurance in your own state. Retail bankers outside J&K should note how liability products bundle with salary ties, a pattern SBI and Punjab National Bank also use. Watch whether the UT publishes detailed premium sharing, any caps on preferential loan spreads, and competitor bids when the five-year pact comes up for renewal.",
+    ],
+  },
+  {
+    slug: "torrent-semaglutide-brazil-launch-october-2026",
+    title: "Torrent Pharma plans to sell semaglutide in Brazil within nine months",
+    summary:
+      "Torrent Pharmaceuticals said on 25 October 2026 it expects to launch semaglutide in Brazil over the next six to nine months as it chases growth in a market where its local revenues rose 38% in the September quarter after a large competitor entered the generic GLP-1 segment.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / emerging markets",
+    publishedAt: "2026-10-25T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("torrent-semaglutide-brazil-launch-october-2026"),
+    keyTakeaways: [
+      "Managing director Aman Mehta told reporters on 25 October that Torrent aims to introduce semaglutide in Brazil within six to nine months.",
+      "The drug is a GLP-1 therapy used for Type 2 diabetes and, in some formulations, obesity; Torrent has launched it in India and is now pushing overseas.",
+      "Mehta linked the Brazil plan to brisk growth in the country, including a 38% revenue jump in the September quarter as generic semaglutide competition accelerated.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, Torrent Pharmaceuticals Ltd management spoke to journalists about the company’s GLP-1 ambitions beyond India. Managing director Aman Mehta said Torrent plans to launch semaglutide in Brazil over the next six to nine months. Semaglutide belongs to the GLP-1 receptor agonist class used to treat Type 2 diabetes and, where regulators allow, obesity. Torrent has so far commercialised the molecule domestically and is now targeting Latin America’s largest healthcare market. Mehta noted that Torrent’s Brazil business grew about 38% year on year in the quarter ended September 2026, helped in part by a major local player’s entry into generic semaglutide, which expanded the category faster than standalone launches would have. The timeline is management guidance, not a regulatory approval order, but it signals how Indian pharma exporters are sequencing obesity-care molecules after domestic rollouts.",
+      "What does this mean?",
+      "GLP-1 drugs sit at the intersection of chronic disease and lifestyle medicine, so demand can scale quickly when prices fall and doctors gain comfort with prescribing. Brazil’s public and private payers watch budget impact closely, which is why generic entrants can turbocharge volumes even for followers like Torrent. Export launches require local filings, stability data and often partnership with distributors who understand hospital formularies. For India’s API ecosystem, sustained overseas semaglutide demand supports plant utilisation if patent cliffs and supply chains stay orderly. Competitors including Dr Reddy’s Laboratories have discussed their own semaglutide supply restarts, so the race is as much about reliable manufacturing as brand detail.",
+      "Why should I care?",
+      "If you invest in Indian pharma, treat Brazil timelines as option value on top of domestic obesity narratives, not guaranteed revenue next quarter. Healthcare administrators in emerging markets should model how fast GLP-1 generics compress spend per patient. Patients in India should not assume identical labels or prices abroad, but export success can keep local plants investing in quality. Watch Anvisa filing updates, Torrent’s Brazil revenue disclosures, and peer launches from Dr Reddy’s and Sun Pharma in the same therapy class.",
+    ],
+  },
+  {
     slug: "navi-mumbai-phased-flight-move-october-2026",
     title: "IndiGo and Air India agreed to shift some Mumbai flights to Navi Mumbai from February 2027",
     summary:
@@ -5654,6 +5750,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "kec-pgcil-transmission-order-october-2026": "policy",
+  "jsw-steel-domestic-ore-bottleneck-october-2026": "policy",
+  "jk-bank-government-staff-insurance-crore-october-2026": "policy",
+  "torrent-semaglutide-brazil-launch-october-2026": "companies",
   "navi-mumbai-phased-flight-move-october-2026": "policy",
   "hdfc-bank-ev-body-battery-loan-split-october-2026": "policy",
   "india-private-capex-pipeline-concentration-october-2026": "policy",
