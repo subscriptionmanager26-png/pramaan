@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "omcs-lpg-distributor-commission-october-2026",
+    title: "State oil firms agreed to recommend a higher LPG distributor commission",
+    summary:
+      "The All India HP Gas Distributors Association said on 25 October 2026 that Indian Oil, Bharat Petroleum and Hindustan Petroleum will jointly recommend an interim rise in LPG distributor commissions after a 21 October Mumbai meeting, while a fuller revision still awaits approval from the Ministry of Petroleum and Natural Gas.",
+    category: "industry",
+    companyOrSector: "LPG distribution / households",
+    publishedAt: "2026-10-25T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("omcs-lpg-distributor-commission-october-2026"),
+    keyTakeaways: [
+      "AIHPGDA said in an October 22 letter that marketing directors of the three state oil marketing companies agreed on 21 October to jointly recommend an interim commission increase within a set timeframe.",
+      "Distributors cited falling refill volumes, restrictions on new connections, unsold commercial stock and pressure to lift non-fuel products; OMCs said revision papers are already with the petroleum ministry.",
+      "The talks sit in the same month reporting pegged large per-cylinder under-recoveries on subsidised LPG, so both consumer prices and dealer economics are under strain.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, wire copy summarised a statement from the All India HP Gas Distributors Association saying that Indian Oil Corporation Ltd, Bharat Petroleum Corporation Ltd and Hindustan Petroleum Corporation Ltd have agreed to jointly recommend an interim increase in commissions paid to LPG distributors. The association’s October 22 communication said the assurance followed a bipartite meeting on 21 October at Indian Oil’s Mumbai headquarters with marketing directors and distributor representatives. Management told distributors that formal revision proposals are already with the Ministry of Petroleum and Natural Gas, and that the three companies will recommend a time-bound interim hike while ministry approval remains pending. Distributors raised complaints about declining refill sales in some markets, caps on new domestic connections, unsold commercial cylinders hurting working capital, and instructions to push non-fuel products. Officials also discussed standard operating procedures, digital audit trails and grievance channels.",
+      "What does this mean?",
+      "LPG reaches most Indian kitchens through a network of private distributors who earn a fixed commission per cylinder delivery, not through retail margins on the subsidised cylinder price itself. When refill counts slip or operating costs rise, distributors feel the squeeze long before headline cylinder rates change. An interim commission recommendation is a way to stabilise that channel without reopening the full consumer subsidy debate in one step. It does not by itself raise household cylinder bills, but it signals that state marketers are trying to keep dealers solvent while they still carry large under-recovery on LPG sales at import-parity costs. If the ministry signs off, distributors get more rupees per delivery; if talks drag, field relations can worsen and service quality in remote areas suffers.",
+      "Why should I care?",
+      "If you run an LPG agency or depend on timely cylinder drops, watch for a petroleum ministry circular on commission tables and any change to connection rules you complained about in recent months. Households should still budget for cylinder prices separately from dealer economics, but a healthier distributor network reduces the risk of delayed refills during festive demand. Investors in oil marketing stocks should read quarterly marketing margin commentary alongside distributor payouts, because both sit on the same regulated chain. Track MoPNG notifications, distributor association follow-up on meeting minutes, and whether refill restrictions ease in states where sales had slowed.",
+    ],
+  },
+  {
+    slug: "india-chinese-phone-share-memory-chips-october-2026",
+    title: "Chinese phone brands lost share as memory chips got expensive",
+    summary:
+      "Reporting on 25 October 2026 said Chinese smartphone makers’ combined India share fell to about 67–68% in the July–September quarter, an eight-year low, as record memory prices pushed Vivo, Oppo and Xiaomi to trim budget models while domestic names such as Lava picked up price-sensitive demand before Diwali.",
+    category: "industry",
+    companyOrSector: "Smartphones / consumer electronics",
+    publishedAt: "2026-10-25T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-chinese-phone-share-memory-chips-october-2026"),
+    keyTakeaways: [
+      "Omdia estimated Chinese brands at about 68% of India shipments in Q3 2026, down from 71% in the prior quarter and 75% a year earlier, with Counterpoint putting the share near 67%, the lowest since early 2019.",
+      "Analysts said Vivo, Oppo and Xiaomi cut specs on entry phones to manage memory costs, opening shelf space for Indian players including Lava and Ai+ in the budget band ahead of Diwali.",
+      "The share shift lands in the same quarter Counterpoint flagged a roughly 20% drop in overall smartphone volumes, so the market is both smaller and less dominated by Chinese labels.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, business media cited technology researchers saying Chinese smartphone brands lost ground in India during the July–September quarter as memory chip prices climbed. Omdia principal analyst Sanyam Chaurasia told reporters that Chinese original equipment manufacturers held about 68% of shipments in the period, down from 71% in the previous quarter and 75% a year ago, and the lowest reading in more than eight years by that estimate. Counterpoint Research put the share near 67%, also the weakest since the first quarter of 2019. Chaurasia said brands such as Vivo, Oppo and Xiaomi have been trimming specifications on budget models for several quarters to offset component inflation, especially on memory, which hits the entry tier that historically drove their volumes. That created room for domestic competitors including Lava and Ai+ to chase price-sensitive buyers ahead of Diwali even as overall market volumes were weak.",
+      "What does this mean?",
+      "Smartphone share is not just a branding contest; it follows bill-of-materials math. When DRAM and NAND prices spike, the cheapest phones absorb the pain first because there is little margin left to hide higher component costs. Chinese vendors responded by shipping fewer fully loaded budget units, which can shrink their share even if premium lines hold up. Indian brands that assemble locally and focus on sub-₹10,000 shelves can gain trials when rivals pause launches or downgrade RAM and storage quietly. The shift does not reverse the broader shipment slump reported earlier in the week, but it shows demand still exists at the right price point when supply adjusts. Retailers may reallocate facings and exchange schemes toward whichever brand can stock affordable models with acceptable specs.",
+      "Why should I care?",
+      "If you are shopping for a festive phone upgrade on a tight budget, compare RAM and storage on similarly priced boxes; spec cuts can matter more than the logo this year. Offline retailers should watch inventory from both Chinese and local brands because share swings can change distributor credit terms quickly. Investors already digesting weak Q3 volume data should separate unit declines from mix shifts toward non-Chinese labels. Watch October and November sell-through updates from Counterpoint and Omdia, festive pricing on Amazon and Flipkart, and whether Chinese brands reintroduce fuller budget specs if memory prices ease.",
+    ],
+  },
+  {
     slug: "eps-95-bombay-hc-higher-pension-october-2026",
     title: "Bombay High Court told EPFO to accept higher pension forms from private trust employees",
     summary:
@@ -5510,6 +5558,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "omcs-lpg-distributor-commission-october-2026": "policy",
+  "india-chinese-phone-share-memory-chips-october-2026": "markets",
   "eps-95-bombay-hc-higher-pension-october-2026": "policy",
   "cbi-canara-ilfs-energy-fraud-october-2026": "policy",
   "maruti-victoris-150k-sales-october-2026": "markets",

@@ -936,6 +936,22 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Wind turbine on ridge |
 | Metaphor left | Stacked MW capacity blocks |
 
+### `omcs-lpg-distributor-commission-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Distributor payout per cylinder delivery rises |
+| Subject right | LPG cylinder stack (generic) |
+| Metaphor left | Stepped commission bars + delivery route |
+
+### `india-chinese-phone-share-memory-chips-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Memory inflation reshapes budget phone share |
+| Subject right | Smartphone silhouettes (no logos) |
+| Metaphor left | Shrinking import share wedge + chip motif |
+
 ### `patanjali-mp-ghee-recall-october-2026`
 
 | Field | Value |
