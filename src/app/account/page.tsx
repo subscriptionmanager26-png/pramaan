@@ -34,7 +34,7 @@ export default function AccountPage() {
         <button
           type="button"
           className="btn-primary mt-8"
-          onClick={() => signInWithGoogleOnPramaan().catch(() => undefined)}
+          onClick={() => signInWithGoogleOnPramaan()}
         >
           Continue with Google
         </button>

@@ -1,6 +1,7 @@
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { createBrowserClient } from "@supabase/ssr";
+import type { SupabaseClient } from "@supabase/supabase-js";
 
-import { createSharedAuthStorage } from "./auth-storage";
+import { pocketedgeAuthCookieOptions } from "@/lib/pocketedge/auth-cookies";
 
 const url = process.env.NEXT_PUBLIC_POCKETEDGE_SUPABASE_URL;
 const anon = process.env.NEXT_PUBLIC_POCKETEDGE_SUPABASE_ANON_KEY;
@@ -14,14 +15,9 @@ let client: SupabaseClient | null = null;
 export function getPocketedgeSupabase() {
   if (!url || !anon) throw new Error("Pocketedge auth is not configured.");
   if (!client) {
-    client = createClient(url, anon, {
-      auth: {
-        storage: createSharedAuthStorage(),
-        persistSession: true,
-        autoRefreshToken: true,
-        detectSessionInUrl: true,
-        flowType: "pkce",
-      },
+    const host = typeof window !== "undefined" ? window.location.hostname : undefined;
+    client = createBrowserClient(url, anon, {
+      cookieOptions: pocketedgeAuthCookieOptions(host),
     });
   }
   return client;

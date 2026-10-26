@@ -145,6 +145,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeThreadId = searchParams.get("t") || "main";
+  const authError = searchParams.get("auth_error");
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
   const [serverThreads, setServerThreads] = useState<AgentThreadSummary[]>([]);
@@ -300,6 +301,11 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     return (
       <div className="grid-paper flex flex-1 items-center justify-center p-6">
         <div className="max-w-md rounded-2xl border border-line bg-white px-6 py-10 text-center shadow-[8px_8px_0_rgba(11,11,11,0.08)]">
+          {authError ? (
+            <p className="mb-4 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-left text-[13px] text-rose-900">
+              {authError}
+            </p>
+          ) : null}
           <p className="text-section text-2xl">
             Your <span className="mark">private</span> market agent
           </p>

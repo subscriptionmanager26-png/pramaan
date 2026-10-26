@@ -1,7 +1,8 @@
-/** Shared Supabase session storage across *.pocketedge.in (matches pocketedge.in app). */
+/** Legacy shared Supabase session mirror across *.pocketedge.in (main pocketedge app). */
+
+import { POST_AUTH_REDIRECT_COOKIE } from "@/lib/pocketedge/auth-constants";
 
 const COOKIE_PREFIX = "pe_sb_";
-const POST_AUTH_REDIRECT_COOKIE = "pe_post_auth_redirect";
 const POST_AUTH_REDIRECT_MAX_AGE_SEC = 30 * 60;
 const MAX_COOKIE_VALUE_CHARS = 3200;
 

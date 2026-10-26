@@ -68,7 +68,11 @@ export function SiteAccountMenu({ onNavigate }: { onNavigate?: () => void }) {
         type="button"
         className="btn-ghost text-[13px]"
         onClick={() => {
-          signInWithGoogleOnPramaan().catch(() => setError("Could not start Google sign-in."));
+          try {
+            signInWithGoogleOnPramaan();
+          } catch {
+            setError("Could not start Google sign-in.");
+          }
         }}
       >
         Sign in
