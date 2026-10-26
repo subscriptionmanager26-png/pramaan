@@ -4,9 +4,10 @@
  */
 
 import { buildMetricsIndex } from './metrics';
+import { screenerDataUrl } from '../screener-data-url';
 
-const SNAPSHOT_URL = '/data/screener/screener-snapshot.json';
-const META_URL = '/data/screener/screener-snapshot-meta.json';
+const SNAPSHOT_URL = screenerDataUrl('/screener-snapshot.json');
+const META_URL = screenerDataUrl('/screener-snapshot-meta.json');
 
 const DB_NAME = 'pocketedge-mf-screener';
 const DB_VERSION = 1;
@@ -18,6 +19,10 @@ const META_CHECK_INTERVAL_MS = 24 * 60 * 60 * 1000;
 
 function versionKey(meta) {
   return `${meta.generatedAt}|${meta.fetched}|${meta.fundCount}`;
+}
+
+function snapshotHasFunds(snapshot) {
+  return snapshot != null && Object.keys(snapshot.funds ?? {}).length > 0;
 }
 
 function metaFromSnapshot(snapshot) {
@@ -184,7 +189,7 @@ async function refreshScreenerSnapshotIfRemoteChanged(cached) {
 
 export async function loadScreenerSnapshot() {
   const cached = await readCachedSnapshot();
-  if (cached && Object.keys(cached.funds ?? {}).length > 0) {
+  if (cached && snapshotHasFunds(cached)) {
     ensureMetaCheckSeededFromCache(cached);
     if (shouldCheckRemoteMeta()) {
       void refreshScreenerSnapshotIfRemoteChanged(cached);
@@ -210,6 +215,9 @@ export async function loadScreenerSnapshot() {
   }
 
   const remote = await fetchRemoteSnapshot();
+  if (!snapshotHasFunds(remote)) {
+    throw new Error('Screener metrics snapshot is empty — try again later.');
+  }
   await writeCachedSnapshot(remote);
   return remote;
 }

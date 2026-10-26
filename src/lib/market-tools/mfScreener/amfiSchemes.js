@@ -3,7 +3,9 @@
 let cache = null;
 let loadPromise = null;
 
-const LIST_URL = '/data/screener/amfi-equity-direct-growth.json';
+import { screenerDataUrl } from '../screener-data-url';
+
+const LIST_URL = screenerDataUrl('/amfi-equity-direct-growth.json');
 
 export async function loadAmfiEquityDirectGrowth() {
   if (cache) return cache;
