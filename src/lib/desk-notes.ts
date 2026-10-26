@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-power-23gw-buildout-october-2026",
+    title: "Adani Power is targeting 23.7 gigawatts of capacity as second-quarter earnings accelerated",
+    summary:
+      "Adani Power Ltd reported stronger September-quarter continuing revenue and earnings on 25 October 2026 while outlining a 23.7 gigawatt expansion pipeline backed by long-term power purchase agreements, signalling that private base-load generators still see room to add coal and thermal capacity in India.",
+    category: "industry",
+    companyOrSector: "Power generation / utilities",
+    publishedAt: "2026-10-26T00:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-power-23gw-buildout-october-2026"),
+    keyTakeaways: [
+      "Exchange summaries on 25 October 2026 said Adani Power’s continuing revenue rose about 28.5% year on year in the September quarter, with EBITDA up roughly 18.5%.",
+      "Reported profit after tax more than doubled year on year, including prior-period income items flagged in the AI-generated filing digest.",
+      "Management highlighted a 23.7 GW build-out pipeline and higher long-term PPA coverage as the basis for base-load growth.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, Adani Power Ltd published results for the quarter ended 30 September 2026. Continuing revenue from operations rose about 28.5% year on year, while EBITDA climbed roughly 18.5% on the same basis. Reported profit after tax more than doubled, aided in part by prior-period income that showed up in the statutory numbers. Alongside the print, the company reiterated an expansion pipeline totalling about 23.7 gigawatts and pointed to a larger share of output contracted under long-term power purchase agreements. The update lands as India debates how much new thermal capacity it needs to backstop renewable intermittency and as industrial states chase reliable round-the-clock power for factories.",
+      "What does this mean?",
+      "Base-load generators earn when plant availability stays high and fuel costs do not spike faster than tariff escalations. A rising PPA book reduces merchant exposure, which matters when spot power prices swing with heat waves or monsoon hydro shortfalls. A 23.7 GW pipeline is not overnight capacity: each gigawatt needs land, water linkages, coal logistics and lender comfort on group leverage. Still, the order of magnitude tells grid planners that one of India’s largest private thermal players intends to keep building rather than harvest cash from legacy units alone. For discoms, more contracted thermal can stabilise tariffs if renewable curtailment or storage delays bite, but it also locks in emissions and fuel risk for decades unless plants co-fire biomass or carbon capture arrives at scale.",
+      "Why should I care?",
+      "If you run a factory in Gujarat, Maharashtra or Rajasthan, ask your discom how much of your tariff depends on new private thermal versus legacy state units. Investors should separate headline PAT growth from recurring EBITDA when prior-period items inflate the ratio. EPC firms and equipment suppliers should map which 23.7 GW tranches have environmental clearance and financing term sheets in place. Watch Ministry of Power comments on must-run status for renewables, coal linkage auctions, and whether peers such as Tata Power or JSW Energy announce matching GW targets in the same quarter.",
+    ],
+  },
+  {
+    slug: "lumax-auto-q2-order-book-october-2026",
+    title: "Lumax Auto Technologies grew sales 35% while holding margins near 15%",
+    summary:
+      "Lumax Auto Technologies Ltd said on 25 October 2026 that September-quarter revenue rose about 35% year on year and profit before minority interest jumped roughly 50%, with EBITDA margin steady near 14.7% and an order book of about ₹1,879 crore supporting bets on clean mobility and electronics content.",
+    category: "industry",
+    companyOrSector: "Auto components",
+    publishedAt: "2026-10-26T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lumax-auto-q2-order-book-october-2026"),
+    keyTakeaways: [
+      "Lumax Auto Technologies reported Q2 FY27 revenue growth of about 35% year on year, with profit before minority interest up roughly 50%.",
+      "EBITDA margin held near 14.7%, suggesting volume growth did not come only from discounting.",
+      "Management cited an order book of about ₹1,879 crore and longer-term targets in clean mobility, electronics and higher-value systems.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, Lumax Auto Technologies Ltd released results for the quarter ended 30 September 2026. Revenue grew about 35% year on year, while profit before minority interest rose roughly 50%. EBITDA margin stayed near 14.7%, a sign that input cost pressure did not wipe out pricing on newer programmes. The company pointed to an order book of about ₹1,879 crore and strategic pushes into clean mobility, electronics and higher-value lighting and chassis systems. The print follows festival-season vehicle dispatches that have been mixed by segment but still show consumers upgrading SUVs and premium two-wheelers when finance is available.",
+      "What does this mean?",
+      "Component makers live on programme wins: when OEMs launch new platforms, vendors with tooled capacity book revenue years ahead. A near-₹1,900 crore backlog gives Lumax visibility on capex and hiring even if one OEM slows a model refresh. Stable teens margins in a quarter of metal inflation suggest pass-through clauses and mix shift toward electronic content are working better than on commodity stampings alone. Clean mobility parts often carry engineering fees that fatten margins when volumes are still ramping. The risk is customer concentration: a delay at one large carmaker shows up quickly in the same order book that looks healthy today.",
+      "Why should I care?",
+      "If you supply aluminium castings, wiring harnesses or LED modules, compare your own margin trend with Lumax’s 14.7% benchmark when bidding festive-season call-offs. Fleet buyers and ride-hail operators should note which lighting and chassis suppliers are scaling electronics, because warranty costs track component complexity. Investors rotating from OEMs to ancillaries can use order-book disclosures as a lead indicator before revenue catches up. Watch Maruti, Mahindra and Tata Motors production schedules, Lumax’s next investor presentation on customer mix, and peer results from Motherson and Samvardhana Motherson in the same quarter.",
+    ],
+  },
+  {
+    slug: "railtel-q2-cash-flow-october-2026",
+    title: "RailTel’s revenue rose in the September quarter but operating cash flow turned negative",
+    summary:
+      "RailTel Corporation of India Ltd reported higher September-quarter revenue on 25 October 2026 while first-half profit after tax fell and operating cash flow after exceptional items turned negative at about ₹42.29 crore, even as the state-owned telecom infrastructure firm declared a ₹1 per share interim dividend.",
+    category: "industry",
+    companyOrSector: "Telecom infrastructure / railways",
+    publishedAt: "2026-10-26T00:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("railtel-q2-cash-flow-october-2026"),
+    keyTakeaways: [
+      "RailTel’s Q2 revenue from operations was about ₹1,146 crore, with profit after tax near ₹68.6 crore for the quarter.",
+      "First-half profit after tax was about ₹134.3 crore, lower than the comparable half-year trend implied in exchange summaries.",
+      "H1 operating cash flow after exceptional items was negative about ₹42.3 crore despite a ₹1 per share interim dividend declaration.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026, RailTel Corporation of India Ltd published results for the quarter ended 30 September 2026. Revenue from operations was about ₹1,146 crore, with profit after tax near ₹68.6 crore in the quarter. For the first half of the fiscal year, profit after tax stood near ₹134.3 crore. Exchange digests also flagged that operating cash flow after exceptional items turned negative at about ₹42.29 crore in the half year. Directors still declared a ₹1 per share interim dividend. RailTel lays fibre along railway corridors and sells bandwidth to telcos, enterprises and government agencies, so its accounts blend project milestones, maintenance contracts and working-capital swings when clients pay slowly.",
+      "What does this mean?",
+      "Profit on the income statement can rise when new projects are booked, but cash only arrives when milestones are certified and invoices are collected. Negative operating cash flow with a dividend in place usually means either advance spending on capex, receivables stretching out, or one-off exceptional items draining the half-year figure. For a public-sector telecom infra company, slow payments from government departments are a recurring theme. Investors should ask whether the cash dip is timing around BharatNet or railway digitisation rollouts or a deeper collections problem. Dividends reward shareholders but do not replace the need to fund fibre builds and data-centre edge nodes without leaning on debt.",
+      "Why should I care?",
+      "If you bid on RailTel tenders as a subcontractor, watch whether payment cycles lengthen after strong revenue quarters. Telcos leasing dark fibre should read cash-flow footnotes before assuming capacity expansions will be funded smoothly. Retail investors drawn to PSU dividends need to reconcile payout announcements with operating cash generation. Watch the next investor call on receivable days, any ministry-backed settlement schemes, and whether the second half brings positive operating cash as project billings catch up.",
+    ],
+  },
+  {
     slug: "kec-pgcil-transmission-order-october-2026",
     title: "KEC International won a ₹2,872 crore Power Grid order for 765 kV lines",
     summary:
@@ -5750,6 +5822,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-power-23gw-buildout-october-2026": "policy",
+  "lumax-auto-q2-order-book-october-2026": "companies",
+  "railtel-q2-cash-flow-october-2026": "companies",
   "kec-pgcil-transmission-order-october-2026": "policy",
   "jsw-steel-domestic-ore-bottleneck-october-2026": "policy",
   "jk-bank-government-staff-insurance-crore-october-2026": "policy",
