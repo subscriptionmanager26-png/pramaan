@@ -1000,6 +1000,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Switchgear / cable coil |
 | Metaphor left | Festival glow with upward demand curve |
 
+### `tata-consumer-q2-packaged-foods-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Packaged foods grow while tea volumes stall |
+| Subject right | Branded packaged foods shelf |
+| Metaphor left | Rising bars vs flat tea cup line |
+
+### `ather-energy-maiden-profit-q2-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | EV scooter maker reaches quarterly profit |
+| Subject right | Electric scooter silhouette |
+| Metaphor left | Profit curve crossing zero |
+
+### `adani-power-imported-coal-tariff-lag-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Coal cost spikes before tariff pass-through |
+| Subject right | Coal stack / plant silhouette |
+| Metaphor left | Delayed rupee recovery pipe |
+
+### `tata-communications-ai-fibre-capex-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | AI workloads need owned long-haul fibre |
+| Subject right | Fibre arcs / nodes |
+| Metaphor left | Data-centre blocks |
+
+### `sbi-setty-consumption-credit-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Rate hikes cool discretionary credit |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Cooling EMI bars on shopping icons |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

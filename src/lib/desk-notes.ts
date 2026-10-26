@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tata-consumer-q2-packaged-foods-october-2026",
+    title: "Tata Consumer grew profit on packaged foods while tea volumes stayed flat",
+    summary:
+      "Tata Consumer Products Ltd beat analyst estimates on 26 October 2026 with September-quarter consolidated net profit of about ₹469 crore, up 16% year on year, as branded packaged foods and beverages scaled faster even as domestic tea volumes remained subdued amid heat and input-cost pressure.",
+    category: "industry",
+    companyOrSector: "FMCG / packaged foods",
+    publishedAt: "2026-10-26T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-consumer-q2-packaged-foods-october-2026"),
+    keyTakeaways: [
+      "Consolidated net profit rose to about ₹4.69 billion for the quarter ended 30 September 2026, compared with about ₹4.04 billion a year earlier.",
+      "Company filings cited roughly 14% revenue growth and stronger growth in packaged foods, ready-to-drink and Sampann-style staples while tea volumes were flat.",
+      "Management linked India branded business performance to input inflation and a heatwave that also softened some international tea demand.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Tata Consumer Products Ltd reported results for the quarter ended 30 September 2026. Consolidated net profit came in at about ₹469 crore, ahead of the profit view many brokers had pencilled in, on revenue that rose about 14% year on year. Exchange summaries attributed the beat to packaged foods and beverages, including brands such as Tata Salt and newer growth lines, while domestic tea volumes showed little growth. Pre-exceptional profit rose faster than the net line, and management flagged heat-related softness in parts of the overseas tea business alongside commodity pressure in India. The print lands the same Monday as other consumer names, including Havells, pointed to firm festive demand in home-related categories.",
+      "What does this mean?",
+      "Indian FMCG demand is splitting by category rather than moving in one block. When shoppers still buy branded staples, snacks and drinks but pause on bulk tea refills, it usually signals wallet pressure on daily brew habits while small-ticket pantry upgrades continue. Tata Consumer’s mix shift toward faster-growing packaged lines helps margins when tea, a legacy cash cow, only treads water. Input inflation on cocoa, edible oil and packaging can still bite, so volume growth in growth businesses matters more than a single quarter’s profit surprise. Rivals such as Nestlé and Britannia have reported similar tension between volume and commodity costs this earnings season.",
+      "Why should I care?",
+      "If you manage a household budget, compare unit prices on tea versus packaged staples you buy every month; flat tea volumes often show up as fewer large pouch purchases rather than empty shelves. Retailers should plan shelf space toward ready-to-drink and packaged foods ahead of Diwali even when tea promotions look flat. Investors weighing HUL, ITC and Tata Consumer should read volume commentary by category, not just headline profit growth. Watch November price increases on salt and beverages, monsoon tea crop auctions, and whether competitors take selective list-price hikes into the festive week.",
+    ],
+  },
+  {
+    slug: "ather-energy-maiden-profit-q2-october-2026",
+    title: "Ather Energy reported its first quarterly profit as scooter sales rose 63%",
+    summary:
+      "Electric scooter maker Ather Energy Ltd posted a maiden quarterly net profit of about ₹15 crore for the period ended 30 September 2026, against a ₹154 crore loss a year earlier, as revenue climbed roughly 63% and shares jumped about 10% on 26 October 2026.",
+    category: "industry",
+    companyOrSector: "Electric two-wheelers",
+    publishedAt: "2026-10-26T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ather-energy-maiden-profit-q2-october-2026"),
+    keyTakeaways: [
+      "Second-quarter net profit was about ₹15 million on revenue of roughly ₹14.64 billion, compared with a ₹1.54 billion loss in the year-ago quarter.",
+      "Revenue rose about 62.9% year on year, helped by higher Rizta and 450-series deliveries.",
+      "Shares rose about 10% in Monday trade after the first profitable quarter since listing.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Ather Energy Ltd told exchanges it earned a small consolidated net profit in the September quarter, its first since becoming a listed company. Net profit was about ₹1.5 crore on revenue of roughly ₹1,464 crore, a sharp swing from the ₹154 crore loss reported a year earlier when the firm was still scaling factories and charging infrastructure. Revenue growth near 63% reflects higher scooter deliveries, including the Rizta family model launched to widen the addressable market below premium 450 pricing. The stock rose about 10% as investors treated the print as proof that unit economics can work at higher volumes, not merely as a subsidy-driven race for market share.",
+      "What does this mean?",
+      "Electric two-wheeler makers burn cash when fixed costs run ahead of volumes. Crossing into quarterly profit, even on a modest absolute number, suggests Ather is covering manufacturing, sales and service overhead at current price points and mix. The result fits Navratri retail surveys that showed electric two-wheelers gaining share in festive vehicle sales, though the category remains competitive against Ola, TVS and legacy petrol scooters. Profitability can reverse quickly if battery metal prices spike or if rivals discount ahead of the next emission norm changes. Still, a listed EV pure-play showing black ink gives boards at larger auto groups another data point when they allocate capital between hybrids and battery scooters.",
+      "Why should I care?",
+      "If you are comparing scooters this festive season, test ride range and service centre density, not just ex-showroom price after state subsidies. Fleet and delivery operators should rerun total cost of ownership spreadsheets now that Ather claims a profitable quarter at corporate level. Investors in auto ancillaries and battery suppliers can treat the print as one corroborating signal alongside TVS and Bajaj updates. Watch third-quarter delivery numbers, FAME or state incentive changes, and whether Ather’s insurance distribution licence adds recurring fee income beyond hardware margins.",
+    ],
+  },
+  {
+    slug: "adani-power-imported-coal-tariff-lag-october-2026",
+    title: "Adani Power’s imported coal bill rose 50% but tariff relief may take six months",
+    summary:
+      "Press reports on 26 October 2026 said Adani Power Ltd faced landed imported-coal costs about 50% higher year on year in the September quarter, while domestic tariff indexation may take more than six months to recover the spike even as Bangladesh supply contracts adjust faster.",
+    category: "industry",
+    companyOrSector: "Power generation / fuel costs",
+    publishedAt: "2026-10-26T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-power-imported-coal-tariff-lag-october-2026"),
+    keyTakeaways: [
+      "Imported-coal costs for Adani Power rose about 50% year on year in Q2 FY27, according to wire copy on 26 October 2026.",
+      "Domestic regulated tariffs may not fully reflect the fuel jump for more than six months under the company’s indexation mechanism.",
+      "Export contracts to Bangladesh reportedly adjust tariffs more quickly to international fuel prices.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, business press reported that Adani Power Ltd’s landed cost of imported coal surged about 50% year on year in the quarter ended 30 September 2026. The same articles contrasted how long it takes to pass those costs into Indian regulated tariffs versus overseas contracts. Under domestic power purchase agreements, fuel cost increases often flow through a defined indexation formula, but the reporting said shareholders may wait more than six months before customer tariffs fully catch up. Supply to Bangladesh, where tariffs are linked more directly to international coal prices, can adjust faster. The story follows a strong earnings headline on continuing revenue growth and a 23.7 gigawatt expansion pipeline disclosed a day earlier.",
+      "What does this mean?",
+      "Thermal generators make money when output is high and when regulators or contract counterparties let fuel surcharges move with global coal. A 50% jump in import costs squeezes cash flow in the gap before tariffs reset, especially for plants that rely on seaborne coal rather than domestic linkages. Six-month lags push working-capital strain to promoters and lenders even when plant load factors look healthy. Faster recovery on export-linked contracts shows why some Indian groups chase cross-border offtake when domestic discoms dispute pass-through. For industrial buyers, delayed tariff true-ups can mean stable bills for a few quarters followed by a step-up once regulators approve compensatory charges.",
+      "Why should I care?",
+      "If you run a factory on private PPA or open-access power, read force-majeure and fuel escalation clauses now rather than after the next regulatory order. Investors who bought Adani Power on growth headlines should separate EBITDA from fuel timing effects in the next two quarters. Policymakers debating new thermal capacity should weigh import exposure against domestic coal allocation reforms. Watch Central Electricity Regulatory Commission pass-through orders, Indonesia coal benchmarks, and whether peers such as Tata Power disclose similar lag lengths in upcoming calls.",
+    ],
+  },
+  {
+    slug: "tata-communications-ai-fibre-capex-october-2026",
+    title: "Tata Communications will spend about $450 million on AI-ready fibre across India",
+    summary:
+      "Tata Communications Ltd said on 26 October 2026 it will invest roughly $400–450 million to lay about 10,000 kilometres of long-haul fibre linking India’s AI data-centre corridors, pitching the network as low-latency infrastructure for cloud and enterprise workloads.",
+    category: "industry",
+    companyOrSector: "Telecom infrastructure / data centres",
+    publishedAt: "2026-10-26T16:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-communications-ai-fibre-capex-october-2026"),
+    keyTakeaways: [
+      "The company plans close to $450 million of capital spending on a high-speed fibre fabric described as an AI superhighway.",
+      "About 10,000 km of new long-haul fibre will connect major cloud and data-centre hubs.",
+      "Tata Communications already sells enterprise connectivity and cybersecurity; the project extends physical layer capacity for AI traffic.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Tata Communications Ltd announced it will invest about $400–450 million to build long-haul fibre aimed at AI-era traffic between India’s data-centre corridors. Management described the project as creating one of the country’s larger AI-ready networks, with roughly 10,000 kilometres of new cable linking cloud regions and enterprise campuses that need low latency and high bandwidth. The Tata group company already earns fees from managed connectivity, cloud access and security services; the capex adds owned fibre rather than relying only on leased routes. The pledge lands as hyperscalers and domestic cloud firms expand GPU capacity in Mumbai, Hyderabad and other hubs, and as enterprises experiment with generative AI workloads that stress last-mile and backbone links.",
+      "What does this mean?",
+      "AI training and inference clusters need predictable fibre paths the way factories need reliable power. Owning long-haul routes lets a carrier price dedicated wavelengths and protect margins when internet transit costs swing. Ten thousand kilometres is a multi-year build that must secure right-of-way, duct space and power for repeaters, so revenue will lag capex. Still, the announcement signals that Indian telecom infrastructure is shifting from consumer mobile data toward enterprise and cloud backhaul, where contracts are stickier. Rivals such as Reliance Jio, Bharti Airtel and state-owned BharatNet extensions are racing to offer similar paths, which could cap pricing power if overbuild occurs.",
+      "Why should I care?",
+      "If you run a startup or IT department buying cloud GPU hours, ask providers which fibre paths connect your Mumbai or Hyderabad regions and what redundancy exists. Real estate investors in data-centre corridors should treat new long-haul maps as a tenant draw. Policy watchers can compare this private spend with BharatNet and the government’s data-centre incentives. Watch quarterly capex guidance from Tata Communications, anchor tenant signings, and whether AI cloud providers publish latency benchmarks on the new routes.",
+    ],
+  },
+  {
+    slug: "sbi-setty-consumption-credit-october-2026",
+    title: "SBI’s chairman expects another rate hike and softer consumption loans",
+    summary:
+      "State Bank of India chairman C S Setty said on 26 October 2026 that he expects the Reserve Bank of India to raise rates another 50 basis points in December and that higher borrowing costs may cool demand for consumption and discretionary credit without broadly damaging retail asset quality.",
+    category: "industry",
+    companyOrSector: "Banking / household credit",
+    publishedAt: "2026-10-26T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-setty-consumption-credit-october-2026"),
+    keyTakeaways: [
+      "Setty, who also heads the Indian Banks’ Association, told reporters on 26 October 2026 he expects a 50 basis point RBI hike in December and a pause by February 2027.",
+      "He said a shift toward rate increases may trim consumption-linked credit demand while system-wide retail asset quality should hold up.",
+      "Comments came the same day SBI received a $150 million IFC social loan aimed at rural women borrowers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, State Bank of India chairman C S Setty told reporters that the Reserve Bank of India will likely raise policy rates by another 50 basis points at its December 2026 review, with a pause possible by February 2027. Setty, who also chairs the Indian Banks’ Association, said the industry is moving into a rate-hike cycle that may slow demand for consumption and discretionary loans even as productive corporate credit stays firm. He argued retail asset quality at the system level should not deteriorate sharply from the shift alone. The remarks landed on a day when SBI also announced a $150 million social loan from the International Finance Corporation to support rural women borrowers, underscoring how public-sector banks are juggling social lending goals with tighter monetary conditions.",
+      "What does this mean?",
+      "When India’s largest lender flags softer consumption credit, it is effectively describing how RBI tightening reaches household EMIs after a lag. Personal loans, credit cards and small-ticket vehicle finance are the first segments where applicants face higher equated monthly instalments or stricter underwriting, while secured home loans to salaried borrowers often keep growing until unemployment spikes. A 50 basis point expectation from SBI’s chair carries weight because the bank sets marginal pricing for millions of retail customers and because IBA commentary shapes how smaller lenders plan deposit and loan rates. Setty’s split message, slower discretionary credit but stable retail quality, implies banks expect problem loans in unsecured pockets rather than a broad NPA wave.",
+      "Why should I care?",
+      "If you plan a festive purchase on EMI, compare offers now and ask whether your quote is tied to an external benchmark that will reset after December. Credit card users should watch for limit cuts or higher annual fees if issuers slow risk appetite. Depositors may see modestly better term rates, but the chairman’s focus was on borrowers, not savers. Watch the December RBI decision, November CPI print, and unsecured loan growth data from the RBI’s fortnightly statistical tables.",
+    ],
+  },
+  {
     slug: "au-sfb-margin-pressure-q2-october-2026",
     title: "AU Small Finance Bank grew profit 53% but warned margins are under pressure",
     summary:
@@ -5942,6 +6062,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tata-consumer-q2-packaged-foods-october-2026": "markets",
+  "ather-energy-maiden-profit-q2-october-2026": "markets",
+  "adani-power-imported-coal-tariff-lag-october-2026": "policy",
+  "tata-communications-ai-fibre-capex-october-2026": "companies",
+  "sbi-setty-consumption-credit-october-2026": "policy",
   "au-sfb-margin-pressure-q2-october-2026": "markets",
   "panasonic-ac-sales-target-fy28-october-2026": "markets",
   "mib-tv-rpd-viewership-october-2026": "policy",
