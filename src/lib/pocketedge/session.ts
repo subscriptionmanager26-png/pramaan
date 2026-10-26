@@ -26,10 +26,17 @@ export function accessTokenFromRequest(request: Request): string | undefined {
   return tokensFromSessionJson(raw)?.accessToken;
 }
 
+const USER_CACHE_MS = 60_000;
+const userByToken = new Map<string, { user: PocketedgeUser; exp: number }>();
+
 /** Validates Supabase access token from Authorization header or shared pocketedge.in session cookie. */
 export async function pocketedgeUserFromRequest(request: Request): Promise<PocketedgeUser | undefined> {
   const token = accessTokenFromRequest(request);
   if (!token) return undefined;
+  const cacheKey = token.slice(-48);
+  const hit = userByToken.get(cacheKey);
+  if (hit && hit.exp > Date.now()) return hit.user;
+
   const env = authEnv();
   if (!env) return undefined;
   const supabase = createClient(env.url, env.key, { auth: { persistSession: false, autoRefreshToken: false } });
@@ -40,5 +47,8 @@ export async function pocketedgeUserFromRequest(request: Request): Promise<Pocke
     (typeof meta?.full_name === "string" && meta.full_name) ||
     (typeof meta?.name === "string" && meta.name) ||
     undefined;
-  return { id: data.user.id, email: data.user.email, name, metadata: meta };
+  const user = { id: data.user.id, email: data.user.email, name, metadata: meta };
+  if (userByToken.size > 200) userByToken.clear();
+  userByToken.set(cacheKey, { user, exp: Date.now() + USER_CACHE_MS });
+  return user;
 }

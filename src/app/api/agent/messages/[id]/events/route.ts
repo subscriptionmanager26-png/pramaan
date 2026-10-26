@@ -3,6 +3,7 @@ import { accessTokenFromRequest, pocketedgeUserFromRequest } from "@/lib/pockete
 import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 300;
 
 type Params = { params: Promise<{ id: string }> };
 

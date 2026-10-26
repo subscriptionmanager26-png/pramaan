@@ -21,24 +21,19 @@ export async function GET(request: Request) {
   const userPath = `/api/v1/users/${encodeURIComponent(auth.user.id)}`;
   const qs = new URLSearchParams({ limit: messageLimit, threadId });
 
-  const messagesRes = await paFetch(`${userPath}/messages?${qs.toString()}`);
-  const messagesBody = await messagesRes.json().catch(() => ({}));
-
-  let ordersRes: Response | undefined;
-  let filesRes: Response | undefined;
-  let ordersBody: unknown = {};
-  let filesBody: unknown = {};
-
-  if (!messagesOnly) {
-    [ordersRes, filesRes] = await Promise.all([
-      paFetch(`${userPath}/orders`),
-      paFetch(`${userPath}/files?limit=${encodeURIComponent(fileLimit)}`),
-    ]);
-    [ordersBody, filesBody] = await Promise.all([
-      ordersRes.json().catch(() => ({})),
-      filesRes.json().catch(() => ({})),
-    ]);
-  }
+  const fetches = messagesOnly
+    ? [paFetch(`${userPath}/messages?${qs.toString()}`)]
+    : [
+        paFetch(`${userPath}/messages?${qs.toString()}`),
+        paFetch(`${userPath}/orders`),
+        paFetch(`${userPath}/files?limit=${encodeURIComponent(fileLimit)}`),
+      ];
+  const [messagesRes, ordersRes, filesRes] = await Promise.all(fetches);
+  const [messagesBody, ordersBody, filesBody] = await Promise.all([
+    messagesRes.json().catch(() => ({})),
+    ordersRes ? ordersRes.json().catch(() => ({})) : Promise.resolve({}),
+    filesRes ? filesRes.json().catch(() => ({})) : Promise.resolve({}),
+  ]);
 
   const status = messagesRes.ok ? 200 : messagesRes.status;
   return NextResponse.json(

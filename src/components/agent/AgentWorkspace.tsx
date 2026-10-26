@@ -6,8 +6,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import {
   AgentShellContext,
+  type AgentBootstrapChat,
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
+import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
 import { mergeThreadLists, prunePendingThreads } from "@/lib/agent/threads-from-messages";
 import { newThreadId } from "@/lib/agent/thread-id";
@@ -148,6 +150,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const authError = searchParams.get("auth_error");
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
+  const [bootstrapChat, setBootstrapChat] = useState<AgentBootstrapChat | null>(null);
   const [serverThreads, setServerThreads] = useState<AgentThreadSummary[]>([]);
   const [pendingThreads, setPendingThreads] = useState<AgentThreadSummary[]>([]);
   const [threadsError, setThreadsError] = useState<string | null>(null);
@@ -206,18 +209,41 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     if (!ok) {
       setServerThreads([]);
       setPendingThreads([]);
+      setBootstrapChat(null);
       setThreadsError(null);
     }
     setReady(true);
     if (!ok) return;
     try {
       const headers = await authHeaders();
-      await fetch("/api/agent/sync", { method: "POST", headers });
-      await loadThreads();
+      const threadId = searchParams.get("t") || "main";
+      const res = await fetch(
+        `/api/agent/bootstrap?threadId=${encodeURIComponent(threadId)}&limit=50&fileLimit=100`,
+        { headers, cache: "no-store" },
+      );
+      if (!res.ok) {
+        await loadThreads();
+        return;
+      }
+      const json = await res.json();
+      const threads = (json.threads as AgentThreadSummary[]) ?? [];
+      setServerThreads(threads);
+      setPendingThreads((pending) => prunePendingThreads(threads, pending));
+      setThreadsError(null);
+      const orders: Record<string, OrderState> = {};
+      for (const o of json.orders ?? []) {
+        orders[o.id] = { status: o.status, brokerOrderId: o.brokerOrderId };
+      }
+      setBootstrapChat({
+        threadId,
+        messages: (json.messages as AgentMessage[]) || [],
+        orders,
+        files: (json.files as JobAttachment[]) || [],
+      });
     } catch {
-      /* sync errors are non-fatal; thread load surfaces its own error */
+      await loadThreads();
     }
-  }, [loadThreads]);
+  }, [loadThreads, searchParams]);
 
   useEffect(() => {
     if (!pocketedgeAuthConfigured()) return;
@@ -262,12 +288,13 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       threads,
       refreshThreads: loadThreads,
       upsertThread,
+      bootstrapChat,
       filesOpen,
       setFilesOpen,
       sidebarOpen,
       setSidebarOpen,
     }),
-    [threads, loadThreads, upsertThread, filesOpen, sidebarOpen],
+    [threads, loadThreads, upsertThread, bootstrapChat, filesOpen, sidebarOpen],
   );
 
   function startNewChat() {
