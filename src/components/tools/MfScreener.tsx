@@ -1,0 +1,518 @@
+// @ts-nocheck
+"use client";
+
+import { useEffect, useMemo, useState } from 'react';
+import Link from "next/link";
+import { ArrowLeft, Loader2 } from 'lucide-react';
+import { ToolsFrame } from "@/components/tools/ToolsFrame";
+import { ScreenerFilters } from "@/components/tools/mf-screener/ScreenerFilters";
+import { loadAmfiEquityDirectGrowth, uniqueSorted } from "@/lib/market-tools/mfScreener/amfiSchemes";
+import { standardizeAmcName } from "@/lib/market-tools/mfScreener/amcNames";
+import {
+  cellNumeric,
+  formatAum,
+  formatDisplayCell,
+  formatRatio,
+  formatReturnPct,
+  formatTer,
+  returnTone,
+  shortCategoryLabel,
+  sortValue,
+} from "@/lib/market-tools/mfScreener/format";
+import { getFundReturn, listFundReturns, parseUpvalyMetric } from "@/lib/market-tools/mfScreener/metrics";
+import { simplifySchemeName } from "@/lib/market-tools/mfScreener/schemeNames";
+import {
+  isSectoralSubCategory,
+  resolveSectorTheme,
+  sortSectorThemes,
+} from "@/lib/market-tools/mfScreener/sectors";
+import { buildMetricsIndex, formatSnapshotDate, loadScreenerSnapshot } from "@/lib/market-tools/mfScreener/snapshot";
+import {
+  ALL_SCREENER_COLUMNS,
+  SCREENER_TABLE_GROUPS,
+  screenerColumnKey,
+  sortDescDefault,
+} from "@/lib/market-tools/mfScreener/types";
+import { fundPath } from "@/lib/market-tools/routes";
+
+const ALL_ID = 'all';
+
+function FundDetail({ row, scheme, snapshotLoading, onBack }) {
+  const returnRows = scheme ? listFundReturns(scheme) : [];
+  const risk3y = scheme?.riskStdDevByTimeframe?.['3y'];
+  const ret1y = getFundReturn(scheme, '1y')?.valuePct;
+
+  return (
+    <div className="space-y-4">
+      <button
+        type="button"
+        onClick={onBack}
+        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--fv-text-secondary)] transition hover:text-[var(--fv-accent)]"
+      >
+        <ArrowLeft className="h-4 w-4" aria-hidden strokeWidth={2} />
+        Back to screener
+      </button>
+
+      <article className="fv-card rounded-[20px] p-5 shadow-[var(--fv-shadow)]">
+        <div className="flex flex-wrap gap-2">
+          {row.sectorTheme ? (
+            <span className="rounded-full bg-black/[0.04] px-2.5 py-1 text-[12px] font-medium text-[var(--fv-text-secondary)]">
+              {row.sectorTheme}
+            </span>
+          ) : (
+            <span className="rounded-full bg-black/[0.04] px-2.5 py-1 text-[12px] font-medium text-[var(--fv-text-secondary)]">
+              {shortCategoryLabel(row.subCategory)}
+            </span>
+          )}
+          <span className="rounded-full bg-black/[0.04] px-2.5 py-1 text-[12px] font-medium text-[var(--fv-text-secondary)]">
+            Direct · Growth
+          </span>
+        </div>
+        <h2 className="mt-3 text-[22px] font-semibold tracking-tight text-[var(--fv-text)] md:text-[28px]">
+          {simplifySchemeName(row.name, row.amfiCode)}
+        </h2>
+        <p className="mt-1 text-[14px] text-[var(--fv-text-secondary)]">
+          {standardizeAmcName(row.amc)}
+        </p>
+
+        <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div>
+            <p className="fv-label">AUM</p>
+            <p className="mt-1 text-[15px] font-semibold text-[var(--fv-text)]">
+              {formatAum(scheme?.aumCr)}
+            </p>
+          </div>
+          <div>
+            <p className="fv-label">Expense ratio</p>
+            <p className="mt-1 text-[15px] font-semibold text-[var(--fv-text)]">
+              {formatTer(scheme?.expenseRatio)}
+            </p>
+          </div>
+          <div>
+            <p className="fv-label">1Y return</p>
+            <p className={`mt-1 text-[15px] font-semibold ${returnTone(ret1y)}`}>
+              {formatReturnPct(ret1y)}
+            </p>
+          </div>
+          <div>
+            <p className="fv-label">3Y CAGR</p>
+            <p
+              className={`mt-1 text-[15px] font-semibold ${returnTone(scheme?.cagrByPeriod?.['3y'])}`}
+            >
+              {formatReturnPct(scheme?.cagrByPeriod?.['3y'])}
+            </p>
+          </div>
+        </div>
+
+        <Link href={fundPath(row.amfiCode)}
+          className="mt-5 inline-flex text-[14px] font-semibold text-[var(--fv-accent)] hover:underline"
+        >
+          Open fund page →
+        </Link>
+      </article>
+
+      <section className="fv-card rounded-[20px] p-5 shadow-[var(--fv-shadow)]">
+        <p className="fv-label">Returns</p>
+        <div className="mt-3 divide-y divide-[var(--fv-border)]">
+          {returnRows.length ? (
+            returnRows.map((r) => (
+              <div key={r.timeframe} className="flex items-center justify-between py-2.5 text-sm">
+                <span className="text-[var(--fv-text-secondary)]">{r.label}</span>
+                <span className={`font-semibold ${returnTone(r.valuePct)}`}>
+                  {formatReturnPct(r.valuePct)}
+                </span>
+              </div>
+            ))
+          ) : (
+            <p className="fv-caption">
+              {snapshotLoading ? 'Loading returns…' : 'No return data'}
+            </p>
+          )}
+        </div>
+      </section>
+
+      <section className="fv-card rounded-[20px] p-5 shadow-[var(--fv-shadow)]">
+        <p className="fv-label">Fundamentals</p>
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[
+            ['P/E', formatRatio(parseUpvalyMetric(scheme?.fundamentals?.pe), 1)],
+            ['P/B', formatRatio(parseUpvalyMetric(scheme?.fundamentals?.pb), 1)],
+            ['P/S', formatRatio(parseUpvalyMetric(scheme?.fundamentals?.priceToSale), 1)],
+            ['Inception', scheme?.inceptionDate ?? '—'],
+          ].map(([label, val]) => (
+            <div key={label} className="rounded-[14px] bg-black/[0.03] px-3 py-2.5">
+              <p className="fv-caption">{label}</p>
+              <p className="mt-0.5 text-sm font-semibold text-[var(--fv-text)]">{val}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="fv-card rounded-[20px] p-5 shadow-[var(--fv-shadow)]">
+        <p className="fv-label">Risk (3Y std dev)</p>
+        <div className="mt-3 divide-y divide-[var(--fv-border)] text-sm">
+          <div className="flex justify-between py-2.5">
+            <span className="text-[var(--fv-text-secondary)]">Fund</span>
+            <span className="font-semibold text-[var(--fv-text)]">
+              {risk3y?.value != null ? `${formatRatio(risk3y.value, 1)}%` : '—'}
+            </span>
+          </div>
+          <div className="flex justify-between py-2.5">
+            <span className="text-[var(--fv-text-secondary)]">Category avg</span>
+            <span className="font-semibold text-[var(--fv-text)]">
+              {risk3y?.categoryAverage != null
+                ? `${formatRatio(risk3y.categoryAverage, 1)}%`
+                : '—'}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {scheme?.holdings?.length ? (
+        <section className="fv-card rounded-[20px] p-5 shadow-[var(--fv-shadow)]">
+          <p className="fv-label">Top holdings</p>
+          <div className="mt-3 divide-y divide-[var(--fv-border)]">
+            {scheme.holdings.slice(0, 10).map((h) => (
+              <div key={h.name} className="flex items-start justify-between gap-4 py-2.5">
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-[var(--fv-text)]">{h.name}</p>
+                  <p className="fv-caption">{h.sector ?? '—'}</p>
+                </div>
+                <span className="shrink-0 text-sm font-semibold text-[var(--fv-text)]">
+                  {h.weightage}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
+export function MfScreener() {
+  const [allRows, setAllRows] = useState([]);
+  const [loadError, setLoadError] = useState(null);
+  const [csvLoading, setCsvLoading] = useState(true);
+  const [sortKey, setSortKey] = useState('cagr_1y');
+  const [sortDesc, setSortDesc] = useState(true);
+  const [selectedCode, setSelectedCode] = useState(null);
+  const [metrics, setMetrics] = useState({});
+  const [snapshotLoading, setSnapshotLoading] = useState(true);
+  const [snapshotDate, setSnapshotDate] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(ALL_ID);
+  const [activeSector, setActiveSector] = useState(ALL_ID);
+  const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    void loadAmfiEquityDirectGrowth()
+      .then((rows) => {
+        if (cancelled) return;
+        setAllRows(
+          rows.map((r) => ({
+            ...r,
+            amcLabel: standardizeAmcName(r.amc),
+            amcSortKey: standardizeAmcName(r.amc).toLowerCase(),
+            sectorTheme: resolveSectorTheme({
+              name: r.name,
+              subCategory: r.subCategory,
+            }),
+          })),
+        );
+      })
+      .catch((err) => {
+        if (!cancelled) setLoadError(err instanceof Error ? err.message : 'Failed to load fund list');
+      })
+      .finally(() => {
+        if (!cancelled) setCsvLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void loadScreenerSnapshot()
+      .then((snapshot) => {
+        if (cancelled) return;
+        const index = buildMetricsIndex(snapshot);
+        setMetrics(index);
+        setSnapshotDate(snapshot.generatedAt);
+        // Re-tag sectoral funds with Upvaly schemeCategory when snapshot arrives.
+        setAllRows((prev) =>
+          prev.map((r) => {
+            if (!isSectoralSubCategory(r.subCategory)) return r;
+            const scheme = index[r.amfiCode];
+            return {
+              ...r,
+              sectorTheme: resolveSectorTheme({
+                name: scheme?.schemeName || r.name,
+                schemeCategory: scheme?.schemeCategory,
+                subCategory: r.subCategory,
+              }),
+            };
+          }),
+        );
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setLoadError((prev) => prev ?? (err instanceof Error ? err.message : 'Failed to load screener data'));
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setSnapshotLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const categoryOptions = useMemo(() => {
+    const marketCapRows = allRows.filter((r) => !isSectoralSubCategory(r.subCategory));
+    const counts = new Map();
+    for (const r of marketCapRows) {
+      counts.set(r.subCategory, (counts.get(r.subCategory) ?? 0) + 1);
+    }
+    const cats = uniqueSorted(marketCapRows.map((r) => r.subCategory)).map((id) => ({
+      id,
+      label: shortCategoryLabel(id),
+      count: counts.get(id) ?? 0,
+    }));
+    return [{ id: ALL_ID, label: 'All', count: marketCapRows.length }, ...cats];
+  }, [allRows]);
+
+  const sectorOptions = useMemo(() => {
+    const sectoral = allRows.filter((r) => r.sectorTheme);
+    const counts = new Map();
+    for (const r of sectoral) {
+      counts.set(r.sectorTheme, (counts.get(r.sectorTheme) ?? 0) + 1);
+    }
+    const themes = sortSectorThemes([...counts.keys()]).map((id) => ({
+      id,
+      label: id,
+      count: counts.get(id) ?? 0,
+    }));
+    return [
+      { id: ALL_ID, label: 'Off' },
+      { id: 'all-themes', label: 'All themes', count: sectoral.length },
+      ...themes,
+    ];
+  }, [allRows]);
+
+  useEffect(() => {
+    if (!categoryOptions.length) return;
+    setActiveCategory((prev) => {
+      if (prev && categoryOptions.some((o) => o.id === prev)) return prev;
+      const largeCap = categoryOptions.find((o) => /large cap/i.test(o.id));
+      return largeCap?.id ?? ALL_ID;
+    });
+  }, [categoryOptions]);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return allRows.filter((r) => {
+      if (activeSector === 'all-themes') {
+        if (!r.sectorTheme) return false;
+      } else if (activeSector !== ALL_ID) {
+        if (r.sectorTheme !== activeSector) return false;
+      } else if (activeCategory !== ALL_ID) {
+        if (r.subCategory !== activeCategory) return false;
+      } else if (isSectoralSubCategory(r.subCategory)) {
+        // Category All + Sector Off → market-cap styles only.
+        return false;
+      }
+
+      if (!q) return true;
+      return (
+        r.amcLabel.toLowerCase().includes(q) ||
+        r.name.toLowerCase().includes(q) ||
+        (r.sectorTheme || '').toLowerCase().includes(q) ||
+        shortCategoryLabel(r.subCategory).toLowerCase().includes(q)
+      );
+    });
+  }, [allRows, activeCategory, activeSector, query]);
+
+  const sorted = useMemo(() => {
+    const copy = [...filtered];
+    copy.sort((a, b) => {
+      const av = sortValue(a, sortKey, metrics);
+      const bv = sortValue(b, sortKey, metrics);
+      let cmp;
+      if (typeof av === 'string' && typeof bv === 'string') {
+        cmp = av.localeCompare(bv);
+        cmp = sortDesc ? -cmp : cmp;
+      } else {
+        cmp = sortDesc ? bv - av : av - bv;
+      }
+      if (cmp !== 0) return cmp;
+      return a.amfiCode.localeCompare(b.amfiCode);
+    });
+    return copy;
+  }, [filtered, sortKey, sortDesc, metrics]);
+
+  const selected = useMemo(
+    () => (selectedCode ? allRows.find((r) => r.amfiCode === selectedCode) ?? null : null),
+    [selectedCode, allRows],
+  );
+
+  const dataLoading = csvLoading || snapshotLoading;
+
+  const activeFilterLabel = useMemo(() => {
+    if (activeSector === 'all-themes') return 'All themes';
+    if (activeSector !== ALL_ID) return activeSector;
+    if (activeCategory !== ALL_ID) return shortCategoryLabel(activeCategory);
+    return 'Market cap styles';
+  }, [activeCategory, activeSector]);
+
+  const toggleSort = (key) => {
+    if (sortKey === key) setSortDesc((d) => !d);
+    else {
+      setSortKey(key);
+      setSortDesc(sortDescDefault(key));
+    }
+  };
+
+  const sortIndicator = (key) => (sortKey === key ? (sortDesc ? ' ↓' : ' ↑') : '');
+
+  if (selected) {
+    return (
+      <ToolsFrame
+        title="MF screener"
+        description="Equity Direct Growth funds — filter by category or sector/theme, then compare rolling returns, CAGR, risk, and fundamentals."
+      >
+        <FundDetail
+          row={selected}
+          scheme={metrics[selected.amfiCode]}
+          snapshotLoading={snapshotLoading}
+          onBack={() => setSelectedCode(null)}
+        />
+      </ToolsFrame>
+    );
+  }
+
+  return (
+    <ToolsFrame
+      title="MF screener"
+      description="Equity Direct Growth funds — filter by category or sector/theme, then compare rolling returns, CAGR, risk, and fundamentals."
+    >
+      {loadError ? (
+        <p className="mb-4 rounded-[16px] bg-[var(--fv-negative)]/8 px-4 py-3 text-sm text-[var(--fv-negative)]">
+          {loadError}
+        </p>
+      ) : null}
+
+      {csvLoading && !allRows.length ? (
+        <div className="flex items-center gap-2 fv-caption">
+          <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+          Loading funds…
+        </div>
+      ) : null}
+
+      {allRows.length ? (
+        <ScreenerFilters
+          query={query}
+          onQueryChange={setQuery}
+          categoryOptions={categoryOptions}
+          activeCategory={activeCategory}
+          onCategoryChange={setActiveCategory}
+          sectorOptions={sectorOptions}
+          activeSector={activeSector}
+          onSectorChange={setActiveSector}
+          resultCount={sorted.length}
+        />
+      ) : null}
+
+      <section className="mf-screener-table-wrap mt-4 overflow-hidden rounded-[20px] bg-white shadow-[var(--fv-shadow)]">
+        <div className="mf-screener-table-meta flex flex-wrap items-baseline gap-2 border-b border-[var(--fv-border)] px-3.5 py-2.5">
+          <span className="text-sm font-semibold text-[var(--fv-text)]">{sorted.length} Funds</span>
+          <span className="text-sm font-semibold text-[var(--fv-accent)]">{activeFilterLabel}</span>
+          {snapshotDate ? (
+            <span className="fv-caption ml-auto">
+              Data as of {formatSnapshotDate(snapshotDate)}
+            </span>
+          ) : null}
+        </div>
+
+        <div className="mf-screener-table-scroll overflow-x-auto">
+          <table className="mf-screener-table mf-screener-table-unified">
+            <thead>
+              <tr>
+                <th rowSpan={2} className="mf-screener-sticky-col mf-screener-th-fund">
+                  <button type="button" className="mf-screener-th-btn" onClick={() => toggleSort('name')}>
+                    AMC{sortIndicator('name')}
+                  </button>
+                </th>
+                {SCREENER_TABLE_GROUPS.map((group) => (
+                  <th key={group.label} colSpan={group.columns.length} className="mf-screener-th-group">
+                    {group.label}
+                  </th>
+                ))}
+              </tr>
+              <tr>
+                {SCREENER_TABLE_GROUPS.flatMap((group) =>
+                  group.columns.map((col) => (
+                    <th key={screenerColumnKey(col)} className="mf-screener-th-sub">
+                      <button
+                        type="button"
+                        className="mf-screener-th-btn"
+                        onClick={() => toggleSort(col.sortKey)}
+                      >
+                        {col.label}
+                        {sortIndicator(col.sortKey)}
+                      </button>
+                    </th>
+                  )),
+                )}
+              </tr>
+            </thead>
+            <tbody>
+              {sorted.map((row) => {
+                const scheme = metrics[row.amfiCode];
+                return (
+                  <tr key={row.amfiCode} className="mf-screener-row">
+                    <td className="mf-screener-fund-cell mf-screener-sticky-col">
+                      <button
+                        type="button"
+                        className="mf-screener-amc-btn"
+                        onClick={() => setSelectedCode(row.amfiCode)}
+                      >
+                        {row.amcLabel}
+                      </button>
+                      {row.sectorTheme && activeSector === 'all-themes' ? (
+                        <p className="mt-0.5 text-[12px] font-medium text-[var(--fv-text-muted)]">
+                          {row.sectorTheme}
+                        </p>
+                      ) : null}
+                    </td>
+                    {ALL_SCREENER_COLUMNS.map((col) => {
+                      const value = cellNumeric(col, scheme);
+                      const tone =
+                        col.kind === 'rolling' || col.kind === 'cagr' ? returnTone(value) : '';
+                      return (
+                        <td key={screenerColumnKey(col)} className={tone}>
+                          {dataLoading && value == null ? '…' : formatDisplayCell(col, value)}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+              {!dataLoading && !sorted.length ? (
+                <tr>
+                  <td
+                    colSpan={1 + ALL_SCREENER_COLUMNS.length}
+                    className="py-10 text-center text-sm text-[var(--fv-text-muted)]"
+                  >
+                    No funds match these filters.
+                  </td>
+                </tr>
+              ) : null}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </ToolsFrame>
+  );
+}

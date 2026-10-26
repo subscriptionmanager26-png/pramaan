@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
       { source: "/manifest.webmanifest", destination: `${appOrigin}/manifest.webmanifest` },
       { source: "/sw.js", destination: `${appOrigin}/sw.js` },
       { source: "/data/:path*", destination: `${appOrigin}/data/:path*` },
+      { source: "/api/etf-live", destination: `${appOrigin}/api/etf-live` },
+      { source: "/api/market-quotes", destination: `${appOrigin}/api/market-quotes` },
       { source: "/feed", destination: `${appOrigin}/feed` },
       { source: "/feed/:path*", destination: `${appOrigin}/feed/:path*` },
       { source: "/ideas", destination: `${appOrigin}/ideas` },
@@ -41,10 +43,6 @@ const nextConfig: NextConfig = {
       { source: "/fund/:path*", destination: `${appOrigin}/fund/:path*` },
       { source: "/index/:path*", destination: `${appOrigin}/index/:path*` },
       { source: "/commodity/:path*", destination: `${appOrigin}/commodity/:path*` },
-      { source: "/etf-tracker", destination: `${appOrigin}/etf-tracker` },
-      { source: "/etf-tracker/:path*", destination: `${appOrigin}/etf-tracker/:path*` },
-      { source: "/gold-tracker", destination: `${appOrigin}/gold-tracker` },
-      { source: "/gold-tracker/:path*", destination: `${appOrigin}/gold-tracker/:path*` },
       { source: "/markets", destination: `${appOrigin}/markets` },
       { source: "/markets/:path*", destination: `${appOrigin}/markets/:path*` },
       { source: "/explore", destination: `${appOrigin}/explore` },
@@ -61,6 +59,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/resources/etf-inav", destination: "/etf-tracker", permanent: true },
+      { source: "/resources/sgb", destination: "/gold-tracker", permanent: true },
       { source: "/discover", destination: "/research", permanent: false },
       { source: "/creators", destination: "/advisors", permanent: false },
       { source: "/creators/:slug", destination: "/advisors", permanent: false },
