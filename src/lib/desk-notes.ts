@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "au-sfb-margin-pressure-q2-october-2026",
+    title: "AU Small Finance Bank grew profit 53% but warned margins are under pressure",
+    summary:
+      "AU Small Finance Bank Ltd reported a 53% year-on-year rise in September-quarter profit on 26 October 2026, yet shares slid about 8% as management flagged net interest margin pressure, pockets of rural stress and a lower provision coverage ratio despite stronger net interest income.",
+    category: "industry",
+    companyOrSector: "Small finance banks / retail lending",
+    publishedAt: "2026-10-26T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("au-sfb-margin-pressure-q2-october-2026"),
+    keyTakeaways: [
+      "AU Small Finance Bank said net profit rose to about ₹857.7 crore in Q2 FY27 from ₹561 crore a year earlier.",
+      "Net interest income grew roughly 31.5% year on year to about ₹2,820 crore, while gross NPAs improved to 1.99%.",
+      "Management commentary on margin pressure and provision coverage drew a sharp Monday share price reaction despite the earnings beat.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, AU Small Finance Bank Ltd published results for the quarter ended 30 September 2026. Reported net profit rose about 53% year on year to ₹857.7 crore, helped by lower provisions than a year ago and a 31.5% jump in net interest income to ₹2,820.1 crore. Asset quality metrics looked mixed: gross non-performing assets improved to 1.99% from 2.10% in the prior quarter, but net NPAs ticked up to 0.81% from 0.76%. Provisions fell to ₹359.4 crore from ₹480.8 crore in the year-ago quarter. Even with the profit jump, the stock fell more than 8% in Monday trade as investors focused on management remarks about margin pressure, rural stress and a decline in the provision coverage ratio.",
+      "What does this mean?",
+      "Small finance banks earn when they grow secured and unsecured retail books faster than funding costs rise. A 53% profit jump can still disappoint if spreads compress or investors fear reserves are thin relative to emerging stress. AU SFB built its franchise on vehicle, MSME and rural lending; when monsoon or commodity cycles turn uneven, collection costs can rise in pockets that do not show up immediately in headline gross NPA ratios. Net interest margin guidance matters because these lenders cannot rely on treasury gains the way large banks sometimes do. The Monday price move suggests the market is repricing near-term return on equity rather than rejecting the entire growth story.",
+      "Why should I care?",
+      "If you borrow from or deposit with a small finance bank, compare offered loan rates with large private banks after this print. NBFC and SFB investors should line up AU’s margin commentary with peers such as Equitas and Ujjivan in the same week. Corporate treasurers parking short cash should watch whether higher funding costs push up fixed deposit rates at niche lenders. Watch the next investor presentation for rural portfolio slides, any management guidance on net interest margin for the second half, and Reserve Bank of India commentary on unsecured retail growth.",
+    ],
+  },
+  {
+    slug: "panasonic-ac-sales-target-fy28-october-2026",
+    title: "Panasonic India says air conditioner sales rose 50% as it targets two million units",
+    summary:
+      "Panasonic Life Solutions India managing director Yoshiyuki Kato said on 26 October 2026 that air conditioner sales surged about 50% as the Anchor-era business pushes beyond wiring devices toward appliances, smart buildings and a two-million-unit AC sales goal by fiscal 2028.",
+    category: "industry",
+    companyOrSector: "Consumer durables / appliances",
+    publishedAt: "2026-10-26T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("panasonic-ac-sales-target-fy28-october-2026"),
+    keyTakeaways: [
+      "Panasonic Life Solutions India reported about 50% growth in air conditioner sales in recent commentary shared with trade press on 26 October 2026.",
+      "Managing director Yoshiyuki Kato outlined a target of two million AC units by fiscal 2028 as the company broadens beyond legacy wiring brands.",
+      "Management linked demand to energy-efficiency upgrades, smart-building projects and India’s role as a manufacturing hub for appliances.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, trade press published an interview with Yoshiyuki Kato, managing director and chief executive of Panasonic Life Solutions India. Kato said air conditioner sales rose about 50%, part of a wider push to move the Indian unit beyond wiring and electrical accessories after nearly two decades since the Anchor acquisition. He set a public ambition to sell two million air conditioner units by fiscal 2028 while expanding into integrated life-infrastructure solutions tied to energy efficiency and smart buildings. The comments land during a festive quarter when middle-income households often upgrade cooling and renovation spend, and when several Japanese and Korean appliance makers are adding local capacity.",
+      "What does this mean?",
+      "AC demand in India is seasonal but the installed base keeps climbing as summers lengthen and housing stock modernises. A 50% sales jump from a legacy wiring-heavy portfolio signals share gains in a category dominated by Voltas, Blue Star and Korean brands, not just category growth. Two million units by FY28 implies sustained dealer expansion, compressor supply chains and after-sales networks. For real estate developers, bundled smart-building offerings can win township contracts even when individual SKUs look commoditised. Margin quality still depends on copper and refrigerant costs, so volume headlines need to be read alongside festive discounting.",
+      "Why should I care?",
+      "If you are renovating ahead of Diwali, compare energy ratings and service networks, not just headline discounts on ACs. Electrical distributors should watch whether Panasonic reallocates shelf space from switches toward appliances. Investors in consumer durable names can treat Kato’s target as a capacity and marketing commitment that must show up in listed parent disclosures over time. Watch summer 2027 sell-in data, import duty moves on compressors, and festive pricing from Voltas and Havells’ Lloyd division in the same season.",
+    ],
+  },
+  {
+    slug: "mib-tv-rpd-viewership-october-2026",
+    title: "Cable operators can publish their own TV audience data while BARC ratings stay suspended",
+    summary:
+      "India’s ministry of information and broadcasting cleared cable and direct-to-home platforms to release their own viewership statistics under a new TV ratings policy reported on 26 October 2026, with GTPL Hathway already publishing return-path data from connected set-top boxes as BARC’s panel ratings remain frozen.",
+    category: "industry",
+    companyOrSector: "Media / television advertising",
+    publishedAt: "2026-10-26T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mib-tv-rpd-viewership-october-2026"),
+    keyTakeaways: [
+      "Press reports on 26 October 2026 said MIB’s updated TV ratings policy allows cable and DTH operators to publish proprietary audience numbers.",
+      "GTPL Hathway moved first with return-path data captured from connected set-top boxes, a different technique from BARC’s people-meter panels.",
+      "Industry sources told reporters that credibility will hinge on sample size, methodology and advertiser acceptance while BARC ratings stay suspended.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Mumbai media trade press reported that the ministry of information and broadcasting’s new television ratings policy lets cable and direct-to-home operators publish their own viewership data. The change matters because Broadcast Audience Research Council panel ratings remain suspended amid investigations into data integrity. GTPL Hathway has already released numbers based on return-path data, which logs which channels connected set-top boxes tune to and for how long. That is a household-level signal rather than BARC’s people-meter approach, which tries to infer individual viewer demographics inside sampled homes.",
+      "What does this mean?",
+      "Indian broadcasters and advertisers price roughly ₹25,000 crore of annual television advertising against weekly audience currency. When the official panel stops, campaigns either fly blind or lean on operator-held data. Return-path feeds can scale quickly because millions of boxes are already addressable, but advertisers worry about bias toward one distributor’s footprint and about double-counting when households watch through multiple screens. If MIB-endorsed operator data gains trust, national broadcasters may negotiate carriage and ad-sales deals differently; if not, the industry drifts toward fragmented metrics reminiscent of early digital advertising. Either way, media planners must retrain models that assumed one BARC number each Thursday morning.",
+      "Why should I care?",
+      "If you buy mass-media ads for consumer brands, ask agencies which metric will bill guarantees until BARC returns. Investors in broadcasters such as Sun TV or Zee should track whether sports and festival slots still clear at prior CPMs. Cable operators may pitch advertisers bundled reach across broadband and TV using RPD, pressuring standalone measurement vendors. Watch any MIB notification text on audit requirements, whether advertisers jointly fund a hybrid panel, and how news channels position prime-time ratings during state election coverage.",
+    ],
+  },
+  {
+    slug: "ind-as-118-reporting-april-2027-october-2026",
+    title: "Large Indian companies are preparing for Ind AS 118 profit reporting from April 2027",
+    summary:
+      "Audit leaders and company boards have begun transition planning for Ind AS 118, a proposed accounting standard reported on 26 October 2026 that would reshape how operating profit is defined when India aligns with IFRS 18 from the financial year starting 1 April 2027.",
+    category: "industry",
+    companyOrSector: "Corporate reporting / listed equities",
+    publishedAt: "2026-10-26T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ind-as-118-reporting-april-2027-october-2026"),
+    keyTakeaways: [
+      "Trade press on 26 October 2026 said audit committees at large Indian companies are mapping systems changes for Ind AS 118.",
+      "The standard awaits formal notification by the Ministry of Corporate Affairs and companion amendments to Schedule III disclosure formats.",
+      "India targets adoption from 1 April 2027, in step with IFRS 18’s January 2027 global effective date.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Mumbai business press reported that finance teams at India’s largest listed companies are preparing for Ind AS 118, the local version of IFRS 18 on presentation of financial statements. The standard would change how companies classify operating versus non-operating income, potentially altering the operating profit line investors use in valuation models. Ind AS 118 still needs notification by the Ministry of Corporate Affairs, alongside expected changes to Schedule III formats under the Companies Act. Deloitte audit leader Samir Shah told reporters that readiness varies: some conglomerates are rebuilding management dashboards while others are still inventorying contracts that might move below the operating line.",
+      "What does this mean?",
+      "Accounting presentation sounds dry until index providers, credit analysts and IPO bankers bake operating margin into covenants. If joint ventures, derivatives or one-off gains shift classification, year-on-year comparisons break unless companies restate baselines. IT spend rises because enterprise resource planning systems must tag cash flows differently and because internal controls need testing ahead of statutory audits. For investors, the first year will be noisy: headline EBIT may rise or fall without any change in cash generation. Companies that communicate early can keep analyst models aligned; laggards risk surprise downgrades when brokers reclassify segments.",
+      "Why should I care?",
+      "If you own Nifty heavyweights, expect extra footnotes in FY28 annual reports even when FY27 results look normal. Credit officers should revisit lending covenants tied to operating profit before April 2027. Startup CFOs planning IPOs after 2027 should design chart-of-accounts tags now to avoid expensive restatements. Watch MCA notification timing, ICAI implementation guidance, and whether SEBI asks for parallel disclosure during the transition year.",
+    ],
+  },
+  {
+    slug: "havells-q2-festive-demand-october-2026",
+    title: "Havells reported 35% revenue growth across cables, switchgear and Lloyd appliances",
+    summary:
+      "Brokerage summaries on 26 October 2026 highlighted Havells India Ltd’s September-quarter revenue growth of about 35% year on year, with double-digit cable and switchgear volumes and improving switchgear margins even as Lloyd appliances faced seasonal cost pressure ahead of festive demand.",
+    category: "industry",
+    companyOrSector: "Electricals / consumer durables",
+    publishedAt: "2026-10-26T10:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("havells-q2-festive-demand-october-2026"),
+    keyTakeaways: [
+      "Anand Rathi’s 26 October 2026 note said Havells India’s Q2 FY27 revenue rose about 35% year on year with EBITDA up roughly 30%.",
+      "Cable and wire volumes grew close to double digits; switchgear volumes were strong with margins moving toward normalised levels.",
+      "Management remained upbeat on festive demand and flagged potential 5–7% price increases in select categories if raw material inflation persists.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, brokerage Anand Rathi published a research update after Havells India Ltd’s September-quarter results. The note said revenue grew about 35% year on year, with EBITDA up roughly 30%, driven by cables and wires, switchgear, the Lloyd appliances division and renewables. Cable and wire volumes rose at nearly double-digit rates, while switchgear posted strong volume growth and margin recovery toward normal levels. Lloyd grew revenue but profitability was softer because of seasonal under-absorption and raw material inflation. Management expressed confidence in festive-season demand and said additional price hikes of 5–7% could follow in select categories if input costs stay elevated. Aluminium volatility specifically weighed on cable margins during the quarter.",
+      "What does this mean?",
+      "Electrical brands touch both construction and consumer upgrade cycles. When switchgear and cables accelerate together, it usually signals active housing projects and retailer restocking before festivals, not just one promotional event. Havells’ ability to push partial price increases while growing volumes suggests retailers still accept pass-through on trusted SKUs. Lloyd’s margin dip shows appliances remain competitive, especially against Korean and Chinese rivals in air coolers and televisions. Together with peer commentary from other durables makers, the print adds evidence that middle India is still spending on home improvement even as urban discretionary categories wobble.",
+      "Why should I care?",
+      "If you are an electrician or dealer, plan inventory for switchgear and fan bundles now rather than waiting for last-minute festive discounts. Home buyers in new towers should confirm whether developers specify premium switchgear or commodity alternatives. Investors comparing consumer names can use Havells’ margin trajectory as a benchmark for pass-through versus volume trade-offs. Watch October retail footfall data, copper and aluminium prices, and Q2 updates from Crompton and Voltas for corroboration.",
+    ],
+  },
+  {
     slug: "adani-power-23gw-buildout-october-2026",
     title: "Adani Power is targeting 23.7 gigawatts of capacity as second-quarter earnings accelerated",
     summary:
@@ -5822,6 +5942,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "au-sfb-margin-pressure-q2-october-2026": "markets",
+  "panasonic-ac-sales-target-fy28-october-2026": "markets",
+  "mib-tv-rpd-viewership-october-2026": "policy",
+  "ind-as-118-reporting-april-2027-october-2026": "policy",
+  "havells-q2-festive-demand-october-2026": "markets",
   "adani-power-23gw-buildout-october-2026": "policy",
   "lumax-auto-q2-order-book-october-2026": "companies",
   "railtel-q2-cash-flow-october-2026": "companies",

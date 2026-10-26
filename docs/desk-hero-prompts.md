@@ -960,6 +960,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Ghee jar on shelf |
 | Metaphor left | Recall arrow into sealed disposal bin |
 
+### `mib-tv-rpd-viewership-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Operator set-top data replaces suspended panel ratings |
+| Subject right | Generic set-top box stack |
+| Metaphor left | Household signal streams into measurement panel |
+
+### `ind-as-118-reporting-april-2027-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Operating profit lines redrawn for investors |
+| Subject right | Ledger / calculator motif |
+| Metaphor left | Restated profit staircase bars |
+
+### `panasonic-ac-sales-target-fy28-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Cooling upgrades drive appliance volume |
+| Subject right | Generic wall AC unit |
+| Metaphor left | Rising cool-air volume bars |
+
+### `au-sfb-margin-pressure-q2-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Lending spreads compress despite profit growth |
+| Subject right | Bank branch silhouette |
+| Metaphor left | Narrowing margin gap bars |
+
+### `havells-q2-festive-demand-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive home-electrical demand stays firm |
+| Subject right | Switchgear / cable coil |
+| Metaphor left | Festival glow with upward demand curve |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
