@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tata-motors-iveco-acceptance-october-2026",
+    title: "Tata Motors secured 87.8% of Iveco shares on the tender’s final day",
+    summary:
+      "An Italian exchange filing on 26 October 2026 showed Tata Motors Ltd’s voluntary offer for Iveco Group crossed the 80% acceptance threshold on the last day of the tender, reaching 87.8% at the €14.40 per share price it declared final on 9 October.",
+    category: "industry",
+    companyOrSector: "Commercial vehicles / M&A",
+    publishedAt: "2026-10-26T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-motors-iveco-acceptance-october-2026"),
+    keyTakeaways: [
+      "Tata Motors’ Iveco tender cleared the 80% hurdle with 87.8% acceptances on 26 October 2026, according to an Italian market filing.",
+      "The offer opened on 7 September 2026 at €14.40 per share after a 9 October price lift from €14.10.",
+      "The roughly €3.8 billion deal covers Iveco’s commercial vehicle business and lets Tata pursue delisting and demerger steps agreed with shareholders earlier in October.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, the final day of its voluntary public tender, Tata Motors Ltd received acceptances for about 87.8% of Iveco Group’s shares, an Italian stock exchange filing showed. That clears the roughly 80% threshold the Indian truck maker needed to execute delisting and demerger resolutions Iveco shareholders approved on 17 October. Tata Motors had raised its bid to €14.40 per share on 9 October from €14.10 and declared the offer final, with the window scheduled to close the same day. The acquisition, first announced in 2025, values Iveco’s commercial vehicle operations at about €3.8 billion and excludes defence assets sold separately to Leonardo.",
+      "What does this mean?",
+      "Crossing 80% shifts the story from courtship to integration planning. Tata can move toward taking Iveco private, carving non-core units if demerger steps proceed, and aligning European truck platforms with its India and export road map. A high acceptance rate reduces the risk of a fragmented register or costly squeeze-out battles, though competition and currency regulators may still need sign-offs. For fleet customers, the near-term impact is limited, but medium-term product sharing could change which engines and cabins Tata offers outside South Asia. The deal also ties Tata’s balance sheet to euro funding and European cycle risks even as domestic commercial vehicle volumes have been strong.",
+      "Why should I care?",
+      "If you supply components to Tata Motors or Iveco, expect procurement teams to start dual-sourcing reviews once closing timelines firm up. Logistics firms comparing Bharat Stage VI trucks should watch whether Tata imports Iveco models or technology rather than only badges. Investors in Tata Motors should read how management plans to fund the euro payout and whether passenger vehicle demerger plans interact with the Iveco leverage picture. Follow Competition Commission updates in Europe, Tata’s exchange disclosures on settlement dates, and January–March 2026 integration guidance management already hinted at on the September earnings call.",
+    ],
+  },
+  {
+    slug: "fcnr-deposit-margin-squeeze-october-2026",
+    title: "Private banks raised more FCNR deposits and their margins fell harder",
+    summary:
+      "Reporting on 26 October 2026 said aggressive foreign-currency NRI deposit mobilisation under the Reserve Bank of India’s FCNR(B) window compressed September-quarter net interest margins, with private lenders such as Kotak Mahindra Bank and Axis Bank seeing sharper year-on-year declines than most public-sector peers.",
+    category: "industry",
+    companyOrSector: "Banking / NRI deposits",
+    publishedAt: "2026-10-26T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fcnr-deposit-margin-squeeze-october-2026"),
+    keyTakeaways: [
+      "Private banks that leaned hardest into FCNR(B) mobilisation reported larger net interest margin compression in Q2 FY27 than many PSU lenders, according to 26 October 2026 coverage.",
+      "Kotak Mahindra Bank’s margin fell 44 basis points year on year to 4.1%, Axis Bank’s fell 37 basis points to 3.36%, and HDFC Bank’s slipped 14 basis points to 3.16%.",
+      "Analysts quoted in the story said private lenders raised FCNR(B) equal to about 7.5–10% of deposits versus roughly 2–2.5% at PSU banks, leaving more low-yield liquidity parked pending deployment.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, business press compared September-quarter earnings across lenders and tied margin pressure to the Reserve Bank of India’s foreign-currency non-resident deposit drive. Banks mobilised large FCNR(B) balances after the central bank’s June 2026 incentive window, but not every rupee could be redeployed into loans immediately. Private banks that chased the scheme most aggressively reported sharper net interest margin declines than many public-sector rivals. Kotak Mahindra Bank’s margin fell 44 basis points year on year to 4.1%, Axis Bank’s fell 37 basis points to 3.36%, ICICI Bank’s slipped 12 basis points to 4.18%, and HDFC Bank’s declined 14 basis points to 3.16%. Several PSU names, including Union Bank of India and Central Bank of India, posted modest margin expansion or smaller declines. Kotak’s chief executive told reporters that carrying excess liquidity during the quarter weighed on spreads.",
+      "What does this mean?",
+      "FCNR(B) dollars help banks fund loan growth without racing for retail fixed deposits, but the rupees sit in low-yield assets until credit demand absorbs them. When a private lender raises FCNR(B) equal to a high single-digit share of its deposit base, even a few weeks of idle cash can shave tens of basis points off margins. PSU banks participated too, yet their smaller relative inflows limited the drag. The pattern shows up in the same week large lenders warned that further Reserve Bank of India rate hikes could cool consumption credit, meaning deployment options may narrow just as liquidity builds. For NRIs, attractive FCNR rates remain available, but the trade-off for banks is a temporary profitability hit rather than a balance-sheet crack.",
+      "Why should I care?",
+      "If you hold NRI dollar deposits, shop rates but read lock-in terms; banks may still want your funds even if margins are soft. Borrowers should not assume cheaper wholesale funding will automatically translate into lower home or personal loan rates while margins are under pressure. Investors comparing private banks should separate one-quarter FCNR noise from underlying loan growth and asset quality. Watch December-quarter margin guidance on earnings calls, RBI liquidity operations, and whether loan growth accelerates enough to absorb the FCNR overhang.",
+    ],
+  },
+  {
+    slug: "private-banks-mudra-lag-october-2026",
+    title: "Private banks disbursed less than a third of their Mudra targets by mid-year",
+    summary:
+      "A government document reviewed by Mint on 26 October 2026 showed HDFC Bank, Yes Bank, IDBI Bank and Federal Bank had met only about 24–30% of their fiscal 2027 Pradhan Mantri Mudra Yojana disbursement targets in the first half, trailing public-sector lenders that reached roughly one-third to just over half of their goals.",
+    category: "industry",
+    companyOrSector: "MSME credit / financial inclusion",
+    publishedAt: "2026-10-26T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("private-banks-mudra-lag-october-2026"),
+    keyTakeaways: [
+      "HDFC Bank disbursed about ₹9,065 crore against a ₹30,000 crore Mudra target for FY27 in the first half, according to the document cited on 26 October 2026.",
+      "Yes Bank, IDBI Bank and Federal Bank were at roughly 24–30% of their respective Mudra goals, while public-sector banks stood at about 32–56%.",
+      "Reporting linked the gap to rising input costs for small borrowers, with wholesale price inflation at 11.31% in September and retail inflation at a 23-month high of 5.54%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Mint reported that private-sector banks are lagging public-sector peers on three government-backed credit programmes for micro entrepreneurs, artisans and street vendors. A government document it reviewed showed Pradhan Mantri Mudra Yojana disbursements through September 2026 running well behind annual targets at several large private lenders. HDFC Bank had disbursed about ₹9,065 crore against a ₹30,000 crore goal for fiscal 2027. Yes Bank stood near ₹1,133 crore on a ₹4,100 crore target, IDBI Bank near ₹2,013 crore on ₹7,500 crore, and Federal Bank near ₹1,280 crore on ₹5,400 crore. Public-sector banks had achieved roughly 32% to 56% of their Mudra targets in the same period. The story noted beneficiaries face higher input bills as wholesale inflation accelerated to 11.31% in September and retail inflation hit 5.54%, while a weak monsoon may pressure rural incomes.",
+      "What does this mean?",
+      "Mudra loans are unsecured or lightly collateralised credit to very small businesses. When commodity and energy costs jump, first-time borrowers look riskier and collections get harder, so banks with tighter underwriting models may slow sanctions even when government targets stay ambitious. Public-sector lenders still carry branch networks in towns where Mudra demand is concentrated and face stronger nudges to meet social goals. Private banks often prioritise secured retail and corporate books that earn better risk-adjusted returns. The gap does not automatically mean private lenders are ignoring small business, but it does signal that policy inclusion metrics and commercial credit appetite are diverging in a high-inflation spell.",
+      "Why should I care?",
+      "If you run a kirana, tailoring unit or street-food stall and planned a Mudra top-up before Diwali, start paperwork early and compare PSU branch timelines with private bank digital channels. District industries centres and co-operative banks may move faster when large private lenders are behind quota. Investors should treat Mudra shortfalls as a policy execution issue rather than a sudden spike in MSME defaults unless collection data worsen. Watch half-year updates from the finance ministry, festival-season credit growth prints, and whether RBI nudges banks on priority-sector lending after inflation peaks.",
+    ],
+  },
+  {
+    slug: "sigma-advanced-nato-artillery-order-october-2026",
+    title: "Sigma Advanced won a ₹973 crore NATO order for artillery shell parts",
+    summary:
+      "Sigma Advanced Systems Ltd said on 26 October 2026 it secured a $102.23 million order, about ₹973 crore, from a NATO customer for base bleed units used on 155 mm artillery ammunition, to be executed over 12 months.",
+    category: "industry",
+    companyOrSector: "Defence manufacturing / exports",
+    publishedAt: "2026-10-26T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sigma-advanced-nato-artillery-order-october-2026"),
+    keyTakeaways: [
+      "The order covers manufacture and supply of base bleed units that extend the range of 155 mm artillery shells.",
+      "Contract value is about $102.23 million with execution over 12 months from the 26 October 2026 exchange announcement.",
+      "Sigma said the win builds on existing shell and fuze capabilities and advances vertical integration across 155 mm ammunition components.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026, Sigma Advanced Systems Ltd told stock exchanges it won a roughly $102.23 million contract from a NATO customer to make base bleed units for 155 mm artillery ammunition. The order, worth about ₹973 crore at current exchange rates, is scheduled for delivery over 12 months. Base bleed kits fit on the rear of artillery shells and release gas in flight to cut drag and extend range. Sigma already manufactures shells and fuzes; management said the deal lets it integrate more of the round in-house rather than importing specialist parts. The announcement lands amid broader Indian defence export push and ongoing European demand for ammunition components.",
+      "What does this mean?",
+      "Western militaries are replenishing artillery stocks after sustained use in regional conflicts, and they are widening supplier lists beyond traditional NATO factories. Indian firms that certify to NATO quality standards can win component orders even before they brand full rounds. For Sigma, a one-year ₹973 crore export book adds revenue visibility and justifies capex in precision machining and testing lines. Vertical integration reduces reliance on single-source imports for fuzes, bleed units and casings, which matters when shipping timelines are tight. The order is not a substitute for large domestic Ministry of Defence programmes, but it shows export dollars can flow to mid-cap manufacturers outside the usual public-sector shipyards.",
+      "Why should I care?",
+      "If you work in defence supply chains, expect more tier-two vendors to seek export certifications as primes chase overseas ammunition demand. Investors comparing Bharat Forge, Solar Industries or other ordnance names should read how much revenue is export-linked versus domestic capex cycles. Policymakers promoting Make in India can cite these wins when pitching test ranges and export clearances. Watch Sigma’s quarterly progress disclosures, rupee-dollar hedging on the contract, and whether follow-on NATO orders arrive after the first 12-month tranche.",
+    ],
+  },
+  {
     slug: "tata-consumer-q2-packaged-foods-october-2026",
     title: "Tata Consumer grew profit on packaged foods while tea volumes stayed flat",
     summary:
@@ -6062,6 +6158,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tata-motors-iveco-acceptance-october-2026": "companies",
+  "fcnr-deposit-margin-squeeze-october-2026": "policy",
+  "private-banks-mudra-lag-october-2026": "policy",
+  "sigma-advanced-nato-artillery-order-october-2026": "companies",
   "tata-consumer-q2-packaged-foods-october-2026": "markets",
   "ather-energy-maiden-profit-q2-october-2026": "markets",
   "adani-power-imported-coal-tariff-lag-october-2026": "policy",
