@@ -110,16 +110,40 @@ export function PramaanAgentChat() {
 
   const working = messages.some((m) => m.status === "working");
   useEffect(() => {
-    if (!working || busy) return;
+    if (!working) return;
     const id = window.setInterval(() => {
       void authHeaders().then((headers) => loadThread(headers, { includeLibrary: false }));
-    }, 4000);
+    }, 2500);
     return () => window.clearInterval(id);
-  }, [working, busy, loadThread]);
+  }, [working, authHeaders, loadThread]);
 
   const updateMessage = useCallback((id: string, patch: Partial<AgentMessage>) => {
     setMessages((m) => m.map((x) => (x.id === id ? { ...x, ...patch } : x)));
   }, []);
+
+  const fetchMessage = useCallback(
+    async (messageId: string, headers: Record<string, string>): Promise<AgentMessage | null> => {
+      const res = await fetch(`/api/agent/messages/${messageId}`, { headers, cache: "no-store" });
+      if (!res.ok) return null;
+      const json = await res.json();
+      return json.message as AgentMessage;
+    },
+    [],
+  );
+
+  const reconcileMessage = useCallback(
+    async (messageId: string, headers: Record<string, string>, maxWaitMs = 0): Promise<AgentMessage | null> => {
+      const deadline = Date.now() + maxWaitMs;
+      let msg: AgentMessage | null = null;
+      while (true) {
+        msg = await fetchMessage(messageId, headers);
+        if (msg) updateMessage(messageId, msg);
+        if (!msg || msg.status !== "working" || Date.now() >= deadline) return msg;
+        await new Promise((r) => setTimeout(r, 2000));
+      }
+    },
+    [fetchMessage, updateMessage],
+  );
 
   async function streamMessage(messageId: string, headers: Record<string, string>): Promise<AgentMessage> {
     const res = await fetch(`/api/agent/messages/${messageId}/events`, {
@@ -130,26 +154,22 @@ export function PramaanAgentChat() {
       throw new Error(detail.trim() || `stream_failed (${res.status})`);
     }
 
-    let latest: AgentMessage | null = null;
+    const track = { latest: null as AgentMessage | null };
     const apply = (event: ReturnType<typeof parseStreamEvent>) => {
       if (!event) return;
       setMessages((list) =>
         list.map((m) => {
           if (m.id !== messageId) return m;
           const next = applyStreamEvent(m, event);
-          latest = next;
+          track.latest = next;
           return next;
         }),
       );
     };
 
     const pullFull = async () => {
-      const full = await fetch(`/api/agent/messages/${messageId}`, { headers });
-      if (!full.ok) return;
-      const json = await full.json();
-      const msg = json.message as AgentMessage;
-      latest = msg;
-      updateMessage(messageId, msg);
+      const msg = await fetchMessage(messageId, headers);
+      if (msg) track.latest = msg;
     };
 
     const reader = res.body.getReader();
@@ -170,7 +190,7 @@ export function PramaanAgentChat() {
           apply(event);
           if (event?.type === "done" || event?.type === "error") {
             await pullFull();
-            if (latest) return latest;
+            if (track.latest) return track.latest;
           }
         }
         boundary = buffer.indexOf("\n\n");
@@ -178,7 +198,12 @@ export function PramaanAgentChat() {
     }
 
     await pullFull();
-    if (latest) return latest;
+    const snapshot = track.latest;
+    if (snapshot && snapshot.status === "working") {
+      const settled = await reconcileMessage(messageId, headers, 120_000);
+      if (settled) return settled;
+    }
+    if (snapshot) return snapshot;
     throw new Error("stream_empty");
   }
 
@@ -187,6 +212,7 @@ export function PramaanAgentChat() {
     if ((!q && !attachmentIds.length) || busy) return false;
     setBusy(true);
     setError(null);
+    let sentId: string | undefined;
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/messages", {
@@ -204,6 +230,7 @@ export function PramaanAgentChat() {
         return false;
       }
       const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
+      sentId = msg.id;
       setMessages((m) => [msg, ...m]);
       const title = q.trim() || "New chat";
       upsertThread({
@@ -220,6 +247,16 @@ export function PramaanAgentChat() {
       refreshThreads();
       return true;
     } catch (e) {
+      if (sentId) {
+        try {
+          const headers = await authHeaders();
+          await reconcileMessage(sentId, headers, 30_000);
+          await loadThread(headers);
+          refreshThreads();
+        } catch {
+          // keep the surfaced error below
+        }
+      }
       setError(e instanceof Error ? e.message : "Something went wrong.");
       return false;
     } finally {
