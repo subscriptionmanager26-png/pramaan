@@ -226,7 +226,16 @@ export function PramaanAgentChat() {
       });
       const json = await res.json();
       if (!res.ok) {
-        setError(json?.error?.message || json?.error || "Could not send message.");
+        const busy = res.status === 409 || json?.error?.code === "agent_busy";
+        if (busy) {
+          await loadThread(headers);
+          refreshThreads();
+        }
+        setError(
+          busy
+            ? "Still finishing the last reply — give it a few seconds, then try again."
+            : json?.error?.message || json?.error || "Could not send message.",
+        );
         return false;
       }
       const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
