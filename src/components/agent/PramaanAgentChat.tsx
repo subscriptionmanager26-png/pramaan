@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
 import { AgentComposer } from "@/components/agent/chat/AgentComposer";
@@ -56,64 +56,54 @@ export function PramaanAgentChat() {
   const [fileLibrary, setFileLibrary] = useState<JobAttachment[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const libraryLoaded = useRef(false);
 
   const loadThread = useCallback(
-    async (headers: Record<string, string>) => {
-      const list = await fetch(
-        `/api/agent/messages?limit=50&threadId=${encodeURIComponent(threadId)}`,
-        { headers },
+    async (headers: Record<string, string>, opts?: { includeLibrary?: boolean }) => {
+      const includeLibrary = opts?.includeLibrary ?? false;
+      const scope = includeLibrary ? "full" : "messages";
+      const res = await fetch(
+        `/api/agent/chat-state?threadId=${encodeURIComponent(threadId)}&limit=50&fileLimit=100&scope=${scope}`,
+        { headers, cache: "no-store" },
       );
-      if (list.ok) {
-        const json = await list.json();
-        setMessages((json.messages as AgentMessage[]) || []);
-      }
-      const ord = await fetch("/api/agent/orders", { headers });
-      if (ord.ok) {
-        const json = await ord.json();
+      if (!res.ok) return;
+      const json = await res.json();
+      setMessages((json.messages as AgentMessage[]) || []);
+      if (includeLibrary) {
         const map: Record<string, OrderState> = {};
         for (const o of json.orders ?? []) {
           map[o.id] = { status: o.status, brokerOrderId: o.brokerOrderId };
         }
         setOrders(map);
-      }
-      const files = await fetch("/api/agent/files?limit=100", { headers });
-      if (files.ok) {
-        const json = await files.json();
         setFileLibrary(json.files ?? []);
       }
     },
     [threadId],
   );
 
-  const refreshSession = useCallback(async () => {
+  const reloadChat = useCallback(async () => {
     try {
       const headers = await authHeaders();
-      const sync = await fetch("/api/agent/sync", { method: "POST", headers });
-      const body = await sync.json();
-      setAgentState(body.agent === "active" ? "active" : body.agent === "disabled" ? "disabled" : "error");
-      await loadThread(headers);
+      const includeLibrary = !libraryLoaded.current;
+      await loadThread(headers, { includeLibrary });
+      if (includeLibrary) libraryLoaded.current = true;
+      setAgentState("active");
     } catch {
       setAgentState("error");
     } finally {
       setReady(true);
     }
-  }, [loadThread]);
+  }, [authHeaders, loadThread]);
 
   useEffect(() => {
-    void refreshSession();
-  }, [refreshSession]);
-
-  useEffect(() => {
-    void authHeaders()
-      .then((headers) => loadThread(headers))
-      .catch(() => undefined);
-  }, [threadId, loadThread]);
+    void reloadChat();
+  }, [threadId, reloadChat]);
 
   const working = messages.some((m) => m.status === "working");
   useEffect(() => {
     if (!working || busy) return;
     const id = window.setInterval(() => {
-      void authHeaders().then((headers) => loadThread(headers));
+      void authHeaders().then((headers) => loadThread(headers, { includeLibrary: false }));
     }, 4000);
     return () => window.clearInterval(id);
   }, [working, busy, loadThread]);
@@ -271,7 +261,7 @@ export function PramaanAgentChat() {
           <p className="mt-2 text-sm text-ink-2">
             Pocketedge turns this on from your account. Once enabled, check again.
           </p>
-          <button type="button" className="btn-secondary mt-6 text-sm" onClick={() => refreshSession()}>
+          <button type="button" className="btn-secondary mt-6 text-sm" onClick={() => void reloadChat()}>
             Check again
           </button>
         </div>

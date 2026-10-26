@@ -20,17 +20,20 @@ export async function GET(request: Request) {
 
     let fromThreads: ReturnType<typeof threadsFromMessages> = [];
     let threadsResStatus = 0;
-    const threadsRes = await paFetch(`${userPath}/threads`);
+    let fromMessages: ReturnType<typeof threadsFromMessages> = [];
+    let messagesFailed = false;
+    let messagesStatus = 0;
+
+    const [threadsRes, msgRes] = await Promise.all([
+      paFetch(`${userPath}/threads`),
+      paFetch(`${userPath}/messages?limit=60`),
+    ]);
     threadsResStatus = threadsRes.status;
     if (threadsRes.ok) {
       const body = await threadsRes.json().catch(() => ({}));
       fromThreads = normalizeThreadSummaries(body.threads);
     }
 
-    let fromMessages: ReturnType<typeof threadsFromMessages> = [];
-    let messagesFailed = false;
-    let messagesStatus = 0;
-    const msgRes = await paFetch(`${userPath}/messages?limit=100`);
     messagesStatus = msgRes.status;
     if (msgRes.ok) {
       const msgBody = await msgRes.json().catch(() => ({}));

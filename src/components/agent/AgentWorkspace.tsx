@@ -238,7 +238,6 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const anyWorking = useMemo(() => threads.some((t) => t.working), [threads]);
   useEffect(() => {
     if (!signedIn) return;
-    void loadThreads();
     const id = window.setInterval(() => void loadThreads(), anyWorking ? 3000 : 20000);
     return () => window.clearInterval(id);
   }, [signedIn, anyWorking, loadThreads]);
