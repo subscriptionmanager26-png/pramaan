@@ -51,17 +51,20 @@ export function usePocketedgeAuth() {
     }
   }, []);
 
-  const refresh = useCallback(async () => {
+  const refresh = useCallback(async (opts?: { hydrate?: boolean }) => {
     if (!pocketedgeAuthConfigured()) {
       setUser(null);
       setProfile(null);
       setReady(true);
       return;
     }
-    await hydratePocketedgeSessionFromCookie();
     const supabase = getPocketedgeSupabase();
-    const { data } = await supabase.auth.getUser();
-    const u = data.user ?? null;
+    let session = (await supabase.auth.getSession()).data.session;
+    if (!session && opts?.hydrate !== false) {
+      await hydratePocketedgeSessionFromCookie();
+      session = (await supabase.auth.getSession()).data.session;
+    }
+    const u = session?.user ?? null;
     setUser(u);
     if (u) await loadProfile(u.id);
     else setProfile(null);
@@ -73,10 +76,11 @@ export function usePocketedgeAuth() {
       setReady(true);
       return;
     }
-    void refresh();
+    void refresh({ hydrate: true });
     const supabase = getPocketedgeSupabase();
-    const { data: sub } = supabase.auth.onAuthStateChange(() => {
-      void refresh();
+    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
+      if (event === "TOKEN_REFRESHED") return;
+      void refresh({ hydrate: event === "SIGNED_IN" });
     });
     return () => sub.subscription.unsubscribe();
   }, [refresh]);

@@ -1,3 +1,5 @@
+import { clearPocketedgeAuthHeaderCache } from "@/lib/pocketedge/auth-headers";
+
 import { setPostAuthRedirect } from "./auth-storage";
 import { getPocketedgeSupabase } from "./supabase-browser";
 
@@ -12,6 +14,7 @@ export async function hydratePocketedgeSessionFromCookie(): Promise<boolean> {
     access_token: body.access_token,
     refresh_token: body.refresh_token ?? "",
   });
+  if (!error) clearPocketedgeAuthHeaderCache();
   return !error;
 }
 

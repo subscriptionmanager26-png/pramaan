@@ -13,19 +13,12 @@ import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types"
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
 import { mergeThreadLists, prunePendingThreads } from "@/lib/agent/threads-from-messages";
 import { newThreadId } from "@/lib/agent/thread-id";
+import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 import {
   hydratePocketedgeSessionFromCookie,
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
-
-async function authHeaders() {
-  const supabase = getPocketedgeSupabase();
-  const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
-  if (!token) throw new Error("not_signed_in");
-  return { Authorization: `Bearer ${token}` };
-}
 
 function formatThreadWhen(iso: string) {
   const d = new Date(iso);
@@ -146,7 +139,8 @@ function AgentSidebar({
 export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const activeThreadId = searchParams.get("t") || "main";
+  const threadFromUrl = searchParams.get("t") || "main";
+  const activeThreadId = threadFromUrl;
   const authError = searchParams.get("auth_error");
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
@@ -170,7 +164,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
 
   const loadThreads = useCallback(async () => {
     try {
-      const headers = await authHeaders();
+      const headers = await pocketedgeAuthHeaders();
       const res = await fetch("/api/agent/threads", { headers, cache: "no-store" });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
@@ -196,76 +190,87 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     void loadThreads();
   }, [loadThreads]);
 
-  const refreshSession = useCallback(async () => {
+  const loadBootstrap = useCallback(
+    async (threadId: string) => {
+      try {
+        const headers = await pocketedgeAuthHeaders();
+        const res = await fetch(
+          `/api/agent/bootstrap?threadId=${encodeURIComponent(threadId)}&limit=50&fileLimit=100`,
+          { headers, cache: "no-store" },
+        );
+        if (!res.ok) {
+          await loadThreads();
+          return;
+        }
+        const json = await res.json();
+        const nextThreads = (json.threads as AgentThreadSummary[]) ?? [];
+        setServerThreads(nextThreads);
+        setPendingThreads((pending) => prunePendingThreads(nextThreads, pending));
+        setThreadsError(null);
+        const orders: Record<string, OrderState> = {};
+        for (const o of json.orders ?? []) {
+          orders[o.id] = { status: o.status, brokerOrderId: o.brokerOrderId };
+        }
+        setBootstrapChat({
+          threadId,
+          messages: (json.messages as AgentMessage[]) || [],
+          orders,
+          files: (json.files as JobAttachment[]) || [],
+        });
+      } catch {
+        await loadThreads();
+      }
+    },
+    [loadThreads],
+  );
+
+  useEffect(() => {
     if (!pocketedgeAuthConfigured()) {
       setReady(true);
       return;
     }
-    const supabase = getPocketedgeSupabase();
-    const { data } = await supabase.auth.getSession();
-    const user = data.session?.user;
-    const ok = Boolean(user);
-    setSignedIn(ok);
-    if (!ok) {
-      setServerThreads([]);
-      setPendingThreads([]);
-      setBootstrapChat(null);
-      setThreadsError(null);
-    }
-    setReady(true);
-    if (!ok) return;
-    try {
-      const headers = await authHeaders();
-      const threadId = searchParams.get("t") || "main";
-      const res = await fetch(
-        `/api/agent/bootstrap?threadId=${encodeURIComponent(threadId)}&limit=50&fileLimit=100`,
-        { headers, cache: "no-store" },
-      );
-      if (!res.ok) {
-        await loadThreads();
-        return;
-      }
-      const json = await res.json();
-      const threads = (json.threads as AgentThreadSummary[]) ?? [];
-      setServerThreads(threads);
-      setPendingThreads((pending) => prunePendingThreads(threads, pending));
-      setThreadsError(null);
-      const orders: Record<string, OrderState> = {};
-      for (const o of json.orders ?? []) {
-        orders[o.id] = { status: o.status, brokerOrderId: o.brokerOrderId };
-      }
-      setBootstrapChat({
-        threadId,
-        messages: (json.messages as AgentMessage[]) || [],
-        orders,
-        files: (json.files as JobAttachment[]) || [],
-      });
-    } catch {
-      await loadThreads();
-    }
-  }, [loadThreads, searchParams]);
-
-  useEffect(() => {
-    if (!pocketedgeAuthConfigured()) return;
     let cancelled = false;
     (async () => {
       await hydratePocketedgeSessionFromCookie();
-      if (!cancelled) await refreshSession();
+      const supabase = getPocketedgeSupabase();
+      const { data } = await supabase.auth.getSession();
+      const ok = Boolean(data.session?.user);
+      setSignedIn(ok);
+      if (!ok) {
+        setServerThreads([]);
+        setPendingThreads([]);
+        setBootstrapChat(null);
+        setThreadsError(null);
+      }
+      setReady(true);
     })();
     const supabase = getPocketedgeSupabase();
-    const { data: sub } = supabase.auth.onAuthStateChange(() => {
-      refreshSession();
+    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
+      if (event === "TOKEN_REFRESHED") return;
+      if (event === "SIGNED_OUT") {
+        setSignedIn(false);
+        setServerThreads([]);
+        setPendingThreads([]);
+        setBootstrapChat(null);
+        return;
+      }
+      if (event === "SIGNED_IN") setSignedIn(true);
     });
     return () => {
       cancelled = true;
       sub.subscription.unsubscribe();
     };
-  }, [refreshSession]);
+  }, []);
+
+  useEffect(() => {
+    if (!signedIn) return;
+    void loadBootstrap(threadFromUrl);
+  }, [signedIn, threadFromUrl, loadBootstrap]);
 
   const anyWorking = useMemo(() => threads.some((t) => t.working), [threads]);
   useEffect(() => {
-    if (!signedIn) return;
-    const id = window.setInterval(() => void loadThreads(), anyWorking ? 3000 : 20000);
+    if (!signedIn || anyWorking) return;
+    const id = window.setInterval(() => void loadThreads(), 60_000);
     return () => window.clearInterval(id);
   }, [signedIn, anyWorking, loadThreads]);
 

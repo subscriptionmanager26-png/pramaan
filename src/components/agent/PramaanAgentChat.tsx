@@ -14,7 +14,7 @@ import { formatBytes, MAX_FILE_BYTES } from "@/lib/agent/file-limits";
 import { isValidThreadId, newThreadId } from "@/lib/agent/thread-id";
 import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
-import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
+import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 const SUGGESTIONS = [
   "What moved in Indian markets today?",
@@ -29,13 +29,7 @@ export function PramaanAgentChat() {
   const threadParam = searchParams.get("t");
   const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "main";
 
-  const authHeaders = useCallback(async () => {
-    const supabase = getPocketedgeSupabase();
-    const { data } = await supabase.auth.getSession();
-    const token = data.session?.access_token;
-    if (!token) throw new Error("not_signed_in");
-    return { Authorization: `Bearer ${token}` };
-  }, []);
+  const authHeaders = useCallback(() => pocketedgeAuthHeaders(), []);
 
   useEffect(() => {
     if (threadParam === "new") {
@@ -57,6 +51,7 @@ export function PramaanAgentChat() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const libraryLoaded = useRef(false);
+  const consumedBootstrapFor = useRef<string | null>(null);
 
   const loadThread = useCallback(
     async (headers: Record<string, string>, opts?: { includeLibrary?: boolean }) => {
@@ -96,24 +91,30 @@ export function PramaanAgentChat() {
   }, [authHeaders, loadThread]);
 
   useEffect(() => {
-    if (bootstrapChat?.threadId === threadId) {
-      setMessages(bootstrapChat.messages);
-      setOrders(bootstrapChat.orders);
-      setFileLibrary(bootstrapChat.files);
-      libraryLoaded.current = true;
-      setAgentState("active");
-      setReady(true);
-      return;
-    }
+    consumedBootstrapFor.current = null;
+    libraryLoaded.current = false;
+    setReady(false);
     void reloadChat();
-  }, [threadId, reloadChat, bootstrapChat]);
+  }, [threadId, reloadChat]);
+
+  useEffect(() => {
+    if (!bootstrapChat || bootstrapChat.threadId !== threadId) return;
+    if (consumedBootstrapFor.current === threadId) return;
+    consumedBootstrapFor.current = threadId;
+    setMessages(bootstrapChat.messages);
+    setOrders(bootstrapChat.orders);
+    setFileLibrary(bootstrapChat.files);
+    libraryLoaded.current = true;
+    setAgentState("active");
+    setReady(true);
+  }, [bootstrapChat, threadId]);
 
   const working = messages.some((m) => m.status === "working");
   useEffect(() => {
     if (!working) return;
     const id = window.setInterval(() => {
       void authHeaders().then((headers) => loadThread(headers, { includeLibrary: false }));
-    }, 2500);
+    }, 8000);
     return () => window.clearInterval(id);
   }, [working, authHeaders, loadThread]);
 
