@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "transformers-rectifiers-greenfield-capex-october-2026",
+    title: "Transformers and Rectifiers is spending ₹1,250 crore on three new plants",
+    summary:
+      "On 27 October 2026 the company said it is investing ₹12.50 billion in three greenfield manufacturing facilities whose construction began in December 2025, with commercial operations targeted from the first quarter of financial year 2027–28 and annual revenue potential of about ₹20 billion.",
+    category: "industry",
+    companyOrSector: "Electrical equipment / manufacturing",
+    publishedAt: "2026-10-27T11:24:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("transformers-rectifiers-greenfield-capex-october-2026"),
+    keyTakeaways: [
+      "Transformers and Rectifiers (India) Ltd disclosed a ₹12.50 billion capex plan spread across three greenfield plants.",
+      "Management said construction started in December 2025 and commercial production is expected from Q1 FY27–28.",
+      "The facilities are projected to add roughly ₹20 billion of annual revenue potential once fully ramped.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Transformers and Rectifiers (India) Ltd told exchanges it will invest ₹12.50 billion in three greenfield manufacturing plants. Work on the sites began in December 2025. The company expects commercial operations to start in the first quarter of financial year 2027–28. When the lines are running at scale, management estimates annual revenue potential of about ₹20 billion from the new capacity. The disclosure lands as Indian utilities and data-centre builders order more power transformers, reactors and switchgear to support grid upgrades and industrial load growth.",
+      "What does this mean?",
+      "Transformer makers tie large capex to visible order books because fabrication halls, winding bays and test labs take years to commission. Greenfield sites let a vendor add higher-voltage or specialised products without disrupting existing shop floors. Revenue potential figures are forward-looking, but they signal how management sizes the bet relative to today’s turnover. Execution risk sits in equipment imports, skilled labour and customer qualification trials before utilities accept the first units. If demand from transmission projects and renewable evacuation stays firm, the new plants can absorb orders that might otherwise be turned away for lack of capacity.",
+      "Why should I care?",
+      "If you supply copper, insulation or heavy castings into the power-equipment chain, multi-plant expansions can mean steadier purchase schedules once construction shifts to production. Engineering firms bidding for substation packages should check whether domestic transformer availability improves lead times on their jobs. Investors comparing electrical equipment names should read how much of the ₹12.50 billion is already committed versus still to be spent, and whether funding mixes internal accruals with debt. Watch quarterly updates on mechanical completion, trial dispatches and any large utility orders tied to the new lines.",
+    ],
+  },
+  {
+    slug: "mankind-pharma-q2-otc-gap-october-2026",
+    title: "Mankind Pharma's prescription sales grew fast while its consumer shelf stayed quiet",
+    summary:
+      "On 27 October 2026 reporting on the September quarter showed net profit up 39.2% to ₹712 crore and revenue up 17.3% to ₹4,338 crore with a 27% EBITDA margin, yet analysts flagged muted over-the-counter growth despite sharp gains in cardiac, anti-diabetes and gastro portfolios.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / consumer health",
+    publishedAt: "2026-10-27T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mankind-pharma-q2-otc-gap-october-2026"),
+    keyTakeaways: [
+      "Mankind Pharma reported September-quarter net profit of ₹712 crore on revenue of ₹4,338 crore, with EBITDA margin at 27%.",
+      "Domestic prescription sales grew 15.9% with chronic cardiac and anti-diabetes portfolios rising 19% and 16% respectively.",
+      "Several global brokers kept cautious ratings, citing slow over-the-counter growth and valuation even after the earnings beat.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 coverage of Mankind Pharma Ltd’s September-quarter results showed a sharp profit jump to ₹712 crore, up 39.2% year on year, on revenue of ₹4,338 crore that rose 17.3%. EBITDA margin expanded to 27%. The domestic business grew 15.9%, with volume running ahead of the broader Indian pharmaceutical market. Chronic therapies led the way, including 19% growth in cardiac and 16% in anti-diabetes, while acute gastro and VMN segments also posted high-teens gains. Bharat Serums and Vaccines’ domestic specialty unit grew at a steady double-digit pace and exports rose 33%. The over-the-counter franchise, however, delivered only muted growth, and the stock still drew cautious target prices from several global houses despite an intraday rally.",
+      "What does this mean?",
+      "Mankind built its brand on mass-market consumer products such as condoms and pregnancy kits, so a weak OTC quarter stands out against a strong prescription engine. Prescription portfolios carry stickier doctor relationships but face price regulation and competition from peers with similar molecules. When brokers keep Underperform or Neutral calls after a beat, they are usually arguing that the market already prices in fast chronic growth and that consumer recovery is delayed. Management’s own margin guidance for financial year 2027 in the mid-26% range suggests limited room for further expansion unless OTC reaccelerates or costs ease.",
+      "Why should I care?",
+      "If you compete in OTC aisles, watch whether Mankind redirects marketing rupees toward chronic brands at the expense of shelf space fights in chemists. Hospital and clinic suppliers benefit when cardiac and diabetes lines outgrow the market, but tenders can tighten if rivals discount. Investors should separate one-day earnings reactions from broker targets that embed OTC assumptions. Follow the next consumer growth guidance update, festive stocking data for OTC brands, and whether management deploys cash from prescription cash flows into acquisitions such as the recent European cell-therapy bet.",
+    ],
+  },
+  {
+    slug: "dac-defence-acquisition-clearance-october-2026",
+    title: "India's defence council cleared ₹2.12 lakh crore of new military orders",
+    summary:
+      "On 27 October 2026 the Defence Acquisition Council chaired by Defence Minister Rajnath Singh approved capital acquisition proposals worth about ₹2.12 lakh crore for the armed forces, spanning tracked guns, helicopters, drones, counter-drone systems and ship decoys.",
+    category: "industry",
+    companyOrSector: "Defence procurement / policy",
+    publishedAt: "2026-10-27T11:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dac-defence-acquisition-clearance-october-2026"),
+    keyTakeaways: [
+      "The Defence Acquisition Council cleared capital proposals worth roughly ₹2.12 lakh crore for India's armed forces.",
+      "Reporting listed tracked guns, helicopters, surveillance unmanned aerial vehicles, counter-drone systems and ship decoys among the categories.",
+      "Clearance is an early gate; contracts and deliveries still require detailed negotiations and budget phasing.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 India's Defence Acquisition Council met under Defence Minister Rajnath Singh and approved capital acquisition proposals worth about ₹2.12 lakh crore for the army, navy and air force. Wire reports said the basket covers modernisation needs including tracked artillery, helicopters, surveillance unmanned aerial vehicles, air-defence and counter-drone systems, and ship decoys. The council's role is to grant acceptance of necessity and broad cost ceilings so the services can move toward tendering and contract awards. News of the clearance coincided with sharp moves in several listed defence suppliers, but the policy step itself is separate from any single company's order book.",
+      "What does this mean?",
+      "Large DAC numbers aggregate many programmes that will compete for the same capital budget over several years. Domestic manufacturers benefit when categories favour Make in India vendors, yet revenue recognition still depends on trials, bank guarantees and inspection cycles that can stretch delivery timelines. Counter-drone and UAV lines reflect lessons from recent conflicts where cheap drones stress traditional air defences. Ship decoys and naval systems point to blue-water upgrades alongside land-based artillery. For smaller private players, the actionable signal is which sub-programmes open for Indian industry participation versus imports tied to strategic partners.",
+      "Why should I care?",
+      "If you run a defence supply chain, map which cleared categories match your certifications rather than chasing every headline percentage move. Exporters already selling components abroad may see faster domestic qualification paths when ammunition and electronics demand rises in tandem. Investors should treat DAC totals as pipeline indicators, not instant revenue, and read ministry statements on indigenous content thresholds. Watch formal tender releases, budget allocation in the next Union expenditure documents, and execution commentary from firms such as HAL, BEL and mid-cap electronics makers on inspection and delivery schedules.",
+    ],
+  },
+  {
+    slug: "agoda-festive-travel-intentional-october-2026",
+    title: "Indian festive travellers are mixing Bangkok breaks with Goa and Puri trips",
+    summary:
+      "Agoda said on 27 October 2026 that accommodation searches by Indian users for stays between mid-October and end-November 2026 point to intentional festive travel, with Bangkok, Phuket and Tokyo leading international picks and Goa, Puri and Udaipur topping domestic leisure.",
+    category: "industry",
+    companyOrSector: "Travel / consumer behaviour",
+    publishedAt: "2026-10-27T10:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("agoda-festive-travel-intentional-october-2026"),
+    keyTakeaways: [
+      "Agoda analysed Indian accommodation searches made between 1 August and 30 September 2026 for travel between 15 October and 30 November 2026.",
+      "Bangkok, Phuket and Tokyo ranked as the top international cities, while Goa, Puri and Udaipur led domestic destinations.",
+      "Search growth was especially sharp for Puri, Sri Lanka and several Vietnamese beach cities compared with the prior year.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 digital travel platform Agoda published festive-season search trends for Indian travellers. The company studied accommodation lookups made between 1 August and 30 September 2026 for stays scheduled between 15 October and 30 November 2026, a window that covers Dussehra, Durga Puja and Diwali travel. Bangkok, Phuket and Tokyo were the most searched international cities. Within India, Goa, Puri and Udaipur topped leisure demand, with Puri showing particularly strong year-on-year search growth alongside hill and coastal getaways such as Ooty and Munnar. Agoda's country director said travellers are choosing destinations based on the experience they want rather than a single traditional itinerary.",
+      "What does this mean?",
+      "Search data precede bookings but reveal how households plan discretionary spending around festivals. Growth in short-haul Asia and domestic heritage towns suggests many families are pairing celebrations with a few nights away instead of only visiting relatives locally. Airlines and hotels can redeploy capacity toward routes where intent is rising before fares spike on peak Diwali weekends. For foreign tourism boards, sharp search gains in Sri Lanka, Vietnam and Japan indicate where marketing spend may convert quickly. Domestic states that invest in connectivity and stay inventory around cultural events can capture demand that once flowed only to metro malls.",
+      "Why should I care?",
+      "If you work in hospitality or aviation, align staffing and inventory with search hotspots rather than assuming last year's route map still fits. Households budgeting festive trips should book early on routes showing high search growth because seat and room supply can lag intent. Investors in listed travel platforms or hotels should treat search commentary as a leading indicator to be confirmed by ticket and occupancy data in November results. Watch Agoda and rival apps' festive discounting, visa processing times for Southeast Asia, and state tourism campaigns targeting Puri, Goa and Udaipur through Diwali week.",
+    ],
+  },
+  {
+    slug: "paytm-q2-profitability-october-2026",
+    title: "Paytm's September-quarter profit reached ₹225 crore as EBITDA margin hit 10%",
+    summary:
+      "One 97 Communications Ltd reported on 27 October 2026 that profit after tax rose to ₹225 crore in the September quarter from ₹21 crore a year earlier, with revenue up 28% to ₹2,648 crore and EBITDA margin crossing 10% for the first time on higher payments and financial-services distribution.",
+    category: "industry",
+    companyOrSector: "Payments / fintech",
+    publishedAt: "2026-10-27T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("paytm-q2-profitability-october-2026"),
+    keyTakeaways: [
+      "Paytm posted September-quarter profit after tax of ₹225 crore on revenue of ₹2,648 crore, with EBITDA of ₹270 crore at a 10% margin.",
+      "Payment services revenue rose 25% year on year to ₹1,434 crore while financial services distribution revenue grew 49% to ₹912 crore.",
+      "Monthly transacting users increased by one crore year on year to 8.5 crore, and merchant subscription plans reached 1.64 crore accounts.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Paytm parent One 97 Communications Ltd announced results for the quarter ended September 2026. Profit after tax climbed to ₹225 crore from ₹21 crore a year earlier on a reported basis. Revenue grew 28% to ₹2,648 crore. Earnings before interest, tax, depreciation and amortisation reached ₹270 crore, a 90% year-on-year increase, and EBITDA margin touched 10% for the first time. Payment services revenue rose 25% to ₹1,434 crore. Distribution of financial services, including merchant and personal loans, postpaid and wealth products, grew 49% to ₹912 crore. The company said monthly transacting users rose by one crore to 8.5 crore and merchants on subscription plans reached 1.64 crore after adding 27 lakh accounts over the year.",
+      "What does this mean?",
+      "Paytm is trying to prove that a large consumer wallet can fund itself through payments take rates, software subscriptions and credit distribution rather than burning cash for market share. Double-digit EBITDA margin shows operating leverage as indirect expenses fell as a share of revenue, helped partly by automation. Loan distribution growth ties Paytm's fortunes to partner banks' risk appetite and regulatory caps on digital lending. The earnings release landed a day after the company launched a lifetime-free RuPay credit card with AU Small Finance Bank, but the quarterly numbers reflect the core app and merchant network economics that must stay profitable regardless of any single card SKU.",
+      "Why should I care?",
+      "If you are a merchant on Paytm, rising subscription penetration may mean more bundled lending and device offers pitched your way; compare total fees against rival QR providers. Shoppers should still read reward rules on new credit products separately from the app’s base payment experience. Investors weighing fintech names should track whether margin gains hold once marketing normalises and credit costs move with rates. Follow the December-quarter update on loan disbursements, regulatory discussion on UPI pricing, and broker commentary after the results and card launch landed in the same week.",
+    ],
+  },
+  {
     slug: "goa-atf-vat-cut-october-2026",
     title: "Goa cut jet fuel tax to 7% from 15% on 24 October",
     summary:
@@ -6278,6 +6398,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "transformers-rectifiers-greenfield-capex-october-2026": "companies",
+  "mankind-pharma-q2-otc-gap-october-2026": "markets",
+  "dac-defence-acquisition-clearance-october-2026": "policy",
+  "agoda-festive-travel-intentional-october-2026": "markets",
+  "paytm-q2-profitability-october-2026": "markets",
   "goa-atf-vat-cut-october-2026": "policy",
   "paytm-au-rupay-upi-rewards-october-2026": "markets",
   "indian-it-ai-agent-governance-october-2026": "companies",
