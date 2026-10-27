@@ -14,7 +14,9 @@ import { formatBytes, MAX_FILE_BYTES } from "@/lib/agent/file-limits";
 import { isValidThreadId, newThreadId } from "@/lib/agent/thread-id";
 import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
+import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
+import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
 
 const SUGGESTIONS = [
   "What moved in Indian markets today?",
@@ -64,13 +66,29 @@ export function PramaanAgentChat() {
       if (!threadId) return;
       const includeLibrary = opts?.includeLibrary ?? false;
       const scope = includeLibrary ? "full" : "messages";
+      const t0 = typeof performance !== "undefined" ? performance.now() : Date.now();
       const res = await fetch(
-        `/api/agent/chat-state?threadId=${encodeURIComponent(threadId)}&limit=50&fileLimit=100&scope=${scope}`,
+        `/api/agent/chat-state?threadId=${encodeURIComponent(threadId)}&limit=40&fileLimit=100&scope=${scope}`,
         { headers, cache: "no-store" },
       );
+      const timing = res.headers.get("server-timing");
+      if (typeof console !== "undefined") {
+        console.debug(
+          `[agent-chat] ${res.status} ${Math.round((typeof performance !== "undefined" ? performance.now() : Date.now()) - t0)}ms`,
+          timing,
+        );
+      }
       if (!res.ok) return;
       const json = await res.json();
-      setMessages((json.messages as AgentMessage[]) || []);
+      const next = (json.messages as AgentMessage[]) || [];
+      setMessages(next);
+      try {
+        const { data } = await getPocketedgeSupabase().auth.getSession();
+        const uid = data.session?.user?.id;
+        if (uid) writeChatCache(uid, threadId, next);
+      } catch {
+        // ignore cache write failures
+      }
       if (includeLibrary) {
         const map: Record<string, OrderState> = {};
         for (const o of json.orders ?? []) {
@@ -98,10 +116,9 @@ export function PramaanAgentChat() {
     }
   }, [authHeaders, loadThread, threadId]);
 
-  // Draft: composer immediately. Existing URL thread: wait for sidebar, then fetch once.
+  // Draft: composer immediately. URL thread: paint cache + fetch (don't wait on sidebar).
   useEffect(() => {
     if (isDraft) {
-      // Keep a stable draft session across sidebar refetch; reset on New chat (draftNonce).
       const draftKey = `__draft__:${draftNonce}`;
       if (loadedThreadRef.current === draftKey && ready) return;
       libraryLoaded.current = false;
@@ -118,7 +135,6 @@ export function PramaanAgentChat() {
 
     if (!threadId) return;
 
-    // First send just wrote ?t= — keep in-flight messages.
     if (draftSendIdRef.current === threadId) {
       loadedThreadRef.current = threadId;
       draftSendIdRef.current = null;
@@ -127,32 +143,48 @@ export function PramaanAgentChat() {
       return;
     }
 
-    // Same thread already loaded — keep messages.
     if (loadedThreadRef.current === threadId && ready) return;
 
     libraryLoaded.current = false;
-    setMessages([]);
     setOrders({});
     setFileLibrary([]);
     setError(null);
 
-    // Wait for sidebar so we don't treat a real thread as a draft on hard refresh.
-    if (!threadsReady) {
-      setReady(false);
-      return;
-    }
+    let cancelled = false;
+    loadedThreadRef.current = threadId;
 
-    if (!isExistingThread) {
-      // Not in sidebar (new id, or cache lag): composer only — first send creates the thread.
-      setAgentState("active");
-      setReady(true);
-      loadedThreadRef.current = threadId;
-      return;
-    }
+    void (async () => {
+      // Instant paint from session cache while network revalidates.
+      try {
+        const { data } = await getPocketedgeSupabase().auth.getSession();
+        const uid = data.session?.user?.id;
+        if (!cancelled && uid) {
+          const cached = readChatCache(uid, threadId);
+          if (cached?.length) {
+            setMessages(cached);
+            setReady(true);
+            setAgentState("active");
+          } else {
+            setMessages([]);
+            setReady(false);
+          }
+        } else if (!cancelled) {
+          setMessages([]);
+          setReady(false);
+        }
+      } catch {
+        if (!cancelled) {
+          setMessages([]);
+          setReady(false);
+        }
+      }
+      if (!cancelled) await reloadChat();
+    })();
 
-    setReady(false);
-    void reloadChat();
-  }, [isDraft, threadId, threadsReady, isExistingThread, reloadChat, ready, draftNonce]);
+    return () => {
+      cancelled = true;
+    };
+  }, [isDraft, threadId, reloadChat, ready, draftNonce]);
   // Lazy-load files/orders when the Files panel opens.
   useEffect(() => {
     if (!filesOpen || !threadId || !isExistingThread || libraryLoaded.current) return;
