@@ -31,7 +31,8 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: "unauthorized" }, { status: 401 });
     }
 
-    const clientInm = request.headers.get("if-none-match");
+    const clientInmRaw = request.headers.get("if-none-match");
+    const clientInm = normalizeEtag(clientInmRaw);
     const upstreamStart = Date.now();
     const result = await fetchAgentThreads(auth.user.id, { ifNoneMatch: clientInm });
     upstreamMs = Date.now() - upstreamStart;
@@ -49,7 +50,7 @@ export async function GET(request: Request) {
       return new Response(null, {
         status: 304,
         headers: {
-          ETag: result.etag || clientInm || "",
+          ETag: normalizeEtag(result.etag) || clientInm || "",
           "Cache-Control": "private, no-cache",
           "Server-Timing": timing,
         },
@@ -75,9 +76,9 @@ export async function GET(request: Request) {
       ...(result.messagesFailed && result.threads.length ? { warnings: ["message_index_unavailable"] } : {}),
     };
     const body = JSON.stringify(payload);
-    const etag =
-      result.etag ||
-      `"p${createHash("sha1").update(body).digest("base64url").slice(0, 16)}"`;
+    const etag = normalizeEtag(
+      result.etag || `"p${createHash("sha1").update(body).digest("base64url").slice(0, 16)}"`,
+    )!;
 
     if (clientInm && clientInm === etag) {
       return new Response(null, {
@@ -112,4 +113,11 @@ export async function GET(request: Request) {
       },
     );
   }
+}
+
+/** Vercel/CDN may prefix ETags with W/; browsers echo that on If-None-Match. */
+function normalizeEtag(value: string | null | undefined) {
+  if (!value) return null;
+  const first = value.split(",")[0]?.trim() ?? "";
+  return first.replace(/^W\//i, "") || null;
 }
