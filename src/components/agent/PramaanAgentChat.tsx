@@ -25,23 +25,18 @@ const SUGGESTIONS = [
 export function PramaanAgentChat() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { threads, filesOpen, setFilesOpen, refreshThreads, upsertThread, bootstrapChat } = useAgentShell();
+  const { threads, threadsReady, filesOpen, setFilesOpen, refreshThreads, upsertThread } = useAgentShell();
   const threadParam = searchParams.get("t");
-  const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "main";
+  const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "";
 
   const authHeaders = useCallback(() => pocketedgeAuthHeaders(), []);
 
+  // Bare /ai or ?t=new → land on an empty New chat (never auto-open newest history).
   useEffect(() => {
-    if (threadParam === "new") {
+    if (threadParam === "new" || !threadParam || !isValidThreadId(threadParam)) {
       router.replace(`/ai?t=${newThreadId()}`);
-      return;
     }
-    if (threadParam && isValidThreadId(threadParam)) return;
-    const newest = threads[0]?.id;
-    if (newest && newest !== "main") {
-      router.replace(`/ai?t=${encodeURIComponent(newest)}`);
-    }
-  }, [threadParam, threads, router]);
+  }, [threadParam, router]);
 
   const [ready, setReady] = useState(false);
   const [agentState, setAgentState] = useState<"unknown" | "active" | "disabled" | "error">("unknown");
@@ -51,10 +46,17 @@ export function PramaanAgentChat() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const libraryLoaded = useRef(false);
-  const consumedBootstrapFor = useRef<string | null>(null);
+  const loadedThreadRef = useRef<string | null>(null);
+
+  /** Thread already has history on the server (sidebar), so we must fetch messages. */
+  const isExistingThread = useMemo(
+    () => Boolean(threadId && threads.some((t) => t.id === threadId)),
+    [threads, threadId],
+  );
 
   const loadThread = useCallback(
     async (headers: Record<string, string>, opts?: { includeLibrary?: boolean }) => {
+      if (!threadId) return;
       const includeLibrary = opts?.includeLibrary ?? false;
       const scope = includeLibrary ? "full" : "messages";
       const res = await fetch(
@@ -71,53 +73,75 @@ export function PramaanAgentChat() {
         }
         setOrders(map);
         setFileLibrary(json.files ?? []);
+        libraryLoaded.current = true;
       }
     },
     [threadId],
   );
 
   const reloadChat = useCallback(async () => {
+    if (!threadId) return;
     try {
       const headers = await authHeaders();
-      const includeLibrary = !libraryLoaded.current;
-      await loadThread(headers, { includeLibrary });
-      if (includeLibrary) libraryLoaded.current = true;
+      await loadThread(headers, { includeLibrary: libraryLoaded.current });
       setAgentState("active");
     } catch {
       setAgentState("error");
     } finally {
       setReady(true);
+      loadedThreadRef.current = threadId;
     }
-  }, [authHeaders, loadThread]);
+  }, [authHeaders, loadThread, threadId]);
 
+  // New empty chat: show composer immediately. Existing: wait for threads, then fetch once.
   useEffect(() => {
-    consumedBootstrapFor.current = null;
+    if (!threadId) return;
+
+    // Same thread already loaded (e.g. first send promoted it into the sidebar) — keep messages.
+    if (loadedThreadRef.current === threadId && ready) return;
+
     libraryLoaded.current = false;
+    setMessages([]);
+    setOrders({});
+    setFileLibrary([]);
+    setError(null);
+
+    if (!threadsReady) {
+      // Brand-new id from New chat / bare /ai: do not block on sidebar.
+      if (!isExistingThread) {
+        setAgentState("active");
+        setReady(true);
+        loadedThreadRef.current = threadId;
+      } else {
+        setReady(false);
+      }
+      return;
+    }
+
+    if (!isExistingThread) {
+      setAgentState("active");
+      setReady(true);
+      loadedThreadRef.current = threadId;
+      return;
+    }
+
     setReady(false);
     void reloadChat();
-  }, [threadId, reloadChat]);
-
+  }, [threadId, threadsReady, isExistingThread, reloadChat, ready]);
+  // Lazy-load files/orders when the Files panel opens.
   useEffect(() => {
-    if (!bootstrapChat || bootstrapChat.threadId !== threadId) return;
-    if (consumedBootstrapFor.current === threadId) return;
-    consumedBootstrapFor.current = threadId;
-    setMessages(bootstrapChat.messages);
-    setOrders(bootstrapChat.orders);
-    setFileLibrary(bootstrapChat.files);
-    libraryLoaded.current = true;
-    setAgentState("active");
-    setReady(true);
-  }, [bootstrapChat, threadId]);
+    if (!filesOpen || !threadId || !isExistingThread || libraryLoaded.current) return;
+    void authHeaders().then((headers) => loadThread(headers, { includeLibrary: true }));
+  }, [filesOpen, threadId, isExistingThread, authHeaders, loadThread]);
 
   const working = messages.some((m) => m.status === "working");
   useEffect(() => {
-    if (!working) return;
+    if (!working || !threadId) return;
     const id = window.setInterval(() => {
       void authHeaders().then((headers) => loadThread(headers, { includeLibrary: false }));
     }, 8000);
     return () => window.clearInterval(id);
-  }, [working, authHeaders, loadThread]);
-
+  }, [working, authHeaders, loadThread, threadId]);
   const updateMessage = useCallback((id: string, patch: Partial<AgentMessage>) => {
     setMessages((m) => m.map((x) => (x.id === id ? { ...x, ...patch } : x)));
   }, []);
@@ -306,10 +330,10 @@ export function PramaanAgentChat() {
     [thread],
   );
 
-  if (!ready) {
+  if (!threadId || !ready) {
     return (
       <div className="flex flex-1 items-center justify-center p-8">
-        <p className="text-ink-2">Loading conversation…</p>
+        <p className="text-ink-2">{!threadId ? "Starting chat…" : "Loading conversation…"}</p>
       </div>
     );
   }

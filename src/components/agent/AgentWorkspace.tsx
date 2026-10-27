@@ -6,10 +6,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import {
   AgentShellContext,
-  type AgentBootstrapChat,
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
-import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
 import { mergeThreadLists, prunePendingThreads } from "@/lib/agent/threads-from-messages";
 import { newThreadId } from "@/lib/agent/thread-id";
@@ -136,17 +134,26 @@ function AgentSidebar({
   );
 }
 
+async function syncAgentInBackground() {
+  try {
+    const headers = await pocketedgeAuthHeaders();
+    await fetch("/api/agent/sync", { method: "POST", headers, cache: "no-store" });
+  } catch {
+    // non-blocking
+  }
+}
+
 export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const threadFromUrl = searchParams.get("t") || "main";
+  const threadFromUrl = searchParams.get("t") || "";
   const activeThreadId = threadFromUrl;
   const authError = searchParams.get("auth_error");
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
-  const [bootstrapChat, setBootstrapChat] = useState<AgentBootstrapChat | null>(null);
   const [serverThreads, setServerThreads] = useState<AgentThreadSummary[]>([]);
   const [pendingThreads, setPendingThreads] = useState<AgentThreadSummary[]>([]);
+  const [threadsReady, setThreadsReady] = useState(false);
   const [threadsError, setThreadsError] = useState<string | null>(null);
   const [filesOpen, setFilesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -173,6 +180,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
           (body as { error?: string }).error ||
           `Could not load chats (${res.status})`;
         setThreadsError(msg);
+        setThreadsReady(true);
         return;
       }
       const json = await res.json();
@@ -180,8 +188,10 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       setServerThreads(next);
       setPendingThreads((pending) => prunePendingThreads(next, pending));
       setThreadsError(null);
+      setThreadsReady(true);
     } catch {
       setThreadsError("Could not load chats. Check your connection and try again.");
+      setThreadsReady(true);
     }
   }, []);
 
@@ -190,46 +200,11 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     void loadThreads();
   }, [loadThreads]);
 
-  const loadBootstrap = useCallback(
-    async (threadId: string) => {
-      try {
-        const headers = await pocketedgeAuthHeaders();
-        const res = await fetch(
-          `/api/agent/bootstrap?threadId=${encodeURIComponent(threadId)}&limit=50&fileLimit=100`,
-          { headers, cache: "no-store" },
-        );
-        if (!res.ok) {
-          await loadThreads();
-          return;
-        }
-        const json = await res.json();
-        const nextThreads = (json.threads as AgentThreadSummary[]) ?? [];
-        setServerThreads(nextThreads);
-        setPendingThreads((pending) => prunePendingThreads(nextThreads, pending));
-        setThreadsError(null);
-        const orders: Record<string, OrderState> = {};
-        for (const o of json.orders ?? []) {
-          orders[o.id] = { status: o.status, brokerOrderId: o.brokerOrderId };
-        }
-        setBootstrapChat({
-          threadId,
-          messages: (json.messages as AgentMessage[]) || [],
-          orders,
-          files: (json.files as JobAttachment[]) || [],
-        });
-      } catch {
-        await loadThreads();
-      }
-    },
-    [loadThreads],
-  );
-
   useEffect(() => {
     if (!pocketedgeAuthConfigured()) {
       setReady(true);
       return;
     }
-    let cancelled = false;
     (async () => {
       await hydratePocketedgeSessionFromCookie();
       const supabase = getPocketedgeSupabase();
@@ -239,7 +214,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       if (!ok) {
         setServerThreads([]);
         setPendingThreads([]);
-        setBootstrapChat(null);
+        setThreadsReady(false);
         setThreadsError(null);
       }
       setReady(true);
@@ -251,21 +226,21 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
         setSignedIn(false);
         setServerThreads([]);
         setPendingThreads([]);
-        setBootstrapChat(null);
+        setThreadsReady(false);
         return;
       }
       if (event === "SIGNED_IN") setSignedIn(true);
     });
     return () => {
-      cancelled = true;
       sub.subscription.unsubscribe();
     };
   }, []);
 
   useEffect(() => {
     if (!signedIn) return;
-    void loadBootstrap(threadFromUrl);
-  }, [signedIn, threadFromUrl, loadBootstrap]);
+    void syncAgentInBackground();
+    void loadThreads();
+  }, [signedIn, loadThreads]);
 
   const anyWorking = useMemo(() => threads.some((t) => t.working), [threads]);
   useEffect(() => {
@@ -291,15 +266,15 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const shellValue = useMemo(
     () => ({
       threads,
+      threadsReady,
       refreshThreads: loadThreads,
       upsertThread,
-      bootstrapChat,
       filesOpen,
       setFilesOpen,
       sidebarOpen,
       setSidebarOpen,
     }),
-    [threads, loadThreads, upsertThread, bootstrapChat, filesOpen, sidebarOpen],
+    [threads, threadsReady, loadThreads, upsertThread, filesOpen, sidebarOpen],
   );
 
   function startNewChat() {
