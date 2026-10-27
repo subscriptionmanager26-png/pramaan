@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "goa-atf-vat-cut-october-2026",
+    title: "Goa cut jet fuel tax to 7% from 15% on 24 October",
+    summary:
+      "Goa notified an eight-percentage-point reduction in value-added tax on aviation turbine fuel effective 24 October 2026, joining Delhi and Maharashtra at a 7% state levy as carriers face elevated global oil prices.",
+    category: "industry",
+    companyOrSector: "Aviation / state taxes",
+    publishedAt: "2026-10-27T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("goa-atf-vat-cut-october-2026"),
+    keyTakeaways: [
+      "Goa amended Schedule C of its VAT law so ATF not covered by the prior entry now attracts 7% VAT instead of 15%, with effect from 24 October 2026.",
+      "IndiGo publicly welcomed the move and noted Delhi and Maharashtra had already cut ATF VAT to 7%.",
+      "Reporting stressed that lower fuel tax at one airport does not automatically cut fares because demand, competition and network costs still set ticket prices.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 23 October 2026 Goa’s finance department notified a cut in value-added tax on aviation turbine fuel bought at the state’s airports. The amended entry in Schedule C of the Goa Value Added Tax Act now sets a 7% rate on ATF not covered by the preceding schedule line, down from 15%. The change took effect on 24 October 2026. Because each state sets its own ATF VAT, the tax bill on a refuelling stop varies widely across India. IndiGo thanked Chief Minister Pramod Sawant on social media and pointed to similar 7% rates already in force in Delhi and Maharashtra after larger reductions from 25% and 18% respectively.",
+      "What does this mean?",
+      "Jet fuel is typically the largest single operating cost for an airline. When a coastal tourism hub lowers the state tax component, carriers that tanker up in Goa save on the VAT slice of the invoice. The benefit scales with how many flights refuel there rather than ferrying fuel from another state. Goa’s economy depends on air arrivals for domestic and international visitors, so cheaper ground handling and fuel can support more seat capacity over time even if ticket prices do not move overnight. Airlines still face crude-linked base prices, airport charges, crew costs and yield management on peak holiday weeks.",
+      "Why should I care?",
+      "If you fly into Goa for the winter season, watch whether your airline adds frequencies or smaller aircraft rather than announcing fare sales. Travel agents should compare packages that include Dabolim or Mopa legs against road or rail options because connectivity improvements often show up as better timings before headline fares fall. Investors in listed carriers should treat state VAT moves as margin helpers, not revenue guides, until management quantifies savings on earnings calls. Follow whether other beach and business-travel states copy the 7% template and whether the civil aviation ministry pairs tax cuts with route subsidies.",
+    ],
+  },
+  {
+    slug: "paytm-au-rupay-upi-rewards-october-2026",
+    title: "Paytm and AU Small Finance Bank launched a lifetime-free RuPay card that pays on UPI",
+    summary:
+      "On 26 October 2026 the partners began offering a RuPay credit card with no joining or annual fee, 2% rewards on eligible Paytm UPI spends, 5% on Paytm Travel bookings, and family lounge access on qualifying flights booked through the app.",
+    category: "industry",
+    companyOrSector: "Payments / consumer credit",
+    publishedAt: "2026-10-27T05:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("paytm-au-rupay-upi-rewards-october-2026"),
+    keyTakeaways: [
+      "Customers can apply inside the Paytm app for a lifetime-free RuPay credit card issued with AU Small Finance Bank.",
+      "Marketing materials cite 2% rewards on eligible Paytm UPI payments and 5% on Paytm Travel bookings, plus family lounge access on qualifying flight tickets bought via Paytm.",
+      "Executives framed the card around everyday UPI habits and shared travel benefits rather than only airport-lounge perks for solo travellers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026 Paytm and AU Small Finance Bank rolled out a co-branded RuPay credit card aimed at users who already pay through the Paytm app. The product carries no joining fee and no annual fee in the launch positioning. Cardholders can earn stated rewards on eligible Paytm UPI transactions, on Paytm Travel bookings, and on certain gold purchases according to the bank’s materials. A differentiator is family lounge access when eligible flights are booked through Paytm, not only for the primary cardholder. Applications open inside the Paytm app, keeping acquisition inside the wallet rather than branch queues.",
+      "What does this mean?",
+      "National Payments Corporation of India’s RuPay credit-on-UPI push lets banks compete for spend that used to sit on debit rails or rival wallets. A small finance bank gains a nationwide distribution partner, while Paytm deepens monetisation beyond merchant discounts. Lifetime-free positioning signals a fight for top-of-wallet status even as funding costs rise industry-wide. Rewards on UPI blur the line between credit and instant payments, so interchange and reward economics depend on how much spend actually runs on the RuPay credit line versus other instruments. Lounge perks tied to family travel target festive flyers who book bundles on phones.",
+      "Why should I care?",
+      "If you already use Paytm for bills and UPI, read the reward fine print on which merchant categories count before switching cards. Compare effective earn rates against your existing bank card once annual fees and forex mark-ups are included. Merchants should expect more credit-on-UPI volume and ensure terminals accept RuPay credit where permitted. Investors in payments names should track whether co-brand cards lift take rates without spiking reward costs. Watch AU Small Finance Bank’s retail liability growth and Paytm’s post-IPO disclosure on financial services revenue in coming quarters.",
+    ],
+  },
+  {
+    slug: "indian-it-ai-agent-governance-october-2026",
+    title: "Indian IT firms are selling software to police corporate AI agents",
+    summary:
+      "Reporting on 26 October 2026 said Tata Consultancy Services, HCLTech, Tech Mahindra and Cognizant are pitching control planes, orchestration tools and governance layers as enterprises deploy agentic AI beyond pilot projects.",
+    category: "industry",
+    companyOrSector: "IT services / enterprise AI",
+    publishedAt: "2026-10-27T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indian-it-ai-agent-governance-october-2026"),
+    keyTakeaways: [
+      "TCS executives told analysts that secure AI platforms and an agentic control plane matter for cost management and lifecycle oversight, not only compliance.",
+      "Cognizant launched Cognizant AI Nexus on 23 October 2026 to track AI spend, output quality and reusable process templates.",
+      "HCLTech agreed to buy Croatia-based Robotiq.ai to strengthen orchestration across AI agents and enterprise applications.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026 coverage of India’s largest IT exporters described a shift in client conversations from experimenting with chatbots to governing fleets of software agents that can book meetings, change code or query databases autonomously. Tata Consultancy Services leaders said on an October earnings call that enterprises want safe deployment layers that monitor agent performance and spending. Cognizant unveiled Cognizant AI Nexus on 23 October to measure AI costs, document outputs and assign identities and permissions to each agent. HCLTech announced an acquisition of Robotiq.ai to deepen orchestration across agents and legacy applications. Tech Mahindra’s management echoed security and traceability themes on its own call.",
+      "What does this mean?",
+      "Agents inherit access rights from the humans or apps that spawn them, which creates duplication, data leakage and runaway cloud bills if left unmanaged. Indian vendors are packaging control planes, red-teaming services and orchestration IP because clients in banking, telecom and pharma cannot scale pilots without audit trails. The work sits adjacent to hyperscaler marketplaces but rewards firms that already run large application maintenance desks. Revenue is still early relative to traditional digital deals, yet it attaches to multiyear transformation budgets rather than one-off staff aug. Regulated industries may pay premiums for provable human sign-off on high-risk steps.",
+      "Why should I care?",
+      "If you buy IT services, ask vendors how agent governance is priced: per agent, per workflow, or bundled into existing deals. Internal risk teams should demand logging, permission boundaries and kill switches before agents touch customer data. Job seekers in tech services should expect more demand for security architects and process designers who understand AI operations, not only model training. Investors should watch deal pipelines for orchestration-led wins and margin mix on new intellectual property. Follow Cognizant’s 29 October results and client case studies on measurable cost savings from governed agent rollouts.",
+    ],
+  },
+  {
+    slug: "india-emerging-sectors-bank-finance-gap-october-2026",
+    title: "A Union Bank report says banks lend little to AI and space despite big capex pledges",
+    summary:
+      "A Union Bank of India research note reported on 25 October 2026 found more than ₹5 lakh crore of announced investment each in artificial intelligence, semiconductors and defence, while bank and NBFC debt still skews toward manufacturing and power rather than fast-depreciating tech hardware.",
+    category: "industry",
+    companyOrSector: "Industrial policy / bank lending",
+    publishedAt: "2026-10-27T04:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-emerging-sectors-bank-finance-gap-october-2026"),
+    keyTakeaways: [
+      "The report cited roughly ₹5.9 lakh crore of disclosed AI investment, ₹5.27 lakh crore in semiconductors and ₹5.07 lakh crore in defence among twelve emerging sectors.",
+      "Authors warned technology obsolescence is a top risk because chip nodes refresh every few years and GPUs cycle even faster.",
+      "It recommended specialist bank desks, milestone-linked disbursements, equipment leasing and receivables-backed structures for hydrogen, data centres and batteries.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 25 October 2026 wire services summarised a Union Bank of India report on financing India’s next wave of capital expenditure. The paper counted massive announced commitments in artificial intelligence, semiconductors, defence, biotechnology and green hydrogen, with AI alone near ₹5.9 lakh crore of public and private pledges and semiconductors close behind. Yet banks and non-banking finance companies are not the main funders for every segment. Manufacturing and power projects still absorb most familiar term loans, while AI and space ventures often rely on equity from founders, strategics and global hyperscalers. The authors flagged technology obsolescence, long Ministry of Defence payment cycles and weak hydrogen offtake as reasons vanilla project finance struggles.",
+      "What does this mean?",
+      "Policymakers want chips, clean molecules and defence supply chains built at home, but loan officers need collateral and predictable cash flows that a GPU cluster or satellite constellation cannot always offer on a ten-year amortisation schedule. Recovery periods in semiconductors and space can exceed typical loan tenors, pushing risk to venture capital and government schemes. Where banks do participate, the report argues for milestone-based tranches, leasing of equipment, securitisation of receivables and dedicated sector desks that understand order books. Over three to five years demand may shift toward storage, assembly-test-mark-pack plants, offtake-linked hydrogen and defence MSME tiers that look more like traditional corporate credit.",
+      "Why should I care?",
+      "If you run a startup in AI infrastructure, plan a capital stack that mixes equity, export credit and leasing rather than assuming a single bank term loan. Established industrials bidding for defence or hydrogen contracts should structure milestones lenders can underwrite. Bank investors should watch whether public-sector lenders build specialist teams or merely publish research without balance-sheet risk. Policy watchers should track if production-linked incentives and sovereign funds fill the gap the report describes. Follow Union Bank and peer disclosures on exposure to data centres, ATMP plants and green hydrogen as those desks mature.",
+    ],
+  },
+  {
+    slug: "godrej-properties-h2-launch-pipeline-october-2026",
+    title: "Godrej Properties lined up ₹32,000 crore of home launches for the second half",
+    summary:
+      "On 23 October 2026 the Mumbai-based developer said its launch pipeline for the October–March half is valued at about ₹32,000 crore across multiple cities as it chases ₹39,000 crore of full-year sales after booking ₹16,659 crore in the first half.",
+    category: "industry",
+    companyOrSector: "Residential real estate",
+    publishedAt: "2026-10-27T04:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("godrej-properties-h2-launch-pipeline-october-2026"),
+    keyTakeaways: [
+      "Godrej Properties targeted ₹39,000 crore of sales in fiscal 2027 and had achieved ₹16,659 crore through September 2026.",
+      "Management said roughly one-third of planned launches shipped in the first half and expects ₹22,500 crore to ₹25,000 crore of bookings in the second half from new projects and inventory.",
+      "Chairperson Pirojsha Godrej cited a seventh straight quarter above ₹7,000 crore of booking value and guided to ₹15,000 crore of collections in the second half.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 23 October 2026 after Godrej Properties Ltd’s September-quarter results said the developer is preparing a heavy launch calendar for the remainder of fiscal 2027. Management described a pipeline worth about ₹32,000 crore spanning Bandra, Gurugram, Thane, Vikhroli, Noida, Hyderabad’s Neopolis, Pune and other pockets. The company aims for ₹39,000 crore of sales in the year and had booked ₹16,659 crore in the first half after deploying about a third of intended launches. Second-quarter booking value was about ₹8,008 crore across 3.6 thousand units. Profit fell sharply year on year on higher costs even as revenue rose, underscoring that top-line ambition and margin timing do not always move together.",
+      "What does this mean?",
+      "Large branded developers are still betting that urban buyers will absorb premium inventory when launches cluster around festivals and school-year moves. A thick pipeline reduces reliance on a single micro-market if one city slows. It also pressures teams to execute construction, approvals and marketing simultaneously, which can squeeze near-term margins even when bookings stay strong. Godrej’s guidance for ₹15,000 crore of collections and positive operating cash flow in the second half signals focus on cash conversion, not only headline presales. Competitors with thinner land banks may respond with joint ventures or smaller ticket sizes.",
+      "Why should I care?",
+      "If you are hunting a new home in metro peripheries, compare launch payment plans across developers because inventory waves can improve choice but also delay possession if construction lags. Renters should watch whether heavy supply in a micro-market eases asking rates eighteen months out. Investors in real estate stocks should separate booking momentum from profit prints when costs spike. Follow monthly registration data in Mumbai and NCR, Godrej’s project-wise launch dates, and whether mortgage rates from recent Reserve Bank of India hikes cool affordability for mid-income towers.",
+    ],
+  },
+  {
     slug: "tata-motors-iveco-acceptance-october-2026",
     title: "Tata Motors secured 87.8% of Iveco shares on the tender’s final day",
     summary:
@@ -6158,6 +6278,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "goa-atf-vat-cut-october-2026": "policy",
+  "paytm-au-rupay-upi-rewards-october-2026": "markets",
+  "indian-it-ai-agent-governance-october-2026": "companies",
+  "india-emerging-sectors-bank-finance-gap-october-2026": "policy",
+  "godrej-properties-h2-launch-pipeline-october-2026": "markets",
   "tata-motors-iveco-acceptance-october-2026": "companies",
   "fcnr-deposit-margin-squeeze-october-2026": "policy",
   "private-banks-mudra-lag-october-2026": "policy",
