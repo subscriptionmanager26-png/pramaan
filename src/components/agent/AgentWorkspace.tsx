@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import {
   AgentShellContext,
@@ -156,6 +156,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const [pendingThreads, setPendingThreads] = useState<AgentThreadSummary[]>([]);
   const [threadsReady, setThreadsReady] = useState(false);
   const [threadsError, setThreadsError] = useState<string | null>(null);
+  const threadsEtagRef = useRef<string | null>(null);
   const [draftNonce, setDraftNonce] = useState(0);
   const [filesOpen, setFilesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -174,8 +175,26 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const loadThreads = useCallback(async () => {
     try {
       const headers = await pocketedgeAuthHeaders();
+      if (threadsEtagRef.current) headers["If-None-Match"] = threadsEtagRef.current;
+      const t0 =
+        typeof performance !== "undefined" ? performance.now() : Date.now();
       const res = await fetch("/api/agent/threads", { headers, cache: "no-store" });
+      const timing = res.headers.get("server-timing");
+      if (timing && typeof console !== "undefined") {
+        console.debug(
+          `[agent-threads] ${res.status} ${Math.round((typeof performance !== "undefined" ? performance.now() : Date.now()) - t0)}ms`,
+          timing,
+        );
+      }
+
+      if (res.status === 304) {
+        setThreadsError(null);
+        setThreadsReady(true);
+        return;
+      }
+
       if (!res.ok) {
+        // Keep any cached sidebar visible; only surface error if we have nothing.
         const body = await res.json().catch(() => ({}));
         const msg =
           (body as { error?: { message?: string } }).error?.message ||
@@ -187,11 +206,13 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       }
       const json = await res.json();
       const next = (json.threads as AgentThreadSummary[]) ?? [];
+      const etag = res.headers.get("etag");
       setServerThreads(next);
       setPendingThreads((pending) => prunePendingThreads(next, pending));
+      threadsEtagRef.current = etag;
       setThreadsError(null);
       setThreadsReady(true);
-      if (userId) writeThreadsCache(userId, next);
+      if (userId) writeThreadsCache(userId, next, etag);
     } catch {
       setThreadsError("Could not load chats. Check your connection and try again.");
       setThreadsReady(true);
@@ -221,11 +242,14 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
         setPendingThreads([]);
         setThreadsReady(false);
         setThreadsError(null);
+        threadsEtagRef.current = null;
         clearThreadsCache();
       } else if (user?.id) {
         const cached = readThreadsCache(user.id);
-        if (cached?.length) {
-          setServerThreads(cached);
+        if (cached) {
+          // Instant paint from cache (including empty list); network revalidates after.
+          setServerThreads(cached.threads);
+          threadsEtagRef.current = cached.etag;
           setThreadsReady(true);
         }
       }
@@ -240,6 +264,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
         setServerThreads([]);
         setPendingThreads([]);
         setThreadsReady(false);
+        threadsEtagRef.current = null;
         clearThreadsCache();
         return;
       }
@@ -255,6 +280,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!signedIn) return;
+    // Sync is not on the critical path for sidebar paint.
     void syncAgentInBackground();
     void loadThreads();
   }, [signedIn, loadThreads]);

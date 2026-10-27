@@ -27,6 +27,24 @@ function flagFromMetadata(userMetadata?: Record<string, unknown>) {
   return false;
 }
 
+const ACCESS_CACHE_MS = 10 * 60 * 1000;
+const accessCache = new Map<string, { allowed: boolean; exp: number }>();
+
+function cacheGet(userId: string): boolean | null {
+  const hit = accessCache.get(userId);
+  if (!hit) return null;
+  if (hit.exp <= Date.now()) {
+    accessCache.delete(userId);
+    return null;
+  }
+  return hit.allowed;
+}
+
+function cacheSet(userId: string, allowed: boolean) {
+  if (accessCache.size > 500) accessCache.clear();
+  accessCache.set(userId, { allowed, exp: Date.now() + ACCESS_CACHE_MS });
+}
+
 async function readProfileFlagAdmin(userId: string): Promise<boolean | null> {
   const url = supabaseUrl();
   const key = serviceRoleKey();
@@ -77,7 +95,7 @@ export async function persistAgentAccessGranted(userId: string) {
 
 /**
  * Whether this user may use the Pocketedge personal agent.
- * Checks social_profiles (service role, then user JWT), then auth user_metadata.
+ * Hot path: JWT metadata / in-memory cache first; at most one profile read.
  */
 export async function userHasAgentAccess(
   userId: string,
@@ -87,25 +105,49 @@ export async function userHasAgentAccess(
   if (process.env.POCKETEDGE_AGENT_ACCESS_OPEN === "1") return true;
 
   const fromMeta = flagFromMetadata(userMetadata);
-  const fromAdmin = await readProfileFlagAdmin(userId);
-  const fromUser = accessToken ? await readProfileFlagAsUser(userId, accessToken) : null;
-
-  const fromProfile =
-    fromAdmin === true || fromUser === true
-      ? true
-      : fromAdmin === false && fromUser === false
-        ? false
-        : fromAdmin ?? fromUser;
-
-  if (fromProfile === true || fromMeta) {
-    if (fromMeta && fromProfile !== true) void persistAgentAccessGranted(userId);
+  if (fromMeta) {
+    cacheSet(userId, true);
+    void persistAgentAccessGranted(userId);
     return true;
   }
+
+  const cached = cacheGet(userId);
+  if (cached !== null) return cached;
+
+  const fromAdmin = await readProfileFlagAdmin(userId);
+  if (fromAdmin === true) {
+    cacheSet(userId, true);
+    return true;
+  }
+  if (fromAdmin === false) {
+    cacheSet(userId, false);
+    return false;
+  }
+
+  // Service role unavailable / row missing — try once as the user.
+  if (accessToken) {
+    const fromUser = await readProfileFlagAsUser(userId, accessToken);
+    if (fromUser === true) {
+      cacheSet(userId, true);
+      return true;
+    }
+    if (fromUser === false) {
+      cacheSet(userId, false);
+      return false;
+    }
+  }
+
   return false;
 }
 
 /** True only when service role confirms agent_access is false (not when config is missing). */
 export async function agentAccessDefinitelyDisabled(userId: string) {
+  const cached = cacheGet(userId);
+  if (cached === false) return true;
   const fromAdmin = await readProfileFlagAdmin(userId);
-  return fromAdmin === false;
+  if (fromAdmin === false) {
+    cacheSet(userId, false);
+    return true;
+  }
+  return false;
 }
