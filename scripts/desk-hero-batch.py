@@ -98,12 +98,65 @@ def transformers(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([1010, 220, 1130, 300], fill=CREAM)
 
 
+def maruti_q2(d: ImageDraw.ImageDraw) -> None:
+    # car silhouette + rising cost bars
+    d.rounded_rectangle([100, 320, 480, 520], radius=24, fill=BLUE)
+    d.ellipse([140, 360, 220, 440], fill=CREAM)
+    d.ellipse([360, 360, 440, 440], fill=CREAM)
+    for i, h in enumerate([80, 140, 200, 280]):
+        x = 640 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, YELLOW, RED, BLUE][i])
+    d.polygon([(900, 180), (980, 220), (900, 260)], fill=GOLD)
+
+
+def mithai(d: ImageDraw.ImageDraw) -> None:
+    # gift box + gold foil accent
+    d.rounded_rectangle([120, 200, 440, 520], radius=20, fill=RED)
+    d.rectangle([260, 200, 300, 520], fill=GOLD)
+    d.rectangle([120, 340, 440, 380], fill=GOLD)
+    d.ellipse([720, 260, 920, 460], fill=YELLOW)
+    d.arc([740, 280, 900, 440], 200, 340, fill=GOLD, width=6)
+    d.rectangle([980, 180, 1140, 560], fill=BLUE)
+
+
+def ioc_shipping(d: ImageDraw.ImageDraw) -> None:
+    # tanker + pipeline to refinery
+    d.polygon([(100, 400), (380, 320), (380, 480), (100, 560)], fill=BLUE)
+    d.rectangle([200, 340, 280, 380], fill=YELLOW)
+    d.line([(400, 420), (700, 420)], fill=GOLD, width=5)
+    d.rectangle([700, 300, 1100, 540], fill=RED)
+    d.polygon([(1100, 420), (1180, 380), (1180, 460), (1100, 420)], fill=BLUE)
+    d.ellipse([820, 360, 980, 480], outline=GOLD, width=4)
+
+
+def lt_infra(d: ImageDraw.ImageDraw) -> None:
+    # crane + ascending order blocks
+    d.rectangle([140, 480, 180, 560], fill=INK)
+    d.polygon([(160, 480), (280, 200), (320, 480)], fill=YELLOW)
+    d.line([(280, 200), (420, 260)], fill=GOLD, width=4)
+    for i, w in enumerate([680, 760, 840, 920]):
+        d.rectangle([w, 560 - 80 - i * 60, w + 70, 560], fill=[RED, BLUE, YELLOW, RED][i])
+
+
+def redington(d: ImageDraw.ImageDraw) -> None:
+    # phone stack + slowing demand curve
+    for i in range(3):
+        d.rounded_rectangle([120 + i * 40, 220 + i * 30, 320 + i * 40, 520 + i * 30], radius=16, fill=[BLUE, RED, YELLOW][i])
+    d.arc([640, 200, 1160, 560], 200, 320, fill=GOLD, width=8)
+    d.line([(640, 480), (1160, 320)], fill=INK, width=2)
+
+
 def main() -> None:
     save("dac-defence-acquisition-clearance-october-2026", dac)
     save("agoda-festive-travel-intentional-october-2026", agoda)
     save("paytm-q2-profitability-october-2026", paytm)
     save("mankind-pharma-q2-otc-gap-october-2026", mankind)
     save("transformers-rectifiers-greenfield-capex-october-2026", transformers)
+    save("maruti-q2-commodity-costs-october-2026", maruti_q2)
+    save("luxury-diwali-mithai-gifting-october-2026", mithai)
+    save("ioc-india-shipping-fleet-crude-october-2026", ioc_shipping)
+    save("larsen-toubro-q2-infrastructure-october-2026", lt_infra)
+    save("redington-iphone-festive-slowdown-october-2026", redington)
 
 
 if __name__ == "__main__":

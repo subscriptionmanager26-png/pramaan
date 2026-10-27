@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "maruti-q2-commodity-costs-october-2026",
+    title: "Maruti Suzuki sold more cars but earned less as metal costs climbed",
+    summary:
+      "On 27 October 2026 Maruti Suzuki reported September-quarter consolidated net profit of about ₹2,466 crore, down roughly 26% year on year, even as revenue from operations rose to about ₹53,340 crore and management said demand still outpaced supply heading into the festive season.",
+    category: "industry",
+    companyOrSector: "Automobiles / consumer demand",
+    publishedAt: "2026-10-27T12:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maruti-q2-commodity-costs-october-2026"),
+    keyTakeaways: [
+      "Maruti Suzuki’s Q2 FY27 consolidated net profit was about ₹2,466 crore versus roughly ₹3,349 crore a year earlier, below several analyst estimates near ₹3,105 crore.",
+      "Revenue from operations grew to about ₹53,340 crore from ₹42,344 crore, while executives cited higher commodity costs linked to Middle East tensions.",
+      "Management said enhanced production capacity was still not enough to fully meet demand and flagged possible price increases if input costs stay elevated.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Maruti Suzuki India Ltd published results for the quarter ended 30 September 2026. Consolidated net profit fell about 26% year on year to roughly ₹2,466 crore even as revenue from operations climbed to near ₹53,340 crore. The print came in below several broker estimates that had centred near ₹3,105 crore on the bottom line. Executives told analysts that steel, aluminium and other raw material bills rose during the period, partly reflecting volatility after conflict in the Middle East. At the same time, they said showroom demand remained brisk around Navratri and pre-Diwali bookings, and that supply still lagged orders despite capacity additions planned from January 2027.",
+      "What does this mean?",
+      "India’s largest carmaker prices most volume on thin margins, so a revenue beat with a profit miss usually means costs moved faster than list-price hikes. Carmakers often delay formal increases during the festive discount window, then reset stickers once promotions end. When management warns that commodity inflation may force hikes, it is signalling that waiting rooms are full enough to pass some pain to buyers. The gap between strong retails and weaker reported profit also shows up in dealer inventory and incentive spending, which do not always move in sync with factory dispatches. Rivals such as Hyundai and Tata Motors face the same input-cost curve, so Maruti’s commentary is a read-through for the whole passenger-vehicle shelf.",
+      "Why should I care?",
+      "If you are buying a car this quarter, compare on-road quotes now with post-festival lists and check whether finance subventions shrink when prices reset. Fleet and leasing buyers should model total cost of ownership assuming modest hikes on popular petrol and hybrid trims. Auto-component suppliers can still see steady call-offs when volumes rise, but margin pressure at the OEM may flow back into price negotiations on new tenders. Investors should weigh volume momentum against cost inflation rather than reacting to a single-day share move. Watch November wholesale data, any formal price circular, and peer earnings from Hyundai and Mahindra for confirmation that demand held while margins compressed.",
+    ],
+  },
+  {
+    slug: "luxury-diwali-mithai-gifting-october-2026",
+    title: "Diwali sweet boxes now start at thousands of rupees for gold-finished mithai",
+    summary:
+      "Coverage on 27 October 2026 described luxury confectioners pitching festive assortments priced from about ₹4,000 to ₹21,000 per box, with 24-karat gold foil finishes and hotel-branded packs aimed at corporate gifting and affluent households.",
+    category: "industry",
+    companyOrSector: "Food / festive consumption",
+    publishedAt: "2026-10-27T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("luxury-diwali-mithai-gifting-october-2026"),
+    keyTakeaways: [
+      "Retail stories cited a 30-piece pista katli box finished with 24-karat gold foil at about ₹21,000 from Khoya Mithai.",
+      "Hotel chains such as Radisson offered 36-piece festive assortments near ₹3,999 under dedicated sweet labels.",
+      "Brands are targeting corporate hampers and premium home gifting rather than mass kirana price points.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 trade press highlighted how Diwali 2026 sweet counters are stretching far above traditional kilo-rate mithai. One cited assortment priced a 30-piece pista katli finished with 24-karat gold foil at about ₹21,000 from Khoya Mithai. Hotel-led labels joined the race, with Meetha by Radisson pitching a 36-piece festive pack near ₹3,999. Packaging, limited ingredients and brand story now carry as much of the ticket as sugar and ghee. The push lands in the same week Agoda reported strong festive travel searches and other consumer prints showed households still spending on experiences and upgrades, even when mass-market gadgets look uneven.",
+      "What does this mean?",
+      "Premium gifting is a bet that a slice of urban income will trade up when festivals double as social signalling. Gold-leaf finishes and hotel logos help justify prices that would look extreme in a neighbourhood halwai shop. Corporate procurement teams become a second channel, because hampers are expensed and photographed. The trend does not replace bulk mithai demand in middle-income homes, but it shows where margin pools are forming. Ingredient inflation in nuts and dairy still matters, yet these price points suggest brands believe buyers will absorb mark-ups tied to presentation, not just input costs.",
+      "Why should I care?",
+      "If you run food or hospitality outlets, study whether your city’s corporate calendar still funds premium hampers or has shifted budget to travel vouchers. Kirana and modern-trade buyers should watch whether luxury lines pull footfall without cannibalising everyday SKUs. Investors in listed food companies should separate mass packaged foods from experiential festive spikes that may not repeat every quarter. Follow sell-through reports after Diwali week, any discounting on unsold premium inventory, and whether regional sweet chains launch copycat gold-finish lines for next season.",
+    ],
+  },
+  {
+    slug: "ioc-india-shipping-fleet-crude-october-2026",
+    title: "Indian Oil says India needs more tankers to use discounted crude",
+    summary:
+      "On 27 October 2026 Indian Oil Corp chairman A S Sahney told an industry forum that India should expand its merchant shipping fleet so refiners can better capture discounted crude cargoes rather than relying on foreign tonnage.",
+    category: "industry",
+    companyOrSector: "Energy / shipping policy",
+    publishedAt: "2026-10-27T11:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ioc-india-shipping-fleet-crude-october-2026"),
+    keyTakeaways: [
+      "IOC chairman A S Sahney said building domestic shipping capacity would help refiners benefit from discounted crude oil.",
+      "India’s import bill still depends heavily on chartered foreign tankers for seaborne barrels.",
+      "The comments land as state refiners optimise crude slates amid volatile freight and geopolitical routes.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Indian Oil Corp chairman A S Sahney told an industry gathering that India needs to build up its own shipping fleet if refiners are to fully benefit from discounted crude oil offers. India imports most of its crude by sea and often charters foreign-owned tankers, which means freight spikes and availability bottlenecks can erode the savings from cheaper barrels. Sahney’s remarks frame merchant shipping as part of energy security, not only a logistics afterthought. The timing matters because refiners have been juggling alternate suppliers and longer voyages when traditional routes face disruption.",
+      "What does this mean?",
+      "A cheaper crude quote on paper does not always lower the landed cost at Jamnagar or Paradip if freight surges or ships are booked out. Domestic tanker capacity gives national oil companies more bargaining power on routes and schedules, and it keeps more of the value chain inside India’s balance sheet. Expanding the fleet requires yards, financing, and long-term charter contracts that take years to line up, so the chairman’s point is strategic rather than an instant fix. For policymakers, it sits alongside other pushes on strategic storage, pipeline links, and diversifying import origins.",
+      "Why should I care?",
+      "If you work in shipbuilding, port services, or marine finance, large refinery buyers asking for more tonnage can translate into multi-year orders when policy backing firms up. Transport and logistics firms should track whether crude import economics shift enough to justify dedicated India-flagged routes. Households will not see an immediate petrol price change from one speech, but sustained freight savings can soften the pass-through when global oil moves. Watch Union shipping ministry initiatives, SCI and private fleet orders, and quarterly import mix disclosures from IOC, BPCL and HPCL.",
+    ],
+  },
+  {
+    slug: "larsen-toubro-q2-infrastructure-october-2026",
+    title: "Larsen and Toubro's quarterly profit rose 33% on infrastructure orders",
+    summary:
+      "On 27 October 2026 Larsen and Toubro reported consolidated net profit of about ₹5,202 crore for the September quarter, up roughly 33% year on year, on revenue from operations near ₹78,750 crore as domestic infrastructure spending and overseas project wins accelerated.",
+    category: "industry",
+    companyOrSector: "Infrastructure / capital goods",
+    publishedAt: "2026-10-27T11:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("larsen-toubro-q2-infrastructure-october-2026"),
+    keyTakeaways: [
+      "Larsen and Toubro posted Q2 consolidated net profit of about ₹5,202 crore versus the year-ago period, with revenue from operations near ₹78,750 crore.",
+      "Management linked growth to strong order inflows across infrastructure, including transportation and energy projects.",
+      "Earlier on 27 October the company also announced major Dhaka Metro packages valued in the ₹5,000–10,000 crore band.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Larsen and Toubro Ltd reported September-quarter consolidated net profit of about ₹5,202 crore, a rise of roughly 33% year on year, with revenue from operations near ₹78,750 crore. Exchange filings and wire coverage tied the beat to brisk order inflows as India spends on roads, metros, power transmission and refinery upgrades, while Gulf reconstruction and South Asian transport projects add export earnings. The same morning the company said its transportation infrastructure arm secured major design-and-build packages for Dhaka Metro Line 1 in Bangladesh, tagged in the ₹5,000–10,000 crore range. The results day therefore paired a domestic earnings jump with another large overseas bookmark.",
+      "What does this mean?",
+      "L&T’s model earns when projects move from tender to billing milestones, so profit growth with rising revenue signals execution rather than one-off treasury gains. A wide order book spreads risk across ministries, state utilities and private industrial capex, which matters when any single sector slows. International wins diversify currency and geopolitical exposure but add execution complexity in markets with different permitting norms. Competitors in heavy engineering and construction see the same pipeline, yet L&T’s scale on metros and hydrocarbon plants keeps it at the front of bid lists when clients want single-point accountability.",
+      "Why should I care?",
+      "If you supply steel, cement, cables or construction equipment, L&T’s margin and revenue trajectory is a proxy for how fast sanctioned public projects are hitting the ground. Real-estate and industrial clients awaiting turnkey plants should watch whether engineering firms pass through higher input costs on new bids. Investors comparing capital-goods names should read order inflow commentary alongside profit, because bookings today become revenue over several years. Follow the next investor presentation on domestic versus international mix, execution on the Dhaka Metro award, and peer prints from BHEL, KEC and Thermax in the same earnings window.",
+    ],
+  },
+  {
+    slug: "redington-iphone-festive-slowdown-october-2026",
+    title: "Apple distributor Redington slid on reports of slower iPhone festive sales",
+    summary:
+      "On 27 October 2026 Redington Ltd shares fell about 2.4% on the NSE as market reports said Apple's iPhone sales slowed during the early festive season, raising questions about premium handset demand at authorised resellers.",
+    category: "industry",
+    companyOrSector: "Consumer electronics / distribution",
+    publishedAt: "2026-10-27T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("redington-iphone-festive-slowdown-october-2026"),
+    keyTakeaways: [
+      "Redington, a major authorised Apple distributor in India, saw its stock decline about 2.36% on 27 October 2026.",
+      "Coverage linked the move to reports of softer iPhone sales during the festive period.",
+      "The print follows broader smartphone shipment weakness even as travel and other discretionary categories show resilience.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 shares of Redington Ltd, among India’s largest authorised distributors of Apple products, fell about 2.4% on the National Stock Exchange. Traders pointed to media reports that iPhone sales through the festive window were slower than some channel checks had expected. Redington earns fees and margins on moving hardware into multi-brand outlets and operator stores, so early softness at the premium end shows up quickly in its listed equity even before Apple reports global numbers. The session sat alongside other consumer stories this week, from strong travel searches to luxury sweet gifting, highlighting a split between experiences and high-ticket gadgets.",
+      "What does this mean?",
+      "Festive quarters usually concentrate smartphone upgrades around exchange offers and zero-cost EMIs. When premium iPhone lines underperform, it can mean financing terms tightened, waiting for new launches, or buyers rotating spend toward travel and gold-priced gifts instead of another handset cycle. Distributors feel inventory and working-capital pain first because they bridge Apple’s factory calendar with India’s promotion calendar. A single-day share dip is not a verdict on the full quarter, but it signals that the market is sensitive to any hint that the top-priced shelf is crowded.",
+      "Why should I care?",
+      "If you run electronics retail, reconcile sell-through data with distributor incentives before ordering January stock. Brands competing below ₹40,000 may pick up switchers even when iPhone volumes look soft. Investors should separate Redington’s Apple exposure from its broader IT distribution business when reading headlines. Watch Diwali week channel checks, Apple India pricing actions, and quarterly results from Titan or travel names for whether premium consumption is rotating rather than disappearing.",
+    ],
+  },
+  {
     slug: "transformers-rectifiers-greenfield-capex-october-2026",
     title: "Transformers and Rectifiers is spending ₹1,250 crore on three new plants",
     summary:
@@ -6398,6 +6518,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "maruti-q2-commodity-costs-october-2026": "markets",
+  "luxury-diwali-mithai-gifting-october-2026": "markets",
+  "ioc-india-shipping-fleet-crude-october-2026": "policy",
+  "larsen-toubro-q2-infrastructure-october-2026": "companies",
+  "redington-iphone-festive-slowdown-october-2026": "markets",
   "transformers-rectifiers-greenfield-capex-october-2026": "companies",
   "mankind-pharma-q2-otc-gap-october-2026": "markets",
   "dac-defence-acquisition-clearance-october-2026": "policy",
