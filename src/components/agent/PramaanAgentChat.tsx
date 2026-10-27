@@ -25,16 +25,19 @@ const SUGGESTIONS = [
 export function PramaanAgentChat() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { threads, threadsReady, filesOpen, setFilesOpen, refreshThreads, upsertThread } = useAgentShell();
+  const { threads, threadsReady, filesOpen, setFilesOpen, refreshThreads, upsertThread, draftNonce } =
+    useAgentShell();
   const threadParam = searchParams.get("t");
   const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "";
+  /** Composer-ready draft: no ?t= yet — thread id is minted only on first send. */
+  const isDraft = !threadParam || threadParam === "new" || !isValidThreadId(threadParam);
 
   const authHeaders = useCallback(() => pocketedgeAuthHeaders(), []);
 
-  // Bare /ai or ?t=new → land on an empty New chat (never auto-open newest history).
+  // Strip invalid / placeholder ?t= so refresh of /ai stays a draft (no orphan thread ids).
   useEffect(() => {
-    if (threadParam === "new" || !threadParam || !isValidThreadId(threadParam)) {
-      router.replace(`/ai?t=${newThreadId()}`);
+    if (threadParam === "new" || (threadParam && !isValidThreadId(threadParam))) {
+      router.replace("/ai");
     }
   }, [threadParam, router]);
 
@@ -47,6 +50,8 @@ export function PramaanAgentChat() {
   const [error, setError] = useState<string | null>(null);
   const libraryLoaded = useRef(false);
   const loadedThreadRef = useRef<string | null>(null);
+  /** Id chosen for the current draft send (before URL updates). */
+  const draftSendIdRef = useRef<string | null>(null);
 
   /** Thread already has history on the server (sidebar), so we must fetch messages. */
   const isExistingThread = useMemo(
@@ -93,11 +98,36 @@ export function PramaanAgentChat() {
     }
   }, [authHeaders, loadThread, threadId]);
 
-  // New empty chat: show composer immediately. Existing: wait for threads, then fetch once.
+  // Draft: composer immediately. Existing URL thread: wait for sidebar, then fetch once.
   useEffect(() => {
+    if (isDraft) {
+      // Keep a stable draft session across sidebar refetch; reset on New chat (draftNonce).
+      const draftKey = `__draft__:${draftNonce}`;
+      if (loadedThreadRef.current === draftKey && ready) return;
+      libraryLoaded.current = false;
+      setMessages([]);
+      setOrders({});
+      setFileLibrary([]);
+      setError(null);
+      setAgentState("active");
+      setReady(true);
+      loadedThreadRef.current = draftKey;
+      draftSendIdRef.current = null;
+      return;
+    }
+
     if (!threadId) return;
 
-    // Same thread already loaded (e.g. first send promoted it into the sidebar) — keep messages.
+    // First send just wrote ?t= — keep in-flight messages.
+    if (draftSendIdRef.current === threadId) {
+      loadedThreadRef.current = threadId;
+      draftSendIdRef.current = null;
+      setReady(true);
+      setAgentState("active");
+      return;
+    }
+
+    // Same thread already loaded — keep messages.
     if (loadedThreadRef.current === threadId && ready) return;
 
     libraryLoaded.current = false;
@@ -106,19 +136,14 @@ export function PramaanAgentChat() {
     setFileLibrary([]);
     setError(null);
 
+    // Wait for sidebar so we don't treat a real thread as a draft on hard refresh.
     if (!threadsReady) {
-      // Brand-new id from New chat / bare /ai: do not block on sidebar.
-      if (!isExistingThread) {
-        setAgentState("active");
-        setReady(true);
-        loadedThreadRef.current = threadId;
-      } else {
-        setReady(false);
-      }
+      setReady(false);
       return;
     }
 
     if (!isExistingThread) {
+      // Not in sidebar (new id, or cache lag): composer only — first send creates the thread.
       setAgentState("active");
       setReady(true);
       loadedThreadRef.current = threadId;
@@ -127,7 +152,7 @@ export function PramaanAgentChat() {
 
     setReady(false);
     void reloadChat();
-  }, [threadId, threadsReady, isExistingThread, reloadChat, ready]);
+  }, [isDraft, threadId, threadsReady, isExistingThread, reloadChat, ready, draftNonce]);
   // Lazy-load files/orders when the Files panel opens.
   useEffect(() => {
     if (!filesOpen || !threadId || !isExistingThread || libraryLoaded.current) return;
@@ -240,6 +265,9 @@ export function PramaanAgentChat() {
     setBusy(true);
     setError(null);
     let sentId: string | undefined;
+    // Mint id only when sending so empty drafts never become threads.
+    const sendThreadId = threadId || newThreadId();
+    const promotedFromDraft = !threadId;
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/messages", {
@@ -247,14 +275,14 @@ export function PramaanAgentChat() {
         headers: { ...headers, "Content-Type": "application/json" },
         body: JSON.stringify({
           text: q,
-          threadId,
+          threadId: sendThreadId,
           attachments: attachmentIds.length ? attachmentIds : undefined,
         }),
       });
       const json = await res.json();
       if (!res.ok) {
         const busy = res.status === 409 || json?.error?.code === "agent_busy";
-        if (busy) {
+        if (busy && threadId) {
           await loadThread(headers);
           refreshThreads();
         }
@@ -270,15 +298,29 @@ export function PramaanAgentChat() {
       setMessages((m) => [msg, ...m]);
       const title = q.trim() || "New chat";
       upsertThread({
-        id: threadId,
+        id: sendThreadId,
         title: title.length > 72 ? `${title.slice(0, 72)}…` : title,
         updatedAt: new Date().toISOString(),
         working: true,
       });
+      if (promotedFromDraft) {
+        draftSendIdRef.current = sendThreadId;
+        loadedThreadRef.current = sendThreadId;
+        router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+      }
       refreshThreads();
       const final = await streamMessage(msg.id, headers);
       setMessages((m) => m.map((x) => (x.id === final.id ? final : x)));
-      await loadThread(headers);
+      await fetch(
+        `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=50&scope=messages`,
+        { headers, cache: "no-store" },
+      )
+        .then(async (r) => {
+          if (!r.ok) return;
+          const body = await r.json();
+          setMessages((body.messages as AgentMessage[]) || []);
+        })
+        .catch(() => undefined);
       await refreshArtifacts();
       refreshThreads();
       return true;
@@ -287,7 +329,18 @@ export function PramaanAgentChat() {
         try {
           const headers = await authHeaders();
           await reconcileMessage(sentId, headers, 30_000);
-          await loadThread(headers);
+          if (threadId || draftSendIdRef.current) {
+            await fetch(
+              `/api/agent/chat-state?threadId=${encodeURIComponent(threadId || draftSendIdRef.current!)}&limit=50&scope=messages`,
+              { headers, cache: "no-store" },
+            )
+              .then(async (r) => {
+                if (!r.ok) return;
+                const body = await r.json();
+                setMessages((body.messages as AgentMessage[]) || []);
+              })
+              .catch(() => undefined);
+          }
           refreshThreads();
         } catch {
           // keep the surfaced error below
@@ -330,10 +383,10 @@ export function PramaanAgentChat() {
     [thread],
   );
 
-  if (!threadId || !ready) {
+  if (!ready) {
     return (
       <div className="flex flex-1 items-center justify-center p-8">
-        <p className="text-ink-2">{!threadId ? "Starting chat…" : "Loading conversation…"}</p>
+        <p className="text-ink-2">Loading conversation…</p>
       </div>
     );
   }

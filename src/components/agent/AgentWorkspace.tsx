@@ -9,8 +9,8 @@ import {
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
+import { clearThreadsCache, readThreadsCache, writeThreadsCache } from "@/lib/agent/threads-cache";
 import { mergeThreadLists, prunePendingThreads } from "@/lib/agent/threads-from-messages";
-import { newThreadId } from "@/lib/agent/thread-id";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 import {
   hydratePocketedgeSessionFromCookie,
@@ -151,10 +151,12 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const authError = searchParams.get("auth_error");
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
   const [serverThreads, setServerThreads] = useState<AgentThreadSummary[]>([]);
   const [pendingThreads, setPendingThreads] = useState<AgentThreadSummary[]>([]);
   const [threadsReady, setThreadsReady] = useState(false);
   const [threadsError, setThreadsError] = useState<string | null>(null);
+  const [draftNonce, setDraftNonce] = useState(0);
   const [filesOpen, setFilesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -189,16 +191,17 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       setPendingThreads((pending) => prunePendingThreads(next, pending));
       setThreadsError(null);
       setThreadsReady(true);
+      if (userId) writeThreadsCache(userId, next);
     } catch {
       setThreadsError("Could not load chats. Check your connection and try again.");
       setThreadsReady(true);
     }
-  }, []);
+  }, [userId]);
 
   const upsertThread = useCallback((thread: AgentThreadSummary) => {
     setPendingThreads((prev) => mergeThreadLists(prev, [thread]));
-    void loadThreads();
-  }, [loadThreads]);
+    // Optimistic only — avoid an immediate full refetch; stream/settle refresh covers it.
+  }, []);
 
   useEffect(() => {
     if (!pocketedgeAuthConfigured()) {
@@ -209,27 +212,41 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       await hydratePocketedgeSessionFromCookie();
       const supabase = getPocketedgeSupabase();
       const { data } = await supabase.auth.getSession();
-      const ok = Boolean(data.session?.user);
+      const user = data.session?.user;
+      const ok = Boolean(user);
       setSignedIn(ok);
+      setUserId(user?.id ?? null);
       if (!ok) {
         setServerThreads([]);
         setPendingThreads([]);
         setThreadsReady(false);
         setThreadsError(null);
+        clearThreadsCache();
+      } else if (user?.id) {
+        const cached = readThreadsCache(user.id);
+        if (cached?.length) {
+          setServerThreads(cached);
+          setThreadsReady(true);
+        }
       }
       setReady(true);
     })();
     const supabase = getPocketedgeSupabase();
-    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "TOKEN_REFRESHED") return;
       if (event === "SIGNED_OUT") {
         setSignedIn(false);
+        setUserId(null);
         setServerThreads([]);
         setPendingThreads([]);
         setThreadsReady(false);
+        clearThreadsCache();
         return;
       }
-      if (event === "SIGNED_IN") setSignedIn(true);
+      if (event === "SIGNED_IN") {
+        setSignedIn(true);
+        setUserId(session?.user?.id ?? null);
+      }
     });
     return () => {
       sub.subscription.unsubscribe();
@@ -245,13 +262,19 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const anyWorking = useMemo(() => threads.some((t) => t.working), [threads]);
   useEffect(() => {
     if (!signedIn || anyWorking) return;
-    const id = window.setInterval(() => void loadThreads(), 60_000);
+    const id = window.setInterval(() => void loadThreads(), 120_000);
     return () => window.clearInterval(id);
   }, [signedIn, anyWorking, loadThreads]);
 
   useEffect(() => {
     if (!signedIn) return;
-    const refresh = () => void loadThreads();
+    let last = 0;
+    const refresh = () => {
+      const now = Date.now();
+      if (now - last < 30_000) return;
+      last = now;
+      void loadThreads();
+    };
     window.addEventListener("focus", refresh);
     const onVis = () => {
       if (document.visibilityState === "visible") refresh();
@@ -269,20 +292,19 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       threadsReady,
       refreshThreads: loadThreads,
       upsertThread,
+      draftNonce,
       filesOpen,
       setFilesOpen,
       sidebarOpen,
       setSidebarOpen,
     }),
-    [threads, threadsReady, loadThreads, upsertThread, filesOpen, sidebarOpen],
+    [threads, threadsReady, loadThreads, upsertThread, draftNonce, filesOpen, sidebarOpen],
   );
 
   function startNewChat() {
-    const id = newThreadId();
-    setPendingThreads((prev) =>
-      mergeThreadLists(prev, [{ id, title: "New chat", updatedAt: new Date().toISOString(), working: false }]),
-    );
-    router.push(`/ai?t=${encodeURIComponent(id)}`);
+    // Draft only — no sidebar row and no server thread until the first message.
+    setDraftNonce((n) => n + 1);
+    router.push("/ai");
     setSidebarOpen(false);
   }
 

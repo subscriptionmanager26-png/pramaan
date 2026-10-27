@@ -15,6 +15,8 @@ type AgentShellContextValue = {
   threadsReady: boolean;
   refreshThreads: () => void;
   upsertThread: (thread: AgentThreadSummary) => void;
+  /** Bumps when user clicks New chat so an already-open draft resets. */
+  draftNonce: number;
   filesOpen: boolean;
   setFilesOpen: (open: boolean) => void;
   sidebarOpen: boolean;
