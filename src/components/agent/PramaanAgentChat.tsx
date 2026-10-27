@@ -170,7 +170,9 @@ export function PramaanAgentChat() {
 
     const pullFull = async () => {
       const msg = await fetchMessage(messageId, headers);
-      if (msg) track.latest = msg;
+      if (!msg) return;
+      track.latest = msg;
+      setMessages((list) => list.map((m) => (m.id === messageId ? msg : m)));
     };
 
     const reader = res.body.getReader();
