@@ -146,7 +146,61 @@ def redington(d: ImageDraw.ImageDraw) -> None:
     d.line([(640, 480), (1160, 320)], fill=INK, width=2)
 
 
+def telcos_6ghz(d: ImageDraw.ImageDraw) -> None:
+    # tower + Wi-Fi arc vs fibre lane
+    d.rectangle([120, 200, 200, 560], fill=BLUE)
+    d.polygon([(160, 200), (220, 120), (280, 200)], fill=RED)
+    for y in range(260, 520, 50):
+        d.arc([60, y - 40, 340, y + 40], 270, 90, fill=YELLOW, width=3)
+    d.rectangle([640, 280, 1120, 320], fill=GOLD)
+    d.line([(640, 300), (1120, 300)], fill=INK, width=2)
+    d.rectangle([700, 360, 1060, 520], fill=RED)
+    d.ellipse([980, 400, 1060, 480], fill=CREAM)
+
+
+def bajaj_auto_q2(d: ImageDraw.ImageDraw) -> None:
+    # motorcycle + export arc
+    d.ellipse([160, 400, 280, 480], fill=INK)
+    d.ellipse([360, 400, 480, 480], fill=INK)
+    d.rounded_rectangle([140, 320, 500, 420], radius=20, fill=BLUE)
+    d.polygon([(700, 480), (900, 360), (1100, 400), (1000, 520)], fill=YELLOW)
+    d.line([(720, 440), (1080, 380)], fill=GOLD, width=4)
+
+
+def sbi_life_q2(d: ImageDraw.ImageDraw) -> None:
+    # shield + rising premium bars
+    d.polygon([(200, 520), (200, 280), (360, 200), (520, 280), (520, 520)], fill=BLUE)
+    d.ellipse([300, 320, 420, 440], fill=CREAM)
+    for i, h in enumerate([100, 160, 220, 280]):
+        x = 680 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, YELLOW, RED, BLUE][i])
+
+
+def star_health_h1(d: ImageDraw.ImageDraw) -> None:
+    # cross + underwriting dial
+    d.rectangle([200, 240, 280, 560], fill=RED)
+    d.rectangle([120, 360, 360, 440], fill=RED)
+    d.ellipse([720, 240, 1000, 520], outline=GOLD, width=6)
+    d.pieslice([740, 260, 980, 500], 200, 320, fill=BLUE)
+    d.line([(860, 380), (920, 320)], fill=YELLOW, width=5)
+
+
+def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
+    # pill bottle + dollar lane to billion tick
+    d.rounded_rectangle([140, 220, 280, 520], radius=30, fill=BLUE)
+    d.rectangle([180, 260, 240, 300], fill=CREAM)
+    d.ellipse([700, 300, 820, 420], fill=YELLOW)
+    d.rectangle([860, 200, 900, 560], fill=RED)
+    d.rectangle([940, 280, 980, 560], fill=BLUE)
+    d.rectangle([1020, 360, 1060, 560], fill=YELLOW)
+
+
 def main() -> None:
+    save("telcos-6ghz-wifi-outdoor-october-2026", telcos_6ghz)
+    save("bajaj-auto-record-q2-exports-ev-october-2026", bajaj_auto_q2)
+    save("sbi-life-q2-premium-growth-guidance-october-2026", sbi_life_q2)
+    save("star-health-h1-underwriting-profit-october-2026", star_health_h1)
+    save("cipla-us-billion-revenue-target-october-2026", cipla_us_target)
     save("dac-defence-acquisition-clearance-october-2026", dac)
     save("agoda-festive-travel-intentional-october-2026", agoda)
     save("paytm-q2-profitability-october-2026", paytm)

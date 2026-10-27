@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bajaj-auto-record-q2-exports-ev-october-2026",
+    title: "Bajaj Auto posted record quarterly profit as exports and EV sales accelerated",
+    summary:
+      "On 27 October 2026 Bajaj Auto Ltd reported September-quarter consolidated profit attributable to shareholders of about ₹3,436 crore, up roughly 62% year on year, on revenue from operations near ₹25,126 crore as exports, electric two-wheelers and premium motorcycles grew despite input-cost inflation.",
+    category: "industry",
+    companyOrSector: "Automobiles / two-wheelers",
+    publishedAt: "2026-10-27T23:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bajaj-auto-record-q2-exports-ev-october-2026"),
+    keyTakeaways: [
+      "Consolidated net profit attributable to shareholders was about ₹3,436 crore in Q2 FY27 versus roughly ₹2,122 crore a year earlier, per exchange coverage dated 27 October 2026.",
+      "Revenue from operations rose about 60% year on year to near ₹25,126 crore, with management citing record volume, revenue, EBITDA and free cash flow in the quarter.",
+      "Export momentum, electric vehicle volumes and the consolidation of overseas KTM operations contributed to the headline growth figures.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Bajaj Auto Ltd published results for the quarter ended 30 September 2026. Consolidated net profit attributable to shareholders climbed about 62% year on year to roughly ₹3,436 crore, while revenue from operations increased about 60% to near ₹25,126 crore. Exchange summaries described the period as a record on volume, revenue, earnings before interest, tax, depreciation and amortisation, profit after tax and free cash flow. Management flagged that commodity inflation, supply constraints and currency volatility remain risks, but said capacity additions and new product launches are still on track. The print lands in the same week Maruti Suzuki reported higher volumes with a profit miss tied to metal costs, so investors are parsing whether two-wheeler demand is outpacing passenger cars on margin.",
+      "What does this mean?",
+      "Bajaj Auto earns from domestic motorcycles, three-wheelers, a growing electric scooter line and a large export book, so a broad-based beat usually means more than one geography fired at once. Strong overseas shipments help when rupee moves whipsaw import costs on electronic components. Electric and premium bikes lift average selling prices compared with entry commuter models, which supports revenue growth even when raw material bills rise. Consolidating KTM operations adds overseas earnings to the Indian listed entity, which can exaggerate year-on-year percentages but still signals management’s bet on global brands. Rivals TVS Motor and Hero MotoCorp face the same festive discounting environment, so Bajaj’s commentary is a useful check on whether young buyers are still upgrading.",
+      "Why should I care?",
+      "If you are buying a bike or scooter this quarter, compare festive cash discounts against expected price resets after Diwali and check finance subvention on EV models. Fleet and export-oriented dealers should watch whether container availability and forex hedges stay favourable into the December quarter. Investors should separate one-off consolidation effects from underlying volume trends before extrapolating margins. Watch November wholesale data from SIAM, peer earnings from TVS and Hero, and any formal price circulars if commodity inflation persists.",
+    ],
+  },
+  {
+    slug: "cipla-us-billion-revenue-target-october-2026",
+    title: "Cipla still expects to hit one billion dollars of US sales this year",
+    summary:
+      "On 27 October 2026 Cipla Ltd chief executive Achin Gupta told reporters the drug maker still targets about one billion dollars of annual US revenue by the end of financial year 2026-27, leaning on respiratory and peptide launches even after second-quarter margins faced geopolitical and supply pressure.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / exports",
+    publishedAt: "2026-10-27T23:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cipla-us-billion-revenue-target-october-2026"),
+    keyTakeaways: [
+      "Managing director and global CEO Achin Gupta reaffirmed a roughly one billion dollar US revenue exit rate on 27 October 2026 despite near-term supply headwinds.",
+      "Second-quarter revenue was about ₹7,404 crore in one exchange summary, up about 4% quarter on quarter with sequential margin improvement.",
+      "Management tied the US goal to respiratory and peptide product ramps rather than a single blockbuster launch.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Cipla Ltd executives updated investors after the September-quarter earnings cycle. Managing director and global chief executive Achin Gupta said the company still expects to reach about one billion dollars of annual revenue in the United States by the end of financial year 2026-27. He acknowledged that second-quarter performance faced pressure from geopolitical disruption and tight supply in some US lines, but argued the existing pipeline can close the gap. Exchange digests put quarterly revenue from operations near ₹7,404 crore, about 4% higher quarter on quarter, with margins improving sequentially even as year-on-year comparisons stayed muted.",
+      "What does this mean?",
+      "US generics and complex inhalation products remain a high-margin export pool for Indian manufacturers, but only if plants stay inspection-clean and launches arrive on schedule. Cipla’s target is an exit rate, not a single quarter’s print, so investors should watch monthly script trends and wholesale inventory rather than one headline number. Respiratory and peptide categories need more manufacturing discipline than simple oral tablets, which is why management emphasises supply ramp-ups. A reaffirmed goal after a noisy quarter tells the market that leadership still believes US demand will absorb additional SKUs, not that every line is shipping perfectly today.",
+      "Why should I care?",
+      "If you hold Indian pharma stocks, compare Cipla’s US commentary with recent FDA outcomes at its subsidiaries and peers such as Sun Pharma and Dr. Reddy’s during the same earnings week. Hospital buyers and distributors stateside care about whether inhalation and injectable lines stay in stock without import alerts. Patients in India benefit indirectly when export profits fund domestic pricing flexibility on chronic therapies. Watch US product-specific approvals, any FDA import alerts, and the next investor presentation on which molecules drive the billion-dollar path.",
+    ],
+  },
+  {
+    slug: "telcos-6ghz-wifi-outdoor-october-2026",
+    title: "Jio, Airtel and Vi want outdoor Wi-Fi power rules eased on the 6 GHz band",
+    summary:
+      "On 27 October 2026 Reliance Jio, Bharti Airtel and Vodafone Idea asked the Department of Telecommunications to permit high-power outdoor use on the lower 6 GHz Wi-Fi band, arguing it could extend broadband in places where laying fibre is costly.",
+    category: "industry",
+    companyOrSector: "Telecom / broadband policy",
+    publishedAt: "2026-10-27T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("telcos-6ghz-wifi-outdoor-october-2026"),
+    keyTakeaways: [
+      "The Cellular Operators Association of India filed the request on behalf of Jio, Airtel and Vodafone Idea on 27 October 2026.",
+      "Operators want high-power outdoor deployment on the lower portion of the 6 GHz band to widen fixed-wireless style broadband.",
+      "The push lands while telcos also invest in 5G and fibre-to-the-home builds across cities and towns.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 reporting from New Delhi said India’s three large mobile operators asked the Department of Telecommunications to allow high-power outdoor use on the lower end of the 6 GHz Wi-Fi band. Reliance Jio, Bharti Airtel and Vodafone Idea made the request through the Cellular Operators Association of India. They argued that stronger outdoor Wi-Fi could carry broadband to neighbourhoods where trenching fibre is slow or expensive, especially in dense urban pockets and semi-urban townships. The 6 GHz slice matters because it offers wider channels than older Wi-Fi bands, which can mean faster home-style speeds if regulators set power limits that make outdoor coverage viable.",
+      "What does this mean?",
+      "Spectrum rules decide whether telcos compete on mobile airwaves alone or can also sell home broadband with fixed-wireless kits. High-power outdoor Wi-Fi could let operators hang radios on towers or poles to reach apartment blocks without pulling fibre to every flat. That may speed rollout in peri-urban markets where return on fibre is still debated. It also bumps against equipment makers, cable operators and enterprises that want the same frequencies for indoor Wi-Fi 6E devices. The Department of Telecommunications must balance interference, national broadband goals and auction politics on nearby bands. A favourable rule would give Jio, Airtel and Vi another lever beside fibre and 5G fixed wireless.",
+      "Why should I care?",
+      "If you live in a township still waiting on fibre, watch whether your operator markets a 6 GHz outdoor package and what speeds are guaranteed at peak hours. Small internet service providers may face stiffer competition if national telcos blanket an area with fixed-wireless. Enterprises planning office Wi-Fi upgrades should check India’s final power limits before buying 6 GHz access points. Follow Trai and DoT consultations, any coexistence tests with satellite users, and broadband tariff sheets from JioFiber, Airtel Xstream and Vi after a rule change.",
+    ],
+  },
+  {
+    slug: "star-health-h1-underwriting-profit-october-2026",
+    title: "Star Health returned to an underwriting profit in the first half",
+    summary:
+      "On 27 October 2026 Star Health and Allied Insurance Co Ltd said gross written premium rose about 19% year on year in the first half of financial year 2026-27 while profit after tax increased about 57%, with the combined ratio improving to 97.9% as retail channels grew.",
+    category: "industry",
+    companyOrSector: "Insurance / health cover",
+    publishedAt: "2026-10-27T23:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("star-health-h1-underwriting-profit-october-2026"),
+    keyTakeaways: [
+      "H1 FY27 gross written premium rose about 19% year on year while profit after tax climbed about 57%, per company commentary on 27 October 2026.",
+      "The combined ratio improved to 97.9%, indicating underwriting profit before investment income.",
+      "Growth was led by retail and proprietary distribution, with digital claims and sales investments continuing.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 Star Health and Allied Insurance Co Ltd updated investors on the six months ended 30 September 2026. Gross written premium rose about 19% year on year while profit after tax increased about 57%. Management said underwriting swung back to profit, with the combined ratio improving to 97.9%, a level below 100 where insurers earn on policies before investment returns. Retail and proprietary channels led the growth, and the company highlighted spending on digital distribution and claims efficiency. Separate exchange summaries for the September quarter also noted redemption of non-convertible debentures and solvency staying above regulatory minimums.",
+      "What does this mean?",
+      "Health insurers live or die on claims discipline and agent productivity. A sub-100 combined ratio after several volatile post-pandemic years suggests repricing, tighter underwriting and faster claims processing are working together. Retail growth matters because corporate group policies can be lumpy, while individual family floater plans renew annually and build brand stickiness. Digital claims tools reduce leakage and customer frustration, which feeds renewal rates. Star Health competes with HDFC ERGO, ICICI Lombard and public-sector general insurers, so its margin recovery is a bellwether for whether households still buy standalone health cover rather than relying only on employer plans.",
+      "Why should I care?",
+      "If your family policy renews this winter, compare room-rent limits, co-pay clauses and network hospitals before switching solely on premium. Employers designing group cover should watch whether standalone insurers offer better wellness add-ons than bundled corporate plans. Investors in listed insurers should read combined ratio trends alongside investment income, because bond yields also move earnings. Watch IRDAI filings on approved rate revisions, monsoon-related claims in the second half, and peer results from HDFC ERGO and Niva Bupa in the same earnings season.",
+    ],
+  },
+  {
+    slug: "sbi-life-q2-premium-growth-guidance-october-2026",
+    title: "SBI Life grew second-quarter profit 11% and kept its premium growth target",
+    summary:
+      "On 27 October 2026 SBI Life Insurance Co Ltd reported net profit of about ₹549 crore for the September quarter, up roughly 11% year on year, with net premium income rising about 8% as management reaffirmed 14% to 15% individual rated premium growth guidance for financial year 2026-27.",
+    category: "industry",
+    companyOrSector: "Insurance / life cover",
+    publishedAt: "2026-10-27T23:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-life-q2-premium-growth-guidance-october-2026"),
+    keyTakeaways: [
+      "Net profit was about ₹549 crore in Q2 FY27 versus roughly ₹495 crore a year earlier, per the 27 October 2026 exchange filing.",
+      "Net premium income grew about 8% year on year in the quarter.",
+      "Management maintained guidance for 14% to 15% growth in individual rated premium for the full fiscal year.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 SBI Life Insurance Co Ltd announced results for the quarter ended 30 September 2026. Net profit rose about 11% year on year to roughly ₹549 crore, from near ₹495 crore in the year-ago period. Net premium income increased about 8% over the same window. In parallel commentary, executives reaffirmed guidance for 14% to 15% growth in individual rated premium during financial year 2026-27. Presentation slides highlighted growth in profit after tax, value of new business and embedded value in the first half, with product mix tilting toward traditional non-unit-linked plans rather than market-linked policies.",
+      "What does this mean?",
+      "Life insurers earn when households keep paying annual premiums on protection and savings products. Reaffirming a mid-teens growth target after a quarter of high-single-digit premium growth signals confidence in the December and March recruitment seasons, not just festival-linked unit-linked sales. A shift toward non-unit-linked policies can smooth volatility when equity markets wobble, but it also pressures agents to sell longer-tenor commitments. SBI Life’s bancassurance tie with State Bank of India gives it branch reach, yet regulatory debates on distribution commissions remain a swing factor for margins industry-wide.",
+      "Why should I care?",
+      "If you are buying term or endowment cover, compare quotes on claim settlement ratios and persistency, not just first-year premium discounts. Bank customers pitched policies at the counter should read suitability labels and free-look periods. Investors tracking LIC, HDFC Life and ICICI Prudential Life should use SBI Life’s guidance as a sanity check on whether protection demand is holding after recent rate hikes. Watch IRDAI circulars on commission caps, January-March agency hiring data, and whether equity market swings pull buyers back toward unit-linked products.",
+    ],
+  },
+  {
     slug: "maruti-q2-commodity-costs-october-2026",
     title: "Maruti Suzuki sold more cars but earned less as metal costs climbed",
     summary:
@@ -6518,6 +6638,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bajaj-auto-record-q2-exports-ev-october-2026": "companies",
+  "cipla-us-billion-revenue-target-october-2026": "companies",
+  "telcos-6ghz-wifi-outdoor-october-2026": "policy",
+  "star-health-h1-underwriting-profit-october-2026": "markets",
+  "sbi-life-q2-premium-growth-guidance-october-2026": "markets",
   "maruti-q2-commodity-costs-october-2026": "markets",
   "luxury-diwali-mithai-gifting-october-2026": "markets",
   "ioc-india-shipping-fleet-crude-october-2026": "policy",
