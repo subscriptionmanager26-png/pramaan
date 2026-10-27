@@ -14,11 +14,15 @@ function ActionCard({
   pe,
   order,
   onDecide,
+  onPortfolioConfirm,
+  portfolioApplyingId,
 }: {
   action: AgentAction;
   pe: boolean;
   order?: OrderState;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+  onPortfolioConfirm?: (action: Extract<AgentAction, { kind: "portfolio_confirmation" }>) => void;
+  portfolioApplyingId?: string | null;
 }) {
   if (action.kind === "connection_login") {
     return (
@@ -39,6 +43,62 @@ function ActionCard({
         >
           Log in
         </a>
+      </div>
+    );
+  }
+  if (action.kind === "portfolio_confirmation") {
+    const applying = portfolioApplyingId === action.proposalId;
+    const expired = Date.parse(action.expiresAt) < Date.now();
+    return (
+      <div className={`overflow-hidden rounded-xl border ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface)]" : "border-line bg-white"}`}>
+        <div className="p-4">
+          <p className={`font-semibold ${pe ? "text-[var(--pe-text)]" : "text-ink"}`}>
+            {action.mode === "merge" ? "Update holdings" : "Replace holdings"}
+          </p>
+          <p className={`mt-1 text-sm ${pe ? "text-[var(--pe-text-secondary)]" : "text-ink-2"}`}>{action.summary}</p>
+          <ul className="mt-3 max-h-40 space-y-1 overflow-y-auto text-[13px] tabular-nums">
+            {action.holdings.slice(0, 40).map((h) => (
+              <li key={h.ticker} className={pe ? "text-[var(--pe-text)]" : "text-ink"}>
+                <span className="font-medium">{h.ticker}</span>
+                <span className={pe ? "text-[var(--pe-text-secondary)]" : "text-ink-2"}>
+                  {" "}
+                  · {h.qty.toLocaleString("en-IN")}
+                  {h.avg != null ? ` @ ₹${h.avg.toLocaleString("en-IN")}` : ""}
+                </span>
+              </li>
+            ))}
+            {action.holdings.length > 40 ? (
+              <li className={pe ? "text-[var(--pe-text-secondary)]" : "text-ink-3"}>
+                +{action.holdings.length - 40} more
+              </li>
+            ) : null}
+          </ul>
+        </div>
+        <div
+          className={`flex flex-wrap items-center justify-between gap-3 border-t px-4 py-2.5 ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface-muted)]" : "border-line bg-paper-2"}`}
+        >
+          {expired ? (
+            <span className="text-xs text-[var(--pe-text-secondary)]">This proposal expired — ask the assistant again</span>
+          ) : onPortfolioConfirm ? (
+            <>
+              <span className="text-xs text-[var(--pe-text-secondary)]">Not saved until you confirm</span>
+              <button
+                type="button"
+                className={
+                  pe
+                    ? "rounded-full bg-[var(--pe-accent)] px-3 py-1.5 text-sm font-medium text-white disabled:opacity-60"
+                    : "btn-primary text-[13px] disabled:opacity-60"
+                }
+                disabled={applying}
+                onClick={() => onPortfolioConfirm(action)}
+              >
+                {applying ? "Saving…" : "Confirm & save"}
+              </button>
+            </>
+          ) : (
+            <span className="text-xs text-[var(--pe-text-secondary)]">Open Portfolio to confirm</span>
+          )}
+        </div>
       </div>
     );
   }
@@ -103,12 +163,16 @@ export function AgentBlocks({
   theme = "pramaan",
   orders,
   onDecide,
+  onPortfolioConfirm,
+  portfolioApplyingId,
 }: {
   blocks: UiBlock[];
   actions: AgentAction[];
   theme?: "pramaan" | "pocketedge";
   orders?: Record<string, OrderState>;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
+  onPortfolioConfirm?: (action: Extract<AgentAction, { kind: "portfolio_confirmation" }>) => void;
+  portfolioApplyingId?: string | null;
 }) {
   const pe = theme === "pocketedge";
   const border = pe ? "border-[var(--pe-border)]" : "border-line";
@@ -177,6 +241,8 @@ export function AgentBlocks({
           pe={pe}
           order={action.kind === "order_confirmation" ? orders?.[action.orderId] : undefined}
           onDecide={onDecide}
+          onPortfolioConfirm={onPortfolioConfirm}
+          portfolioApplyingId={portfolioApplyingId}
         />
       ))}
     </div>

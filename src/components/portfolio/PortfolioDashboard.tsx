@@ -1,20 +1,25 @@
-import Link from "next/link";
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
 
 import { AllocationDonut } from "@/components/portfolio/AllocationDonut";
-import { PerformanceChart } from "@/components/portfolio/PerformanceChart";
+import { PortfolioAgentPanel } from "@/components/portfolio/PortfolioAgentPanel";
 import {
-  DEMO_PORTFOLIO_SNAPSHOT,
+  allocationFromHoldings,
   formatInr,
   formatPct,
-  type HoldingRow,
-} from "@/lib/portfolio/dashboard-data";
-import { pocketedgeAiUrl, pocketedgePortfolioTrackingUrl } from "@/lib/product-routes";
+  insightsFromHoldings,
+  portfolioTotals,
+  type LiveHolding,
+  type LivePortfolio,
+} from "@/lib/portfolio/holdings";
+import { pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
+import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
+import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
+import { pocketedgeAiUrl } from "@/lib/product-routes";
 
-const snapshot = DEMO_PORTFOLIO_SNAPSHOT;
-const AI_HREF = pocketedgeAiUrl();
-const HOLDINGS_HREF = pocketedgePortfolioTrackingUrl();
-
-function formatAsOf(iso: string) {
+function formatAsOf(iso: string | null) {
+  if (!iso) return null;
   try {
     return new Intl.DateTimeFormat("en-IN", { dateStyle: "medium", timeStyle: "short" }).format(new Date(iso));
   } catch {
@@ -44,40 +49,37 @@ function StatCard({
   );
 }
 
-function HoldingsTable({ rows }: { rows: HoldingRow[] }) {
+function HoldingsTable({ rows }: { rows: LiveHolding[] }) {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[640px] border-collapse text-left text-[13px]">
+      <table className="w-full min-w-[560px] border-collapse text-left text-[13px]">
         <thead>
           <tr className="border-b border-line text-meta text-ink-3">
             <th className="pb-3 pr-4 font-normal">Holding</th>
-            <th className="pb-3 pr-4 font-normal">Class</th>
             <th className="pb-3 pr-4 text-right font-normal">Qty</th>
             <th className="pb-3 pr-4 text-right font-normal">Value</th>
-            <th className="pb-3 pr-4 text-right font-normal">Day</th>
             <th className="pb-3 text-right font-normal">Weight</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => {
-            const dayTone = row.dayChangePct >= 0 ? "text-emerald-700" : "text-rose-700";
+            const total = rows.reduce((s, h) => s + (h.value ?? 0), 0);
+            const weight = total > 0 && row.value != null ? (row.value / total) * 100 : null;
             return (
-              <tr key={row.symbol} className="border-b border-line/80 last:border-0">
+              <tr key={row.ticker} className="border-b border-line/80 last:border-0">
                 <td className="py-3 pr-4">
-                  <p className="font-medium text-ink">{row.name}</p>
-                  <p className="text-meta text-ink-3">{row.symbol}</p>
+                  <p className="font-medium text-ink">{row.name || row.ticker}</p>
+                  <p className="text-meta text-ink-3">{row.ticker}</p>
                 </td>
-                <td className="py-3 pr-4 text-ink-2">{row.assetClass}</td>
                 <td className="py-3 pr-4 text-right tabular-nums text-ink-2">
-                  {row.quantity.toLocaleString("en-IN")}
+                  {row.qty.toLocaleString("en-IN")}
                 </td>
                 <td className="py-3 pr-4 text-right font-medium tabular-nums text-ink">
-                  {formatInr(row.value, true)}
+                  {row.value != null ? formatInr(row.value, true) : "—"}
                 </td>
-                <td className={`py-3 pr-4 text-right tabular-nums ${dayTone}`}>
-                  {formatPct(row.dayChangePct, true)}
+                <td className="py-3 text-right tabular-nums text-ink-2">
+                  {weight != null ? `${weight.toFixed(1)}%` : "—"}
                 </td>
-                <td className="py-3 text-right tabular-nums text-ink-2">{row.weightPct.toFixed(1)}%</td>
               </tr>
             );
           })}
@@ -87,138 +89,210 @@ function HoldingsTable({ rows }: { rows: HoldingRow[] }) {
   );
 }
 
-function SectorBars() {
-  const max = Math.max(...snapshot.sectors.map((s) => s.weightPct));
+function EmptyBook({ onOpenAi }: { onOpenAi: () => void }) {
   return (
-    <ul className="space-y-3">
-      {snapshot.sectors.map((sector) => (
-        <li key={sector.name}>
-          <div className="mb-1 flex justify-between text-[13px]">
-            <span className="text-ink">{sector.name}</span>
-            <span className="tabular-nums text-ink-2">{sector.weightPct}%</span>
-          </div>
-          <div className="h-2 overflow-hidden rounded-full border border-line bg-paper-2">
-            <div
-              className="h-full rounded-full bg-accent"
-              style={{ width: `${(sector.weightPct / max) * 100}%` }}
-            />
-          </div>
-        </li>
-      ))}
-    </ul>
+    <div className="rounded-2xl border border-dashed border-line bg-paper-2 px-5 py-10 text-center sm:px-8">
+      <h2 className="text-headline text-ink">No holdings yet</h2>
+      <p className="mx-auto mt-2 max-w-md text-[14px] leading-6 text-ink-2">
+        This page only shows your current book — nothing illustrative. Paste a list, upload a broker CSV, or describe
+        positions to the Portfolio AI. Nothing is saved until you confirm.
+      </p>
+      <button type="button" className="btn-primary mt-5 text-[13px]" onClick={onOpenAi}>
+        Set up with AI
+      </button>
+    </div>
   );
 }
 
 export function PortfolioDashboard() {
-  const dayUp = snapshot.dayChange >= 0;
+  const [signedIn, setSignedIn] = useState(false);
+  const [ready, setReady] = useState(false);
+  const [portfolio, setPortfolio] = useState<LivePortfolio | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [agentFocus, setAgentFocus] = useState(false);
+
+  const refresh = useCallback(async () => {
+    if (!pocketedgeAuthConfigured()) {
+      setReady(true);
+      return;
+    }
+    try {
+      const headers = await pocketedgeAuthHeaders();
+      const res = await fetch("/api/portfolio", { headers, cache: "no-store" });
+      if (res.status === 401) {
+        setSignedIn(false);
+        setPortfolio(null);
+        setReady(true);
+        return;
+      }
+      if (!res.ok) {
+        setLoadError("Could not load portfolio");
+        setReady(true);
+        return;
+      }
+      const json = await res.json();
+      setSignedIn(true);
+      setPortfolio((json.portfolio as LivePortfolio | null) ?? null);
+      setLoadError(null);
+    } catch {
+      setLoadError("Could not load portfolio");
+    } finally {
+      setReady(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!pocketedgeAuthConfigured()) {
+      setReady(true);
+      return;
+    }
+    void (async () => {
+      const supabase = getPocketedgeSupabase();
+      const { data } = await supabase.auth.getSession();
+      setSignedIn(Boolean(data.session?.user));
+      await refresh();
+    })();
+  }, [refresh]);
+
+  if (!ready) {
+    return <p className="text-[14px] text-ink-3">Loading portfolio…</p>;
+  }
+
+  if (!pocketedgeAuthConfigured()) {
+    return (
+      <p className="text-[14px] text-ink-2">
+        Sign-in is not configured, so live holdings cannot load.
+      </p>
+    );
+  }
+
+  if (!signedIn) {
+    return (
+      <div className="rounded-2xl border border-line bg-white px-5 py-8 text-center">
+        <h2 className="text-headline text-ink">Sign in to see your portfolio</h2>
+        <p className="mt-2 text-[14px] text-ink-2">We only show your real holdings — never sample data.</p>
+        <a href="/account" className="btn-primary mt-5 inline-flex text-[13px]">
+          Sign in
+        </a>
+      </div>
+    );
+  }
+
+  const holdings = portfolio?.holdings ?? [];
+  const totals = portfolioTotals(holdings);
+  const allocation = allocationFromHoldings(holdings);
+  const insights = insightsFromHoldings(holdings);
+  const asOf = formatAsOf(portfolio?.updatedAt ?? null);
+  const dayTone = totals.dayChange >= 0 ? "up" : "down";
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col gap-4 rounded-2xl border border-line bg-accent-2/50 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
-        <div className="min-w-0">
-          <p className="text-[14px] font-semibold text-ink">Questions about your portfolio?</p>
-          <p className="mt-1 text-[13px] leading-5 text-ink-2">
-            This page is a read-only dashboard. Ask for reviews, rebalancing ideas, or statement analysis in AI chat.
-          </p>
-        </div>
-        <Link href={AI_HREF} className="btn-primary shrink-0 text-[13px]">
-          Open AI assistant
-        </Link>
-      </div>
+    <div className="grid gap-6 lg:grid-cols-5">
+      <div className={`space-y-6 ${agentFocus ? "lg:col-span-2" : "lg:col-span-3"}`}>
+        {loadError ? <p className="text-[13px] text-rose-700">{loadError}</p> : null}
 
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full border border-line bg-highlight px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-ink">
-          Sample view
-        </span>
-        <span className="text-meta text-ink-3">As of {formatAsOf(snapshot.asOf)} · illustrative data for layout</span>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard label="Total value" value={formatInr(snapshot.totalValue)} />
-        <StatCard
-          label="Today"
-          value={formatInr(snapshot.dayChange, true)}
-          hint={formatPct(snapshot.dayChangePct, true)}
-          tone={dayUp ? "up" : "down"}
-        />
-        <StatCard
-          label="Invested"
-          value={formatInr(snapshot.invested, true)}
-          hint={`Unrealized ${formatInr(snapshot.unrealizedGain, true)}`}
-        />
-        <StatCard label="XIRR (1Y)" value={formatPct(snapshot.xirrPct)} hint="Annualized, demo" />
-      </div>
-
-      <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
-          <h2 className="text-headline text-ink">Asset allocation</h2>
-          <p className="mt-1 text-[13px] text-ink-2">How your wealth is split across asset classes.</p>
-          <div className="mt-6">
-            <AllocationDonut slices={snapshot.allocation} />
-          </div>
-        </section>
-
-        <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
-          <h2 className="text-headline text-ink">Performance</h2>
-          <p className="mt-1 text-[13px] text-ink-2">Indexed portfolio value over the last 12 months.</p>
-          <div className="mt-6">
-            <PerformanceChart points={snapshot.performance} caption="Index: 100 at start of period (demo)" />
-          </div>
-        </section>
-      </div>
-
-      <div className="grid gap-4 lg:grid-cols-5">
-        <section className="rounded-2xl border border-line bg-white p-5 sm:p-6 lg:col-span-3">
-          <div className="flex flex-wrap items-end justify-between gap-2">
-            <div>
-              <h2 className="text-headline text-ink">Holdings</h2>
-              <p className="mt-1 text-[13px] text-ink-2">Largest positions by current value.</p>
+        {!holdings.length ? (
+          <EmptyBook onOpenAi={() => setAgentFocus(true)} />
+        ) : (
+          <>
+            <div className="flex flex-wrap items-center gap-2 text-meta text-ink-3">
+              <span className="rounded-full border border-line bg-white px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-ink">
+                Live
+              </span>
+              {asOf ? <span>Updated {asOf}</span> : null}
+              <span>· current holdings only</span>
             </div>
-            <a href={HOLDINGS_HREF} className="text-[13px] font-semibold text-accent hover:underline">
-              Full holdings &amp; import →
-            </a>
-          </div>
-          <div className="mt-5">
-            <HoldingsTable rows={snapshot.holdings} />
-          </div>
-        </section>
 
-        <section className="rounded-2xl border border-line bg-white p-5 sm:p-6 lg:col-span-2">
-          <h2 className="text-headline text-ink">Equity sectors</h2>
-          <p className="mt-1 text-[13px] text-ink-2">Exposure within listed equity (demo).</p>
-          <div className="mt-6">
-            <SectorBars />
-          </div>
-        </section>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <StatCard label="Total value" value={formatInr(totals.totalValue)} />
+              <StatCard
+                label="Invested (cost)"
+                value={formatInr(totals.invested, true)}
+                hint={
+                  totals.invested > 0
+                    ? `Unrealized ${formatInr(totals.unrealized, true)}`
+                    : "Add average cost via AI to see P&L vs cost"
+                }
+              />
+              {Number.isFinite(totals.dayChange) && Math.abs(totals.dayChange) > 0 ? (
+                <StatCard
+                  label="Day move (est.)"
+                  value={formatInr(totals.dayChange, true)}
+                  hint={
+                    totals.totalValue > 0
+                      ? formatPct((totals.dayChange / totals.totalValue) * 100, true)
+                      : undefined
+                  }
+                  tone={dayTone}
+                />
+              ) : null}
+              <StatCard label="Positions" value={String(holdings.length)} hint="Lines in the current book" />
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-2">
+              <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+                <h2 className="text-headline text-ink">Asset allocation</h2>
+                <p className="mt-1 text-[13px] text-ink-2">From current market value of holdings.</p>
+                <div className="mt-6">
+                  {allocation.length ? (
+                    <AllocationDonut slices={allocation} />
+                  ) : (
+                    <p className="text-[13px] text-ink-3">Values unavailable until holdings are priced.</p>
+                  )}
+                </div>
+              </section>
+
+              <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+                <h2 className="text-headline text-ink">Insights</h2>
+                <p className="mt-1 text-[13px] text-ink-2">Based only on what is in the book right now.</p>
+                <ul className="mt-5 space-y-3">
+                  {insights.map((item) => (
+                    <li key={item.title} className="rounded-xl border border-line bg-paper-2 px-4 py-3">
+                      <p className="text-[13px] font-semibold text-ink">{item.title}</p>
+                      <p className="mt-1 text-[13px] leading-5 text-ink-2">{item.body}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-[13px] text-ink-2">
+                  Deeper research still lives in{" "}
+                  <a href={pocketedgeAiUrl()} className="font-semibold text-accent hover:underline">
+                    AI chat
+                  </a>
+                  .
+                </p>
+              </section>
+            </div>
+
+            <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+              <div className="flex flex-wrap items-end justify-between gap-2">
+                <div>
+                  <h2 className="text-headline text-ink">Holdings</h2>
+                  <p className="mt-1 text-[13px] text-ink-2">Your current positions.</p>
+                </div>
+                <button
+                  type="button"
+                  className="text-[13px] font-semibold text-accent hover:underline"
+                  onClick={() => setAgentFocus(true)}
+                >
+                  Edit with AI →
+                </button>
+              </div>
+              <div className="mt-5">
+                <HoldingsTable rows={holdings} />
+              </div>
+            </section>
+          </>
+        )}
       </div>
 
-      <section className="grid-paper rounded-2xl border border-line p-5 sm:p-6">
-        <h2 className="text-headline text-ink">Activity</h2>
-        <p className="mt-1 text-[13px] text-ink-2">Recent portfolio events — live feed when broker is linked.</p>
-        <ul className="mt-5 space-y-3">
-          {[
-            { when: "Today, 10:12", text: "SIP executed · Parag Parikh Flexi Cap · ₹25,000" },
-            { when: "Yesterday", text: "Dividend credited · HDFC Bank · ₹1,840" },
-            { when: "18 Oct", text: "Corporate action · NIFTYBEES · units adjusted" },
-            { when: "15 Oct", text: "Zerodha sync · 42 positions updated" },
-          ].map((item) => (
-            <li
-              key={item.when + item.text}
-              className="flex flex-col gap-0.5 rounded-xl border border-line bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <span className="text-[14px] text-ink">{item.text}</span>
-              <time className="text-meta text-ink-3 sm:shrink-0">{item.when}</time>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-4 text-[13px] text-ink-2">
-          Connect Zerodha in{" "}
-          <Link href={AI_HREF} className="font-semibold text-accent hover:underline">
-            AI → Connections
-          </Link>{" "}
-          to replace sample numbers with your account.
-        </p>
-      </section>
+      <div className={agentFocus ? "lg:col-span-3" : "lg:col-span-2"} id="portfolio-ai">
+        <PortfolioAgentPanel
+          portfolio={portfolio}
+          onPortfolioSaved={(next) => {
+            setPortfolio(next);
+            setAgentFocus(false);
+          }}
+        />
+      </div>
     </div>
   );
 }

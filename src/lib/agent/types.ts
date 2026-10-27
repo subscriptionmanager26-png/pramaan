@@ -26,9 +26,24 @@ export type OrderRequest = {
   product: string;
 };
 
+export type PortfolioHoldingDraft = {
+  ticker: string;
+  qty: number;
+  avg?: number;
+  name?: string;
+};
+
 export type AgentAction =
   | { kind: "connection_login"; service: string; url: string; message?: string }
-  | { kind: "order_confirmation"; orderId: string; order: OrderRequest; rationale: string; expiresAt: string };
+  | { kind: "order_confirmation"; orderId: string; order: OrderRequest; rationale: string; expiresAt: string }
+  | {
+      kind: "portfolio_confirmation";
+      proposalId: string;
+      mode: "replace" | "merge";
+      holdings: PortfolioHoldingDraft[];
+      summary: string;
+      expiresAt: string;
+    };
 
 export type OrderState = { status: string; brokerOrderId?: string };
 

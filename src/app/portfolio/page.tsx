@@ -5,7 +5,7 @@ import { Page, PageHeader } from "@/components/shell/Page";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Portfolio dashboard — allocation, performance, and holdings. Ask questions in AI chat.",
+  description: "Your current holdings and insights — update the book with Portfolio AI.",
 };
 
 export default function PortfolioPage() {
@@ -13,7 +13,7 @@ export default function PortfolioPage() {
     <Page width="dash">
       <PageHeader
         title="Portfolio"
-        description="A fixed dashboard for how you're invested. For reviews, statements, and what-if questions, use the AI assistant."
+        description="Current holdings only. Ask the Portfolio AI to import, edit, or explain your book — nothing saves until you confirm."
       />
       <div className="mt-8">
         <PortfolioDashboard />
