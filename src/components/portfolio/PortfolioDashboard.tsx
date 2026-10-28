@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import { AllocationDonut } from "@/components/portfolio/AllocationDonut";
 import { PortfolioAgentPanel } from "@/components/portfolio/PortfolioAgentPanel";
+import { PortfolioEditor } from "@/components/portfolio/PortfolioEditor";
 import {
   allocationFromHoldings,
   formatInr,
@@ -34,7 +35,6 @@ function toneClass(value: number | null | undefined) {
   return value > 0 ? "text-emerald-700" : "text-rose-700";
 }
 
-/** Match portfolioTotals: values with |v|≤1 are treated as fractions. */
 function asPercentPoints(value: number) {
   return Math.abs(value) <= 1 ? value * 100 : value;
 }
@@ -56,7 +56,11 @@ function ModeToggle({
     );
   }
   return (
-    <div className="inline-flex rounded-full border border-line bg-white p-0.5 text-[13px]" role="tablist" aria-label="Portfolio mode">
+    <div
+      className="inline-flex rounded-full border border-line bg-white p-0.5 text-[13px]"
+      role="tablist"
+      aria-label="Portfolio mode"
+    >
       <button
         type="button"
         role="tab"
@@ -419,7 +423,6 @@ export function PortfolioDashboard() {
   const holdings = portfolio?.holdings ?? [];
   const empty = !holdings.length;
   const activeMode: PortfolioMode = empty ? "edit" : mode;
-  const showAgent = empty || activeMode === "edit" || showReviewAi;
 
   return (
     <div className="space-y-5">
@@ -450,30 +453,15 @@ export function PortfolioDashboard() {
         </p>
       ) : null}
 
-      {empty ? (
-        <div className="mx-auto max-w-2xl" id="portfolio-ai">
-          <PortfolioAgentPanel portfolio={portfolio} mode="edit" onPortfolioSaved={onPortfolioSaved} />
-        </div>
-      ) : activeMode === "edit" ? (
-        <div className="grid gap-6 lg:grid-cols-5">
-          <div className="order-2 space-y-4 lg:order-1 lg:col-span-2">
-            <section className="rounded-2xl border border-line bg-white p-5">
-              <h2 className="text-headline text-ink">Current book</h2>
-              <p className="mt-1 text-[13px] text-ink-2">
-                {holdings.length} position{holdings.length === 1 ? "" : "s"} · confirm AI proposals to save changes.
-              </p>
-              <div className="mt-4">
-                <HoldingsTable rows={holdings} />
-              </div>
-            </section>
-          </div>
-          <div className="order-1 lg:order-2 lg:col-span-3" id="portfolio-ai">
-            <PortfolioAgentPanel portfolio={portfolio} mode="edit" onPortfolioSaved={onPortfolioSaved} />
-          </div>
-        </div>
+      {activeMode === "edit" ? (
+        <PortfolioEditor
+          portfolio={portfolio}
+          onSaved={onPortfolioSaved}
+          onCancel={empty ? undefined : () => setMode("review")}
+        />
       ) : (
-        <div className={`grid gap-6 ${showAgent ? "lg:grid-cols-5" : ""}`}>
-          <div className={showAgent ? "lg:col-span-3" : ""}>
+        <div className={`grid gap-6 ${showReviewAi ? "lg:grid-cols-5" : ""}`}>
+          <div className={showReviewAi ? "lg:col-span-3" : ""}>
             {portfolio ? (
               <ReviewBook
                 portfolio={portfolio}
@@ -482,7 +470,7 @@ export function PortfolioDashboard() {
               />
             ) : null}
           </div>
-          {showAgent ? (
+          {showReviewAi ? (
             <div className="lg:col-span-2" id="portfolio-ai">
               <PortfolioAgentPanel portfolio={portfolio} mode="review" onPortfolioSaved={onPortfolioSaved} />
             </div>

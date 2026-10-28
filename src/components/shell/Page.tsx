@@ -5,7 +5,7 @@ const widths = {
   feed: "max-w-2xl",
   content: "max-w-3xl",
   dash: "max-w-6xl",
-  wide: "max-w-6xl",
+  wide: "max-w-7xl",
 } as const;
 
 export function Page({

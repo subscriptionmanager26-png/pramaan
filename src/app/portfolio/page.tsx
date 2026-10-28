@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <Page width="dash">
+    <Page width="wide">
       <PageHeader
         title="Portfolio"
-        description="Review your book, or switch to Edit to import from a screenshot, PDF, or Zerodha — nothing saves until you confirm."
+        description="Review your book, or switch to Edit — chat with AI on the left, live holdings artifact on the right."
       />
-      <div className="mt-8">
+      <div className="mt-6 sm:mt-8">
         <PortfolioDashboard />
       </div>
     </Page>
