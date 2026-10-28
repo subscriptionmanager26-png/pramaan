@@ -295,6 +295,45 @@ def piramal_pharma(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([680 + i * 80, 560 - h, 740 + i * 80, 560], fill=[YELLOW, RED, BLUE, GOLD][i])
 
 
+def nppa_mrp_list(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 240, 360, 540], fill=BLUE)
+    d.rounded_rectangle([180, 300, 300, 480], radius=16, fill=CREAM)
+    for i, h in enumerate([280, 220, 160, 100]):
+        d.rectangle([520 + i * 70, 560 - h, 580 + i * 70, 560], fill=[RED, YELLOW, BLUE, GOLD][i])
+    d.line([(500, 560), (1180, 560)], fill=INK, width=2)
+
+
+def radico_premium(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 480, 540], fill=RED)
+    d.ellipse([200, 320, 380, 480], fill=YELLOW)
+    for i, h in enumerate([100, 180, 260, 340]):
+        d.rectangle([640 + i * 85, 560 - h, 710 + i * 85, 560], fill=[BLUE, RED, YELLOW, BLUE][i])
+
+
+def pvr_inox_q2(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(140, 520), (140, 280), (480, 280), (480, 520)], fill=BLUE)
+    d.rectangle([180, 320, 440, 480], fill=INK)
+    d.ellipse([260, 380, 360, 440], fill=YELLOW)
+    for x in range(700, 1100, 80):
+        d.rectangle([x, 400, x + 50, 560], fill=RED if x % 160 else GOLD)
+
+
+def hero_motocorp_q2(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 380, 420, 560], fill=INK)
+    d.ellipse([140, 400, 400, 540], fill=YELLOW)
+    d.rectangle([480, 320, 520, 560], fill=BLUE)
+    d.polygon([(540, 520), (600, 420), (720, 400), (900, 440), (980, 520)], fill=RED)
+    for i, h in enumerate([140, 220, 300]):
+        d.rectangle([1020 + i * 50, 560 - h, 1060 + i * 50, 560], fill=GOLD)
+
+
+def bandhan_irdai(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 520), (160, 320), (280, 240), (400, 320), (400, 520)], fill=BLUE)
+    d.rectangle([440, 360, 520, 520], fill=RED)
+    for i, h in enumerate([320, 260, 200, 140]):
+        d.rectangle([680 + i * 55, 560 - h, 730 + i * 55, 560], fill=GOLD if i > 1 else YELLOW)
+
+
 def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
     # pill bottle + dollar lane to billion tick
     d.rounded_rectangle([140, 220, 280, 520], radius=30, fill=BLUE)
@@ -306,6 +345,11 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("nppa-anti-cancer-mrp-list-november-2026", nppa_mrp_list)
+    save("radico-khaitan-q2-premium-brands-october-2026", radico_premium)
+    save("pvr-inox-record-q2-earnings-october-2026", pvr_inox_q2)
+    save("hero-motocorp-q2-profit-october-2026", hero_motocorp_q2)
+    save("bandhan-bank-irdai-third-party-hit-october-2026", bandhan_irdai)
     save("jio-platforms-ipo-listing-debut-october-2026", jio_listing_debut)
     save("rbi-rupee-defence-liquidity-squeeze-october-2026", rbi_liquidity_squeeze)
     save("pnb-housing-q2-disbursements-october-2026", pnb_housing)

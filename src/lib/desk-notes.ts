@@ -26,6 +26,127 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bandhan-bank-irdai-third-party-hit-october-2026",
+    title:
+      "Bandhan Bank says IRDAI’s distribution overhaul could cost it ₹200 crore a year",
+    summary:
+      "On 28 October 2026 managing director Partha Pratim Sengupta told reporters that income from selling insurance and other third-party products could fall by about ₹200 crore annually if the Insurance Regulatory and Development Authority of India’s proposed commission and expense caps land in their current form, though he expects to offset much of the gap over time through other products.",
+    category: "industry",
+    companyOrSector: "Banking / insurance distribution",
+    publishedAt: "2026-10-28T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bandhan-bank-irdai-third-party-hit-october-2026"),
+    keyTakeaways: [
+      "Bandhan Bank guided on 28 October 2026 that third-party fee income could drop about ₹200 crore a year under IRDAI’s draft distribution reforms as currently framed.",
+      "The lender reported September-quarter earnings the same day; CEO Sengupta called the hit an industry-wide setback, not a Bandhan-only issue.",
+      "IRDAI’s consultation on tighter commissions and expense limits closes on 25 October 2026, with possible implementation from January or April 2027.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Bandhan Bank’s leadership quantified how much proposed insurance distribution rules could bite. Managing director Partha Pratim Sengupta said third-party income, mainly from bancassurance and similar cross-sell, could shrink by roughly ₹200 crore on an annual basis if the Insurance Regulatory and Development Authority of India’s draft package takes effect without major changes. He spoke after the bank published September-quarter results. Sengupta described the reform as a setback for the whole industry, not an isolated Bandhan problem, and said the bank would try to recover most of the shortfall by pushing other fee lines and markets over time.",
+      "What does this mean?",
+      "When you buy a policy at a bank counter, part of your premium flows back to the lender as distribution pay. IRDAI wants that slice, and insurers’ own expense ratios, to stop growing faster than coverage. Draft rules cap commissions and tighten expense-of-management limits, with a possible start in January or April 2027 after consultation. For banks that leaned on insurance fees to diversify income beyond lending spreads, the maths shifts quickly. Bandhan’s ₹200 crore figure is one of the first public rupee estimates from a listed lender during earnings season. It turns an abstract consultation paper into a line item shareholders can model.",
+      "Why should I care?",
+      "If you bank with a lender that pitches policies at account opening, compare standalone quotes and persistency benefits before you sign. If you hold bank or insurance stocks, listen for similar guidance from peers this quarter rather than assuming Bandhan is an outlier. Policy buyers should watch the final IRDAI notification, not only draft headlines. Track whether other banks disclose comparable third-party income at risk, and whether insurers cut agent pay or product features to stay inside the new caps.",
+    ],
+  },
+  {
+    slug: "hero-motocorp-q2-profit-october-2026",
+    title: "Hero MotoCorp sold 18.7 lakh two-wheelers in the September quarter",
+    summary:
+      "Hero MotoCorp reported consolidated net profit of ₹1,861 crore for the quarter ended September 2026, up 42% year on year, on revenue of ₹14,971 crore and dispatches of 18.68 lakh motorcycles and scooters, up 10.4%, with management citing strength in scooters, premium bikes, electric Vida models, and commuter segments.",
+    category: "industry",
+    companyOrSector: "Two-wheelers / consumption",
+    publishedAt: "2026-10-28T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hero-motocorp-q2-profit-october-2026"),
+    keyTakeaways: [
+      "Hero MotoCorp’s consolidated net profit rose 42.1% year on year to ₹1,861.3 crore in Q2 FY27 on revenue up 23.4% to ₹14,970.5 crore.",
+      "The company dispatched 18.68 lakh units in the quarter versus 16.91 lakh a year earlier, a 10.4% volume gain.",
+      "Management highlighted scooters, the 100 cc commuter range, premium motorcycles, exports, and the Vida electric portfolio as growth contributors.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Hero MotoCorp, India’s largest two-wheeler maker, published September-quarter numbers that showed demand holding across price bands. Consolidated net profit climbed to ₹1,861.3 crore from about ₹1,309 crore a year earlier, while revenue from operations rose 23.4% to ₹14,970.5 crore. The company sold 18.68 lakh motorcycles and scooters in the three months, up 10.4% from 16.91 lakh units in the same quarter of the prior fiscal year. In its exchange filing, management pointed to scooters as a standout, alongside steady commuter bike sales, premium models, overseas shipments, and its Vida electric line.",
+      "What does this mean?",
+      "Two-wheelers remain a practical purchase for millions of households, used for daily commuting and small-business deliveries. When volumes and revenue both rise faster than unit growth alone, it usually means richer mix: more scooters, higher-end bikes, or better export realisations. Hero’s breadth matters because rivals fight on electric subsidies and premium niches while the mass market still runs on petrol commuters. A double-digit volume gain during a quarter that also saw rate-hike talk and fuel volatility suggests rural and urban replacement demand is still active heading into the festive season. It does not guarantee the same pace every quarter if financing costs bite later.",
+      "Why should I care?",
+      "If you plan to buy a scooter or commuter bike, compare on-road prices, waiting periods, and finance offers across Hero, Honda, TVS, and Bajaj before festive discounts narrow. If you track consumer stocks, pair Hero’s dispatch data with tyre, lubricant, and rural lender commentary to see whether the upturn is broad. Investors should read management’s electric and premium mix disclosures rather than treating one quarter as a permanent trend. Watch November festival dispatch updates, competitor results, and whether EMI schemes stay as generous as in prior years.",
+    ],
+  },
+  {
+    slug: "pvr-inox-record-q2-earnings-october-2026",
+    title: "PVR INOX posted record quarterly earnings on strong cinema footfalls",
+    summary:
+      "PVR INOX Ltd reported record revenue, EBITDA, and profit for the September quarter and first half of fiscal 2027, with adjusted EBITDA up about 44% and profit after tax more than doubling year on year, supported by Hindi, Hollywood, and regional film slates, lower net debt, and plans to accelerate capital-light screen additions.",
+    category: "industry",
+    companyOrSector: "Media / leisure",
+    publishedAt: "2026-10-28T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pvr-inox-record-q2-earnings-october-2026"),
+    keyTakeaways: [
+      "PVR INOX said Q2 FY27 delivered record income, EBITDA, and profit after tax, with adjusted EBITDA up about 44% year on year.",
+      "Profit after tax more than doubled in the quarter versus the prior year, per company summaries tied to the 28 October 2026 results.",
+      "Management cited strong footfalls across Hindi, Hollywood, and regional releases, net cash on the balance sheet, and a larger SMART Cinema expansion pipeline.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 PVR INOX, India’s largest cinema chain after the PVR-Inox merger, reported September-quarter results that management described as record-setting on revenue, earnings before interest, taxes, depreciation and amortisation, and profit after tax. Company materials said adjusted EBITDA rose about 44% year on year while profit after tax more than doubled. Footfalls benefited from a mix of Hindi blockbusters, Hollywood titles, and regional films during the quarter. The balance sheet carried net cash at the lowest level since the merger, and executives outlined faster screen growth through capital-light formats such as SMART Cinemas, alongside shareholder return policies including buybacks discussed in coverage of the release.",
+      "What does this mean?",
+      "Going to the movies is discretionary spending, yet it clusters around festivals, long weekends, and strong content slates. When a multiplex operator prints record earnings, it usually means seats filled at acceptable ticket and food-and-beverage yields, not only new screens opening. PVR INOX’s emphasis on net cash and franchise-style expansion suggests confidence that audiences will return if studios supply hits, without locking as much capital in owned real estate. The chain still depends on film performance in the second half; one good quarter does not remove competition from streaming at home or from single-screen upgrades in smaller towns.",
+      "Why should I care?",
+      "If you budget for Diwali and year-end outings, expect crowded halls when marquee titles land; booking early still matters on opening weekends. If you follow consumer names, cinema traffic is a useful cross-check against mall, QSR, and travel data from the same festive window. Investors should separate screen-addition plans from like-for-like footfall trends in upcoming filings. Watch the November and December release calendar, average ticket price disclosures, and whether regional content keeps filling weekday slots.",
+    ],
+  },
+  {
+    slug: "radico-khaitan-q2-premium-brands-october-2026",
+    title: "Radico Khaitan lifted its prestige-volume target after a strong September quarter",
+    summary:
+      "Radico Khaitan reported September-quarter revenue up 17% to ₹1,745 crore and net profit up 66% to ₹231 crore, with prestige-and-above volumes up 36% and EBITDA margin near 20.4%, and raised FY27 volume growth guidance for that portfolio to 30% while flagging higher grain costs and working-capital needs.",
+    category: "industry",
+    companyOrSector: "Alcohol / consumer",
+    publishedAt: "2026-10-28T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("radico-khaitan-q2-premium-brands-october-2026"),
+    keyTakeaways: [
+      "Radico Khaitan’s Q2 FY27 revenue rose 17% year on year to ₹1,745 crore; net profit climbed 66% to ₹231 crore.",
+      "Prestige-and-above volumes grew 36%; EBITDA margin expanded to about 20.4% and the company raised FY27 P&A volume guidance to 30%.",
+      "Management cited Karnataka’s revised duty framework and encouraging trends in Tamil Nadu, while noting higher grain costs and inventory build for working capital.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Radico Khaitan, the maker of Magic Moments vodka and Rampur single malt, reported September-quarter results that leaned heavily on premium Indian-made foreign liquor. Revenue increased 17% year on year to ₹1,745 crore, net profit rose 66% to ₹231 crore, and earnings before interest, taxes, depreciation and amortisation grew 51% to ₹357 crore. Prestige-and-above volumes jumped 36%, helping EBITDA margin expand by about 4.6 percentage points to 20.4%. The company lifted its volume growth guidance for that premium bucket to 30% for fiscal 2027 while keeping an EBITDA margin target near 20%. Managing director Lalit Khaitan pointed to early benefits from Karnataka’s rationalised excise design and positive signals from Tamil Nadu, India’s largest liquor market, even as grain costs pushed the firm to hold more inventory.",
+      "What does this mean?",
+      "Indian drinkers do not move in one block: economy brands, beer, and premium spirits respond differently to state tax maps and outlet access. When a distiller grows prestige volumes in the thirties while revenue rises mid-teens, shoppers are trading up within permitted categories. Margin expansion on that mix shows pricing and cost control can outrun grain inflation, at least for a quarter, though working-capital build warns that input hedging has a cash cost. Policy matters as much as branding: Karnataka’s alcohol-in-beverage style reforms and Tamil Nadu outlet dynamics can widen or narrow premium shelf space faster than national advertising campaigns.",
+      "Why should I care?",
+      "If you operate bars or licensed retail, premium spirit allocations from Radico and rivals may shift with state excise calendars this winter. If you compare consumer stocks, treat Radico’s upgrade alongside United Breweries and United Spirits results as a check on urban discretionary spend, not as a national volume index. Investors should watch grain cost commentary and inventory days in the next half. Track state excise notifications in Karnataka and Tamil Nadu, Carlsberg India’s IPO filings for competitive context, and whether premium volume guidance survives a full year of input volatility.",
+    ],
+  },
+  {
+    slug: "nppa-anti-cancer-mrp-list-november-2026",
+    title: "New ceiling prices for 543 cancer medicine brands take effect on 9 November",
+    summary:
+      "On 28 October 2026 the National Pharmaceutical Pricing Authority published revised maximum retail prices for 543 brands of anti-cancer medicines, effective 9 November 2026, reflecting company submissions under margin rules and including steep cuts on several molecules such as anastrozole tablets whose listed pack price fell from about ₹696 to ₹73 in one example cited in the release.",
+    category: "industry",
+    companyOrSector: "Healthcare / drug pricing",
+    publishedAt: "2026-10-28T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nppa-anti-cancer-mrp-list-november-2026"),
+    keyTakeaways: [
+      "NPPA released a revised MRP list for 543 anti-cancer medicine brands on 28 October 2026, effective 9 November 2026.",
+      "The list reflects prices submitted by manufacturers for non-scheduled oncology drugs under trade-margin rules.",
+      "Examples in the release include sharp reductions, such as anastrozole 1 mg tablets falling from ₹695.76 to ₹73 for a ten-tablet pack under one brand.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 the National Pharmaceutical Pricing Authority, under the Ministry of Chemicals and Fertilisers, published a table of revised maximum retail prices for 543 brands of anti-cancer medicines. The new prices take effect on 9 November 2026. The authority said the list captures information submitted by companies up to that Tuesday and will be updated as manufacturers file further revisions for non-scheduled oncology products. The release includes illustrative cuts, such as anastrozole 1 mg tablets marketed as Anarzole by RPG Life Sciences, where the listed pack price drops from ₹695.76 for ten tablets to ₹73. Similar rows cover injections and other formulations from large Indian and multinational suppliers.",
+      "What does this mean?",
+      "Earlier in October, policymakers moved to cap trade margins on many non-scheduled cancer drugs at 30%, targeting the mark-up between wholesaler and patient rather than factory gate prices alone. Publishing brand-level MRPs turns that policy into checkout prices at pharmacies and hospital desks. Patients on long-term oncology regimens may see immediate savings on listed brands, while hospitals that earned spread on in-house pharmacies could face tighter economics. Manufacturers must align billing systems and stock labels before 9 November; pharmacies need to avoid charging older sticker prices on affected packs.",
+      "Why should I care?",
+      "If you or a family member uses branded cancer medicines, ask your oncologist and pharmacist whether your prescription appears on the 9 November list and whether a therapeutically equivalent brand is available at the revised price. Carry prior bills if you dispute overcharges during the transition week. If you invest in hospital or pharma distributors, treat the list as operational detail following the margin-cap announcement, not a one-day sentiment trade. Watch NPPA updates for additional brands, state drug controller enforcement, and whether insurers adjust copay rules on outpatient oncology purchases.",
+    ],
+  },
+  {
     slug: "jio-platforms-ipo-listing-debut-october-2026",
     title: "Jio Platforms opened on the stock exchange about one fifth above its issue price",
     summary:
@@ -6974,6 +7095,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bandhan-bank-irdai-third-party-hit-october-2026": "policy",
+  "hero-motocorp-q2-profit-october-2026": "markets",
+  "pvr-inox-record-q2-earnings-october-2026": "markets",
+  "radico-khaitan-q2-premium-brands-october-2026": "markets",
+  "nppa-anti-cancer-mrp-list-november-2026": "policy",
   "jio-platforms-ipo-listing-debut-october-2026": "markets",
   "rbi-rupee-defence-liquidity-squeeze-october-2026": "policy",
   "pnb-housing-q2-disbursements-october-2026": "markets",
