@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 import {
   ACCEPTED_EXTENSIONS,
@@ -44,12 +44,20 @@ export function AgentComposer({
   getAuthHeaders,
   suggestions,
   hint,
+  initialText,
+  seedToken,
+  openFilePickerToken,
 }: {
   disabled?: boolean;
   getAuthHeaders: () => Promise<Record<string, string>>;
   onSend: (text: string, attachmentIds: string[]) => Promise<boolean>;
   suggestions?: string[];
   hint?: ReactNode;
+  /** Prefill textarea when `seedToken` increments. */
+  initialText?: string | null;
+  seedToken?: number;
+  /** When this number increments, open the file picker (used by empty-state Upload CTAs). */
+  openFilePickerToken?: number;
 }) {
   const [text, setText] = useState("");
   const [items, setItems] = useState<Item[]>([]);
@@ -58,6 +66,21 @@ export function AgentComposer({
   const [attachError, setAttachError] = useState<string | null>(null);
   const picker = useRef<HTMLInputElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
+  const lastSeedToken = useRef(0);
+  const lastPickerToken = useRef(0);
+
+  useEffect(() => {
+    if (!seedToken || seedToken === lastSeedToken.current) return;
+    lastSeedToken.current = seedToken;
+    if (initialText) setText(initialText);
+    requestAnimationFrame(() => input.current?.focus());
+  }, [seedToken, initialText]);
+
+  useEffect(() => {
+    if (!openFilePickerToken || openFilePickerToken === lastPickerToken.current) return;
+    lastPickerToken.current = openFilePickerToken;
+    picker.current?.click();
+  }, [openFilePickerToken]);
 
   const patch = (key: string, next: Partial<Item>) =>
     setItems((cur) => cur.map((i) => (i.key === key ? { ...i, ...next } : i)));
@@ -99,7 +122,7 @@ export function AgentComposer({
       const ext = dot >= 0 ? f.name.slice(dot).toLowerCase() : "";
       const key = `${f.name}-${f.size}-${Math.random().toString(36).slice(2)}`;
       const error = !ACCEPTED_EXTENSIONS.includes(ext)
-        ? "Only PDF, CSV and Excel files"
+        ? "Only PDF, CSV, Excel, or images (PNG/JPG/WEBP)"
         : f.size > MAX_FILE_BYTES
           ? `Larger than ${formatBytes(MAX_FILE_BYTES)}`
           : undefined;

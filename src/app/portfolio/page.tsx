@@ -13,7 +13,7 @@ export default function PortfolioPage() {
     <Page width="dash">
       <PageHeader
         title="Portfolio"
-        description="Current holdings only. Ask the Portfolio AI to import, edit, or explain your book — nothing saves until you confirm."
+        description="Review your book, or switch to Edit to import from a screenshot, PDF, or Zerodha — nothing saves until you confirm."
       />
       <div className="mt-8">
         <PortfolioDashboard />

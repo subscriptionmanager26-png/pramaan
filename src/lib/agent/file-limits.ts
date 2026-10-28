@@ -1,12 +1,15 @@
 export const MAX_FILE_BYTES = 4 * 1024 * 1024;
 export const MAX_ATTACHMENTS = 5;
-export const ACCEPTED_EXTENSIONS = [".pdf", ".csv", ".xlsx", ".xls"];
+export const ACCEPTED_EXTENSIONS = [".pdf", ".csv", ".xlsx", ".xls", ".png", ".jpg", ".jpeg", ".webp"];
 export const ACCEPTED_FILE_TYPES = [
   ...ACCEPTED_EXTENSIONS,
   "application/pdf",
   "text/csv",
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   "application/vnd.ms-excel",
+  "image/png",
+  "image/jpeg",
+  "image/webp",
 ].join(",");
 
 export function formatBytes(n: number) {

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AgentBlocks } from "@/components/agent/AgentBlocks";
+import { AgentComposer } from "@/components/agent/chat/AgentComposer";
 import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import type { AgentAction, AgentMessage } from "@/lib/agent/types";
@@ -11,20 +12,16 @@ import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 const THREAD_ID = "portfolio";
 
-const SUGGESTIONS_EMPTY = [
-  "Here are my holdings: paste or list ticker and quantity",
-  "I uploaded a broker holdings CSV — build my portfolio from it",
-  "Replace my book with: 100 HDFCBANK, 50 INFY, 20 RELIANCE",
-];
+const FILE_ONLY_PROMPT =
+  "Parse the attached holdings file(s) or screenshot and propose my current portfolio book for confirmation. Prefer mode=replace for a full statement.";
 
-const SUGGESTIONS_EXISTING = [
-  "Summarise concentration risk in my current holdings",
-  "Add 30 units of TCS at avg ₹3,800",
-  "Remove INFY from my portfolio",
-];
+const ZERODHA_IMPORT_PROMPT =
+  "Import my Zerodha holdings into my portfolio book. Use Zerodha tools to fetch current holdings (and avg cost where available), then call propose_portfolio_holdings with mode=replace so I can confirm.";
 
 type Props = {
   portfolio: LivePortfolio | null;
+  /** edit = import/change book; review = ask about the book (no save prompts expected). */
+  mode: "edit" | "review";
   onPortfolioSaved: (portfolio: LivePortfolio) => void;
 };
 
@@ -37,13 +34,86 @@ function holdingsContext(holdings: LiveHolding[]) {
   return `Current holdings (only known positions — no trade history): ${lines}`;
 }
 
-export function PortfolioAgentPanel({ portfolio, onPortfolioSaved }: Props) {
+function displayUserText(text: string) {
+  return text.replace(/^\[Portfolio assistant\][\s\S]*?Client request:\s*/i, "") || text;
+}
+
+function EmptyGuidance({
+  onImportZerodha,
+  onAttach,
+  busy,
+}: {
+  onImportZerodha: () => void;
+  onAttach: () => void;
+  busy: boolean;
+}) {
+  return (
+    <div className="space-y-4">
+      <div>
+        <p className="text-[14px] font-medium text-ink">Add your current holdings</p>
+        <p className="mt-1 text-[13px] leading-5 text-ink-2">
+          Nothing is saved until you confirm a proposal. You can:
+        </p>
+      </div>
+      <ul className="space-y-2.5 text-[13px] leading-5 text-ink-2">
+        <li className="flex gap-2">
+          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-ink" aria-hidden />
+          <span>
+            <button
+              type="button"
+              className="font-semibold text-accent hover:underline disabled:opacity-50"
+              onClick={onAttach}
+              disabled={busy}
+            >
+              Upload a screenshot
+            </button>{" "}
+            of your broker holdings screen
+          </span>
+        </li>
+        <li className="flex gap-2">
+          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-ink" aria-hidden />
+          <span>
+            <button
+              type="button"
+              className="font-semibold text-accent hover:underline disabled:opacity-50"
+              onClick={onAttach}
+              disabled={busy}
+            >
+              Send a PDF statement
+            </button>{" "}
+            (or CSV / Excel export)
+          </span>
+        </li>
+        <li className="flex gap-2">
+          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-ink" aria-hidden />
+          <span>
+            <button
+              type="button"
+              className="font-semibold text-accent hover:underline disabled:opacity-50"
+              onClick={onImportZerodha}
+              disabled={busy}
+            >
+              Import Zerodha holdings
+            </button>{" "}
+            if your account is linked in Connections
+          </span>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props) {
   const [messages, setMessages] = useState<AgentMessage[]>([]);
-  const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [applying, setApplying] = useState<string | null>(null);
+  const [appliedIds, setAppliedIds] = useState<string[]>([]);
+  const [dismissedIds, setDismissedIds] = useState<string[]>([]);
+  const [savedNotice, setSavedNotice] = useState<string | null>(null);
+  const [pickerToken, setPickerToken] = useState(0);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const empty = !(portfolio?.holdings.length);
 
   const reload = useCallback(async () => {
     try {
@@ -70,8 +140,10 @@ export function PortfolioAgentPanel({ portfolio, onPortfolioSaved }: Props) {
 
   const applyProposal = useCallback(
     async (action: Extract<AgentAction, { kind: "portfolio_confirmation" }>) => {
+      if (mode !== "edit") return;
       setApplying(action.proposalId);
       setError(null);
+      setSavedNotice(null);
       try {
         const headers = await pocketedgeAuthHeaders();
         const res = await fetch("/api/portfolio", {
@@ -84,37 +156,52 @@ export function PortfolioAgentPanel({ portfolio, onPortfolioSaved }: Props) {
           setError((json as { error?: string }).error || "Could not save holdings");
           return;
         }
-        if (json.portfolio) onPortfolioSaved(json.portfolio as LivePortfolio);
+        if (json.portfolio) {
+          const next = json.portfolio as LivePortfolio;
+          setAppliedIds((ids) => (ids.includes(action.proposalId) ? ids : [...ids, action.proposalId]));
+          setSavedNotice(
+            `Saved ${next.holdings.length} holding${next.holdings.length === 1 ? "" : "s"} to your book.`,
+          );
+          onPortfolioSaved(next);
+        }
       } catch {
         setError("Could not save holdings");
       } finally {
         setApplying(null);
       }
     },
-    [onPortfolioSaved],
+    [mode, onPortfolioSaved],
   );
 
   const send = useCallback(
-    async (raw: string) => {
-      const q = raw.trim();
-      if (!q || busy) return;
+    async (raw: string, attachmentIds: string[]) => {
+      const q = raw.trim() || (attachmentIds.length ? FILE_ONLY_PROMPT : "");
+      if ((!q && !attachmentIds.length) || busy) return false;
       setBusy(true);
       setError(null);
-      setText("");
+      setSavedNotice(null);
       const context = holdingsContext(portfolio?.holdings ?? []);
-      const payloadText = `[Portfolio assistant]\n${context}\n\nClient request: ${q}`;
+      const modeLine =
+        mode === "edit"
+          ? "Mode: EDIT — if they want the book changed, finish with propose_portfolio_holdings."
+          : "Mode: REVIEW — answer questions about the current book only. Do not propose holdings changes unless they explicitly ask to edit.";
+      const payloadText = `[Portfolio assistant]\n${modeLine}\n${context}\n\nClient request: ${q}`;
       try {
         const headers = await pocketedgeAuthHeaders();
         const res = await fetch("/api/agent/messages", {
           method: "POST",
           headers: { ...headers, "Content-Type": "application/json" },
-          body: JSON.stringify({ text: payloadText, threadId: THREAD_ID }),
+          body: JSON.stringify({
+            text: payloadText,
+            threadId: THREAD_ID,
+            attachments: attachmentIds.length ? attachmentIds : undefined,
+          }),
         });
         if (!res.ok) {
           const body = await res.json().catch(() => ({}));
           setError((body as { error?: { message?: string } }).error?.message || `Send failed (${res.status})`);
           setBusy(false);
-          return;
+          return false;
         }
         const json = await res.json();
         const message = json.message as AgentMessage;
@@ -144,55 +231,77 @@ export function PortfolioAgentPanel({ portfolio, onPortfolioSaved }: Props) {
           }
         }
         await reload();
+        return true;
       } catch {
         setError("Could not reach the assistant");
+        return false;
       } finally {
         setBusy(false);
       }
     },
-    [busy, portfolio?.holdings, reload],
+    [busy, mode, portfolio?.holdings, reload],
   );
 
-  const suggestions = portfolio?.holdings.length ? SUGGESTIONS_EXISTING : SUGGESTIONS_EMPTY;
+  const title = mode === "edit" ? (empty ? "Set up your book" : "Edit holdings") : "Review with AI";
+  const subtitle =
+    mode === "edit"
+      ? "Import or change positions. Changes save only after you confirm."
+      : "Ask about concentration, risk, or what is in the book — editing happens in Edit mode.";
 
   return (
-    <div className="flex h-full min-h-[420px] flex-col rounded-2xl border border-line bg-white">
+    <div className="flex h-full min-h-[480px] flex-col rounded-2xl border border-line bg-white lg:min-h-[560px]">
       <div className="border-b border-line px-4 py-3">
-        <h2 className="text-headline text-ink">Portfolio AI</h2>
-        <p className="mt-0.5 text-[13px] text-ink-2">
-          Ask about your current holdings, or paste a list / statement to update the book. Changes save only after you
-          confirm.
-        </p>
+        <h2 className="text-headline text-ink">{title}</h2>
+        <p className="mt-0.5 text-[13px] text-ink-2">{subtitle}</p>
       </div>
 
       <div className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
-        {!messages.length && (
-          <div className="space-y-2">
-            <p className="text-[13px] text-ink-3">Try one of these:</p>
-            {suggestions.map((s) => (
-              <button
-                key={s}
-                type="button"
-                className="block w-full rounded-xl border border-line bg-paper-2 px-3 py-2 text-left text-[13px] text-ink hover:border-ink/30"
-                onClick={() => void send(s)}
-                disabled={busy}
-              >
-                {s}
-              </button>
-            ))}
-          </div>
-        )}
+        {!messages.length && mode === "edit" && empty ? (
+          <EmptyGuidance
+            busy={busy}
+            onAttach={() => setPickerToken((n) => n + 1)}
+            onImportZerodha={() => void send(ZERODHA_IMPORT_PROMPT, [])}
+          />
+        ) : null}
+        {!messages.length && mode === "edit" && !empty ? (
+          <p className="text-[13px] leading-5 text-ink-2">
+            Describe a change, attach an updated statement or screenshot, or ask to import from Zerodha. Confirm any
+            proposal before it is saved.
+          </p>
+        ) : null}
+        {!messages.length && mode === "review" ? (
+          <p className="text-[13px] leading-5 text-ink-2">
+            Ask about your current holdings — allocation, concentration, or a specific position. Switch to Edit to change
+            the book.
+          </p>
+        ) : null}
+
         {messages.map((m) => (
           <div key={m.id} className="space-y-2">
             <div className="rounded-xl bg-paper-2 px-3 py-2 text-[14px] text-ink">
-              {m.text.replace(/^\[Portfolio assistant\][\s\S]*?Client request:\s*/i, "") || m.text}
+              {displayUserText(m.text)}
+              {m.attachments?.length ? (
+                <p className="mt-1 text-[12px] text-ink-3">
+                  {m.attachments.length} file{m.attachments.length === 1 ? "" : "s"} attached
+                </p>
+              ) : null}
             </div>
             {(m.blocks.length > 0 || m.actions.length > 0) && (
               <AgentBlocks
                 blocks={m.blocks}
                 actions={m.actions}
-                onPortfolioConfirm={(action) => void applyProposal(action)}
+                onPortfolioConfirm={
+                  mode === "edit" ? (action) => void applyProposal(action) : undefined
+                }
+                onPortfolioDismiss={
+                  mode === "edit"
+                    ? (proposalId) =>
+                        setDismissedIds((ids) => (ids.includes(proposalId) ? ids : [...ids, proposalId]))
+                    : undefined
+                }
                 portfolioApplyingId={applying}
+                portfolioAppliedIds={appliedIds}
+                portfolioDismissedIds={dismissedIds}
               />
             )}
             {m.status === "failed" && m.error ? (
@@ -204,28 +313,24 @@ export function PortfolioAgentPanel({ portfolio, onPortfolioSaved }: Props) {
         <div ref={bottomRef} />
       </div>
 
-      {error ? <p className="px-4 text-[13px] text-rose-700">{error}</p> : null}
+      {savedNotice ? (
+        <p className="border-t border-emerald-200 bg-emerald-50 px-4 py-2 text-[13px] text-emerald-900">{savedNotice}</p>
+      ) : null}
+      {error ? <p className="px-4 pb-1 text-[13px] text-rose-700">{error}</p> : null}
 
-      <form
-        className="border-t border-line p-3"
-        onSubmit={(e) => {
-          e.preventDefault();
-          void send(text);
-        }}
-      >
-        <div className="flex gap-2">
-          <input
-            className="min-w-0 flex-1 rounded-xl border border-line bg-paper-2 px-3 py-2 text-[14px] text-ink outline-none focus:border-ink/40"
-            placeholder="Ask or paste holdings…"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            disabled={busy}
-          />
-          <button type="submit" className="btn-primary shrink-0 text-[13px]" disabled={busy || !text.trim()}>
-            Send
-          </button>
-        </div>
-      </form>
+      <div className="border-t border-line p-3">
+        <AgentComposer
+          disabled={busy}
+          getAuthHeaders={pocketedgeAuthHeaders}
+          onSend={send}
+          openFilePickerToken={pickerToken}
+          hint={
+            mode === "edit"
+              ? "Screenshot, PDF, CSV, or Excel · confirm before anything is saved"
+              : "Ask about the book — switch to Edit to change holdings"
+          }
+        />
+      </div>
     </div>
   );
 }

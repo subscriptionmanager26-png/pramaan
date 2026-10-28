@@ -15,14 +15,20 @@ function ActionCard({
   order,
   onDecide,
   onPortfolioConfirm,
+  onPortfolioDismiss,
   portfolioApplyingId,
+  portfolioAppliedIds,
+  portfolioDismissedIds,
 }: {
   action: AgentAction;
   pe: boolean;
   order?: OrderState;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
   onPortfolioConfirm?: (action: Extract<AgentAction, { kind: "portfolio_confirmation" }>) => void;
+  onPortfolioDismiss?: (proposalId: string) => void;
   portfolioApplyingId?: string | null;
+  portfolioAppliedIds?: string[];
+  portfolioDismissedIds?: string[];
 }) {
   if (action.kind === "connection_login") {
     return (
@@ -48,6 +54,8 @@ function ActionCard({
   }
   if (action.kind === "portfolio_confirmation") {
     const applying = portfolioApplyingId === action.proposalId;
+    const applied = portfolioAppliedIds?.includes(action.proposalId);
+    const dismissed = portfolioDismissedIds?.includes(action.proposalId);
     const expired = Date.parse(action.expiresAt) < Date.now();
     return (
       <div className={`overflow-hidden rounded-xl border ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface)]" : "border-line bg-white"}`}>
@@ -77,23 +85,43 @@ function ActionCard({
         <div
           className={`flex flex-wrap items-center justify-between gap-3 border-t px-4 py-2.5 ${pe ? "border-[var(--pe-border)] bg-[var(--pe-surface-muted)]" : "border-line bg-paper-2"}`}
         >
-          {expired ? (
+          {applied ? (
+            <span className="text-xs font-medium text-emerald-700">Saved to your book</span>
+          ) : dismissed ? (
+            <span className="text-xs text-[var(--pe-text-secondary)]">Dismissed — ask again if you change your mind</span>
+          ) : expired ? (
             <span className="text-xs text-[var(--pe-text-secondary)]">This proposal expired — ask the assistant again</span>
           ) : onPortfolioConfirm ? (
             <>
               <span className="text-xs text-[var(--pe-text-secondary)]">Not saved until you confirm</span>
-              <button
-                type="button"
-                className={
-                  pe
-                    ? "rounded-full bg-[var(--pe-accent)] px-3 py-1.5 text-sm font-medium text-white disabled:opacity-60"
-                    : "btn-primary text-[13px] disabled:opacity-60"
-                }
-                disabled={applying}
-                onClick={() => onPortfolioConfirm(action)}
-              >
-                {applying ? "Saving…" : "Confirm & save"}
-              </button>
+              <div className="flex gap-2">
+                {onPortfolioDismiss ? (
+                  <button
+                    type="button"
+                    className={
+                      pe
+                        ? "rounded-full px-3 py-1.5 text-sm font-medium text-[var(--pe-text-secondary)] hover:bg-white"
+                        : "rounded-full px-3 py-1.5 text-[13px] font-medium text-ink-2 hover:bg-white"
+                    }
+                    disabled={applying}
+                    onClick={() => onPortfolioDismiss(action.proposalId)}
+                  >
+                    Dismiss
+                  </button>
+                ) : null}
+                <button
+                  type="button"
+                  className={
+                    pe
+                      ? "rounded-full bg-[var(--pe-accent)] px-3 py-1.5 text-sm font-medium text-white disabled:opacity-60"
+                      : "btn-primary text-[13px] disabled:opacity-60"
+                  }
+                  disabled={applying}
+                  onClick={() => onPortfolioConfirm(action)}
+                >
+                  {applying ? "Saving…" : "Confirm & save"}
+                </button>
+              </div>
             </>
           ) : (
             <span className="text-xs text-[var(--pe-text-secondary)]">Open Portfolio to confirm</span>
@@ -164,7 +192,10 @@ export function AgentBlocks({
   orders,
   onDecide,
   onPortfolioConfirm,
+  onPortfolioDismiss,
   portfolioApplyingId,
+  portfolioAppliedIds,
+  portfolioDismissedIds,
 }: {
   blocks: UiBlock[];
   actions: AgentAction[];
@@ -172,7 +203,10 @@ export function AgentBlocks({
   orders?: Record<string, OrderState>;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
   onPortfolioConfirm?: (action: Extract<AgentAction, { kind: "portfolio_confirmation" }>) => void;
+  onPortfolioDismiss?: (proposalId: string) => void;
   portfolioApplyingId?: string | null;
+  portfolioAppliedIds?: string[];
+  portfolioDismissedIds?: string[];
 }) {
   const pe = theme === "pocketedge";
   const border = pe ? "border-[var(--pe-border)]" : "border-line";
@@ -242,7 +276,10 @@ export function AgentBlocks({
           order={action.kind === "order_confirmation" ? orders?.[action.orderId] : undefined}
           onDecide={onDecide}
           onPortfolioConfirm={onPortfolioConfirm}
+          onPortfolioDismiss={onPortfolioDismiss}
           portfolioApplyingId={portfolioApplyingId}
+          portfolioAppliedIds={portfolioAppliedIds}
+          portfolioDismissedIds={portfolioDismissedIds}
         />
       ))}
     </div>
