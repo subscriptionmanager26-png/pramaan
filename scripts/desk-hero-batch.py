@@ -185,6 +185,49 @@ def star_health_h1(d: ImageDraw.ImageDraw) -> None:
     d.line([(860, 380), (920, 320)], fill=YELLOW, width=5)
 
 
+def gst_post_sale(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 480, 520], fill=BLUE)
+    d.rectangle([140, 320, 440, 380], fill=CREAM)
+    for i, w in enumerate([520, 600, 680]):
+        d.rectangle([w, 360 - i * 40, w + 80, 520], fill=[RED, YELLOW, RED][i])
+    d.polygon([(900, 200), (1100, 280), (900, 360)], fill=GOLD)
+    d.line([(720, 440), (1080, 440)], fill=INK, width=2)
+
+
+def mumbai_outage(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 220, 460, 560], fill=BLUE)
+    d.polygon([(160, 220), (420, 180), (420, 220)], fill=RED)
+    d.line([(200, 300), (380, 480)], fill=YELLOW, width=8)
+    d.line([(380, 300), (200, 480)], fill=YELLOW, width=8)
+    d.ellipse([700, 320, 1100, 520], outline=GOLD, width=5)
+    for x in range(720, 1080, 60):
+        d.polygon([(x, 420), (x + 20, 380), (x + 40, 420)], fill=RED)
+
+
+def ub_beer(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 240, 260, 520], radius=20, fill=YELLOW)
+    d.ellipse([180, 200, 220, 260], fill=GOLD)
+    d.rectangle([320, 300, 520, 520], fill=BLUE)
+    for i, h in enumerate([100, 180, 260]):
+        d.rectangle([640 + i * 90, 560 - h, 700 + i * 90, 560], fill=[RED, BLUE, YELLOW][i])
+
+
+def sc_cirp(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 180, 200, 560], fill=GOLD)
+    d.polygon([(300, 520), (300, 240), (420, 160), (540, 240), (540, 520)], fill=BLUE)
+    d.rectangle([700, 280, 1120, 340], fill=RED)
+    d.polygon([(1120, 310), (1180, 280), (1180, 340), (1120, 310)], fill=GOLD)
+    d.rectangle([700, 420, 1050, 480], fill=YELLOW)
+
+
+def indiamart_q2(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 260, 480, 540], fill=BLUE)
+    for y in range(300, 500, 50):
+        d.rectangle([160, y, 440, y + 24], fill=CREAM if y % 100 else YELLOW)
+    d.line([(520, 400), (1180, 200)], fill=RED, width=4)
+    d.ellipse([1000, 160, 1140, 300], fill=GOLD)
+
+
 def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
     # pill bottle + dollar lane to billion tick
     d.rounded_rectangle([140, 220, 280, 520], radius=30, fill=BLUE)
@@ -196,6 +239,11 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("gst-post-sale-discount-rules-november-2026", gst_post_sale)
+    save("mumbai-airport-network-outage-october-2026", mumbai_outage)
+    save("united-breweries-premium-beer-q2-october-2026", ub_beer)
+    save("supreme-court-cirp-withdrawal-bar-october-2026", sc_cirp)
+    save("indiamart-q2-silver-churn-ai-search-october-2026", indiamart_q2)
     save("telcos-6ghz-wifi-outdoor-october-2026", telcos_6ghz)
     save("bajaj-auto-record-q2-exports-ev-october-2026", bajaj_auto_q2)
     save("sbi-life-q2-premium-growth-guidance-october-2026", sbi_life_q2)

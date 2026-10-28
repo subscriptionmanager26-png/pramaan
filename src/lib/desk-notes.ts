@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "gst-post-sale-discount-rules-november-2026",
+    title: "GST rules on post-sale discounts and export refunds tighten from 1 November",
+    summary:
+      "On 27 October 2026 the government said changes to goods and services tax procedures for post-sale discounts, export refunds and related filings take effect from 1 November 2026, tightening how businesses document price cuts after an invoice is raised.",
+    category: "industry",
+    companyOrSector: "Tax / compliance",
+    publishedAt: "2026-10-28T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gst-post-sale-discount-rules-november-2026"),
+    keyTakeaways: [
+      "Revised GST rules on post-sale discounts, export refunds and related procedures apply from 1 November 2026, per reporting dated 27 October 2026.",
+      "Manufacturers and distributors must align credit notes and refund claims with the updated documentation norms or risk rejected input tax credits.",
+      "Exporters and consumer-facing brands that run festive cashback or channel schemes after invoicing face the tightest compliance window.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 wire coverage from New Delhi said India will change goods and services tax rules governing post-sale discounts, export refunds and related tax procedures from 1 November 2026. The update matters for any business that raises a GST invoice first and then grants a rebate, scheme discount or price protection to a dealer or customer. Export-oriented firms also face revised refund mechanics tied to the same notification package. Officials framed the move as closing gaps where discounts were booked without matching credit notes or where refund claims sat out of sync with shipment records. The effective date leaves less than a week for finance teams to reprogram enterprise resource planning workflows before the November festive sales peak.",
+      "What does this mean?",
+      "Post-sale discounts are common in autos, appliances, FMCG and industrial goods: the factory bills a distributor at list price, then settles a marketing scheme later. Under GST, that later payment is not a casual adjustment. It must flow through prescribed credit notes so the tax authority can see value and tax moving together. When rules tighten, distributors cannot absorb a silent price cut without paperwork, and brands cannot delay credit notes into the next quarter to smooth margins. Exporters rely on timely refunds to finance working capital; slower or stricter validation can show up as cash trapped at customs brokers. Large listed companies usually adapt quickly, but mid-sized suppliers selling into modern trade may need auditor sign-off on every promotional calendar line.",
+      "Why should I care?",
+      "If you run a shop or dealership, ask suppliers for written scheme terms and confirm credit notes arrive in the same tax period as the discount, not months later. Finance teams should test one November invoice end-to-end in the GST portal sandbox before volume spikes. Investors in consumer and export names should read this as a compliance cost, not a demand shock, but watch working-capital commentary on December earnings calls. Follow the formal notification text, any GST Network advisories, and whether states issue parallel guidance on assessment disputes.",
+    ],
+  },
+  {
+    slug: "mumbai-airport-network-outage-october-2026",
+    title: "A network failure at Mumbai airport delayed hundreds of flights on Tuesday evening",
+    summary:
+      "On 27 October 2026 a network glitch at Chhatrapati Shivaji Maharaj International Airport forced manual check-in, disrupted boarding systems and delayed about 327 flights before operations stabilised.",
+    category: "industry",
+    companyOrSector: "Aviation / travel",
+    publishedAt: "2026-10-28T05:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mumbai-airport-network-outage-october-2026"),
+    keyTakeaways: [
+      "Flight operations at Mumbai’s main international airport faced disruption on the evening of 27 October 2026 after a network outage, per multiple wire reports.",
+      "Airport staff shifted to manual check-in while automated systems recovered; about 327 flights were reported delayed.",
+      "The incident is separate from the longer-running debate over terminal rebuilds and slot cuts at the same airport.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 passengers at Mumbai’s Chhatrapati Shivaji Maharaj International Airport faced long queues after a network failure knocked out automated check-in and related systems. Reporting from New Delhi said airport staff reverted to manual processes while engineers restored connectivity. About 327 flights were delayed during the disruption window on Tuesday evening. Carriers had to reconcile passenger manifests, baggage tags and security hand-offs without the usual digital backbone, which slows turnarounds even when aircraft and crews are available. The outage landed the same week airlines and the airport operator were already negotiating phased terminal work and international slot plans, but this event was a pure information-technology failure rather than a runway or construction constraint.",
+      "What does this mean?",
+      "India’s busiest hubs run on tightly coupled software: common-use terminals, airline departure control, security scans and retail concessions all share networks. When that layer fails, the physical airport can look half-empty on the apron while gates are gridlocked indoors. Manual check-in raises labour cost per passenger and increases misconnect risk for late-evening banked flights to the Gulf and domestic trunk routes. For airlines, delay minutes stack into crew legality issues and missed connections at downstream airports. Regulators may ask for root-cause analysis and redundancy plans, especially as Mumbai prepares for phased moves toward Navi Mumbai and terminal upgrades. Passengers experience the failure as lost evening hours, not as a balance-sheet line.",
+      "Why should I care?",
+      "If you are flying via Mumbai during the festive rush, build extra connection time and keep boarding passes saved offline in case kiosk networks fail again. Corporate travel desks should track whether insurers treat IT outages like weather delays for duty-of-care policies. Investors in airport and airline names should separate one-night operational pain from structural slot fights. Watch the airport operator’s service-level disclosure, Directorate General of Civil Aviation commentary on business continuity, and whether carriers seek compensation for ground-handling delays tied to the glitch.",
+    ],
+  },
+  {
+    slug: "united-breweries-premium-beer-q2-october-2026",
+    title: "United Breweries grew profit sharply as drinkers traded up to premium beer",
+    summary:
+      "On 27 October 2026 United Breweries Ltd reported September-quarter profit jumped about 190% year on year while revenue rose about 24%, with management citing strong premium beer volumes including Kingfisher variants.",
+    category: "industry",
+    companyOrSector: "Consumer / beverages",
+    publishedAt: "2026-10-28T05:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("united-breweries-premium-beer-q2-october-2026"),
+    keyTakeaways: [
+      "United Breweries posted sharp profit growth in the September 2026 quarter on about 24% revenue growth, per results coverage on 27 October 2026.",
+      "Management linked the beat to premium beer volume gains, with Kingfisher sales cited up about 44% in reporting.",
+      "The print adds to other festive-week signals that urban drinkers are buying fewer cheap pints but paying more per bottle.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 United Breweries Ltd, the Heineken-backed brewer best known for Kingfisher, reported financial results for the quarter ended 30 September 2026. Wire summaries said consolidated profit surged about 190% year on year while revenue grew about 24%. Management attributed momentum to premium beer volumes, with Kingfisher brand sales cited up roughly 44% in coverage from New Delhi. The company benefits from wide on-premise distribution in metros and tourist markets, so a strong September quarter often reflects both festival outings and sporting calendars. Results arrived alongside other consumer prints this week that showed households still spending on experiences even as mass-market staples face uneven volume growth.",
+      "What does this mean?",
+      "Beer economics in India mix state excise, route-to-market fridges and brand mix. When consumers shift from economy pints to premium lagers, revenue per case rises faster than hectolitre volume, which flatters margins if glass and barley costs stay controlled. United Breweries competes with Anheuser-Busch InBev’s Budweiser portfolio and Carlsberg India, so its premium push is also a shelf-space fight in restaurants and delivery apps where age-gating and cold-chain matter. A profit jump on mid-twenties revenue growth suggests cost leverage or favourable state mix rather than a pure volume flood. Regulators still cap advertising and govern outlet hours, so brewers depend on on-trade partners to upsell during festive long weekends.",
+      "Why should I care?",
+      "If you operate bars or restaurants, premium draft deals may move faster than economy kegs; negotiate supplier rebates on mixed pallets. Investors comparing United Breweries with United Spirits or quick-service restaurants should treat this as an urban discretionary data point, not a national consumption index. Policy watchers should still track state excise tweaks that can reset net realisation overnight. Watch November state-wise excise notifications, winter tourism traffic in Goa and Kerala, and whether peer Carlsberg India reiterates volume guidance in its own results.",
+    ],
+  },
+  {
+    slug: "supreme-court-cirp-withdrawal-bar-october-2026",
+    title: "The Supreme Court blocked lenders from revoking approved insolvency plans",
+    summary:
+      "On 27 October 2026 the Supreme Court ruled that creditors cannot withdraw an approved corporate insolvency resolution plan merely because a debtor’s finances improved after the vote, per Mumbai wire reports.",
+    category: "industry",
+    companyOrSector: "Insolvency / credit",
+    publishedAt: "2026-10-28T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("supreme-court-cirp-withdrawal-bar-october-2026"),
+    keyTakeaways: [
+      "India’s Supreme Court held on 27 October 2026 that lenders may not pull back an approved insolvency resolution plan only because post-approval performance improved.",
+      "The ruling affects corporate insolvency cases where dissenting creditors sought a second bite after asset values recovered.",
+      "Resolution professionals and new owners gain more certainty that approved plans will survive if markets rebound.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 reporting from Mumbai said the Supreme Court ruled that lenders cannot withdraw an approved corporate insolvency resolution plan simply because a company’s finances look healthier after the plan is cleared. The Insolvency and Bankruptcy Code was meant to freeze a debtor, vote a plan, and let new owners or lenders take control without endless reopening. In several high-profile cases, creditor groups that lost the vote tried to reopen proceedings when commodity prices or equity markets lifted asset values. The court’s order draws a line: approval binds the parties unless fraud or procedural defects are proved, not because hindsight makes a different outcome attractive.",
+      "What does this mean?",
+      "Insolvency is a coordination game among banks, operational creditors and buyers of stressed assets. If any lender can unwind a plan when steel or power prices rise, new investors will discount bids and demand wider haircuts upfront. Resolution professionals spend months herding votes; certainty after approval keeps those timelines credible. For operating companies, employees and vendors benefit when a new promoter can implement the plan without a fresh legal cloud. The ruling does not block genuine challenges based on misconduct or material disclosure gaps, but it closes the easier path of buyer’s remorse after markets move.",
+      "Why should I care?",
+      "If you supply a firm that recently exited insolvency, watch whether payments stabilise under the approved plan now that withdrawal risk is lower. Banks and asset reconstruction companies bidding on stressed steel, power and infrastructure names may price assets higher if reopening risk falls. Retail shareholders in listed shells under insolvency should still assume equity wipeouts; the case law helps plan buyers, not minority holders. Follow appeals on fact-specific fraud claims, National Company Law Tribunal dockets for pending withdrawals, and whether Parliament amends the code in the winter session.",
+    ],
+  },
+  {
+    slug: "indiamart-q2-silver-churn-ai-search-october-2026",
+    title: "IndiaMART grew revenue but lost hundreds of paying suppliers in the quarter",
+    summary:
+      "On 27 October 2026 IndiaMART InterMESH Ltd said September-quarter revenue rose about 10% year on year while its paid supplier count fell by 615 accounts amid churn in its Silver subscription tier and shifts in AI-driven search traffic.",
+    category: "industry",
+    companyOrSector: "Internet / B2B marketplaces",
+    publishedAt: "2026-10-28T05:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indiamart-q2-silver-churn-ai-search-october-2026"),
+    keyTakeaways: [
+      "Q2 revenue rose about 10% year on year while paid supplier count declined by 615, per company commentary summarised on 27 October 2026.",
+      "Management cited Silver-tier churn and changes in AI-assisted search that affect how buyer inquiries reach listings.",
+      "The marketplace is prioritising monetisation quality over raw supplier additions.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 27 October 2026 coverage of IndiaMART InterMESH Ltd’s September-quarter results said revenue grew about 10% year on year even as the number of paying suppliers fell by 615. Management pointed to churn in the Silver subscription tier and to product changes in AI-driven search that alter how purchase inquiries flow to vendors. IndiaMART sits at the centre of small-business procurement in India, connecting factories, traders and kirana-scale buyers. When search ranking logic shifts, some legacy subscribers see fewer leads and cancel, while others upgrade to higher tiers with better placement. The company’s commentary suggested it is willing to shrink the paid base temporarily to improve monetisation per active supplier rather than chase headline account numbers.",
+      "What does this mean?",
+      "B2B marketplaces earn from subscriptions and lead fees, not just advertising impressions. Silver-tier suppliers are often price-sensitive micro enterprises; losing 615 accounts hurts optics but may lift average revenue per user if remaining vendors pay for better visibility. AI-assisted search can surface broader supplier sets, which helps buyers but dilutes incumbents who relied on keyword games. Competitors such as TradeIndia and vertical portals watch these tweaks to poach disgruntled sellers. For IndiaMART, the test is whether inquiry quality rises enough that upgraded suppliers accept higher prices after the transition noise fades.",
+      "Why should I care?",
+      "If you buy industrial inputs online, compare quote response rates after the search update and negotiate service-level terms with key vendors off-platform as a backup. Small manufacturers paying for Silver should audit inquiry logs before renewing annual contracts. Investors in Indian internet names should pair revenue growth with paid supplier trends and cash generation, not user counts alone. Watch the December-quarter net addition guidance, product blog posts on search ranking, and whether management discloses conversion from free to paid tiers after the AI rollout.",
+    ],
+  },
+  {
     slug: "bajaj-auto-record-q2-exports-ev-october-2026",
     title: "Bajaj Auto posted record quarterly profit as exports and EV sales accelerated",
     summary:
@@ -6638,6 +6758,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "gst-post-sale-discount-rules-november-2026": "policy",
+  "mumbai-airport-network-outage-october-2026": "policy",
+  "united-breweries-premium-beer-q2-october-2026": "markets",
+  "supreme-court-cirp-withdrawal-bar-october-2026": "policy",
+  "indiamart-q2-silver-churn-ai-search-october-2026": "companies",
   "bajaj-auto-record-q2-exports-ev-october-2026": "companies",
   "cipla-us-billion-revenue-target-october-2026": "companies",
   "telcos-6ghz-wifi-outdoor-october-2026": "policy",
