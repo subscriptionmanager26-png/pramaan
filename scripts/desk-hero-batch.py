@@ -185,6 +185,37 @@ def star_health_h1(d: ImageDraw.ImageDraw) -> None:
     d.line([(860, 380), (920, 320)], fill=YELLOW, width=5)
 
 
+def hul_volume(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 280, 420, 540], fill=BLUE)
+    for i, h in enumerate([80, 140, 220, 300]):
+        d.rectangle([480 + i * 70, 560 - h, 530 + i * 70, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.ellipse([900, 260, 1100, 460], outline=GOLD, width=5)
+    d.pieslice([920, 280, 1080, 440], 220, 340, fill=YELLOW)
+
+
+def gst_brokerage_fpi(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 300, 460, 520], fill=BLUE)
+    d.polygon([(720, 240), (880, 320), (720, 400)], fill=RED)
+    d.line([(880, 320), (1120, 320)], fill=GOLD, width=4)
+    d.ellipse([1080, 280, 1160, 360], fill=YELLOW)
+    d.rectangle([720, 440, 1120, 500], fill=RED)
+
+
+def overseas_retail(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 280, 320, 480], fill=BLUE)
+    d.polygon([(700, 520), (760, 380), (900, 340), (1050, 380), (1120, 520)], fill=RED)
+    d.line([(360, 380), (700, 420)], fill=GOLD, width=4)
+    d.rectangle([940, 200, 1020, 280], fill=YELLOW)
+
+
+def bpcl_kochi(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 320, 480, 540], fill=BLUE)
+    d.polygon([(300, 280), (420, 220), (420, 320)], fill=RED)
+    d.rectangle([640, 360, 1120, 420], fill=YELLOW)
+    d.polygon([(640, 390), (600, 450), (640, 510), (680, 450)], fill=GOLD)
+    d.line([(760, 420), (1120, 420)], fill=INK, width=2)
+
+
 def gst_post_sale(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([100, 280, 480, 520], fill=BLUE)
     d.rectangle([140, 320, 440, 380], fill=CREAM)
@@ -239,6 +270,10 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("hindunilvr-q2-festive-volume-october-2026", hul_volume)
+    save("gst-brokerage-fpi-export-clarification-october-2026", gst_brokerage_fpi)
+    save("india-overseas-retail-investing-boom-october-2026", overseas_retail)
+    save("bpcl-kochi-refinery-maintenance-january-2026", bpcl_kochi)
     save("gst-post-sale-discount-rules-november-2026", gst_post_sale)
     save("mumbai-airport-network-outage-october-2026", mumbai_outage)
     save("united-breweries-premium-beer-q2-october-2026", ub_beer)

@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hindunilvr-q2-festive-volume-october-2026",
+    title: "Hindustan Unilever posted its strongest volume growth in fourteen quarters",
+    summary:
+      "On 28 October 2026 Hindustan Unilever reported September-quarter underlying sales growth of 15% and volume growth of 7%, the highest volume pace in fourteen quarters, even as commodity costs pulled consolidated EBITDA margin down to 22.6%.",
+    category: "industry",
+    companyOrSector: "FMCG / consumption",
+    publishedAt: "2026-10-28T06:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hindunilvr-q2-festive-volume-october-2026"),
+    keyTakeaways: [
+      "HUL’s Q2 FY27 consolidated turnover was about ₹18,071 crore with 15% underlying sales growth and 7% volume growth, per results reported on 28 October 2026.",
+      "Volume growth was the strongest in fourteen quarters, while EBITDA margin fell about 140 basis points year on year to 22.6% on input cost pressure.",
+      "Profit before exceptional items rose about 9% year on year, showing shoppers are still buying even as margins compress.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Hindustan Unilever Ltd, India’s largest packaged consumer goods company, reported September-quarter results that showed shoppers buying more units again. Consolidated turnover reached about ₹18,071 crore, with underlying sales growth of 15% and volume growth of 7%. Management and wire coverage described the volume figure as a fourteen-quarter high, landing just ahead of the Diwali stocking season. Profit before exceptional items rose about 9% year on year, but consolidated EBITDA margin slipped to 22.6%, down roughly 140 basis points from a year earlier as commodity costs stayed elevated. The print matters because HUL’s basket spans soaps, detergents, packaged foods and personal care, making it a broad read on urban and rural pantry spend rather than a single category fad.",
+      "What does this mean?",
+      "Volume-led growth means households are replenishing staples and trading into larger packs or premium variants, not just paying higher list prices on the same number of units. That pattern fits other festive-week signals from autos, beverages and jewellery where ticket sizes held up even when share prices wobbled. Margin compression is the other half of the story: when palm oil, crude-linked inputs or packaging move up, HUL cannot always pass the full bill through instantly without losing shelf space to regional rivals. The company therefore accepts a thinner margin quarter to keep volumes moving, betting festive demand and mix will help later. For modern trade and kirana stores, steady HUL offtake also supports credit cycles with distributors.",
+      "Why should I care?",
+      "If you run a store, expect continued scheme activity on core packs through November even after headline price increases earlier in the year. Households planning festive cooking and cleaning budgets should not assume weak volume means discounts everywhere; national brands may fund promotions instead of list-price cuts. Investors comparing FMCG names should watch whether margin recovery commentary arrives in the December quarter or if input costs keep EBITDA closer to 22%. Follow HUL’s category splits on the earnings call, peer updates from ITC and Nestlé India, and rural demand trackers after the festival week.",
+    ],
+  },
+  {
+    slug: "gst-brokerage-fpi-export-clarification-october-2026",
+    title: "India clarified when overseas brokerage on trades can skip GST",
+    summary:
+      "On 26 October 2026 the Central Board of Indirect Taxes and Customs issued a circular saying brokerage paid by overseas clients on certain trades can qualify as exported services and avoid goods and services tax when conditions are met, a paperwork fix foreign portfolio investors had sought.",
+    category: "industry",
+    companyOrSector: "Tax / capital markets",
+    publishedAt: "2026-10-28T06:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gst-brokerage-fpi-export-clarification-october-2026"),
+    keyTakeaways: [
+      "A CBIC circular dated 26 October 2026 clarifies that brokerage charged to overseas clients can be treated as an export of services exempt from GST if eligibility conditions are satisfied.",
+      "Wire reporting on 28 October 2026 said analysts view the clarification as modestly positive for foreign portfolio investors facing heavy domestic equity outflows.",
+      "The change targets tax treatment of cross-border dealing charges, not capital gains or securities transaction tax.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 26 October 2026 India’s Central Board of Indirect Taxes and Customs published a circular clarifying how goods and services tax applies when Indian brokers charge brokerage to overseas clients. Reporting on 28 October 2026 said the document states that such brokerage can qualify as an export of services and avoid GST when specified conditions are met, including proper documentation of the overseas recipient and place of supply rules. Foreign portfolio investors and custodians had flagged ambiguity here because a GST levy on dealing charges raises frictional costs on top of securities transaction tax and other market fees. The clarification arrives while foreign investors have been net sellers of Indian equities for stretches of 2026, so even administrative fixes draw attention from strategists.",
+      "What does this mean?",
+      "GST on financial services is often invisible to retail investors but shows up in cost-to-trade for institutions routing orders through Mumbai brokers and bank custody chains. Treating eligible brokerage as an exported service aligns tax treatment with how many cross-border deals are booked, and reduces the risk of double friction where both STT and GST apply on related legs. It does not by itself reverse foreign outflows, which track global rates, dollar hedging costs and earnings revisions. It does remove one compliance argument custodians use when pitching India access to pension funds and sovereign wallets. Brokers must still maintain export invoices and prove overseas beneficiary details to auditors, so operational teams rather than traders feel the immediate workload.",
+      "Why should I care?",
+      "If you invest only through domestic mutual funds, the circular rarely changes your statement. If you hold overseas funds that allocate to India, lower frictional costs at the margin can matter over billions of dollars of turnover. Finance professionals at brokers and custodians should read the circular against existing export-of-service filings before year-end audits. Watch whether Sebi or stock exchanges issue companion guidance, and whether foreign flow data stabilises after the Fed decision week. This is a tax plumbing fix, not a new investment limit or capital-control change.",
+    ],
+  },
+  {
+    slug: "india-overseas-retail-investing-boom-october-2026",
+    title: "Weak home-market returns are pushing Indian savers toward overseas funds",
+    summary:
+      "Reporting on 28 October 2026 said top Indian asset managers have launched at least half a dozen overseas-focused funds in the past six months through tax-neutral hubs, channelling retail flows frustrated by muted domestic equity returns and hungry for global technology exposure.",
+    category: "industry",
+    companyOrSector: "Asset management / households",
+    publishedAt: "2026-10-28T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-overseas-retail-investing-boom-october-2026"),
+    keyTakeaways: [
+      "Wire coverage on 28 October 2026 described a wave of new overseas equity funds from Indian managers, including products such as JioBlackRock’s Advantage World Equity feeder.",
+      "At least six such launches landed in the prior six months as domestic investors sought diversification after weak local index returns.",
+      "Flows use permitted overseas investment routes and GIFT City structures rather than informal remittance channels.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 business reporters described Indian households and affluent savers moving more money into overseas equity funds after several quarters of muted returns from domestic benchmarks. At least half a dozen new overseas-oriented products from major asset managers hit the market in the preceding six months, including feeder funds that route into global indices and technology-heavy portfolios. Coverage cited vehicles such as JioBlackRock Advantage World Equity alongside older bank and mutual-fund platforms that expanded their offshore menus. Managers pitched the products through International Financial Services Centre structures that keep tax treatment neutral relative to direct liberalised remittance scheme investing, while still giving investors rupee-denominated units. The story sits next to heavy foreign portfolio investor selling in Indian shares, so retail is heading offshore just as institutions trim India weights.",
+      "What does this mean?",
+      "When local equity returns lag global technology leaders, distributors push what clients ask for: Nasdaq exposure, AI-themed baskets and dollar assets as a hedge against rupee moves. Each new feeder fund absorbs a slice of incremental savings that might otherwise have stayed in Nifty index funds or bank fixed deposits. That shift does not crash domestic markets overnight, but it changes the buyer base for mid-cap IPOs and systematic investment plans. Regulators watch aggregate overseas remittance usage because households face annual limits and must meet know-your-customer norms. Product manufacturers compete on expense ratios, hedging options and whether gains are treated as capital gains versus income in the investor’s hands.",
+      "Why should I care?",
+      "If you save through monthly plans, compare the total cost of an offshore feeder against a domestic flexi-cap fund before chasing last year’s US winners. Check how much of your net worth already sits outside India after property and gold. Financial advisers should document suitability because currency swings can overwhelm small equity moves over a two-year horizon. Watch Reserve Bank remittance data, Sebi notices on GIFT funds, and whether domestic equity flows recover after the US Federal Reserve decision. Overseas diversification can be prudent; chasing headlines after a slow year at home rarely is.",
+    ],
+  },
+  {
+    slug: "bpcl-kochi-refinery-maintenance-january-2026",
+    title: "BPCL will shut a large crude unit at Kochi for up to forty days in January",
+    summary:
+      "On 28 October 2026 a Bharat Petroleum executive said the company will shut a 10 million tonnes per year crude unit at its 15.5 million tonnes Kochi refinery from mid-January 2026 for a maintenance turnaround expected to last thirty to forty days.",
+    category: "industry",
+    companyOrSector: "Oil refining / supply",
+    publishedAt: "2026-10-28T05:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bpcl-kochi-refinery-maintenance-january-2026"),
+    keyTakeaways: [
+      "BPCL plans a mid-January 2026 shutdown of a 10 Mtpa crude distillation unit at the Kochi refinery, per comments reported on 28 October 2026.",
+      "The maintenance window is expected to run thirty to forty days on a site with total crude capacity of about 15.5 Mtpa.",
+      "Planned turnarounds trim regional product output temporarily but differ from unplanned outages that scramble supply chains.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 wire services quoted a Bharat Petroleum Corporation Ltd executive saying the company will shut a 10 million tonnes per year crude processing unit at its Kochi refinery in Kerala from mid-January 2026. The maintenance turnaround is expected to last thirty to forty days. Kochi is one of BPCL’s largest coastal refineries, with overall crude capacity of about 15.5 million tonnes per year, so idling a major unit reduces diesel, petrol and petrochemical feedstock output for southern India until the work finishes. Refiners schedule such shutdowns in cooler months or when monsoon logistics ease, coordinating with pipeline depots and marketing teams so retail pumps can draw on inventories rather than spot imports.",
+      "What does this mean?",
+      "A planned outage is a supply-management exercise, not a surprise fire or power failure. BPCL will line up crude cargoes before the shutdown, empty intermediate tanks, and restart with catalyst replacements or inspection fixes that keep the unit safe for another cycle. Southern marketing regions may see tighter product balances for a few weeks, which can widen dealer margins or prompt short-term imports of diesel if other refineries lack spare capacity. Airlines and industrial users rarely feel immediate pain unless the outage overlaps with global crude spikes. State-run marketers still coordinate with government on pump prices, so the shutdown is as much an inventory planning story as a headline price story.",
+      "Why should I care?",
+      "If you operate fleet vehicles in Kerala or coastal Karnataka, monitor depot allocation notices in January for possible delivery delays on bulk diesel contracts. Investors in BPCL should treat turnarounds as normal capex cycles that suppress utilisation one quarter but protect long-run reliability. Watch whether HPCL or Indian Oil ramp up runs at nearby refineries, and any Petroleum Ministry statements on strategic product reserves. Unplanned outages elsewhere would matter more for pump prices than this scheduled Kochi work.",
+    ],
+  },
+  {
     slug: "gst-post-sale-discount-rules-november-2026",
     title: "GST rules on post-sale discounts and export refunds tighten from 1 November",
     summary:
@@ -6758,6 +6854,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hindunilvr-q2-festive-volume-october-2026": "markets",
+  "gst-brokerage-fpi-export-clarification-october-2026": "policy",
+  "india-overseas-retail-investing-boom-october-2026": "markets",
+  "bpcl-kochi-refinery-maintenance-january-2026": "policy",
   "gst-post-sale-discount-rules-november-2026": "policy",
   "mumbai-airport-network-outage-october-2026": "policy",
   "united-breweries-premium-beer-q2-october-2026": "markets",
