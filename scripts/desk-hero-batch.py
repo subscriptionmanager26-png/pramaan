@@ -259,6 +259,42 @@ def indiamart_q2(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([1000, 160, 1140, 300], fill=GOLD)
 
 
+def jio_listing_debut(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(700, 520), (760, 380), (900, 340), (1050, 380), (1120, 520)], fill=BLUE)
+    for i, h in enumerate([80, 140, 200, 280]):
+        x = 120 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.ellipse([980, 200, 1080, 300], fill=YELLOW)
+
+
+def rbi_liquidity_squeeze(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 200, 420, 560], fill=BLUE)
+    for i, h in enumerate([400, 320, 240, 160, 100]):
+        d.rectangle([640 + i * 55, 560 - h, 690 + i * 55, 560], fill=GOLD if i > 2 else RED)
+    d.line([(720, 560), (1180, 560)], fill=INK, width=2)
+
+
+def pnb_housing(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 520), (160, 320), (280, 240), (400, 320), (400, 520)], fill=RED)
+    d.rectangle([440, 360, 520, 520], fill=BLUE)
+    for i, h in enumerate([120, 200, 280]):
+        d.rectangle([700 + i * 90, 560 - h, 760 + i * 90, 560], fill=[YELLOW, RED, BLUE][i])
+
+
+def meesho_q2(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 280, 420, 520], radius=24, fill=BLUE)
+    d.ellipse([180, 320, 360, 420], fill=YELLOW)
+    d.line([(480, 400), (1120, 280)], fill=RED, width=5)
+    d.polygon([(1050, 260), (1140, 300), (1050, 340)], fill=GOLD)
+
+
+def piramal_pharma(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 240, 280, 520], radius=28, fill=RED)
+    d.rectangle([320, 300, 520, 520], fill=BLUE)
+    for i, h in enumerate([100, 180, 260, 340]):
+        d.rectangle([680 + i * 80, 560 - h, 740 + i * 80, 560], fill=[YELLOW, RED, BLUE, GOLD][i])
+
+
 def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
     # pill bottle + dollar lane to billion tick
     d.rounded_rectangle([140, 220, 280, 520], radius=30, fill=BLUE)
@@ -270,6 +306,11 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("jio-platforms-ipo-listing-debut-october-2026", jio_listing_debut)
+    save("rbi-rupee-defence-liquidity-squeeze-october-2026", rbi_liquidity_squeeze)
+    save("pnb-housing-q2-disbursements-october-2026", pnb_housing)
+    save("meesho-q2-loss-narrowing-october-2026", meesho_q2)
+    save("piramal-pharma-fy27-guidance-october-2026", piramal_pharma)
     save("hindunilvr-q2-festive-volume-october-2026", hul_volume)
     save("gst-brokerage-fpi-export-clarification-october-2026", gst_brokerage_fpi)
     save("india-overseas-retail-investing-boom-october-2026", overseas_retail)

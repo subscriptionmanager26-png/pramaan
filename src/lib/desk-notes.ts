@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "jio-platforms-ipo-listing-debut-october-2026",
+    title: "Jio Platforms opened on the stock exchange about one fifth above its issue price",
+    summary:
+      "On 28 October 2026 Jio Platforms Ltd shares began trading at about ₹1,358 against an issue price of ₹1,119, a premium of roughly 21%, after the initial public offering drew bids worth about 22 times the shares on offer.",
+    category: "industry",
+    companyOrSector: "Telecom / digital services",
+    publishedAt: "2026-10-28T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jio-platforms-ipo-listing-debut-october-2026"),
+    keyTakeaways: [
+      "Jio Platforms listed on 28 October 2026 at about ₹1,358 per share versus an issue price of ₹1,119, a premium of roughly 21.35% cited in same-day reporting.",
+      "Exchange data showed the stock near ₹1,357 shortly after the open, after an IPO that was subscribed about 22.19 times overall.",
+      "At the debut price, reporting put Jio’s market capitalisation near ₹12.5 lakh crore, making it one of India’s largest listed companies by value.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Reliance Industries’ digital and telecom arm, Jio Platforms Ltd, made its stock market debut. Shares opened at about ₹1,358 each against an issue price of ₹1,119 set during the book-building process, a premium of roughly 21.35% in wire coverage. The listing followed an initial public offering that attracted heavy domestic and institutional demand, with overall subscription cited near 22.19 times the shares available. Early trades touched about ₹1,374 before settling closer to ₹1,357 in mid-session data. Because millions of households already pay monthly bills to the Jio brand for mobile data and fibre, the listing is as much a consumer franchise event as a telecom utility story.",
+      "What does this mean?",
+      "A first-day premium rewards investors who received allotments and signals that public markets were willing to pay up for growth in connectivity, fibre homes, and adjacent digital services. It does not guarantee future returns: large listings often see volatility once anchor and retail lock-ups expire and analysts publish detailed models. Parent Reliance Industries still holds a majority stake, so movements in Jio’s listed price feed back into conglomerate valuation even for shareholders who own only the parent stock. The listing also temporarily absorbed cash that might otherwise have chased mid-cap names during the application window, though refunds and secondary trading now recycle that liquidity.",
+      "Why should I care?",
+      "If you received shares in the IPO, read your allotment statement and plan around listing-day settlement rules rather than chasing opening spikes. If you use Jio services, the listing does not by itself change your plan tariffs, but it does increase scrutiny on capital spending and subscriber metrics each quarter. Investors comparing telecom names should watch average revenue per user, fibre additions, and enterprise deals rather than one-day price action. Follow post-listing exchange filings, lock-up schedules, and whether foreign portfolio flows stabilise after other mega issues this season.",
+    ],
+  },
+  {
+    slug: "rbi-rupee-defence-liquidity-squeeze-october-2026",
+    title: "Defending the rupee is draining the surplus cash banks had parked with each other",
+    summary:
+      "Reporting on 28 October 2026 said India’s banking system liquidity surplus fell from about ₹11 trillion in early September to roughly ₹46,200 crore by 26 October as Reserve Bank of India tools aimed at steadying the rupee tightened funding, pushing three- and six-month certificate of deposit rates up about 40–50 basis points in a week.",
+    category: "industry",
+    companyOrSector: "Banking / monetary policy",
+    publishedAt: "2026-10-28T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-rupee-defence-liquidity-squeeze-october-2026"),
+    keyTakeaways: [
+      "Wire coverage on 28 October 2026 cited a Bloomberg Economics index showing excess banking liquidity near ₹46,200 crore on 26 October, down from about ₹11 trillion in early September.",
+      "The squeeze followed Reserve Bank of India measures this quarter to limit speculative pressure on the rupee, including tighter hedge rules and special dollar windows for oil importers.",
+      "Three-month and six-month certificate of deposit rates rose about 40–50 basis points in the prior week as banks competed for wholesale funds.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 business reporters described a sharp drop in the cash surplus Indian banks hold with each other in the money market. Coverage citing a Bloomberg Economics index said excess liquidity fell to about ₹46,200 crore as of 26 October from a peak near ₹11 trillion in early September. The Reserve Bank of India had already rolled out a package of rupee-support steps this quarter, including routing oil companies’ dollar demand through a central bank window, tightening documentation on currency hedges, and raising cash margins on large importer positions. Those steps aim to slow speculative bets against the rupee, but they also drain the easy liquidity that kept short-term borrowing rates low through much of 2026.",
+      "What does this mean?",
+      "When surplus cash shrinks, banks pay more to roll over certificate of deposits and commercial paper, and those higher costs eventually feed loan pricing for companies and, with a lag, retail borrowers on floating rates. The move is deliberate: a weaker rupee raises imported fuel and gadget costs, so policymakers accept tighter domestic funding as part of the defence toolkit alongside spot dollar sales. This is separate from the policy repo rate, which markets were already pricing for additional hikes on inflation worries. Savers may see slightly better short-term deposit offers, while borrowers planning festive home or vehicle loans should compare quotes because marginal funding costs are moving even before the next rate decision.",
+      "Why should I care?",
+      "If you rely on a floating home loan, watch your reset date and whether your bank’s marginal cost of funds has shifted in October. If you run a small business using working-capital lines, expect banks to scrutinise rollovers when liquidity is no longer abundant. Fixed-income investors should note that tighter liquidity often pushes bond yields up unless the RBI injects cash via open market operations. Watch weekly liquidity data, CD rate boards at public-sector banks, and commentary from the next monetary policy meeting on whether currency tools remain paired with rate hikes.",
+    ],
+  },
+  {
+    slug: "pnb-housing-q2-disbursements-october-2026",
+    title: "PNB Housing Finance lent 60% more in the September quarter than a year ago",
+    summary:
+      "PNB Housing Finance Ltd reported September-quarter disbursements up about 60% year on year, profit after tax up about 6%, and gross non-performing assets down to 0.91%, with growth led by affordable and emerging-market books despite one-off corporate prepayment charges on yields.",
+    category: "industry",
+    companyOrSector: "Housing finance / households",
+    publishedAt: "2026-10-28T17:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pnb-housing-q2-disbursements-october-2026"),
+    keyTakeaways: [
+      "PNB Housing Finance’s Q2 FY27 disbursements rose about 60% year on year while consolidated profit after tax grew about 6%, per AI summaries tied to results released on 28 October 2026.",
+      "Gross non-performing assets improved to 0.91% with net NPA at 0.55%; loan assets reached about ₹94,124 crore at the half-year mark.",
+      "Management commentary highlighted affordable and emerging-market segments as growth drivers, with margins improving quarter on quarter.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 PNB Housing Finance Ltd, a listed home lender promoted by Punjab National Bank, reported September-quarter results that showed a sharp pickup in lending activity ahead of the festive property season. Disbursements rose about 60% compared with the same quarter a year earlier, while consolidated profit after tax increased about 6%. Gross non-performing assets fell to 0.91% and net NPA to 0.55%, signalling that older stress is being worked down even as new loans grow. Loan assets stood near ₹94,124 crore at the half-year stage, with consolidated profit after tax for the six months near ₹1,174 crore. Reporting noted one-off corporate prepayments that temporarily affected reported yields, but margins still improved quarter on quarter.",
+      "What does this mean?",
+      "A 60% disbursement jump is a behaviour signal: developers and buyers are closing more home-purchase pipelines, especially in affordable and emerging-city segments where ticket sizes fit lender risk models. That aligns with other festive-quarter data from housing finance peers and property launches, even while the Reserve Bank of India keeps policy tight. Lower NPAs give the company room to compete on rates and processing times without immediately raising provisioning charges. For Punjab National Bank as promoter, a stronger housing subsidiary supports fee income and brand reach, though the listed entity still funds itself in capital markets.",
+      "Why should I care?",
+      "If you are shopping for a home loan this season, compare offers from housing finance companies against public-sector bank festive schemes, and check whether your quote is linked to a repo benchmark that already moved after recent policy tightening. Sellers in tier-two cities may see quicker sanction timelines when lenders push disbursement targets. Investors should separate headline yield noise from underlying asset quality trends. Watch management guidance on affordable mix, competitor updates from LIC Housing Finance and Bajaj Housing Finance, and whether RBI liquidity conditions change loan pricing into November.",
+    ],
+  },
+  {
+    slug: "meesho-q2-loss-narrowing-october-2026",
+    title: "Meesho’s revenue rose in the September quarter while its net loss shrank",
+    summary:
+      "Meesho reported consolidated revenue of about ₹413 crore in Q2 FY27, up from the prior year, while net loss narrowed to about ₹13.2 crore; tax disputes and conditions on its Kirana Club acquisition remained flagged as overhangs.",
+    category: "industry",
+    companyOrSector: "E-commerce / Bharat shoppers",
+    publishedAt: "2026-10-28T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("meesho-q2-loss-narrowing-october-2026"),
+    keyTakeaways: [
+      "Meesho’s Q2 FY27 consolidated revenue was about ₹413.16 crore with net loss narrowing to about ₹13.24 crore, per results summaries on 28 October 2026.",
+      "First-half revenue reached about ₹784.44 crore as the platform continued to target value-conscious online shoppers outside top metros.",
+      "Filings still cite tax disputes and pending conditions on the Kirana Club acquisition as key uncertainties.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Meesho, the Bengaluru-based social-commerce marketplace aimed at tier-two and tier-three shoppers, reported September-quarter financials showing top-line growth and a smaller net loss. Consolidated revenue was about ₹413.16 crore in Q2 FY27, while net loss narrowed to about ₹13.24 crore versus a deeper loss a year earlier. First-half revenue reached about ₹784.44 crore. The platform built its user base by keeping prices low on fashion and household goods, leaning on resellers who share listings on messaging apps rather than spending heavily on metro-centric performance marketing. Results arrived the same week as heavy trading volatility in other consumer internet names, so investors read the print both for unit economics and for balance-sheet risks.",
+      "What does this mean?",
+      "Narrowing losses with rising revenue suggest Meesho is finding a path toward contribution margin improvement, likely through better supplier terms, logistics efficiency, and ad monetisation experiments. Value shoppers in Bharat remain active even when urban discretionary names wobble, which supports the company’s positioning away from premium quick-commerce baskets. Tax disputes and acquisition conditions are reminders that profitability can be delayed by compliance costs or integration work, not just by discounting. Competition from Flipkart, Amazon India, and quick-commerce players still caps pricing power on core categories.",
+      "Why should I care?",
+      "If you sell on Meesho or similar reseller platforms, watch take-rate and return-policy changes after festive sales peak. Shoppers should still compare total landed cost, including delivery fees, against offline bazaars. Investors tracking private and pre-IPO consumer internet names can use Meesho’s trajectory as a read on Bharat e-commerce unit economics, though the company is not listed. Follow updates on the Kirana Club deal, any tax tribunal outcomes, and whether the company files for a public offering after other large listings absorb market bandwidth.",
+    ],
+  },
+  {
+    slug: "piramal-pharma-fy27-guidance-october-2026",
+    title: "Piramal Pharma raised its revenue growth guidance for fiscal 2027 to about 20%",
+    summary:
+      "On 28 October 2026 Piramal Pharma Ltd lifted its FY27 revenue growth outlook toward the upper end of 19–20% after returning to quarterly profit, with contract development and manufacturing revenue up about 36% year on year to roughly ₹1,424 crore.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / manufacturing",
+    publishedAt: "2026-10-28T17:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("piramal-pharma-fy27-guidance-october-2026"),
+    keyTakeaways: [
+      "Piramal Pharma reported Q2 net profit of about ₹5.58 crore versus a loss of about ₹99.2 crore a year earlier, with revenue near ₹2,617 crore, up about 28% year on year, on 28 October 2026.",
+      "Chairperson Nandini Piramal said the company raised FY27 growth guidance toward 19–20% from an earlier low-to-mid-teens range, expecting a stronger second half.",
+      "Contract development and manufacturing revenue rose about 36% year on year to roughly ₹1,424 crore in the quarter.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Piramal Pharma Ltd reported September-quarter results that marked a turnaround to net profit and a sharper revenue outlook for fiscal 2027. Net profit was about ₹5.58 crore compared with a net loss of about ₹99.2 crore in the same quarter a year earlier. Revenue rose about 28% year on year to near ₹2,617 crore, while EBITDA reached about ₹348.7 crore in reporting cited on the day. The contract development and manufacturing organisation segment led growth, with revenue up about 36% year on year to roughly ₹1,424 crore from about ₹1,044 crore. Chairperson Nandini Piramal told reporters the company now expects annual revenue growth near 19–20%, up from an earlier low-to-mid-teens band, because the second half is typically stronger and order books look healthy across segments.",
+      "What does this mean?",
+      "CDMO growth shows global drug makers still outsourcing production and research steps to Indian facilities with cost and scale advantages. Raising guidance on a fixed-cost base implies incremental revenue should drop through to margins if utilisation stays high. The return to profit after a loss year earlier suggests restructuring and portfolio choices are stabilising, though pharma remains sensitive to regulatory inspections and customer concentration. For healthcare investors, the story is manufacturing demand rather than domestic prescription brands alone.",
+      "Why should I care?",
+      "If you work in pharma services or chemical inputs, stronger CDMO guidance can mean longer purchase orders for equipment and ingredients in Gujarat and Maharashtra industrial clusters. Patients rarely see CDMO results directly, but sustained Indian manufacturing scale keeps export earnings resilient when domestic consumption data mix is uneven. Investors should read segment splits, customer concentration, and capex plans on the earnings call rather than one-day share moves cited in headlines. Watch US FDA inspection outcomes, order wins from global innovators, and whether second-half seasonality repeats in FY27.",
+    ],
+  },
+  {
     slug: "hindunilvr-q2-festive-volume-october-2026",
     title: "Hindustan Unilever posted its strongest volume growth in fourteen quarters",
     summary:
@@ -6854,6 +6974,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "jio-platforms-ipo-listing-debut-october-2026": "markets",
+  "rbi-rupee-defence-liquidity-squeeze-october-2026": "policy",
+  "pnb-housing-q2-disbursements-october-2026": "markets",
+  "meesho-q2-loss-narrowing-october-2026": "markets",
+  "piramal-pharma-fy27-guidance-october-2026": "companies",
   "hindunilvr-q2-festive-volume-october-2026": "markets",
   "gst-brokerage-fpi-export-clarification-october-2026": "policy",
   "india-overseas-retail-investing-boom-october-2026": "markets",
