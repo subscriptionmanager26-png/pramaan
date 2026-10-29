@@ -193,7 +193,11 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
 
   const loadZerodha = useCallback(async (): Promise<ConnectionsZerodha> => {
     const headers = await pocketedgeAuthHeaders();
-    const res = await fetch("/api/agent/connections", { headers, cache: "no-store" });
+    const res = await fetch("/api/agent/connections", {
+      headers,
+      cache: "no-store",
+      signal: AbortSignal.timeout(25_000),
+    });
     const json = (await res.json().catch(() => ({}))) as {
       zerodha?: ConnectionsZerodha;
       error?: { code?: string; message?: string } | string;
@@ -217,6 +221,14 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       throw new Error("Connections response was missing Zerodha status.");
     }
     return json.zerodha;
+  }, []);
+
+  const openZerodhaUrl = useCallback((url: string) => {
+    setLoginUrl(url);
+    const opened = window.open(url, "_blank", "noopener,noreferrer");
+    if (!opened) {
+      setError("Popup blocked — tap “Open Zerodha login” below.");
+    }
   }, []);
 
   const importZerodha = useCallback(async () => {
@@ -292,6 +304,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
           method: "POST",
           headers: { ...headers, "Content-Type": "application/json" },
           body: JSON.stringify({ action }),
+          signal: AbortSignal.timeout(45_000),
         });
         const json = await res.json().catch(() => ({}));
         if (!res.ok) {
@@ -305,17 +318,22 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
           );
           return;
         }
-        if (typeof (json as { url?: string }).url === "string") {
-          window.open((json as { url: string }).url, "_blank", "noopener,noreferrer");
+        const url = typeof (json as { url?: string }).url === "string" ? (json as { url: string }).url : null;
+        if (url) {
+          openZerodhaUrl(url);
+          setZerodhaGate("need_login");
+        } else if ((json as { loggedInAs?: string }).loggedInAs) {
+          setZerodhaGate("ready");
         }
-        await refreshZerodhaGate({ autoImport: false });
-      } catch {
-        setError("Zerodha action failed");
+        await refreshZerodhaGate({ autoImport: Boolean((json as { loggedInAs?: string }).loggedInAs) });
+      } catch (err) {
+        const timedOut = err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message));
+        setError(timedOut ? "Zerodha timed out. Try again." : "Zerodha action failed");
       } finally {
         setZerodhaBusy(false);
       }
     },
-    [refreshZerodhaGate],
+    [openZerodhaUrl, refreshZerodhaGate],
   );
 
   const parseUploads = useCallback(
@@ -470,12 +488,18 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
 
         {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
         {zerodhaGate === "checking" || zerodhaGate === "importing" ? (
-          <p className="text-[14px] text-ink-2">{parseStatus || "Working…"}</p>
+          <p className="text-[14px] text-ink-2">
+            {zerodhaGate === "checking"
+              ? "Checking your Zerodha connection…"
+              : parseStatus || "Fetching holdings from Zerodha…"}
+          </p>
         ) : null}
 
         {zerodhaGate === "need_connect" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
-            <p className="text-[14px] text-ink-2">Link Zerodha so we can pull holdings via MCP.</p>
+            <p className="text-[14px] text-ink-2">
+              Link Zerodha — we’ll open Kite login so you can authorize read access.
+            </p>
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
@@ -483,7 +507,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                 disabled={zerodhaBusy}
                 onClick={() => void zerodhaAction("connect")}
               >
-                {zerodhaBusy ? "Opening…" : "Connect Zerodha"}
+                {zerodhaBusy ? "Opening Zerodha…" : "Connect Zerodha"}
               </button>
               <Link
                 href="/ai/connections"
@@ -497,11 +521,13 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
 
         {zerodhaGate === "need_login" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
-            <p className="text-[14px] text-ink-2">Zerodha is linked, but today’s session needs a login.</p>
+            <p className="text-[14px] text-ink-2">
+              Finish login on Zerodha (Kite), then come back and import.
+            </p>
             <div className="flex flex-wrap gap-2">
               {loginUrl ? (
                 <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary text-[13px]">
-                  Log in to Zerodha
+                  Open Zerodha login
                 </a>
               ) : (
                 <button
@@ -510,7 +536,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                   disabled={zerodhaBusy}
                   onClick={() => void zerodhaAction("login")}
                 >
-                  {zerodhaBusy ? "Opening…" : "Log in to Zerodha"}
+                  {zerodhaBusy ? "Opening Zerodha…" : "Log in to Zerodha"}
                 </button>
               )}
               <button
