@@ -8,15 +8,10 @@ import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import type { AgentAction, AgentMessage } from "@/lib/agent/types";
 import type { LiveHolding, LivePortfolio } from "@/lib/portfolio/holdings";
+import { FILE_PARSE_PROMPT, ZERODHA_IMPORT_PROMPT } from "@/lib/portfolio/setup-prompts";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 const THREAD_ID = "portfolio";
-
-const FILE_ONLY_PROMPT =
-  "Parse the attached holdings file(s) or screenshot and propose my current portfolio book for confirmation. Prefer mode=replace for a full statement.";
-
-const ZERODHA_IMPORT_PROMPT =
-  "Import my Zerodha holdings into my portfolio book. Use Zerodha tools to fetch current holdings (and avg cost where available), then call propose_portfolio_holdings with mode=replace so I can confirm.";
 
 type Props = {
   portfolio: LivePortfolio | null;
@@ -175,7 +170,7 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
 
   const send = useCallback(
     async (raw: string, attachmentIds: string[]) => {
-      const q = raw.trim() || (attachmentIds.length ? FILE_ONLY_PROMPT : "");
+      const q = raw.trim() || (attachmentIds.length ? FILE_PARSE_PROMPT : "");
       if ((!q && !attachmentIds.length) || busy) return false;
       setBusy(true);
       setError(null);

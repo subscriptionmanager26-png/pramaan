@@ -5,14 +5,14 @@ import { paFetch } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
 
-type Params = { params: Promise<{ messageId: string }> };
+type Params = { params: Promise<{ id: string }> };
 
 export async function GET(request: Request, { params }: Params) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
-  const { messageId } = await params;
+  const { id } = await params;
   const res = await paFetch(
-    `/api/v1/users/${encodeURIComponent(auth.user.id)}/messages/${encodeURIComponent(messageId)}/artifacts`,
+    `/api/v1/users/${encodeURIComponent(auth.user.id)}/messages/${encodeURIComponent(id)}/artifacts`,
   );
   const body = await res.json().catch(() => ({}));
   return NextResponse.json(body, { status: res.status });

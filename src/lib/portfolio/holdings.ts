@@ -117,7 +117,10 @@ export function allocationFromHoldings(holdings: LiveHolding[]) {
     }));
 }
 
-/** Insights derived only from the current holdings snapshot — no invented history. */
+/**
+ * Insights from the current book only — keep them short and actionable.
+ * Skip community scores, flag taxonomies, and forecasts (those add noise without a clear next step).
+ */
 export function insightsFromHoldings(holdings: LiveHolding[]): PortfolioInsight[] {
   if (!holdings.length) return [];
   const { totalValue, invested, unrealized } = portfolioTotals(holdings);
@@ -128,26 +131,7 @@ export function insightsFromHoldings(holdings: LiveHolding[]): PortfolioInsight[
     const w = (top.value / totalValue) * 100;
     out.push({
       title: "Largest position",
-      body: `${top.name || top.ticker} is about ${w.toFixed(1)}% of the book (${formatInr(top.value)}).`,
-    });
-  }
-
-  if (totalValue > 0 && invested > 0) {
-    const pct = (unrealized / invested) * 100;
-    out.push({
-      title: "Unrealized vs cost",
-      body:
-        unrealized === 0
-          ? "Mark-to-market value matches invested cost on the lines that have an average price."
-          : `Book is ${pct >= 0 ? "up" : "down"} ${Math.abs(pct).toFixed(1)}% versus average cost where cost is known.`,
-    });
-  }
-
-  const alloc = allocationFromHoldings(holdings);
-  if (alloc[0]) {
-    out.push({
-      title: "Asset mix",
-      body: `${alloc[0].label} is the largest sleeve at ${alloc[0].weightPct.toFixed(0)}% of current value.`,
+      body: `${top.name || top.ticker} is ${w.toFixed(1)}% of the book.`,
     });
   }
 
@@ -155,16 +139,24 @@ export function insightsFromHoldings(holdings: LiveHolding[]): PortfolioInsight[
   if (concentrated.length >= 2) {
     out.push({
       title: "Concentration",
-      body: `${concentrated.length} holdings are each 15%+ of the book — position size risk is elevated.`,
+      body: `${concentrated.length} lines are each 15%+ of value.`,
     });
-  } else if (holdings.length <= 3 && totalValue > 0) {
+  } else if (holdings.length <= 3) {
     out.push({
       title: "Breadth",
-      body: `Only ${holdings.length} line${holdings.length === 1 ? "" : "s"} in the book — diversification is limited by construction.`,
+      body: `Only ${holdings.length} holding${holdings.length === 1 ? "" : "s"} — limited diversification.`,
     });
   }
 
-  return out.slice(0, 4);
+  if (totalValue > 0 && invested > 0 && Math.abs(unrealized) > 1) {
+    const pct = (unrealized / invested) * 100;
+    out.push({
+      title: "Unrealized P&L",
+      body: `${pct >= 0 ? "Up" : "Down"} ${Math.abs(pct).toFixed(1)}% vs average cost.`,
+    });
+  }
+
+  return out.slice(0, 3);
 }
 
 export function formatInr(amount: number, compact = false) {

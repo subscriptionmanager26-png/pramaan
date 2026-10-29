@@ -1,12 +1,19 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Download, PenLine, Upload } from "lucide-react";
+import Link from "next/link";
+import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
 
-import { AgentComposer } from "@/components/agent/chat/AgentComposer";
-import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
-import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
-import type { AgentAction, AgentMessage } from "@/lib/agent/types";
-import type { LiveHolding, LivePortfolio } from "@/lib/portfolio/holdings";
+import { PortfolioUploadPanel } from "@/components/portfolio/PortfolioUploadPanel";
+import type { PortfolioHoldingDraft } from "@/lib/agent/types";
+import {
+  formatInr,
+  portfolioTotals,
+  type LiveHolding,
+  type LivePortfolio,
+} from "@/lib/portfolio/holdings";
+import { runPortfolioImport } from "@/lib/portfolio/import-via-agent";
+import { FILE_PARSE_PROMPT, ZERODHA_IMPORT_PROMPT } from "@/lib/portfolio/setup-prompts";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 type DraftRow = {
@@ -17,15 +24,16 @@ type DraftRow = {
   name: string;
 };
 
-type ChatPane = "open" | "docked";
+type SetupPath = "zerodha" | "manual" | "upload";
+/** choose → (upload|zerodha|edit) → verify → save */
+type Step = "choose" | "upload" | "zerodha" | "edit" | "verify";
+type ZerodhaGate = "checking" | "need_connect" | "need_login" | "ready" | "importing" | "error";
 
-const THREAD_ID = "portfolio";
-
-const FILE_ONLY_PROMPT =
-  "Parse the attached holdings file(s) or screenshot and propose my CURRENT portfolio book. Prefer mode=replace. Include avg cost when available. Call propose_portfolio_holdings.";
-
-const ZERODHA_PROMPT =
-  "Import my Zerodha holdings into my portfolio book. Use Zerodha tools to fetch current holdings and avg cost where available, then call propose_portfolio_holdings with mode=replace.";
+type ConnectionsZerodha = {
+  connected: boolean;
+  loggedInAs: string | null;
+  sessionActive: boolean;
+};
 
 function newKey() {
   return `r-${Math.random().toString(36).slice(2, 9)}`;
@@ -42,7 +50,7 @@ function rowsFromHoldings(holdings: LiveHolding[]): DraftRow[] {
   }));
 }
 
-function rowsFromProposal(holdings: { ticker: string; qty: number; avg?: number; name?: string }[]): DraftRow[] {
+function rowsFromProposal(holdings: PortfolioHoldingDraft[]): DraftRow[] {
   const next = holdings
     .filter((h) => h.qty > 0)
     .map((h) => ({
@@ -56,12 +64,12 @@ function rowsFromProposal(holdings: { ticker: string; qty: number; avg?: number;
 }
 
 function parseDraft(rows: DraftRow[]) {
-  const out: { ticker: string; qty: number; avg?: number; name?: string }[] = [];
+  const out: PortfolioHoldingDraft[] = [];
   for (const row of rows) {
     const ticker = row.ticker.trim().toUpperCase();
     const qty = Number(row.qty);
     if (!ticker || !Number.isFinite(qty) || qty <= 0) continue;
-    const item: { ticker: string; qty: number; avg?: number; name?: string } = { ticker, qty };
+    const item: PortfolioHoldingDraft = { ticker, qty };
     const avg = Number(row.avg);
     if (row.avg.trim() && Number.isFinite(avg) && avg > 0) item.avg = avg;
     if (row.name.trim()) item.name = row.name.trim();
@@ -70,113 +78,315 @@ function parseDraft(rows: DraftRow[]) {
   return out;
 }
 
-function draftEqual(
-  a: { ticker: string; qty: number; avg?: number; name?: string }[],
-  b: LiveHolding[],
-) {
-  if (a.length !== b.length) return false;
-  const map = new Map(b.map((h) => [h.ticker, h]));
-  for (const row of a) {
-    const cur = map.get(row.ticker);
-    if (!cur || cur.qty !== row.qty) return false;
-    if ((row.avg ?? null) !== (cur.avg ?? null)) return false;
-  }
-  return true;
+function draftAsLive(parsed: PortfolioHoldingDraft[]): LiveHolding[] {
+  return parsed.map((h) => ({
+    ticker: h.ticker,
+    qty: h.qty,
+    avg: h.avg,
+    name: h.name,
+    value: h.avg != null ? h.avg * h.qty : undefined,
+  }));
 }
 
-function displayUserText(text: string) {
-  return text.replace(/^\[Portfolio assistant\][\s\S]*?Client request:\s*/i, "") || text;
-}
+function EmptySetupChooser({
+  onChoose,
+  disabled,
+  updating,
+}: {
+  onChoose: (path: SetupPath) => void;
+  disabled?: boolean;
+  updating?: boolean;
+}) {
+  const options: { id: SetupPath; title: string; detail: string; icon: ReactNode }[] = [
+    {
+      id: "zerodha",
+      title: "Fetch from Zerodha",
+      detail: "Pull live holdings via Zerodha MCP",
+      icon: <Download className="h-5 w-5" strokeWidth={2} aria-hidden />,
+    },
+    {
+      id: "manual",
+      title: "Add manually",
+      detail: "Type ticker, quantity, and average cost",
+      icon: <PenLine className="h-5 w-5" strokeWidth={2} aria-hidden />,
+    },
+    {
+      id: "upload",
+      title: "Upload file or files",
+      detail: "CSV, Excel, screenshot, or PDF — AI parses only",
+      icon: <Upload className="h-5 w-5" strokeWidth={2} aria-hidden />,
+    },
+  ];
 
-function holdingsContext(holdings: LiveHolding[], draft: DraftRow[]) {
-  const parsed = parseDraft(draft);
-  const source = parsed.length
-    ? parsed
-    : holdings.map((h) => ({ ticker: h.ticker, qty: h.qty, avg: h.avg }));
-  if (!source.length) return "The client has no holdings in the artifact yet.";
-  return `Current portfolio artifact (draft, may be unsaved): ${source
-    .slice(0, 80)
-    .map((h) => `${h.ticker} qty=${h.qty}${h.avg != null ? ` avg=${h.avg}` : ""}`)
-    .join("; ")}`;
+  return (
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-stretch px-1 py-6 sm:py-10">
+      <div className="text-center">
+        <h2 className="text-headline text-ink">{updating ? "Update holdings" : "Add your holdings"}</h2>
+        <p className="mt-2 text-[15px] text-ink-2">
+          {updating ? "Choose how you want to change the book." : "Pick one way to start."}
+        </p>
+      </div>
+      <div className="mt-8 grid gap-3">
+        {options.map((opt) => (
+          <button
+            key={opt.id}
+            type="button"
+            disabled={disabled}
+            onClick={() => onChoose(opt.id)}
+            className="flex items-start gap-4 rounded-2xl border border-line bg-white px-5 py-5 text-left shadow-[3px_3px_0_#0b0b0b] transition-colors hover:border-ink/40 disabled:opacity-50 sm:gap-5 sm:px-6 sm:py-6"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line bg-paper-2 text-ink">
+              {opt.icon}
+            </span>
+            <span className="min-w-0 pt-0.5">
+              <p className="text-[17px] font-semibold tracking-tight text-ink sm:text-[18px]">{opt.title}</p>
+              <p className="mt-1 text-[14px] leading-5 text-ink-2">{opt.detail}</p>
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 type Props = {
   portfolio: LivePortfolio | null;
   onSaved: (portfolio: LivePortfolio) => void;
   onCancel?: () => void;
+  /** Local UI preview — no API writes / agent imports. */
+  preview?: boolean;
 };
 
-export function PortfolioEditor({ portfolio, onSaved, onCancel }: Props) {
+export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false }: Props) {
   const holdings = portfolio?.holdings ?? [];
   const empty = !holdings.length;
-  const [rows, setRows] = useState<DraftRow[]>(() => rowsFromHoldings(holdings));
-  const [messages, setMessages] = useState<AgentMessage[]>([]);
-  const [busy, setBusy] = useState(false);
+  const [step, setStep] = useState<Step>("choose");
+  const [setupPath, setSetupPath] = useState<SetupPath | null>(null);
+  const [rows, setRows] = useState<DraftRow[]>(() =>
+    empty ? [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }] : rowsFromHoldings(holdings),
+  );
   const [saving, setSaving] = useState(false);
+  const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [artifactFlash, setArtifactFlash] = useState<string | null>(null);
-  // Mobile: docked by default so artifact is primary. Desktop chat column is always shown.
-  const [chatPane, setChatPane] = useState<ChatPane>("docked");
-  const [pickerToken, setPickerToken] = useState(0);
-  const bottomRef = useRef<HTMLDivElement>(null);
-  const rowsRef = useRef(rows);
-  rowsRef.current = rows;
-  const openedEmptyChat = useRef(false);
+  const [parseStatus, setParseStatus] = useState<string | null>(null);
+  const [zerodhaGate, setZerodhaGate] = useState<ZerodhaGate>("checking");
+  const [zerodhaBusy, setZerodhaBusy] = useState(false);
+  const [loginUrl, setLoginUrl] = useState<string | null>(null);
+  const firstTickerRef = useRef<HTMLInputElement>(null);
 
   const parsed = useMemo(() => parseDraft(rows), [rows]);
-  const dirty = empty ? parsed.length > 0 : !draftEqual(parsed, holdings);
+  const verifyLive = useMemo(() => draftAsLive(parsed), [parsed]);
+  const totals = useMemo(() => portfolioTotals(verifyLive), [verifyLive]);
 
-  useEffect(() => {
-    setRows(rowsFromHoldings(holdings));
-  }, [portfolio?.id, portfolio?.updatedAt]);
+  const patchRow = (key: string, patch: Partial<DraftRow>) => {
+    setRows((cur) => cur.map((r) => (r.key === key ? { ...r, ...patch } : r)));
+  };
 
-  useEffect(() => {
-    if (!empty || openedEmptyChat.current) return;
-    if (window.matchMedia("(max-width: 1023px)").matches) {
-      openedEmptyChat.current = true;
-      setChatPane("open");
+  const goChoose = () => {
+    setStep("choose");
+    setSetupPath(null);
+    setError(null);
+    setParseStatus(null);
+    setLoginUrl(null);
+    setBusy(false);
+  };
+
+  const loadZerodha = useCallback(async (): Promise<ConnectionsZerodha | null> => {
+    const headers = await pocketedgeAuthHeaders();
+    const res = await fetch("/api/agent/connections", { headers, cache: "no-store" });
+    if (!res.ok) return null;
+    const json = (await res.json()) as { zerodha?: ConnectionsZerodha };
+    return json.zerodha ?? null;
+  }, []);
+
+  const importZerodha = useCallback(async () => {
+    if (preview) {
+      setError("Zerodha import needs a signed-in agent. Use Add manually in preview.");
+      setZerodhaGate("error");
+      return;
     }
-  }, [empty]);
+    setBusy(true);
+    setZerodhaGate("importing");
+    setError(null);
+    setParseStatus("Fetching holdings from Zerodha…");
+    try {
+      const result = await runPortfolioImport({
+        text: ZERODHA_IMPORT_PROMPT,
+        getAuthHeaders: pocketedgeAuthHeaders,
+        onStatus: setParseStatus,
+      });
+      if (!result.ok) {
+        if (result.login) {
+          setLoginUrl(result.login.url);
+          setZerodhaGate("need_login");
+          setError(result.error);
+          return;
+        }
+        setZerodhaGate("error");
+        setError(result.error);
+        return;
+      }
+      setRows(rowsFromProposal(result.holdings));
+      setStep("edit");
+      setParseStatus(null);
+    } catch {
+      setZerodhaGate("error");
+      setError("Could not import from Zerodha.");
+    } finally {
+      setBusy(false);
+    }
+  }, [preview]);
 
-  useEffect(() => {
-    void (async () => {
+  const refreshZerodhaGate = useCallback(
+    async (opts?: { autoImport?: boolean }) => {
+      setZerodhaGate("checking");
+      setError(null);
+      setLoginUrl(null);
+      try {
+        const z = await loadZerodha();
+        if (!z) {
+          setZerodhaGate("error");
+          setError("Could not check Zerodha connection.");
+          return;
+        }
+        if (!z.connected) {
+          setZerodhaGate("need_connect");
+          return;
+        }
+        if (!z.sessionActive) {
+          setZerodhaGate("need_login");
+          return;
+        }
+        setZerodhaGate("ready");
+        if (opts?.autoImport) await importZerodha();
+      } catch {
+        setZerodhaGate("error");
+        setError("Could not check Zerodha connection.");
+      }
+    },
+    [importZerodha, loadZerodha],
+  );
+
+  const zerodhaAction = useCallback(
+    async (action: "connect" | "login") => {
+      setZerodhaBusy(true);
+      setError(null);
       try {
         const headers = await pocketedgeAuthHeaders();
-        const res = await fetch(
-          `/api/agent/chat-state?threadId=${encodeURIComponent(THREAD_ID)}&limit=20&scope=messages`,
-          { headers, cache: "no-store" },
-        );
-        if (!res.ok) return;
-        const json = await res.json();
-        setMessages((json.messages as AgentMessage[]) || []);
+        const res = await fetch("/api/agent/zerodha", {
+          method: "POST",
+          headers: { ...headers, "Content-Type": "application/json" },
+          body: JSON.stringify({ action }),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          const err = (json as { error?: { message?: string } | string }).error;
+          setError(
+            typeof err === "object" && err?.message
+              ? err.message
+              : typeof err === "string"
+                ? err
+                : "Zerodha action failed",
+          );
+          return;
+        }
+        if (typeof (json as { url?: string }).url === "string") {
+          window.open((json as { url: string }).url, "_blank", "noopener,noreferrer");
+        }
+        await refreshZerodhaGate({ autoImport: false });
       } catch {
-        // ignore
+        setError("Zerodha action failed");
+      } finally {
+        setZerodhaBusy(false);
       }
-    })();
-  }, []);
+    },
+    [refreshZerodhaGate],
+  );
 
-  useEffect(() => {
-    if (chatPane === "open") bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, busy, chatPane]);
+  const parseUploads = useCallback(
+    async (attachmentIds: string[]) => {
+      if (preview) {
+        setError("Uploads need a signed-in agent. Use Add manually in preview.");
+        return;
+      }
+      setBusy(true);
+      setError(null);
+      setParseStatus("Parsing files with AI…");
+      try {
+        const result = await runPortfolioImport({
+          text: FILE_PARSE_PROMPT,
+          attachmentIds,
+          getAuthHeaders: pocketedgeAuthHeaders,
+          onStatus: setParseStatus,
+        });
+        if (!result.ok) {
+          setError(result.error);
+          return;
+        }
+        setRows(rowsFromProposal(result.holdings));
+        setStep("edit");
+        setParseStatus(null);
+      } catch {
+        setError("Could not parse those files.");
+      } finally {
+        setBusy(false);
+      }
+    },
+    [preview],
+  );
 
-  const applyProposal = useCallback((action: Extract<AgentAction, { kind: "portfolio_confirmation" }>) => {
-    setRows(rowsFromProposal(action.holdings));
-    setArtifactFlash(
-      action.mode === "merge"
-        ? `Artifact updated · ${action.holdings.length} changes proposed`
-        : `Artifact updated · ${action.holdings.length} holdings`,
-    );
-    window.setTimeout(() => setArtifactFlash(null), 4000);
-  }, []);
+  const chooseSetup = (path: SetupPath) => {
+    setSetupPath(path);
+    setError(null);
+    if (path === "manual") {
+      setRows(empty ? [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }] : rowsFromHoldings(holdings));
+      setStep("edit");
+      window.setTimeout(() => firstTickerRef.current?.focus(), 80);
+      return;
+    }
+    if (path === "upload") {
+      if (preview) {
+        setError("Uploads need a signed-in agent. Use Add manually in preview.");
+      }
+      setStep("upload");
+      return;
+    }
+    // zerodha
+    setStep("zerodha");
+    if (preview) {
+      setZerodhaGate("error");
+      setError("Zerodha import needs a signed-in agent. Use Add manually in preview.");
+      return;
+    }
+    void refreshZerodhaGate({ autoImport: true });
+  };
 
-  const save = useCallback(async () => {
+  const continueToVerify = () => {
     if (!parsed.length) {
-      setError("Add at least one holding before saving.");
+      setError("Add at least one holding with ticker and quantity.");
+      return;
+    }
+    setError(null);
+    setStep("verify");
+  };
+
+  const save = async () => {
+    if (!parsed.length) {
+      setError("Add at least one holding before confirming.");
       return;
     }
     setSaving(true);
     setError(null);
     try {
+      if (preview) {
+        onSaved({
+          id: portfolio?.id ?? "preview-local",
+          name: portfolio?.name ?? "Preview portfolio",
+          updatedAt: new Date().toISOString(),
+          holdings: draftAsLive(parsed),
+        });
+        return;
+      }
       const headers = await pocketedgeAuthHeaders();
       const res = await fetch("/api/portfolio", {
         method: "PUT",
@@ -194,223 +404,261 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel }: Props) {
     } finally {
       setSaving(false);
     }
-  }, [onSaved, parsed]);
-
-  const send = useCallback(
-    async (raw: string, attachmentIds: string[]) => {
-      const q = raw.trim() || (attachmentIds.length ? FILE_ONLY_PROMPT : "");
-      if ((!q && !attachmentIds.length) || busy) return false;
-      setBusy(true);
-      setError(null);
-      setChatPane("open");
-      const context = holdingsContext(holdings, rowsRef.current);
-      const payloadText = `[Portfolio assistant]\nMode: EDIT — update the portfolio artifact via propose_portfolio_holdings when the book should change.\n${context}\n\nClient request: ${q}`;
-      try {
-        const headers = await pocketedgeAuthHeaders();
-        const res = await fetch("/api/agent/messages", {
-          method: "POST",
-          headers: { ...headers, "Content-Type": "application/json" },
-          body: JSON.stringify({
-            text: payloadText,
-            threadId: THREAD_ID,
-            attachments: attachmentIds.length ? attachmentIds : undefined,
-          }),
-        });
-        if (!res.ok) {
-          const body = await res.json().catch(() => ({}));
-          setError((body as { error?: { message?: string } }).error?.message || `Send failed (${res.status})`);
-          return false;
-        }
-        const json = await res.json();
-        let current = json.message as AgentMessage;
-        setMessages((prev) => [...prev.filter((m) => m.id !== current.id), current]);
-
-        const evRes = await fetch(`/api/agent/messages/${encodeURIComponent(current.id)}/events`, {
-          headers,
-          cache: "no-store",
-        });
-        if (evRes.ok && evRes.body) {
-          const reader = evRes.body.getReader();
-          const decoder = new TextDecoder();
-          let buffer = "";
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            buffer += decoder.decode(value, { stream: true });
-            const parts = buffer.split("\n\n");
-            buffer = parts.pop() ?? "";
-            for (const part of parts) {
-              const frame = parseSseFrame(part);
-              if (!frame?.data) continue;
-              const event = parseStreamEvent(frame);
-              if (!event) continue;
-              current = applyStreamEvent(current, event);
-              setMessages((prev) => prev.map((m) => (m.id === current.id ? current : m)));
-              if (event.type === "action_required" && event.action?.kind === "portfolio_confirmation") {
-                applyProposal(event.action);
-              }
-            }
-          }
-        }
-
-        const proposal = current.actions.find(
-          (a): a is Extract<AgentAction, { kind: "portfolio_confirmation" }> =>
-            a.kind === "portfolio_confirmation",
-        );
-        if (proposal) applyProposal(proposal);
-
-        // On small screens, dock chat so the artifact is visible again.
-        if (typeof window !== "undefined" && window.matchMedia("(max-width: 1023px)").matches) {
-          setChatPane("docked");
-        }
-        return true;
-      } catch {
-        setError("Could not reach the assistant");
-        return false;
-      } finally {
-        setBusy(false);
-      }
-    },
-    [applyProposal, busy, holdings],
-  );
-
-  const patchRow = (key: string, patch: Partial<DraftRow>) => {
-    setRows((cur) => cur.map((r) => (r.key === key ? { ...r, ...patch } : r)));
   };
 
-  const chatBody = (
-    <>
-      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-3 py-3">
-        {!messages.length ? (
-          <div className="space-y-3 text-[13px] leading-5 text-ink-2">
-            <p className="font-medium text-ink">Tell AI how to update the book</p>
-            <p>Examples: paste a list, attach a screenshot or PDF, or ask to import Zerodha holdings.</p>
+  if (step === "choose") {
+    return (
+      <div>
+        {!empty && onCancel ? (
+          <div className="mb-2 flex justify-end">
+            <button
+              type="button"
+              className="text-[13px] font-semibold text-ink-2 hover:underline"
+              onClick={onCancel}
+            >
+              Cancel
+            </button>
+          </div>
+        ) : null}
+        <EmptySetupChooser onChoose={chooseSetup} disabled={busy || saving} updating={!empty} />
+      </div>
+    );
+  }
+
+  if (step === "upload") {
+    return (
+      <div className="space-y-3">
+        {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
+        <PortfolioUploadPanel
+          disabled={preview}
+          parsing={busy}
+          parseStatus={parseStatus}
+          onParse={(ids) => void parseUploads(ids)}
+          onBack={goChoose}
+        />
+      </div>
+    );
+  }
+
+  if (step === "zerodha") {
+    return (
+      <div className="mx-auto w-full max-w-2xl space-y-5">
+        <div className="flex flex-wrap items-start justify-between gap-2">
+          <div>
+            <h2 className="text-headline text-ink">Fetch from Zerodha</h2>
+            <p className="mt-1 text-[14px] text-ink-2">Connect once, then import live holdings.</p>
+          </div>
+          <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
+            ← All options
+          </button>
+        </div>
+
+        {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
+        {zerodhaGate === "checking" || zerodhaGate === "importing" ? (
+          <p className="text-[14px] text-ink-2">{parseStatus || "Working…"}</p>
+        ) : null}
+
+        {zerodhaGate === "need_connect" ? (
+          <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
+            <p className="text-[14px] text-ink-2">Link Zerodha so we can pull holdings via MCP.</p>
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
-                className="rounded-full border border-line bg-white px-3 py-1.5 text-[12px] text-ink hover:border-ink/30 disabled:opacity-50"
-                disabled={busy}
-                onClick={() => setPickerToken((n) => n + 1)}
+                className="btn-primary text-[13px] disabled:opacity-50"
+                disabled={zerodhaBusy}
+                onClick={() => void zerodhaAction("connect")}
               >
-                Attach file
+                {zerodhaBusy ? "Opening…" : "Connect Zerodha"}
               </button>
+              <Link
+                href="/ai/connections"
+                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30"
+              >
+                Connections
+              </Link>
+            </div>
+          </div>
+        ) : null}
+
+        {zerodhaGate === "need_login" ? (
+          <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
+            <p className="text-[14px] text-ink-2">Zerodha is linked, but today’s session needs a login.</p>
+            <div className="flex flex-wrap gap-2">
+              {loginUrl ? (
+                <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary text-[13px]">
+                  Log in to Zerodha
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="btn-primary text-[13px] disabled:opacity-50"
+                  disabled={zerodhaBusy}
+                  onClick={() => void zerodhaAction("login")}
+                >
+                  {zerodhaBusy ? "Opening…" : "Log in to Zerodha"}
+                </button>
+              )}
               <button
                 type="button"
-                className="rounded-full border border-line bg-white px-3 py-1.5 text-[12px] text-ink hover:border-ink/30 disabled:opacity-50"
-                disabled={busy}
-                onClick={() => void send(ZERODHA_PROMPT, [])}
+                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"
+                disabled={busy || zerodhaBusy}
+                onClick={() => void refreshZerodhaGate({ autoImport: true })}
               >
-                Import Zerodha
+                I’ve logged in — import
               </button>
             </div>
           </div>
         ) : null}
 
-        {messages.map((m) => {
-          const proposal = m.actions.find(
-            (a): a is Extract<AgentAction, { kind: "portfolio_confirmation" }> =>
-              a.kind === "portfolio_confirmation",
-          );
-          return (
-            <div key={m.id} className="space-y-2">
-              <div className="rounded-xl bg-paper-2 px-3 py-2 text-[13px] text-ink">
-                {displayUserText(m.text)}
-                {m.attachments?.length ? (
-                  <p className="mt-1 text-[11px] text-ink-3">
-                    {m.attachments.length} file{m.attachments.length === 1 ? "" : "s"}
-                  </p>
-                ) : null}
-              </div>
-              {m.steps?.length && m.status === "working" ? (
-                <p className="text-[12px] text-ink-3">{m.steps[m.steps.length - 1]}</p>
-              ) : null}
-              {m.blocks
-                .filter((b) => b.kind === "markdown" || b.kind === "card")
-                .slice(-2)
-                .map((b, i) => (
-                  <div key={i} className="rounded-xl border border-line bg-white px-3 py-2 text-[13px] text-ink-2">
-                    {b.kind === "markdown" ? b.text.slice(0, 600) : `${b.title}${b.body ? ` — ${b.body}` : ""}`}
-                  </div>
-                ))}
-              {proposal ? (
-                <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-[12px] text-emerald-900">
-                  Proposed {proposal.holdings.length} holdings → applied to artifact
-                  <button
-                    type="button"
-                    className="ml-2 font-semibold underline"
-                    onClick={() => applyProposal(proposal)}
-                  >
-                    Re-apply
-                  </button>
-                </div>
-              ) : null}
-              {m.status === "failed" && m.error ? (
-                <p className="text-[12px] text-rose-700">{m.error}</p>
-              ) : null}
-            </div>
-          );
-        })}
-        {busy ? <p className="text-[12px] text-ink-3">Working…</p> : null}
-        <div ref={bottomRef} />
-      </div>
-
-      {error ? <p className="px-3 pb-1 text-[12px] text-rose-700">{error}</p> : null}
-
-      <div className="shrink-0 border-t border-line p-2">
-        <AgentComposer
-          disabled={busy || saving}
-          getAuthHeaders={pocketedgeAuthHeaders}
-          onSend={send}
-          openFilePickerToken={pickerToken}
-          hint="Chat updates the artifact · Save when ready"
-        />
-      </div>
-    </>
-  );
-
-  const artifact = (
-    <div className="flex h-full min-h-0 flex-col rounded-2xl border border-line bg-white shadow-[4px_4px_0_rgba(11,11,11,0.06)]">
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line px-4 py-3">
-        <div className="min-w-0">
-          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-3">Artifact</p>
-          <h2 className="text-headline text-ink">Portfolio book</h2>
-          <p className="text-[12px] text-ink-2">
-            {parsed.length
-              ? `${parsed.length} position${parsed.length === 1 ? "" : "s"}`
-              : "Empty — chat or add a row"}
-            {dirty ? " · unsaved" : ""}
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          {onCancel && !empty ? (
-            <button
-              type="button"
-              className="rounded-full px-3 py-1.5 text-[13px] font-medium text-ink-2 hover:bg-paper-2"
-              disabled={saving}
-              onClick={onCancel}
-            >
-              Cancel
-            </button>
-          ) : null}
+        {zerodhaGate === "ready" ? (
           <button
             type="button"
             className="btn-primary text-[13px] disabled:opacity-50"
-            disabled={saving || !parsed.length || !dirty}
+            disabled={busy}
+            onClick={() => void importZerodha()}
+          >
+            Import holdings
+          </button>
+        ) : null}
+
+        {zerodhaGate === "error" ? (
+          <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
+            Try another option
+          </button>
+        ) : null}
+      </div>
+    );
+  }
+
+  if (step === "verify") {
+    return (
+      <div className="mx-auto w-full max-w-3xl space-y-5">
+        <div className="flex flex-wrap items-start justify-between gap-2">
+          <div>
+            <h2 className="text-headline text-ink">Verify holdings</h2>
+            <p className="mt-1 text-[14px] text-ink-2">
+              Check the totals and list. Go back to edit if something looks off.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="text-[13px] font-semibold text-accent hover:underline"
+            onClick={() => setStep("edit")}
+          >
+            ← Edit
+          </button>
+        </div>
+
+        {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
+
+        <div className="grid gap-3 sm:grid-cols-3">
+          <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
+            <p className="text-meta text-ink-3">Holdings</p>
+            <p className="mt-1 text-xl font-semibold tabular-nums text-ink">{parsed.length}</p>
+          </div>
+          <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
+            <p className="text-meta text-ink-3">Invested (from avg)</p>
+            <p className="mt-1 text-xl font-semibold tabular-nums text-ink">
+              {totals.invested > 0 ? formatInr(totals.invested, true) : "—"}
+            </p>
+          </div>
+          <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
+            <p className="text-meta text-ink-3">Book value</p>
+            <p className="mt-1 text-xl font-semibold tabular-nums text-ink">
+              {totals.totalValue > 0 ? formatInr(totals.totalValue, true) : "—"}
+            </p>
+            <p className="mt-1 text-[12px] text-ink-3">Uses avg cost until live prices load after save</p>
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl border border-line bg-white">
+          <table className="w-full min-w-[480px] border-collapse text-left text-[13px]">
+            <thead>
+              <tr className="border-b border-line text-meta text-ink-3">
+                <th className="px-4 py-3 font-normal">Ticker</th>
+                <th className="px-4 py-3 font-normal">Name</th>
+                <th className="px-4 py-3 font-normal text-right">Qty</th>
+                <th className="px-4 py-3 font-normal text-right">Avg</th>
+                <th className="px-4 py-3 font-normal text-right">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {verifyLive.map((h) => (
+                <tr key={h.ticker} className="border-b border-line/70 last:border-0">
+                  <td className="px-4 py-2.5 font-medium text-ink">{h.ticker}</td>
+                  <td className="px-4 py-2.5 text-ink-2">{h.name || "—"}</td>
+                  <td className="px-4 py-2.5 text-right tabular-nums text-ink">
+                    {h.qty.toLocaleString("en-IN")}
+                  </td>
+                  <td className="px-4 py-2.5 text-right tabular-nums text-ink-2">
+                    {h.avg != null ? formatInr(h.avg, true) : "—"}
+                  </td>
+                  <td className="px-4 py-2.5 text-right tabular-nums text-ink">
+                    {h.value != null ? formatInr(h.value, true) : "—"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            className="btn-primary text-[13px] disabled:opacity-50"
+            disabled={saving}
             onClick={() => void save()}
           >
-            {saving ? "Saving…" : "Save book"}
+            {saving ? "Saving…" : "Confirm & save"}
+          </button>
+          <button
+            type="button"
+            className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink-2 hover:border-ink/30"
+            disabled={saving}
+            onClick={() => setStep("edit")}
+          >
+            Back to edit
           </button>
         </div>
       </div>
+    );
+  }
 
-      {artifactFlash ? (
-        <p className="border-b border-emerald-200 bg-emerald-50 px-4 py-2 text-[12px] text-emerald-900">
-          {artifactFlash}
-        </p>
-      ) : null}
+  // edit step
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h2 className="text-headline text-ink">
+            {setupPath === "upload"
+              ? "Review parsed holdings"
+              : setupPath === "zerodha"
+                ? "Review Zerodha holdings"
+                : "Add holdings"}
+          </h2>
+          <p className="mt-1 text-[14px] text-ink-2">
+            {setupPath === "manual"
+              ? "Enter ticker, quantity, and average cost. Continue to verify totals."
+              : "Fix any mistakes, then continue to verify."}
+          </p>
+        </div>
+        <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
+          ← All options
+        </button>
+      </div>
 
-      <div className="min-h-0 flex-1 overflow-auto px-3 py-3 sm:px-4">
-        <div className="mb-2 flex justify-end">
+      {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
+
+      <div className="rounded-2xl border border-line bg-white p-3 shadow-[3px_3px_0_rgba(11,11,11,0.06)] sm:p-4">
+        <div className="mb-2 flex flex-wrap justify-end gap-3">
+          <button
+            type="button"
+            className="text-[12px] font-semibold text-ink-2 hover:text-rose-700 hover:underline"
+            disabled={saving}
+            onClick={() => setRows([{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }])}
+          >
+            Remove all rows
+          </button>
           <button
             type="button"
             className="text-[12px] font-semibold text-accent hover:underline"
@@ -433,10 +681,11 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel }: Props) {
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
+            {rows.map((row, idx) => (
               <tr key={row.key} className="border-b border-line/70 last:border-0">
                 <td className="py-1.5 pr-2">
                   <input
+                    ref={idx === 0 ? firstTickerRef : undefined}
                     className="w-full min-w-[5.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 uppercase outline-none focus:border-ink/40"
                     value={row.ticker}
                     placeholder="INFY"
@@ -496,79 +745,24 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel }: Props) {
           </tbody>
         </table>
       </div>
-    </div>
-  );
 
-  return (
-    <div className="relative lg:min-h-[calc(100vh-12rem)]">
-      {/* Desktop: chat ~22% / artifact ~78% */}
-      <div className="hidden h-[calc(100vh-12rem)] min-h-[560px] gap-4 lg:grid lg:grid-cols-[minmax(240px,22%)_minmax(0,1fr)]">
-        <aside className="flex min-h-0 flex-col overflow-hidden rounded-2xl border border-line bg-white">
-          <div className="shrink-0 border-b border-line px-3 py-2.5">
-            <h2 className="text-[14px] font-semibold text-ink">Chat</h2>
-            <p className="text-[12px] text-ink-2">Edit the artifact with AI</p>
-          </div>
-          {chatBody}
-        </aside>
-        <div className="min-h-0 min-w-0">{artifact}</div>
-      </div>
-
-      {/* Mobile: artifact primary + chat overlay */}
-      <div className="lg:hidden">
-        <div className="min-h-[70vh] pb-24">{artifact}</div>
-
-        {chatPane === "docked" ? (
-          <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-3 py-2 backdrop-blur safe-bottom">
-            <button
-              type="button"
-              className="flex w-full items-center justify-between gap-3 rounded-xl border border-line bg-paper-2 px-3 py-2.5 text-left"
-              onClick={() => setChatPane("open")}
-            >
-              <span className="min-w-0">
-                <span className="block text-[13px] font-semibold text-ink">
-                  {busy ? "AI is working…" : "Chat to edit"}
-                </span>
-                <span className="block truncate text-[12px] text-ink-2">
-                  {artifactFlash || "Tap to open · artifact stays behind"}
-                </span>
-              </span>
-              <span className="shrink-0 text-[12px] font-semibold text-accent">Open</span>
-            </button>
-          </div>
-        ) : (
-          <div className="fixed inset-0 z-40 flex flex-col justify-end bg-ink/35" role="dialog" aria-modal="true">
-            <button
-              type="button"
-              className="min-h-[20vh] flex-1 cursor-default"
-              aria-label="Close chat"
-              onClick={() => setChatPane("docked")}
-            />
-            <div className="flex max-h-[78vh] flex-col overflow-hidden rounded-t-2xl border border-line bg-white shadow-[0_-8px_30px_rgba(11,11,11,0.12)]">
-              <div className="flex items-center justify-between border-b border-line px-3 py-2.5">
-                <div>
-                  <p className="text-[14px] font-semibold text-ink">Chat</p>
-                  <p className="text-[12px] text-ink-2">Updates the artifact on the page</p>
-                </div>
-                <button
-                  type="button"
-                  className="rounded-full px-3 py-1.5 text-[13px] font-medium text-ink-2 hover:bg-paper-2"
-                  onClick={() => setChatPane("docked")}
-                >
-                  Minimize
-                </button>
-              </div>
-              <div className="flex min-h-0 flex-1 flex-col overflow-hidden">{chatBody}</div>
-            </div>
-          </div>
-        )}
-
-        {chatPane === "docked" && empty && !messages.length ? (
+      <div className="flex flex-wrap gap-2">
+        <button
+          type="button"
+          className="btn-primary text-[13px] disabled:opacity-50"
+          disabled={saving || !parsed.length}
+          onClick={continueToVerify}
+        >
+          Continue to verify
+        </button>
+        {onCancel && !empty ? (
           <button
             type="button"
-            className="fixed bottom-20 right-4 z-30 rounded-full bg-ink px-4 py-2.5 text-[13px] font-semibold text-white shadow-lg"
-            onClick={() => setChatPane("open")}
+            className="rounded-full px-3 py-1.5 text-[13px] font-medium text-ink-2 hover:bg-paper-2"
+            disabled={saving}
+            onClick={onCancel}
           >
-            Start with AI
+            Cancel
           </button>
         ) : null}
       </div>

@@ -36,7 +36,9 @@ export function AllocationDonut({ slices }: { slices: AllocationSlice[] }) {
               aria-hidden
             />
             <span className="min-w-0 flex-1 truncate text-ink">{slice.label}</span>
-            <span className="shrink-0 font-medium tabular-nums text-ink">{slice.weightPct}%</span>
+            <span className="shrink-0 font-medium tabular-nums text-ink">
+              {Number(slice.weightPct).toFixed(1)}%
+            </span>
           </li>
         ))}
       </ul>

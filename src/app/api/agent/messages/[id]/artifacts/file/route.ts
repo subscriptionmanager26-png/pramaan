@@ -6,7 +6,7 @@ import { paFetch } from "@/lib/personal-agents";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-type Params = { params: Promise<{ messageId: string }> };
+type Params = { params: Promise<{ id: string }> };
 
 const UNTRUSTED_HEADERS = {
   "X-Content-Type-Options": "nosniff",
@@ -16,7 +16,7 @@ const UNTRUSTED_HEADERS = {
 export async function GET(request: Request, { params }: Params) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
-  const { messageId } = await params;
+  const { id } = await params;
   const url = new URL(request.url);
   const path = url.searchParams.get("path") || "";
   const as = url.searchParams.get("as");
@@ -24,7 +24,7 @@ export async function GET(request: Request, { params }: Params) {
   if (as) qs.set("as", as);
 
   const upstream = await paFetch(
-    `/api/v1/users/${encodeURIComponent(auth.user.id)}/messages/${encodeURIComponent(messageId)}/artifacts/file?${qs}`,
+    `/api/v1/users/${encodeURIComponent(auth.user.id)}/messages/${encodeURIComponent(id)}/artifacts/file?${qs}`,
     { redirect: "manual" },
   );
 

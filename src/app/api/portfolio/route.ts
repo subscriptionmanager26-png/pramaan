@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { fetchLivePortfolio, upsertLiveHoldings } from "@/lib/portfolio/fetch-live";
-import { applyHoldingsUpdate } from "@/lib/portfolio/holdings";
+import { applyHoldingsUpdate, type LivePortfolio } from "@/lib/portfolio/holdings";
 import { accessTokenFromRequest, pocketedgeUserFromRequest } from "@/lib/pocketedge/session";
 
 export const dynamic = "force-dynamic";
@@ -45,15 +45,14 @@ export async function PUT(request: Request) {
     draft.push(item);
   }
 
-  if (!draft.length && mode === "replace") {
+  const existing = await fetchLivePortfolio(token, user.id);
+
+  // Allow clearing the book (replace → []). Creating a brand-new empty portfolio is not useful.
+  if (!draft.length && mode === "replace" && !existing) {
     return NextResponse.json({ error: "holdings_required" }, { status: 400 });
   }
 
-  const existing = await fetchLivePortfolio(token, user.id);
   const next = applyHoldingsUpdate(existing?.holdings ?? [], draft, mode);
-  if (!next.length) {
-    return NextResponse.json({ error: "empty_portfolio" }, { status: 400 });
-  }
 
   try {
     const portfolio = await upsertLiveHoldings(token, {
@@ -61,7 +60,14 @@ export async function PUT(request: Request) {
       name: existing?.name ?? "My portfolio",
       holdings: next,
     });
-    return NextResponse.json({ portfolio });
+    // If the RPC returns null for an empty book, still acknowledge the clear.
+    const cleared: LivePortfolio = {
+      id: existing?.id ?? "cleared",
+      name: existing?.name ?? "My portfolio",
+      updatedAt: new Date().toISOString(),
+      holdings: [],
+    };
+    return NextResponse.json({ portfolio: portfolio ?? cleared });
   } catch (error) {
     const message = error instanceof Error ? error.message : "save_failed";
     console.error("[api/portfolio PUT]", error);

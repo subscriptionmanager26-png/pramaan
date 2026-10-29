@@ -47,6 +47,8 @@ export function AgentComposer({
   initialText,
   seedToken,
   openFilePickerToken,
+  onReadyAttachmentIds,
+  autoSendWhenReady,
 }: {
   disabled?: boolean;
   getAuthHeaders: () => Promise<Record<string, string>>;
@@ -58,6 +60,14 @@ export function AgentComposer({
   seedToken?: number;
   /** When this number increments, open the file picker (used by empty-state Upload CTAs). */
   openFilePickerToken?: number;
+  /** Fires whenever the set of ready attachment ids changes. */
+  onReadyAttachmentIds?: (ids: string[]) => void;
+  /**
+   * When true, once every attached file is ready (none uploading / needing password),
+   * automatically send with empty text so the parent can apply a default parse prompt.
+   * Only fires once per batch of attachments.
+   */
+  autoSendWhenReady?: boolean;
 }) {
   const [text, setText] = useState("");
   const [items, setItems] = useState<Item[]>([]);
@@ -68,6 +78,8 @@ export function AgentComposer({
   const input = useRef<HTMLTextAreaElement>(null);
   const lastSeedToken = useRef(0);
   const lastPickerToken = useRef(0);
+  const lastReadyKey = useRef("");
+  const autoSentKey = useRef("");
 
   useEffect(() => {
     if (!seedToken || seedToken === lastSeedToken.current) return;
@@ -168,6 +180,38 @@ export function AgentComposer({
   const ready = items.filter((i) => i.status === "ready" && i.id);
   const busy = items.some((i) => i.status === "uploading" || i.status === "unlocking" || i.status === "needs_password");
   const canSend = !disabled && !sending && !busy && (text.trim().length > 0 || ready.length > 0);
+  const readyIds = ready.map((i) => i.id!);
+  const readyKey = readyIds.slice().sort().join("|");
+
+  useEffect(() => {
+    if (!onReadyAttachmentIds) return;
+    if (readyKey === lastReadyKey.current) return;
+    lastReadyKey.current = readyKey;
+    onReadyAttachmentIds(readyIds);
+  }, [onReadyAttachmentIds, readyIds, readyKey]);
+
+  useEffect(() => {
+    if (!autoSendWhenReady || disabled || sending || busy) return;
+    if (!items.length || !readyIds.length) return;
+    if (items.some((i) => i.status !== "ready")) return;
+    if (readyKey === autoSentKey.current) return;
+    autoSentKey.current = readyKey;
+    const attachmentIds = readyIds;
+    setText("");
+    setItems([]);
+    setSending(true);
+    void (async () => {
+      try {
+        const ok = await onSend("", attachmentIds);
+        if (!ok) {
+          // Parent rejected — allow retry on next ready batch.
+          autoSentKey.current = "";
+        }
+      } finally {
+        setSending(false);
+      }
+    })();
+  }, [autoSendWhenReady, busy, disabled, items, onSend, readyIds, readyKey, sending]);
 
   return (
     <div className="space-y-2">
