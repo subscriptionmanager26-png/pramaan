@@ -5,6 +5,7 @@ import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 export async function GET(request: Request) {
   if (!personalAgentsConfigured()) {
@@ -14,7 +15,9 @@ export async function GET(request: Request) {
   if ("response" in auth) return auth.response;
   // Portfolio Update does not go through /ai bootstrap — sync before PA reads.
   await ensureAgentUserSynced(auth.user);
-  const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/connections`);
+  const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/connections`, {
+    signal: AbortSignal.timeout(45_000),
+  });
   const body = await res.json().catch(() => ({}));
   return NextResponse.json(body, { status: res.status });
 }

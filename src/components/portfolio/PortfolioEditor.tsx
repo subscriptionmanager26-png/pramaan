@@ -192,11 +192,22 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
 
   const loadZerodha = useCallback(async (): Promise<ConnectionsZerodha> => {
     const headers = await pocketedgeAuthHeaders();
-    const res = await fetch("/api/agent/connections", {
-      headers,
-      cache: "no-store",
-      signal: AbortSignal.timeout(25_000),
-    });
+    let res: Response;
+    try {
+      res = await fetch("/api/agent/connections", {
+        headers,
+        cache: "no-store",
+        signal: AbortSignal.timeout(45_000),
+      });
+    } catch (err) {
+      const timedOut =
+        err instanceof Error && (err.name === "TimeoutError" || /signal timed out|timeout/i.test(err.message));
+      throw new Error(
+        timedOut
+          ? "Zerodha status check timed out. If you’re already logged in via Connections, tap import."
+          : "Could not check Zerodha connection.",
+      );
+    }
     const json = (await res.json().catch(() => ({}))) as {
       zerodha?: ConnectionsZerodha;
       error?: { code?: string; message?: string } | string;
@@ -279,14 +290,23 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
           return;
         }
         if (!z.sessionActive) {
+          // Connected in Connections but session probe was slow/null — still allow import.
           setZerodhaGate("need_login");
+          if (opts?.autoImport) await importZerodha();
           return;
         }
         setZerodhaGate("ready");
         if (opts?.autoImport) await importZerodha();
       } catch (err) {
+        const message = err instanceof Error ? err.message : "Could not check Zerodha connection.";
+        // Timeouts often mean MCP was slow while the session is fine — offer import.
+        if (/timed out/i.test(message)) {
+          setZerodhaGate("need_login");
+          setError(message);
+          return;
+        }
         setZerodhaGate("error");
-        setError(err instanceof Error ? err.message : "Could not check Zerodha connection.");
+        setError(message);
       }
     },
     [importZerodha, loadZerodha],
@@ -478,24 +498,24 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         {zerodhaGate === "need_login" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
             <p className="text-[14px] text-ink-2">
-              Finish login on Zerodha (Kite), then come back and import. If no tab opened, use the button below.
+              If Kite is already connected under AI → Connections, import directly. Otherwise open login first.
             </p>
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
                 className="btn-primary text-[13px] disabled:opacity-50"
-                disabled={zerodhaBusy}
-                onClick={() => startZerodhaLogin("login")}
+                disabled={busy || zerodhaBusy}
+                onClick={() => void importZerodha()}
               >
-                {zerodhaBusy ? "Opening Zerodha…" : "Open Zerodha login"}
+                {busy ? "Importing…" : "Import holdings"}
               </button>
               <button
                 type="button"
                 className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"
-                disabled={busy || zerodhaBusy}
-                onClick={() => void refreshZerodhaGate({ autoImport: true })}
+                disabled={zerodhaBusy}
+                onClick={() => startZerodhaLogin("login")}
               >
-                I’ve logged in — import
+                {zerodhaBusy ? "Opening Zerodha…" : "Open Zerodha login"}
               </button>
             </div>
           </div>
@@ -513,9 +533,19 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         ) : null}
 
         {zerodhaGate === "error" ? (
-          <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
-            Try another option
-          </button>
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              className="btn-primary text-[13px] disabled:opacity-50"
+              disabled={busy}
+              onClick={() => void importZerodha()}
+            >
+              Try import anyway
+            </button>
+            <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
+              Try another option
+            </button>
+          </div>
         ) : null}
       </div>
     );
