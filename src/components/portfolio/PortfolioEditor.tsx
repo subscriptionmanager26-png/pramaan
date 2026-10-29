@@ -223,14 +223,6 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     return json.zerodha;
   }, []);
 
-  const openZerodhaUrl = useCallback((url: string) => {
-    setLoginUrl(url);
-    const opened = window.open(url, "_blank", "noopener,noreferrer");
-    if (!opened) {
-      setError("Popup blocked — tap “Open Zerodha login” below.");
-    }
-  }, []);
-
   const importZerodha = useCallback(async () => {
     if (preview) {
       setError("Zerodha import needs a signed-in agent. Use Add manually in preview.");
@@ -269,35 +261,12 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     }
   }, [preview]);
 
-  const refreshZerodhaGate = useCallback(
-    async (opts?: { autoImport?: boolean }) => {
-      setZerodhaGate("checking");
-      setError(null);
-      setLoginUrl(null);
-      try {
-        const z = await loadZerodha();
-        if (!z.connected) {
-          setZerodhaGate("need_connect");
-          return;
-        }
-        if (!z.sessionActive) {
-          setZerodhaGate("need_login");
-          return;
-        }
-        setZerodhaGate("ready");
-        if (opts?.autoImport) await importZerodha();
-      } catch (err) {
-        setZerodhaGate("error");
-        setError(err instanceof Error ? err.message : "Could not check Zerodha connection.");
-      }
-    },
-    [importZerodha, loadZerodha],
-  );
-
+  /** Open a blank tab in the click handler, then navigate after the API returns (avoids popup blockers). */
   const zerodhaAction = useCallback(
-    async (action: "connect" | "login") => {
+    async (action: "connect" | "login", popup?: Window | null) => {
       setZerodhaBusy(true);
       setError(null);
+      const tab = popup ?? window.open("about:blank", "_blank");
       try {
         const headers = await pocketedgeAuthHeaders();
         const res = await fetch("/api/agent/zerodha", {
@@ -308,6 +277,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         });
         const json = await res.json().catch(() => ({}));
         if (!res.ok) {
+          tab?.close();
           const err = (json as { error?: { message?: string } | string }).error;
           setError(
             typeof err === "object" && err?.message
@@ -320,20 +290,69 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         }
         const url = typeof (json as { url?: string }).url === "string" ? (json as { url: string }).url : null;
         if (url) {
-          openZerodhaUrl(url);
+          setLoginUrl(url);
           setZerodhaGate("need_login");
-        } else if ((json as { loggedInAs?: string }).loggedInAs) {
-          setZerodhaGate("ready");
+          if (tab && !tab.closed) {
+            tab.location.href = url;
+          } else {
+            setError("Popup blocked — tap “Open Zerodha login” below.");
+          }
+          return;
         }
-        await refreshZerodhaGate({ autoImport: Boolean((json as { loggedInAs?: string }).loggedInAs) });
+        tab?.close();
+        if ((json as { loggedInAs?: string }).loggedInAs) {
+          setLoginUrl(null);
+          setZerodhaGate("ready");
+          await importZerodha();
+          return;
+        }
+        setZerodhaGate("need_login");
       } catch (err) {
+        tab?.close();
         const timedOut = err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message));
         setError(timedOut ? "Zerodha timed out. Try again." : "Zerodha action failed");
       } finally {
         setZerodhaBusy(false);
       }
     },
-    [openZerodhaUrl, refreshZerodhaGate],
+    [importZerodha],
+  );
+
+  const refreshZerodhaGate = useCallback(
+    async (opts?: { autoImport?: boolean; autoConnect?: boolean; popup?: Window | null }) => {
+      setZerodhaGate("checking");
+      setError(null);
+      if (!opts?.autoConnect) setLoginUrl(null);
+      try {
+        const z = await loadZerodha();
+        if (!z.connected) {
+          setZerodhaGate("need_connect");
+          if (opts?.autoConnect) {
+            await zerodhaAction("connect", opts.popup);
+          } else {
+            opts?.popup?.close();
+          }
+          return;
+        }
+        if (!z.sessionActive) {
+          setZerodhaGate("need_login");
+          if (opts?.autoConnect) {
+            await zerodhaAction("login", opts.popup);
+          } else {
+            opts?.popup?.close();
+          }
+          return;
+        }
+        opts?.popup?.close();
+        setZerodhaGate("ready");
+        if (opts?.autoImport) await importZerodha();
+      } catch (err) {
+        opts?.popup?.close();
+        setZerodhaGate("error");
+        setError(err instanceof Error ? err.message : "Could not check Zerodha connection.");
+      }
+    },
+    [importZerodha, loadZerodha, zerodhaAction],
   );
 
   const parseUploads = useCallback(
@@ -384,14 +403,15 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       setStep("upload");
       return;
     }
-    // zerodha
+    // zerodha — open a blank tab in this click so Kite isn't blocked after the API returns
     setStep("zerodha");
     if (preview) {
       setZerodhaGate("error");
       setError("Zerodha import needs a signed-in agent. Use Add manually in preview.");
       return;
     }
-    void refreshZerodhaGate({ autoImport: true });
+    const popup = window.open("about:blank", "_blank");
+    void refreshZerodhaGate({ autoImport: true, autoConnect: true, popup });
   };
 
   const continueToVerify = () => {

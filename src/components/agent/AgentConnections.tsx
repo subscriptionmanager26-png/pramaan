@@ -75,6 +75,8 @@ export function AgentConnections() {
   async function zerodhaAction(action: "connect" | "disconnect" | "login") {
     setBusy(true);
     setError(null);
+    // Open in the click gesture so the Kite tab isn't blocked after the async API call.
+    const tab = action === "disconnect" ? null : window.open("about:blank", "_blank");
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/zerodha", {
@@ -84,15 +86,20 @@ export function AgentConnections() {
       });
       const json = await res.json();
       if (!res.ok) {
+        tab?.close();
         setError(json?.error?.message || json?.error || "Zerodha action failed.");
         return;
       }
       if (typeof json.url === "string") {
-        window.open(json.url, "_blank", "noopener,noreferrer");
+        if (tab && !tab.closed) tab.location.href = json.url;
+        else window.location.assign(json.url);
+      } else {
+        tab?.close();
       }
       await load();
       refreshThreads();
     } catch {
+      tab?.close();
       setError("Zerodha action failed.");
     } finally {
       setBusy(false);
