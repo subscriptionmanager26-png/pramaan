@@ -5,7 +5,25 @@ import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+/** Uploads proxy to personal-agents (cold start + extract). Keep headroom above 60s. */
+export const maxDuration = 120;
+
+function parseUpstream(text: string, ok: boolean, status: number) {
+  try {
+    return text ? JSON.parse(text) : {};
+  } catch {
+    return {
+      error: {
+        code: "upstream_error",
+        message: ok
+          ? "Upload response was invalid."
+          : status === 504 || status === 408
+            ? "Upload timed out. Try a smaller file, or retry in a moment."
+            : `Upload failed (${status}).`,
+      },
+    };
+  }
+}
 
 export async function GET(request: Request) {
   const auth = await requireAgentUser(request);
@@ -23,7 +41,6 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
-  await ensureAgentUserSynced(auth.user);
 
   let incoming: FormData;
   try {
@@ -44,25 +61,28 @@ export async function POST(request: Request) {
   }
 
   const filename = raw instanceof File && raw.name ? raw.name : "upload";
-  const outbound = new FormData();
-  outbound.append("file", raw, filename);
+  const bytes = Buffer.from(await raw.arrayBuffer());
 
-  const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/files`, {
-    method: "POST",
-    body: outbound,
-  });
+  const uploadOnce = async () => {
+    const outbound = new FormData();
+    outbound.append(
+      "file",
+      new Blob([new Uint8Array(bytes)], { type: raw.type || "application/octet-stream" }),
+      filename,
+    );
+    return paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/files`, {
+      method: "POST",
+      body: outbound,
+    });
+  };
+
+  // Fast path: skip sync when the PA user already exists (common after /ai bootstrap).
+  let res = await uploadOnce();
+  if (res.status === 404) {
+    await ensureAgentUserSynced(auth.user);
+    res = await uploadOnce();
+  }
 
   const text = await res.text();
-  let body: unknown = {};
-  try {
-    body = text ? JSON.parse(text) : {};
-  } catch {
-    body = {
-      error: {
-        code: "upstream_error",
-        message: res.ok ? "Upload response was invalid." : `Upload failed (${res.status}).`,
-      },
-    };
-  }
-  return NextResponse.json(body, { status: res.status });
+  return NextResponse.json(parseUpstream(text, res.ok, res.status), { status: res.status });
 }

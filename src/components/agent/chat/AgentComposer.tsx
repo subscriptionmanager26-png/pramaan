@@ -35,6 +35,12 @@ async function errorMessage(res: Response) {
   }
   if (res.status === 413) return "File is too large for upload.";
   if (res.status === 401) return "Sign in again to upload files.";
+  if (res.status === 504 || res.status === 408) {
+    return "Upload timed out. Try a smaller file, or retry in a moment.";
+  }
+  if (res.status === 500 || res.status === 502 || res.status === 503) {
+    return "Upload failed on the server. Retry in a moment — the first attach after idle can be slow.";
+  }
   return `Upload failed (${res.status})`;
 }
 
