@@ -6,6 +6,7 @@ function errorFromBody(body: unknown, status: number) {
     if (typeof err === "object" && err?.message) return err.message;
     if (typeof err === "string" && err) return err;
   }
+  if (status === 504) return "Timed out getting the download link. Try again in a moment.";
   return `Download failed (${status})`;
 }
 
@@ -14,10 +15,25 @@ function triggerBrowserDownload(href: string, filename: string) {
   a.href = href;
   a.download = filename;
   a.rel = "noopener";
-  a.target = "_blank";
   document.body.appendChild(a);
   a.click();
   a.remove();
+}
+
+/** Download bytes from Cursor's presigned S3 URL (browser-side). */
+async function saveFromSignedUrl(signedUrl: string, filename: string) {
+  try {
+    const fileRes = await fetch(signedUrl, { cache: "no-store" });
+    if (!fileRes.ok) throw new Error(`Artifact fetch failed (${fileRes.status})`);
+    const blob = await fileRes.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    triggerBrowserDownload(objectUrl, filename);
+    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60_000);
+    return;
+  } catch {
+    // S3 may block CORS — navigate so the browser still gets the file.
+    window.location.assign(signedUrl);
+  }
 }
 
 export async function downloadAgentArtifact(
@@ -32,11 +48,11 @@ export async function downloadAgentArtifact(
       headers,
       credentials: "same-origin",
       cache: "no-store",
+      signal: AbortSignal.timeout(30_000),
     });
 
     const contentType = res.headers.get("content-type") || "";
 
-    // Signed URL JSON — open directly in the browser.
     if (contentType.includes("application/json")) {
       const json = (await res.json().catch(() => ({}))) as {
         url?: string;
@@ -45,29 +61,30 @@ export async function downloadAgentArtifact(
       };
       if (!res.ok) return { ok: false, message: errorFromBody(json, res.status) };
       if (typeof json.url === "string" && json.url) {
-        triggerBrowserDownload(json.url, json.name || filename);
+        await saveFromSignedUrl(json.url, json.name || filename);
         return { ok: true };
       }
       return { ok: false, message: "Download link was missing." };
     }
 
     if (!res.ok) {
-      // Non-JSON error body
       try {
         const json = await res.json();
         return { ok: false, message: errorFromBody(json, res.status) };
       } catch {
-        return { ok: false, message: `Download failed (${res.status})` };
+        return { ok: false, message: errorFromBody(null, res.status) };
       }
     }
 
-    // Proxied binary (mock / text / legacy)
     const blob = await res.blob();
     const objectUrl = URL.createObjectURL(blob);
     triggerBrowserDownload(objectUrl, filename);
     window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60_000);
     return { ok: true };
   } catch (err) {
+    if (err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message))) {
+      return { ok: false, message: "Timed out getting the download link. Try again in a moment." };
+    }
     const message =
       err instanceof Error && err.message === "not_signed_in"
         ? "Sign in again to download."
