@@ -14,6 +14,7 @@ import {
 } from "@/lib/portfolio/holdings";
 import { runPortfolioImport } from "@/lib/portfolio/import-via-agent";
 import { FILE_PARSE_PROMPT, ZERODHA_IMPORT_PROMPT } from "@/lib/portfolio/setup-prompts";
+import { submitZerodhaKiteForm } from "@/lib/portfolio/zerodha-start";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 type DraftRow = {
@@ -171,7 +172,6 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
   const [parseStatus, setParseStatus] = useState<string | null>(null);
   const [zerodhaGate, setZerodhaGate] = useState<ZerodhaGate>("checking");
   const [zerodhaBusy, setZerodhaBusy] = useState(false);
-  const [loginUrl, setLoginUrl] = useState<string | null>(null);
   const firstTickerRef = useRef<HTMLInputElement>(null);
 
   const parsed = useMemo(() => parseDraft(rows), [rows]);
@@ -187,7 +187,6 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     setSetupPath(null);
     setError(null);
     setParseStatus(null);
-    setLoginUrl(null);
     setBusy(false);
   };
 
@@ -241,7 +240,6 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       });
       if (!result.ok) {
         if (result.login) {
-          setLoginUrl(result.login.url);
           setZerodhaGate("need_login");
           setError(result.error);
           return;
@@ -261,98 +259,37 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     }
   }, [preview]);
 
-  /** Open a blank tab in the click handler, then navigate after the API returns (avoids popup blockers). */
-  const zerodhaAction = useCallback(
-    async (action: "connect" | "login", popup?: Window | null) => {
-      setZerodhaBusy(true);
-      setError(null);
-      const tab = popup ?? window.open("about:blank", "_blank");
-      try {
-        const headers = await pocketedgeAuthHeaders();
-        const res = await fetch("/api/agent/zerodha", {
-          method: "POST",
-          headers: { ...headers, "Content-Type": "application/json" },
-          body: JSON.stringify({ action }),
-          signal: AbortSignal.timeout(45_000),
-        });
-        const json = await res.json().catch(() => ({}));
-        if (!res.ok) {
-          tab?.close();
-          const err = (json as { error?: { message?: string } | string }).error;
-          setError(
-            typeof err === "object" && err?.message
-              ? err.message
-              : typeof err === "string"
-                ? err
-                : "Zerodha action failed",
-          );
-          return;
-        }
-        const url = typeof (json as { url?: string }).url === "string" ? (json as { url: string }).url : null;
-        if (url) {
-          setLoginUrl(url);
-          setZerodhaGate("need_login");
-          if (tab && !tab.closed) {
-            tab.location.href = url;
-          } else {
-            setError("Popup blocked — tap “Open Zerodha login” below.");
-          }
-          return;
-        }
-        tab?.close();
-        if ((json as { loggedInAs?: string }).loggedInAs) {
-          setLoginUrl(null);
-          setZerodhaGate("ready");
-          await importZerodha();
-          return;
-        }
-        setZerodhaGate("need_login");
-      } catch (err) {
-        tab?.close();
-        const timedOut = err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message));
-        setError(timedOut ? "Zerodha timed out. Try again." : "Zerodha action failed");
-      } finally {
-        setZerodhaBusy(false);
-      }
-    },
-    [importZerodha],
-  );
+  const startZerodhaLogin = useCallback((action: "connect" | "login") => {
+    setZerodhaBusy(true);
+    setError(null);
+    setZerodhaGate("need_login");
+    // Same-origin form → server 303 to Kite (studio pattern). Must stay sync with the click.
+    submitZerodhaKiteForm(action, typeof window !== "undefined" ? window.location.pathname : "/ai");
+    window.setTimeout(() => setZerodhaBusy(false), 800);
+  }, []);
 
   const refreshZerodhaGate = useCallback(
-    async (opts?: { autoImport?: boolean; autoConnect?: boolean; popup?: Window | null }) => {
+    async (opts?: { autoImport?: boolean }) => {
       setZerodhaGate("checking");
       setError(null);
-      if (!opts?.autoConnect) setLoginUrl(null);
       try {
         const z = await loadZerodha();
         if (!z.connected) {
           setZerodhaGate("need_connect");
-          if (opts?.autoConnect) {
-            await zerodhaAction("connect", opts.popup);
-          } else {
-            opts?.popup?.close();
-          }
           return;
         }
         if (!z.sessionActive) {
           setZerodhaGate("need_login");
-          if (opts?.autoConnect) {
-            await zerodhaAction("login", opts.popup);
-          } else {
-            opts?.popup?.close();
-          }
           return;
         }
-        opts?.popup?.close();
         setZerodhaGate("ready");
         if (opts?.autoImport) await importZerodha();
       } catch (err) {
-        opts?.popup?.close();
         setZerodhaGate("error");
         setError(err instanceof Error ? err.message : "Could not check Zerodha connection.");
       }
     },
-    [importZerodha, loadZerodha, zerodhaAction],
+    [importZerodha, loadZerodha],
   );
 
   const parseUploads = useCallback(
@@ -403,15 +340,15 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       setStep("upload");
       return;
     }
-    // zerodha — open a blank tab in this click so Kite isn't blocked after the API returns
+    // zerodha — open Kite via form POST in this click (server redirects; no about:blank)
     setStep("zerodha");
     if (preview) {
       setZerodhaGate("error");
       setError("Zerodha import needs a signed-in agent. Use Add manually in preview.");
       return;
     }
-    const popup = window.open("about:blank", "_blank");
-    void refreshZerodhaGate({ autoImport: true, autoConnect: true, popup });
+    startZerodhaLogin("connect");
+    void refreshZerodhaGate();
   };
 
   const continueToVerify = () => {
@@ -525,7 +462,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                 type="button"
                 className="btn-primary text-[13px] disabled:opacity-50"
                 disabled={zerodhaBusy}
-                onClick={() => void zerodhaAction("connect")}
+                onClick={() => startZerodhaLogin("connect")}
               >
                 {zerodhaBusy ? "Opening Zerodha…" : "Connect Zerodha"}
               </button>
@@ -542,23 +479,17 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         {zerodhaGate === "need_login" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
             <p className="text-[14px] text-ink-2">
-              Finish login on Zerodha (Kite), then come back and import.
+              Finish login on Zerodha (Kite), then come back and import. If no tab opened, use the button below.
             </p>
             <div className="flex flex-wrap gap-2">
-              {loginUrl ? (
-                <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary text-[13px]">
-                  Open Zerodha login
-                </a>
-              ) : (
-                <button
-                  type="button"
-                  className="btn-primary text-[13px] disabled:opacity-50"
-                  disabled={zerodhaBusy}
-                  onClick={() => void zerodhaAction("login")}
-                >
-                  {zerodhaBusy ? "Opening Zerodha…" : "Log in to Zerodha"}
-                </button>
-              )}
+              <button
+                type="button"
+                className="btn-primary text-[13px] disabled:opacity-50"
+                disabled={zerodhaBusy}
+                onClick={() => startZerodhaLogin("login")}
+              >
+                {zerodhaBusy ? "Opening Zerodha…" : "Open Zerodha login"}
+              </button>
               <button
                 type="button"
                 className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"

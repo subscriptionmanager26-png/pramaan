@@ -2,6 +2,12 @@ import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
 
 let cached: { token: string; until: number } | null = null;
 
+/** Sync read of a recently fetched access token (for form POSTs that must stay in the click gesture). */
+export function cachedPocketedgeAccessToken(): string | null {
+  if (cached && cached.until > Date.now() + 30_000) return cached.token;
+  return null;
+}
+
 /** Cached Bearer headers — avoids hammering Supabase auth on every poll. */
 export async function pocketedgeAuthHeaders(): Promise<Record<string, string>> {
   const now = Date.now();
