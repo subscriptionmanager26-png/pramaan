@@ -1040,6 +1040,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Public-sector bank facade |
 | Metaphor left | Cooling EMI bars on shopping icons |
 
+### `dr-reddys-srikakulam-fda-vai-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | US plant inspection closes without Form 483 |
+| Subject right | Laboratory / bioreactor motif |
+| Metaphor left | Shield over inspection checklist |
+
+### `united-spirits-q2-soft-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Prestige spirits volume lags mass-premium peers |
+| Subject right | Chilled beverage shelf (generic) |
+| Metaphor left | Flat revenue bar beside shrinking bottle row |
+
+### `india-iip-september-slowdown-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Factory output eases while power still runs hot |
+| Subject right | Factory silhouette |
+| Metaphor left | Split bars: rising power, falling mining wedge |
+
+### `jupiter-wagons-railways-order-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Freight wagons ordered to lift rail cargo share |
+| Subject right | Freight wagon silhouette |
+| Metaphor left | Stepped order bars on rail track chevrons |
+
+### `morbi-ceramic-export-shock-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Export routes reopen but containers still scarce |
+| Subject right | Tile stack motif |
+| Metaphor left | Narrow container lane vs idle kiln blocks |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

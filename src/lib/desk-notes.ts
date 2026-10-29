@@ -26,6 +26,131 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "morbi-ceramic-export-shock-october-2026",
+    title:
+      "Morbi tile exporters are shipping again, but the cluster still faces a bleak year",
+    summary:
+      "Ceramic makers in Gujarat’s Morbi hub sent a trickle of containers to the Gulf again in late October 2026 as Hormuz routes reopened, yet industry estimates still point to FY27 exports falling about 40% to roughly ₹12,000 crore while up to two-fifths of units stay shut.",
+    category: "industry",
+    companyOrSector: "Ceramics / exports",
+    publishedAt: "2026-10-29T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("morbi-ceramic-export-shock-october-2026"),
+    keyTakeaways: [
+      "Reporting on 29 October 2026 said Varmora Granito dispatched about 18–20 containers to the UAE and Iraq last week after weeks when almost no boxes were available, though the firm still needs roughly 150–200 containers to clear its backlog.",
+      "Morbi’s annual ceramic exports, typically near ₹20,000 crore, could shrink to about ₹12,000 crore in FY27, a ₹8,000 crore or 40% drop, according to cluster estimates cited in the coverage.",
+      "Roughly 30–40% of Morbi’s ceramic units remain closed amid Red Sea disruption, US anti-dumping duties, European container shortages, and freight that stayed far above pre-crisis levels even after partial easing.",
+    ],
+    body: [
+      "What's going on here?",
+      "Morbi, one of India’s largest ceramic clusters, is trying to restart Gulf shipments after months when shipping lines avoided the Strait of Hormuz and containers vanished from the market. Varmora Granito chairman Bhavesh Varmora told reporters in coverage dated 29 October 2026 that his firm moved 18–20 containers to the UAE and Iraq last week, compared with a normal need for 150–200 boxes. Some lines have resumed Hormuz services as tensions eased, but exporters still route limited cargo through Oman into Dubai when direct lanes clog. Industry veterans quoted in the same reports expect Morbi’s FY27 exports to fall about 40% to near ₹12,000 crore from the usual ₹20,000 crore run rate, with 30–40% of units still idle.",
+      "What does this mean?",
+      "Tiles are heavy, low-margin goods. When freight jumps from roughly $1,500–2,000 per container toward $6,000–8,000 on key lanes, a full load of vitrified tiles may not cover the logistics bill even if the overseas buyer still wants stock. That is why a partial reopening of Hormuz does not instantly restart factories. US anti-dumping duties and European box shortages add second and third choke points, so a builder in Texas or Berlin is not waiting on the same fix as a hotel project in Dubai. Domestic sales still absorb most output for large players such as Varmora, which historically sold about 80% at home, but export revenue for the firm still fell 18% in the first half while square-metre volumes dropped sharply.",
+      "Why should I care?",
+      "If you are renovating a home or bidding for a commercial project, watch whether imported tile quotes rise or delivery dates slip; export pain can push more volume into the domestic market at discount, or tighten premium SKUs if plants stay shut. Contractors tied to Gulf projects should confirm shipping schedules before locking client deadlines. Investors in building-material names should separate headline “recovery” tweets from container counts and freight tables. Track weekly box availability on Hormuz and Red Sea routes, any US trade rulings on Indian ceramics, and whether idle Morbi capacity returns before the festive construction season ends.",
+    ],
+  },
+  {
+    slug: "jupiter-wagons-railways-order-october-2026",
+    title:
+      "Indian Railways ordered 2,583 wagons worth ₹1,140 crore from Jupiter Wagons",
+    summary:
+      "Jupiter Wagons said in a 29 October 2026 exchange filing that the Railway Board booked 2,583 wagons for about ₹1,140 crore including taxes, extending a rolling-stock order book that also includes private freight operators and wagon lessors.",
+    category: "industry",
+    companyOrSector: "Rail freight / manufacturing",
+    publishedAt: "2026-10-29T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jupiter-wagons-railways-order-october-2026"),
+    keyTakeaways: [
+      "Jupiter Wagons announced on 29 October 2026 a Railway Board order for 2,583 wagons valued at ₹1,140 crore including taxes.",
+      "Managing director Vivek Lohia said backward integration across castings, bogies, couplers, and an Odisha wheelset plant helps control cost and delivery on such contracts.",
+      "The company guided to roughly ₹2,000 crore of incremental order inflows in Q4 FY27 beyond this public-sector win.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 29 October 2026 Jupiter Wagons, a Kolkata-based freight wagon and mobility supplier, told exchanges that the Ministry of Railways placed a ₹1,140 crore order including taxes for 2,583 wagons. The contract sits on a broader book that mixes Railway Board work with private freight operators and leasing companies. Management highlighted vertical integration from castings and brake parts to wheelsets at its Odisha facility, plus a recent tie-up with Italy’s Lucchini RS and SIMEST to build private-sector rail wheels locally. The filing landed the same morning the stock rallied sharply, but the economic story is the wagon count, not the session’s percentage move.",
+      "What does this mean?",
+      "India’s National Rail Plan aims to lift rail’s share of freight away from road trucks. That policy only works if wagon builders can deliver boxes on time and at predictable prices. Integrated plants matter because a bogie delay or imported wheel bottleneck can idle an entire rake while coal or cement shippers pay demurrage. Private lessors and freight operators have been adding capacity alongside Indian Railways, which gives suppliers like Jupiter a second demand lane when public tenders pause. A ₹1,140 crore block order also signals that the network still wants open wagons even as passenger capex grabs headlines.",
+      "Why should I care?",
+      "If you move bulk goods by rail, or finance logistics assets, wagon availability affects spot freight rates and turnaround times more than a single quarter’s equity print. Commodity shippers should watch whether delivery schedules on new wagons slip when component imports slow. Investors comparing rail-equipment names should read order backlogs and integration capex, not only daily price swings after filings. Follow Jupiter’s Q4 order pipeline, Titagarh and other peers’ Railway Board wins, and Indian Railways’ loading data for coal, cement, and containers through the winter.",
+    ],
+  },
+  {
+    slug: "india-iip-september-slowdown-october-2026",
+    title:
+      "Factory output growth slowed to 6.7% in September as mining contracted",
+    summary:
+      "Government data released in late October 2026 showed the Index of Industrial Production rose 6.7% year on year in September, a four-month low, as mining fell 6.2% while manufacturing and electricity still expanded and economists still expect a strong GDP print for the September quarter.",
+    category: "industry",
+    companyOrSector: "Industrial production / economy",
+    publishedAt: "2026-10-29T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-iip-september-slowdown-october-2026"),
+    keyTakeaways: [
+      "India’s IIP grew 6.7% in September 2026 on the rebased 2022–23 series, down from 7.8% in August, with mining and quarrying contracting 6.2% year on year.",
+      "Manufacturing, which weighs about 76% of the index, rose 7.6%, supported by motor vehicles, electrical equipment, and rubber and plastics; electricity generation climbed 12.6%.",
+      "Economists cited in the release still pegged Q2 FY27 IIP growth at about 7.3% and said festive demand should lift consumer goods output in coming months.",
+    ],
+    body: [
+      "What's going on here?",
+      "Official industrial production data for September 2026, published in coverage dated 29 October, showed factory output growth easing to 6.7% year on year, the slowest pace in four months on the new base year. Mining and quarrying shrank 6.2%, pulling the headline down even as manufacturing rose 7.6% and electricity generation jumped 12.6%. Within manufacturing, motor vehicles, electrical equipment, and rubber and plastics posted double-digit gains. Consumer non-durables returned to modest growth after a contraction in August, while consumer durables cooled from double-digit expansion. Economists quoted in the same reports said the quarter as a whole still looks firm, with IIP averaging about 7.3% in Q2 FY27.",
+      "What does this mean?",
+      "The index tracks physical output, not share prices. When power generation runs hot while mining slips, it often means factories and grids are busy even as stone and ore extraction lag, sometimes on monsoon or permit bottlenecks. Vehicle and electrical equipment lines feeding festive appliance and mobility demand still expanded, which aligns with strong two-wheeler and home-electrical results elsewhere this week. A slower September month on base effects does not by itself signal a demand collapse, but it warns against reading every green factory headline as broad-based. Consumer non-durables inching up hints that staple and small-ticket lines may be preparing for the wedding and festival calendar even as durables normalize.",
+      "Why should I care?",
+      "If you run a plant or retail chain, September’s mix suggests keeping power and logistics buffers while watching raw-material mines for supply gaps. Households planning big-ticket buys can still see competition among durables makers, but should not assume every category is on the same trajectory as two-wheelers. Policy watchers awaiting GDP should cross-check IIP with GST collections and freight indicators already released. Watch October and November IIP prints for consumer goods, mining recovery, and whether electricity demand stays elevated after the monsoon.",
+    ],
+  },
+  {
+    slug: "united-spirits-q2-soft-october-2026",
+    title:
+      "United Spirits reported lower profit and revenue in the September quarter",
+    summary:
+      "Diageo-controlled United Spirits Ltd said on 28 October 2026 that consolidated net profit fell 7.75% year on year to ₹428 crore in Q2 FY27 while revenue from operations slipped 2.56% to ₹7,014 crore, a softer print than mass-premium peers posted the same week.",
+    category: "industry",
+    companyOrSector: "Liquor / consumer staples",
+    publishedAt: "2026-10-29T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("united-spirits-q2-soft-october-2026"),
+    keyTakeaways: [
+      "United Spirits reported Q2 FY27 consolidated net profit of ₹428 crore versus ₹464 crore a year earlier, a decline of about 7.75%, with revenue from operations at ₹7,014 crore, down 2.56%.",
+      "The Diageo-backed distiller’s update landed during a week when Allied Blenders and Radico Khaitan highlighted stronger mass-premium volume trends in their own results.",
+      "Analyst commentary in the same window noted multinational-owned spirits names face stiff competition from Indian-owned brands on pricing and state-level regulation.",
+    ],
+    body: [
+      "What's going on here?",
+      "United Spirits Ltd, the Diageo-controlled maker of McDowell’s and other mainstream labels, reported September-quarter results on 28 October 2026 showing consolidated net profit of ₹428 crore, down from ₹464 crore a year ago. Revenue from operations eased 2.56% to ₹7,014 crore. The update arrived in the same earnings cluster as TVS Motor, Hero MotoCorp, and several liquor peers, but United’s line moved the opposite way from Indian-owned distillers that flagged double-digit mass-premium growth. Market commentary the next morning contrasted United Spirits with Radico Khaitan and Allied Blenders, arguing domestic players navigate state excise rules and price points more aggressively.",
+      "What does this mean?",
+      "Liquor demand in India is not one curve. Prestige whisky can lag while brandy and mass whisky accelerate in southern states, a pattern Allied Blenders detailed with 16% mass-premium volume growth. Multinational portfolios carry higher marketing and import-input costs, so when shoppers trade down or when states delay price hikes, revenue can slip before volume does. United Spirits is also in a leadership transition phase as new management talks about reclaiming share, which makes a soft quarter a benchmark rather than a one-off. Bars and retailers still reorder for the festive season, but the company must earn shelf space case by case.",
+      "Why should I care?",
+      "If you operate a bar or liquor store, compare wholesale schemes across brands before stocking festive inventory; a weak quarter at United does not mean category weakness everywhere. Shoppers may see sharper promotions on mainstream whisky while premium labels hold price. Investors should read segment mix in the full filing, not only consolidated profit. Watch state excise meetings, United’s prestige launches, and whether mass-premium rivals keep taking share into the December quarter.",
+    ],
+  },
+  {
+    slug: "dr-reddys-srikakulam-fda-vai-october-2026",
+    title:
+      "US regulators closed a Dr Reddy’s plant inspection with a clean outcome",
+    summary:
+      "Reporting on 29 October 2026 said the US Food and Drug Administration classified Dr Reddy’s Laboratories’ Srikakulam, Andhra Pradesh, API unit as Voluntary Action Indicated and closed the inspection, the mildest common outcome after a July 2026 pre-approval and GMP visit.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / US exports",
+    publishedAt: "2026-10-29T10:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dr-reddys-srikakulam-fda-vai-october-2026"),
+    keyTakeaways: [
+      "The USFDA classified Dr Reddy’s FTO-SEZ Process Unit-2 at Srikakulam as Voluntary Action Indicated and officially closed the inspection, per coverage dated 29 October 2026.",
+      "Dr Reddy’s had disclosed on 29 July 2026 that US regulators were conducting pre-approval and good manufacturing practice inspections at the same site.",
+      "Voluntary Action Indicated means inspectors may note improvements but did not issue a Form 483 observation list that triggers import alerts.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 29 October 2026 market roundups said the United States Food and Drug Administration finished reviewing Dr Reddy’s Laboratories’ manufacturing facility at Srikakulam in Andhra Pradesh and labeled the site Voluntary Action Indicated, then closed the inspection. The company had told exchanges on 29 July 2026 that USFDA staff were on site for pre-approval and current good manufacturing practice checks at FTO-SEZ Process Unit-2. A VAI classification sits at the softer end of US inspection outcomes: regulators may recommend voluntary fixes but did not hand the company a Form 483 list of objectionable conditions at the close.",
+      "What does this mean?",
+      "Indian generic makers live on US shelf space. A plant that supplies active ingredients or finished doses to American pharmacies cannot afford import alerts that freeze shipments. VAI outcomes let companies keep shipping while addressing any informal feedback, unlike Official Action Indicated tags that often precede warning letters. The Srikakulam unit sits in Dr Reddy’s large Andhra network, which feeds both US filings and other regulated markets. Clean closes reduce the risk premium investors attach to pending US launches tied to that site, though each product still needs its own approval.",
+      "Why should I care?",
+      "If you hold pharma stocks, treat plant outcomes as line-item risk for specific molecules, not a blanket buy signal. US patients and hospital buyers rarely see inspection jargon, but sustained Indian supply keeps chronic generics affordable when alternatives face their own FDA queues. Watch whether Dr Reddy’s cites the site in upcoming US launches, any follow-up FDA correspondence, and peer inspection results at Sun Pharma, Cipla, and Aurobindo during the same season.",
+    ],
+  },
+  {
     slug: "adani-vtti-storage-terminals-bid-october-2026",
     title:
       "Adani Group is exploring a €3 billion bid for global fuel storage terminals",
@@ -7218,6 +7343,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "morbi-ceramic-export-shock-october-2026": "markets",
+  "jupiter-wagons-railways-order-october-2026": "policy",
+  "india-iip-september-slowdown-october-2026": "markets",
+  "united-spirits-q2-soft-october-2026": "markets",
+  "dr-reddys-srikakulam-fda-vai-october-2026": "companies",
   "adani-vtti-storage-terminals-bid-october-2026": "companies",
   "tvs-motor-q2-finance-spinoff-october-2026": "markets",
   "cholafin-disbursements-q2-october-2026": "markets",

@@ -380,6 +380,48 @@ def bandhan_irdai(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([680 + i * 55, 560 - h, 730 + i * 55, 560], fill=GOLD if i > 1 else YELLOW)
 
 
+def morbi_ceramic(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 520, 560], fill=BLUE)
+    for i in range(4):
+        d.rectangle([120 + i * 90, 300, 190 + i * 90, 540], fill=YELLOW if i % 2 else RED)
+    d.polygon([(700, 520), (760, 200), (820, 520)], fill=RED)
+    d.line([(900, 520), (1100, 360)], fill=GOLD, width=4)
+    d.rectangle([950, 380, 1050, 480], outline=BLUE, width=4)
+
+
+def jupiter_wagons(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 380, 480, 520], fill=RED)
+    d.ellipse([140, 500, 200, 560], fill=INK)
+    d.ellipse([400, 500, 460, 560], fill=INK)
+    d.rectangle([680, 240, 1120, 320], fill=BLUE)
+    for i, h in enumerate([120, 200, 280]):
+        d.rectangle([720 + i * 90, 560 - h, 780 + i * 90, 560], fill=[YELLOW, RED, GOLD][i])
+
+
+def iip_september(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([140, 220, 180, 260, 200]):
+        x = 100 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, BLUE, YELLOW, BLUE, RED][i])
+    d.polygon([(720, 520), (820, 300), (920, 520)], fill=GOLD)
+    d.ellipse([980, 360, 1100, 480], fill=YELLOW)
+
+
+def united_spirits(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 260, 220, 520], radius=20, fill=BLUE)
+    d.rounded_rectangle([260, 300, 340, 520], radius=20, fill=RED)
+    d.line([(680, 560), (1120, 560)], fill=GOLD, width=3)
+    d.rectangle([720, 420, 1080, 480], fill=YELLOW)
+    d.rectangle([720, 320, 980, 380], fill=BLUE)
+
+
+def dr_reddys_vai(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 240, 280, 520], radius=28, fill=BLUE)
+    d.rectangle([180, 280, 220, 480], fill=CREAM)
+    d.polygon([(700, 520), (780, 280), (860, 520)], fill=RED)
+    d.ellipse([920, 340, 1080, 460], outline=GOLD, width=6)
+    d.line([(960, 380), (1040, 420)], fill=GOLD, width=5)
+
+
 def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
     # pill bottle + dollar lane to billion tick
     d.rounded_rectangle([140, 220, 280, 520], radius=30, fill=BLUE)
@@ -391,6 +433,11 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("morbi-ceramic-export-shock-october-2026", morbi_ceramic)
+    save("jupiter-wagons-railways-order-october-2026", jupiter_wagons)
+    save("india-iip-september-slowdown-october-2026", iip_september)
+    save("united-spirits-q2-soft-october-2026", united_spirits)
+    save("dr-reddys-srikakulam-fda-vai-october-2026", dr_reddys_vai)
     save("adani-vtti-storage-terminals-bid-october-2026", adani_vtti)
     save("tvs-motor-q2-finance-spinoff-october-2026", tvs_spinoff)
     save("cholafin-disbursements-q2-october-2026", cholafin_disb)
