@@ -1072,6 +1072,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Freight wagon silhouette |
 | Metaphor left | Stepped order bars on rail track chevrons |
 
+### `indigo-q2-fuel-loss-passenger-traffic-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Higher fuel bills with fewer passengers carried |
+| Subject right | Jet silhouette / fuel gauge |
+| Metaphor left | Diverging curves: falling passenger chevrons, rising fuel bars |
+
+### `asian-paints-pricing-defer-maintenance-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Households defer repainting when tin prices rise |
+| Subject right | Generic paint tin / roller motif |
+| Metaphor left | Calendar blocks sliding on paused brush stroke |
+
+### `ccpa-just-dial-ammonium-nitrate-fine-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Regulated explosives must not look like normal listings |
+| Subject right | Online directory / phone motif (no brand) |
+| Metaphor left | Prohibition gate over chemical granule form |
+
+### `godrej-consumer-volume-commodity-inflation-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Volumes grow while commodity costs narrow margins |
+| Subject right | Soap bar / household pack silhouette |
+| Metaphor left | Rising volume chevrons beside narrowing margin gap |
+
+### `haryana-eleven-power-licence-halt-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Parallel power licence frozen after state directive |
+| Subject right | Transmission tower / discom architecture |
+| Metaphor left | Pause gate over second wire lane |
+
 ### `morbi-ceramic-export-shock-october-2026`
 
 | Field | Value |

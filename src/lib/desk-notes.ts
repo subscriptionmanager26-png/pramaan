@@ -26,6 +26,131 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "indigo-q2-fuel-loss-passenger-traffic-october-2026",
+    title:
+      "IndiGo carried fewer passengers while jet fuel costs jumped in the September quarter",
+    summary:
+      "InterGlobe Aviation reported on 29 October 2026 a consolidated net loss of about ₹1,879 crore in Q2 FY27 as fuel expenses rose 67% to roughly ₹9,967 crore, passengers carried fell 4.7% to 27.5 million, and revenue still grew about 26% on higher yields after the airline trimmed capacity.",
+    category: "industry",
+    companyOrSector: "Aviation",
+    publishedAt: "2026-10-29T18:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indigo-q2-fuel-loss-passenger-traffic-october-2026"),
+    keyTakeaways: [
+      "Consolidated revenue from operations rose about 25.9% year on year to ₹23,364 crore in the September quarter, while the net loss narrowed from ₹2,582 crore a year earlier, according to wire reports on 29 October 2026.",
+      "Fuel costs jumped 67.2% to ₹9,967 crore; passengers carried declined 4.7% to 27.5 million and load factor eased to 80.3% as available seat kilometres fell 1% year on year.",
+      "Chief executive Willie Walsh said the airline responded with prudent capacity cuts and yield management, which supported ticket revenue but only partly offset fuel and forex pressure.",
+    ],
+    body: [
+      "What's going on here?",
+      "IndiGo’s parent, InterGlobe Aviation, published September-quarter results on 29 October 2026 showing revenue from operations up about 25.9% year on year to ₹23,364 crore even as it reported a consolidated net loss of roughly ₹1,879 crore. Fuel expenses rose 67.2% to about ₹9,967 crore, the largest cost line in the quarter. The airline carried 27.5 million passengers, down 4.7% from a year earlier, with load factor at 80.3% versus 82.5% in the prior-year period. Management trimmed available seat kilometres by about 1% and leaned on higher yields on sold seats. Walsh attributed the outcome to exceptionally high fuel costs and geopolitical disruption, saying capacity discipline and yield actions supported revenue but could not fully offset the fuel bill.",
+      "What does this mean?",
+      "Airlines price tickets in rupees but buy fuel in dollars linked to global crude and refinery spreads. When fuel spikes faster than fares can move, the gap shows up as losses even if headline revenue rises. IndiGo’s choice to fly slightly less capacity while charging more per seat is a classic yield-over-volume trade: fewer discount seats, tighter schedules, and better revenue per passenger, but empty seats still hurt when traffic softens. For households, that mix can mean fewer promotional fares on popular routes and fuller cabins on the flights that remain. Competitors face the same fuel curve, so industry-wide surcharge moves matter as much as one carrier’s cost control.",
+      "Why should I care?",
+      "If you are booking winter travel, compare total checkout prices across dates and carriers; fuel surcharges and yield-led fares can move faster than headline sale banners. Corporate travel desks should revisit advance-purchase policies because last-minute seats may stay expensive if load factors hold. Investors should read fuel cost per available seat kilometre alongside passenger growth, not revenue alone. Watch whether IndiGo restores capacity into the festive peak, how rivals match fares, and any further state VAT relief on aviation turbine fuel that could ease the next quarter’s fuel line.",
+    ],
+  },
+  {
+    slug: "asian-paints-pricing-defer-maintenance-october-2026",
+    title:
+      "Asian Paints is raising prices slowly because families can delay repainting",
+    summary:
+      "On 29 October 2026, Asian Paints said raw material inflation from crude-linked inputs is squeezing margins, but chief executive Amit Syngle warned that passing the full cost through could push households to postpone maintenance painting or trade down to cheaper brands after cumulative hikes of roughly 7%, 5% and 3.5% in recent quarters.",
+    category: "industry",
+    companyOrSector: "Paints / home improvement",
+    publishedAt: "2026-10-29T18:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("asian-paints-pricing-defer-maintenance-october-2026"),
+    keyTakeaways: [
+      "Consolidated profit attributable to owners rose about 7.5% year on year to ₹1,067.63 crore in Q2 FY27, below several analyst expectations cited in coverage, as raw material inflation offset double-digit revenue growth.",
+      "Syngle told analysts on 29 October that painting is discretionary and maintenance jobs can be deferred if prices cross a threshold consumers find uncomfortable.",
+      "The company implemented about 7% pricing in Q1 FY27, roughly 5% in Q2, and a further 3.5% hike in the latest quarter while flagging West Asia-linked volatility in inputs.",
+    ],
+    body: [
+      "What's going on here?",
+      "Asian Paints, India’s largest decorative paint maker, reported September-quarter results on 29 October 2026 with consolidated profit attributable to owners up about 7.5% year on year to ₹1,067.63 crore, a figure that missed some analyst estimates in wire reports because raw material inflation ran ahead of pricing. Managing director Amit Syngle told analysts the category is not bought daily, so households can postpone maintenance repainting or switch to lower-priced products if cumulative hikes feel too sharp. The company has taken calibrated increases, including about 7% in the first quarter of FY27, roughly 5% in the second, and 3.5% in the latest round, while saying it is not reasonable to pass through the entire current input shock at once.",
+      "What does this mean?",
+      "Paint makers sit between petrochemical inputs and renovation budgets that can slip to next year when wallets are tight. Deferral shows up as softer volume long before it appears as a margin miss, which is why Syngle emphasised partial pass-through rather than matching every rupee of cost inflation immediately. Smaller regional rivals may undercut on promo packs while the leader protects mix, creating a familiar FMCG tension: protect share with delayed price or protect margin with risk to footfall. For contractors, delayed hikes can mean quoting jobs on thin buffers if tin prices move again before the next price list.",
+      "Why should I care?",
+      "If you planned festive repainting, compare per-litre quotes across brands and finish grades; trading down from premium lines may save more than waiting for a broad sale. Landlords scheduling society touch-ups should lock material prices in writing with applicators because partial manufacturer hikes can still flow into labour quotes. Investors in home-improvement names should watch volume commentary, not only revenue growth inflated by price. Follow the next price circular, monsoon-season demand data, and whether consumers actually defer projects or absorb hikes as crude-linked inputs stabilise.",
+    ],
+  },
+  {
+    slug: "ccpa-just-dial-ammonium-nitrate-fine-october-2026",
+    title:
+      "Regulators fined Just Dial for listing ammonium nitrate like ordinary goods",
+    summary:
+      "The Central Consumer Protection Authority fined Just Dial ₹10 lakh on 29 October 2026 and ordered it to stop listing ammonium nitrate and other explosives after finding product pages with prices, photos and call buttons that lacked warnings on licensing, buyer eligibility and legal penalties under the Explosives Act and Ammonium Nitrate Rules.",
+    category: "industry",
+    companyOrSector: "Consumer protection / platforms",
+    publishedAt: "2026-10-29T18:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ccpa-just-dial-ammonium-nitrate-fine-october-2026"),
+    keyTakeaways: [
+      "The CCPA’s 28-page order reviewed by Mint imposed a ₹10 lakh penalty and directed Just Dial to discontinue listing, hosting and promoting access to ammonium nitrate and other explosive substances.",
+      "Investigators found listings described as fertiliser-grade or industrial-grade granules with seller details, ratings and call-to-action buttons that could mislead buyers into treating the material as unrestricted commercial goods.",
+      "Just Dial was given 15 days to submit a compliance report; ammonium nitrate sales and possession remain governed by the Explosives Act, 1884, and the Ammonium Nitrate Rules, 2012.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 29 October 2026, the Central Consumer Protection Authority fined Just Dial Ltd ₹10 lakh and ordered the online business directory to stop listing ammonium nitrate and other substances classified as explosives under Indian law. In a 28-page order reported by Mint, the authority said the platform hosted product pages showing prices, photographs, seller ratings and buttons such as call now and get best price without adequate disclosures on licensing, eligible buyers, traceability or criminal penalties for unauthorised possession. Investigators cited multiple listings for fertiliser-grade and industrial-grade ammonium nitrate. The CCPA directed immediate removal of such listings and gave Just Dial 15 days to file a compliance report.",
+      "What does this mean?",
+      "Marketplace and directory models work when buyers assume listings are vetted for legality. Regulated chemicals break that assumption because sale and transport require permits, and misuse carries serious criminal exposure. The order treats facilitation without warnings as misleading conduct, not merely a cataloguing error. Other platforms that blend local services with product leads face the same question: where to intercept prohibited categories before they appear beside plumbers and restaurants. Compliance cost rises in the form of keyword filters, seller checks and legal review, which can slow onboarding for legitimate small businesses.",
+      "Why should I care?",
+      "If you use online directories to source industrial inputs, verify licences independently; a clickable listing is not proof of lawful sale. Small sellers in unrelated categories may see slower listing approvals as platforms tighten moderation. Investors in local-search and classified businesses should treat regulatory orders as product-design issues, not one-off fines. Watch whether CCPA pursues similar actions elsewhere, how Just Dial documents its compliance report, and if other explosives or precursor chemicals get added to automated block lists.",
+    ],
+  },
+  {
+    slug: "godrej-consumer-volume-commodity-inflation-october-2026",
+    title:
+      "Godrej Consumer grew volumes 8% while commodity inflation squeezed margins",
+    summary:
+      "Godrej Consumer Products reported on 29 October 2026 Q2 FY27 consolidated net profit up about 14% to ₹523 crore on 19% revenue growth and 8% volume growth, but EBITDA margin fell to 18.6% from 19.8% a year earlier as crude-linked and palm oil inputs drove high-single-digit cost inflation across India and Indonesia.",
+    category: "industry",
+    companyOrSector: "FMCG / household products",
+    publishedAt: "2026-10-29T18:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("godrej-consumer-volume-commodity-inflation-october-2026"),
+    keyTakeaways: [
+      "Revenue reached ₹4,413 crore in the September quarter, up about 19% year on year, with EBITDA up 11.7% to ₹820 crore despite margin compression, according to wire reports on 29 October 2026.",
+      "Consolidated volume growth was about 8%, with international markets contributing to the top line while input inflation hit soaps and liquid detergents hardest.",
+      "Management said it used calibrated price increases, cost saves and trimmed trade spend while planning further pricing on soap and liquids where commodity pressure remains acute.",
+    ],
+    body: [
+      "What's going on here?",
+      "Godrej Consumer Products, the maker of Cinthol soaps, Good Knight repellents and related household brands, reported September-quarter results on 29 October 2026 with consolidated net profit up about 13.9% year on year to ₹523 crore and revenue up 19% to ₹4,413 crore. Volume growth was about 8%, indicating shoppers still bought packs even as management raised prices selectively. EBITDA rose 11.7% to ₹820 crore, but margin slipped to 18.6% from 19.8% a year earlier because crude-linked derivatives, palm oils and other commodities delivered one of the steepest input inflation spells in recent years, estimated at high-single-digit levels across India and Indonesia portfolios.",
+      "What does this mean?",
+      "Staples brands with strong rural and mass-market reach can grow volumes while absorbing part of a commodity spike, but margin gives way first when price increases must stay calibrated. Godrej’s emphasis on price-point packs means executives cannot raise rupee tags blindly without losing shelf velocity. Soap and liquid detergent lines feel cost spikes quickly because fatty alcohol and palm chains move with global ag and energy markets. The print aligns with other FMCG updates the same week showing households still purchasing daily-use items, but not at prior margin comfort.",
+      "Why should I care?",
+      "Grocery shoppers should compare unit prices on soap and repellent packs; smaller grammage price-point sachets may look unchanged while per-kilo costs drift up. Kirana owners need sharper reorder discipline because working capital sits in slow-turning inventory when consumers down-trade within the same brand. Investors should read volume and margin together; high-teens revenue with high-single-digit volume is partly price, not purely demand acceleration. Watch the next soap price list, festive promo intensity from rivals, and whether Indonesia cost inflation eases after palm price moves.",
+    ],
+  },
+  {
+    slug: "haryana-eleven-power-licence-halt-october-2026",
+    title:
+      "Haryana paused a private power licence weeks after regulators approved it",
+    summary:
+      "Eleven Power said on 29 October 2026 it will pursue legal remedies after the Haryana Electricity Regulatory Commission halted proceedings on its 25-year Gurugram-Nuh distribution licence, following a 26 October state government directive under Section 108 of the Electricity Act barring parallel distribution licences statewide.",
+    category: "industry",
+    companyOrSector: "Power distribution",
+    publishedAt: "2026-10-29T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("haryana-eleven-power-licence-halt-october-2026"),
+    keyTakeaways: [
+      "HERC had granted Eleven Power a 25-year licence on 19 October 2026 to compete with state-run Dakshin Haryana Bijli Vitran Nigam in Gurugram and Nuh; the company accepted terms within the regulator’s deadline.",
+      "A state government directive on 26 October 2026 under Section 108 of the Electricity Act, 2003, barred creation or operationalisation of parallel distribution licences anywhere in Haryana, prompting HERC to suspend further proceedings.",
+      "Eleven Power said it will continue engaging the government and regulator while pursuing remedies under law, leaving the proposed second distributor in the two districts uncertain.",
+    ],
+    body: [
+      "What's going on here?",
+      "Eleven Power Private Ltd, backed by investors seeking to operate a second electricity distributor in Gurugram and Nuh, said on 29 October 2026 that it will pursue legal remedies after the Haryana Electricity Regulatory Commission stopped further work on its licence. HERC had approved a 25-year licence on 19 October and Eleven Power accepted the terms within the required window. On 26 October the Haryana government issued a directive under Section 108 of the Electricity Act, 2003, instructing that parallel distribution licences must not be created or operationalised anywhere in the state. The regulator then halted proceedings, leaving the planned competitor to Dakshin Haryana Bijli Vitran Nigam in limbo despite prior regulatory clearance.",
+      "What does this mean?",
+      "Power sector reform depends on regulators and state politics aligning long enough for new wires and billing systems to go live. A licence granted and then frozen signals that policy can reverse quickly when governments fear duplication of assets or employee unrest at incumbent discoms. For consumers, a second supplier could have meant choice on tariffs and service quality; for the state, it raises coordination costs on subsidies, cross-subsidy accounts and union agreements. Legal fights may stretch timelines even if courts eventually uphold competition rules, which keeps capital sidelined.",
+      "Why should I care?",
+      "If you live or operate businesses in Gurugram or Nuh, do not assume a second power supplier is arriving soon; plan energy costs and backup power on the incumbent discom’s tariff path. Commercial landlords marketing lower utility bills from competition should verify regulatory status before signing leases. Investors in private distribution models should treat state Section 108 orders as live political risk, not background noise. Watch court filings, whether other states advance parallel licences, and if HERC publishes a revised timeline or formally withdraws the grant.",
+    ],
+  },
+  {
     slug: "blue-star-ac-demand-october-2026",
     title:
       "Blue Star sold more air conditioners as a long summer stretched into the festive quarter",
@@ -7443,6 +7568,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "indigo-q2-fuel-loss-passenger-traffic-october-2026": "companies",
+  "asian-paints-pricing-defer-maintenance-october-2026": "markets",
+  "ccpa-just-dial-ammonium-nitrate-fine-october-2026": "policy",
+  "godrej-consumer-volume-commodity-inflation-october-2026": "markets",
+  "haryana-eleven-power-licence-halt-october-2026": "policy",
   "blue-star-ac-demand-october-2026": "markets",
   "symphony-overseas-cooling-expansion-october-2026": "markets",
   "restaurant-brands-india-qsr-profit-october-2026": "markets",
