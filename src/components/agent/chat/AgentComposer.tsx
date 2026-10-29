@@ -9,6 +9,7 @@ import {
   MAX_ATTACHMENTS,
   MAX_FILE_BYTES,
 } from "@/lib/agent/file-limits";
+import { uploadAgentFile } from "@/lib/agent/upload-file";
 
 type Item = {
   key: string;
@@ -18,6 +19,9 @@ type Item = {
   id?: string;
   error?: string;
   password?: string;
+  /** 0–100 while status is uploading */
+  progress?: number;
+  progressPhase?: "upload" | "process";
 };
 
 async function errorMessage(res: Response) {
@@ -42,6 +46,26 @@ async function errorMessage(res: Response) {
     return "Upload failed on the server. Retry in a moment — the first attach after idle can be slow.";
   }
   return `Upload failed (${res.status})`;
+}
+
+async function errorMessageFromBody(status: number, body: unknown) {
+  if (body && typeof body === "object") {
+    const err = (body as { error?: { message?: string; code?: string } | string }).error;
+    if (typeof err === "string" && err) return err;
+    if (err && typeof err === "object" && err.message) {
+      if (err.code === "uploads_unavailable" || status === 503) {
+        return "File uploads are not available on the agent server yet. Try again later or contact support.";
+      }
+      return err.message;
+    }
+  }
+  if (status === 413) return "File is too large for upload.";
+  if (status === 401) return "Sign in again to upload files.";
+  if (status === 504 || status === 408) return "Upload timed out. Try a smaller file, or retry in a moment.";
+  if (status === 500 || status === 502 || status === 503) {
+    return "Upload failed on the server. Retry in a moment — the first attach after idle can be slow.";
+  }
+  return `Upload failed (${status})`;
 }
 
 export function AgentComposer({
@@ -104,25 +128,35 @@ export function AgentComposer({
     setItems((cur) => cur.map((i) => (i.key === key ? { ...i, ...next } : i)));
 
   const upload = async (file: File, key: string, headers: Record<string, string>) => {
-    const body = new FormData();
-    body.append("file", file);
+    patch(key, { progress: 0, progressPhase: "upload" });
     try {
-      const res = await fetch("/api/agent/files", {
-        method: "POST",
-        headers,
-        body,
-        credentials: "same-origin",
+      const result = await uploadAgentFile(file, headers, (p) => {
+        patch(key, { progress: p.percent, progressPhase: p.phase });
       });
-      if (!res.ok) return patch(key, { status: "error", error: await errorMessage(res) });
-      const json = (await res.json()) as { file?: { id: string; status: string } };
-      const uploaded = json.file;
-      if (!uploaded?.id) return patch(key, { status: "error", error: "Upload failed." });
+      if (!result.ok) {
+        return patch(key, {
+          status: "error",
+          error: await errorMessageFromBody(result.status, result.body),
+          progress: undefined,
+          progressPhase: undefined,
+        });
+      }
       patch(key, {
-        id: uploaded.id,
-        status: uploaded.status === "needs_password" ? "needs_password" : "ready",
+        id: result.file.id,
+        status: result.file.status === "needs_password" ? "needs_password" : "ready",
+        progress: undefined,
+        progressPhase: undefined,
       });
-    } catch {
-      patch(key, { status: "error", error: "Upload failed. Check your connection." });
+    } catch (err) {
+      const timeout = err instanceof Error && err.message === "timeout";
+      patch(key, {
+        status: "error",
+        error: timeout
+          ? "Upload timed out. Try a smaller file, or retry in a moment."
+          : "Upload failed. Check your connection.",
+        progress: undefined,
+        progressPhase: undefined,
+      });
     }
   };
 
@@ -283,9 +317,28 @@ export function AgentComposer({
                 }`}
               >
                 <span className="max-w-40 truncate font-medium">{item.name}</span>
-                {item.status === "uploading" && (
-                  <span className="text-ink-3">Uploading…</span>
-                )}
+                {item.status === "uploading" ? (
+                  <span className="flex min-w-[7.5rem] items-center gap-2 text-ink-3">
+                    <span
+                      className="h-1.5 w-16 overflow-hidden rounded-full bg-paper-2"
+                      role="progressbar"
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-valuenow={item.progress ?? 0}
+                      aria-label={`Uploading ${item.name}`}
+                    >
+                      <span
+                        className="block h-full rounded-full bg-accent transition-[width] duration-150"
+                        style={{ width: `${Math.max(4, item.progress ?? 0)}%` }}
+                      />
+                    </span>
+                    <span className="tabular-nums">
+                      {item.progressPhase === "process"
+                        ? "Processing…"
+                        : `${item.progress ?? 0}%`}
+                    </span>
+                  </span>
+                ) : null}
                 {item.status === "unlocking" && <span className="text-ink-3">Unlocking…</span>}
                 {item.status === "ready" && <span className="font-medium text-accent">Ready</span>}
                 {item.status === "needs_password" && (

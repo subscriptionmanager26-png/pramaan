@@ -300,6 +300,36 @@ export function PramaanAgentChat() {
     // Mint id only when sending so empty drafts never become threads.
     const sendThreadId = threadId || newThreadId();
     const promotedFromDraft = !threadId;
+    const optimisticId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+    const optimistic: AgentMessage = {
+      id: optimisticId,
+      threadId: sendThreadId,
+      text: q || (attachmentIds.length ? "Sent with attachment" : ""),
+      attachments: attachmentIds.map((id, i) => ({
+        id,
+        name: attachmentIds.length === 1 ? "Attachment" : `Attachment ${i + 1}`,
+        kind: "file",
+        size: 0,
+      })),
+      status: "working",
+      createdAt: new Date().toISOString(),
+      blocks: [],
+      actions: [],
+      steps: ["Sending…"],
+    };
+    setMessages((m) => [optimistic, ...m]);
+    const title = q.trim() || "New chat";
+    upsertThread({
+      id: sendThreadId,
+      title: title.length > 72 ? `${title.slice(0, 72)}…` : title,
+      updatedAt: new Date().toISOString(),
+      working: true,
+    });
+    if (promotedFromDraft) {
+      draftSendIdRef.current = sendThreadId;
+      loadedThreadRef.current = sendThreadId;
+      router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+    }
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/messages", {
@@ -313,13 +343,14 @@ export function PramaanAgentChat() {
       });
       const json = await res.json();
       if (!res.ok) {
-        const busy = res.status === 409 || json?.error?.code === "agent_busy";
-        if (busy && threadId) {
+        setMessages((m) => m.filter((x) => x.id !== optimisticId));
+        const agentBusy = res.status === 409 || json?.error?.code === "agent_busy";
+        if (agentBusy && threadId) {
           await loadThread(headers);
           refreshThreads();
         }
         setError(
-          busy
+          agentBusy
             ? "Still finishing the last reply — give it a few seconds, then try again."
             : json?.error?.message || json?.error || "Could not send message.",
         );
@@ -327,19 +358,7 @@ export function PramaanAgentChat() {
       }
       const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
       sentId = msg.id;
-      setMessages((m) => [msg, ...m]);
-      const title = q.trim() || "New chat";
-      upsertThread({
-        id: sendThreadId,
-        title: title.length > 72 ? `${title.slice(0, 72)}…` : title,
-        updatedAt: new Date().toISOString(),
-        working: true,
-      });
-      if (promotedFromDraft) {
-        draftSendIdRef.current = sendThreadId;
-        loadedThreadRef.current = sendThreadId;
-        router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
-      }
+      setMessages((m) => [msg, ...m.filter((x) => x.id !== optimisticId)]);
       refreshThreads();
       const final = await streamMessage(msg.id, headers);
       setMessages((m) => m.map((x) => (x.id === final.id ? final : x)));
@@ -377,6 +396,8 @@ export function PramaanAgentChat() {
         } catch {
           // keep the surfaced error below
         }
+      } else {
+        setMessages((m) => m.filter((x) => x.id !== optimisticId));
       }
       setError(e instanceof Error ? e.message : "Something went wrong.");
       return false;

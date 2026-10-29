@@ -181,6 +181,24 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
           ? "Mode: EDIT — if they want the book changed, finish with propose_portfolio_holdings."
           : "Mode: REVIEW — answer questions about the current book only. Do not propose holdings changes unless they explicitly ask to edit.";
       const payloadText = `[Portfolio assistant]\n${modeLine}\n${context}\n\nClient request: ${q}`;
+      const optimisticId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+      const optimistic: AgentMessage = {
+        id: optimisticId,
+        threadId: THREAD_ID,
+        text: q,
+        attachments: attachmentIds.map((id, i) => ({
+          id,
+          name: attachmentIds.length === 1 ? "Attachment" : `Attachment ${i + 1}`,
+          kind: "file",
+          size: 0,
+        })),
+        status: "working",
+        createdAt: new Date().toISOString(),
+        blocks: [],
+        actions: [],
+        steps: ["Sending…"],
+      };
+      setMessages((prev) => [...prev.filter((m) => m.id !== optimisticId), optimistic]);
       try {
         const headers = await pocketedgeAuthHeaders();
         const res = await fetch("/api/agent/messages", {
@@ -193,6 +211,7 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
           }),
         });
         if (!res.ok) {
+          setMessages((prev) => prev.filter((m) => m.id !== optimisticId));
           const body = await res.json().catch(() => ({}));
           setError((body as { error?: { message?: string } }).error?.message || `Send failed (${res.status})`);
           setBusy(false);
@@ -200,7 +219,10 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
         }
         const json = await res.json();
         const message = json.message as AgentMessage;
-        setMessages((prev) => [...prev.filter((m) => m.id !== message.id), message]);
+        setMessages((prev) => [
+          ...prev.filter((m) => m.id !== message.id && m.id !== optimisticId),
+          message,
+        ]);
 
         const eventsUrl = `/api/agent/messages/${encodeURIComponent(message.id)}/events`;
         const evRes = await fetch(eventsUrl, { headers, cache: "no-store" });
@@ -228,6 +250,7 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
         await reload();
         return true;
       } catch {
+        setMessages((prev) => prev.filter((m) => m.id !== optimisticId));
         setError("Could not reach the assistant");
         return false;
       } finally {

@@ -8,6 +8,7 @@ import {
   MAX_ATTACHMENTS,
   MAX_FILE_BYTES,
 } from "@/lib/agent/file-limits";
+import { uploadAgentFile } from "@/lib/agent/upload-file";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 type Item = {
@@ -18,6 +19,8 @@ type Item = {
   id?: string;
   error?: string;
   password?: string;
+  progress?: number;
+  progressPhase?: "upload" | "process";
 };
 
 async function errorMessage(res: Response) {
@@ -53,25 +56,37 @@ export function PortfolioUploadPanel({
     setItems((cur) => cur.map((i) => (i.key === key ? { ...i, ...next } : i)));
 
   const upload = async (file: File, key: string, headers: Record<string, string>) => {
-    const body = new FormData();
-    body.append("file", file);
+    patch(key, { progress: 0, progressPhase: "upload" });
     try {
-      const res = await fetch("/api/agent/files", {
-        method: "POST",
-        headers,
-        body,
-        credentials: "same-origin",
+      const result = await uploadAgentFile(file, headers, (p) => {
+        patch(key, { progress: p.percent, progressPhase: p.phase });
       });
-      if (!res.ok) return patch(key, { status: "error", error: await errorMessage(res) });
-      const json = (await res.json()) as { file?: { id: string; status: string } };
-      const uploaded = json.file;
-      if (!uploaded?.id) return patch(key, { status: "error", error: "Upload failed." });
+      if (!result.ok) {
+        const err =
+          result.body && typeof result.body === "object"
+            ? (result.body as { error?: { message?: string } | string }).error
+            : undefined;
+        const message =
+          typeof err === "string"
+            ? err
+            : err && typeof err === "object" && err.message
+              ? err.message
+              : `Upload failed (${result.status})`;
+        return patch(key, {
+          status: "error",
+          error: message,
+          progress: undefined,
+          progressPhase: undefined,
+        });
+      }
       patch(key, {
-        id: uploaded.id,
-        status: uploaded.status === "needs_password" ? "needs_password" : "ready",
+        id: result.file.id,
+        status: result.file.status === "needs_password" ? "needs_password" : "ready",
+        progress: undefined,
+        progressPhase: undefined,
       });
     } catch {
-      patch(key, { status: "error", error: "Upload failed." });
+      patch(key, { status: "error", error: "Upload failed.", progress: undefined, progressPhase: undefined });
     }
   };
 
@@ -188,7 +203,19 @@ export function PortfolioUploadPanel({
             >
               <span className="min-w-0 flex-1 truncate font-medium text-ink">{item.name}</span>
               <span className="text-ink-3">{formatBytes(item.size)}</span>
-              {item.status === "uploading" ? <span className="text-ink-3">Uploading…</span> : null}
+              {item.status === "uploading" ? (
+                <span className="flex items-center gap-2 text-ink-3">
+                  <span className="h-1.5 w-16 overflow-hidden rounded-full bg-paper-2">
+                    <span
+                      className="block h-full rounded-full bg-accent transition-[width] duration-150"
+                      style={{ width: `${Math.max(4, item.progress ?? 0)}%` }}
+                    />
+                  </span>
+                  <span className="tabular-nums">
+                    {item.progressPhase === "process" ? "Processing…" : `${item.progress ?? 0}%`}
+                  </span>
+                </span>
+              ) : null}
               {item.status === "unlocking" ? <span className="text-ink-3">Unlocking…</span> : null}
               {item.status === "ready" ? <span className="font-medium text-accent">Ready</span> : null}
               {item.status === "needs_password" ? (
