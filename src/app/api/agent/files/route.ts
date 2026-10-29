@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+import { ensureAgentUserSynced } from "@/lib/agent/ensure-agent-user";
 import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch } from "@/lib/personal-agents";
 
@@ -9,6 +10,7 @@ export const maxDuration = 60;
 export async function GET(request: Request) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
+  await ensureAgentUserSynced(auth.user);
   const url = new URL(request.url);
   const limit = url.searchParams.get("limit") || "50";
   const res = await paFetch(
@@ -21,6 +23,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
+  await ensureAgentUserSynced(auth.user);
 
   let incoming: FormData;
   try {

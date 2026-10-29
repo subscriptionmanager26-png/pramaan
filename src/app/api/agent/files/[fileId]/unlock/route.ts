@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+import { ensureAgentUserSynced } from "@/lib/agent/ensure-agent-user";
 import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch } from "@/lib/personal-agents";
 
@@ -10,6 +11,7 @@ type Params = { params: Promise<{ fileId: string }> };
 export async function POST(request: Request, { params }: Params) {
   const auth = await requireAgentUser(request);
   if ("response" in auth) return auth.response;
+  await ensureAgentUserSynced(auth.user);
   const { fileId } = await params;
   const payload = await request.json().catch(() => ({}));
   const res = await paFetch(
