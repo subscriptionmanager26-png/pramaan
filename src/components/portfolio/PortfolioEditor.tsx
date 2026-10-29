@@ -191,12 +191,32 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     setBusy(false);
   };
 
-  const loadZerodha = useCallback(async (): Promise<ConnectionsZerodha | null> => {
+  const loadZerodha = useCallback(async (): Promise<ConnectionsZerodha> => {
     const headers = await pocketedgeAuthHeaders();
     const res = await fetch("/api/agent/connections", { headers, cache: "no-store" });
-    if (!res.ok) return null;
-    const json = (await res.json()) as { zerodha?: ConnectionsZerodha };
-    return json.zerodha ?? null;
+    const json = (await res.json().catch(() => ({}))) as {
+      zerodha?: ConnectionsZerodha;
+      error?: { code?: string; message?: string } | string;
+    };
+    if (!res.ok) {
+      const err = json.error;
+      const code = typeof err === "object" ? err?.code : typeof err === "string" ? err : undefined;
+      const message = typeof err === "object" ? err?.message : undefined;
+      if (res.status === 403 || code === "agent_not_enabled") {
+        throw new Error("Agent access is required for Zerodha. Open AI → Connections, then try again.");
+      }
+      if (res.status === 401 || code === "unauthorized") {
+        throw new Error("Sign in again to connect Zerodha.");
+      }
+      if (res.status === 503 || code === "agent_backend_unconfigured") {
+        throw new Error("Agent backend is not configured.");
+      }
+      throw new Error(message || code || `Could not check Zerodha connection (${res.status}).`);
+    }
+    if (!json.zerodha) {
+      throw new Error("Connections response was missing Zerodha status.");
+    }
+    return json.zerodha;
   }, []);
 
   const importZerodha = useCallback(async () => {
@@ -244,11 +264,6 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       setLoginUrl(null);
       try {
         const z = await loadZerodha();
-        if (!z) {
-          setZerodhaGate("error");
-          setError("Could not check Zerodha connection.");
-          return;
-        }
         if (!z.connected) {
           setZerodhaGate("need_connect");
           return;
@@ -259,9 +274,9 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         }
         setZerodhaGate("ready");
         if (opts?.autoImport) await importZerodha();
-      } catch {
+      } catch (err) {
         setZerodhaGate("error");
-        setError("Could not check Zerodha connection.");
+        setError(err instanceof Error ? err.message : "Could not check Zerodha connection.");
       }
     },
     [importZerodha, loadZerodha],
