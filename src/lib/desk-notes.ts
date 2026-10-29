@@ -26,6 +26,106 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "blue-star-ac-demand-october-2026",
+    title:
+      "Blue Star sold more air conditioners as a long summer stretched into the festive quarter",
+    summary:
+      "Blue Star reported on 29 October 2026 that consolidated revenue rose about 21% year on year to roughly ₹2,931 crore in the September quarter, with room air conditioner sales up 29% after a delayed monsoon kept cooling demand alive, even as metal costs limited margin gains.",
+    category: "industry",
+    companyOrSector: "Consumer durables / HVAC",
+    publishedAt: "2026-10-29T12:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("blue-star-ac-demand-october-2026"),
+    keyTakeaways: [
+      "Consolidated profit attributable to owners rose about 26% to ₹124 crore in Q2 FY27 on revenue of roughly ₹2,931 crore, ahead of several analyst polls cited in the coverage.",
+      "The unitary products segment, which sells room air conditioners and commercial refrigeration, posted 29.4% revenue growth, while electro-mechanical and commercial air conditioning revenue rose 16.3%.",
+      "Chairman Vir S Advani said room AC demand stayed strong into the festive season and flagged a healthy data-centre project pipeline, while noting weak farm incomes and higher interest rates as near-term risks.",
+    ],
+    body: [
+      "What's going on here?",
+      "Blue Star, a major Indian air conditioning and commercial cooling supplier, published September-quarter results on 29 October 2026 showing consolidated revenue from operations up about 21% to ₹2,930.95 crore and profit attributable to owners up roughly 26% to ₹123.92 crore. Management linked the volume lift to a delayed monsoon and an extended summer that kept room air conditioner demand elevated into the festive quarter. The unitary products business grew revenue 29.4% to about ₹898 crore, while the larger electro-mechanical projects and commercial air conditioning segment rose 16.3% to nearly ₹1,936 crore. Advani also pointed to a pipeline of data-centre mechanical, electrical and plumbing jobs that could convert into orders over coming months.",
+      "What does this mean?",
+      "Air conditioners are seasonal, but the installed base keeps climbing as housing stock modernises and heat waves last longer. When summer runs late, dealers clear inventory without deep discounting, which shows up as revenue before it fully flows to margins. Blue Star still flagged pressure from rising material costs and limited pass-through, which is why segment profit in unitary products fell even as revenue jumped. Commercial cooling and data-centre capex add a second lane: builders and cloud operators buy chillers and service contracts on multi-year plans, so a strong order book can smooth factory loads when residential seasonality fades.",
+      "Why should I care?",
+      "If you are buying a room AC or upgrading office cooling, compare quotes early in the festive window; tight summer carryover can reduce end-season bargains but also signals fewer distressed models on clearance. Landlords and facility managers bidding data-centre or mall jobs should ask vendors about delivery slots and copper-linked price clauses. Home buyers evaluating branded HVAC in new towers should check whether developers locked bulk rates before metal moves. Watch Blue Star’s festive sell-through data, rival pricing from Voltas and Korean brands, and whether weak farm incomes or RBI rate levels slow discretionary upgrades in smaller towns.",
+    ],
+  },
+  {
+    slug: "symphony-overseas-cooling-expansion-october-2026",
+    title:
+      "Symphony’s overseas coolers drove a 31% revenue jump as it prepares to sell room air conditioners",
+    summary:
+      "Symphony Ltd said on 29 October 2026 that consolidated revenue rose 31% year on year to ₹275 crore in the September quarter, led by Mexico and Australia subsidiaries, and outlined December 2026 launches in residential air conditioners, BLDC ceiling fans and air purifiers.",
+    category: "industry",
+    companyOrSector: "Consumer durables / cooling",
+    publishedAt: "2026-10-29T12:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("symphony-overseas-cooling-expansion-october-2026"),
+    keyTakeaways: [
+      "Consolidated revenue reached ₹275 crore in Q2 FY27, with EBITDA up 166% to ₹36 crore and margin expanding to about 13%, according to the company’s exchange update.",
+      "Overseas subsidiary IMPCO Mexico reported revenue up 131% and CTPL Australia up 54%, while the Beyond India Summer Products segment accounted for about 51% of trailing twelve-month consolidated revenue.",
+      "Management plans calibrated launches in December 2026 across eight residential inverter AC variants, seven BLDC ceiling fan models and two Silenzair air purifiers, targeting categories it estimates exceed ₹60,000 crore in annual market size.",
+    ],
+    body: [
+      "What's going on here?",
+      "Symphony, known for air coolers, reported September-quarter results on 29 October 2026 with consolidated revenue up 31% year on year to ₹275 crore and profit after tax up 44% to ₹24 crore. Growth came mainly from overseas units: IMPCO Mexico’s revenue rose 131%, CTPL Australia grew 54%, while China subsidiary GSK declined. India standalone revenue grew a modest 9% to ₹170 crore with flat EBITDA margin near 17.5%. The company’s Beyond India Summer Products segment, essentially cooler-led exports and foreign subsidiaries, now contributes about half of trailing revenue. Alongside the print, Symphony announced it will enter residential air conditioners, BLDC ceiling fans and air purifiers in the December 2026 quarter.",
+      "What does this mean?",
+      "Coolers sell where humidity and power costs favour evaporative cooling, but room ACs and purifiers sit in a much larger wallet-share battle against entrenched appliance brands. Symphony is using profitable overseas cooler seasons to fund a broader portfolio at home, while treasury cash of about ₹468 crore on the standalone books gives room to stage launches without immediate balance-sheet stress. The risk is margin dilution if AC launches require dealer incentives and service networks that coolers never needed. A 31% consolidated revenue jump therefore mixes genuine foreign demand with a strategic pivot, not a single-product boom.",
+      "Why should I care?",
+      "Shoppers comparing festive cooling deals may see a well-known cooler brand push bundled AC and fan offers, which can improve choice but also blur apples-to-oranges efficiency ratings. Appliance dealers should watch whether Symphony’s AC SKUs cannibalise cooler volumes or attract incremental footfall. Investors tracking consumer durables should separate export-led EBITDA spikes from India standalone profit, which grew only 1% after forex and treasury effects. Follow December launch pricing, early sell-through in North and West India, and whether management hits stated multi-year revenue targets without burning cash on discounts.",
+    ],
+  },
+  {
+    slug: "restaurant-brands-india-qsr-profit-october-2026",
+    title:
+      "Restaurant Brands Asia returned its India business to profit in the September quarter",
+    summary:
+      "Restaurant Brands Asia, which runs Burger King and Popeyes in India, reported on 29 October 2026 that consolidated revenue grew about 20% year on year in Q2 FY27 while its India operations posted positive profit after tax, helping narrow group losses even as Indonesia stayed loss-making.",
+    category: "industry",
+    companyOrSector: "Quick-service restaurants",
+    publishedAt: "2026-10-29T12:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("restaurant-brands-india-qsr-profit-october-2026"),
+    keyTakeaways: [
+      "Consolidated revenue rose about 20.1% year on year in Q2 FY27, with stronger EBITDA and a narrower consolidated net loss, according to AI summaries of the exchange filing cited in market wire reports on 29 October 2026.",
+      "India delivered positive profit after tax in the quarter, while Indonesia improved EBITDA but remained loss-making at the segment level.",
+      "The board also discussed capitalisation of Indonesian subsidiary PT SBI and higher financing limits, subject to shareholder approvals noted in the same filings.",
+    ],
+    body: [
+      "What's going on here?",
+      "Restaurant Brands Asia, the listed operator of Burger King and Popeyes in India and related businesses in Indonesia, released September-quarter results on 29 October 2026. Consolidated revenue grew about 20.1% year on year, with EBITDA improving and the consolidated net loss narrowing compared with the year-ago period. The India business swung to positive profit after tax, according to filing summaries on the wire, while Indonesia’s EBITDA improved though the market there remained loss-making. Management commentary in those summaries pointed to store growth and better cost absorption as traffic normalised after prior inflation shocks on food inputs.",
+      "What does this mean?",
+      "Quick-service restaurants make money on throughput: fixed rent and kitchen costs spread across more burgers and fries. When India turns profitable, it usually means either more stores are mature enough to cover overheads or same-store sales rose without proportional wage and cheese cost spikes. A 20% revenue lift with India in the black suggests diners are still eating out, but Indonesia’s lingering losses show the model is not uniformly portable. Franchise royalties and delivery-aggregator commissions still cap how much of that top line reaches shareholders, so profit at the India segment is a health check on urban discretionary spend, not a guarantee of group-level earnings.",
+      "Why should I care?",
+      "If you operate malls or high-street food courts, a profitable QSR anchor tenant is less likely to renegotiate rent downward or delay new openings. Office workers and students ordering combo meals should expect continued menu tweaks rather than broad price cuts while input costs stay volatile. Investors comparing hospitality names should read India same-store sales and store opening pace, not only consolidated revenue growth blurred by currency and Indonesia. Watch festive footfall in metro malls, delivery discounting by rivals, and any shareholder votes on Indonesian capital injections that could dilute focus on the India turnaround.",
+    ],
+  },
+  {
+    slug: "milkymist-protein-dairy-october-2026",
+    title:
+      "Milky Mist posted record quarterly revenue as shoppers bought more protein-led dairy",
+    summary:
+      "Milky Mist reported on 29 October 2026 that Q2 FY27 revenue rose 41.6% year on year to a record ₹1,089 crore, with EBITDA up 53.9% and profit after tax up 174.5%, driven by value-added dairy and protein products despite input-cost pressure.",
+    category: "industry",
+    companyOrSector: "FMCG / dairy",
+    publishedAt: "2026-10-29T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("milkymist-protein-dairy-october-2026"),
+    keyTakeaways: [
+      "Q2 FY27 revenue reached ₹1,089.40 crore, up 41.6% year on year, with EBITDA up 53.9% and profit after tax up 174.5%, according to exchange summaries dated 29 October 2026.",
+      "Management attributed growth to value-added dairy demand, protein-oriented products and operating efficiencies, while flagging cautious underlying demand and input-cost pressure.",
+      "Priorities outlined in the same updates include expanding protein-led products, distribution reach and capacity while pursuing profitable growth.",
+    ],
+    body: [
+      "What's going on here?",
+      "Milky Mist, a southern India dairy and value-added foods company, published September-quarter results on 29 October 2026 showing record revenue of ₹1,089.40 crore, up 41.6% year on year, with EBITDA up 53.9% and profit after tax up 174.5%. The company linked the print to stronger demand for curd, paneer, beverages and protein-focused lines, plus cost and mix improvements, even as management noted cautious consumer sentiment and rising input costs in the same filing summaries. The growth extends a strong first half, signalling that modern trade and e-commerce continue to pull branded dairy into urban and tier-two baskets.",
+      "What does this mean?",
+      "Branded dairy wins when households trade up from loose milk to packaged curd, cheese and high-protein snacks that survive longer in refrigerators and justify modest premiums. Protein positioning taps gym culture and school lunch boxes, not only festive sweets, which diversifies revenue away from pure commodity milk swings. Margin expansion alongside revenue suggests Milky Mist passed through some costs while gaining scale in manufacturing and cold-chain routes. That combination is rarer in FMCG this season, where many staples reported volume pressure.",
+      "Why should I care?",
+      "Grocery shoppers may see more shelf space for regional dairy brands with protein claims; compare unit prices per gram of protein before assuming national labels are cheapest. Kirana owners should watch expiry turns on high-margin SKUs because dairy spoilage erodes working capital fast. Investors weighing FMCG names should treat Milky Mist as a regional scale story with capacity bets, not a proxy for all rural demand. Track milk procurement prices in Tamil Nadu and Karnataka, modern-trade listing wins, and whether protein SKUs keep growing once festive gifting fades.",
+    ],
+  },
+  {
     slug: "morbi-ceramic-export-shock-october-2026",
     title:
       "Morbi tile exporters are shipping again, but the cluster still faces a bleak year",
@@ -7343,6 +7443,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "blue-star-ac-demand-october-2026": "markets",
+  "symphony-overseas-cooling-expansion-october-2026": "markets",
+  "restaurant-brands-india-qsr-profit-october-2026": "markets",
+  "milkymist-protein-dairy-october-2026": "markets",
   "morbi-ceramic-export-shock-october-2026": "markets",
   "jupiter-wagons-railways-order-october-2026": "policy",
   "india-iip-september-slowdown-october-2026": "markets",

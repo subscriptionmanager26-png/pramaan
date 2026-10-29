@@ -380,6 +380,39 @@ def bandhan_irdai(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([680 + i * 55, 560 - h, 730 + i * 55, 560], fill=GOLD if i > 1 else YELLOW)
 
 
+def blue_star_ac(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 200, 420, 520], radius=16, fill=BLUE)
+    for i in range(5):
+        d.line([(140, 240 + i * 50), (400, 240 + i * 50)], fill=CREAM, width=2)
+    d.polygon([(700, 520), (760, 160), (820, 520)], fill=YELLOW)
+    for i, h in enumerate([100, 160, 220]):
+        d.rectangle([900 + i * 70, 560 - h, 950 + i * 70, 560], fill=[RED, BLUE, RED][i])
+
+
+def symphony_overseas(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([100, 200, 460, 560], outline=BLUE, width=6)
+    d.arc([130, 230, 430, 530], 20, 160, fill=RED, width=5)
+    d.rectangle([640, 280, 780, 520], fill=YELLOW)
+    for y in range(300, 500, 40):
+        d.line([(800, y), (1120, y - 20)], fill=GOLD, width=3)
+
+
+def restaurant_brands_india(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 360, 420, 540], fill=RED)
+    d.rectangle([200, 280, 360, 360], fill=YELLOW)
+    d.line([(680, 560), (1120, 560)], fill=GOLD, width=3)
+    for i, h in enumerate([80, 140, 200, 260]):
+        d.rectangle([720 + i * 55, 560 - h, 770 + i * 55, 560], fill=[BLUE, YELLOW, RED, BLUE][i])
+
+
+def milkymist_protein(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 260, 240, 520], radius=24, fill=BLUE)
+    d.rounded_rectangle([280, 300, 480, 420], radius=12, fill=YELLOW)
+    d.rectangle([300, 440, 460, 480], fill=RED)
+    d.polygon([(720, 520), (820, 280), (920, 520)], fill=GOLD)
+    d.rectangle([980, 320, 1080, 520], fill=RED)
+
+
 def morbi_ceramic(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([100, 280, 520, 560], fill=BLUE)
     for i in range(4):
@@ -433,6 +466,10 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("blue-star-ac-demand-october-2026", blue_star_ac)
+    save("symphony-overseas-cooling-expansion-october-2026", symphony_overseas)
+    save("restaurant-brands-india-qsr-profit-october-2026", restaurant_brands_india)
+    save("milkymist-protein-dairy-october-2026", milkymist_protein)
     save("morbi-ceramic-export-shock-october-2026", morbi_ceramic)
     save("jupiter-wagons-railways-order-october-2026", jupiter_wagons)
     save("india-iip-september-slowdown-october-2026", iip_september)
