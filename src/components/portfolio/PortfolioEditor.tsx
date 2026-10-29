@@ -340,15 +340,14 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       setStep("upload");
       return;
     }
-    // zerodha — open Kite via form POST in this click (server redirects; no about:blank)
+    // zerodha — if Connections already has a live session, import; otherwise show Connect/Login
     setStep("zerodha");
     if (preview) {
       setZerodhaGate("error");
       setError("Zerodha import needs a signed-in agent. Use Add manually in preview.");
       return;
     }
-    startZerodhaLogin("connect");
-    void refreshZerodhaGate();
+    void refreshZerodhaGate({ autoImport: true });
   };
 
   const continueToVerify = () => {

@@ -20,7 +20,21 @@ function tabPage(title: string, body: string, status = 200) {
     `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>${escapeHtml(title)}</title>
 <style>body{font-family:ui-sans-serif,system-ui,sans-serif;padding:2rem;max-width:32rem;line-height:1.5;color:#111}
 a{color:#0b6e4f}</style></head><body>${body}</body></html>`,
-    { status, headers: { "Content-Type": "text/html; charset=utf-8" } },
+    { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } },
+  );
+}
+
+/** HTML navigate beats a bare 303 from an API form POST (browsers often leave you on this URL). */
+function navigateTab(url: string, label: string) {
+  const safe = escapeHtml(url);
+  return new NextResponse(
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<meta http-equiv="refresh" content="0;url=${safe}"/>
+<title>${escapeHtml(label)}</title>
+<script>location.replace(${JSON.stringify(url)})</script>
+<style>body{font-family:ui-sans-serif,system-ui,sans-serif;padding:2rem;line-height:1.5}</style>
+</head><body><p>${escapeHtml(label)}…</p><p><a href="${safe}">Continue</a></p></body></html>`,
+    { status: 200, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } },
   );
 }
 
@@ -76,12 +90,12 @@ export async function POST(request: Request) {
       return tabPage("Zerodha", `<p>${escapeHtml(message)}</p><p><a href="${escapeHtml(returnTo)}">Back</a></p>`, res.status);
     }
     if (typeof body.url === "string" && /^https:\/\//i.test(body.url)) {
-      return NextResponse.redirect(body.url, 303);
+      return navigateTab(body.url, "Opening Zerodha login");
     }
     if (body.loggedInAs) {
       const dest = new URL(returnTo, request.url);
       dest.searchParams.set("zerodha", "ready");
-      return NextResponse.redirect(dest, 303);
+      return navigateTab(dest.toString(), "Already logged in — returning");
     }
     return tabPage(
       "Zerodha",
