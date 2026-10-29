@@ -327,6 +327,52 @@ def hero_motocorp_q2(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([1020 + i * 50, 560 - h, 1060 + i * 50, 560], fill=GOLD)
 
 
+def adani_vtti(d: ImageDraw.ImageDraw) -> None:
+    # storage tanks + globe trade lanes
+    for i in range(4):
+        d.ellipse([120 + i * 90, 420, 200 + i * 90, 560], fill=BLUE if i % 2 else RED)
+        d.rectangle([150 + i * 90, 360, 170 + i * 90, 430], fill=GOLD)
+    d.arc([680, 180, 1120, 520], 200, 340, fill=YELLOW, width=6)
+    d.line([(720, 520), (900, 320), (1080, 280)], fill=GOLD, width=3)
+    d.rectangle([700, 140, 780, 200], fill=RED)
+
+
+def tvs_spinoff(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 400, 340, 560], fill=INK)
+    d.ellipse([160, 420, 320, 540], fill=YELLOW)
+    d.rectangle([380, 280, 440, 560], fill=BLUE)
+    d.rounded_rectangle([640, 240, 880, 520], radius=20, fill=RED)
+    d.line([(760, 280), (760, 480)], fill=CREAM, width=12)
+    d.polygon([(920, 360), (980, 320), (1040, 360), (980, 400)], fill=GOLD)
+
+
+def cholafin_disb(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([100, 180, 260, 340, 420]):
+        x = 120 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, BLUE, YELLOW, RED, GOLD][i])
+    d.rounded_rectangle([680, 260, 1120, 520], radius=24, fill=BLUE)
+    d.ellipse([780, 340, 860, 420], fill=YELLOW)
+    d.rectangle([900, 320, 1040, 440], fill=CREAM)
+
+
+def info_edge_ceo(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 200, 480, 560], fill=BLUE)
+    d.rectangle([180, 260, 420, 320], fill=CREAM)
+    d.rectangle([180, 360, 420, 420], fill=CREAM)
+    d.rectangle([180, 460, 420, 520], fill=CREAM)
+    d.polygon([(700, 520), (760, 280), (820, 520)], fill=RED)
+    d.polygon([(880, 520), (940, 320), (1000, 520)], fill=YELLOW)
+    d.line([(700, 560), (1100, 560)], fill=GOLD, width=3)
+
+
+def jsw_cement_north(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 520), (280, 280), (400, 520)], fill=RED)
+    d.rectangle([300, 360, 340, 520], fill=GOLD)
+    for i, h in enumerate([80, 140, 200]):
+        d.rectangle([680 + i * 100, 560 - h, 740 + i * 100, 560], fill=[BLUE, YELLOW, BLUE][i])
+    d.ellipse([980, 380, 1100, 500], outline=GOLD, width=5)
+
+
 def bandhan_irdai(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(160, 520), (160, 320), (280, 240), (400, 320), (400, 520)], fill=BLUE)
     d.rectangle([440, 360, 520, 520], fill=RED)
@@ -345,6 +391,11 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("adani-vtti-storage-terminals-bid-october-2026", adani_vtti)
+    save("tvs-motor-q2-finance-spinoff-october-2026", tvs_spinoff)
+    save("cholafin-disbursements-q2-october-2026", cholafin_disb)
+    save("info-edge-ceo-succession-december-2026", info_edge_ceo)
+    save("jsw-cement-volumes-north-breakeven-october-2026", jsw_cement_north)
     save("nppa-anti-cancer-mrp-list-november-2026", nppa_mrp_list)
     save("radico-khaitan-q2-premium-brands-october-2026", radico_premium)
     save("pvr-inox-record-q2-earnings-october-2026", pvr_inox_q2)

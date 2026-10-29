@@ -26,6 +26,129 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-vtti-storage-terminals-bid-october-2026",
+    title:
+      "Adani Group is exploring a €3 billion bid for global fuel storage terminals",
+    summary:
+      "People familiar with the talks said on 28 October 2026 that Gautam Adani’s conglomerate is among suitors evaluating Rotterdam-based VTTI, whose tank farms store fuels and chemicals for traders, with a deal that could value the business at about €3 billion as supply disruptions make storage more strategic.",
+    category: "industry",
+    companyOrSector: "Energy infrastructure / commodities",
+    publishedAt: "2026-10-29T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-vtti-storage-terminals-bid-october-2026"),
+    keyTakeaways: [
+      "Bloomberg-linked reporting on 28 October 2026 said Adani Group is evaluating a potential acquisition of Dutch storage operator VTTI alongside other bidders.",
+      "VTTI runs terminals for fossil fuels, biofuels, and chemicals globally; co-owners IFM Investors and Vitol each hold about 45%, with Abu Dhabi National Oil Co. holding roughly 10%.",
+      "Talks could value VTTI near €3 billion ($3.4 billion); deliberations may not lead to a transaction, and Adnoc may exit entirely in a sale process, per people cited in the report.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 people familiar with private talks said Gautam Adani’s infrastructure-heavy group is weighing a bid for VTTI, a Netherlands-based operator of fuel and chemical storage terminals used by energy traders and refiners. The same reporting put a possible price tag near €3 billion. IFM Investors and Vitol each own about 45% of VTTI, while Abu Dhabi National Oil Co. holds the rest. Those co-owners may look to trim or exit stakes if a sale moves forward. Other suitors are also in the mix, and none of the parties confirmed a deal.",
+      "What does this mean?",
+      "Tank farms are not glamorous, but they sit at the choke point between ships, pipelines, and local fuel markets. When supply routes wobble, storage earns more because traders pay to hold barrels and blend grades. Adani already spans ports, power, gas, and airports in India; owning overseas storage would extend its commodity logistics footprint beyond domestic assets. For Indian fuel buyers, the link is indirect: more global storage capacity can smooth import timing, yet ownership abroad does not by itself cut petrol prices at the pump. Any transaction would face long regulatory and financing checks in Europe and India.",
+      "Why should I care?",
+      "If you follow infrastructure or energy stocks, treat the report as early-stage scouting, not a signed contract. Competitors and co-owners could outbid or block terms. Policy watchers should note how Indian conglomerates are still hunting hard assets overseas when trading margins depend on physical logistics. Investors in Adani-listed entities should wait for an official statement before modeling debt or equity issuance. Watch for confirmed bids, antitrust filings in Europe, and whether Adani ties any purchase to its existing port and fuel retail networks at home.",
+    ],
+  },
+  {
+    slug: "tvs-motor-q2-finance-spinoff-october-2026",
+    title:
+      "TVS Motor will list its consumer finance arm after a record sales quarter",
+    summary:
+      "On 28 October 2026 TVS Motor reported consolidated net profit of ₹1,219 crore on revenue of ₹19,474 crore for the September quarter, with sales topping prior records across motorcycles, scooters, exports, and electric models, and its board approved demerging consumer finance into a separately listed company with a one-for-one share exchange for investors.",
+    category: "industry",
+    companyOrSector: "Two-wheelers / consumer finance",
+    publishedAt: "2026-10-29T05:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tvs-motor-q2-finance-spinoff-october-2026"),
+    keyTakeaways: [
+      "TVS Motor’s consolidated net profit rose 47% year on year to ₹1,219 crore in Q2 FY27 on revenue up 39% to ₹19,474 crore, per results announced 28 October 2026.",
+      "Motorcycle sales reached about 0.9 million units and scooters about 0.8 million units in the quarter; electric two-wheeler sales doubled to roughly 186,186 units.",
+      "The board approved demerging consumer finance into a new listed entity, with shareholders set to receive one share in the finance company for each TVS Motor share held, subject to approvals over an estimated eight to ten months.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 TVS Motor, India’s third-largest two-wheeler maker by volume, published September-quarter results it described as record-setting across product lines. Consolidated net profit climbed to ₹1,219 crore from ₹832 crore a year earlier, while revenue from operations rose 39% to ₹19,474 crore. Motorcycle volumes grew about 28% year on year to near 0.9 million units; scooters rose 29% to about 0.8 million units. Exports increased 35%, and electric models more than doubled to about 186,186 units. The same day the board approved spinning off consumer finance, including TVS Credit Services and related lending, into a separately listed company. Shareholders would receive one share in the finance entity for every TVS Motor share, mirroring today’s ownership.",
+      "What does this mean?",
+      "Two-wheeler demand in India still runs on EMIs and festive replacement cycles. When volumes, exports, and electric sales all rise together, it signals households and fleet buyers are still spending despite commodity pressure. TVS is also separating the balance sheet that funds those purchases from the factory floor. A standalone finance listing can raise capital for gold, vehicle, and personal loans without mixing leverage metrics with manufacturing. Rivals Hero and Bajaj posted strong quarters too, which suggests the gap versus slower carmakers this season is a category story, not a single-company fluke.",
+      "Why should I care?",
+      "If you plan to buy a scooter or commuter bike, compare finance schemes across brands before showroom discounts peak. Existing TVS Motor investors should watch regulatory filings for the demerger timeline and how dividends split between mobility and finance. Job seekers and recruiters can still read TVS results as one datapoint alongside Hero’s dispatch numbers that urban mobility spending held into late October. Track November festival retail updates, Norton premium launch plans abroad, and whether finance arm listing materials disclose bad-loan trends separately from vehicle demand.",
+    ],
+  },
+  {
+    slug: "cholafin-disbursements-q2-october-2026",
+    title:
+      "Cholamandalam Finance disbursed ₹35,872 crore in a single quarter",
+    summary:
+      "Cholamandalam Investment and Finance Company reported on 28 October 2026 that September-quarter disbursements rose 47% to ₹35,872 crore, net profit increased 41% to ₹1,630 crore, and assets under management reached ₹2.68 lakh crore, while the board cleared a potential ₹5,000 crore qualified institutional placement as gold and SME books accelerated.",
+    category: "industry",
+    companyOrSector: "NBFC / consumer credit",
+    publishedAt: "2026-10-29T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cholafin-disbursements-q2-october-2026"),
+    keyTakeaways: [
+      "CIFCL’s Q2 FY27 disbursements grew 47% year on year to ₹35,872 crore; net profit rose 41% to ₹1,630 crore on AUM of ₹2,68,009 crore, up 25%.",
+      "Vehicle finance AUM was ₹1,29,787 crore; loans against property ₹57,447 crore; SME AUM grew 45% year on year; gold-loan disbursements were ₹1,960 crore in the quarter.",
+      "Gross non-performing assets improved slightly to 4.44% from 4.50% sequentially; the board approved fundraising of up to ₹5,000 crore via QIP.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Murugappa Group-owned Cholamandalam Investment and Finance Company reported September-quarter numbers that showed credit still flowing quickly across its franchises. Disbursements rose 47% year on year to ₹35,872 crore. Net profit increased 41% to ₹1,630 crore. Assets under management stood at ₹2,68,009 crore, up 25% from a year earlier. Vehicle finance remained the largest book at ₹1,29,787 crore. Loans against property and small-business loans grew at 24% and 45% respectively. A newer gold-loan franchise disbursed ₹1,960 crore in the quarter through 308 branches. Asset quality ticked better sequentially, with gross NPAs at 4.44% versus 4.50% in June 2026. The board also approved raising up to ₹5,000 crore through a qualified institutional placement.",
+      "What does this mean?",
+      "Non-bank lenders often lead the cycle when banks tighten unsecured rules. Rising disbursements with only modest NPA improvement can mean either better underwriting or a lag before festive-season stress shows up. Cholafin’s mix spans trucks, property, SMEs, and gold, so the print captures both rural tractor softness management flagged and urban collateral lending. A large QIP would thicken capital buffers before the Reserve Bank’s tighter norms on consumer credit bite harder. For households, easier NBFC availability can keep vehicle and small-business loans on offer even when public-sector banks pause.",
+      "Why should I care?",
+      "If you are shopping for a vehicle loan, LAP, or gold loan, compare NBFC rates and processing fees with bank quotes; festive campaigns may hide all-in costs. Borrowers should read repayment rules on gold and SME products, not only headline rates. Investors in NBFC stocks should separate one quarter’s disbursement surge from collection data after Diwali. Watch December-quarter asset-quality updates, RBI consumer-credit circular compliance, and whether the QIP prices at a level that funds growth without diluting returns.",
+    ],
+  },
+  {
+    slug: "info-edge-ceo-succession-december-2026",
+    title: "Info Edge’s CEO of 27 years will step down in December",
+    summary:
+      "Info Edge (India) Ltd said on 28 October 2026 that managing director and chief executive Hitesh Oberoi will leave those roles on 2 December 2026, with founder Sanjeev Bikhchandani set to become executive vice chairman and group CEO from 3 December subject to shareholder approval, while Oberoi stays on in a non-executive capacity.",
+    category: "industry",
+    companyOrSector: "Internet / jobs and property platforms",
+    publishedAt: "2026-10-29T04:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("info-edge-ceo-succession-december-2026"),
+    keyTakeaways: [
+      "Info Edge announced on 28 October 2026 that Hitesh Oberoi will step down as MD and CEO on 2 December 2026 after nearly 27 years with the company.",
+      "Founder Sanjeev Bikhchandani is proposed as executive vice chairman, MD, and group CEO from 3 December 2026, pending shareholder approval.",
+      "The parent of Naukri.com and 99acres reported strong Q2 growth and rising AI product revenue in the same earnings window; Oberoi will remain in a non-executive role after the handover.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 Info Edge (India) Ltd, which owns recruitment portal Naukri.com and real estate site 99acres, said managing director and chief executive Hitesh Oberoi will step down on 2 December 2026 after almost three decades with the firm. The board proposed appointing founder Sanjeev Bikhchandani as executive vice chairman, managing director, and group CEO from 3 December, subject to shareholder approval. Oberoi will continue with the company in a non-executive capacity. The leadership change landed alongside September-quarter results in which Info Edge highlighted double-digit revenue growth, stronger operating profit, and an annualized run rate near ₹240 crore from newer AI products, while 99acres accelerated and education platform Shiksha remains in transition.",
+      "What does this mean?",
+      "Job and property listings sit at the front of white-collar hiring and home-buying cycles. When the founder returns to the operating chair after a long-serving CEO exits, markets read it as both continuity and a tighter strategic grip before the next product bets. Info Edge’s AI revenue line matters because recruiters and brokers pay for tools that sort résumés and leads faster. A handover during strong growth is less disruptive than one during a downturn, but product roadmaps and brand voice can still shift when the top desk changes.",
+      "Why should I care?",
+      "If you hire through Naukri or list on 99acres, watch pricing and feature bundles after December for signs of a sharper monetization push. Job seekers should not assume platform policies freeze during the transition; keep copies of applications and responses. Investors should read the December shareholder meeting outcome and any clarity on whether an external CEO will arrive later. Track January user metrics, AI product disclosures, and how Shiksha’s pivot progresses under the new leadership line-up.",
+    ],
+  },
+  {
+    slug: "jsw-cement-volumes-north-breakeven-october-2026",
+    title: "JSW Cement’s northern plants broke even as volumes rose 26%",
+    summary:
+      "JSW Cement reported on 28 October 2026 that September-quarter sales volumes grew 26% year on year and revenue 33% to about ₹1,912 crore, with northern operations reaching EBITDA breakeven even as power and fuel costs narrowed margins; the board also approved roughly ₹1,078 crore of capacity additions.",
+    category: "industry",
+    companyOrSector: "Cement / construction inputs",
+    publishedAt: "2026-10-29T04:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jsw-cement-volumes-north-breakeven-october-2026"),
+    keyTakeaways: [
+      "JSW Cement’s Q2 FY27 revenue from operations rose 33.1% year on year to ₹1,912.15 crore; reported profit attributable to owners slipped 1.2% to ₹85.35 crore as costs ran ahead of EBITDA growth.",
+      "Management said volumes increased 26% year on year and that northern India reached EBITDA breakeven in the quarter.",
+      "Power and fuel costs rose to ₹383.39 crore from ₹225.76 crore a year earlier; the board approved expansion projects of about ₹1,078 crore including slag grinding capacity at Vijayanagar.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 28 October 2026 JSW Cement published September-quarter results showing demand still moving despite margin pressure. Revenue from operations climbed 33.1% year on year to ₹1,912.15 crore. Volumes rose 26%, and management said the northern region hit EBITDA breakeven after earlier losses in that geography. Operating profit grew only modestly to ₹277 crore, and EBITDA margin narrowed to 14.5% from 18.6% a year ago as power and fuel expenses jumped to ₹383.39 crore. Profit attributable to owners edged down 1.2% to ₹85.35 crore. The board approved about ₹1,078 crore of capacity projects, including a slag grinding line at Vijayanagar in Karnataka. Separately, group companies highlighted electric truck orders for moving clinker, signalling cost and emissions work alongside volume growth.",
+      "What does this mean?",
+      "Cement is a local bulk good tied to housing, roads, and industrial capex. When volumes outpace profit, input costs are eating the benefit of higher shipments. Northern breakeven matters because competitive pricing in that belt has kept many players underwater; turning positive on EBITDA suggests either better realizations, plant utilization, or cost fixes are working. Capacity additions bet that infra and housing demand will stay firm into FY27. For home buyers and contractors, the industry story is availability and delivered price per bag, not quarterly EBITDA lines.",
+      "Why should I care?",
+      "If you are building or renovating, compare bag prices and delivery timelines across brands in your city; fuel surcharges can pass through with a lag. Infrastructure investors should pair JSW’s volume comment with road and housing order books from peers. Watch winter power tariffs, freight rates on clinker routes, and whether northern breakeven holds through a full year rather than one quarter. Track commissioning dates on the new slag capacity and rival price moves in Uttar Pradesh and Bihar markets.",
+    ],
+  },
+  {
     slug: "bandhan-bank-irdai-third-party-hit-october-2026",
     title:
       "Bandhan Bank says IRDAI’s distribution overhaul could cost it ₹200 crore a year",
@@ -7095,6 +7218,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-vtti-storage-terminals-bid-october-2026": "companies",
+  "tvs-motor-q2-finance-spinoff-october-2026": "markets",
+  "cholafin-disbursements-q2-october-2026": "markets",
+  "info-edge-ceo-succession-december-2026": "companies",
+  "jsw-cement-volumes-north-breakeven-october-2026": "markets",
   "bandhan-bank-irdai-third-party-hit-october-2026": "policy",
   "hero-motocorp-q2-profit-october-2026": "markets",
   "pvr-inox-record-q2-earnings-october-2026": "markets",
