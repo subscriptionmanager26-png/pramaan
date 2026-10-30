@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 
 import { AgentUiProvider, useOptionalAgentUi } from "@/components/agent/agent-ui-context";
+import { BOTTOM_NAV_PAD, BottomNav } from "@/components/shell/BottomNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 
@@ -10,15 +11,26 @@ function AppShellChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const agentArea = pathname?.startsWith("/ai") ?? false;
   const agentUi = useOptionalAgentUi();
-  const hideSiteHeader = agentArea && Boolean(agentUi?.conversationLive);
+  // Live conversation: immersive — hide site header + bottom tabs (Multibagg / Pocketedge pattern).
+  const immersiveAi = agentArea && Boolean(agentUi?.conversationLive);
+  const showBottomNav = !immersiveAi;
 
   return (
     <div
       className={`flex flex-col bg-paper text-ink ${agentArea ? "h-dvh max-h-dvh min-h-0" : "min-h-screen"}`}
     >
-      {!hideSiteHeader ? <SiteHeader /> : null}
-      <main className={agentArea ? "flex min-h-0 flex-1 flex-col overflow-hidden" : "flex-1"}>{children}</main>
-      {!agentArea && <SiteFooter />}
+      {!immersiveAi ? <SiteHeader /> : null}
+      <main
+        className={
+          agentArea
+            ? `flex min-h-0 flex-1 flex-col overflow-hidden ${showBottomNav ? BOTTOM_NAV_PAD : ""}`
+            : `flex-1 ${showBottomNav ? BOTTOM_NAV_PAD : ""}`
+        }
+      >
+        {children}
+      </main>
+      {!agentArea ? <SiteFooter /> : null}
+      {showBottomNav ? <BottomNav /> : null}
     </div>
   );
 }
