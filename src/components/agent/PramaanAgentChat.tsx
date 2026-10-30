@@ -491,6 +491,13 @@ export function PramaanAgentChat() {
   return (
     <div className="flex min-h-0 flex-1 overflow-hidden">
       <div className="flex min-w-0 flex-1 flex-col">
+        {/* Desktop: Files stays top-right. Mobile: Files is next to New Chat in AgentWorkspace chrome. */}
+        <div className="hidden items-center justify-end gap-2 px-3 py-2 sm:px-5 lg:flex">
+          <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
+            Files
+          </button>
+        </div>
+
         {!hasConversation ? (
           /* New chat: greeting + composer live in the screen body (not the site nav). */
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6">
@@ -512,22 +519,10 @@ export function PramaanAgentChat() {
                 ) : null}
                 {composer}
               </div>
-              <button
-                type="button"
-                className="text-[12px] font-medium text-ink-3 hover:text-ink"
-                onClick={() => setFilesOpen(!filesOpen)}
-              >
-                Files
-              </button>
             </div>
           </div>
         ) : (
           <>
-            <div className="flex items-center justify-end gap-2 px-3 py-1.5 sm:px-5">
-              <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
-                Files
-              </button>
-            </div>
             <div className="flex-1 overflow-y-auto px-4 pb-4 sm:px-6">
               <div className="mx-auto max-w-3xl space-y-12 py-2">
                 {thread.map((message) => (

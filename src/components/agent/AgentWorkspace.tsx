@@ -404,7 +404,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
           </>
         )}
         <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">
-          {/* Mobile chat chrome lives in the chat screen — not the site header */}
+          {/* Mobile chat chrome — Files sits left of New Chat (desktop Files stays in the chat pane). */}
           <div className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-white px-3 lg:hidden">
             <button
               type="button"
@@ -417,13 +417,22 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
                 <rect x="14" y="4" width="7" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
               </svg>
             </button>
-            <button
-              type="button"
-              className="inline-flex h-9 items-center gap-1 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
-              onClick={startNewChat}
-            >
-              New Chat <span aria-hidden>+</span>
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                className="inline-flex h-9 items-center rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
+                onClick={() => setFilesOpen(!filesOpen)}
+              >
+                Files
+              </button>
+              <button
+                type="button"
+                className="inline-flex h-9 items-center gap-1 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
+                onClick={startNewChat}
+              >
+                New Chat <span aria-hidden>+</span>
+              </button>
+            </div>
           </div>
           {children}
         </div>
