@@ -89,9 +89,9 @@ export function SiteHeader() {
       }`}
     >
       <div
-        className="mx-auto grid h-14 max-w-6xl grid-cols-3 items-center gap-2 px-4 sm:h-16 sm:px-6 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-6"
+        className="mx-auto grid h-14 w-full max-w-6xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-4 sm:h-16 sm:px-6 lg:gap-6"
       >
-        <div className="flex items-center gap-1 justify-self-start">
+        <div className="flex min-w-0 items-center gap-1 justify-self-start">
           {onAi ? (
             <button
               type="button"
@@ -111,12 +111,16 @@ export function SiteHeader() {
               <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
           </button>
-          <Logo className="hidden lg:inline-flex" />
+          {/* Wrapper owns visibility — Logo’s inline-flex would override a `hidden` className */}
+          <div className="hidden lg:block">
+            <Logo />
+          </div>
         </div>
 
         <div className="flex justify-center justify-self-center lg:justify-self-stretch">
-          {/* Hide center logo while the drawer is open so it doesn’t sit behind a second logo */}
-          <Logo className={open ? "hidden" : "lg:hidden"} />
+          <div className={open ? "hidden" : "lg:hidden"}>
+            <Logo />
+          </div>
           <nav className="hidden w-full items-center justify-center gap-1 lg:flex" aria-label="Main">
             {nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);

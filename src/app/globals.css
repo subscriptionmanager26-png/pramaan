@@ -24,17 +24,20 @@
 
 html {
   scrollbar-gutter: stable;
+  overflow-x: clip;
 }
 
 html,
 body {
   background: #ffffff;
   color: #0b0b0b;
+  max-width: 100%;
 }
 
 body {
   font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   letter-spacing: -0.015em;
+  overflow-x: clip;
 }
 
 ::selection {
