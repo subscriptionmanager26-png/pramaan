@@ -26,6 +26,133 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-credit-card-spending-september-decline-october-2026",
+    title:
+      "Credit card spending fell year on year in September for the first time since 2021",
+    summary:
+      "Industry data cited on 30 October 2026 showed total credit card spending in India at about ₹2.04 trillion in September, down 5.9% from a year earlier, the first annual decline since February 2021, as a high base from the prior festive surge weighed on growth even though analysts expect a rebound in October and November.",
+    category: "industry",
+    companyOrSector: "Household credit / retail",
+    publishedAt: "2026-10-30T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage(
+      "india-credit-card-spending-september-decline-october-2026",
+    ),
+    keyTakeaways: [
+      "Credit card spending totalled about ₹2.04 trillion in September 2026, down 5.9% year on year, according to CareEdge figures reported on 30 October 2026.",
+      "That marked the first annual contraction in the series since February 2021, when pandemic-era comparisons were still distorting the data.",
+      "Analysts quoted in the same reports said festival purchases in October and November could lift volumes again, but September shows households paused on revolving credit after an unusually strong prior-year base.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 30 October 2026, business press cited CareEdge data showing Indians put about ₹2.04 trillion on credit cards in September, 5.9% less than in September 2025. It was the first year-on-year drop in that monthly series since February 2021. Reporters linked the print to a tough comparison: spending had jumped sharply in the same month last year when festive prep and travel reopened after earlier inflation scares. Issuers and aggregators still report active cards and higher limits in many segments, but the aggregate swipe total moved down for one month. Several analysts in the coverage said they expect October and November festival bills to push the series back up, which would make September look like a pause rather than a trend break.",
+      "What does this mean?",
+      "Credit cards are a real-time read on discretionary baskets: flights, electronics, dining and online carts that can be postponed when EMI costs bite. A single negative year-on-year month does not prove a recession, but it confirms that last year’s September spike was hard to repeat. Banks earn interchange on spend while carrying unsecured risk on revolvers, so a flat or down month shows up in fee income before it shows up in bad loans. Households may be shifting big-ticket buys to no-cost EMI on debit-linked programs or delaying upgrades until Diwali discounts land, which keeps headline retail sales noisy while card networks see softer gross merchandise value.",
+      "Why should I care?",
+      "If you carry a balance, treat September as a reminder to check your statement cycle before festive shopping; reward points do not offset finance charges. Merchants who depend on card-heavy urban traffic should not panic on one month but should watch approval rates and average ticket size through November. Investors in private banks and card-focused NBFCs should read spend data alongside deposit growth and asset-quality commentary in Q2 calls. Watch October and November RBI payment-system releases, issuer quarterly updates, and whether personal loan growth keeps outpacing card spend as rates stay elevated.",
+    ],
+  },
+  {
+    slug: "india-fiscal-deficit-april-september-october-2026",
+    title:
+      "Central government spending outpaced receipts in the April-September half",
+    summary:
+      "Union finance ministry data released on 30 October 2026 put India’s fiscal deficit for April-September 2026-27 at about ₹7.15 trillion, or 42.1% of the full-year target, up from roughly ₹5.7 trillion and 36.5% of target in the same period a year earlier, as total expenditure rose 10.7% while receipts grew 6.1%.",
+    category: "industry",
+    companyOrSector: "Public finance",
+    publishedAt: "2026-10-30T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-fiscal-deficit-april-september-october-2026"),
+    keyTakeaways: [
+      "The fiscal deficit for April-September 2026-27 was about ₹7.15 trillion, equal to 42.1% of the budget estimate for the full year, compared with about ₹5.7 trillion and 36.5% a year earlier, per ministry data reported on 30 October 2026.",
+      "Total expenditure in the half rose about 10.7% year on year to roughly ₹25.5 trillion, while capital outlay reached about ₹6.5 trillion, or 53.6% of its annual target.",
+      "Net tax receipts for the period were about ₹12.8 trillion, up from roughly ₹12.1 trillion in the year-ago half, leaving the gap between spending and collections wider than at the same stage last year.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s finance ministry published half-year fiscal accounts on 30 October 2026 showing the central government’s deficit at about ₹7.15 trillion for April through September. That is 42.1% of the full-year target set in the budget, against about 36.5% of target at the same point in 2025-26. Total spending rose roughly 10.7% year on year to about ₹25.5 trillion, with capital expenditure at near ₹6.5 trillion, already above half the annual capex aim. Receipts grew more slowly, about 6.1%, with net tax collections near ₹12.8 trillion compared with about ₹12.1 trillion a year earlier. The release does not by itself signal a breach of the annual deficit goal, but it shows the government front-loaded outlays while tax growth lagged the spending pace in the first two quarters.",
+      "What does this mean?",
+      "Fiscal math matters for bond yields, public-sector borrowing and how much room ministries have for second-half schemes. A higher deficit ratio at the half-year mark often reflects capex pipelines, subsidy bills and tax collections that arrive more heavily in later quarters. Markets watch whether disinvestment and small savings inflows catch up, and whether the RBI’s gilt supply calendar absorbs extra borrowing without spiking yields. For households, the link is indirect: tighter borrowing costs if investors demand more compensation for supply, or continued capex on roads, rails and housing if the government keeps spending despite the gap.",
+      "Why should I care?",
+      "If you hold long-dated mutual funds or provident fund products with heavy gilt exposure, track the second-half borrowing calendar after this release. Contractors and state suppliers should still expect project payments but should not assume every announced scheme is fully funded until budget supplementary details appear. Taxpayers awaiting refunds or export incentives should remember that cash outflows already ran ahead of collections in the first half. Watch the next monthly fiscal bulletin, third-quarter tax advance payments, and any revised borrowing notification from the government and RBI.",
+    ],
+  },
+  {
+    slug: "ioc-q2-lpg-compensation-profit-october-2026",
+    title:
+      "Indian Oil’s quarterly profit jumped after the government paid LPG loss compensation",
+    summary:
+      "Indian Oil Corporation reported on 30 October 2026 standalone net profit of about ₹216.3 billion in Q2 FY27, up from roughly ₹76.1 billion a year earlier, helped by about ₹72.43 billion in central compensation for domestic LPG under-recoveries in April-September even as Brent crude averaged nearly 40% higher and marketing losses on transport fuels persisted.",
+    category: "industry",
+    companyOrSector: "Oil marketing / LPG",
+    publishedAt: "2026-10-30T17:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ioc-q2-lpg-compensation-profit-october-2026"),
+    keyTakeaways: [
+      "Standalone net profit rose to about ₹216.3 billion in the quarter ended 30 September 2026 from about ₹76.1 billion a year earlier, with revenue from operations up about 30% to roughly ₹2.63 trillion, per exchange filings reported on 30 October 2026.",
+      "The company booked about ₹72.43 billion from the federal government as compensation for LPG under-recoveries incurred in April-September on subsidised cylinder sales.",
+      "Raw material costs rose with crude near 40% above year-ago averages; IOCL also flagged potential inventory losses if global oil prices fall sharply in coming quarters.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian Oil Corporation, India’s largest refiner-marketer, published September-quarter results on 30 October 2026 showing standalone net profit of about ₹216.3 billion against roughly ₹76.1 billion in the year-ago quarter. Revenue from operations grew about 30% to near ₹2.63 trillion. A major swing factor was ₹72.43 billion received from the central government as reimbursement for LPG under-recoveries, the losses state retailers absorb when domestic cylinder prices are held below import-parity cost and later compensated in tranches. Brent crude averaged nearly 40% higher than a year earlier during the quarter, lifting procurement costs; total expenses rose about 23% to roughly ₹2.39 trillion. Management also warned that a sharp fall in global crude could create inventory losses on stored barrels, a separate accounting hit from marketing margins.",
+      "What does this mean?",
+      "LPG subsidies are a political contract: households expect stable cylinder bills while marketers carry the gap until finance ministry payments land. When compensation arrives in the same quarter as a crude spike, reported profit can look strong even while petrol and diesel marketing margins stay squeezed on daily pump pricing. That split matters for reading IOCL and its peer results: one line item is treasury reimbursement, another is whether transport-fuel realisations keep pace with import costs. If global oil retreats, inventory write-downs can reverse part of the headline gain, which is why the company flagged that risk explicitly.",
+      "Why should I care?",
+      "If you buy LPG cylinders, the compensation payment is a reminder that your bill is partly settled through the budget, not only through the sticker price at the dealer. Fleet operators and airlines still face volatile ATF and diesel costs unrelated to this LPG tranche. Investors should separate recurring refining margins from episodic subsidy receipts when valuing state marketers. Watch the next under-recovery bulletin, any change in cylinder subsidy rules, and peer results from BPCL and HPCL for whether transport-fuel losses narrowed in the same quarter.",
+    ],
+  },
+  {
+    slug: "india-ppp-investor-apathy-october-2026",
+    title:
+      "Private bidders are still walking away from India’s highway partnerships",
+    summary:
+      "Coverage on 30 October 2026 highlighted persistent gaps in India’s public-private partnership pipeline, citing examples such as highway tenders that drew no bidders and concessions running below capacity, with analysts blaming weak project preparation, lopsided risk allocation and weak post-award monitoring despite a reported ₹17 lakh crore project pipeline.",
+    category: "industry",
+    companyOrSector: "Infrastructure / PPP",
+    publishedAt: "2026-10-30T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-ppp-investor-apathy-october-2026"),
+    keyTakeaways: [
+      "Business press on 30 October 2026 said India’s PPP push faces investor apathy even with a pipeline quoted at about ₹17 lakh crore, including National Highways Authority of India projects that failed to attract bids.",
+      "Reports pointed to toll roads and concessions operating below capacity when traffic forecasts, land acquisition or contract enforcement slip after signing.",
+      "Analysts cited in the same stories blamed inadequate project preparation, risk shifted to private partners on paper, and weak monitoring after financial close.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 30 October 2026, several outlets published deep dives on India’s public-private partnership model, arguing that private capital is not showing up at the scale policy slides suggest. Examples in the coverage included highway bundles where tenders received no bids and operating concessions carrying traffic well below projections. The National Highways Authority of India and other line ministries have a long announced pipeline, quoted at about ₹17 lakh crore in aggregate, but announcements do not equal funded construction if banks and funds balk at risk. Commentators in the pieces pointed to land and clearance delays, optimistic traffic studies, and contracts that leave sponsors holding cost overruns without credible dispute resolution.",
+      "What does this mean?",
+      "PPP only works when revenue risk is measurable and the government’s role after signing is clear. When bids fail, the public sector either delays the asset or builds it on balance sheet, which pushes borrowing needs elsewhere in the fiscal accounts. For users, empty bid rooms mean slower new corridors and older toll plazas staying congested. For contractors, it shifts work toward pure EPC contracts with tighter margins instead of equity-style toll shares. The pattern is not new, but the juxtaposition with a large headline pipeline shows the binding constraint is execution quality, not marketing.",
+      "Why should I care?",
+      "If your business depends on logistics times, watch which projects move from tender to financial close rather than which appear on slide decks. Municipal bond and infra fund investors should stress-test traffic and tariff assumptions on any NHAI-linked deal. Policy watchers should look for revised model concession agreements and independent dispute boards, not only higher viability gap funding. Follow the next NHAI bid results, RBI commentary on infra lending, and whether multilateral lenders step into failed bundles.",
+    ],
+  },
+  {
+    slug: "au-sfb-customer-data-leak-probe-october-2026",
+    title:
+      "AU Small Finance Bank is investigating a possible leak on a Salesforce loan database",
+    summary:
+      "AU Small Finance Bank said on 30 October 2026 it is probing a potential data leak involving a Salesforce-hosted software-as-a-service platform that holds limited information on vehicle-loan customers, while stating its core banking systems were unaffected and services continue normally.",
+    category: "industry",
+    companyOrSector: "Banking / data privacy",
+    publishedAt: "2026-10-30T17:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("au-sfb-customer-data-leak-probe-october-2026"),
+    keyTakeaways: [
+      "The bank told reporters on 30 October 2026 it is investigating a potential leak tied to a Salesforce-managed SaaS platform containing limited vehicle-loan customer information.",
+      "AU SFB said its own core banking systems were not compromised and that customer transactions and account services remain operational.",
+      "The disclosure follows a series of financial-sector data incidents that have pushed regulators and customers to ask where sensitive fields sit outside a lender’s primary ledger.",
+    ],
+    body: [
+      "What's going on here?",
+      "AU Small Finance Bank issued a statement on 30 October 2026, reported by ANI and other outlets, saying it is investigating a potential data leak connected to a software-as-a-service platform managed and hosted by Salesforce. The bank described the environment as holding limited information related to vehicle-loan customers, not its full retail deposit base. It emphasised that internal core banking systems were unaffected and that banking services continue normally. The probe is at an early stage in public disclosures; the bank did not in the initial statement quantify records or confirm exfiltration, only that it is examining the SaaS layer.",
+      "What does this mean?",
+      "Banks increasingly store sales, onboarding and collections workflows in cloud CRM tools while money movement stays on core processors. A breach or misconfiguration in the CRM lane can expose names, phone numbers, vehicle identifiers or loan statuses even when account passwords and balances stay secure. That still enables phishing and social engineering against borrowers. Regulators expect lenders to map third-party data processors, contract for breach notice, and test backups. For small finance banks scaling vehicle finance, SaaS speed comes with audit overhead that shows up in incidents like this.",
+      "Why should I care?",
+      "If you have an AU SFB vehicle loan, treat unexpected calls or payment links as suspicious until the bank publishes confirmed scope and remediation steps. Other borrowers should ask any lender where loan paperwork lives and whether CRM access is logged. Investors in small finance and fintech names should read cyber and vendor-risk disclosures alongside asset quality. Watch AU SFB’s follow-up exchange filings, any RBI or CERT-In guidance, and whether Salesforce or the bank offers free credit monitoring if personal data is confirmed exposed.",
+    ],
+  },
+  {
     slug: "indigo-q2-fuel-loss-passenger-traffic-october-2026",
     title:
       "IndiGo carried fewer passengers while jet fuel costs jumped in the September quarter",
@@ -7568,6 +7695,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-credit-card-spending-september-decline-october-2026": "markets",
+  "india-fiscal-deficit-april-september-october-2026": "policy",
+  "ioc-q2-lpg-compensation-profit-october-2026": "policy",
+  "india-ppp-investor-apathy-october-2026": "policy",
+  "au-sfb-customer-data-leak-probe-october-2026": "policy",
   "indigo-q2-fuel-loss-passenger-traffic-october-2026": "companies",
   "asian-paints-pricing-defer-maintenance-october-2026": "markets",
   "ccpa-just-dial-ammonium-nitrate-fine-october-2026": "policy",

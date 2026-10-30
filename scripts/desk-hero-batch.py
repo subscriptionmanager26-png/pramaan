@@ -465,6 +465,48 @@ def cipla_us_target(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([1020, 360, 1060, 560], fill=YELLOW)
 
 
+def credit_card_spending_decline(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([100, 240, 480, 520], radius=24, fill=BLUE)
+    d.rectangle([140, 300, 440, 340], fill=GOLD)
+    d.rectangle([140, 380, 380, 420], fill=CREAM)
+    for i, h in enumerate([80, 140, 100, 60]):
+        x = 640 + i * 85
+        d.rectangle([x, 520 - h, x + 55, 520], fill=[RED, BLUE, YELLOW, RED][i])
+    d.polygon([(900, 200), (980, 240), (900, 280)], fill=GOLD)
+
+
+def fiscal_deficit_h1(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 160, 520, 580], fill=BLUE)
+    d.polygon([(300, 200), (420, 260), (420, 540), (300, 600), (180, 540), (180, 260)], fill=RED)
+    for i, w in enumerate([1180, 1080, 980]):
+        d.rectangle([640, 220 + i * 110, w, 280 + i * 110], fill=[YELLOW, RED, BLUE][i])
+    d.line([(640, 560), (1180, 560)], fill=GOLD, width=3)
+
+
+def ioc_lpg_compensation(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 280, 220, 380], fill=YELLOW)
+    d.rectangle([240, 320, 480, 520], fill=BLUE)
+    d.polygon([(700, 400), (900, 320), (1100, 400), (900, 480)], fill=RED)
+    d.line([(720, 360), (1080, 360)], fill=GOLD, width=4)
+
+
+def ppp_investor_apathy(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(100, 520), (200, 380), (400, 360), (520, 480)], fill=BLUE)
+    d.rectangle([640, 280, 720, 560], fill=RED)
+    d.rectangle([780, 360, 860, 560], fill=YELLOW)
+    d.line([(900, 560), (1150, 560)], fill=GOLD, width=3)
+    d.polygon([(950, 560), (1020, 520), (950, 480)], fill=INK)
+
+
+def au_sfb_data_leak(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 200, 460, 560], radius=28, fill=BLUE)
+    d.ellipse([260, 320, 340, 400], fill=CREAM)
+    d.rectangle([640, 180, 720, 260], fill=RED)
+    d.polygon([(800, 240), (880, 280), (800, 320), (720, 280)], fill=YELLOW)
+    d.line([(700, 400), (1120, 400)], fill=GOLD, width=3)
+    d.ellipse([980, 420, 1060, 500], outline=RED, width=6)
+
+
 def main() -> None:
     save("blue-star-ac-demand-october-2026", blue_star_ac)
     save("symphony-overseas-cooling-expansion-october-2026", symphony_overseas)
@@ -514,6 +556,11 @@ def main() -> None:
     save("ioc-india-shipping-fleet-crude-october-2026", ioc_shipping)
     save("larsen-toubro-q2-infrastructure-october-2026", lt_infra)
     save("redington-iphone-festive-slowdown-october-2026", redington)
+    save("india-credit-card-spending-september-decline-october-2026", credit_card_spending_decline)
+    save("india-fiscal-deficit-april-september-october-2026", fiscal_deficit_h1)
+    save("ioc-q2-lpg-compensation-profit-october-2026", ioc_lpg_compensation)
+    save("india-ppp-investor-apathy-october-2026", ppp_investor_apathy)
+    save("au-sfb-customer-data-leak-probe-october-2026", au_sfb_data_leak)
 
 
 if __name__ == "__main__":
