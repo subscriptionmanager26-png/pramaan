@@ -26,6 +26,131 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-banking-reforms-committee-october-2026",
+    title:
+      "India set up a new panel to review how banks lend and compete",
+    summary:
+      "On 30 October 2026 the finance ministry said it formed a high-level committee, headed by former Central Vigilance Commissioner Suresh N Patel, to review banking practices, regulation, long-term capital needs, private investment rules, and digital innovation including artificial intelligence, with recommendations aimed at helping lenders support growth and global competitiveness.",
+    category: "industry",
+    companyOrSector: "Banking / regulation",
+    publishedAt: "2026-10-30T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-banking-reforms-committee-october-2026"),
+    keyTakeaways: [
+      "The Union finance ministry announced on 30 October 2026 a high-level committee to review India’s banking sector and propose reforms.",
+      "The panel will assess current practices, regulatory frameworks, long-term capital requirements, and ways to ease operations while drawing a roadmap for AI and digital innovation with cyber safeguards.",
+      "Former Central Vigilance Commissioner Suresh N Patel will chair the committee, which will also look at talent and policies to attract private investment in banks.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s finance ministry said on 30 October 2026 that it has constituted a high-level committee to study the banking sector and suggest changes so lenders can better fund economic growth and compete internationally. A press note said the group will review present banking practices, existing regulatory frameworks, and long-term capital requirements. It will also recommend steps to simplify day-to-day banking operations and policy changes that could encourage more private investment in banks. The committee is tasked with mapping how artificial intelligence and broader digital innovation should spread through the system while managing cyber risk, and with proposing a talent strategy for the industry. Former Central Vigilance Commissioner Suresh N Patel will lead the panel; the ministry listed other members in the release.",
+      "What does this mean?",
+      "Bank rules shape how quickly a factory gets a working-capital line, how much deposit rates move after a central bank tweak, and whether a young firm can borrow against invoices instead of land. A fresh review does not rewrite policy overnight, but it signals that Delhi wants banks to lend into growth sectors without repeating old asset-quality shocks. Themes such as capital buffers, ownership limits for private investors, and guardrails around new technology often surface in these exercises because they sit at the intersection of growth and stability. If the committee proposes easier compliance or clearer digital standards, implementation would still pass through regulators and Parliament, so households should treat this as the start of a conversation, not a rate change tomorrow.",
+      "Why should I care?",
+      "If you are shopping for a home loan or small-business credit, watch whether later recommendations push faster loan repricing, simpler KYC, or new products tied to cash-flow data. Savers in public-sector banks should follow any capital or governance ideas that affect dividend policy. Fintech users may see faster approvals if digital lending norms clarify, or tighter fraud checks if cyber recommendations bite. Track the committee’s interim papers, RBI and finance ministry responses, and whether budget 2027 picks up ownership or capital themes from the final report.",
+    ],
+  },
+  {
+    slug: "reliance-retail-fmcg-profit-mismatch-october-2026",
+    title:
+      "Reliance Retail’s profit fell even as its own FMCG brands sold much faster",
+    summary:
+      "Reliance Retail Ventures reported on 30 October 2026 consolidated profit after tax down about 24% year on year to roughly ₹2,611 crore in Q2 FY27 while revenue from operations rose 5.8%, as digital-commerce spending, input costs and finance charges weighed on earnings even as the separate consumer-products arm posted about 60% gross revenue growth to ₹8,266 crore on Campa and Independence-led staples.",
+    category: "industry",
+    companyOrSector: "Retail / FMCG",
+    publishedAt: "2026-10-30T23:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("reliance-retail-fmcg-profit-mismatch-october-2026"),
+    keyTakeaways: [
+      "Reliance Retail Ventures said consolidated profit after tax fell about 24.3% year on year to ₹2,611 crore in the quarter ended September 2026 while revenue from operations grew 5.8%.",
+      "Management linked the decline to investments in digital commerce, input-cost inflation and higher finance costs in the same results pack.",
+      "Reliance Consumer Products, the FMCG arm, reported gross revenue up about 60% to ₹8,266 crore in the quarter on Campa beverages and Independence-led daily essentials, with six greenfield food and beverage plants under way.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reliance Retail Ventures, the conglomerate’s store and e-commerce arm, published September-quarter numbers on 30 October 2026 showing consolidated profit after tax of about ₹2,611 crore, down roughly 24% from a year earlier, while revenue from operations still rose 5.8%. Filings and investor slides tied the profit dip to spending on digital-commerce capabilities, input-cost inflation across categories, and higher finance charges even as footfall and gross merchandise value metrics stayed active. In the same earnings window, Reliance Consumer Products said gross revenue jumped about 60% year on year to ₹8,266 crore, led by Campa cola and Independence-branded staples, and flagged six integrated greenfield food and beverage factories being built across India. Chairman Mukesh Ambani said in the presentation that the consumer portfolio gained ground with Indian shoppers; the retail entity’s profit line nonetheless compressed.",
+      "What does this mean?",
+      "Large retailers often split the story: owned brands can rack up volume while the parent pays for apps, quick commerce, and store refits that hit the bottom line first. Campa and Independence growth suggests households are trying value-priced cola and packaged foods when marketed at scale through JioMart and physical stores, which fits wider festive stocking patterns elsewhere in the sector. The profit decline is a reminder that market share buys can mean lower near-term margins if discounting, delivery subsidies, and interest on inventory land in the same quarter as brand revenue accelerates. Competitors in groceries and beverages will read the 60% FMCG gross revenue jump as a pricing and distribution challenge even if Reliance Retail’s consolidated earnings look softer.",
+      "Why should I care?",
+      "If you shop at Reliance Smart, JioMart, or buy Campa and Independence packs, expect continued promotions as the group scales brands while absorbing digital costs. Kirana suppliers and rival cola or snack makers should watch wholesale terms and shelf space fights into Diwali. Investors must separate FMCG momentum from retail-level profitability and debt-funded expansion. Watch the next quarterly update for quick-commerce unit economics, gross margin commentary on owned brands, and whether profit rebounds once capex on new plants normalises.",
+    ],
+  },
+  {
+    slug: "tata-starbucks-local-menu-expansion-october-2026",
+    title:
+      "Tata Starbucks will open more stores after adding cheaper local menu items",
+    summary:
+      "Tata Starbucks leaders said on 30 October 2026 that the joint venture between Tata Consumer Products and Starbucks Corp. is ready to accelerate Indian store openings after recalibrating menus with localised food, entry-price beverages and formats that improved unit economics, with CEOs Sushant Dash and Sunil D'Souza citing a partnership agreement to expand again once those changes took hold.",
+    category: "industry",
+    companyOrSector: "Food service / coffee",
+    publishedAt: "2026-10-30T23:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-starbucks-local-menu-expansion-october-2026"),
+    keyTakeaways: [
+      "Tata Starbucks Pvt. Ltd., the 50:50 venture between Tata Consumer Products and Starbucks Corp., plans faster store roll-outs after menu and format recalibration, executives told reporters on 30 October 2026.",
+      "Management highlighted localised food, entry-price drinks and operational tweaks that improved store-level performance before committing to expansion.",
+      "CEO Sushant Dash and Tata Consumer CEO Sunil D'Souza said both partners agreed the chain is now in a position to grow again in India.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 30 October 2026, Tata Starbucks executives said the coffee chain is set to pick up the pace of store openings in India after a recalibration phase that added more local food, lower entry-price beverages, and format changes meant to improve unit economics. Sushant Dash, who leads the joint venture, and Tata Consumer Products CEO Sunil D'Souza told Mumbai reporters that Tata and Starbucks aligned on expanding again once those adjustments showed results. Tata Starbucks operates as a 50:50 venture between Tata Consumer and Starbucks Corp., competing with third-wave cafés, mall food courts, and delivery apps for urban discretionary spend. The comments land in a week when several consumer names reported mixed profit lines but still described resilient demand for affordable treats and out-of-home beverages.",
+      "What does this mean?",
+      "International café brands in India usually win by blending global recipes with chai-time snacks, smaller cup sizes, and price ladders that catch office workers who will not pay airport rates every day. A pause to fix menus before adding stores suggests same-store sales and costs mattered more than headline store count. Faster roll-outs could mean more mall and high-street rentals, barista hiring, and local bakery partnerships, which spreads fixed marketing costs but raises execution risk if new cities lack the density to support premium coffee. Rivals may respond with loyalty discounts or faster delivery tie-ups during the festive quarter.",
+      "Why should I care?",
+      "If you buy coffee out, watch for new smaller-price drinks and Indian snack plates as the chain scales; promotions often arrive when expansion resumes. Landlords and franchise partners in tier-one cities may see more Tata Starbucks lease talks. Job seekers in retail hospitality could see hiring batches. Competitors such as third-wave roasters and quick-service cafés should expect sharper price competition at the entry tier, not only at premium single-origin cups. Track store opening announcements city by city and whether delivery apps list new promotional combos this winter.",
+    ],
+  },
+  {
+    slug: "jio-platforms-q2-first-results-post-ipo-october-2026",
+    title:
+      "Jio Platforms posted its first quarterly results since listing last week",
+    summary:
+      "Jio Platforms Ltd reported on 30 October 2026 consolidated net profit attributable to owners of about ₹8,389 crore in Q2 FY27, up roughly 13.7% year on year, with revenue from operations near ₹40,475 crore, EBITDA up about 17%, 542.4 million subscribers and monthly ARPU of ₹218.8, in its first earnings release since the 28 October 2026 stock market debut.",
+    category: "industry",
+    companyOrSector: "Telecom / digital",
+    publishedAt: "2026-10-30T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jio-platforms-q2-first-results-post-ipo-october-2026"),
+    keyTakeaways: [
+      "Jio Platforms reported Q2 FY27 consolidated net profit attributable to owners of about ₹8,389 crore, up roughly 13.7% from ₹7,379 crore a year earlier, in results announced on 30 October 2026.",
+      "Revenue from operations was about ₹40,475 crore, up 11.4% year on year, with EBITDA growth near 17% in the same release.",
+      "The company ended September with about 542.4 million subscribers, adding 9.1 million net users in the quarter, and monthly ARPU of ₹218.8 per user.",
+    ],
+    body: [
+      "What's going on here?",
+      "Jio Platforms Ltd, Reliance Industries’ telecom and digital arm, published September-quarter results on 30 October 2026, its first set of numbers since shares listed on 28 October 2026. Consolidated net profit attributable to owners was about ₹8,389 crore, up roughly 13.7% from ₹7,379 crore in the year-ago quarter and higher than the roughly ₹7,764 crore reported in Q1 FY27. Revenue from operations climbed to about ₹40,475 crore, an 11.4% year-on-year increase, with EBITDA up about 17% in company statements cited on the wire. Subscriber count reached about 542.4 million at September end after 9.1 million net additions, and monthly average revenue per user stood at ₹218.8. Finance costs rose after 5G assets capitalised earlier in 2026, partly offsetting operating gains.",
+      "What does this mean?",
+      "For most Indian households, Jio is a monthly mobile or fibre bill, not a stock ticker. Rising ARPU alongside still-strong net additions suggests many users are paying slightly more per month for data or home broadband bundles rather than the base shrinking. That is how telecom operators fund network upgrades and fibre roll-outs without relying only on new SIM cards. The listing changed who owns the float, but the business model remains subscriptions plus digital services layered on connectivity. Higher finance charges remind investors that building 5G and fibre shows up in interest lines before it fully shows up in free cash flow.",
+      "Why should I care?",
+      "If you recharge prepaid or pay a postpaid Jio bill, compare your plan against new fibre or family bundles; ARPU moves often precede tariff tweaks. Home broadband shoppers should watch whether installation offers stay aggressive as subscriber growth moderates. Investors who bought into the IPO should read these figures as operating performance, separate from first-week listing premiums. Watch Bharti Airtel and Vodafone Idea pricing, Trai consultation papers, and whether Jio raises fibre pass-through in your city this winter.",
+    ],
+  },
+  {
+    slug: "sun-pharma-assam-eye-drops-plant-halt-october-2026",
+    title:
+      "Regulators ordered Sun Pharma to stop eye-drug output at an Assam plant",
+    summary:
+      "Reuters reported on 30 October 2026 that India’s drug regulators ordered Sun Pharmaceutical Industries to halt manufacturing, sale and distribution of ophthalmic products from its Assam facility after joint federal and state inspections found quality-system failures, following the company’s July 2026 voluntary recall of about 11 eye-care brands.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / regulation",
+    publishedAt: "2026-10-30T23:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sun-pharma-assam-eye-drops-plant-halt-october-2026"),
+    keyTakeaways: [
+      "The Central Drugs Standard Control Organisation and Assam drugs controller ordered Sun Pharma to stop ophthalmic production at its Assam site after inspections found quality-management lapses, documents reviewed by Reuters showed.",
+      "The shutdown order dated 20 August 2026 followed a joint federal-state inspection after Sun Pharma voluntarily recalled about 11 eye-care brands in July 2026.",
+      "On 30 October 2026 management told analysts remedial work was under way; the company is also integrating its large Organon acquisition on a separate timeline.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 30 October 2026 said Indian regulators ordered Sun Pharmaceutical Industries to stop making, selling and distributing ophthalmic medicines produced at its Assam plant after inspections found failures in the quality management system. Documents reviewed by Reuters pointed to orders from the Central Drugs Standard Control Organisation and the Assam drugs controller dated 20 August 2026, following a joint inspection. The action came after Sun Pharma voluntarily pulled about 11 eye-care brands from the market in July 2026. At a post-earnings analyst call the same day, managing director Kirti Ganorkar said the company is taking remedial steps and responding to media questions about the plant halt while discussing broader September-quarter performance and progress on the Organon acquisition.",
+      "What does this mean?",
+      "Eye drops are sterile products; regulators treat documentation, testing, and batch traceability as safety-critical, not paperwork. A plant-level stop goes beyond a single SKU recall because it blocks fresh supply until fixes are verified. For patients, short-term risk is using recalled bottles still at home; pharmacists must source alternates from other approved sites. For Sun Pharma, domestic ophthalmic sales are a slice of a global portfolio, but repeated quality headlines can invite tighter export scrutiny when regulators abroad read Indian inspection news. Remediation timelines often run quarters, not weeks.",
+      "Why should I care?",
+      "If you use prescription or over-the-counter eye drops, check lot numbers against the July recall notice and ask your chemist for substitutes if your brand is affected. Hospitals scheduling cataract or glaucoma therapies should confirm supply with distributors. Investors should track FDA and CDSCO follow-up inspections separately from headline profit figures boosted by other business lines. Watch whether Sun Pharma publishes a formal plant reopening date, supply updates for Assam-made SKUs, and any parallel US inspection outcomes on other sites.",
+    ],
+  },
+  {
     slug: "india-credit-card-spending-september-decline-october-2026",
     title:
       "Credit card spending fell year on year in September for the first time since 2021",
@@ -7695,6 +7820,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-banking-reforms-committee-october-2026": "policy",
+  "reliance-retail-fmcg-profit-mismatch-october-2026": "markets",
+  "tata-starbucks-local-menu-expansion-october-2026": "markets",
+  "jio-platforms-q2-first-results-post-ipo-october-2026": "markets",
+  "sun-pharma-assam-eye-drops-plant-halt-october-2026": "policy",
   "india-credit-card-spending-september-decline-october-2026": "markets",
   "india-fiscal-deficit-april-september-october-2026": "policy",
   "ioc-q2-lpg-compensation-profit-october-2026": "policy",

@@ -507,6 +507,52 @@ def au_sfb_data_leak(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([980, 420, 1060, 500], outline=RED, width=6)
 
 
+def banking_reforms_committee(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 160, 500, 580], fill=BLUE)
+    for i, h in enumerate([80, 140, 200, 280]):
+        d.rectangle([140 + i * 70, 580 - h, 200 + i * 70, 580], fill=[RED, YELLOW, RED, GOLD][i])
+    d.polygon([(700, 200), (780, 240), (700, 280), (620, 240)], fill=GOLD)
+    d.ellipse([900, 220, 1100, 420], outline=RED, width=8)
+    d.line([(950, 320), (1050, 320)], fill=INK, width=4)
+
+
+def reliance_retail_fmcg(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([100, 220, 420, 560], radius=24, fill=RED)
+    d.rectangle([460, 380, 540, 560], fill=BLUE)
+    for i, h in enumerate([200, 320, 420]):
+        x = 620 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[YELLOW, RED, BLUE][i])
+    d.ellipse([980, 260, 1140, 420], fill=GOLD)
+    d.line([(680, 560), (1180, 560)], fill=INK, width=2)
+
+
+def tata_starbucks_local(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 180, 480, 560], radius=32, fill=BLUE)
+    d.ellipse([220, 280, 380, 440], fill=CREAM)
+    d.rectangle([640, 240, 720, 320], fill=RED)
+    d.rectangle([760, 280, 840, 360], fill=YELLOW)
+    d.rectangle([880, 320, 960, 400], fill=RED)
+    d.polygon([(1050, 480), (1120, 420), (1180, 480)], fill=GOLD)
+
+
+def jio_q2_post_ipo(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(140, 520), (260, 200), (380, 520)], fill=BLUE)
+    d.rectangle([640, 300, 720, 560], fill=RED)
+    d.rectangle([760, 240, 840, 560], fill=YELLOW)
+    d.rectangle([880, 180, 960, 560], fill=BLUE)
+    d.ellipse([1020, 360, 1140, 480], fill=GOLD)
+    d.line([(640, 560), (1180, 560)], fill=INK, width=2)
+
+
+def sun_pharma_assam_eye(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([160, 260, 400, 420], outline=BLUE, width=10)
+    d.ellipse([220, 300, 340, 380], fill=RED)
+    d.rectangle([640, 200, 720, 520], fill=YELLOW)
+    d.polygon([(800, 260), (880, 300), (800, 340)], fill=RED)
+    d.line([(700, 400), (1120, 400)], fill=GOLD, width=4)
+    d.rectangle([980, 440, 1100, 520], fill=BLUE)
+
+
 def main() -> None:
     save("blue-star-ac-demand-october-2026", blue_star_ac)
     save("symphony-overseas-cooling-expansion-october-2026", symphony_overseas)
@@ -561,6 +607,11 @@ def main() -> None:
     save("ioc-q2-lpg-compensation-profit-october-2026", ioc_lpg_compensation)
     save("india-ppp-investor-apathy-october-2026", ppp_investor_apathy)
     save("au-sfb-customer-data-leak-probe-october-2026", au_sfb_data_leak)
+    save("india-banking-reforms-committee-october-2026", banking_reforms_committee)
+    save("reliance-retail-fmcg-profit-mismatch-october-2026", reliance_retail_fmcg)
+    save("tata-starbucks-local-menu-expansion-october-2026", tata_starbucks_local)
+    save("jio-platforms-q2-first-results-post-ipo-october-2026", jio_q2_post_ipo)
+    save("sun-pharma-assam-eye-drops-plant-halt-october-2026", sun_pharma_assam_eye)
 
 
 if __name__ == "__main__":
