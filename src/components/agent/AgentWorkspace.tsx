@@ -312,6 +312,13 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     };
   }, [signedIn, loadThreads]);
 
+  const startNewChat = useCallback(() => {
+    // Draft only — no sidebar row and no server thread until the first message.
+    setDraftNonce((n) => n + 1);
+    router.push("/ai");
+    setSidebarOpen(false);
+  }, [router]);
+
   const shellValue = useMemo(
     () => ({
       threads,
@@ -323,16 +330,10 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       setFilesOpen,
       sidebarOpen,
       setSidebarOpen,
+      startNewChat,
     }),
-    [threads, threadsReady, loadThreads, upsertThread, draftNonce, filesOpen, sidebarOpen],
+    [threads, threadsReady, loadThreads, upsertThread, draftNonce, filesOpen, sidebarOpen, startNewChat],
   );
-
-  function startNewChat() {
-    // Draft only — no sidebar row and no server thread until the first message.
-    setDraftNonce((n) => n + 1);
-    router.push("/ai");
-    setSidebarOpen(false);
-  }
 
   if (!ready) {
     return (
@@ -397,12 +398,35 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
               aria-label="Close menu"
               onClick={() => setSidebarOpen(false)}
             />
-            <div className="fixed bottom-0 left-0 top-14 z-50 w-[min(88vw,17rem)] border-r border-line bg-paper-2 shadow-2xl sm:top-16 lg:hidden">
+            <div className="fixed inset-y-0 left-0 z-50 w-[min(88vw,17rem)] border-r border-line bg-paper-2 shadow-2xl lg:hidden">
               <AgentSidebar {...sidebarProps} onCloseMobile={() => setSidebarOpen(false)} />
             </div>
           </>
         )}
-        <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">{children}</div>
+        <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">
+          {/* Mobile chat chrome lives in the chat screen — not the site header */}
+          <div className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-white px-3 lg:hidden">
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink"
+              aria-label="Open chats"
+              onClick={() => setSidebarOpen(true)}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="4" width="7" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+                <rect x="14" y="4" width="7" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="inline-flex h-9 items-center gap-1 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
+              onClick={startNewChat}
+            >
+              New Chat <span aria-hidden>+</span>
+            </button>
+          </div>
+          {children}
+        </div>
       </div>
     </AgentShellContext.Provider>
   );

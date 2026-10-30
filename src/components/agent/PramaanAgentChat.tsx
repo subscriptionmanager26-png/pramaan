@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
+import { useAgentUi } from "@/components/agent/agent-ui-context";
 import { AgentComposer } from "@/components/agent/chat/AgentComposer";
 import { ChatTurn } from "@/components/agent/chat/AgentChatMessages";
 import { AgentFilesPanel } from "@/components/agent/chat/AgentFilesPanel";
@@ -16,6 +17,7 @@ import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
+import { usePocketedgeAuth } from "@/lib/pocketedge/use-pocketedge-auth";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
 
 const SUGGESTIONS = [
@@ -29,6 +31,8 @@ export function PramaanAgentChat() {
   const searchParams = useSearchParams();
   const { threads, threadsReady, filesOpen, setFilesOpen, refreshThreads, upsertThread, draftNonce } =
     useAgentShell();
+  const { setConversationLive } = useAgentUi();
+  const auth = usePocketedgeAuth();
   const threadParam = searchParams.get("t");
   const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "";
   /** Composer-ready draft: no ?t= yet — thread id is minted only on first send. */
@@ -436,6 +440,14 @@ export function PramaanAgentChat() {
     [thread],
   );
 
+  const hasConversation = thread.length > 0;
+  const greetName = auth.displayName?.split(/\s+/)[0] || "there";
+
+  useEffect(() => {
+    setConversationLive(hasConversation);
+    return () => setConversationLive(false);
+  }, [hasConversation, setConversationLive]);
+
   if (!ready) {
     return (
       <div className="flex flex-1 items-center justify-center p-8">
@@ -462,56 +474,85 @@ export function PramaanAgentChat() {
 
   const chatActive = agentState === "active";
 
+  const composer = (
+    <AgentComposer
+      disabled={!chatActive || busy}
+      getAuthHeaders={authHeaders}
+      onSend={onSend}
+      suggestions={hasConversation ? undefined : SUGGESTIONS}
+      hint={
+        hasConversation
+          ? `PDF, CSV and Excel up to ${formatBytes(MAX_FILE_BYTES)}. Shift+Enter for a new line.`
+          : undefined
+      }
+    />
+  );
+
   return (
     <div className="flex min-h-0 flex-1 overflow-hidden">
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex items-center justify-end gap-2 px-3 py-2 sm:px-5">
-          <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
-            Files
-          </button>
-        </div>
-
-        <div className="flex-1 overflow-y-auto px-4 pb-4 sm:px-6">
-          {!thread.length ? (
-            <div className="flex min-h-[min(52vh,28rem)] flex-col items-center justify-center px-4 text-center">
-              <p className="text-display text-[clamp(1.75rem,4vw,2.5rem)]">
-                Ask about <span className="mark">markets</span>
-              </p>
-              <p className="mt-4 max-w-md text-body">
-                Portfolio context, research, uploads, and trade ideas — always with your confirmation before orders.
-              </p>
+        {!hasConversation ? (
+          /* New chat: greeting + composer live in the screen body (not the site nav). */
+          <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6">
+            <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-8 pb-8">
+              <div className="text-center">
+                <p className="text-[clamp(1.5rem,5vw,2rem)] font-semibold tracking-tight text-ink">
+                  Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"},{" "}
+                  {greetName}.
+                </p>
+                <p className="mt-2 text-[14px] text-ink-2">
+                  Ask about markets, your portfolio, or research.
+                </p>
+              </div>
+              <div className="w-full">
+                {error ? (
+                  <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                    {error}
+                  </p>
+                ) : null}
+                {composer}
+              </div>
+              <button
+                type="button"
+                className="text-[12px] font-medium text-ink-3 hover:text-ink"
+                onClick={() => setFilesOpen(!filesOpen)}
+              >
+                Files
+              </button>
             </div>
-          ) : (
-            <div className="mx-auto max-w-3xl space-y-12 py-2">
-              {thread.map((message) => (
-                <ChatTurn
-                  key={message.id}
-                  message={message}
-                  orders={orders}
-                  onDecide={onDecide}
-                  artifacts={artifactsByMessage[message.id]}
-                  getAuthHeaders={authHeaders}
-                />
-              ))}
-              <ScrollAnchor version={scrollKey} />
-            </div>
-          )}
-        </div>
-
-        <div className="border-t border-line/70 bg-white/90 px-4 py-4 backdrop-blur-sm sm:px-6">
-          {error && (
-            <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</p>
-          )}
-          <div className="mx-auto max-w-3xl">
-            <AgentComposer
-              disabled={!chatActive || busy}
-              getAuthHeaders={authHeaders}
-              onSend={onSend}
-              suggestions={thread.length ? undefined : SUGGESTIONS}
-              hint={`PDF, CSV and Excel up to ${formatBytes(MAX_FILE_BYTES)}. Shift+Enter for a new line.`}
-            />
           </div>
-        </div>
+        ) : (
+          <>
+            <div className="flex items-center justify-end gap-2 px-3 py-1.5 sm:px-5">
+              <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
+                Files
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto px-4 pb-4 sm:px-6">
+              <div className="mx-auto max-w-3xl space-y-12 py-2">
+                {thread.map((message) => (
+                  <ChatTurn
+                    key={message.id}
+                    message={message}
+                    orders={orders}
+                    onDecide={onDecide}
+                    artifacts={artifactsByMessage[message.id]}
+                    getAuthHeaders={authHeaders}
+                  />
+                ))}
+                <ScrollAnchor version={scrollKey} />
+              </div>
+            </div>
+            <div className="border-t border-line/70 bg-white/90 px-4 py-3 backdrop-blur-sm sm:px-6 sm:py-4">
+              {error ? (
+                <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                  {error}
+                </p>
+              ) : null}
+              <div className="mx-auto max-w-3xl">{composer}</div>
+            </div>
+          </>
+        )}
       </div>
 
       <AgentFilesPanel

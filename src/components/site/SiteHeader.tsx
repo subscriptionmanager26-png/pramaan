@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Logo } from "@/components/Logo";
 import { SiteAccountMenu } from "@/components/site/SiteAccountMenu";
-import { openAgentSidebar } from "@/lib/agent/open-sidebar";
 
 const nav = [
   { href: "/news", label: "News" },
@@ -92,15 +91,6 @@ export function SiteHeader() {
         className="mx-auto grid h-14 w-full max-w-6xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-4 sm:h-16 sm:px-6 lg:gap-6"
       >
         <div className="flex min-w-0 items-center gap-1 justify-self-start">
-          {onAi ? (
-            <button
-              type="button"
-              className="inline-flex h-10 items-center justify-center rounded-lg px-2 text-[13px] font-semibold text-ink lg:hidden"
-              onClick={() => openAgentSidebar()}
-            >
-              Chats
-            </button>
-          ) : null}
           <button
             type="button"
             className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-ink lg:hidden"

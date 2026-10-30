@@ -21,6 +21,7 @@ type AgentShellContextValue = {
   setFilesOpen: (open: boolean) => void;
   sidebarOpen: boolean;
   setSidebarOpen: (open: boolean) => void;
+  startNewChat: () => void;
 };
 
 export const AgentShellContext = createContext<AgentShellContextValue | null>(null);
@@ -29,4 +30,8 @@ export function useAgentShell() {
   const ctx = useContext(AgentShellContext);
   if (!ctx) throw new Error("useAgentShell must be used within AgentWorkspace");
   return ctx;
+}
+
+export function useOptionalAgentShell() {
+  return useContext(AgentShellContext);
 }
