@@ -15,11 +15,7 @@ const nav = [
   { href: "/advisors", label: "Advisors" },
   { href: "/guides", label: "Guides" },
   { href: "/tools", label: "Tools" },
-  { href: "/ai", label: "AI" },
 ] as const;
-
-const askAiClass =
-  "btn-ghost hidden min-w-[6.75rem] shrink-0 sm:inline-flex";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -52,8 +48,7 @@ export function SiteHeader() {
               className="absolute inset-y-0 left-0 flex w-[min(86vw,20rem)] flex-col bg-white shadow-2xl"
               style={{ isolation: "isolate" }}
             >
-              <div className="flex items-center justify-between border-b border-line bg-white px-4 py-4">
-                <Logo />
+              <div className="flex items-center justify-end border-b border-line bg-white px-4 py-4">
                 <button
                   type="button"
                   className="text-[13px] font-medium text-ink-3"
@@ -81,17 +76,6 @@ export function SiteHeader() {
                   );
                 })}
               </nav>
-              <div className="mt-auto space-y-3 border-t border-line bg-white p-4">
-                <div className="flex justify-center">
-                  <SiteAccountMenu onNavigate={() => setOpen(false)} />
-                </div>
-                <Link href="/account" className="btn-secondary block w-full text-center" onClick={() => setOpen(false)}>
-                  Account
-                </Link>
-                <Link href="/ai" className="btn-primary block w-full text-center" onClick={() => setOpen(false)}>
-                  Ask Pramaan AI
-                </Link>
-              </div>
             </div>
           </div>,
           document.body,
@@ -131,7 +115,8 @@ export function SiteHeader() {
         </div>
 
         <div className="flex justify-center justify-self-center lg:justify-self-stretch">
-          <Logo className="lg:hidden" />
+          {/* Hide center logo while the drawer is open so it doesn’t sit behind a second logo */}
+          <Logo className={open ? "hidden" : "lg:hidden"} />
           <nav className="hidden w-full items-center justify-center gap-1 lg:flex" aria-label="Main">
             {nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -150,15 +135,17 @@ export function SiteHeader() {
           </nav>
         </div>
 
-        <div className="flex items-center justify-end gap-2 justify-self-end lg:min-w-[10.5rem]">
+        <div className="flex items-center justify-end gap-1.5 justify-self-end sm:gap-2 lg:min-w-[10.5rem]">
           <SiteAccountMenu />
           <Link
             href="/ai"
-            className={`${askAiClass} ${onAi ? "pointer-events-none invisible" : ""}`}
+            className={`btn-ghost inline-flex shrink-0 px-2.5 text-[13px] sm:min-w-[6.75rem] sm:px-3 sm:text-[14px] ${
+              onAi ? "pointer-events-none invisible" : ""
+            }`}
             aria-hidden={onAi}
             tabIndex={onAi ? -1 : undefined}
           >
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden className="hidden sm:block">
               <path
                 d="M8 2.5v2M8 11.5v2M2.5 8h2M11.5 8h2M4.2 4.2l1.4 1.4M10.4 10.4l1.4 1.4M4.2 11.8l1.4-1.4M10.4 5.6l1.4-1.4"
                 stroke="currentColor"

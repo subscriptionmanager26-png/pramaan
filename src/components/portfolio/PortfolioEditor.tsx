@@ -14,7 +14,7 @@ import {
 } from "@/lib/portfolio/holdings";
 import { runPortfolioImport } from "@/lib/portfolio/import-via-agent";
 import { FILE_PARSE_PROMPT, ZERODHA_IMPORT_PROMPT } from "@/lib/portfolio/setup-prompts";
-import { submitZerodhaKiteForm } from "@/lib/portfolio/zerodha-start";
+import { requestZerodhaLogin } from "@/lib/portfolio/zerodha-start";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 type DraftRow = {
@@ -172,6 +172,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
   const [parseStatus, setParseStatus] = useState<string | null>(null);
   const [zerodhaGate, setZerodhaGate] = useState<ZerodhaGate>("checking");
   const [zerodhaBusy, setZerodhaBusy] = useState(false);
+  const [loginUrl, setLoginUrl] = useState<string | null>(null);
   const firstTickerRef = useRef<HTMLInputElement>(null);
 
   const parsed = useMemo(() => parseDraft(rows), [rows]);
@@ -187,6 +188,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     setSetupPath(null);
     setError(null);
     setParseStatus(null);
+    setLoginUrl(null);
     setBusy(false);
   };
 
@@ -270,14 +272,28 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     }
   }, [preview]);
 
-  const startZerodhaLogin = useCallback((action: "connect" | "login") => {
+  const startZerodhaLogin = useCallback(async (action: "connect" | "login") => {
     setZerodhaBusy(true);
     setError(null);
-    setZerodhaGate("need_login");
-    // Same-origin form → server 303 to Kite (studio pattern). Must stay sync with the click.
-    submitZerodhaKiteForm(action, typeof window !== "undefined" ? window.location.pathname : "/ai");
-    window.setTimeout(() => setZerodhaBusy(false), 800);
-  }, []);
+    setLoginUrl(null);
+    try {
+      const result = await requestZerodhaLogin(action);
+      if (!result.ok) {
+        setError(result.error);
+        setZerodhaGate(action === "connect" ? "need_connect" : "need_login");
+        return;
+      }
+      if ("url" in result) {
+        setLoginUrl(result.url);
+        setZerodhaGate("need_login");
+        return;
+      }
+      setZerodhaGate("ready");
+      await importZerodha();
+    } finally {
+      setZerodhaBusy(false);
+    }
+  }, [importZerodha]);
 
   const refreshZerodhaGate = useCallback(
     async (opts?: { autoImport?: boolean }) => {
@@ -474,33 +490,51 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         {zerodhaGate === "need_connect" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
             <p className="text-[14px] text-ink-2">
-              Link Zerodha — we’ll open Kite login so you can authorize read access.
+              Link Zerodha once under Connections (profile menu), or start Kite login here.
             </p>
             <div className="flex flex-wrap gap-2">
+              <Link href="/ai/connections" className="btn-primary text-[13px]">
+                Open Connections
+              </Link>
               <button
                 type="button"
-                className="btn-primary text-[13px] disabled:opacity-50"
+                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"
                 disabled={zerodhaBusy}
-                onClick={() => startZerodhaLogin("connect")}
+                onClick={() => void startZerodhaLogin("connect")}
               >
-                {zerodhaBusy ? "Opening Zerodha…" : "Connect Zerodha"}
+                {zerodhaBusy ? "Getting login link…" : "Get Kite login link"}
               </button>
-              <Link
-                href="/ai/connections"
-                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30"
-              >
-                Connections
-              </Link>
             </div>
+            {loginUrl ? (
+              <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary inline-flex text-[13px]">
+                Continue to Zerodha →
+              </a>
+            ) : null}
           </div>
         ) : null}
 
         {zerodhaGate === "need_login" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
             <p className="text-[14px] text-ink-2">
-              If Kite is already connected under AI → Connections, import directly. Otherwise open login first.
+              {loginUrl
+                ? "Open the Kite login link, finish auth, then import holdings."
+                : "If Kite is already linked under Connections, import directly. Otherwise get a login link."}
             </p>
             <div className="flex flex-wrap gap-2">
+              {loginUrl ? (
+                <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary text-[13px]">
+                  Continue to Zerodha →
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"
+                  disabled={zerodhaBusy}
+                  onClick={() => void startZerodhaLogin("login")}
+                >
+                  {zerodhaBusy ? "Getting login link…" : "Get Kite login link"}
+                </button>
+              )}
               <button
                 type="button"
                 className="btn-primary text-[13px] disabled:opacity-50"
@@ -509,14 +543,12 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
               >
                 {busy ? "Importing…" : "Import holdings"}
               </button>
-              <button
-                type="button"
-                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"
-                disabled={zerodhaBusy}
-                onClick={() => startZerodhaLogin("login")}
+              <Link
+                href="/ai/connections"
+                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30"
               >
-                {zerodhaBusy ? "Opening Zerodha…" : "Open Zerodha login"}
-              </button>
+                Connections
+              </Link>
             </div>
           </div>
         ) : null}

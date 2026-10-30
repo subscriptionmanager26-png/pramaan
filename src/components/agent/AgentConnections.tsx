@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
-import { submitZerodhaKiteForm } from "@/lib/portfolio/zerodha-start";
+import { requestZerodhaLogin } from "@/lib/portfolio/zerodha-start";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
 
 type McpRow = {
@@ -36,6 +36,7 @@ export function AgentConnections() {
   const [view, setView] = useState<ConnectionsView | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [loginUrl, setLoginUrl] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setError(null);
@@ -76,17 +77,24 @@ export function AgentConnections() {
   async function zerodhaAction(action: "connect" | "disconnect" | "login") {
     setBusy(true);
     setError(null);
-    if (action === "connect" || action === "login") {
-      // Form POST → server 303 to Kite (avoids about:blank stuck tabs).
-      submitZerodhaKiteForm(action, "/ai/connections");
-      window.setTimeout(() => {
-        void load();
-        refreshThreads();
-        setBusy(false);
-      }, 1200);
-      return;
-    }
+    setLoginUrl(null);
     try {
+      if (action === "connect" || action === "login") {
+        const result = await requestZerodhaLogin(action);
+        if (!result.ok) {
+          setError(result.error);
+          return;
+        }
+        if ("url" in result) {
+          setLoginUrl(result.url);
+          await load();
+          refreshThreads();
+          return;
+        }
+        await load();
+        refreshThreads();
+        return;
+      }
       const headers = await authHeaders();
       const res = await fetch("/api/agent/zerodha", {
         method: "POST",
@@ -146,25 +154,32 @@ export function AgentConnections() {
           )}
           <div className="mt-4 flex flex-wrap gap-2">
             {!z?.connected ? (
-              <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => zerodhaAction("connect")}>
-                Connect Zerodha
+              <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => void zerodhaAction("connect")}>
+                {busy ? "Connecting…" : "Connect Zerodha"}
               </button>
             ) : (
               <>
-                <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => zerodhaAction("login")}>
-                  {z.sessionActive ? "Refresh login" : "Log in on Zerodha"}
+                <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => void zerodhaAction("login")}>
+                  {busy ? "Getting link…" : z.sessionActive ? "Refresh login" : "Log in on Zerodha"}
                 </button>
                 <button
                   type="button"
                   className="btn-secondary text-sm"
                   disabled={busy}
-                  onClick={() => zerodhaAction("disconnect")}
+                  onClick={() => void zerodhaAction("disconnect")}
                 >
                   Disconnect
                 </button>
               </>
             )}
           </div>
+          {loginUrl ? (
+            <p className="mt-4">
+              <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary inline-flex text-sm">
+                Continue to Zerodha login →
+              </a>
+            </p>
+          ) : null}
         </section>
 
         <section className="rounded-2xl border border-line bg-white p-5 shadow-sm">
@@ -179,29 +194,18 @@ export function AgentConnections() {
           ) : (
             <ul className="mt-4 space-y-2">
               {view.mcp.map((c) => (
-                <li key={c.id} className="rounded-xl border border-line px-4 py-3 text-sm">
+                <li key={c.id} className="rounded-xl border border-line px-3 py-2 text-sm">
                   <p className="font-medium text-ink">{c.name}</p>
-                  <p className="truncate text-xs text-ink-3">{c.url}</p>
-                  {c.hasSecret && <p className="mt-1 text-meta">Auth configured</p>}
+                  <p className="truncate text-ink-3">{c.url}</p>
                 </li>
               ))}
             </ul>
           )}
         </section>
 
-        <section className="rounded-2xl border border-line bg-paper-2 p-5">
-          <h2 className="text-headline text-base">Vault</h2>
-          <p className="mt-1 text-sm text-ink-2">
-            {view ? (
-              <>
-                <span className="font-semibold text-ink">{view.vaultCount}</span> saved login
-                {view.vaultCount === 1 ? "" : "s"} for sites your agent can use.
-              </>
-            ) : (
-              "Saved logins your agent can use without seeing the password."
-            )}
-          </p>
-        </section>
+        {view ? (
+          <p className="text-sm text-ink-3">{view.vaultCount} vault item{view.vaultCount === 1 ? "" : "s"} stored.</p>
+        ) : null}
       </div>
     </div>
   );

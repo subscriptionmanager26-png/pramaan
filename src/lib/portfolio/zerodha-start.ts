@@ -1,48 +1,52 @@
-import { cachedPocketedgeAccessToken } from "@/lib/pocketedge/auth-headers";
-import { pocketedgeAuthStorageKey } from "@/lib/pocketedge/auth-storage";
+import { cachedPocketedgeAccessToken, pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
-function syncAccessToken(): string | null {
-  const cached = cachedPocketedgeAccessToken();
-  if (cached) return cached;
+export type ZerodhaLoginResult =
+  | { ok: true; url: string }
+  | { ok: true; loggedInAs: string }
+  | { ok: false; error: string };
+
+/** Ask personal-agents for a Kite login URL (Bearer JSON — same path Connections uses). */
+export async function requestZerodhaLogin(action: "connect" | "login"): Promise<ZerodhaLoginResult> {
+  // Warm cache for any follow-up calls; ignore failures here.
+  void cachedPocketedgeAccessToken();
   try {
-    const key = pocketedgeAuthStorageKey();
-    if (!key) return null;
-    const raw = window.localStorage.getItem(key);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as Record<string, unknown>;
-    const nested = parsed.currentSession as Record<string, unknown> | undefined;
-    const token =
-      (typeof parsed.access_token === "string" && parsed.access_token) ||
-      (typeof nested?.access_token === "string" && nested.access_token) ||
-      null;
-    return token;
-  } catch {
-    return null;
+    const headers = await pocketedgeAuthHeaders();
+    const res = await fetch("/api/agent/zerodha", {
+      method: "POST",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({ action }),
+      signal: AbortSignal.timeout(45_000),
+    });
+    const json = (await res.json().catch(() => ({}))) as {
+      url?: string;
+      loggedInAs?: string;
+      error?: { message?: string } | string;
+    };
+    if (!res.ok) {
+      const err = json.error;
+      return {
+        ok: false,
+        error:
+          (typeof err === "object" && err?.message) ||
+          (typeof err === "string" ? err : null) ||
+          "Zerodha action failed.",
+      };
+    }
+    if (typeof json.url === "string" && /^https:\/\//i.test(json.url)) {
+      return { ok: true, url: json.url };
+    }
+    if (typeof json.loggedInAs === "string" && json.loggedInAs) {
+      return { ok: true, loggedInAs: json.loggedInAs };
+    }
+    return { ok: false, error: "Zerodha did not return a login link. Try Connections, or retry in a minute." };
+  } catch (err) {
+    const timedOut =
+      err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message));
+    return {
+      ok: false,
+      error: timedOut
+        ? "Zerodha timed out. Open Connections to link Kite, then import here."
+        : "Zerodha action failed.",
+    };
   }
-}
-
-/** Submit Connect/Login via same-origin form so the new tab hits our redirect → Kite (not about:blank). */
-export function submitZerodhaKiteForm(action: "connect" | "login", returnTo?: string) {
-  const form = document.createElement("form");
-  form.method = "POST";
-  form.action = "/api/agent/zerodha/start";
-  form.target = "_blank";
-  form.style.display = "none";
-
-  const add = (name: string, value: string) => {
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = name;
-    input.value = value;
-    form.appendChild(input);
-  };
-  add("action", action);
-  if (returnTo) add("returnTo", returnTo);
-  // Cookie may be missing when the session is large — pass Bearer via form as fallback.
-  const token = syncAccessToken();
-  if (token) add("access_token", token);
-
-  document.body.appendChild(form);
-  form.submit();
-  form.remove();
 }

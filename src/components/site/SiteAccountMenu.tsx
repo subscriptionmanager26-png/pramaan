@@ -132,6 +132,17 @@ export function SiteAccountMenu({ onNavigate }: { onNavigate?: () => void }) {
               Portfolio reviews
             </Link>
             <Link
+              href="/ai/connections"
+              role="menuitem"
+              className="block px-4 py-2.5 text-[14px] text-ink-2 hover:bg-highlight/60"
+              onClick={() => {
+                setOpen(false);
+                onNavigate?.();
+              }}
+            >
+              Connections
+            </Link>
+            <Link
               href="/ai"
               role="menuitem"
               className="block px-4 py-2.5 text-[14px] text-ink-2 hover:bg-highlight/60"
@@ -140,7 +151,7 @@ export function SiteAccountMenu({ onNavigate }: { onNavigate?: () => void }) {
                 onNavigate?.();
               }}
             >
-              AI assistant
+              Ask AI
             </Link>
             {socialProfileUrl ? (
               <a
