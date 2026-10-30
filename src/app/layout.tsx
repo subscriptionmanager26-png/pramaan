@@ -26,7 +26,7 @@ const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
-    default: "PocketEdge — Markets, research, and your AI assistant",
+    default: "Manage money like a pro",
     template: "%s · PocketEdge",
   },
   description:
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     siteName: "PocketEdge",
     locale: "en_IN",
     url: siteUrl(),
-    title: "PocketEdge — See what real investors own and say",
+    title: "Manage money like a pro",
     description:
       "Browse Indian stocks, mutual funds, and ETFs. Read research, track ideas, and chat with your AI assistant.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "PocketEdge" }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Manage money like a pro" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PocketEdge — See what real investors own and say",
+    title: "Manage money like a pro",
     description:
       "Browse Indian stocks, mutual funds, and ETFs. Read research and chat with your AI assistant.",
     images: ["/og-image.jpg"],
