@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AskAiIcon } from "@/components/icons/AskAiIcon";
 import { Logo } from "@/components/Logo";
 import { SiteAccountMenu } from "@/components/site/SiteAccountMenu";
 
@@ -51,24 +52,18 @@ export function SiteHeader() {
 
         <div className="ml-auto flex items-center justify-end gap-2 justify-self-end lg:ml-0 lg:min-w-[10.5rem]">
           <SiteAccountMenu />
-          <Link
-            href="/ai"
-            className={`btn-ghost hidden shrink-0 sm:min-w-[6.75rem] lg:inline-flex ${
-              onAi ? "pointer-events-none invisible" : ""
-            }`}
-            aria-hidden={onAi}
-            tabIndex={onAi ? -1 : undefined}
-          >
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
-              <path
-                d="M8 2.5v2M8 11.5v2M2.5 8h2M11.5 8h2M4.2 4.2l1.4 1.4M10.4 10.4l1.4 1.4M4.2 11.8l1.4-1.4M10.4 5.6l1.4-1.4"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-              />
-            </svg>
-            Ask AI
-          </Link>
+          {/* Desktop only — mobile uses centered Ask AI in BottomNav (btn-ghost would override `hidden`) */}
+          <div className="hidden lg:block">
+            <Link
+              href="/ai"
+              className={`btn-ghost shrink-0 ${onAi ? "pointer-events-none invisible" : ""}`}
+              aria-hidden={onAi}
+              tabIndex={onAi ? -1 : undefined}
+            >
+              <AskAiIcon className="h-3.5 w-3.5" />
+              Ask AI
+            </Link>
+          </div>
         </div>
       </div>
     </header>

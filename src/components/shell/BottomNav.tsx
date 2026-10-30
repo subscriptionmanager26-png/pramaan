@@ -2,21 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  BookOpen,
-  Briefcase,
-  Newspaper,
-  ScanSearch,
-  Sparkles,
-} from "lucide-react";
+import { BookOpen, Briefcase, Newspaper, ScanSearch } from "lucide-react";
 
-/** Primary mobile destinations — mirrors old Pocketedge Shell MOBILE_TABS sizing. */
+import { AskAiIcon } from "@/components/icons/AskAiIcon";
+
+/** Primary mobile destinations — Ask AI centered (old Pocketedge Shell sizing). */
 const tabs = [
-  { href: "/news", label: "News", Icon: Newspaper },
-  { href: "/research", label: "Research", Icon: ScanSearch },
-  { href: "/portfolio", label: "Portfolio", Icon: Briefcase },
-  { href: "/ai", label: "Ask AI", Icon: Sparkles },
-  { href: "/guides", label: "Guides", Icon: BookOpen },
+  { href: "/news", label: "News", kind: "lucide" as const, Icon: Newspaper },
+  { href: "/research", label: "Research", kind: "lucide" as const, Icon: ScanSearch },
+  { href: "/ai", label: "Ask AI", kind: "askAi" as const },
+  { href: "/portfolio", label: "Portfolio", kind: "lucide" as const, Icon: Briefcase },
+  { href: "/guides", label: "Guides", kind: "lucide" as const, Icon: BookOpen },
 ] as const;
 
 export function BottomNav() {
@@ -29,7 +25,8 @@ export function BottomNav() {
       aria-label="Primary"
     >
       <div className="mx-auto flex h-14 max-w-lg items-center justify-around px-1">
-        {tabs.map(({ href, label, Icon }) => {
+        {tabs.map((tab) => {
+          const { href, label } = tab;
           const active =
             href === "/ai"
               ? Boolean(pathname?.startsWith("/ai"))
@@ -42,7 +39,11 @@ export function BottomNav() {
                 active ? "text-accent" : "text-ink-3"
               }`}
             >
-              <Icon className="h-6 w-6" strokeWidth={active ? 2.25 : 2} aria-hidden />
+              {tab.kind === "askAi" ? (
+                <AskAiIcon className="h-6 w-6" />
+              ) : (
+                <tab.Icon className="h-6 w-6" strokeWidth={active ? 2.25 : 2} aria-hidden />
+              )}
               {label}
             </Link>
           );
