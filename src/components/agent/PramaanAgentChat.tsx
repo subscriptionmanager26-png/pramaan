@@ -16,6 +16,7 @@ import { isValidThreadId, newThreadId } from "@/lib/agent/thread-id";
 import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
+import { reportAgentClientEvent } from "@/lib/agent/client-telemetry";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 import { usePocketedgeAuth } from "@/lib/pocketedge/use-pocketedge-auth";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
@@ -58,6 +59,13 @@ export function PramaanAgentChat() {
   const loadedThreadRef = useRef<string | null>(null);
   /** Id chosen for the current draft send (before URL updates). */
   const draftSendIdRef = useRef<string | null>(null);
+  /** In-flight first send — used to detect silent wipe back to New chat. */
+  const pendingSendRef = useRef<{
+    optimisticId: string;
+    sendThreadId: string;
+    fromDraft: boolean;
+    startedAt: number;
+  } | null>(null);
   /** Bumps on each thread/draft switch so in-flight loads don't clobber newer ones. */
   const loadGenRef = useRef(0);
 
@@ -168,6 +176,17 @@ export function PramaanAgentChat() {
         setReady(true);
         setAgentState("active");
         return;
+      }
+      const pending = pendingSendRef.current;
+      if (pending?.fromDraft) {
+        reportAgentClientEvent("chat_send_ui_reset", {
+          reason: "draft_effect_cleared",
+          durationMs: Date.now() - pending.startedAt,
+          threadId: pending.sendThreadId,
+          clientSendId: pending.optimisticId,
+          draftNonce,
+        });
+        pendingSendRef.current = null;
       }
       draftSendIdRef.current = null;
       loadGenRef.current += 1;
@@ -386,8 +405,30 @@ export function PramaanAgentChat() {
       draftSendIdRef.current = sendThreadId;
       loadedThreadRef.current = `__draft__:${draftNonce}`;
     }
+    const sendStartedAt = Date.now();
+    pendingSendRef.current = {
+      optimisticId,
+      sendThreadId,
+      fromDraft: promotedFromDraft,
+      startedAt: sendStartedAt,
+    };
+    reportAgentClientEvent("chat_send_start", {
+      threadId: sendThreadId,
+      clientSendId: optimisticId,
+      fromDraft: promotedFromDraft,
+      attachmentCount: attachmentIds.length,
+    });
 
-    const markFailed = (errText: string) => {
+    const markFailed = (errText: string, extra?: Record<string, string | number | boolean | null>) => {
+      reportAgentClientEvent("chat_send_fail", {
+        threadId: sendThreadId,
+        clientSendId: optimisticId,
+        fromDraft: promotedFromDraft,
+        durationMs: Date.now() - sendStartedAt,
+        error: errText.slice(0, 240),
+        ...extra,
+      });
+      if (pendingSendRef.current?.optimisticId === optimisticId) pendingSendRef.current = null;
       setMessages((m) => {
         const next = m.map((x) =>
           x.id === optimisticId
@@ -434,11 +475,22 @@ export function PramaanAgentChat() {
           loadedThreadRef.current = sendThreadId;
           router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
         }
-        markFailed(typeof errText === "string" ? errText : "Could not send message.");
+        markFailed(typeof errText === "string" ? errText : "Could not send message.", {
+          httpStatus: res.status,
+          errorCode: json?.error?.code ?? null,
+        });
         return false;
       }
       const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
       sentId = msg.id;
+      reportAgentClientEvent("chat_send_ok", {
+        threadId: sendThreadId,
+        clientSendId: optimisticId,
+        messageId: msg.id,
+        fromDraft: promotedFromDraft,
+        durationMs: Date.now() - sendStartedAt,
+      });
+      if (pendingSendRef.current?.optimisticId === optimisticId) pendingSendRef.current = null;
       setMessages((m) => {
         const next = [msg, ...m.filter((x) => x.id !== optimisticId)];
         persistMessages(sendThreadId, next);
