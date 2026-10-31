@@ -553,6 +553,47 @@ def sun_pharma_assam_eye(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([980, 440, 1100, 520], fill=BLUE)
 
 
+def sebi_eki_energy_bar(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 160, 460, 580], fill=BLUE)
+    d.polygon([(260, 200), (380, 260), (380, 520), (260, 580), (140, 520), (140, 260)], fill=RED)
+    d.line([(640, 220), (1120, 220), (1120, 520), (640, 520), (640, 220)], fill=GOLD, width=4)
+    d.line([(680, 280), (1080, 420)], fill=YELLOW, width=8)
+    d.ellipse([980, 440, 1060, 520], fill=RED)
+
+
+def tax_devolution_festive(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([120, 180, 240, 300, 360]):
+        x = 120 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, BLUE, YELLOW, RED, BLUE][i])
+    d.polygon([(700, 520), (820, 420), (980, 400), (1140, 360)], fill=GOLD)
+    d.rectangle([720, 180, 1100, 260], fill=BLUE)
+    d.rectangle([720, 300, 1050, 380], fill=RED)
+
+
+def lpg_under_recovery_dec(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 220, 420, 520], fill=YELLOW)
+    d.rectangle([220, 160, 340, 220], fill=RED)
+    d.polygon([(640, 540), (720, 380), (860, 380), (940, 540)], fill=BLUE)
+    for i, w in enumerate([680, 760, 840, 920]):
+        d.rectangle([w, 560 - 40 - i * 50, w + 35, 560], fill=RED if i > 1 else GOLD)
+
+
+def cci_niel_vodafone(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 200, 480, 560], outline=BLUE, width=10)
+    d.rectangle([640, 240, 1180, 320], fill=RED)
+    d.rectangle([640, 360, 1100, 440], fill=YELLOW)
+    d.polygon([(900, 480), (980, 420), (1060, 480), (980, 540)], fill=BLUE)
+    d.line([(200, 380), (400, 380)], fill=GOLD, width=5)
+
+
+def emirates_navi_resist(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(100, 480), (280, 320), (460, 480)], fill=BLUE)
+    d.polygon([(640, 480), (820, 300), (1000, 480)], fill=RED)
+    d.line([(540, 400), (640, 400)], fill=GOLD, width=8)
+    d.polygon([(1050, 200), (1120, 260), (1080, 340), (1020, 280)], fill=YELLOW)
+    d.rectangle([680, 140, 960, 200], fill=YELLOW)
+
+
 def sebi_cdsl_compliance(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([100, 180, 480, 560], fill=BLUE)
     d.rectangle([140, 220, 440, 520], fill=CREAM)
@@ -644,6 +685,11 @@ def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("sebi-eki-energy-md-bar-october-2026", sebi_eki_energy_bar)
+    save("india-tax-devolution-festive-october-2026", tax_devolution_festive)
+    save("lpg-under-recovery-december-370-october-2026", lpg_under_recovery_dec)
+    save("cci-niel-vodafone-deals-october-2026", cci_niel_vodafone)
+    save("emirates-resist-navi-mumbai-shift-october-2026", emirates_navi_resist)
     save("meity-depa-ai-training-handbook-october-2026", meity_depa_ai)
     save("india-scotch-bulk-import-tariff-dispute-october-2026", scotch_tariff_dispute)
     save("escorts-kubota-tractor-prices-november-2026", escorts_kubota_tractor)

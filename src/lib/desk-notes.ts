@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-eki-energy-md-bar-october-2026",
+    title: "SEBI barred EKI Energy’s managing director for a year over misstated accounts",
+    summary:
+      "On 31 October 2026, the Securities and Exchange Board of India barred EKI Energy Services Ltd and managing director Manish Kumar Dabkara from the securities market for two months and twelve months respectively, after finding premature revenue recognition of about ₹197 crore in fiscal 2023 and diversion of funds through fictitious expenses.",
+    category: "industry",
+    companyOrSector: "Carbon credits / market regulation",
+    publishedAt: "2026-10-31T18:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-eki-energy-md-bar-october-2026"),
+    keyTakeaways: [
+      "SEBI’s final order said EKI Energy prematurely recognised roughly ₹197.04 crore of revenue in the first three quarters of fiscal 2023, misleading investors about the carbon-credit trader’s performance.",
+      "The regulator also found overstated expenses of about ₹26.34 crore across fiscal 2022 and 2023 that diverted company funds, and barred the former CFO for eight months alongside shorter bans on other directors.",
+      "Monetary penalties totalling about ₹88 lakh were imposed on the company and individuals, with Dabkara directed to recoup diverted amounts within the order’s compliance window.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, reporting on a 94-page final order said India’s markets regulator barred EKI Energy Services Ltd from the securities market for two months and its managing director Manish Kumar Dabkara for twelve months. SEBI concluded that the listed carbon-credits firm misrepresented its financial statements and diverted funds. The order cited premature recognition of about ₹197.04 crore of revenue during the first three quarters of fiscal 2023, which the regulator tied directly to investor decisions on the company’s shares. It also found overstated expenses of roughly ₹26.34 crore in fiscal 2022 and 2023, booked against services that were not rendered, which SEBI treated as diversion of corporate cash. Former chief financial officer Mohit Kumar Agarwal received an eight-month market bar, while whole-time directors Naveen Sharma and Sonali Sheikh faced shorter prohibitions. Penalties totalling about ₹88 lakh were levied across the company and named individuals, with payment due within 45 days.",
+      "What does this mean?",
+      "Small-cap climate and energy-services listings rely on trust that revenue from credit trades and advisory fees is recognised only when earned. When regulators find nine-figure premature booking, the issue is not a rounding error but a broken control environment at the top. Market bars on a managing director signal that personal accountability extends beyond corporate fines, which can freeze capital-raising and partnership talks until leadership changes settle. Independent directors and compliance officers were also fined, a reminder that boards cannot treat carbon-market complexity as an excuse to skip verification. For the wider ESG and voluntary-carbon ecosystem, enforcement on a high-profile Indian name raises the due-diligence bar for buyers of offsets and for banks lending against receivables from such contracts.",
+      "Why should I care?",
+      "If you hold shares in carbon-market or renewable-services companies, reread audit committee disclosures and revenue recognition policies after this order. Corporate buyers of offsets should tighten vendor audits rather than relying on brand slides. Lawyers and auditors serving similar firms should expect sharper SEBI questions on related-party payments and milestone billing. Watch whether EKI complies with the recoup direction, if the company appoints permanent leadership, and whether trading in the stock remains suspended or thinned after the bars take effect.",
+    ],
+  },
+  {
+    slug: "india-tax-devolution-festive-october-2026",
+    title: "Delhi sent states an extra ₹1.09 trillion in tax devolution before the festivals",
+    summary:
+      "On 31 October 2026, the Union government said it released ₹1.09 trillion to state governments as one advance instalment of tax devolution, citing the festive season and the need to support capital spending and welfare programmes at the subnational level.",
+    category: "industry",
+    companyOrSector: "Fiscal federalism / state budgets",
+    publishedAt: "2026-10-31T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-tax-devolution-festive-october-2026"),
+    keyTakeaways: [
+      "The finance ministry announced on 31 October 2026 a single advance devolution transfer of ₹1.09 trillion to states, framed as support ahead of the festive period.",
+      "Official messaging linked the release to helping states fund capital projects and welfare schemes when consumer spending typically peaks.",
+      "Tax devolution moves a fixed share of central tax collections to states under the finance commission formula, so the timing affects near-term liquidity rather than the full-year entitlement.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, the Union government said it had released ₹1.09 trillion to state governments as one advance instalment of tax devolution. The statement pointed to the upcoming festive season and argued that bringing forward the transfer would help states pay for capital works and welfare spending when households step up purchases. Tax devolution is the automatic share of central taxes that states receive under India’s finance commission split, distinct from grants tied to specific schemes. An advance tranche does not create new money; it shifts cash from the centre’s consolidated fund to state treasuries earlier than some budget calendars assumed, improving liquidity for treasuries that were waiting on collections to catch up with expenditure plans.",
+      "What does this mean?",
+      "State governments finance roads, health programmes, and salary bills from a mix of own taxes, devolution, and borrowings. When the centre accelerates devolution before Diwali and related holidays, chief ministers gain room to clear pending contractor bills, release festival-related subsidies, or start small infrastructure packages without immediately tapping the debt market. For contractors and suppliers, faster state payments can unblock working capital that had stalled when treasuries ran tight after the monsoon quarter. The move also signals that Delhi is willing to use timing tools to support consumption, even as it separately tracks the fiscal deficit on the central books. States still must fit the inflow into their full-year arithmetic; an advance now can mean a smaller later instalment unless gross tax collections exceed budget assumptions.",
+      "Why should I care?",
+      "If you bid on state government tenders or sell into public healthcare and education channels, watch treasury payment cycles in November for signs the transfer reached line departments. Residents in states planning festival fare subsidies or power bill relief may see announcements tied to this liquidity. Bond investors in state development loans should note that accelerated devolution can temporarily reduce short-term borrowing needs, though it does not replace disciplined revenue forecasting. Track state finance department circulars on how the tranche is allocated across schemes, any follow-up devolution schedule from the finance ministry, and whether capital outlay numbers in Q3 state accounts move in step with the release.",
+    ],
+  },
+  {
+    slug: "lpg-under-recovery-december-370-october-2026",
+    title: "Indian Oil expects the loss on each subsidised LPG cylinder to hit ₹370 in December",
+    summary:
+      "Indian Oil Corporation’s finance director said on 31 October 2026 that under-recovery on each 14.2 kg domestic LPG cylinder was about ₹309 in November and could reach roughly ₹370 in December as Saudi contract prices rose, widening the gap between import costs and controlled consumer cylinder rates.",
+    category: "industry",
+    companyOrSector: "LPG / household energy",
+    publishedAt: "2026-10-31T18:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lpg-under-recovery-december-370-october-2026"),
+    keyTakeaways: [
+      "On a post-results analyst call on 31 October 2026, IOCL director (finance) Anuj Jain said LPG under-recovery was near ₹309 per cylinder in November and could rise to about ₹370 in December.",
+      "Jain linked the widening gap to higher Saudi contract prices, cited at about $756 per tonne in the discussion, while consumer cylinder prices stayed regulated.",
+      "Hindustan Petroleum’s chairman had separately said November under-recovery reached about ₹327 per cylinder, up from roughly ₹245 in October, showing the same cost pressure across state marketers.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Indian Oil Corporation’s director of finance Anuj Jain told analysts on a post-results call that the company’s loss on each 14.2 kg subsidised domestic LPG cylinder stood near ₹309 in November 2026 and could reach about ₹370 in December. He tied the move to higher Saudi contract prices for propane and butane blends, noting levels around $756 per tonne in the discussion. Under-recovery is the accounting gap between what state oil marketing companies pay on import parity and what they may charge households under politically sensitive cylinder caps, before any later compensation from the central government. Earlier in the week Hindustan Petroleum’s chairman said November under-recovery had climbed to about ₹327 per cylinder from roughly ₹245 in October, confirming the same upward path across peers even as quarterly profit at Indian Oil was flattered by a separate LPG compensation receipt booked in the September quarter.",
+      "What does this mean?",
+      "When global LPG benchmarks rise but domestic cylinder stickers move slowly, marketers carry growing per-unit losses on every refill until policy catches up. A jump toward ₹370 per cylinder in December implies billions of rupees of additional marketing losses across Indian Oil, Bharat Petroleum, and Hindustan Petroleum if volumes hold steady through winter cooking demand. Finance ministries usually respond with lump-sum reimbursement or price tweaks, but the lag is what strains cash flows and distorts quarterly earnings comparisons. Households may still see stable cylinder bills in the short run, which is why the pain sits on company balance sheets first. Distributors, already negotiating commission hikes, face tighter working capital if refill economics worsen while they wait for ministry approvals.",
+      "Why should I care?",
+      "If you manage a household budget around LPG refills, the headline cylinder price may look unchanged even while the fiscal cost behind it rises; future adjustments or subsidy bills can follow. Investors in oil marketing stocks should separate compensation receipts from underlying marketing losses when reading winter results. Industrial users of commercial LPG should watch whether policy attention stays on domestic cylinders or spills into commercial pricing. Track fortnightly under-recovery bulletins, any petroleum ministry meeting on distributor commissions, and budget commentary on LPG subsidy outlays after December cost prints emerge.",
+    ],
+  },
+  {
+    slug: "cci-niel-vodafone-deals-october-2026",
+    title: "India’s antitrust body cleared Xavier Niel’s €5.1 billion Vodafone stake buy",
+    summary:
+      "The Competition Commission of India on 31 October 2026 approved French billionaire Xavier Niel’s proposed acquisition of a 16.2 per cent stake in Vodafone Group for about €5.1 billion through his family holding company, alongside three other combinations involving Navi Fintech, Aditya Birla Renewables, and Adani Energy Solutions.",
+    category: "industry",
+    companyOrSector: "Competition policy / telecom",
+    publishedAt: "2026-10-31T18:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cci-niel-vodafone-deals-october-2026"),
+    keyTakeaways: [
+      "CCI cleared Vega SAS, a unit of Niel’s Maya family vehicle, to buy 16.2 per cent of Vodafone Group from Emirates Telecommunications Group for about €5.1 billion, a deal first announced in July 2026.",
+      "Indian clearance was required because Vodafone Group’s indirect interest in the domestic Vodafone Idea joint venture crosses competition filing thresholds even though the buyer has no direct India operations.",
+      "The same CCI order batch approved three other transactions spanning fintech, renewable energy, and power transmission assets.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, the Competition Commission of India announced approvals for four corporate transactions. The highest-profile was French telecom investor Xavier Niel’s plan to acquire a 16.2 per cent stake in UK-based Vodafone Group PLC for about €5.1 billion through Vega SAS, a subsidiary of his family investment firm Maya SAS. The shares are being purchased from Emirates Telecommunications Group, and completion would make Vega the largest shareholder in the global Vodafone group. CCI noted that although Vega has no direct business in India, the transaction needed Indian clearance because Vodafone Group’s links to the domestic Vodafone Idea telecom venture trigger competition filing rules on turnover and ownership. The regulator also cleared deals involving Navi Fintech, Aditya Birla Renewables, and Adani Energy Solutions in the same release, spanning financial services and energy infrastructure.",
+      "What does this mean?",
+      "Global telecom restructuring now routinely passes through Indian antitrust review whenever a target company owns or influences a local operator. Clearing Niel’s stake purchase removes one regulatory hurdle in Vodafone Group’s wider simplification after divestments in southern Europe and network sharing in the United Kingdom. For Vodafone Idea in India, the parent’s shareholder map matters to lenders and tower partners watching whether strategic support strengthens or shifts. CCI’s parallel approvals in renewables and power transmission show the commission batching unrelated but economically significant combinations in one weekly cycle, which speeds closing timelines for acquirers that would otherwise wait in queue. The orders do not guarantee commercial close; they affirm that the watchdog sees no substantial lessening of competition in defined relevant markets.",
+      "Why should I care?",
+      "If you use Vodafone Idea mobile services or hold its bonds, track parent-level capital actions after CCI clearance for signs of fresh funding or governance change. Investors in Aditya Birla Renewables or Adani Energy assets should read the specific remedies, if any, attached to those approvals in the full orders. Competition lawyers advising cross-border private equity should treat Indian filing thresholds as live even when buyers have zero local revenue. Watch exchange disclosures from Vodafone Group on stake completion, Vodafone Idea’s reaction to the new shareholder structure, and any follow-on CCI conditions published on the commission website.",
+    ],
+  },
+  {
+    slug: "emirates-resist-navi-mumbai-shift-october-2026",
+    title: "Emirates and Air France-KLM are pushing back on moving Mumbai flights across the harbour",
+    summary:
+      "Reporting on 31 October 2026 said Emirates and Air France-KLM remain reluctant to shift international services from Mumbai’s main airport to Navi Mumbai, citing infrastructure and efficiency concerns, even as IndiGo, Air India, and Akasa Air agreed to partial moves while the operator seeks to free capacity for Terminal redevelopment.",
+    category: "industry",
+    companyOrSector: "Aviation / Mumbai airports",
+    publishedAt: "2026-10-31T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("emirates-resist-navi-mumbai-shift-october-2026"),
+    keyTakeaways: [
+      "Mumbai International Airport Ltd wants to move about five million passengers a year to Navi Mumbai by March 2027 to make room for Terminal 1 redevelopment, after deferring an earlier October 2025 start date.",
+      "IndiGo, Air India, and Akasa Air have announced partial shifts, but Emirates has questioned Navi Mumbai’s readiness for large long-haul operations and Air France-KLM called split operations inefficient.",
+      "More than thirty-five airlines met airport officials on 29 October 2026; carriers were asked to share transition plans by 3 November while several sought delays until the winter 2027 schedule.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, coverage of Mumbai’s airport capacity crunch said foreign long-haul carriers are resisting plans to move part of their international traffic from Chhatrapati Shivaji Maharaj International Airport to the new Navi Mumbai facility operated by Adani Airports. Mumbai International Airport Ltd wants to relocate roughly five million passengers annually by March 2027 so it can redevelop Terminal 1 without gridlocking the rest of the site. Indian carriers including IndiGo, Air India, and Akasa Air have already said they will shift selected routes, including some West Asia services. Emirates has publicly questioned whether Navi Mumbai’s infrastructure can support large international operations, according to reports, while Air France-KLM has argued that running parallel operations across the harbour is operationally inefficient. On 29 October more than thirty-five airlines met airport officials for over ninety minutes; airlines were asked to submit transition plans by 3 November, and several requested more time, with some pointing to the winter 2027 scheduling season.",
+      "What does this mean?",
+      "Splitting a hub between two airports separated by a trans-harbour commute changes crew bases, ground handling contracts, and passenger connection times. Foreign carriers with premium connecting traffic resist unless terminal quality, immigration throughput, and surface transport match what they have at the legacy terminal. For the airport operator, delay risks pushing Terminal 1 construction into peak demand seasons, while forcing moves too quickly could empty valuable slots at the main field before Navi Mumbai is ready. Ministry mediators are effectively bargaining over who moves first: domestic airlines with local market share versus Gulf and European carriers that carry a large share of international seat capacity. Passengers may soon see the fight show up as mixed messages on tickets labelled Mumbai that actually depart from different airports.",
+      "Why should I care?",
+      "If you fly Emirates, Air France, or KLM from Mumbai, confirm airport codes and terminal assignments on tickets issued for 2027 travel before booking ground transport. Corporate travel policies should update Mumbai definitions if colleagues connect through Gulf hubs. Investors in airport and airline stocks should treat slot migration as a timeline risk to yield and capital spending, not a settled calendar. Watch the 3 November transition-plan submissions, ministry statements after the Airline Operators’ Committee meeting, and any published Navi Mumbai readiness milestones on security lanes and road links.",
+    ],
+  },
+  {
     slug: "meity-depa-ai-training-handbook-october-2026",
     title: "MeitY published a handbook on sharing data safely for AI training",
     summary:
@@ -8160,6 +8280,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-eki-energy-md-bar-october-2026": "policy",
+  "india-tax-devolution-festive-october-2026": "policy",
+  "lpg-under-recovery-december-370-october-2026": "policy",
+  "cci-niel-vodafone-deals-october-2026": "policy",
+  "emirates-resist-navi-mumbai-shift-october-2026": "policy",
   "meity-depa-ai-training-handbook-october-2026": "policy",
   "india-scotch-bulk-import-tariff-dispute-october-2026": "policy",
   "escorts-kubota-tractor-prices-november-2026": "markets",
