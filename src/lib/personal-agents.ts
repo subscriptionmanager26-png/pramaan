@@ -39,16 +39,22 @@ export async function syncAgentUser(
   externalId: string,
   input: { name?: string; email?: string },
   active: boolean,
+  opts?: { signal?: AbortSignal },
 ) {
   const url = `${base()}/api/v1/users/${encodeURIComponent(externalId)}`;
   if (!active) {
-    const res = await fetch(url, { method: "DELETE", headers: { ...authHeaders(), "Content-Type": "application/json" } });
+    const res = await fetch(url, {
+      method: "DELETE",
+      headers: { ...authHeaders(), "Content-Type": "application/json" },
+      signal: opts?.signal,
+    });
     return { ok: res.status === 204 || res.ok, status: res.status };
   }
   const res = await fetch(url, {
     method: "PUT",
     headers: { ...authHeaders(), "Content-Type": "application/json" },
     body: JSON.stringify({ name: input.name, email: input.email }),
+    signal: opts?.signal,
   });
   return { ok: res.ok, status: res.status, body: await res.json().catch(() => undefined) };
 }

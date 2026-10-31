@@ -17,6 +17,7 @@ import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
 import { reportAgentClientEvent } from "@/lib/agent/client-telemetry";
+import { messageFromFailedResponse, parseJsonResponse } from "@/lib/agent/parse-json-response";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 import { usePocketedgeAuth } from "@/lib/pocketedge/use-pocketedge-auth";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
@@ -460,12 +461,17 @@ export function PramaanAgentChat() {
           attachments: attachmentIds.length ? attachmentIds : undefined,
         }),
       });
-      const json = await res.json();
-      if (!res.ok) {
-        const agentBusy = res.status === 409 || json?.error?.code === "agent_busy";
+      const parsed = await parseJsonResponse(res);
+      const json = parsed.json;
+      if (!parsed.ok || !json?.message) {
+        const errObj =
+          json?.error && typeof json.error === "object" && !Array.isArray(json.error)
+            ? (json.error as { code?: string; message?: string })
+            : null;
+        const agentBusy = parsed.status === 409 || errObj?.code === "agent_busy";
         const errText = agentBusy
           ? "Still finishing the last reply — give it a few seconds, then try again."
-          : json?.error?.message || json?.error || "Could not send message.";
+          : messageFromFailedResponse(parsed);
         if (agentBusy && threadId) {
           await loadThread(headers);
           refreshThreads();
@@ -475,9 +481,11 @@ export function PramaanAgentChat() {
           loadedThreadRef.current = sendThreadId;
           router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
         }
-        markFailed(typeof errText === "string" ? errText : "Could not send message.", {
-          httpStatus: res.status,
-          errorCode: json?.error?.code ?? null,
+        markFailed(errText, {
+          httpStatus: parsed.status,
+          errorCode: errObj?.code ?? null,
+          parseError: parsed.parseError,
+          bodyPreview: parsed.text.replace(/\s+/g, " ").trim().slice(0, 80) || null,
         });
         return false;
       }
