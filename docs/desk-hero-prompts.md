@@ -1120,6 +1120,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Tile stack motif |
 | Metaphor left | Narrow container lane vs idle kiln blocks |
 
+### `policybazaar-posp-irdai-draft-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Open-architecture pay cuts reshape PoSP economics |
+| Subject right | Smartphone insurance app motif (no brand) |
+| Metaphor left | Shrinking commission ladder toward policy stack |
+
+### `delhivery-q2-parcel-scale-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Parcel volumes scale while unit economics improve |
+| Subject right | Warehouse / route motif |
+| Metaphor left | Rising shipment chevrons + stepped revenue bars |
+
+### `powergrid-transmission-cable-demand-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Grid build pulls wire and cable orders |
+| Subject right | Transmission tower silhouette |
+| Metaphor left | Cable coils + renewable evacuation pipes |
+
+### `jiostar-q2-weak-ad-spend-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Streaming users hold but TV ad budgets stay soft |
+| Subject right | Streaming screen glow motif |
+| Metaphor left | Flat ad revenue bars vs rising user curve |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |

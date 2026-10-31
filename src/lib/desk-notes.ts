@@ -26,6 +26,106 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "policybazaar-posp-irdai-draft-october-2026",
+    title:
+      "Policybazaar says its agent network may need a new shape under IRDAI’s draft rules",
+    summary:
+      "PB Fintech told analysts on 30 October 2026 that its point-of-sale person insurance platform, PB Partners, may have to be restructured if IRDAI adopts draft distribution rules that pay open-architecture sellers less than closed ones, even as the unit grew premium 39% to about ₹698 crore in the September quarter with 131,000 active partners.",
+    category: "industry",
+    companyOrSector: "Insurance / fintech",
+    publishedAt: "2026-10-31T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("policybazaar-posp-irdai-draft-october-2026"),
+    keyTakeaways: [
+      "Policybazaar parent PB Fintech said on 30 October 2026 that IRDAI’s draft distribution framework, as written, may not leave room for its PoSP model in its current form.",
+      "CEO Yashish Dahiya said PB Partners earned about ₹698 crore in the September quarter, up 39% year on year, with 131,000 active partners and roughly 76% of premium from tier-II and tier-III towns.",
+      "Management said it already runs the PoSP unit at a loss, pays partners before insurers remit, and has slowed hiring while waiting for final regulations.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 30 October 2026, PB Fintech executives told analysts that India’s draft insurance distribution rules could force a rethink of Policybazaar’s point-of-sale person network if they land unchanged. Chairman and CEO Yashish Dahiya said IRDAI’s consultation proposes paying open-architecture distributors less than closed-architecture ones, which in his view does not leave scope for PoSP agents as the business works today. PB Partners, the group’s PoSP platform, reported about ₹698 crore of operating revenue in the September quarter, up 39% from a year earlier, with 131,000 active partners and roughly three-quarters of premium sourced from smaller cities. Dahiya stressed the paper is not final and said the company is in informal talks with the regulator, but also warned that renewal economics under the draft look extremely limited and that the unit already loses money because PB Fintech pays sellers before insurers pay it.",
+      "What does this mean?",
+      "Insurance distribution in India sits on a stack of commissions, trail income, and marketing spend. When regulators cap what insurers can pay sellers, online aggregators that built scale on thin first-year margins must either shrink partner payouts, pivot to fee-based services, or chase closed-architecture tie-ups that the draft treats more generously. Policybazaar’s PoSP army in tier-II and tier-III towns is exactly the kind of last-mile reach IRDAI wants for coverage, yet the draft’s open-versus-closed pay gap would compress the rupees left to fund onboarding and claims support. Management said it has already cut hiring to a fraction of earlier levels and will trim marginal marketing if customer lifetime value falls under new payout tables. That is a behaviour shift for households who buy policies through app-based agents, not just a line item for shareholders.",
+      "Why should I care?",
+      "If you bought health or motor cover through a Policybazaar-linked PoSP, compare renewal quotes this winter and read whether servicing or claims help stays free under whatever IRDAI finalises. Agents and small-town partners should watch commission circulars and persistency bonuses, not only headline premium growth. Investors in PB Fintech or peer insurers need to model PoSP profitability separately from core online term sales. Track IRDAI’s final notification after the consultation, any approved restructure PB Fintech announces, and whether banks such as Bandhan repeat similar third-party income warnings in their own results.",
+    ],
+  },
+  {
+    slug: "delhivery-q2-parcel-scale-october-2026",
+    title:
+      "Delhivery crossed ₹3,000 crore of quarterly revenue for the first time",
+    summary:
+      "Delhivery Ltd reported on 30 October 2026 revenue from services of about ₹3,066 crore in Q2 FY27, up 20% year on year, with EBITDA near ₹205 crore and express parcel shipments up 32% to 325 million despite fuel inflation and labour tightness ahead of the festive season.",
+    category: "industry",
+    companyOrSector: "Logistics / e-commerce",
+    publishedAt: "2026-10-31T05:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("delhivery-q2-parcel-scale-october-2026"),
+    keyTakeaways: [
+      "Delhivery said revenue from services reached about ₹3,066 crore in the quarter ended September 2026, crossing ₹3,000 crore for the first time, up 20% year on year.",
+      "EBITDA was about ₹205 crore with a 6.7% margin, nearly triple the year-ago level, while consolidated net profit was about ₹41 crore on express parcel volume of 325 million shipments, up 32%.",
+      "Management cited better network service levels before the festive peak, technology-led productivity, and early robotics trials even as fuel and labour costs stayed elevated.",
+    ],
+    body: [
+      "What's going on here?",
+      "Delhivery Ltd published September-quarter results on 30 October 2026 showing revenue from services of about ₹3,066 crore, the first time the logistics firm has crossed ₹3,000 crore in a single quarter and up roughly 20% from a year earlier. Earnings before interest, taxes, depreciation and amortisation were about ₹205 crore, with a margin near 6.7%, while consolidated net profit stood at about ₹41 crore. The express parcel business handled 325 million shipments, up 32% year on year, and part-truckload freight tonnage also rose double digits. The company ended the period with about ₹4,676 crore of cash and said service levels improved sequentially even with higher diesel bills, tighter labour availability, and multiple statutory changes heading into the festive rush.",
+      "What does this mean?",
+      "Parcel networks make money when more boxes flow through the same sort centres and routes without breaking delivery promises. Delhivery’s volume jump suggests e-commerce and brand-direct shipping stayed active into September, which fits wider consumer data showing festive stocking moved across categories even when discretionary credit cooled. EBITDA expansion despite inflation means automation, route planning, and claims tools are starting to offset wage and fuel pressure, not just revenue scale. Robotics pilots and in-facility autonomous vehicles are still early, but they point to less labour-heavy sorting over time. Rivals and marketplace sellers will read the shipment tally as a check on whether demand held before Diwali peaks.",
+      "Why should I care?",
+      "If you sell online or rely on marketplaces, watch whether delivery SLAs and surcharges change during the festival fortnight; a network that ran cleaner in September is better placed to handle spikes. Small businesses comparing logistics vendors should weigh cash-backed balance sheets and claim resolution speed, not only per-shipment discounts. Investors should separate express parcel growth from heavier freight lines and track margin commentary after fuel moves. Follow the next quarter for robotics rollout, client wins in quick commerce, and whether net profit scales with EBITDA or stays thin because of depreciation and interest.",
+    ],
+  },
+  {
+    slug: "powergrid-transmission-cable-demand-october-2026",
+    title:
+      "Power Grid told cable makers to prepare for a much bigger transmission build",
+    summary:
+      "Power Grid Corporation chairman R D Burra said on 30 October 2026 the central transmission utility may lift its FY27 capital expenditure above the ₹37,000 crore guidance and urged domestic wire and cable manufacturers to ramp output as renewables, interstate lines, data centres, and the Green Energy Corridor-III programme drive demand.",
+    category: "industry",
+    companyOrSector: "Power / infrastructure",
+    publishedAt: "2026-10-31T05:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("powergrid-transmission-cable-demand-october-2026"),
+    keyTakeaways: [
+      "Power Grid chairman R D Burra said on 30 October 2026 the company could revise FY27 capex guidance above the ₹37,000 crore announced in May after spending more than ₹40,000 crore last fiscal.",
+      "India added about 5,000 circuit kilometres of transmission lines and 72,000 MVA of transformation capacity in the previous financial year, with underground and submarine cables gaining share.",
+      "Burra linked the order book to renewable evacuation, interstate flows, and rising load from cities, industry, and data centres, citing Green Energy Corridor-III investments of roughly ₹1.86 lakh crore.",
+    ],
+    body: [
+      "What's going on here?",
+      "At an industry event on 30 October 2026, Power Grid Corporation of India chairman R D Burra said the company may raise its capital expenditure guidance for the current financial year above the ₹37,000 crore figure set in May, following a pattern of upward revisions in the prior year when spending topped ₹40,000 crore. He asked domestic wire and cable manufacturers to prepare for a sharp increase in orders as India expands its electricity transmission network. Burra noted the country added about 5,000 circuit kilometres of lines and 72,000 megavolt-amperes of transformation capacity in the last fiscal year, while renewable projects, interstate flows, and load growth from cities, factories, and data centres make planning more complex. He highlighted the Green Energy Corridor-III programme, with investments of roughly ₹1.86 lakh crore, as another source of demand for conductors, underground links, and substation gear.",
+      "What does this mean?",
+      "Solar and wind farms mean little to a factory or metro if electrons cannot reach the load centre. Transmission has become the bottleneck that determines whether generators can sell power and whether states avoid curtailment. A public call to scale cable output signals lead times and right-of-way disputes are real constraints, not just PowerPoint slides. Domestic wire makers already draw a large share of demand from utilities; more underground and submarine work raises technical bars beyond simple capacity additions. Data-centre clusters and industrial corridors add steady baseload paths that differ from seasonal agricultural demand. If manufacturers invest in tooling and testing, orders can smooth over multi-year cycles; if they do not, renewable targets slip even when generation assets are ready.",
+      "Why should I care?",
+      "Households waiting for cheaper green power or fewer outages should watch transmission commissioning dates in their region, not only new solar auctions. If you work in electrical manufacturing or EPC, expect tender calendars to thicken on 765 kV lines, substations, and cable packages tied to corridor programmes. Investors in utilities, renewables, and cable names should read Power Grid’s revised capex statement alongside state payment discipline. Track quarterly order inflows at major wire makers, regulatory approvals on interstate lines, and whether data-centre hubs announce dedicated grid connections this winter.",
+    ],
+  },
+  {
+    slug: "jiostar-q2-weak-ad-spend-october-2026",
+    title:
+      "JioStar’s streaming users stayed high but TV ad money stayed soft",
+    summary:
+      "Reliance Industries entertainment arm JioStar reported on 30 October 2026 September-quarter revenue up about 10% year on year to roughly ₹6,806 crore while profit after tax fell about 13% to ₹1,147 crore, citing a weak advertising environment even as subscription and sports ad lines helped and JioHotstar monthly active users held at 440 million after the IPL surge.",
+    category: "industry",
+    companyOrSector: "Media / streaming",
+    publishedAt: "2026-10-31T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jiostar-q2-weak-ad-spend-october-2026"),
+    keyTakeaways: [
+      "JioStar said revenue rose about 10% year on year to roughly ₹6,806 crore in the quarter ended September 2026 while profit after tax fell about 13% to ₹1,147 crore.",
+      "Management blamed a weak ad environment; linear TV ad revenue remained under transition while sports ad revenue improved on more cricket fixtures.",
+      "JioHotstar monthly active users were about 440 million in September after a 530 million IPL-driven peak in June, still above the year-ago 400 million, with international launches in the UK, Canada, and Singapore.",
+    ],
+    body: [
+      "What's going on here?",
+      "JioStar, the Reliance Industries entertainment venture, reported September-quarter results on 30 October 2026 with revenue from operations up about 10% year on year to roughly ₹6,806 crore while profit after tax fell about 13% to ₹1,147 crore. The company said a weak advertising environment weighed on earnings before interest, taxes, depreciation and amortisation even as subscription and streaming revenue grew. Linear television ad revenue remained under transition, while sports ad revenue improved as more cricket matches, including the England-India series in July, aired in the period. JioHotstar’s monthly active users stood at about 440 million in September after a 530 million peak in the June quarter driven by the Indian Premier League, still above the 400 million recorded a year earlier. JioStar also expanded streaming into the UK, Canada, and Singapore and pushed multilingual reality programming, yet first-half EBITDA margins compressed compared with a year ago.",
+      "What does this mean?",
+      "Indian media groups are juggling three wallets at once: subscriptions, sports rights, and brand advertising tied to consumer sentiment. When FMCG and auto marketers trim above-the-line spends, general entertainment slots feel it first even if cricket packages still attract event advertisers. JioStar’s user base staying above pre-IPL levels shows households kept the app installed, but retaining attention without fresh tentpoles is a different challenge from monetising it. Weak linear TV ads underline that cable and satellite inventory is still restructuring after the JioStar merger. Peers such as Zee also reported pressure as they fund long sports rights while ad growth stalls, which is a sector pattern rather than a one-quarter glitch.",
+      "Why should I care?",
+      "If you advertise a consumer brand, expect tougher pricing on general entertainment inventory and bundle sports separately in media plans this festive season. Households subscribing to JioHotstar should watch whether ad loads on the free tier change as the company balances subscription growth with ARPU. Investors in media and FMCG should read ad volume commentary from both broadcasters and advertisers in the same quarter. Track festive campaign spend from large marketers, JioStar’s next user disclosure after year-end cricket, and whether international markets contribute meaningful subscription revenue in upcoming filings.",
+    ],
+  },
+  {
     slug: "india-banking-reforms-committee-october-2026",
     title:
       "India set up a new panel to review how banks lend and compete",
@@ -7820,6 +7920,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "policybazaar-posp-irdai-draft-october-2026": "policy",
+  "delhivery-q2-parcel-scale-october-2026": "markets",
+  "powergrid-transmission-cable-demand-october-2026": "policy",
+  "jiostar-q2-weak-ad-spend-october-2026": "markets",
   "india-banking-reforms-committee-october-2026": "policy",
   "reliance-retail-fmcg-profit-mismatch-october-2026": "markets",
   "tata-starbucks-local-menu-expansion-october-2026": "markets",
