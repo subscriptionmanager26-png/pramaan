@@ -588,6 +588,52 @@ def granules_fda_483(d: ImageDraw.ImageDraw) -> None:
     d.line([(760, 360), (840, 440)], fill=RED, width=6)
 
 
+def meity_depa_ai(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 180, 480, 560], fill=BLUE)
+    for i in range(4):
+        d.rectangle([140 + i * 80, 220, 200 + i * 80, 520], fill=[RED, YELLOW, CREAM, RED][i])
+    d.ellipse([640, 240, 900, 500], outline=GOLD, width=6)
+    d.line([(770, 280), (770, 460)], fill=INK, width=3)
+    d.polygon([(720, 340), (820, 300), (920, 340), (820, 380)], fill=YELLOW)
+
+
+def scotch_tariff_dispute(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 420, 1180, 560], fill=GOLD, width=0)
+    for i, h in enumerate([200, 280, 360]):
+        d.rectangle([120 + i * 120, 560 - h, 200 + i * 120, 560], fill=[RED, BLUE, YELLOW][i])
+    d.rectangle([520, 160, 760, 560], fill=BLUE)
+    d.ellipse([600, 280, 680, 360], fill=CREAM)
+    d.polygon([(900, 200), (1100, 260), (900, 320)], fill=RED)
+
+
+def escorts_kubota_tractor(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 380, 520, 520], fill=RED)
+    d.ellipse([140, 500, 220, 580], fill=INK)
+    d.ellipse([400, 500, 480, 580], fill=INK)
+    d.rectangle([260, 300, 420, 400], fill=BLUE)
+    for i, h in enumerate([80, 140, 200, 260]):
+        x = 620 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[YELLOW, RED, BLUE, YELLOW][i])
+
+
+def igl_railway_png(d: ImageDraw.ImageDraw) -> None:
+    d.line([(80, 520), (1180, 520)], fill=INK, width=4)
+    d.rectangle([200, 440, 480, 520], fill=BLUE)
+    d.polygon([(520, 520), (620, 420), (720, 520)], fill=RED)
+    d.line([(760, 520), (1100, 380)], fill=GOLD, width=5)
+    d.ellipse([900, 200, 980, 280], fill=YELLOW)
+    d.rectangle([920, 280, 960, 400], fill=BLUE)
+
+
+def muthoot_gold_loan(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 200, 420, 520], fill=GOLD)
+    d.rectangle([160, 240, 380, 480], fill=YELLOW)
+    d.rectangle([520, 280, 1120, 560], fill=CREAM, outline=BLUE, width=4)
+    for i, h in enumerate([100, 180, 260, 340]):
+        x = 560 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, RED, YELLOW][i])
+
+
 def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([80, 200, 360, 560], fill=BLUE)
     d.rectangle([120, 240, 320, 520], fill=CREAM)
@@ -598,6 +644,11 @@ def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("meity-depa-ai-training-handbook-october-2026", meity_depa_ai)
+    save("india-scotch-bulk-import-tariff-dispute-october-2026", scotch_tariff_dispute)
+    save("escorts-kubota-tractor-prices-november-2026", escorts_kubota_tractor)
+    save("igl-railway-png-lpg-replacement-october-2026", igl_railway_png)
+    save("muthoot-finance-gold-loan-q2-october-2026", muthoot_gold_loan)
     save("blue-star-ac-demand-october-2026", blue_star_ac)
     save("symphony-overseas-cooling-expansion-october-2026", symphony_overseas)
     save("restaurant-brands-india-qsr-profit-october-2026", restaurant_brands_india)

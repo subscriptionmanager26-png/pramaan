@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "meity-depa-ai-training-handbook-october-2026",
+    title: "MeitY published a handbook on sharing data safely for AI training",
+    summary:
+      "The Ministry of Electronics and Information Technology on 31 October 2026 released a Handbook on Data Empowerment and Protection Architecture for AI training at a Bengaluru roundtable, outlining how institutions can pool datasets for model building while keeping consent, privacy, and intellectual property controls in place.",
+    category: "industry",
+    companyOrSector: "Technology policy / artificial intelligence",
+    publishedAt: "2026-10-31T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("meity-depa-ai-training-handbook-october-2026"),
+    keyTakeaways: [
+      "MeitY launched the DEPA for AI Training handbook on 31 October 2026 with support from the iSPIRT Foundation at a Bengaluru roundtable chaired by Secretary S. Krishnan.",
+      "The framework describes how organisations can share data for AI model training under contractual guardrails rather than open dumps of personal or proprietary records.",
+      "India’s AI push depends on usable domestic datasets; the handbook is guidance, not a mandatory law, and adoption will turn on how banks, hospitals, and platforms design consent flows.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, the Union Ministry of Electronics and Information Technology released the Handbook on Data Empowerment and Protection Architecture for AI training at a high-level roundtable in Bengaluru. Secretary S. Krishnan unveiled the document with support from the iSPIRT Foundation. The handbook explains how companies, universities, and government bodies can collaborate on datasets used to train artificial intelligence models while keeping privacy, intellectual property, and institutional control intact. It builds on India’s earlier DEPA work on consent-based data sharing, but targets the specific problem AI labs face: they need large, high-quality training sets without copying sensitive records into unsecured lakes.",
+      "What does this mean?",
+      "Model builders usually either scrape public web text or buy narrow commercial feeds. For Indian languages, payments, agriculture, or health, those shortcuts run out quickly and often break privacy rules. A DEPA-style architecture lets a hospital or bank remain the custodian of its records while granting a fintech or research lab access to derived features or anonymised slices under signed terms. That shifts the bottleneck from raw storage to governance design: who approves a request, how long access lasts, and what happens when a model is exported. The handbook does not by itself open any database; it gives technical and policy language for institutions that already hold data to decide whether and how to participate.",
+      "Why should I care?",
+      "If you run a regulated business sitting on customer or patient data, expect vendors to cite this handbook when pitching federated learning or synthetic data projects. Read the consent and audit clauses before you sign. If you invest in Indian AI or software services, ask whether revenue models assume free public data or paid, consented feeds. Watch which ministries reference DEPA in procurement rules, whether sector regulators such as RBI or IRDAI align their outsourcing norms, and whether state data centres pilot shared sandboxes under the architecture.",
+    ],
+  },
+  {
+    slug: "india-scotch-bulk-import-tariff-dispute-october-2026",
+    title: "Delhi told liquor firms bulk Scotch may not get the new UK tariff cut",
+    summary:
+      "India’s government will meet liquor companies on 3 November 2026 after domestic producers joined Diageo and Pernod Ricard in warning that bulk Scotch imports may not qualify for the reduced duty promised under the July India-UK trade pact, leaving bottled imports at the lower rate while bulk shipments face the older tariff.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages / trade policy",
+    publishedAt: "2026-10-31T17:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-scotch-bulk-import-tariff-dispute-october-2026"),
+    keyTakeaways: [
+      "Officials scheduled talks with liquor firms for 3 November 2026 after domestic and foreign players jointly protested treatment of bulk Scotch imports.",
+      "Under the India-UK agreement implemented in July 2026, bottled Scotch duty fell toward 75% from 150%, but New Delhi has signalled bulk imports may stay on the higher track.",
+      "Bulk whisky feeds local bottling and blending; excluding it from the concession would shift margins between importers, Indian distillers, and state excise collections.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, industry sources said the central government will hold talks with liquor companies on 3 November after domestic manufacturers joined global majors Diageo and Pernod Ricard in pushing back on a federal probe into bulk Scotch imports. The dispute is the first major friction tied to the India-United Kingdom trade agreement that took effect in July 2026. That pact cut import duty on eligible Scotch toward 75% from 150%. New Delhi has now told major companies that bulk imports, which arrive in tankers or large containers for local bottling and blending, may not qualify for the reduced rate. The International Spirits and Wines Association of India, which counts Pernod and Diageo among its members, has raised the issue privately alongside Indian producers who rely on imported bulk spirit for part of their portfolio.",
+      "What does this mean?",
+      "India taxes alcohol heavily at the border and again through state excise, so a few percentage points on import cost flows straight into shelf prices or bottler margins. Bottlers that import bulk spirit to finish in Indian plants built their models on a clear split between bulk and bottled tariffs. If bulk stays near the old band while finished bottles enjoy the UK deal, economics flip toward imported miniatures and away from local filling lines. Domestic distillers that compete with Scotch also care: they argued for parity so foreign bulk does not undercut Indian grain spirit after the trade pact. Monday’s meeting is a chance to clarify definitions, not a final order, but the uncertainty already forces finance teams to rerun landed-cost scenarios before festive stocking.",
+      "Why should I care?",
+      "If you follow consumer staples or hospitality, watch whether premium Scotch prices diverge between bottled and locally finished labels in your state. Investors in United Spirits, Radico Khaitan, or global parents with India units should read management commentary on bulk sourcing after the meeting. State excise officials may adjust minimum retail prices if import costs shift. Track the commerce ministry readout after 3 November, any customs circular on bulk classification, and whether the UK government raises the issue in bilateral trade forums.",
+    ],
+  },
+  {
+    slug: "escorts-kubota-tractor-prices-november-2026",
+    title: "Escorts Kubota will raise tractor prices in November after the festive season",
+    summary:
+      "Escorts Kubota Ltd said on 31 October 2026 it will increase ex-showroom prices across Kubota, Farmtrac, and Powertrac tractor lines from November, citing higher raw material, energy, logistics, and manufacturing costs, with the exact hike varying by model and region.",
+    category: "industry",
+    companyOrSector: "Farm equipment / rural demand",
+    publishedAt: "2026-10-31T17:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("escorts-kubota-tractor-prices-november-2026"),
+    keyTakeaways: [
+      "Escorts Kubota announced on 31 October 2026 that prices on all three tractor brands will rise from November 2026 once the festive selling window closes.",
+      "The company cited input, energy, freight, and plant costs; revised tariffs will differ by horsepower band and geography.",
+      "Tractor makers often hold prices through festival discounts then reset; the move tests whether rural buyers absorb hikes or delay purchases into the rabi season.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Escorts Kubota Ltd told exchanges it will increase prices across Kubota, Farmtrac, and Powertrac tractor ranges starting November 2026, immediately after the festive season push. Management linked the revision to rising costs for raw materials, energy, logistics, and manufacturing. The company said the increase will not be uniform: each model, variant, and region will carry its own adjustment, with updated price lists flowing through authorised dealerships. Escorts Kubota formed from the combination of Escorts and Kubota’s India tractor business and competes with Mahindra, Sonalika, and John Deere in the medium and heavy horsepower segments farmers use for both kharif harvest and rabi planting prep.",
+      "What does this mean?",
+      "Tractor pricing is a clock tied to the farm calendar. Makers often absorb steel and chip inflation through September and October festival schemes, then reset list prices before dealers close year-end books. A November hike passes metal and freight inflation to buyers who may still be liquid after crop sales, but also collides with higher diesel and fertiliser bills many farmers already face. If competitors match within weeks, the industry moves together and volumes hold. If one major holdout undercuts, Escorts Kubota may soften effective prices through trade-in bonuses rather than roll back list rates. The announcement is a signal on rural cost pass-through more than a precise rupee figure until dealer quotes land.",
+      "Why should I care?",
+      "If you buy or finance farm equipment, lock quotes before November if your dealer still honours October schemes. NBFCs and banks that lend against tractor hypothecation should stress-test default rates if EMI burdens rise without a matching income bump from crop prices. Investors in auto and farm OEMs should compare Escorts Kubota’s move with Mahindra and CNH India pricing in the same month. Watch December wholesale dispatch data from industry bodies and monsoon reservoir updates that drive rabi sowing intent.",
+    ],
+  },
+  {
+    slug: "igl-railway-png-lpg-replacement-october-2026",
+    title: "Northern Railway will switch 22 sites from LPG and diesel to piped gas",
+    summary:
+      "Indraprastha Gas Ltd and the Delhi division of Northern Railway signed an agreement on 31 October 2026 to supply piped natural gas to 22 railway establishments in Delhi-NCR, initially replacing about 500 kg of LPG and 2,500 litres of diesel daily under the centre’s PNG Drive 3.0 push.",
+    category: "industry",
+    companyOrSector: "City gas / railways",
+    publishedAt: "2026-10-31T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("igl-railway-png-lpg-replacement-october-2026"),
+    keyTakeaways: [
+      "IGL and Northern Railway’s Delhi division signed a piped gas supply pact on 31 October 2026 covering 22 establishments across Delhi-NCR.",
+      "Initial flow is about 3,000 standard cubic metres per day, displacing roughly 500 kg of LPG and 2,500 litres of diesel daily.",
+      "IGL expects demand from the railway sites to rise toward 8,000–10,000 scmd as kitchens and equipment convert, aligning with PNG Drive 3.0 targets.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Indraprastha Gas Ltd said it signed an agreement with the Delhi division of Northern Railway to supply piped natural gas to 22 railway establishments across Delhi and the National Capital Region. The pact sits under the government’s PNG Drive 3.0 campaign to replace cylinder and liquid fuels with grid-connected gas. IGL estimated initial consumption at about 3,000 standard cubic metres per day, which the company said would displace roughly 500 kilograms of liquefied petroleum gas and 2,500 litres of diesel each day. Coverage includes railway kitchens, workshops, and other institutional users that today rely on trucked cylinders or diesel burners. IGL added that as more equipment converts, demand from these sites could climb to between 8,000 and 10,000 standard cubic metres per day.",
+      "What does this mean?",
+      "Railway kitchens and maintenance depots are small cities inside the network: steady fuel load, predictable hours, and safety rules that favour piped gas once pipelines reach the gate. Switching them off LPG and diesel reduces last-mile cylinder handling and particulate emissions, but requires capital on internal piping and burner retrofits. For IGL, institutional anchors like railways smooth daytime load on the city grid and help justify pipeline extensions into industrial corridors. For passengers, the change is invisible until canteen menus or tender costs shift; savings accrue to the railway’s fuel budget and to air quality metrics state pollution boards track around major terminals.",
+      "Why should I care?",
+      "If you hold city gas distributor stocks, watch how PNG Drive 3.0 converts other public-sector campuses such as defence estates and hospitals in your licence area. Large LPG marketers should track institutional churn in NCR where piped networks deepen. Commuters benefit indirectly through cleaner air near major stations, but the financial payoff shows up in railway fuel budgets over quarters, not overnight. Follow IGL’s quarterly connection adds, PNGRB authorisations for new industrial corridors, and whether other zonal railways copy Northern Railway’s template.",
+    ],
+  },
+  {
+    slug: "muthoot-finance-gold-loan-q2-october-2026",
+    title: "Muthoot Finance grew gold loans sharply and raised its full-year guidance",
+    summary:
+      "Muthoot Finance Ltd reported on 31 October 2026 that consolidated loan assets rose 42% year on year to about ₹2.09 lakh crore at September-end, with gold loans driving growth, and management lifted FY27 gold-loan growth guidance by another 10% while citing new RBI lending rules that customers and staff are still adjusting to.",
+    category: "industry",
+    companyOrSector: "Gold finance / household credit",
+    publishedAt: "2026-10-31T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("muthoot-finance-gold-loan-q2-october-2026"),
+    keyTakeaways: [
+      "For the half year to September 2026, Muthoot Finance said consolidated loan assets grew 42% year on year to ₹2,09,317 crore, with consolidated profit after tax up 39% to ₹6,103 crore.",
+      "Standalone gold loan assets reached about ₹1.79 lakh crore; gold held as security rose to 204 tonnes from 196 tonnes at March 2026.",
+      "Managing director Alexander George Muthoot raised FY27 gold-loan growth guidance by 10% and said updated RBI gold-lending norms from 1 April 2026 will take a few quarters for customers and staff to absorb.",
+    ],
+    body: [
+      "What's going on here?",
+      "Muthoot Finance Ltd released results for the quarter and half year ended 30 September 2026 on 31 October 2026. The company said consolidated loan assets under management grew 42% year on year to ₹2,09,317 crore, while consolidated profit after tax rose 39% to ₹6,103 crore for the half year. Gold loans remained the engine: consolidated gold loan assets increased 46% to about ₹1,93,212 crore, and standalone gold loan assets reached about ₹1,79 lakh crore. Gold held in company vaults as security climbed to 204 tonnes from 196 tonnes at March 2026, and active customers increased by about five lakh in the half year to 69 lakh. Managing director Alexander George Muthoot said the firm raised its gold-loan growth guidance for financial year 2027 by an additional 10%. He also noted that the Reserve Bank of India’s updated gold-lending guidelines effective 1 April 2026 create a learning curve for staff and borrowers that should stabilise over the next few quarters.",
+      "What does this mean?",
+      "Gold loans sit between jewellery box and emergency credit for millions of Indian households. When prices stay elevated, the same gram pledges more rupees, which boosts ticket sizes without new customer acquisition. Muthoot’s tonne count and customer adds show that behaviour is still expanding, not just repricing old lockers. The RBI’s April rule refresh tightened documentation and loan-to-value practices industry-wide; lenders often see a temporary slowdown while branches retrain and customers bring updated KYC. Raising guidance in that environment signals management confidence that festive demand and rural liquidity will outweigh friction. Subsidiaries such as Belstar Microfinance and Muthoot Money added smaller unsecured and vehicle books, but the parent story remains bullion-backed credit.",
+      "Why should I care?",
+      "If you use gold loans for working capital, compare loan-to-value and renewal timelines across Muthoot, Manappuram, and banks after the new RBI norms. Investors should watch whether raised guidance holds once rule changes fully embed, and whether stage-three assets tick up when gold prices correct. Banks competing for secured retail credit may react with promotional rates on gold overdrafts. Track December quarter disbursement updates, any RBI follow-up circulars on gold appraisal, and festive auction data if borrowers struggle to repay after price volatility.",
+    ],
+  },
+  {
     slug: "sebi-cdsl-compliance-fine-october-2026",
     title: "SEBI fined CDSL ₹1 crore for demat back-office lapses",
     summary:
@@ -8040,6 +8160,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "meity-depa-ai-training-handbook-october-2026": "policy",
+  "india-scotch-bulk-import-tariff-dispute-october-2026": "policy",
+  "escorts-kubota-tractor-prices-november-2026": "markets",
+  "igl-railway-png-lpg-replacement-october-2026": "policy",
+  "muthoot-finance-gold-loan-q2-october-2026": "markets",
   "sebi-cdsl-compliance-fine-october-2026": "policy",
   "pnb-credit-card-fees-november-2026": "markets",
   "gail-gas-ipo-listing-nod-october-2026": "policy",
