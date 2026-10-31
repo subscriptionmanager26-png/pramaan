@@ -58,6 +58,8 @@ export function PramaanAgentChat() {
   const loadedThreadRef = useRef<string | null>(null);
   /** Id chosen for the current draft send (before URL updates). */
   const draftSendIdRef = useRef<string | null>(null);
+  /** Bumps on each thread/draft switch so in-flight loads don't clobber newer ones. */
+  const loadGenRef = useRef(0);
 
   /** Thread already has history on the server (sidebar), so we must fetch messages. */
   const isExistingThread = useMemo(
@@ -65,15 +67,39 @@ export function PramaanAgentChat() {
     [threads, threadId],
   );
 
+  const persistMessages = useCallback((tid: string, list: AgentMessage[]) => {
+    if (!tid) return;
+    void getPocketedgeSupabase()
+      .auth.getSession()
+      .then(({ data }) => {
+        writeChatCache(data.session?.user?.id || "", tid, list);
+      })
+      .catch(() => {
+        writeChatCache("", tid, list);
+      });
+  }, []);
+
+  /** Never replace local turns with an empty server snapshot (indexing lag / mid-send). */
+  const applyServerMessages = useCallback(
+    (tid: string, next: AgentMessage[]) => {
+      setMessages((prev) => {
+        if (!next.length && prev.length) return prev;
+        persistMessages(tid, next.length ? next : prev);
+        return next.length ? next : prev;
+      });
+    },
+    [persistMessages],
+  );
+
   const loadThread = useCallback(
-    async (headers: Record<string, string>, opts?: { includeLibrary?: boolean }) => {
+    async (headers: Record<string, string>, opts?: { includeLibrary?: boolean; signal?: AbortSignal }) => {
       if (!threadId) return;
       const includeLibrary = opts?.includeLibrary ?? false;
       const scope = includeLibrary ? "full" : "messages";
       const t0 = typeof performance !== "undefined" ? performance.now() : Date.now();
       const res = await fetch(
         `/api/agent/chat-state?threadId=${encodeURIComponent(threadId)}&limit=40&fileLimit=100&scope=${scope}`,
-        { headers, cache: "no-store" },
+        { headers, cache: "no-store", signal: opts?.signal },
       );
       const timing = res.headers.get("server-timing");
       if (typeof console !== "undefined") {
@@ -82,17 +108,12 @@ export function PramaanAgentChat() {
           timing,
         );
       }
-      if (!res.ok) return;
+      if (!res.ok) {
+        throw new Error(res.status === 401 ? "Sign in again to load this chat." : `Could not load chat (${res.status}).`);
+      }
       const json = await res.json();
       const next = (json.messages as AgentMessage[]) || [];
-      setMessages(next);
-      try {
-        const { data } = await getPocketedgeSupabase().auth.getSession();
-        const uid = data.session?.user?.id;
-        if (uid) writeChatCache(uid, threadId, next);
-      } catch {
-        // ignore cache write failures
-      }
+      applyServerMessages(threadId, next);
       if (includeLibrary) {
         const map: Record<string, OrderState> = {};
         for (const o of json.orders ?? []) {
@@ -103,28 +124,53 @@ export function PramaanAgentChat() {
         libraryLoaded.current = true;
       }
     },
-    [threadId],
+    [threadId, applyServerMessages],
   );
 
-  const reloadChat = useCallback(async () => {
-    if (!threadId) return;
-    try {
-      const headers = await authHeaders();
-      await loadThread(headers, { includeLibrary: libraryLoaded.current });
-      setAgentState("active");
-    } catch {
-      setAgentState("error");
-    } finally {
-      setReady(true);
-      loadedThreadRef.current = threadId;
-    }
-  }, [authHeaders, loadThread, threadId]);
+  const reloadChat = useCallback(
+    async (opts?: { signal?: AbortSignal; gen?: number; timedOut?: () => boolean }) => {
+      if (!threadId) return;
+      const stale = () => opts?.gen != null && loadGenRef.current !== opts.gen;
+      try {
+        const headers = await authHeaders();
+        if (stale()) return;
+        await loadThread(headers, { includeLibrary: libraryLoaded.current, signal: opts?.signal });
+        if (stale()) return;
+        setAgentState("active");
+        setError(null);
+      } catch (e) {
+        if (stale()) return;
+        // Keep composer usable — load failure should not brick the thread UI.
+        setAgentState("active");
+        if (opts?.timedOut?.()) {
+          setError("Loading this chat timed out. Try again.");
+        } else if (opts?.signal?.aborted) {
+          return;
+        } else {
+          setError(e instanceof Error ? e.message : "Could not load chat.");
+        }
+      } finally {
+        if (!stale()) {
+          setReady(true);
+          loadedThreadRef.current = threadId;
+        }
+      }
+    },
+    [authHeaders, loadThread, threadId],
+  );
 
   // Draft: composer immediately. URL thread: paint cache + fetch (don't wait on sidebar).
   useEffect(() => {
     if (isDraft) {
       const draftKey = `__draft__:${draftNonce}`;
-      if (loadedThreadRef.current === draftKey && ready) return;
+      // First send still on /ai — keep optimistic turns on this draft only.
+      if (draftSendIdRef.current && loadedThreadRef.current === draftKey) {
+        setReady(true);
+        setAgentState("active");
+        return;
+      }
+      draftSendIdRef.current = null;
+      loadGenRef.current += 1;
       libraryLoaded.current = false;
       setMessages([]);
       setOrders({});
@@ -133,62 +179,64 @@ export function PramaanAgentChat() {
       setAgentState("active");
       setReady(true);
       loadedThreadRef.current = draftKey;
-      draftSendIdRef.current = null;
       return;
     }
 
     if (!threadId) return;
 
-    if (draftSendIdRef.current === threadId) {
-      loadedThreadRef.current = threadId;
-      draftSendIdRef.current = null;
-      setReady(true);
-      setAgentState("active");
-      return;
+    const gen = ++loadGenRef.current;
+    const promoted = draftSendIdRef.current === threadId;
+    if (promoted) draftSendIdRef.current = null;
+
+    // Never gate the UI on network — "Loading conversation…" must not stick.
+    setReady(true);
+    setAgentState("active");
+
+    // Keep optimistic/cached turns visible while we revalidate — never skip the fetch.
+    if (!promoted) {
+      libraryLoaded.current = false;
+      setOrders({});
+      setFileLibrary([]);
+      setError(null);
+      // Memory seed is keyed by threadId only; session cache needs uid (async below).
+      const seeded = readChatCache("", threadId);
+      setMessages(seeded?.length ? seeded : []);
     }
 
-    if (loadedThreadRef.current === threadId && ready) return;
-
-    libraryLoaded.current = false;
-    setOrders({});
-    setFileLibrary([]);
-    setError(null);
-
-    let cancelled = false;
-    loadedThreadRef.current = threadId;
+    const controller = new AbortController();
+    let timedOut = false;
+    const timeout = window.setTimeout(() => {
+      timedOut = true;
+      controller.abort();
+    }, 20_000);
 
     void (async () => {
-      // Instant paint from session cache while network revalidates.
-      try {
-        const { data } = await getPocketedgeSupabase().auth.getSession();
-        const uid = data.session?.user?.id;
-        if (!cancelled && uid) {
+      if (!promoted) {
+        try {
+          const { data } = await getPocketedgeSupabase().auth.getSession();
+          if (loadGenRef.current !== gen) return;
+          const uid = data.session?.user?.id || "";
           const cached = readChatCache(uid, threadId);
-          if (cached?.length) {
-            setMessages(cached);
-            setReady(true);
-            setAgentState("active");
-          } else {
-            setMessages([]);
-            setReady(false);
-          }
-        } else if (!cancelled) {
-          setMessages([]);
-          setReady(false);
-        }
-      } catch {
-        if (!cancelled) {
-          setMessages([]);
-          setReady(false);
+          if (cached?.length) setMessages(cached);
+        } catch {
+          // keep seed / empty
         }
       }
-      if (!cancelled) await reloadChat();
+      if (loadGenRef.current !== gen) return;
+      await reloadChat({
+        signal: controller.signal,
+        gen,
+        timedOut: () => timedOut,
+      });
     })();
 
     return () => {
-      cancelled = true;
+      window.clearTimeout(timeout);
+      controller.abort();
+      // Invalidate only if this effect's gen is still current (Strict Mode / deps change).
+      if (loadGenRef.current === gen) loadGenRef.current += 1;
     };
-  }, [isDraft, threadId, reloadChat, ready, draftNonce]);
+  }, [isDraft, threadId, reloadChat, draftNonce]);
   // Lazy-load files/orders when the Files panel opens.
   useEffect(() => {
     if (!filesOpen || !threadId || !isExistingThread || libraryLoaded.current) return;
@@ -321,7 +369,11 @@ export function PramaanAgentChat() {
       actions: [],
       steps: ["Sending…"],
     };
-    setMessages((m) => [optimistic, ...m]);
+    setMessages((m) => {
+      const next = [optimistic, ...m];
+      persistMessages(sendThreadId, next);
+      return next;
+    });
     const title = q.trim() || "New chat";
     upsertThread({
       id: sendThreadId,
@@ -329,11 +381,31 @@ export function PramaanAgentChat() {
       updatedAt: new Date().toISOString(),
       working: true,
     });
+    // Stay on draft URL until POST succeeds — early ?t= remounts wipe optimistic state.
     if (promotedFromDraft) {
       draftSendIdRef.current = sendThreadId;
-      loadedThreadRef.current = sendThreadId;
-      router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+      loadedThreadRef.current = `__draft__:${draftNonce}`;
     }
+
+    const markFailed = (errText: string) => {
+      setMessages((m) => {
+        const next = m.map((x) =>
+          x.id === optimisticId
+            ? { ...x, status: "failed" as const, steps: [], error: errText }
+            : x,
+        );
+        persistMessages(sendThreadId, next);
+        return next;
+      });
+      upsertThread({
+        id: sendThreadId,
+        title: title.length > 72 ? `${title.slice(0, 72)}…` : title,
+        updatedAt: new Date().toISOString(),
+        working: false,
+      });
+      setError(errText);
+    };
+
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/messages", {
@@ -342,30 +414,48 @@ export function PramaanAgentChat() {
         body: JSON.stringify({
           text: q,
           threadId: sendThreadId,
+          // Stable for HTTP retries of this click — PA reuses the same job.
+          clientSendId: optimisticId,
           attachments: attachmentIds.length ? attachmentIds : undefined,
         }),
       });
       const json = await res.json();
       if (!res.ok) {
-        setMessages((m) => m.filter((x) => x.id !== optimisticId));
         const agentBusy = res.status === 409 || json?.error?.code === "agent_busy";
+        const errText = agentBusy
+          ? "Still finishing the last reply — give it a few seconds, then try again."
+          : json?.error?.message || json?.error || "Could not send message.";
         if (agentBusy && threadId) {
           await loadThread(headers);
           refreshThreads();
         }
-        setError(
-          agentBusy
-            ? "Still finishing the last reply — give it a few seconds, then try again."
-            : json?.error?.message || json?.error || "Could not send message.",
-        );
+        if (promotedFromDraft) {
+          draftSendIdRef.current = sendThreadId;
+          loadedThreadRef.current = sendThreadId;
+          router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+        }
+        markFailed(typeof errText === "string" ? errText : "Could not send message.");
         return false;
       }
       const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
       sentId = msg.id;
-      setMessages((m) => [msg, ...m.filter((x) => x.id !== optimisticId)]);
+      setMessages((m) => {
+        const next = [msg, ...m.filter((x) => x.id !== optimisticId)];
+        persistMessages(sendThreadId, next);
+        return next;
+      });
+      if (promotedFromDraft) {
+        draftSendIdRef.current = sendThreadId;
+        loadedThreadRef.current = sendThreadId;
+        router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+      }
       refreshThreads();
       const final = await streamMessage(msg.id, headers);
-      setMessages((m) => m.map((x) => (x.id === final.id ? final : x)));
+      setMessages((m) => {
+        const next = m.map((x) => (x.id === final.id ? final : x));
+        persistMessages(sendThreadId, next);
+        return next;
+      });
       await fetch(
         `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=50&scope=messages`,
         { headers, cache: "no-store" },
@@ -373,7 +463,7 @@ export function PramaanAgentChat() {
         .then(async (r) => {
           if (!r.ok) return;
           const body = await r.json();
-          setMessages((body.messages as AgentMessage[]) || []);
+          applyServerMessages(sendThreadId, (body.messages as AgentMessage[]) || []);
         })
         .catch(() => undefined);
       await refreshArtifacts();
@@ -384,26 +474,34 @@ export function PramaanAgentChat() {
         try {
           const headers = await authHeaders();
           await reconcileMessage(sentId, headers, 30_000);
-          if (threadId || draftSendIdRef.current) {
-            await fetch(
-              `/api/agent/chat-state?threadId=${encodeURIComponent(threadId || draftSendIdRef.current!)}&limit=50&scope=messages`,
-              { headers, cache: "no-store" },
-            )
-              .then(async (r) => {
-                if (!r.ok) return;
-                const body = await r.json();
-                setMessages((body.messages as AgentMessage[]) || []);
-              })
-              .catch(() => undefined);
+          await fetch(
+            `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=50&scope=messages`,
+            { headers, cache: "no-store" },
+          )
+            .then(async (r) => {
+              if (!r.ok) return;
+              const body = await r.json();
+              applyServerMessages(sendThreadId, (body.messages as AgentMessage[]) || []);
+            })
+            .catch(() => undefined);
+          if (promotedFromDraft && !threadId) {
+            draftSendIdRef.current = sendThreadId;
+            loadedThreadRef.current = sendThreadId;
+            router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
           }
           refreshThreads();
         } catch {
-          // keep the surfaced error below
+          markFailed(e instanceof Error ? e.message : "Something went wrong.");
         }
       } else {
-        setMessages((m) => m.filter((x) => x.id !== optimisticId));
+        if (promotedFromDraft) {
+          draftSendIdRef.current = sendThreadId;
+          loadedThreadRef.current = sendThreadId;
+          router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+        }
+        markFailed(e instanceof Error ? e.message : "Something went wrong.");
       }
-      setError(e instanceof Error ? e.message : "Something went wrong.");
+      if (sentId) setError(e instanceof Error ? e.message : "Something went wrong.");
       return false;
     } finally {
       setBusy(false);
@@ -441,12 +539,14 @@ export function PramaanAgentChat() {
   );
 
   const hasConversation = thread.length > 0;
+  /** Greeting only for a true draft — never flash "new chat" while on ?t=. */
+  const showEmptyHome = isDraft && !hasConversation;
   const greetName = auth.displayName?.split(/\s+/)[0] || "there";
 
   useEffect(() => {
-    setConversationLive(hasConversation);
+    setConversationLive(hasConversation || busy || Boolean(threadId));
     return () => setConversationLive(false);
-  }, [hasConversation, setConversationLive]);
+  }, [hasConversation, busy, threadId, setConversationLive]);
 
   if (!ready) {
     return (
@@ -479,9 +579,9 @@ export function PramaanAgentChat() {
       disabled={!chatActive || busy}
       getAuthHeaders={authHeaders}
       onSend={onSend}
-      suggestions={hasConversation ? undefined : SUGGESTIONS}
+      suggestions={showEmptyHome ? SUGGESTIONS : undefined}
       hint={
-        hasConversation
+        !showEmptyHome
           ? `PDF, CSV and Excel up to ${formatBytes(MAX_FILE_BYTES)}. Shift+Enter for a new line.`
           : undefined
       }
@@ -498,7 +598,7 @@ export function PramaanAgentChat() {
           </button>
         </div>
 
-        {!hasConversation ? (
+        {showEmptyHome ? (
           /* New chat: greeting + composer live in the screen body (not the site nav). */
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6">
             <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-8 pb-8">
@@ -535,11 +635,25 @@ export function PramaanAgentChat() {
                     getAuthHeaders={authHeaders}
                   />
                 ))}
+                {!hasConversation ? (
+                  <div className="space-y-3 py-8 text-center">
+                    <p className="text-sm text-ink-2">{error || "No messages in this chat yet."}</p>
+                    {error ? (
+                      <button
+                        type="button"
+                        className="btn-secondary text-sm"
+                        onClick={() => void reloadChat()}
+                      >
+                        Retry
+                      </button>
+                    ) : null}
+                  </div>
+                ) : null}
                 <ScrollAnchor version={scrollKey} />
               </div>
             </div>
             <div className="border-t border-line/70 bg-white/90 px-4 py-3 backdrop-blur-sm sm:px-6 sm:py-4">
-              {error ? (
+              {error && hasConversation ? (
                 <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
                   {error}
                 </p>

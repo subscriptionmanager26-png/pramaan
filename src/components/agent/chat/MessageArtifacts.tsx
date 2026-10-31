@@ -25,11 +25,16 @@ export function useThreadArtifacts(
   const [byMessage, setByMessage] = useState<Record<string, AgentArtifact[]>>({});
 
   const refresh = useCallback(async () => {
-    if (!messages.length) return;
+    // Failed / never-started turns have no files — skip so we don't trip reconcile on PA.
+    const eligible = messages.filter((m) => m.status === "completed" || m.status === "working");
+    if (!eligible.length) {
+      setByMessage({});
+      return;
+    }
     try {
       const headers = await getAuthHeaders();
       const entries = await Promise.all(
-        messages.map(async (m) => [m.id, await loadArtifacts(m.id, headers)] as const),
+        eligible.map(async (m) => [m.id, await loadArtifacts(m.id, headers)] as const),
       );
       setByMessage(Object.fromEntries(entries));
     } catch {

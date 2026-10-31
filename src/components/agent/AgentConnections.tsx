@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
-import { requestZerodhaLogin } from "@/lib/portfolio/zerodha-start";
+import { openZerodhaLoginTab } from "@/lib/portfolio/zerodha-start";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
 
 type McpRow = {
@@ -36,7 +36,6 @@ export function AgentConnections() {
   const [view, setView] = useState<ConnectionsView | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [loginUrl, setLoginUrl] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setError(null);
@@ -74,25 +73,28 @@ export function AgentConnections() {
     void load();
   }, [load]);
 
+  // After Kite login tab closes / user returns, refresh session status.
+  useEffect(() => {
+    const onFocus = () => void load();
+    window.addEventListener("focus", onFocus);
+    return () => window.removeEventListener("focus", onFocus);
+  }, [load]);
+
   async function zerodhaAction(action: "connect" | "disconnect" | "login") {
     setBusy(true);
     setError(null);
-    setLoginUrl(null);
     try {
       if (action === "connect" || action === "login") {
-        const result = await requestZerodhaLogin(action);
+        const result = await openZerodhaLoginTab(action);
         if (!result.ok) {
           setError(result.error);
           return;
         }
-        if ("url" in result) {
-          setLoginUrl(result.url);
-          await load();
+        // Give the new tab a moment, then refresh status.
+        window.setTimeout(() => {
+          void load();
           refreshThreads();
-          return;
-        }
-        await load();
-        refreshThreads();
+        }, 1500);
         return;
       }
       const headers = await authHeaders();
@@ -155,12 +157,12 @@ export function AgentConnections() {
           <div className="mt-4 flex flex-wrap gap-2">
             {!z?.connected ? (
               <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => void zerodhaAction("connect")}>
-                {busy ? "Connecting…" : "Connect Zerodha"}
+                {busy ? "Opening Zerodha…" : "Connect Zerodha"}
               </button>
             ) : (
               <>
                 <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => void zerodhaAction("login")}>
-                  {busy ? "Getting link…" : z.sessionActive ? "Refresh login" : "Log in on Zerodha"}
+                  {busy ? "Opening Zerodha…" : z.sessionActive ? "Refresh login" : "Log in on Zerodha"}
                 </button>
                 <button
                   type="button"
@@ -173,13 +175,9 @@ export function AgentConnections() {
               </>
             )}
           </div>
-          {loginUrl ? (
-            <p className="mt-4">
-              <a href={loginUrl} target="_blank" rel="noreferrer" className="btn-primary inline-flex text-sm">
-                Continue to Zerodha login →
-              </a>
-            </p>
-          ) : null}
+          <p className="mt-3 text-xs text-ink-3">
+            Opens Zerodha in a new tab. Finish login there, then come back — status refreshes when this window is focused.
+          </p>
         </section>
 
         <section className="rounded-2xl border border-line bg-white p-5 shadow-sm">

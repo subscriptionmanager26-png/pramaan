@@ -14,7 +14,7 @@ import {
 } from "@/lib/portfolio/holdings";
 import { runPortfolioImport } from "@/lib/portfolio/import-via-agent";
 import { FILE_PARSE_PROMPT, ZERODHA_IMPORT_PROMPT } from "@/lib/portfolio/setup-prompts";
-import { requestZerodhaLogin } from "@/lib/portfolio/zerodha-start";
+import { openZerodhaLoginTab, requestZerodhaLogin } from "@/lib/portfolio/zerodha-start";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 type DraftRow = {
@@ -277,15 +277,22 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     setError(null);
     setLoginUrl(null);
     try {
+      // Prefer one-click new-tab form (popup-blocker safe). Fall back to JSON + link.
+      const opened = await openZerodhaLoginTab(action);
+      if (opened.ok) {
+        setZerodhaGate("need_login");
+        return;
+      }
       const result = await requestZerodhaLogin(action);
       if (!result.ok) {
-        setError(result.error);
+        setError(result.error || opened.error);
         setZerodhaGate(action === "connect" ? "need_connect" : "need_login");
         return;
       }
       if ("url" in result) {
         setLoginUrl(result.url);
         setZerodhaGate("need_login");
+        window.open(result.url, "_blank", "noopener,noreferrer");
         return;
       }
       setZerodhaGate("ready");
@@ -502,7 +509,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                 disabled={zerodhaBusy}
                 onClick={() => void startZerodhaLogin("connect")}
               >
-                {zerodhaBusy ? "Getting login link…" : "Get Kite login link"}
+                {zerodhaBusy ? "Opening Zerodha…" : "Connect Zerodha"}
               </button>
             </div>
             {loginUrl ? (
@@ -510,6 +517,9 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                 Continue to Zerodha →
               </a>
             ) : null}
+            <p className="text-[12px] text-ink-3">
+              Finish login in the Zerodha tab, return here, then import holdings.
+            </p>
           </div>
         ) : null}
 
@@ -517,8 +527,8 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
             <p className="text-[14px] text-ink-2">
               {loginUrl
-                ? "Open the Kite login link, finish auth, then import holdings."
-                : "If Kite is already linked under Connections, import directly. Otherwise get a login link."}
+                ? "Finish Zerodha login in the other tab, then import holdings."
+                : "Log in on Zerodha if needed, then import holdings."}
             </p>
             <div className="flex flex-wrap gap-2">
               {loginUrl ? (
@@ -532,7 +542,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                   disabled={zerodhaBusy}
                   onClick={() => void startZerodhaLogin("login")}
                 >
-                  {zerodhaBusy ? "Getting login link…" : "Get Kite login link"}
+                  {zerodhaBusy ? "Opening Zerodha…" : "Log in on Zerodha"}
                 </button>
               )}
               <button

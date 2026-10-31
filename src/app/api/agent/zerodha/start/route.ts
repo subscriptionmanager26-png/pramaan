@@ -75,6 +75,7 @@ export async function POST(request: Request) {
     const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/zerodha`, {
       method: "POST",
       body: JSON.stringify({ action }),
+      signal: AbortSignal.timeout(45_000),
     });
     const body = (await res.json().catch(() => ({}))) as {
       url?: string;

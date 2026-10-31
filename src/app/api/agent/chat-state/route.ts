@@ -32,14 +32,39 @@ export async function GET(request: Request) {
   const qs = new URLSearchParams({ limit: messageLimit, threadId });
 
   const upstreamStart = Date.now();
+  // Cap upstream wait — a hung PA list previously left the client on "Loading conversation…".
+  const upstreamSignal = AbortSignal.timeout(20_000);
   const fetches = messagesOnly
-    ? [paFetch(`${userPath}/messages?${qs.toString()}`)]
+    ? [paFetch(`${userPath}/messages?${qs.toString()}`, { signal: upstreamSignal })]
     : [
-        paFetch(`${userPath}/messages?${qs.toString()}`),
-        paFetch(`${userPath}/orders`),
-        paFetch(`${userPath}/files?limit=${encodeURIComponent(fileLimit)}`),
+        paFetch(`${userPath}/messages?${qs.toString()}`, { signal: upstreamSignal }),
+        paFetch(`${userPath}/orders`, { signal: upstreamSignal }),
+        paFetch(`${userPath}/files?limit=${encodeURIComponent(fileLimit)}`, { signal: upstreamSignal }),
       ];
-  const [messagesRes, ordersRes, filesRes] = await Promise.all(fetches);
+  let messagesRes: Response;
+  let ordersRes: Response | undefined;
+  let filesRes: Response | undefined;
+  try {
+    [messagesRes, ordersRes, filesRes] = await Promise.all(fetches);
+  } catch (error) {
+    const timedOut =
+      error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError");
+    return NextResponse.json(
+      {
+        messages: [],
+        orders: [],
+        files: [],
+        errors: { messages: timedOut ? 504 : 502 },
+      },
+      {
+        status: timedOut ? 504 : 502,
+        headers: {
+          "Server-Timing": `auth;dur=${authMs},upstream;dur=${Date.now() - upstreamStart},total;dur=${Date.now() - t0}`,
+          "Cache-Control": "private, no-cache",
+        },
+      },
+    );
+  }
   const [messagesBody, ordersBody, filesBody] = await Promise.all([
     messagesRes.json().catch(() => ({})),
     ordersRes ? ordersRes.json().catch(() => ({})) : Promise.resolve({}),

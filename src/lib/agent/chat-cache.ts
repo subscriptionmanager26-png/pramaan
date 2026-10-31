@@ -7,12 +7,20 @@ type CachePayload = {
   messages: AgentMessage[];
 };
 
+/** Survives React remounts during draft→?t= navigation (sessionStorage may lag). */
+const memorySeeds = new Map<string, { updatedAt: number; messages: AgentMessage[] }>();
+
 function keyFor(userId: string, threadId: string) {
   return `pe:agent-chat:v1:${userId}:${threadId}`;
 }
 
 export function readChatCache(userId: string, threadId: string): AgentMessage[] | null {
-  if (typeof window === "undefined" || !userId || !threadId) return null;
+  if (!threadId) return null;
+  const mem = memorySeeds.get(threadId);
+  if (mem && Date.now() - mem.updatedAt <= TTL_MS && mem.messages.length) {
+    return mem.messages;
+  }
+  if (typeof window === "undefined" || !userId) return null;
   try {
     const raw = window.sessionStorage.getItem(keyFor(userId, threadId));
     if (!raw) return null;
@@ -26,7 +34,9 @@ export function readChatCache(userId: string, threadId: string): AgentMessage[] 
 }
 
 export function writeChatCache(userId: string, threadId: string, messages: AgentMessage[]) {
-  if (typeof window === "undefined" || !userId || !threadId) return;
+  if (!threadId) return;
+  memorySeeds.set(threadId, { updatedAt: Date.now(), messages });
+  if (typeof window === "undefined" || !userId) return;
   try {
     const payload: CachePayload = { updatedAt: Date.now(), messages };
     window.sessionStorage.setItem(keyFor(userId, threadId), JSON.stringify(payload));
@@ -36,6 +46,8 @@ export function writeChatCache(userId: string, threadId: string, messages: Agent
 }
 
 export function clearChatCache(userId?: string, threadId?: string) {
+  if (threadId) memorySeeds.delete(threadId);
+  else memorySeeds.clear();
   if (typeof window === "undefined") return;
   try {
     if (userId && threadId) {

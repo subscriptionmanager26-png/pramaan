@@ -5,6 +5,7 @@ import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 export async function POST(request: Request) {
   if (!personalAgentsConfigured()) {
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
   const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/zerodha`, {
     method: "POST",
     body: JSON.stringify(payload),
+    signal: AbortSignal.timeout(45_000),
   });
   const body = await res.json().catch(() => ({}));
   return NextResponse.json(body, { status: res.status });

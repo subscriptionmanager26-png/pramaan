@@ -1,14 +1,50 @@
-import { cachedPocketedgeAccessToken, pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
+import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 export type ZerodhaLoginResult =
   | { ok: true; url: string }
   | { ok: true; loggedInAs: string }
   | { ok: false; error: string };
 
-/** Ask personal-agents for a Kite login URL (Bearer JSON — same path Connections uses). */
+/**
+ * One-click Kite login: form POST in a new tab (survives popup blockers).
+ * The start route redirects the tab to Zerodha — no about:blank, no second click.
+ */
+export async function openZerodhaLoginTab(action: "connect" | "login"): Promise<{ ok: true } | { ok: false; error: string }> {
+  try {
+    const headers = await pocketedgeAuthHeaders();
+    const token = headers.Authorization?.replace(/^Bearer\s+/i, "").trim();
+    if (!token) return { ok: false, error: "Sign in required." };
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "/api/agent/zerodha/start";
+    form.target = "_blank";
+    form.rel = "noopener";
+    form.style.display = "none";
+
+    const fields: Record<string, string> = {
+      action,
+      access_token: token,
+      returnTo: typeof window !== "undefined" ? `${window.location.pathname}${window.location.search}` : "/ai/connections",
+    };
+    for (const [name, value] of Object.entries(fields)) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      form.appendChild(input);
+    }
+    document.body.appendChild(form);
+    form.submit();
+    form.remove();
+    return { ok: true };
+  } catch {
+    return { ok: false, error: "Could not open Zerodha login." };
+  }
+}
+
+/** JSON fallback when a form tab cannot be used (tests / embedded). */
 export async function requestZerodhaLogin(action: "connect" | "login"): Promise<ZerodhaLoginResult> {
-  // Warm cache for any follow-up calls; ignore failures here.
-  void cachedPocketedgeAccessToken();
   try {
     const headers = await pocketedgeAuthHeaders();
     const res = await fetch("/api/agent/zerodha", {
@@ -38,14 +74,14 @@ export async function requestZerodhaLogin(action: "connect" | "login"): Promise<
     if (typeof json.loggedInAs === "string" && json.loggedInAs) {
       return { ok: true, loggedInAs: json.loggedInAs };
     }
-    return { ok: false, error: "Zerodha did not return a login link. Try Connections, or retry in a minute." };
+    return { ok: false, error: "Zerodha did not return a login link. Try again in a minute." };
   } catch (err) {
     const timedOut =
       err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message));
     return {
       ok: false,
       error: timedOut
-        ? "Zerodha timed out. Open Connections to link Kite, then import here."
+        ? "Zerodha timed out talking to Kite. Try again in a minute."
         : "Zerodha action failed.",
     };
   }
