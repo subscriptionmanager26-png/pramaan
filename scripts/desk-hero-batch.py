@@ -553,6 +553,50 @@ def sun_pharma_assam_eye(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([980, 440, 1100, 520], fill=BLUE)
 
 
+def sebi_cdsl_compliance(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 180, 480, 560], fill=BLUE)
+    d.rectangle([140, 220, 440, 520], fill=CREAM)
+    for y in range(260, 480, 36):
+        d.rectangle([180, y, 400, y + 16], fill=YELLOW if y % 72 else RED)
+    d.polygon([(640, 200), (760, 260), (760, 500), (640, 560), (520, 500), (520, 260)], fill=RED)
+    d.line([(700, 380), (1100, 380)], fill=GOLD, width=6)
+
+
+def pnb_credit_card_fees(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 220, 480, 520], radius=24, fill=RED)
+    d.rounded_rectangle([160, 280, 440, 460], radius=16, fill=CREAM)
+    for i, h in enumerate([80, 140, 200, 280]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, YELLOW, RED, BLUE][i])
+    d.polygon([(900, 180), (980, 220), (900, 260)], fill=GOLD)
+
+
+def gail_gas_ipo(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 280, 320, 480], fill=YELLOW)
+    d.rectangle([280, 360, 520, 420], fill=BLUE)
+    d.polygon([(640, 520), (720, 420), (900, 400), (1080, 320), (1160, 260)], fill=RED)
+    for x in range(680, 1120, 100):
+        d.rectangle([x, 440, x + 40, 520], fill=BLUE if x % 200 else YELLOW)
+
+
+def granules_fda_483(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 160, 420, 580], fill=CREAM, outline=GOLD, width=4)
+    for y in range(200, 520, 48):
+        d.line([(140, y), (380, y)], fill=INK, width=2)
+    d.rectangle([520, 200, 620, 540], fill=RED)
+    d.ellipse([700, 300, 900, 500], outline=BLUE, width=8)
+    d.line([(760, 360), (840, 440)], fill=RED, width=6)
+
+
+def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 200, 360, 560], fill=BLUE)
+    d.rectangle([120, 240, 320, 520], fill=CREAM)
+    d.rectangle([420, 200, 700, 560], fill=RED)
+    d.rectangle([460, 240, 660, 520], fill=YELLOW)
+    d.polygon([(820, 280), (1120, 320), (1120, 480), (820, 520)], fill=GOLD)
+    d.line([(80, 380), (1180, 380)], fill=INK, width=2)
+
+
 def main() -> None:
     save("blue-star-ac-demand-october-2026", blue_star_ac)
     save("symphony-overseas-cooling-expansion-october-2026", symphony_overseas)
@@ -612,6 +656,11 @@ def main() -> None:
     save("tata-starbucks-local-menu-expansion-october-2026", tata_starbucks_local)
     save("jio-platforms-q2-first-results-post-ipo-october-2026", jio_q2_post_ipo)
     save("sun-pharma-assam-eye-drops-plant-halt-october-2026", sun_pharma_assam_eye)
+    save("sebi-cdsl-compliance-fine-october-2026", sebi_cdsl_compliance)
+    save("pnb-credit-card-fees-november-2026", pnb_credit_card_fees)
+    save("gail-gas-ipo-listing-nod-october-2026", gail_gas_ipo)
+    save("granules-india-fda-form-483-october-2026", granules_fda_483)
+    save("capillary-czech-impersonation-fraud-october-2026", capillary_impersonation_fraud)
 
 
 if __name__ == "__main__":

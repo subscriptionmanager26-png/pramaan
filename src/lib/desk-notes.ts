@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-cdsl-compliance-fine-october-2026",
+    title: "SEBI fined CDSL ₹1 crore for demat back-office lapses",
+    summary:
+      "Market regulator SEBI on 31 October 2026 ordered Central Depository Services (India) Ltd to pay a ₹1 crore penalty after an inspection found it failed to tell both sides when pledge requests were rejected and had gaps in disaster-recovery testing during FY2023-24.",
+    category: "industry",
+    companyOrSector: "Capital markets / depository",
+    publishedAt: "2026-10-31T11:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-cdsl-compliance-fine-october-2026"),
+    keyTakeaways: [
+      "SEBI imposed a ₹1 crore fine on CDSL on 31 October 2026 for multiple compliance lapses identified in a FY2023-24 inspection.",
+      "The order cited failures to communicate reasons when pledge requests were rejected to both pledgor and pledgee depository participants.",
+      "CDSL must pay within 45 days or face recovery proceedings; the 102-page order also flagged shortcomings in disaster recovery drills.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, the Securities and Exchange Board of India penalised Central Depository Services (India) Ltd ₹1 crore after an inspection of its operations during financial year 2023-24. The market regulator’s order, running more than 100 pages, said CDSL did not always tell both the pledgor and pledgee depository participants why a pledge request was rejected. It also recorded gaps in how disaster recovery drills were run. CDSL has been directed to pay the fine within 45 days, after which SEBI may start recovery proceedings. CDSL and its larger peer NSDL hold the electronic records behind most Indian demat accounts, so back-office messaging and continuity drills sit at the centre of how shares move between brokers, lenders, and investors.",
+      "What does this mean?",
+      "When you pledge shares for a loan or margin, the depository is the switchboard that confirms whether the lien is accepted. If one broker sees a rejection without a clear reason, settlement queues stall and clients chase calls while risk teams guess at fixes. Regulators treat that plumbing as seriously as they treat trading rules because the same infrastructure underpins IPO allotments, corporate actions, and FPI flows. Disaster recovery tests matter for the same reason: a half-day outage during a heavy settlement day can freeze lakhs of accounts. The fine is not a trading ban, but it signals that depository lapses will be priced in cash and published in detail, which keeps boards focused on process fixes rather than press releases.",
+      "Why should I care?",
+      "If you use pledged shares for trading limits or loans, ask your broker how rejections are communicated and keep screenshots of depository messages during tight settlement weeks. Corporate secretaries should confirm pledge and corporate-action timelines with both CDSL and NSDL paths. Investors in depository or broker stocks should read whether peers face similar orders and how fast remediation closes. Watch CDSL’s payment confirmation, any follow-up SEBI circulars on pledge messaging, and whether NSDL discloses parallel audit outcomes in its own filings.",
+    ],
+  },
+  {
+    slug: "pnb-credit-card-fees-november-2026",
+    title: "PNB will start charging more on several credit card uses from 1 November",
+    summary:
+      "Punjab National Bank said on 31 October 2026 that Visa and RuPay credit cards will carry revised fees from 1 November on cash withdrawals, late payments, failed auto-debits, utility bill payments, reward redemptions, and some statement services that were previously free or cheaper.",
+    category: "industry",
+    companyOrSector: "Retail banking / cards",
+    publishedAt: "2026-10-31T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pnb-credit-card-fees-november-2026"),
+    keyTakeaways: [
+      "PNB told cardholders on 31 October 2026 that fee schedules on Visa and RuPay cards change from 1 November 2026.",
+      "Late fees scale with outstanding balance, with no charge up to ₹500 due and up to ₹1,200 for dues above ₹50,000.",
+      "Failed cheque or auto-debit instructions on fixed-deposit-linked cards face ₹100 per instrument; duplicate statements older than three months cost ₹50 per month while e-statements stay free.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Punjab National Bank published revised charges for its Visa and RuPay credit cards effective 1 November 2026. The bank said cash withdrawals, late payments, failed payment instructions, utility bill payments, reward point redemptions, and several ancillary services will carry new fees. Late payment charges now step up with the amount overdue: nothing on dues of ₹500 or less, ₹500 on ₹501 to ₹1,000, ₹750 up to ₹10,000, ₹1,000 up to ₹50,000, and ₹1,200 above that band. Fixed-deposit-linked cards keep a different late-fee formula tied to minimum amount due. Failed cheque or auto-debit attempts on those cards attract ₹100 per instrument. E-statements remain free, but duplicate statements older than three months will cost ₹50 per month.",
+      "What does this mean?",
+      "Public-sector banks are recalibrating card economics after a stretch of heavy reward spending and softer revolving balances industry data has flagged elsewhere this month. When free services pick up explicit rupee tags, households shift behaviour: fewer ATM cash draws on cards, tighter autopay setups before due dates, and less casual use of cards for utility bills that now carry explicit charges. Tiered late fees make small slips cheap but make large rollovers expensive quickly, which pushes revolvers either to pay down or to balance-transfer. The timing, a day before November billing cycles roll, gives cardholders one statement cycle to adjust habits before penalties bite.",
+      "Why should I care?",
+      "If you hold a PNB credit card, open the bank’s official fee grid for your variant before the November statement and set autopay high enough to avoid stepped late fees. Compare utility bill payments through net banking or UPI if card convenience fees now apply. Savers using FD-linked cards should watch failed debit attempts that trigger ₹100 hits. Track whether other PSU and private banks copy PNB’s menu this quarter, and revisit your card stack if rewards no longer cover the new charge sheet.",
+    ],
+  },
+  {
+    slug: "gail-gas-ipo-listing-nod-october-2026",
+    title: "GAIL’s board cleared a plan to list its city-gas unit on the stock market",
+    summary:
+      "State-owned GAIL (India) Ltd said on 31 October 2026 that its board gave in-principle approval to list wholly owned subsidiary GAIL Gas Ltd through an initial public offering, proposing to sell up to 25% of the unit’s equity while keeping control with the parent.",
+    category: "industry",
+    companyOrSector: "Energy / city gas distribution",
+    publishedAt: "2026-10-31T11:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gail-gas-ipo-listing-nod-october-2026"),
+    keyTakeaways: [
+      "GAIL’s board on 31 October 2026 approved an in-principle plan to list GAIL Gas Ltd via an IPO, according to an exchange filing.",
+      "The proposal envisages diluting up to 25% of GAIL Gas equity while GAIL retains the majority stake.",
+      "GAIL Gas runs city gas distribution and related businesses; final offer size, pricing, and timeline still depend on regulator and market approvals.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, GAIL (India) Ltd told stock exchanges that its board approved, in principle, listing shares of wholly owned subsidiary GAIL Gas Ltd through an initial public offering. The filing proposed selling up to 25% of GAIL Gas equity to the public while GAIL keeps control. GAIL Gas operates city gas distribution and related downstream activities that pipe natural gas to homes, vehicles, and industrial users across several authorisations. The board nod is an early corporate step; offer size, pricing, banker appointments, and Securities and Exchange Board of India filings still lie ahead. The move fits a wider pattern of state energy firms carving out consumer-facing or pipeline units for market funding while the parent holds strategic blocks.",
+      "What does this mean?",
+      "City gas networks need steady capex for pipelines, compressors, and safety systems long before tariffs fully reflect costs. A partial IPO lets GAIL Gas raise equity without putting the entire GAIL balance sheet on the block, and gives investors a cleaner play on CNG pumps and piped cooking gas rather than interstate transmission margins. For households, listing does not by itself change the rupees per scm on the bill, but a listed entity faces quarterly disclosure on connection adds, cost pass-through petitions, and safety capex. Competitors such as IGL, MGL, and Gujarat Gas offer templates for how minority floats trade when volume growth is steady but regulated returns cap upside.",
+      "Why should I care?",
+      "If you live in a GAIL Gas licence area, watch tariff orders and connection timelines after any IPO roadshow, because capital raised should fund expansion rather than delay maintenance. Investors comparing gas utilities should model GAIL Gas separately from GAIL’s transmission and trading lines when prospectus details arrive. Policymakers tracking energy security should read whether the offer funds last-mile coverage or mainly balance-sheet cleanup. Follow SEBI draft filings, merchant banker appointments, and state petroleum and natural gas ministry comments on pipeline safety spend tied to the unit.",
+    ],
+  },
+  {
+    slug: "granules-india-fda-form-483-october-2026",
+    title: "US inspectors left Granules India with eleven observations at a Hyderabad plant",
+    summary:
+      "Granules India Ltd said on 31 October 2026 that US Food and Drug Administration inspectors finished a good manufacturing practice review at its Gagillapur, Hyderabad finished-dose site with a Form 483 listing eleven observations, the first US audit there since a February 2025 warning letter tied to an earlier inspection.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / manufacturing",
+    publishedAt: "2026-10-31T11:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("granules-india-fda-form-483-october-2026"),
+    keyTakeaways: [
+      "Granules India disclosed on 31 October 2026 that a US FDA inspection of its Gagillapur Hyderabad facility from 19 to 30 October ended with Form 483 and eleven observations.",
+      "The company said none of the observations related to data integrity or cross-contamination and that manufacturing and distribution continue.",
+      "Management pledged a comprehensive agency response within fifteen days; results for the September quarter are due on 2 November 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Granules India Ltd filed with exchanges that United States Food and Drug Administration investigators completed a current good manufacturing practice inspection at its finished dosage plant in Gagillapur, Hyderabad, running from 19 to 30 October 2026. The visit ended with Form 483 carrying eleven observations. The company said this was the first US audit of the site since a warning letter dated 26 February 2025 that followed an inspection in August and September 2024. Granules stated that none of the observations involved data integrity or cross-contamination, and described them as tied to investigations, change control, equipment qualification, visual inspection controls, and documentation practices. It said production and shipments from the site continue and that it will submit a comprehensive response within fifteen days. The disclosure landed ahead of quarterly results scheduled for 2 November 2026.",
+      "What does this mean?",
+      "Form 483 is the agency’s way of flagging conditions that could lead to adulterated product if left unfixed; it is not by itself an import ban, but it raises remediation work and follow-up inspections. For a manufacturer exporting to the US, observation counts and tone matter to wholesale buyers long before share prices react. Granules’ emphasis on non-data-integrity issues suggests the fixes are procedural rather than fraud-related, yet eleven points still mean capital and trainer hours on the shop floor. The prior warning letter means regulators already had this site on a shorter leash, so response quality and closure speed will be watched closely. Generic drug buyers often dual-source capsules and tablets; one plant’s slip can shift orders to peers with cleaner inspection letters.",
+      "Why should I care?",
+      "If you invest in Indian pharma exporters, read the full 483 when published and compare management’s corrective timeline with the February 2025 warning letter closure plan. Hospitals and wholesalers sourcing from Granules should confirm alternate approvals for critical SKUs while responses are pending. Employees at the Hyderabad site should expect audit-heavy weeks even if lines keep running. Watch the 2 November earnings call for remediation cost guidance, any customer audit visits, and whether the US agency schedules a reinspection before granting new product approvals from the plant.",
+    ],
+  },
+  {
+    slug: "capillary-czech-impersonation-fraud-october-2026",
+    title: "Capillary lost more than €3 million in a Czech impersonation scam",
+    summary:
+      "Capillary Technologies Ltd said on 31 October 2026 that a KPMG forensic review found its Czech subsidiary Session M Czech Republic likely lost €3.04 million to payment-diversion fraud built on impersonated executives and lawyers, fake domains, and off-channel WhatsApp messages rather than mailbox hacking.",
+    category: "industry",
+    companyOrSector: "SaaS / corporate governance",
+    publishedAt: "2026-10-31T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("capillary-czech-impersonation-fraud-october-2026"),
+    keyTakeaways: [
+      "Capillary filed a KPMG summary on 31 October 2026 showing Session M Czech Republic paid about €3.04 million abroad in four transfers between 26 June and 2 July 2026.",
+      "KPMG said the pattern matched impersonation of executives and legal advisers, a lookalike law-firm domain, and social engineering on WhatsApp and personal email, not malware or spoofed corporate mail.",
+      "The company had announced an investigation on 31 July 2026; KPMG could neither prove nor rule out deepfake audio because no call recordings were available.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Capillary Technologies Ltd published a summary of KPMG forensic findings into losses at Session M Czech Republic s.r.o., a step-down subsidiary. KPMG concluded the evidence was most consistent with payment-diversion fraud using impersonation of executives and legal professionals, backed by a fake non-disclosure narrative about a confidential acquisition. Fraudsters used invoices, payment requests, bank details, and confirmations sent from a domain resembling a legitimate law firm site, plus WhatsApp and personal email that sat outside corporate monitoring. Four payments totalling about €3.04 million moved overseas between 26 June and 2 July 2026. KPMG reported no signs of malware, compromised mailboxes, or classic email spoofing, and noted that messages passed standard sender authentication checks, which still do not prove a payment instruction is genuine.",
+      "What does this mean?",
+      "Finance teams usually train for phishing links, not for multi-week scripted deals that blend fake legal paperwork with urgent acquisition stories. When crooks stay on WhatsApp and personal inboxes, treasury controls that only scan corporate email never see the thread. Passing SPF and DKIM on a lookalike domain shows why payment release needs call-back verification to known numbers, not reply-all on the same chain. Listed SaaS firms with global subsidiaries inherit this attack surface even when core India operations look untouched. Capillary’s July disclosure and October forensic summary also remind boards that cyber insurance and crime riders may exclude social-engineering losses unless specific riders exist.",
+      "Why should I care?",
+      "If you approve vendor or acquisition payments, require voice confirmation on stored numbers before any new bank account goes live, especially when the story is secret or rushed. Finance heads should ban payment instructions that arrive only on WhatsApp or personal Gmail for material amounts. Investors in mid-cap tech should ask on earnings calls how subsidiaries authenticate legal advisers and whether dual controls cover euro and dollar wires. Watch Capillary’s recovery efforts, any regulatory filings in the Czech Republic, and whether insurers pay claims after KPMG’s impersonation finding.",
+    ],
+  },
+  {
     slug: "policybazaar-posp-irdai-draft-october-2026",
     title:
       "Policybazaar says its agent network may need a new shape under IRDAI’s draft rules",
@@ -7920,6 +8040,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-cdsl-compliance-fine-october-2026": "policy",
+  "pnb-credit-card-fees-november-2026": "markets",
+  "gail-gas-ipo-listing-nod-october-2026": "policy",
+  "granules-india-fda-form-483-october-2026": "companies",
+  "capillary-czech-impersonation-fraud-october-2026": "companies",
   "policybazaar-posp-irdai-draft-october-2026": "policy",
   "delhivery-q2-parcel-scale-october-2026": "markets",
   "powergrid-transmission-cable-demand-october-2026": "policy",
