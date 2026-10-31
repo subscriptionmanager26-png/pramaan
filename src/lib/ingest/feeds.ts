@@ -1,4 +1,10 @@
 import { XMLParser } from "fast-xml-parser";
+import {
+  cloudflareBrowserConfigured,
+  fetchRenderedMarkdown,
+  throttleCloudflareBrowser,
+  twitterSyndicationProfileUrl,
+} from "./cloudflare-browser";
 
 const parser = new XMLParser({
   ignoreAttributes: false,
@@ -217,6 +223,43 @@ export function parseTwitterJinaMarkdown(
       url: statusId ? `https://x.com/${screen}/status/${statusId}` : `https://x.com/${screen}`,
       summary: text.slice(0, 280),
       publishedAt: statusId ? twitterSnowflakeToIso(statusId) : new Date().toISOString(),
+    });
+    if (items.length >= limit) break;
+  }
+
+  return items;
+}
+
+/**
+ * Parse markdown from Twitter's syndication embed timeline (via Browser Rendering).
+ * @see https://syndication.twitter.com/srv/timeline-profile/screen-name/{handle}
+ */
+export function parseTwitterSyndicationMarkdown(
+  markdown: string,
+  handle: string,
+  limit = 6,
+): ParsedItem[] {
+  const screen = handle.replace(/^@/, "");
+  const re = new RegExp(
+    String.raw`(?:twitter\.com|x\.com)/${screen}/status/(\d+)[^)]*\)\s*\n+\s*([\s\S]*?)(?=\n+\s*\[[\d,.KMB]+\s+[\d,.KMB]*\s*Replies|\n+\s*\[!\[|$)`,
+    "gi",
+  );
+  const items: ParsedItem[] = [];
+  const seen = new Set<string>();
+
+  for (const match of markdown.matchAll(re)) {
+    const statusId = match[1];
+    if (!statusId || seen.has(statusId)) continue;
+    seen.add(statusId);
+
+    let text = cleanTweetMarkdown(match[2] ?? "");
+    if (!text || text.length < 4) text = "Post";
+    const title = text.length > 140 ? `${text.slice(0, 137)}…` : text;
+    items.push({
+      title,
+      url: `https://x.com/${screen}/status/${statusId}`,
+      summary: text.slice(0, 280),
+      publishedAt: twitterSnowflakeToIso(statusId),
     });
     if (items.length >= limit) break;
   }
@@ -617,7 +660,31 @@ export async function fetchTwitterViaTwitterViewerNet(
 }
 
 /**
- * Guest GraphQL → twitter-viewer.com → twitterviewer.net.
+ * Twitter syndication embed via Cloudflare Browser Rendering (no Turnstile).
+ * Requires CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_API_TOKEN.
+ */
+export async function fetchTwitterViaCloudflareBrowser(
+  handle: string,
+  limit = 6,
+): Promise<ParsedItem[]> {
+  if (!cloudflareBrowserConfigured()) {
+    throw new Error("Cloudflare Browser Rendering is not configured");
+  }
+  const screen = handle.replace(/^@/, "");
+  await throttleCloudflareBrowser();
+  const markdown = await fetchRenderedMarkdown(twitterSyndicationProfileUrl(screen), {
+    waitUntil: "domcontentloaded",
+    waitForTimeoutMs: Number(process.env.CF_BROWSER_WAIT_MS ?? 12_000),
+  });
+  const items = parseTwitterSyndicationMarkdown(markdown, screen, limit);
+  if (items.length === 0) {
+    throw new Error(`Cloudflare syndication timeline empty for @${screen}`);
+  }
+  return items;
+}
+
+/**
+ * Guest GraphQL → twitter-viewer.com → Cloudflare syndication → twitterviewer.net.
  */
 export async function fetchTwitterTimeline(handle: string, limit = 6): Promise<ParsedItem[]> {
   const screen = handle.replace(/^@/, "");
@@ -626,8 +693,19 @@ export async function fetchTwitterTimeline(handle: string, limit = 6): Promise<P
   const sources: Array<{ name: string; run: () => Promise<ParsedItem[]> }> = [
     { name: "guest", run: () => fetchTwitterViaGuest(screen, limit) },
     { name: "twitter-viewer.com", run: () => fetchTwitterViaTwitterViewer(screen, limit) },
-    { name: "twitterviewer.net", run: () => fetchTwitterViaTwitterViewerNet(screen, limit) },
   ];
+
+  if (cloudflareBrowserConfigured()) {
+    sources.push({
+      name: "cloudflare-syndication",
+      run: () => fetchTwitterViaCloudflareBrowser(screen, limit),
+    });
+  }
+
+  sources.push({
+    name: "twitterviewer.net",
+    run: () => fetchTwitterViaTwitterViewerNet(screen, limit),
+  });
 
   for (const source of sources) {
     try {

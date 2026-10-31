@@ -10,6 +10,8 @@ Every **6 hours**, the **News desk** Cursor agent:
 
 **Ingest is separate.** Twitter/Substack collection is handled by the existing advisor-feed automation (`npm run af:ingest` → `af_*` tables). The desk agent **consumes** that data; it does not replace ingest.
 
+Twitter ingest credentials and Cloudflare Browser Rendering setup: [`advisor-feed-ingest.md`](./advisor-feed-ingest.md).
+
 ## Schedule
 
 - **Cron:** `0 */6 * * *` (UTC) — align the desk agent with this.
