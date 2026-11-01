@@ -704,6 +704,43 @@ def ramkrishna_forgings_cv(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, RED, BLUE][i])
 
 
+def affle_perion_acquisition(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 200, 420, 560], fill=BLUE)
+    d.polygon([(200, 260), (320, 220), (360, 340), (240, 380)], fill=YELLOW)
+    d.rectangle([480, 240, 820, 520], fill=RED)
+    d.ellipse([540, 300, 760, 460], outline=GOLD, width=5)
+    for i, x in enumerate([860, 960, 1060]):
+        d.polygon([(x, 520), (x + 60, 460), (x + 120, 520)], fill=[BLUE, RED, YELLOW][i])
+
+
+def maruti_west_asia_shipping(d: ImageDraw.ImageDraw) -> None:
+    d.line([(80, 520), (1180, 520)], fill=GOLD, width=4)
+    d.polygon([(720, 520), (860, 420), (1000, 520)], fill=BLUE)
+    d.polygon([(300, 520), (420, 480), (540, 520), (420, 560)], fill=RED)
+    d.line([(540, 520), (720, 460)], fill=INK, width=3)
+    d.polygon([(900, 200), (980, 260), (900, 320), (820, 260)], fill=YELLOW)
+    d.rectangle([120, 280, 200, 360], fill=GOLD)
+
+
+def power_grid_q2_dividend(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 100 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.line([(80, 560), (520, 560)], fill=INK, width=2)
+    d.polygon([(640, 200), (760, 260), (880, 200), (1000, 260), (880, 320), (760, 260)], fill=GOLD)
+    d.rectangle([700, 380, 920, 560], fill=BLUE)
+    d.line([(700, 440), (920, 440)], fill=CREAM, width=8)
+
+
+def lic_housing_loan_rates(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 280, 480, 560], fill=BLUE)
+    d.polygon([(180, 320), (420, 320), (420, 520), (180, 520)], fill=CREAM)
+    for i, h in enumerate([80, 140, 220, 300]):
+        x = 620 + i * 80
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, RED, BLUE][i])
+    d.polygon([(980, 240), (1120, 300), (980, 360), (840, 300)], fill=GOLD)
+
+
 def coal_india_power_supply(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([80, 420, 520, 560], fill=INK)
     for i, h in enumerate([80, 140, 200, 260, 320]):
@@ -831,6 +868,10 @@ def main() -> None:
     save("gail-gas-ipo-listing-nod-october-2026", gail_gas_ipo)
     save("granules-india-fda-form-483-october-2026", granules_fda_483)
     save("capillary-czech-impersonation-fraud-october-2026", capillary_impersonation_fraud)
+    save("affle-perion-acquisition-november-2026", affle_perion_acquisition)
+    save("maruti-west-asia-shipping-disruption-november-2026", maruti_west_asia_shipping)
+    save("power-grid-q2-dividend-november-2026", power_grid_q2_dividend)
+    save("lic-housing-loan-rate-hikes-november-2026", lic_housing_loan_rates)
     save("coal-india-power-supply-record-october-2026", coal_india_power_supply)
     save("festive-auto-wholesale-october-2026", festive_auto_wholesale)
     save("irdai-scale-based-regulation-november-2026", irdai_scale_regulation)

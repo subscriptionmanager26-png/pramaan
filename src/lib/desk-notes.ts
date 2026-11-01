@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "affle-perion-acquisition-november-2026",
+    title: "Affle agreed to buy Israel’s Perion for about $420 million in cash",
+    summary:
+      "Affle 3i Ltd said on 1 November 2026 that its Israel-based subsidiary signed a definitive agreement to acquire all outstanding shares of Perion Network Ltd at $11.70 each in an all-cash deal valuing Perion at roughly $420 million, combining Perion’s retail media, connected TV, and digital-out-of-home reach with Affle’s mobile performance marketing to push its cost-per-converted-user model into developed markets.",
+    category: "industry",
+    companyOrSector: "Ad tech / M&A",
+    publishedAt: "2026-11-01T18:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("affle-perion-acquisition-november-2026"),
+    keyTakeaways: [
+      "Affle’s step-down unit will pay $11.70 per Perion share in cash for an implied equity value of about $420 million; Perion had roughly $228 million of cash on its balance sheet as of 30 September 2026 and no financial debt.",
+      "Perion runs omnichannel ad tech across retail media, CTV, DOOH, and social inventory; Affle said it will extend CPCU-style performance pricing into CTV-to-cart and DOOH-to-cart use cases for Perion’s advertiser base.",
+      "Both boards approved the deal; closing needs regulatory clearances and Perion shareholder approval, with a go-shop window for Perion and an expected close in early 2027.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 1 November 2026, Gurugram-listed Affle 3i Ltd announced that Affle 3iL Ltd, its Israel-based step-down subsidiary, signed a definitive agreement to acquire every outstanding share of Perion Network Ltd, a Tel Aviv-headquartered ad technology company listed on Nasdaq and the Tel Aviv Stock Exchange. The offer price is $11.70 per share in cash, implying an equity value of about $420 million. Affle said Perion carries no financial debt and held roughly $228 million of cash at end-September 2026. Perion’s Perion One stack and Outmax AI agent serve advertisers across retail media, connected TV, digital out-of-home, and other digital channels, mainly in North America and Israel. Affle plans to fund the purchase with committed bank financing plus internal cash and expects to remain net debt free immediately after closing.",
+      "What does this mean?",
+      "Affle built its business on mobile user acquisition and CPCU pricing in emerging markets. Perion adds upper-funnel inventory and brand budgets in developed economies where CTV and retail media spend is growing faster than classic app-install campaigns. If Affle can attach its conversion analytics to Perion’s campaigns, it can pitch retailers and agencies a single story from awareness through checkout rather than siloed media buys. The risk is integration across cultures, product roadmaps, and advertiser contracts while Perion shareholders and regulators still have to approve the merger. Affle guided that revenue recognition may shift as it moves more Perion contracts toward CPCU economics, which can depress reported top line even as unit economics improve.",
+      "Why should I care?",
+      "If you run performance marketing for an Indian consumer brand expanding overseas, watch whether Affle bundles Perion inventory with its existing India data stack or keeps separate sales teams. Investors in Indian ad-tech and IT services names should treat the deal as a bet on cross-border M&A execution, not just headline revenue scale. Employees and partners at Perion should expect brand continuity but possible changes to incentive plans once CPCU models roll in. Track Perion shareholder meeting dates, US and Israeli antitrust filings, rival bids during the go-shop period, and Affle’s disclosure on financing covenants before the expected early-2027 close.",
+    ],
+  },
+  {
+    slug: "maruti-west-asia-shipping-disruption-november-2026",
+    title: "Maruti said West Asia shipping routes are getting harder, not easier",
+    summary:
+      "Maruti Suzuki India Ltd said on 1 November 2026 that shipping disruptions in West Asia have worsened even on alternate export lanes, yet October exports still jumped about 59% to 49,872 units, highlighting how Indian carmakers are rerouting cargoes while conflict keeps pressure on logistics costs and September-quarter margins.",
+    category: "industry",
+    companyOrSector: "Automobiles / exports",
+    publishedAt: "2026-11-01T18:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maruti-west-asia-shipping-disruption-november-2026"),
+    keyTakeaways: [
+      "Senior executive officer Rahul Bharti told reporters on 1 November that Middle East shipping problems have intensified and that an alternate route Maruti had been using is also under strain.",
+      "Maruti exported 49,872 vehicles in October 2026, up about 59% year on year, accounting for more than half of India’s passenger-vehicle exports despite the lane disruption.",
+      "The company also cited a steep drop in shipments to Mexico after import duties rose from 20% to 50%, while EV exports to Europe and Japan are helping diversify destinations.",
+    ],
+    body: [
+      "What's going on here?",
+      "At a press briefing on 1 November 2026, Maruti Suzuki India Ltd said West Asia shipping lanes remain volatile months after conflict disrupted familiar corridors through the Gulf. Rahul Bharti, senior executive officer for corporate affairs, told reporters the situation has slightly worsened and that even the alternate routing Maruti adopted is now facing problems. Despite that, the company exported 49,872 cars in October 2026, up about 59% from a year earlier, and still supplies more than half of India’s passenger-vehicle exports. Bharti said current export numbers are achieved while Mexico volumes have fallen sharply after duties on Indian cars jumped from 20% to 50%. Maruti is also shipping its e-Vitara electric SUV to Europe and Japan, opening developed-market outlets as it reroutes around blocked paths.",
+      "What does this mean?",
+      "Indian factory export models depend on predictable freight times and insurance costs. When primary and backup sea routes both tighten, automakers either absorb higher logistics bills or delay deliveries, which shows up in quarterly margins even if wholesale volumes look strong. Maruti’s September-quarter profit still fell about 26% on commodity inflation and war-related costs, a pattern Hyundai Motor India echoed. Export growth therefore reflects demand and model mix more than easy shipping economics. Diversifying toward EV shipments to Europe and Japan reduces reliance on any one troubled corridor but adds certification and charging-standard work that ICE exports avoid.",
+      "Why should I care?",
+      "If you buy a car tied to imported components or wait-listed export trims, delivery timelines may slip when reroutes add days at port. Fleet buyers sourcing from Indian plants for Africa or the Middle East should confirm freight quotes monthly rather than locking annual contracts. Component suppliers on Just-in-Time schedules to export lines should stress-test inventory buffers. Investors should read export unit data alongside management commentary on freight and metal costs, not treat October wholesales alone as margin proof. Watch Strait of Hormuz insurance premiums, peer comments from Hyundai and two-wheeler exporters, and whether Mexico duty relief talks restart.",
+    ],
+  },
+  {
+    slug: "power-grid-q2-dividend-november-2026",
+    title: "Power Grid posted an 8% profit rise and declared a ₹3 interim dividend",
+    summary:
+      "Power Grid Corporation of India Ltd reported on 1 November 2026 that consolidated net profit rose about 8.4% year on year to ₹3,866.16 crore in the September 2026 quarter, revenue from operations increased roughly 3%, the board declared a ₹3 per share interim dividend payable on 30 November with record date 6 November, and approved selling its entire stake in Central Transmission Utility of India Ltd to Grid Controller of India Ltd.",
+    category: "industry",
+    companyOrSector: "Power transmission",
+    publishedAt: "2026-11-01T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("power-grid-q2-dividend-november-2026"),
+    keyTakeaways: [
+      "Consolidated net profit was ₹3,866.16 crore in Q2 FY27 versus ₹3,566.08 crore a year earlier; revenue from operations rose about 3% to ₹11,816.22 crore.",
+      "The board approved a first interim dividend of ₹3 per share (30% of face value) with record date 6 November 2026 and payment on 30 November 2026.",
+      "Power Grid agreed to sell its full equity stake in CTUIL to GRID-INDIA for an initial ₹73.46 crore plus a true-up amount, with closing within three months of signing the share purchase agreement.",
+    ],
+    body: [
+      "What's going on here?",
+      "Power Grid Corporation of India Ltd published September-quarter results on 1 November 2026. Consolidated net profit increased about 8.4% year on year to ₹3,866.16 crore, while revenue from operations rose roughly 3% to ₹11,816.22 crore. Sequential profit grew about 7.4%. The state-owned transmission utility said it incurred consolidated capital expenditure of ₹16,864 crore and capitalised assets worth ₹9,300 crore in the first half of FY27, with gross fixed assets at about ₹3.29 lakh crore including lease receivables. Its network spanned about 1,87,576 circuit kilometres of lines and 293 substations at quarter end, with average system availability at 99.81%. Directors declared a first interim dividend of ₹3 per equity share for FY27. Separately, the board approved transferring Power Grid’s entire stake in Central Transmission Utility of India Ltd to Grid Controller of India Ltd for an initial payment of ₹73.46 crore subject to a closing true-up.",
+      "What does this mean?",
+      "Regulated transmission tariffs and a large fixed asset base make Power Grid a cash-generating utility whose earnings move with commissioned lines and allowed returns more than with daily power prices. Steady profit growth plus an interim dividend signal confidence in near-term cash flows even as capex stays elevated to connect renewables and industrial load. Selling CTUIL to GRID-INDIA concentrates grid planning functions with the national load despatch operator, a structural tweak rather than a retail tariff change, but it shows the government is still reorganising how transmission planning and operations sit within public-sector hands. Investors often treat Power Grid as a bond proxy; dividend timing ahead of the festive week matters for income portfolios.",
+      "Why should I care?",
+      "If you hold Power Grid for dividends, mark the 6 November 2026 record date and expect payment on 30 November. Industrial users bidding for new factory connections should still track whether interstate lines in their state commission on schedule, because dividend strength does not by itself shorten connection queues. Bond investors watching PSU supply should pair Power Grid’s capex narrative with recent chairman comments about possibly lifting FY27 spending above ₹37,000 crore. Follow GRID-INDIA’s CTUIL integration timeline, third-quarter capex disclosures, and any revised annual guidance on transmission project awards.",
+    ],
+  },
+  {
+    slug: "lic-housing-loan-rate-hikes-november-2026",
+    title: "LIC Housing Finance raised home loan rates again this month",
+    summary:
+      "LIC Housing Finance Ltd managing director Sandeep Kumar told businessline on 1 November 2026 that the housing financier lifted lending rates by up to 15 basis points two months ago and by up to 25 basis points effective that day on existing and new loans, targeting double-digit portfolio growth to about ₹3.5 lakh crore while expanding project finance and loan-against-property share.",
+    category: "industry",
+    companyOrSector: "Housing finance",
+    publishedAt: "2026-11-01T17:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lic-housing-loan-rate-hikes-november-2026"),
+    keyTakeaways: [
+      "LIC Housing raised rates by up to 15 basis points about two months before 1 November and implemented a further hike of up to 25 basis points on 1 November across existing and fresh loans.",
+      "Outstanding loans stood at about ₹3.26 lakh crore, up 4.6% year on year; management guides to at least 10% portfolio growth over the next two quarters toward roughly ₹3.5 lakh crore.",
+      "The lender wants non-home-loan products, especially loan against property, to reach about 20% of the book by year end and is targeting about ₹4,000 crore of fresh project-finance sanctions this fiscal.",
+    ],
+    body: [
+      "What's going on here?",
+      "In an interview published 1 November 2026, LIC Housing Finance Ltd chief Sandeep Kumar said the company increased home loan rates by up to 15 basis points roughly two months earlier and implemented another increase of up to 25 basis points effective that day on both existing portfolios and new disbursements. The moves follow Reserve Bank of India tightening that has pushed up banks’ marginal cost of funds. LIC Housing’s outstanding book was about ₹3.26 lakh crore, up 4.6% year on year, with average ticket sizes near ₹32–33 lakh and typical loan lives of seven to eight years. Kumar said the lender still aims for at least 10% growth over the next two quarters, taking the book toward about ₹3.5 lakh crore, while guiding 12–14% disbursement growth for the full year.",
+      "What does this mean?",
+      "Housing finance companies pass policy rates into EMIs with a lag. When a lender raises rates twice within a quarter on existing customers, floating-rate borrowers see immediate payment jumps, which can cool refinance activity and stretch affordability even if festive marketing continues. LIC Housing is simultaneously pushing higher-margin loan-against-property and project finance to diversify away from salaried home loans that still dominate more than 80% of its mix. That strategy can support margins if asset quality holds, but project finance carries concentration risk if residential sales slow in specific cities. Affordable housing remains a separate vertical awaiting board approval for a dedicated structure next year.",
+      "Why should I care?",
+      "If you are shopping for a home loan this season, compare floating-rate quotes from housing finance companies against public-sector bank festive schemes and ask when your EMI resets after recent hikes. Existing LIC Housing borrowers on floating plans should recalculate budgets now rather than after the next policy meeting. Builders relying on project-finance tie-ups should confirm sanction timelines if the lender prioritises LAP and self-employed segments. Investors should watch November disbursement data and any uptick in early delinquencies after back-to-back rate moves. Track RBI commentary on transmission, peer rate boards from HDFC Ltd and PNB Housing, and LIC Housing’s affordable-housing board decision.",
+    ],
+  },
+  {
     slug: "coal-india-power-supply-record-october-2026",
     title: "Coal India shipped a record 57 million tonnes to power plants in October",
     summary:
@@ -8520,6 +8616,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "affle-perion-acquisition-november-2026": "companies",
+  "maruti-west-asia-shipping-disruption-november-2026": "markets",
+  "power-grid-q2-dividend-november-2026": "policy",
+  "lic-housing-loan-rate-hikes-november-2026": "policy",
   "coal-india-power-supply-record-october-2026": "policy",
   "festive-auto-wholesale-october-2026": "markets",
   "irdai-scale-based-regulation-november-2026": "policy",
