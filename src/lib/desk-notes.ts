@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "supreme-infrastructure-nclt-debt-settlement-october-2026",
+    title: "Supreme Infrastructure won more time to finish paying ₹2,200 crore to its lenders",
+    summary:
+      "On 31 October 2026, reporting said Supreme Infrastructure India Ltd moved closer to closing a court-approved compromise on about ₹2,200.36 crore owed to 14 financial creditors after the National Company Law Tribunal extended the payment deadline to 31 October and ordered escrow steps with State Bank of India, Punjab National Bank, and Union Bank of India.",
+    category: "industry",
+    companyOrSector: "Infrastructure / distressed debt",
+    publishedAt: "2026-11-01T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("supreme-infrastructure-nclt-debt-settlement-october-2026"),
+    keyTakeaways: [
+      "Supreme Infrastructure is resolving roughly ₹2,200.36 crore of legacy principal through a Scheme of Compromise and Arrangement under Sections 230 and 231 of the Companies Act, not a conventional insolvency resolution process.",
+      "The NCLT Mumbai bench passed an order on 28 October 2026 after mutually agreed minutes with SBI, PNB, and Union Bank, extending completion of payments to 31 October 2026.",
+      "The tribunal directed the lead bank to operationalise an escrow arrangement within two working days and addressed appropriation of funds and release of securities tied to the settlement.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, business reporting said Supreme Infrastructure India Ltd had moved closer to settling about ₹2,200.36 crore owed to 14 financial creditors. The company is pursuing a court-sanctioned Scheme of Compromise and Arrangement under Sections 230 and 231 of the Companies Act, 2013, rather than a standard corporate insolvency resolution track. The National Company Law Tribunal, Mumbai bench, issued an order on 28 October 2026 after Supreme Infrastructure and its three remaining lenders filed mutually agreed minutes on 26 October. Those lenders are State Bank of India, Punjab National Bank, and Union Bank of India. The tribunal extended the deadline to complete outstanding payments to 31 October 2026 and told the lead bank to operationalise an escrow arrangement within two working days. The order also covers how funds are appropriated and when securities and charges can be released as the compromise closes.",
+      "What does this mean?",
+      "Construction and EPC firms that ran up large bank debt in earlier cycles often need a bespoke compromise when full insolvency would destroy operating contracts. An escrow-led settlement gives lenders visibility on cash flows while the company keeps working on projects. Extending the payment date to 31 October shows the banks still see a path to recovery rather than forcing liquidation. For other stressed builders, the case is a reminder that Section 230 schemes can run parallel to, or instead of, insolvency courts if creditors align on a haircut and timeline. Bond and trade creditors left outside the three-bank core must still watch whether the scheme treats them fairly when securities are released.",
+      "Why should I care?",
+      "If you supply materials to Supreme Infrastructure or hold its bonds, track escrow funding confirmations and whether the 31 October payment window actually closes without another extension. Banks with exposure to mid-sized infra names should read the NCLT order for how lead-bank escrow is structured. Investors in listed construction peers should not treat one compromise as sector-wide relief, but it signals that public-sector lenders will still negotiate when assets and cash flows remain. Watch exchange disclosures on scheme completion, any rating agency updates, and whether remaining creditors challenge the security release.",
+    ],
+  },
+  {
+    slug: "lanxess-bpcl-industrial-lubricants-mou-october-2026",
+    title: "LANXESS and BPCL signed a pact to localise advanced industrial lubricants",
+    summary:
+      "On 31 October 2026, specialty chemicals firm LANXESS and Bharat Petroleum Corporation Ltd said they entered a non-exclusive memorandum of understanding to explore advanced industrial lubricants, specialty fluids, OEM approvals, and localisation of additive technologies for Indian factories and equipment makers.",
+    category: "industry",
+    companyOrSector: "Specialty chemicals / energy",
+    publishedAt: "2026-11-01T00:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lanxess-bpcl-industrial-lubricants-mou-october-2026"),
+    keyTakeaways: [
+      "LANXESS and BPCL announced on 31 October 2026 a framework to evaluate technical and commercial opportunities in industrial lubricant additives, specialty fluids, and related applications.",
+      "The MoU aims at OEM qualification, local formulation, and long-term supply for industrial customers, combining LANXESS’s global additive expertise with BPCL’s base-oil and domestic marketing reach.",
+      "The agreement is non-binding and exploratory; commercial launches would still need plant trials, approvals, and pricing decisions.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, LANXESS and Bharat Petroleum Corporation Ltd announced a non-exclusive memorandum of understanding to explore cooperation on advanced industrial lubricants and specialty fluid solutions in India. The pact sets a framework to study technical options, commercial models, and customer segments rather than committing to a single product on day one. LANXESS brings global lubricant additive chemistry, formulation know-how, and existing original equipment manufacturer relationships. BPCL contributes domestic market reach, base-oil infrastructure, and relationships with industrial buyers and distributors. Public statements said the partners want to pursue OEM approvals, deepen localisation, and build long-term value for factories, mining fleets, and power equipment operators that depend on reliable lubricant supply.",
+      "What does this mean?",
+      "Industrial lubricants sit upstream of manufacturing uptime: when additives are imported and qualified slowly, plant maintenance teams pay in downtime and foreign exchange. Pairing a global specialty chemicals player with a state-owned refiner-marketer is a bet that India’s factory and infrastructure build-out will need locally tested formulations, not only repackaged imports. OEM approval work is slow and technical; the MoU signals intent to share that cost before either side commits capital to blending assets. For customers, competition between integrated oil companies and specialty houses can improve service levels and shorten lead times if trials succeed. Nothing in a memorandum guarantees price relief; the near-term change is a clearer roadmap for qualification and local blending options.",
+      "Why should I care?",
+      "If you run maintenance procurement for a factory, power plant, or logistics fleet, watch whether BPCL and LANXESS publish joint qualification data for your equipment categories over the next year. Equipment makers seeking domestic additive partners should track OEM approval timelines that might shorten versus import-only routes. Investors in BPCL or listed specialty chemical names should treat the MoU as option value, not revenue until contracts are signed. Policy watchers interested in import substitution in industrial inputs should note how many such pacts convert to onshore blending capacity. Track pilot plant announcements, OEM bulletins, and any BPCL capex linked to specialty lubricant blocks.",
+    ],
+  },
+  {
+    slug: "ambuja-ihcl-bengal-hospitality-investment-october-2026",
+    title: "Ambuja Neotia and IHCL pledged up to ₹3,000 crore for Bengal hotels",
+    summary:
+      "On 31 October 2026, Ambuja Neotia and Indian Hotels Company Ltd said they would invest about ₹2,700 to ₹3,000 crore over five to seven years on nine hospitality projects across West Bengal, while opening AltAir House IHCL SeleQtions properties in Kolkata and Siliguri under an expanded franchise partnership.",
+    category: "industry",
+    companyOrSector: "Travel / hospitality",
+    publishedAt: "2026-11-01T00:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ambuja-ihcl-bengal-hospitality-investment-october-2026"),
+    keyTakeaways: [
+      "Ambuja Neotia and IHCL unveiled AltAir House IHCL SeleQtions hotels in Kolkata and Siliguri on 31 October 2026, alongside a ₹2,700 to ₹3,000 crore investment plan for nine upcoming Bengal projects.",
+      "The pipeline spans Kolkata, Raichak, Digha, Siliguri, Lataguri, Kalimpong, and Darjeeling, and would take the partners from 11 operating properties in the state toward 20 when complete.",
+      "Ambuja Neotia chairman Harshavardhan Neotia said the hospitality spend sits inside a broader ₹15,000 crore vision for hospitality, healthcare, and real estate in West Bengal over the same horizon.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 31 October 2026, Ambuja Neotia and Indian Hotels Company Ltd announced new AltAir House IHCL SeleQtions hotels in Kolkata and Siliguri and a multi-year investment programme for West Bengal tourism. The groups said Ambuja Neotia would commit about ₹2,700 to ₹3,000 crore over five to seven years across nine projects in Kolkata, Raichak, Digha, Siliguri, Lataguri, Kalimpong, and Darjeeling. The Kolkata property offers 42 rooms at Ecospace Business Park in New Town; the Siliguri site within Uttorayon Township offers 60 rooms and event space for large gatherings. The plan includes a ₹100 crore expansion at Taj Chia Kutir Resort and Spa in Darjeeling with additional keys and banqueting space. IHCL managing director Puneet Chhatwal framed the openings as franchise-led growth under the SeleQtions boutique platform, while Neotia tied the spend to confidence in Bengal’s mix of cities, tea country, and Himalayan destinations.",
+      "What does this mean?",
+      "Domestic leisure and meetings travel still attracts long-dated capital when operators believe state tourism infrastructure and air/rail links can fill beds through the year, not only peak holiday weeks. A ₹3,000 crore hospitality pipeline creates construction jobs immediately and housekeeping, F&B, and local sourcing roles once keys open. Franchise arrangements let IHCL scale brands without owning every brick, while Ambuja Neotia carries much of the development risk and land-side relationships. Competing chains will watch occupancy and average rates in Siliguri and Darjeeling corridors before copying similar Kutir and SeleQtions clusters. The pledge is not a single booking surge; it is a bet that Bengali and inbound travellers will pay for differentiated design-led hotels outside metro cores.",
+      "Why should I care?",
+      "If you work in hotel construction, interior supply, or local tourism services in north Bengal and the Kolkata periphery, bid calendars may expand as each project moves from announcement to ground-breaking. Event planners and wedding buyers gain new inventory in Siliguri and expanded banqueting in Darjeeling once expansions finish. Residents should expect more hospitality employment and indirect GST-bearing spend, though traffic and municipal services near new townships will need monitoring. Investors in IHCL should read franchise fee flows separately from owned-hotel capex. Watch project-specific land approvals, IHCL signings for Taj Kutir and AltAir House locations named in the release, and occupancy data after the festive quarter.",
+    ],
+  },
+  {
     slug: "sebi-eki-energy-md-bar-october-2026",
     title: "SEBI barred EKI Energy’s managing director for a year over misstated accounts",
     summary:
@@ -8280,6 +8352,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "supreme-infrastructure-nclt-debt-settlement-october-2026": "companies",
+  "lanxess-bpcl-industrial-lubricants-mou-october-2026": "policy",
+  "ambuja-ihcl-bengal-hospitality-investment-october-2026": "markets",
   "sebi-eki-energy-md-bar-october-2026": "policy",
   "india-tax-devolution-festive-october-2026": "policy",
   "lpg-under-recovery-december-370-october-2026": "policy",
