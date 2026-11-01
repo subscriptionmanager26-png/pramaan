@@ -704,6 +704,41 @@ def ramkrishna_forgings_cv(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, RED, BLUE][i])
 
 
+def coal_india_power_supply(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 420, 520, 560], fill=INK)
+    for i, h in enumerate([80, 140, 200, 260, 320]):
+        x = 120 + i * 70
+        d.rectangle([x, 420 - h, x + 50, 420], fill=[RED, YELLOW, BLUE, RED, YELLOW][i])
+    d.line([(560, 560), (1180, 560)], fill=GOLD, width=4)
+    for i, x in enumerate([620, 760, 900, 1040]):
+        d.rectangle([x, 480, x + 80, 560], fill=BLUE)
+        d.polygon([(x + 40, 440), (x + 100, 480), (x + 40, 520)], fill=RED)
+    d.ellipse([900, 180, 1100, 380], outline=YELLOW, width=6)
+
+
+def festive_auto_wholesale(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 380, 480, 520], fill=RED)
+    d.ellipse([140, 500, 220, 580], fill=INK)
+    d.ellipse([360, 500, 440, 580], fill=INK)
+    d.rectangle([220, 320, 360, 400], fill=BLUE)
+    for i, h in enumerate([100, 180, 260, 340, 420]):
+        x = 560 + i * 70
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, RED, BLUE, YELLOW, RED][i])
+    d.polygon([(980, 200), (1120, 260), (1120, 340), (980, 400), (840, 340), (840, 260)], fill=GOLD)
+
+
+def irdai_scale_regulation(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([80, 160, 240, 320, 400]):
+        w = 100 + i * 40
+        x = 80 + i * 55
+        d.rectangle([x, 560 - h, x + w, 560], fill=[BLUE, RED, YELLOW, BLUE, RED][i % 5])
+    d.line([(80, 560), (1180, 560)], fill=INK, width=2)
+    d.rectangle([720, 160, 1120, 520], fill=CREAM, outline=GOLD, width=4)
+    d.line([(720, 340), (1120, 340)], fill=GOLD, width=0)
+    d.polygon([(820, 200), (1020, 200), (1020, 280), (820, 280)], fill=BLUE)
+    d.polygon([(820, 380), (1020, 380), (1020, 460), (820, 460)], fill=RED)
+
+
 def muthoot_gold_loan(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([120, 200, 420, 520], fill=GOLD)
     d.rectangle([160, 240, 380, 480], fill=YELLOW)
@@ -796,6 +831,9 @@ def main() -> None:
     save("gail-gas-ipo-listing-nod-october-2026", gail_gas_ipo)
     save("granules-india-fda-form-483-october-2026", granules_fda_483)
     save("capillary-czech-impersonation-fraud-october-2026", capillary_impersonation_fraud)
+    save("coal-india-power-supply-record-october-2026", coal_india_power_supply)
+    save("festive-auto-wholesale-october-2026", festive_auto_wholesale)
+    save("irdai-scale-based-regulation-november-2026", irdai_scale_regulation)
     save("reliance-o2c-export-routes-q2-october-2026", reliance_export_routes)
     save("corporate-offsite-travel-rebound-october-2026", corporate_offsite_travel)
     save("strides-pharma-ex-us-revenue-q2-october-2026", strides_ex_us)

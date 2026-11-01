@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "coal-india-power-supply-record-october-2026",
+    title: "Coal India shipped a record 57 million tonnes to power plants in October",
+    summary:
+      "Coal India Ltd said on 1 November 2026 that it supplied about 57.1 million tonnes of coal to the power sector in October, up roughly 19% year on year and the highest monthly total in its history, while overall offtake crossed 70 million tonnes for the first time and average power-sector rake loadings hit 310 per day despite unseasonal rain, Puja holidays, and cyclone disruption.",
+    category: "industry",
+    companyOrSector: "Coal / power",
+    publishedAt: "2026-11-01T12:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("coal-india-power-supply-record-october-2026"),
+    keyTakeaways: [
+      "Power-sector coal supplies reached 57.1 million tonnes in October 2026 versus about 48 million tonnes a year earlier, crossing the prior monthly high of 56.5 million tonnes set in May 2024.",
+      "October production rose 19.3% year on year to 67.2 million tonnes, a record for that month; total offtake was 70.3 million tonnes, also a company first.",
+      "Coal India reported average power-sector rake loadings of 310 per day in October, beating the previous October-era benchmark tied to March peak seasons, while e-auction premiums averaged about 140% over notified prices.",
+    ],
+    body: [
+      "What's going on here?",
+      "Coal India Ltd issued an update on 1 November 2026 covering October operations. The state-owned miner said it supplied about 57.1 million tonnes of coal to thermal power plants during the month, up roughly 19% from October 2025 and above any prior monthly power-sector dispatch in its history. Total coal offtake reached 70.3 million tonnes, the first time the company crossed 70 million tonnes in a single month. Production for October hit 67.2 million tonnes, also a record for that calendar month, with strong growth at subsidiaries such as Mahanadi Coalfields and South Eastern Coalfields. Executives said unseasonal rainfall, Puja festivities, and cyclone-related disruption made the result harder to achieve. Reporting in the same window noted that many domestic coal-based plants still carried critically low stocks earlier in October, underlining why faster mine-to-plant movement matters.",
+      "What does this mean?",
+      "India’s grid still leans on domestic coal when electricity demand runs hot through festivals and post-monsoon industrial activity. When pithead output and railway rake loadings accelerate together, it is a supply response to plants that were burning inventories faster than they were replenished. Higher e-auction premiums show buyers outside long-term linkages are also bidding aggressively for tonnes. That mix can tighten merchant coal availability for cement, sponge iron, and other users even as power plants breathe easier. Record October numbers do not by themselves rebuild the multi-week stock buffers regulators prefer, but they signal Coal India is exiting the monsoon slump with sharper dispatch discipline. Discoms and large factories should still treat fuel risk as live until stock dashboards show sustained accretion, not just one strong month.",
+      "Why should I care?",
+      "If you run a factory on grid power or open access, watch state fuel surcharge notices and any forced outage schedules even after headline coal prints improve. Investors in Coal India, NTPC, and independent power producers should pair production data with weekly plant-stock reports rather than reacting to a single monthly release. Logistics firms moving rake traffic from eastern mines should expect continued high loadings while power demand stays elevated into winter evening peaks. Policy watchers should follow ministry blending rules, import tenders, and any compensation discussions if retail tariffs lag input costs. Track November rake counts, subsidiary production trends, and whether critical-stock plant counts fall from the levels reported around 25 October.",
+    ],
+  },
+  {
+    slug: "festive-auto-wholesale-october-2026",
+    title: "Carmakers reported record October wholesales ahead of Diwali",
+    summary:
+      "Maruti Suzuki, Hyundai Motor India, Mahindra & Mahindra, Tata Motors Passenger Vehicles, and JSW MG Motor India reported strong October 2026 dealer dispatches on 1 November, with Maruti selling 2,76,120 units in total and Hyundai hitting 82,299 including exports, as executives tied the numbers to festive showroom traffic across cars, SUVs, and light commercial vehicles.",
+    category: "industry",
+    companyOrSector: "Automobiles / festive demand",
+    publishedAt: "2026-11-01T12:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("festive-auto-wholesale-october-2026"),
+    keyTakeaways: [
+      "Maruti Suzuki reported 2,76,120 total units in October 2026, including a domestic record of 2,16,789 units and exports of 49,872 units, up about 25% and 59% year on year respectively.",
+      "Hyundai Motor India posted 82,299 total units, its highest monthly figure, with domestic sales of 62,799 units and exports of 19,500 units; Mahindra & Mahindra reported 1,31,109 total vehicles including a domestic SUV tally of 73,338 units.",
+      "Tata Motors Passenger Vehicles wholesaled 73,894 units domestically, up 21%, with electric passenger vehicle sales up 75% to 16,244 units; Honda Motorcycle & Scooter India dispatched 6,64,831 two-wheelers in the same October window.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 1 November 2026 several automakers published October wholesale figures, the dispatches from factory to dealer that precede retail sales during Diwali. Maruti Suzuki India Ltd reported 2,76,120 total units, its highest monthly volume, led by 2,16,789 domestic sales and a sharp export jump to 49,872 units. Hyundai Motor India Ltd recorded 82,299 total units, also a company record, with domestic sales of 62,799 and exports of 19,500. Mahindra & Mahindra Ltd said total sales reached 1,31,109 units, including 73,338 domestic SUVs. Tata Motors Passenger Vehicles Ltd reported 73,894 domestic wholesales, up 21%, with electric models at 16,244 units. JSW MG Motor India dispatched 8,013 units. Separate industry reporting the same day said Honda Motorcycle & Scooter India moved 6,64,831 two-wheelers, reinforcing that the upturn spans price points.",
+      "What does this mean?",
+      "Wholesale spikes around festivals show dealers are stocking showrooms because they expect footfall, exchange offers, and finance subventions to convert into registrations once holidays begin. When passenger cars, SUVs, exports, and two-wheelers all accelerate in the same month, it is a breadth signal, not a single-model promotion. That fits other October datapoints from parcel networks, consumer goods, and commercial-vehicle suppliers reporting firm schedules. It does not erase input-cost pressure: Maruti’s September-quarter profit still fell on metal bills even as volumes rose, so manufacturers may raise prices after discount windows close. Export records at Maruti and Hyundai also show India plants remain an outbound hub for right-hand-drive and emerging-market models when domestic lots fill.",
+      "Why should I care?",
+      "If you plan to buy a car or two-wheeler this season, compare on-road quotes across brands once festive bundles expire, because list prices may reset after wholesales peak. Auto component and tyre suppliers can treat October dispatches as a near-term production schedule guide, while fleet buyers should book delivery slots early if dealer inventory turns thin on popular trims. Investors should read wholesales alongside margin commentary rather than treating volume alone as earnings leverage. Watch November retail registration data, whether finance schemes stay as generous into December, and peer updates from Toyota Kirloskar and Bajaj Auto for confirmation the trend holds past Diwali.",
+    ],
+  },
+  {
+    slug: "irdai-scale-based-regulation-november-2026",
+    title: "Insurers asked Irdai for expense rules that scale with company size",
+    summary:
+      "Insurers told the Insurance Regulatory and Development Authority of India in feedback submitted by the 1 November 2026 deadline that uniform caps on expenses of management would hurt newer and smaller players, urging a tiered framework similar to recent scale-based rules for mutual funds and non-bank finance companies.",
+    category: "industry",
+    companyOrSector: "Insurance / regulation",
+    publishedAt: "2026-11-01T12:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("irdai-scale-based-regulation-november-2026"),
+    keyTakeaways: [
+      "Irdai’s 23 September 2026 consultation paper proposed tighter limits on insurers’ expenses of management and distribution commissions; Saturday 1 November was the last day for industry comments.",
+      "Executives argued smaller and newer insurers carry similar fixed costs on a smaller premium base, so a single EoM ceiling would force them to cut growth spending or fall behind larger rivals with scale efficiencies.",
+      "Industry participants pointed to the Reserve Bank of India’s 2022 scale-based NBFC framework and Sebi’s upcoming mutual-fund scale rules as templates, while saying commission schedules themselves should stay uniform.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 1 November 2026 said life and general insurers filed responses to Irdai’s September consultation paper on distribution commissions and expenses of management. The regulator’s draft pushes insurers to trim operating costs measured as a share of premiums and to tighten what they pay agents, banks, and other distributors. Industry executives told reporters that applying one expense ceiling to every insurer ignores how fixed setup costs spread differently once premium income scales. Smaller and newer entrants often report higher EoM ratios while they build branches, technology, and product shelves, even when their absolute spending is lower than large incumbents. Icra analysts quoted in the same coverage said differentiated supervision could prevent mid-sized players from deferring growth investments just to meet a uniform ratio on a short timeline.",
+      "What does this mean?",
+      "Insurance penetration in India still depends on agents and bancassurance partners reaching towns where paperwork and service costs do not shrink just because a company is young. If regulators cap expenses uniformly, the math can push smaller insurers to shrink marketing, slow branch additions, or chase only large-ticket business that clears the ratio test. Scale-based rules would instead tie compliance intensity to premium volume, asset size, or systemic importance, much as the RBI already does for NBFC layers and Sebi will do for mutual funds from April 2026. Commissions themselves would remain on the regulator’s schedule, so the fight is about headroom for non-commission operating spend, not about paying agents more. Irdai chief Ajay Seth has publicly said he wants more good-sized insurers rather than a market of three or four giants, which makes the industry’s tiered proposal a direct test of that goal.",
+      "Why should I care?",
+      "If you buy life or health cover through a bank or agent, watch whether smaller insurers pull back on service touchpoints or slow new product launches if uniform caps bite before a tiered compromise emerges. Corporate HR teams negotiating group policies should compare claim service levels, not just premium quotes, when challengers face tighter economics. Investors in listed insurers should model how proposed EoM paths interact with growth plans at mid-cap names versus scale leaders. Follow Irdai’s final circular, any phased transition dates, and whether risk-based capital rules arriving with Ind-AS 117 from FY28 offset the expense squeeze. Commission tables for 2026-27 will still set what your agent earns; the open question is how much insurers can spend to reach you.",
+    ],
+  },
+  {
     slug: "reliance-o2c-export-routes-q2-october-2026",
     title: "Reliance sent more refined fuel to Africa and Europe when Gulf routes broke",
     summary:
@@ -8448,6 +8520,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "coal-india-power-supply-record-october-2026": "policy",
+  "festive-auto-wholesale-october-2026": "markets",
+  "irdai-scale-based-regulation-november-2026": "policy",
   "reliance-o2c-export-routes-q2-october-2026": "markets",
   "corporate-offsite-travel-rebound-october-2026": "markets",
   "strides-pharma-ex-us-revenue-q2-october-2026": "companies",
