@@ -666,6 +666,44 @@ def igl_railway_png(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([920, 280, 960, 400], fill=BLUE)
 
 
+def reliance_export_routes(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(720, 520), (820, 420), (920, 520)], fill=BLUE)
+    d.line([(80, 520), (680, 520)], fill=GOLD, width=4)
+    for i, x in enumerate([700, 820, 940, 1060]):
+        d.polygon([(x, 520), (x + 50, 480), (x + 100, 520)], fill=[RED, YELLOW, BLUE, RED][i])
+    d.ellipse([120, 280, 280, 440], fill=YELLOW)
+    d.rectangle([160, 360, 240, 420], fill=RED)
+
+
+def corporate_offsite_travel(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 200, 480, 560], fill=BLUE)
+    d.polygon([(200, 260), (380, 220), (420, 380), (160, 420)], fill=CREAM)
+    for i, h in enumerate([100, 160, 220, 280]):
+        x = 620 + i * 80
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.polygon([(900, 180), (980, 240), (900, 300), (820, 240)], fill=GOLD)
+
+
+def strides_ex_us(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 180, 520, 580], fill=CREAM, outline=GOLD, width=3)
+    for y in range(220, 520, 56):
+        d.line([(120, y), (480, y)], fill=BLUE, width=3)
+    d.rectangle([640, 280, 820, 520], fill=RED)
+    d.rectangle([860, 320, 1040, 520], fill=YELLOW)
+    d.line([(760, 400), (1180, 400)], fill=GOLD, width=3)
+    d.polygon([(900, 360), (980, 400), (900, 440)], fill=BLUE)
+
+
+def ramkrishna_forgings_cv(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 360, 520, 480], fill=RED)
+    d.ellipse([160, 460, 240, 540], fill=INK)
+    d.ellipse([400, 460, 480, 540], fill=INK)
+    d.polygon([(280, 280), (360, 240), (440, 280), (360, 320)], fill=BLUE)
+    for i, h in enumerate([120, 200, 280]):
+        x = 640 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, RED, BLUE][i])
+
+
 def muthoot_gold_loan(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([120, 200, 420, 520], fill=GOLD)
     d.rectangle([160, 240, 380, 480], fill=YELLOW)
@@ -758,6 +796,10 @@ def main() -> None:
     save("gail-gas-ipo-listing-nod-october-2026", gail_gas_ipo)
     save("granules-india-fda-form-483-october-2026", granules_fda_483)
     save("capillary-czech-impersonation-fraud-october-2026", capillary_impersonation_fraud)
+    save("reliance-o2c-export-routes-q2-october-2026", reliance_export_routes)
+    save("corporate-offsite-travel-rebound-october-2026", corporate_offsite_travel)
+    save("strides-pharma-ex-us-revenue-q2-october-2026", strides_ex_us)
+    save("ramkrishna-forgings-cv-demand-q2-october-2026", ramkrishna_forgings_cv)
 
 
 if __name__ == "__main__":

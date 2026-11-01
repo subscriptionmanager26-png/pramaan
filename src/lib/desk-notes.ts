@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "reliance-o2c-export-routes-q2-october-2026",
+    title: "Reliance sent more refined fuel to Africa and Europe when Gulf routes broke",
+    summary:
+      "In results for the quarter ended 30 September 2026, Reliance Industries Ltd said it redirected petrol, diesel, and aviation fuel exports toward East and South Africa, the Mediterranean, and other European markets after West Asia supply disruptions, including a first low-sulphur jet fuel shipment to South Africa, while its oil-to-chemicals unit reported record quarterly earnings on higher product prices.",
+    category: "industry",
+    companyOrSector: "Oil refining / exports",
+    publishedAt: "2026-11-01T06:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("reliance-o2c-export-routes-q2-october-2026"),
+    keyTakeaways: [
+      "Reliance said it rerouted fuel exports to East and South Africa, the Mediterranean, and parts of Europe when Middle East conflict tightened traditional supply lanes, and claimed about a 50% market-share gain in those new pockets.",
+      "The company reported supplying low-sulphur aviation turbine fuel to South Africa for the first time, opening a potential repeat export lane.",
+      "Oil-to-chemicals EBITDA rose about 68% year on year to a record ₹25,203 crore in the September 2026 quarter as crude and product prices stayed elevated.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reliance Industries Ltd reported September-quarter results on 1 November 2026. In its oil-to-chemicals presentation, executives said the Jamnagar refining system redirected petrol, diesel, and jet fuel cargoes toward East and South Africa, the Mediterranean, and selected European buyers after months of West Asia conflict disrupted familiar export routes. The company said it lifted market share in those regions by roughly half as rivals struggled to replace lost Gulf barrels. It also shipped low-sulphur aviation turbine fuel to South Africa for the first time, a grade that matters for airports tightening emissions rules. The trading and refining arm drove group earnings, with oil-to-chemicals EBITDA up about 68% year on year to a record ₹25,203 crore on higher crude and product prices.",
+      "What does this mean?",
+      "Indian private refiners earn when they can buy crude and sell products where cracks are widest. When one geography loses barrels, integrated players with flexible shipping can chase distressed buyers elsewhere. More diesel and jet fuel leaving India can tighten domestic availability if refiners prefer export netbacks, which is why state marketers often watch Reliance and Nayara export volumes when pump prices lag import parity. First-time ATF into South Africa is a commercial test: if it repeats, it adds a steady outlet for specialised grades even when Asian cracks soften. Record O2C profit this quarter reflects price more than volume alone, so the rerouting story is about margin capture during chaos, not a permanent shift in every lane.",
+      "Why should I care?",
+      "If you run a fleet or airline, watch whether export pull keeps domestic ATF tenders firm even when global crude dips. Logistics firms hedging fuel surcharges should note new supply arcs through Africa and the Mediterranean that can change regional product prices. Investors in Reliance should read how much of the EBITDA spike came from trading gains versus core refining spread. Policy watchers tracking fuel inflation should compare PSU pump freeze timelines with private export volumes. Follow monthly petroleum ministry export data, Reliance’s next quarterly breakdown of product flows, and any state-run retailer compensation discussions if domestic marketing losses widen.",
+    ],
+  },
+  {
+    slug: "corporate-offsite-travel-rebound-october-2026",
+    title: "Companies are booking offsites again after deferring travel earlier this year",
+    summary:
+      "Reporting on 1 November 2026 said corporate incentive trips and leadership offsites are picking up, with travel firms seeing deferred programmes rescheduled and new bookings for domestic destinations such as Goa and Dehradun and international routes including Thailand and Japan as festival-season corporate calendars fill in.",
+    category: "industry",
+    companyOrSector: "Corporate travel / MICE",
+    publishedAt: "2026-11-01T06:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("corporate-offsite-travel-rebound-october-2026"),
+    keyTakeaways: [
+      "Thomas Cook (India) told reporters that corporate offsites and incentive travel entered a recovery phase, with postponed groups being rescheduled alongside fresh bookings.",
+      "Popular domestic choices include Goa and Dehradun, while companies are also planning trips to Japan, South Africa, Thailand, Vietnam, Malaysia, and Indonesia.",
+      "Organisers are packing more experiences into shorter windows, from local immersions to gala dinners, after a subdued first half when geopolitical tension paused many approvals.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 1 November 2026, business reporting said corporate offsites and incentive travel are accelerating again in India. Companies that paused large gatherings in the first half of 2026 amid geopolitical tension are now approving deferred programmes and signing new ones for the months ahead. Thomas Cook (India), citing its holidays and meetings business, described a recovery phase with both rescheduled groups and fresh bookings. Destinations range from Goa and Dehradun at home to Japan, Thailand, Vietnam, Malaysia, Indonesia, South Africa, Australia, and New Zealand abroad. Planners are booking luxury villas, local experiences, sporting events, and gala dinners to make limited time together feel dense for sales teams, leadership cohorts, and top performers.",
+      "What does this mean?",
+      "Corporate travel sits downstream of bonus pools, hiring confidence, and how strictly finance teams gate discretionary spend. When offsites return, it usually means employers still believe face time helps retention and sales alignment even after years of video calls. Recovery shows up first in MICE agencies and airlines with corporate desks, then in hotels and experience vendors in the chosen cities. Domestic trips often move faster on approvals because visa friction is lower, while long-haul incentive travel signals that export-facing firms still want to reward rainmakers. The rebound is uneven: large all-hands events mix with smaller premium trips for top tiers, so average spend per employee can rise even if headcount travelling is smaller than pre-2020 peaks.",
+      "Why should I care?",
+      "If you run a hotel, retreat, or event vendor outside metro cores, corporate RFP calendars may reopen for the December quarter and early 2027. HR and finance leaders should expect competing requests from sales and leadership while travel budgets are still fresh after the festive retail rush. Investors in listed travel names should treat MICE commentary as a lead indicator for business-class load factors, not just leisure Diwali trips. Employees should read company policy on mixing personal extensions with approved offsites. Watch Thomas Cook and peers’ quarterly updates, airline corporate yield disclosures, and any visa or insurance rule changes that could pause international incentive travel again.",
+    ],
+  },
+  {
+    slug: "strides-pharma-ex-us-revenue-q2-october-2026",
+    title: "Strides Pharma earned more from outside the US than from America this quarter",
+    summary:
+      "Strides Pharma Science Ltd said on 1 November 2026 that revenue from markets outside the United States reached ₹6,963 million in the September 2026 quarter, exceeding US revenue of ₹6,855 million for the first time, with ex-US sales up 31% year on year while US sales rose 9%.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / exports",
+    publishedAt: "2026-11-01T06:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("strides-pharma-ex-us-revenue-q2-october-2026"),
+    keyTakeaways: [
+      "Ex-US revenue grew 31% year on year to ₹6,963 million in Q2 FY27, surpassing US revenue of ₹6,855 million, which grew 9%.",
+      "Consolidated revenue rose 17.1% to ₹14,297 million; EBITDA reached a record ₹2,509 million though margin eased to 17.6% as input and freight costs climbed.",
+      "The company launched three products in the US during the quarter while management flagged higher inventory and a longer cash cycle that added net debt in the first half.",
+    ],
+    body: [
+      "What's going on here?",
+      "Strides Pharma Science Ltd released results for the quarter ended 30 September 2026 on 1 November 2026. The Bengaluru-based drug maker said consolidated revenue increased 17.1% year on year to ₹14,297 million. For the first time, its ex-US business was larger than the US in a single quarter: markets outside America contributed ₹6,963 million, up 31%, while the US brought in ₹6,855 million, up 9%. EBITDA hit a company record of ₹2,509 million, an 8.4% increase, but margin slipped to 17.6% from 19% as raw materials, freight, and operating costs rose. Strides launched three products in the US during the quarter and appointed Biren Gabhawala as an independent director. Management also noted higher inventory holdings and a longer cash-to-cash cycle that pushed net debt up by about ₹2,114 million in the first half of the financial year.",
+      "What does this mean?",
+      "Indian generics makers built scale in US oral solids first because pricing transparency and volume made the market attractive. When US growth slows or costs rise, diversified geographies matter. A 31% ex-US jump shows Strides is leaning on Europe, Latin America, and other regulated or semi-regulated markets where tender wins and distributor partnerships can offset US price erosion. Surpassing US revenue in one quarter is a milestone, not a permanent flip, but it signals the portfolio is less single-market dependent. Margin pressure from inputs shows that even record EBITDA can feel thin if freight and API inflation outrun price increases. Working-capital stretch warns that chasing growth can tie up cash before it shows up in PAT.",
+      "Why should I care?",
+      "If you supply APIs or packaging to Strides, ex-US momentum may mean more multi-country batches and shorter planning cycles. Hospital procurement teams outside the US may see additional generic entrants where Strides wins tenders. Investors comparing Indian pharma names should track whether ex-US outperformance repeats without further margin sacrifice. Lenders should watch whether management’s expectation of stabilising net debt by year-end holds. Follow the next two quarters for US launch contributions, ex-US tender pipelines, and any inventory normalisation commentary on the earnings call.",
+    ],
+  },
+  {
+    slug: "ramkrishna-forgings-cv-demand-q2-october-2026",
+    title: "Ramkrishna Forgings returned to profit as commercial vehicle orders stayed firm",
+    summary:
+      "Ramkrishna Forgings Ltd reported on 1 November 2026 a consolidated net profit of ₹70.59 crore for the September 2026 quarter versus a loss a year earlier, with revenue rising to ₹1,405.42 crore as management cited healthy domestic demand tied to commercial vehicle production schedules and resilient export customer activity.",
+    category: "industry",
+    companyOrSector: "Auto components / forging",
+    publishedAt: "2026-11-01T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ramkrishna-forgings-cv-demand-q2-october-2026"),
+    keyTakeaways: [
+      "September-quarter consolidated net profit was ₹70.59 crore against a ₹9.5 crore loss in Q2 FY26; revenue grew to ₹1,405.42 crore from ₹907.53 crore.",
+      "EBITDA increased to ₹256.23 crore from ₹122.54 crore; half-year net profit reached ₹117.47 crore on revenue of ₹2,622.09 crore.",
+      "Managing director Naresh Jalan pointed to firm commercial vehicle production schedules at home and active export customers, while the company invests in non-ferrous forgings for aerospace and semiconductor applications.",
+    ],
+    body: [
+      "What's going on here?",
+      "Ramkrishna Forgings Ltd announced results for the quarter ended 30 September 2026 on 1 November 2026. The Kolkata-based forging supplier posted consolidated net profit of ₹70.59 crore, reversing a ₹9.5 crore loss in the same quarter of the previous financial year. Revenue climbed to ₹1,405.42 crore from ₹907.53 crore, and EBITDA more than doubled to ₹256.23 crore. For the April-to-September half, net profit reached ₹117.47 crore on revenue of ₹2,622.09 crore. Managing director Naresh Jalan said domestic demand stayed healthy because commercial vehicle makers are running firm production schedules, while export-facing customers also remained active. He added that the company is building capability in non-ferrous forgings, including aluminium, titanium, and specialty alloys aimed at aerospace, robotics, and semiconductor equipment.",
+      "What does this mean?",
+      "Forging companies sit early in the auto and industrial supply chain: when truck and bus OEMs lift build rates, axle and chassis orders follow with a short lag. A sharp revenue jump with restored profit suggests volume and mix improved together, not just a one-off price pass-through. Festive-season freight demand and infrastructure-linked tonnage often keep CV lines busy into the second half, which supports suppliers like Ramkrishna even if passenger car cycles wobble. The push into non-ferrous and high-spec alloys is a hedge against pure cyclical steel forging, but those plants take time to qualify with aerospace and chip-tooling buyers.",
+      "Why should I care?",
+      "If you procure forgings for CV or construction equipment, lead times may tighten when OEM schedules stay full; dual-source critical parts before year-end shutdowns. Investors in auto-ancillary names should read Ramkrishna’s print alongside Bharat Forge and other CV-exposed suppliers for confirmation that freight demand is broad, not one-company specific. Export buyers should watch whether alloy investments translate into certified products or stay in the pilot phase. Track October wholesale CV data from OEMs, Ramkrishna’s capex updates on non-ferrous lines, and any raw steel cost moves that could squeeze the fresh EBITDA margin.",
+    ],
+  },
+  {
     slug: "supreme-infrastructure-nclt-debt-settlement-october-2026",
     title: "Supreme Infrastructure won more time to finish paying ₹2,200 crore to its lenders",
     summary:
@@ -8352,6 +8448,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "reliance-o2c-export-routes-q2-october-2026": "markets",
+  "corporate-offsite-travel-rebound-october-2026": "markets",
+  "strides-pharma-ex-us-revenue-q2-october-2026": "companies",
+  "ramkrishna-forgings-cv-demand-q2-october-2026": "companies",
   "supreme-infrastructure-nclt-debt-settlement-october-2026": "companies",
   "lanxess-bpcl-industrial-lubricants-mou-october-2026": "policy",
   "ambuja-ihcl-bengal-hospitality-investment-october-2026": "markets",
