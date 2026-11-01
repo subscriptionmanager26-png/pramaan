@@ -452,7 +452,11 @@ export function PramaanAgentChat() {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/messages", {
         method: "POST",
-        headers: { ...headers, "Content-Type": "application/json" },
+        headers: {
+          ...headers,
+          "Content-Type": "application/json",
+          "Idempotency-Key": `${sendThreadId}:${optimisticId}`,
+        },
         body: JSON.stringify({
           text: q,
           threadId: sendThreadId,
@@ -554,6 +558,65 @@ export function PramaanAgentChat() {
           markFailed(e instanceof Error ? e.message : "Something went wrong.");
         }
       } else {
+        // POST may have succeeded server-side while the browser aborted (Load failed).
+        // Recover before marking the optimistic bubble failed.
+        try {
+          const headers = await authHeaders();
+          const byKey = await fetch(
+            `/api/agent/messages?threadId=${encodeURIComponent(sendThreadId)}&clientSendId=${encodeURIComponent(optimisticId)}&limit=5`,
+            { headers, cache: "no-store" },
+          )
+            .then(async (r) => (r.ok ? ((await r.json()).messages as AgentMessage[]) || [] : []))
+            .catch(() => [] as AgentMessage[]);
+          const recovered =
+            byKey.length > 0
+              ? byKey
+              : await fetch(
+                  `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=10&scope=messages`,
+                  { headers, cache: "no-store" },
+                )
+                  .then(async (r) => (r.ok ? ((await r.json()).messages as AgentMessage[]) || [] : []))
+                  .catch(() => [] as AgentMessage[]);
+          const match =
+            recovered.find((m) => m.clientSendId === optimisticId) ||
+            recovered.find((m) => m.id === optimisticId) ||
+            recovered.find(
+              (m) =>
+                (m.text || "").trim() === q.trim() &&
+                Date.parse(m.createdAt) >= sendStartedAt - 5_000,
+            );
+          if (match) {
+            reportAgentClientEvent("chat_send_ok", {
+              threadId: sendThreadId,
+              clientSendId: optimisticId,
+              messageId: match.id,
+              fromDraft: promotedFromDraft,
+              durationMs: Date.now() - sendStartedAt,
+              recovered: true,
+            });
+            if (pendingSendRef.current?.optimisticId === optimisticId) pendingSendRef.current = null;
+            setMessages((m) => {
+              const next = [match, ...m.filter((x) => x.id !== optimisticId && x.id !== match.id)];
+              persistMessages(sendThreadId, next);
+              return next;
+            });
+            if (promotedFromDraft) {
+              draftSendIdRef.current = sendThreadId;
+              loadedThreadRef.current = sendThreadId;
+              router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+            }
+            refreshThreads();
+            const final = await streamMessage(match.id, headers);
+            setMessages((m) => {
+              const next = m.map((x) => (x.id === final.id ? final : x));
+              persistMessages(sendThreadId, next);
+              return next;
+            });
+            return true;
+          }
+        } catch {
+          // fall through to markFailed
+        }
         if (promotedFromDraft) {
           draftSendIdRef.current = sendThreadId;
           loadedThreadRef.current = sendThreadId;

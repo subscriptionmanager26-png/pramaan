@@ -67,4 +67,6 @@ export type AgentMessage = {
   error?: string;
   /** Client-side progress labels while streaming. */
   steps?: string[];
+  /** Idempotency key for this send — used to recover after browser abort. */
+  clientSendId?: string;
 };
