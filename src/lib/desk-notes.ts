@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "reliance-independence-biscuits-tamil-nadu-november-2026",
+    title: "Reliance Consumer rolled out nine new Independence biscuits across Tamil Nadu",
+    summary:
+      "Reliance Consumer Products Ltd said on 2 November 2026 it added nine Independence biscuit variants and 28 new stock-keeping units in Tamil Nadu, with trial packs from ₹5 and larger home packs up to ₹125, sold through general trade, modern retail, e-commerce, and Reliance Retail as the FMCG arm pushes scale in everyday snacking.",
+    category: "industry",
+    companyOrSector: "Packaged foods / FMCG",
+    publishedAt: "2026-11-02T12:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("reliance-independence-biscuits-tamil-nadu-november-2026"),
+    keyTakeaways: [
+      "RCPL launched nine new Independence biscuit lines and 28 SKUs in Tamil Nadu on 2 November 2026, including milk, glucose, Marie, bourbon, and cream variants.",
+      "Price points run from ₹5 trial packs through ₹10 sharing packs to home packs between ₹40 and ₹125, aimed at everyday and indulgent occasions.",
+      "Distribution covers general trade, national and regional modern trade, e-commerce, wholesale, and Reliance Retail, with Tamil Nadu treated as a priority biscuit market.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026, Reliance Consumer Products Ltd, the FMCG arm of Reliance Industries, expanded its Independence biscuit portfolio in Tamil Nadu with nine new variants spanning 28 stock-keeping units. The range includes Independence Power Up and Milky Power positioned as milk-glucose-protein biscuits, Marie and glucose lines, and cream-filled formats such as CremYum Orange and Choco alongside Coco Bourbon. Products hit shelves from 2 November through general trade, modern retail chains, e-commerce, wholesale, and Reliance Retail. Trial packs start at ₹5, sharing packs at ₹10, and larger home packs sit between ₹40 and ₹125. The company tied part of the Tamil Nadu push to a brand association with Ajith Kumar Racing for visibility and said increased local production capacity will support wider reach.",
+      "What does this mean?",
+      "Biscuits are a high-frequency, low-ticket category where volume comes from depth of SKUs and cold availability at kirana and modern stores, not from a single hero product. Reliance is stacking variants at accessible rupee points so a household can trade up within the same brand from a ₹5 trial to a ₹125 home pack. That mirrors how other large FMCG houses fight Britannia and ITC: more facings, more flavours, tighter route economics. Tamil Nadu is a contested southern market with strong incumbents; choosing it for a broad launch signals confidence in manufacturing and distribution rather than a one-off promo. For shoppers the practical effect is more choice at familiar price ladders, with protein and milk positioning on Power Up lines aimed at parents comparing labels.",
+      "Why should I care?",
+      "If you track consumer staples, compare Independence facings and price lists at your local store against Britannia and Parle over the next month. Retail investors in Reliance should read this alongside RCPL’s broader FMCG margin story in consolidated results, not as a standalone profit driver. Competitors may respond with regional promo spends or pack-price resets before the December quarter. Watch state-level distributor feedback, modern trade listing data, and whether RCPL repeats the full SKU stack in other southern states after Tamil Nadu sell-through.",
+    ],
+  },
+  {
+    slug: "motherson-sumi-wiring-premiumisation-q2-november-2026",
+    title: "Motherson Sumi Wiring sold more wiring as cars carried richer electronics",
+    summary:
+      "Motherson Sumi Wiring India Ltd reported on 2 November 2026 that September-quarter net profit rose about 35% year on year to ₹223 crore on revenue up about 47% to ₹4,504 crore, attributing growth to higher content per vehicle, new wins on electric and combustion models, and greenfield capacity ramp despite copper and other input costs.",
+    category: "industry",
+    companyOrSector: "Auto components / wiring harnesses",
+    publishedAt: "2026-11-02T12:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("motherson-sumi-wiring-premiumisation-q2-november-2026"),
+    keyTakeaways: [
+      "MSWI posted Q2 FY27 net profit of about ₹223 crore, up roughly 35% year on year, on revenue from operations of about ₹4,504 crore, up about 47%.",
+      "Management linked growth to premiumisation via higher wiring content per vehicle, new business on EV and ICE platforms, and timely greenfield expansions.",
+      "Sequential profit rose about 54% from the June quarter while EBITDA increased about 45% to ₹374 crore despite elevated copper and inflation on inputs.",
+    ],
+    body: [
+      "What's going on here?",
+      "Motherson Sumi Wiring India Ltd released September-quarter results on 2 November 2026 showing consolidated net profit of about ₹223 crore, a 35% year-on-year increase from roughly ₹165 crore in Q2 FY26. Revenue from operations grew about 47% to ₹4,504 crore from ₹2,752 crore a year earlier. The company said growth came from higher electrical content on new car and utility models, contract wins across both battery-electric and internal-combustion platforms, and faster ramp at greenfield plants that let it ship more harnesses to OEM customers. On a sequential basis, profit after tax rose about 54% from ₹145 crore in the June quarter and EBITDA increased about 45% to ₹374 crore. Chairman Vivek Chaand Sehgal pointed to customer volume increases and disciplined working capital even as copper and other commodity costs stayed elevated.",
+      "What does this mean?",
+      "A wiring harness supplier earns when OEMs add features that need more copper and connectors: advanced driver assistance, infotainment, lighting, and power electronics on hybrids and EVs all expand the kilograms and circuits per vehicle. MSWI’s revenue growing faster than Indian passenger vehicle wholesale volumes implies content per unit is rising, not just more cars rolling off lines. Greenfield capacity matters because harness plants must sit near assembly lines; late ramps lose share when a new model launches. Commodity inflation still bites margins, but the quarter shows pass-through and mix can offset part of the copper bill when customers launch higher-spec trims. The story is structural auto premiumisation in India, not a one-day market move in the stock.",
+      "Why should I care?",
+      "If you buy or lease fleet vehicles, expect richer standard wiring on new model years, which can raise repair costs when sensors and looms are damaged. Investors comparing auto ancillaries should track MSWI content-per-vehicle commentary against OEM launch calendars and copper trends. Policy watchers debating zonal architecture and software-defined vehicles should note suppliers still win near-term from physical harness growth on Indian platforms. Watch OEM dispatches this festive season, copper prices, and peer results from other wiring and connector names for confirmation that content gains are sector-wide.",
+    ],
+  },
+  {
+    slug: "india-manufacturing-pmi-october-slowdown-november-2026",
+    title: "India’s factory survey cooled in October as domestic orders softened",
+    summary:
+      "Surveys published on 2 November 2026 showed global manufacturing stayed solid in October but factories faced rising energy costs and supply-chain strain; India’s manufacturing growth slowed as domestic demand and hiring weakened, while a surge in export orders partly offset the dip.",
+    category: "industry",
+    companyOrSector: "Manufacturing / PMI",
+    publishedAt: "2026-11-02T12:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-manufacturing-pmi-october-slowdown-november-2026"),
+    keyTakeaways: [
+      "October 2026 purchasing managers’ surveys reported solid global factory activity but rising input prices tied to energy and disrupted supply chains.",
+      "India’s manufacturing expansion slowed in October as domestic demand and hiring weakened, according to coverage of the survey data on 2 November 2026.",
+      "Export order growth cushioned the domestic softness, a pattern economists linked to strong chip and AI-related demand elsewhere in Asia even as Middle East conflict kept fuel costs high.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026, Reuters published a roundup of October manufacturing purchasing managers’ index readings across major economies. Eurozone factory activity remained in expansion but input prices rose at the fastest pace since May, adding pressure on central banks already debating further rate hikes. Across Asia, growth in China, Japan, South Korea, and Taiwan slowed compared with September, while Taiwan still showed solid expansion. India’s manufacturing growth also eased: domestic demand and hiring weakened in the October survey, although export orders jumped enough to cushion the headline. Economists quoted in the same package tied the strain to prolonged Middle East conflict pushing up fuel and food costs, which hits consumption and business confidence even when electronics and AI-linked supply chains stay busy.",
+      "What does this mean?",
+      "PMI surveys ask plant managers about new orders, output, and hiring before official production data land. When domestic orders soften while exports hold, Indian factories may run lines for overseas buyers even as local distributors run down inventory. That can show up later as strong export numbers but uneven sales on the home market for industrial and consumer goods. Rising energy costs feed into freight, power tariffs, and petrochemical inputs, which compress margins unless companies pass prices through with a lag. The October read does not contradict still-decent GDP expectations for the September quarter, but it flags that factory floors felt less domestic pull heading into the festive stretch.",
+      "Why should I care?",
+      "If you run a small manufacturing or trading business, treat October as a signal to check domestic order books separately from export lines. Households may still spend on festivals, but industrial suppliers could see slower reorders from local clients. Investors should read PMI alongside September industrial production and upcoming auto and FMCG dispatches rather than as a standalone macro call. Watch November PMI for hiring and domestic order components, rupee export competitiveness, and whether input price pressure forces another round of factory gate price increases.",
+    ],
+  },
+  {
     slug: "ambuja-cement-capex-expansion-november-2026",
     title: "Ambuja Cements pledged ₹14,500 crore to add about 30 million tonnes of capacity",
     summary:
@@ -8712,6 +8784,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "reliance-independence-biscuits-tamil-nadu-november-2026": "markets",
+  "motherson-sumi-wiring-premiumisation-q2-november-2026": "companies",
+  "india-manufacturing-pmi-october-slowdown-november-2026": "policy",
   "ambuja-cement-capex-expansion-november-2026": "markets",
   "india-residential-sales-value-outpace-volume-november-2026": "markets",
   "igl-q2-expense-squeeze-november-2026": "policy",

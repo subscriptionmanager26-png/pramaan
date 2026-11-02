@@ -806,6 +806,38 @@ def residential_sales_value(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([980, 160, 1100, 240], fill=GOLD)
 
 
+def reliance_independence_biscuits(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([100, 220, 420, 540], radius=20, fill=BLUE)
+    for i, y in enumerate([260, 320, 380, 440]):
+        d.rectangle([130, y, 390, y + 40], fill=[CREAM, YELLOW, RED, CREAM][i])
+    for i, p in enumerate([5, 10, 40, 125]):
+        d.rectangle([560 + i * 70, 520 - p * 3, 610 + i * 70, 560], fill=[RED, BLUE, YELLOW, GOLD][i])
+    d.line([(540, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(980, 180), (1080, 220), (980, 260)], fill=GOLD)
+
+
+def motherson_wiring_content(d: ImageDraw.ImageDraw) -> None:
+    d.line([(120, 400), (480, 280), (480, 520), (120, 400)], fill=RED, width=6)
+    d.line([(140, 420), (460, 300)], fill=GOLD, width=4)
+    d.line([(160, 440), (440, 340)], fill=BLUE, width=4)
+    d.rectangle([520, 260, 620, 560], fill=YELLOW)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 680 + i * 80
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[BLUE, RED, BLUE, YELLOW][i])
+    d.ellipse([1020, 180, 1140, 260], fill=RED)
+
+
+def india_pmi_october(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 460, 520], fill=BLUE)
+    d.polygon([(280, 300), (380, 340), (380, 480), (280, 520), (180, 480), (180, 340)], fill=RED)
+    d.rectangle([540, 360, 720, 560], fill=YELLOW)
+    d.rectangle([760, 420, 940, 560], fill=CREAM, outline=RED, width=4)
+    for i, h in enumerate([180, 120]):
+        x = 980 + i * 90
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, RED][i])
+    d.line([(520, 560), (1180, 560)], fill=INK, width=2)
+
+
 def igl_expense_squeeze(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([140, 300, 340, 500], outline=BLUE, width=8)
     d.line([(240, 350), (240, 450)], fill=RED, width=12)
@@ -912,6 +944,9 @@ def main() -> None:
     save("ambuja-cement-capex-expansion-november-2026", ambuja_cement_capex)
     save("india-residential-sales-value-outpace-volume-november-2026", residential_sales_value)
     save("igl-q2-expense-squeeze-november-2026", igl_expense_squeeze)
+    save("reliance-independence-biscuits-tamil-nadu-november-2026", reliance_independence_biscuits)
+    save("motherson-sumi-wiring-premiumisation-q2-november-2026", motherson_wiring_content)
+    save("india-manufacturing-pmi-october-slowdown-november-2026", india_pmi_october)
 
 
 if __name__ == "__main__":
