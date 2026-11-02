@@ -26,6 +26,30 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "neogen-battery-q2-qip-november-2026",
+    title: "Neogen’s battery chemicals unit is starting to show up in the revenue line",
+    summary:
+      "Neogen Chemicals Ltd reported on 1 November 2026 that consolidated revenue rose about 42% year on year to ₹296 crore in the September quarter, with its Neogen Ionics battery arm contributing ₹37 crore versus ₹5.4 crore a year earlier, while the company closed a maiden ₹600 crore qualified institutional placement oversubscribed 6.5 times to repay debt and fund electrolyte and lithium-salt capacity.",
+    category: "industry",
+    companyOrSector: "Specialty chemicals / EV supply chain",
+    publishedAt: "2026-11-02T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("neogen-battery-q2-qip-november-2026"),
+    keyTakeaways: [
+      "Consolidated Q2 FY27 revenue was ₹296 crore, up about 42% year on year; consolidated EBITDA was ₹45 crore, up about 51%, and profit after tax was ₹8 crore, up about 144%.",
+      "Neogen Ionics battery chemicals revenue reached ₹37 crore in the quarter versus ₹5.4 crore in Q2 FY26; management commissioned 1,000 MTPA of lithium electrolyte salts and additives with another 300 MTPA in trials.",
+      "The company raised ₹600 crore through its first QIP, oversubscribed 6.5 times, and said proceeds will reduce term debt and support electrolyte and salt projects targeted for February and March 2027.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 1 November 2026, Neogen Chemicals Ltd published September-quarter results and a press release outlining both its legacy specialty portfolio and its newer battery materials arm. Consolidated revenue was ₹296 crore, up about 42% from a year earlier, while consolidated EBITDA rose about 51% to ₹45 crore and profit after tax increased about 144% to ₹8 crore. Management said growth held despite Middle East shipping friction, higher feedstock costs, and temporary disruption at its Dahej plant after a fire, partly because organolithium volumes shifted toward applications with clearer demand. The battery subsidiary Neogen Ionics contributed ₹37 crore of revenue in the quarter compared with ₹5.4 crore in Q2 FY26. Neogen also completed its first qualified institutional placement, raising ₹600 crore at an issue oversubscribed 6.5 times from domestic and global institutions.",
+      "What does this mean?",
+      "Indian cell and electrolyte makers need local salts and electrolytes to qualify under production-linked incentive rules and to reduce reliance on Chinese supply chains as Western buyers tighten sourcing rules. Neogen has been spending heavily on Dahej and Pakhajan capacity; until those lines run near full utilisation, fixed costs at Neogen Ionics can weigh on consolidated margins even as revenue jumps. The QIP shifts part of that burden from debt to equity, which should lower interest expense once proceeds retire term loans, though depreciation will stay elevated while plants ramp. Management guided that electrolyte commissioning at Dahej and salt capacity at Pakhajan remain on track for February and March 2027, and that battery revenue could scale further from the December quarter as domestic ACC plants and export electrolyte customers pull volume.",
+      "Why should I care?",
+      "If you follow India’s EV supply chain, treat Neogen as a test of whether battery input makers can convert capex into recurring offtake rather than one-off project revenue. Auto and two-wheeler OEMs bidding for local content should watch customer qualification updates and shipment disclosures from Neogen Ionics. Creditors and equity investors should pair the strong top-line print with net debt near ₹1,095 crore at half-year end and remaining Dahej insurance recoveries still under discussion with insurers. Track monthly capacity utilisation commentary, ACC plant commissioning timelines from battery OEM partners, and whether QIP proceeds show up in lower finance costs over the next two quarters.",
+    ],
+  },
+  {
     slug: "affle-perion-acquisition-november-2026",
     title: "Affle agreed to buy Israel’s Perion for about $420 million in cash",
     summary:
@@ -8616,6 +8640,7 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "neogen-battery-q2-qip-november-2026": "companies",
   "affle-perion-acquisition-november-2026": "companies",
   "maruti-west-asia-shipping-disruption-november-2026": "markets",
   "power-grid-q2-dividend-november-2026": "policy",

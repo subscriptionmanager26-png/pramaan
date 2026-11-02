@@ -1152,6 +1152,14 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Streaming screen glow motif |
 | Metaphor left | Flat ad revenue bars vs rising user curve |
 
+### `neogen-battery-q2-qip-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Battery input capacity ramps as equity replaces debt |
+| Subject right | Abstract lithium cell cross-section |
+| Metaphor left | Flask-to-factory scale chevrons + capital inflow pipe |
+
 ## Metaphor cheat sheet (wire stories)
 
 | Story type | Visual metaphor |
