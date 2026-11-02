@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "trai-complaint-redressal-overhaul-november-2026",
+    title: "Trai will fine telcos for closed complaints and require 24-hour support",
+    summary:
+      "The Telecom Regulatory Authority of India notified tighter consumer grievance rules on 2 November 2026, introducing penalties for improperly closed complaints, shorter appeal windows, mandatory post-closure surveys, and round-the-clock complaint centres with human help for at least 16 hours daily.",
+    category: "industry",
+    companyOrSector: "Telecom / consumer regulation",
+    publishedAt: "2026-11-02T18:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("trai-complaint-redressal-overhaul-november-2026"),
+    keyTakeaways: [
+      "Trai’s Fourth Amendment Regulations, 2026 replace grievance rules dating to 2012 and impose ₹1,000 penalties per improperly closed complaint and ₹5,000 per improperly closed appeal, capped at ₹20 lakh per licensed service area each quarter.",
+      "Operators must run complaint centres 24 hours a day on all days, keep human assistance available at least 16 hours, disclose when customers interact with AI chatbots, and close unspecified complaints within three days.",
+      "Direct complaints to Trai rose 63% to 73,081 in FY26 from 44,733 in FY24, according to regulator data cited in coverage of the notification.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026, Trai published the Telecom Consumers Complaint Redressal (Fourth Amendment) Regulations, 2026, its first full overhaul of telecom grievance rules in about 12 years. The framework adds financial penalties when operators close complaints or appeals without proper resolution, cuts the consumer appeal window to 15 days from 30, and requires appellate authorities to decide within 15 days of receipt. Complaint centres must operate round the clock instead of the earlier 16-hour window, though human representatives need only be available 16 hours daily; automated or AI tools may cover the rest with disclosure to users. Standardised interactive voice response menus must appear in English, Hindi, and at least one other official language in each licensed service area. Operators must send satisfaction surveys immediately after closing a case and publish quarterly complaint performance on websites and apps within 15 days of each quarter end.",
+      "What does this mean?",
+      "When billing errors, porting delays, or dropped broadband tickets linger, customers escalate to Trai’s portal; rising direct complaints signal friction in the first-line redressal chain. Penalties tied to improper closures push call centres to document fixes rather than mark tickets resolved to hit internal targets. The 24-hour requirement raises staffing and technology costs, which telcos had argued against through industry lobby COAI. Shorter appeal timelines mean households must act quickly if a first response looks inadequate. For prepaid and postpaid users, the practical change is faster mandated turnaround on open tickets and clearer language options when navigating phone menus.",
+      "Why should I care?",
+      "If your mobile bill looks wrong or a fibre install stalls, save complaint reference numbers and respond to closure messages within the new 15-day appeal window. Business lines with hundreds of SIMs should audit vendor service-level agreements against the three-day default for issues without prescribed timelines. Investors in listed telcos should treat compliance spend as a recurring operating item, not a one-off fine risk. Watch phased implementation over 30, 60, and 90 days, quarterly Trai complaint scorecards on operator apps, and whether penalties actually get levied in the first reporting cycle.",
+    ],
+  },
+  {
+    slug: "itc-cigarette-tax-non-cigarette-fmcg-q2-november-2026",
+    title: "ITC’s cigarette profits fell after a tax step-up while other FMCG lines kept growing",
+    summary:
+      "ITC Ltd reported on 2 November 2026 that consolidated net profit fell about 20% year on year to ₹4,137 crore in the September quarter as cigarette segment results dropped 27% amid higher taxation and pressure on legal volumes, even as non-cigarette FMCG revenue posted a 14-quarter high with broad-based category growth.",
+    category: "industry",
+    companyOrSector: "FMCG / cigarettes",
+    publishedAt: "2026-11-02T18:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("itc-cigarette-tax-non-cigarette-fmcg-q2-november-2026"),
+    keyTakeaways: [
+      "ITC’s cigarette segment results fell to about ₹3,813 crore in Q2 FY27 from roughly ₹5,241 crore a year earlier, which the company linked to an unprecedented tax increase and weak legal industry volumes.",
+      "Non-cigarette FMCG revenue rose about 16% year on year to ₹6,967 crore with operating profit up about 28% to ₹558 crore; biscuits, snacks, noodles, spices, and homecare each grew more than 20%.",
+      "Digital-first and organic brands grew more than 70% year on year with an annualised revenue run rate above ₹1,800 crore, while the company said it stepped up seizures of smuggled cigarettes to counter illicit trade.",
+    ],
+    body: [
+      "What's going on here?",
+      "ITC Ltd released September-quarter results on 2 November 2026 showing consolidated net profit down about 20% year on year to ₹4,137 crore. The cigarette business bore most of the hit: segment results declined about 27% to ₹3,813 crore as management cited a sharp tax increase that kept legal industry volumes under pressure. Revenue from the cigarette segment still rose in rupee terms on pricing actions, but operating profit fell about 27% year on year in exchange filings. Meanwhile the non-cigarette FMCG portfolio delivered its strongest revenue growth in 14 quarters, up about 16% to ₹6,967 crore, with operating profit near ₹558 crore. Categories from biscuits and instant noodles to spices and notebooks posted growth above 20%, and digital-first brands maintained momentum above 70% year on year.",
+      "What does this mean?",
+      "Cigarette taxes in India combine central duties with state value-added layers, so a regime change can widen the gap between legal packs and smuggled alternatives overnight. ITC’s commentary on illicit seizures reflects that smokers sensitive to price may shift to untaxed channels rather than quit, which hurts organised volumes even when list prices rise. The non-cigarette side shows households still buying branded staples, snacks, and home products through general trade, modern retail, and quick commerce, which is why consolidated revenue can grow while cigarette profits drag the bottom line. For a conglomerate pivoting toward foods and personal care, the quarter is a stress test: can faster-growing FMCG margins eventually offset tobacco cash flows when tax shocks hit.",
+      "Why should I care?",
+      "If you follow consumer staples, compare ITC’s aisle facings and promo intensity against Britannia and HUL in your local store this festive season. Smokers face the policy trade-off directly through legal prices versus grey-market availability. Investors should read segment results rather than headline profit alone and watch whether management reinvests FMCG cash into distribution or dividends. Follow winter union budget signals on tobacco taxation, state VAT notifications, and whether non-cigarette FMCG sustains double-digit growth in the December quarter.",
+    ],
+  },
+  {
+    slug: "marico-copra-edible-oil-duty-q2-november-2026",
+    title: "Marico passed edible-oil duty cuts to shoppers as copra costs eased",
+    summary:
+      "Marico Ltd reported on 2 November 2026 that September-quarter domestic volumes rose 10% and EBITDA grew 27% as copra input costs fell about 31% year on year, while the company passed through government basic customs duty reductions on imported vegetable oils and raised full-year EBITDA growth guidance toward the mid-twenties.",
+    category: "industry",
+    companyOrSector: "FMCG / edible oils",
+    publishedAt: "2026-11-02T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("marico-copra-edible-oil-duty-q2-november-2026"),
+    keyTakeaways: [
+      "Consolidated revenue rose 12.9% year on year to ₹3,897 crore in Q2 FY27 with domestic volume growth of 10% and EBITDA up 27% to ₹709 crore as copra prices fell about 31% from a year earlier.",
+      "Marico said it passed the benefit of reduced basic customs duty on major imported edible oils, effective from 24 September 2026, through to consumers as part of efforts to cool food inflation ahead of festivals.",
+      "Management raised FY27 guidance to mid-twenties EBITDA growth and teens revenue growth, citing portfolio mix, softer copra, and higher advertising spend up about 44% year on year in the quarter.",
+    ],
+    body: [
+      "What's going on here?",
+      "Marico Ltd, maker of Parachute coconut oil and Saffola edible oils, published September-quarter results on 2 November 2026. Revenue from operations grew 12.9% year on year to ₹3,897 crore while net profit rose 29.1% to ₹558 crore. Domestic volumes increased 10%, and EBITDA climbed 27% to ₹709 crore, which management linked to lower copra costs, richer mix in value-added hair oils, and disciplined execution. Copra, the key coconut input, was down about 31% year on year, expanding margins even as liquid paraffin and packaging stayed expensive. The company said it transferred to shoppers the benefit of government basic customs duty cuts on major imported vegetable oils announced from 24 September 2026 to help contain retail food inflation before festivals. It also lifted full-year guidance toward mid-twenties EBITDA growth after previously guiding high-teens.",
+      "What does this mean?",
+      "Edible oil brands sit on a seesaw between global seed and crude prices, import duties, and local crop costs like copra. When duty falls, regulators expect retail tins to follow quickly; Marico’s statement confirms it used part of the relief on Saffola lines even as it rationalised low-margin variants that temporarily dragged Saffola volumes. Lower copra helps Parachute margins disproportionately because coconut oil is copra-heavy, which is why Marico could outrun peers facing palm inflation. Higher advertising spend signals confidence that households will keep buying branded oils and premium hair nourishment if shelf prices look fair. The foods portfolio growing 45% shows diversification beyond legacy oil sachets.",
+      "Why should I care?",
+      "If you stock the kitchen ahead of festivals, compare per-litre prices on coconut and blended oils over the next fortnight to see whether duty cuts actually reached labels. Investors in FMCG should track whether Marico’s volume growth holds after promo resets and whether peers match price moves. Policy watchers should link the 24 September duty action to CPI food prints rather than treating Marico’s margin spike as purely company-specific. Watch palm and soy international quotes, follow-on state VAT on packaged foods, and Q3 volume commentary from Dabur and Bajaj Consumer on edible oils.",
+    ],
+  },
+  {
+    slug: "dr-reddys-lenacapavir-fda-tentative-november-2026",
+    title: "Dr Reddy’s won tentative US approval to sell a $40-a-year HIV prevention shot",
+    summary:
+      "Dr. Reddy’s Laboratories said on 2 November 2026 that the US Food and Drug Administration granted tentative approval for its generic lenacapavir injection for HIV prevention, the first among six Gilead licensees, with global health agencies citing an expected price near $40 per year for low- and middle-income markets versus about $28,000 for branded Yeztugo in the United States.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / global health",
+    publishedAt: "2026-11-02T18:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dr-reddys-lenacapavir-fda-tentative-november-2026"),
+    keyTakeaways: [
+      "The US FDA issued tentative approval for Dr Reddy’s generic lenacapavir, a twice-yearly injectable HIV prevention medicine, making the Indian company the first licensed generic manufacturer to clear the agency’s quality and efficacy bar.",
+      "Tentative approval lets global procurement bodies rely on FDA assessments even though US patent exclusivity still blocks American sales; rollout across roughly 120 licensed low- and middle-income countries is expected from 2027 with initial doses reaching select nations by late 2026.",
+      "Global health groups said the generic could price near $40 per patient per year compared with about $28,000 annually for branded Yeztugo in the US, with Unitaid and others supporting regulatory and supply work.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026, Dr. Reddy’s Laboratories announced that the US Food and Drug Administration granted tentative approval for its generic version of lenacapavir injection used for HIV pre-exposure prophylaxis. The Hyderabad-based company was the first of six manufacturers licensed by Gilead Sciences to reach that milestone. FDA tentative approval confirms the product meets safety, efficacy, and manufacturing standards but does not allow commercial launch in the United States while patent or exclusivity blocks remain. The decision still matters for public-health buyers: agencies can lean on the FDA file when approving imports for low- and middle-income countries covered under voluntary licences. Global health officials quoted in wire reports said initial supplies could reach a few low-income countries by the end of 2026, with broader rollout across eligible nations from 2027, and cited an expected generic price near $40 per patient per year against roughly $28,000 for branded Yeztugo in the US.",
+      "What does this mean?",
+      "Lenacapavir offered nearly complete protection in large trials, and a twice-yearly shot removes daily pill fatigue that derails prevention programmes. Price and regulatory speed determine whether ministries of health can add it to national formularies alongside condoms and oral PrEP. Tentative FDA clearance accelerates paperwork in countries that use reliance pathways, which is why Unitaid highlighted faster procurement. For Dr Reddy’s, the win is reputational and volume-driven in export markets rather than immediate US revenue. Indian manufacturers already supply a large share of global antiretrovirals; adding lenacapavir extends that role into long-acting prevention.",
+      "Why should I care?",
+      "If you follow Indian pharma exports, treat this as a policy and access story, not a one-day stock move. Public-health NGOs will track which African and Asian countries receive first shipments and whether $40 pricing holds in tenders. Competitors such as Hetero, also working on lenacapavir with philanthropic partners, may follow with their own regulatory filings. Watch WHO prequalification steps, Gilead licence geography, and Indian government statements on domestic HIV prevention budgets even though the initial launch focus is overseas.",
+    ],
+  },
+  {
     slug: "reliance-independence-biscuits-tamil-nadu-november-2026",
     title: "Reliance Consumer rolled out nine new Independence biscuits across Tamil Nadu",
     summary:
@@ -8784,6 +8880,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "trai-complaint-redressal-overhaul-november-2026": "policy",
+  "itc-cigarette-tax-non-cigarette-fmcg-q2-november-2026": "markets",
+  "marico-copra-edible-oil-duty-q2-november-2026": "markets",
+  "dr-reddys-lenacapavir-fda-tentative-november-2026": "companies",
   "reliance-independence-biscuits-tamil-nadu-november-2026": "markets",
   "motherson-sumi-wiring-premiumisation-q2-november-2026": "companies",
   "india-manufacturing-pmi-october-slowdown-november-2026": "policy",
