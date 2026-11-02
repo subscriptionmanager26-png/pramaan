@@ -785,6 +785,36 @@ def muthoot_gold_loan(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, RED, YELLOW][i])
 
 
+def ambuja_cement_capex(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 520), (280, 240), (400, 520)], fill=RED)
+    d.rectangle([240, 320, 320, 520], fill=GOLD)
+    for i, h in enumerate([100, 180, 260, 340]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, YELLOW, BLUE, RED][i])
+    d.line([(620, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(1050, 200), (1120, 240), (1050, 280)], fill=GOLD)
+
+
+def residential_sales_value(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 480, 520], fill=BLUE)
+    for i in range(4):
+        d.rectangle([120 + i * 90, 320 + i * 30, 190 + i * 90, 520], fill=CREAM)
+    for i, h in enumerate([140, 220, 220, 300]):
+        x = 620 + i * 75
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, RED, YELLOW, YELLOW][i])
+    d.line([(600, 560), (1150, 560)], fill=INK, width=2)
+    d.ellipse([980, 160, 1100, 240], fill=GOLD)
+
+
+def igl_expense_squeeze(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 300, 340, 500], outline=BLUE, width=8)
+    d.line([(240, 350), (240, 450)], fill=RED, width=12)
+    d.rectangle([520, 200, 1120, 260], fill=YELLOW)
+    d.rectangle([520, 320, 1050, 380], fill=RED)
+    d.rectangle([520, 440, 900, 500], fill=BLUE)
+    d.line([(480, 230), (1180, 230)], fill=GOLD, width=3)
+
+
 def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([80, 200, 360, 560], fill=BLUE)
     d.rectangle([120, 240, 320, 520], fill=CREAM)
@@ -879,6 +909,9 @@ def main() -> None:
     save("corporate-offsite-travel-rebound-october-2026", corporate_offsite_travel)
     save("strides-pharma-ex-us-revenue-q2-october-2026", strides_ex_us)
     save("ramkrishna-forgings-cv-demand-q2-october-2026", ramkrishna_forgings_cv)
+    save("ambuja-cement-capex-expansion-november-2026", ambuja_cement_capex)
+    save("india-residential-sales-value-outpace-volume-november-2026", residential_sales_value)
+    save("igl-q2-expense-squeeze-november-2026", igl_expense_squeeze)
 
 
 if __name__ == "__main__":

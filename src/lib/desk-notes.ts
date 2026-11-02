@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "ambuja-cement-capex-expansion-november-2026",
+    title: "Ambuja Cements pledged ₹14,500 crore to add about 30 million tonnes of capacity",
+    summary:
+      "Ambuja Cements Ltd said on 2 November 2026 that it will spend about ₹14,500 crore to expand cement capacity by roughly 30 million tonnes per annum, lifting its installed base from 113.5 MTPA toward 155 MTPA by financial year 2030 as India’s largest cement groups race to supply housing and infrastructure demand.",
+    category: "industry",
+    companyOrSector: "Cement / construction materials",
+    publishedAt: "2026-11-02T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ambuja-cement-capex-expansion-november-2026"),
+    keyTakeaways: [
+      "Ambuja Cements announced on 2 November 2026 a capex plan of about ₹14,500 crore aimed at adding roughly 30 MTPA of cement capacity.",
+      "The programme would take group capacity from 113.5 MTPA to about 155 MTPA by FY30, one of the largest single-company expansion pledges in the sector this season.",
+      "Fresh kiln and grinding capacity feeds directly into road, metro, and residential projects that still show steady offtake even when individual developers time launches around festivals.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026, Ambuja Cements Ltd disclosed a capital expenditure plan of about ₹14,500 crore to add roughly 30 million tonnes per annum of cement capacity. The investment would lift the company’s installed base from 113.5 MTPA to about 155 MTPA by financial year 2030. The announcement landed alongside a busy earnings season for building-materials names and follows other large cement groups outlining multi-year growth pipelines as housing sales value keeps rising in major cities even when apartment counts move more slowly.",
+      "What does this mean?",
+      "Cement is a local logistics business: plants must sit near limestone reserves and within economical truck or rail distance of demand centres. A ₹14,500 crore programme signals management belief that western and central India, where Ambuja already has clinker and grinding assets, will need more bag and bulk supply for highways, industrial corridors, and mid-income housing estates. New lines also raise the bar for smaller regional players on cost per tonne. Execution risk sits in environmental clearances, fuel costs, and how quickly new capacity converts to cash once competitors add parallel kilns. For homebuyers the link is indirect but real: steadier cement supply can temper local price spikes when a city sees a burst of tower launches.",
+      "Why should I care?",
+      "If you work in construction or ready-mix supply, map which Ambuja clusters are slated for debottlenecking and when dispatches might shift from imports or long-haul trucking. Investors comparing cement names should read this capex against volume guidance, debt levels, and whether the expansion is greenfield or acquisition-led. Policy watchers should note that private capex in heavy industry still flows toward urbanisation themes even when global macro headlines stay noisy. Track quarterly commissioning milestones, pet-coke and power cost pass-through, and rival announcements from UltraTech, Adani, and JSW in the same corridors.",
+    ],
+  },
+  {
+    slug: "india-residential-sales-value-outpace-volume-november-2026",
+    title: "Home buyers paid more per flat even as apartment counts stayed flat",
+    summary:
+      "A Jefferies note cited on 2 November 2026 estimated that residential sales value across India’s top seven cities rose about 17–20% year on year in the July–September 2026 quarter while sales by area grew only about 6–8%, with blended prices up roughly 10% and listed developers preparing heavier launch pipelines from the December quarter as inventories near an 18-month cover.",
+    category: "industry",
+    companyOrSector: "Residential real estate",
+    publishedAt: "2026-11-02T11:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-residential-sales-value-outpace-volume-november-2026"),
+    keyTakeaways: [
+      "Jefferies estimates cited on 2 November 2026 put top-seven-city residential sales value up about 17–20% year on year in Q2 FY27 against area growth of roughly 6–8%.",
+      "Blended price realisation rose about 10% year on year while the number of apartments sold was largely flat over the prior three months, Jefferies said.",
+      "Developers including Godrej Properties, Lodha, Prestige, and DLF are lining up larger launch pipelines from the December quarter as sustenance sales reduce inventory toward an estimated 18-month cover.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026, business wire coverage summarised a Jefferies report on India’s listed residential developers. The broker estimated that property sales value across the top seven cities grew about 17–20% year on year in the July–September 2026 quarter, while sales measured by area rose only about 6–8%. Blended price realisation increased roughly 10% from a year earlier even though the count of apartments sold stayed largely flat over the preceding three months. Jefferies said sustenance sales have been strong enough to pull inventory toward about an 18 months of cover based on the last year of sales, in line with the five-year average. It expects Godrej Properties, Macrotech Developers (Lodha), Prestige Estates, and DLF to accelerate launches from the December quarter, with Godrej pre-sales in that quarter potentially exceeding ₹120 billion.",
+      "What does this mean?",
+      "When value outruns volume, shoppers are either buying larger configurations, paying higher rupees per square foot, or both. That pattern fits premium and mid-premium towers in Mumbai, Delhi-NCR, and Hyderabad where ticket sizes crossed ₹1 crore faster than unit counts expanded. Developers can delay fresh launches when inventory is bloated; Jefferies argues the opposite is happening now, which supports the consumption-affirming read that festive bookings and rate stabilisation brought fence-sitters back. Bengaluru’s flat volume growth shows the trend is not uniform. Launch pipelines worth hundreds of billions of rupees in the second half of FY27 will test whether buyers accept further price steps or push back toward smaller formats.",
+      "Why should I care?",
+      "If you are comparing projects this season, ask sales teams how much of recent growth came from price lists versus genuine footfall, and whether maintenance deposits and parking charges moved with base rates. Renters considering purchase should stress-test EMIs against the 10% realisation move even if headline repo rates pause. Investors in Nifty Realty names should pair broker estimates with company-specific pre-sales disclosures in December. Track RERA registration data in NCR and MMR, mortgage disbursement prints from housing finance companies, and whether unsold inventory ticks up once the delayed festive calendar normalises.",
+    ],
+  },
+  {
+    slug: "igl-q2-expense-squeeze-november-2026",
+    title: "IGL’s gas volumes grew but costs jumped faster than tariffs could follow",
+    summary:
+      "Indraprastha Gas Ltd reported for the September 2026 quarter that total sales averaged 10.06 million standard cubic metres per day, up about 7% year on year, yet consolidated EBITDA swung to a ₹31.7 crore loss as total expenses rose about 40% while revenue from operations grew roughly 12%, leaving net profit attributable to equity holders at ₹25.9 crore, down about 89% from a year earlier.",
+    category: "industry",
+    companyOrSector: "City gas distribution",
+    publishedAt: "2026-11-02T11:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("igl-q2-expense-squeeze-november-2026"),
+    keyTakeaways: [
+      "IGL averaged 10.06 mmscmd of sales in Q2 FY27, above poll estimates near 10 mmscmd and up about 7% year on year; CNG volumes rose about 9% and piped gas about 6%.",
+      "Consolidated EBITDA was a ₹31.7 crore loss versus EBITDA of ₹293.9 crore in the preceding quarter, while revenue from operations after excise grew about 11.6% year on year to ₹5,118 crore.",
+      "Total expenses increased about 40.1% year on year to ₹5,794.6 crore, outpacing tariff recovery and compressing margins despite steady connection adds in the National Capital Region.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indraprastha Gas Ltd published September-quarter results that showed demand still expanding in the Delhi national capital region even as profitability collapsed. Total sales volumes averaged 10.06 million standard cubic metres per day, marginally above analyst estimates near 10 mmscmd and up about 7% from a year earlier. Compressed natural gas deliveries rose about 9% and piped natural gas about 6%. Revenue from operations after deducting excise duty increased about 11.6% year on year to ₹5,118 crore. Total expenses, however, jumped about 40.1% to ₹5,794.6 crore, pushing consolidated EBITDA to a ₹31.7 crore loss compared with EBITDA of ₹293.9 crore in the June quarter. Net profit attributable to equity holders fell about 89% year on year to ₹25.9 crore. Coverage on 2 November 2026 noted the share reaction but the operating story is the cost curve, not the opening tick.",
+      "What does this mean?",
+      "City gas distributors buy regulated molecules and sell them under formulas that lag spikes in network charges, compression power, and spot gas prices. When expense lines move 40% in a quarter while tariffs adjust with a delay, margins can vanish even if buses, autos, and kitchens keep burning gas. IGL’s PNG push under government campaigns adds volume before tariff petitions fully recover new pipeline capex. Competitors such as Mahanagar Gas and Gujarat Gas face similar input cycles, so the print is a sector mechanism reminder rather than a one-off accounting quirk. Volumes growing 7% show consumers still prefer CNG over diesel in many fleets, but investors cannot ignore the spread between allowed returns and realised costs until regulators or cost pass-through orders catch up.",
+      "Why should I care?",
+      "If you drive a CNG taxi or run a restaurant on piped gas, expect operators to seek tariff revisions or surcharges even while they promote new connections. Fleet owners should budget fuel lines assuming distributors will petition regulators after weak quarters like this. Investors holding gas utility stocks should read expense break-ups on investor calls and compare PNGRB pass-through timelines across states. Track IGL’s next regulatory filing on unified tariffs, peer margin commentary from MGL and GAIL Gas, and whether volume growth holds into winter when PNG heating demand rises.",
+    ],
+  },
+  {
     slug: "neogen-battery-q2-qip-november-2026",
     title: "Neogen’s battery chemicals unit is starting to show up in the revenue line",
     summary:
@@ -8640,6 +8712,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "ambuja-cement-capex-expansion-november-2026": "markets",
+  "india-residential-sales-value-outpace-volume-november-2026": "markets",
+  "igl-q2-expense-squeeze-november-2026": "policy",
   "neogen-battery-q2-qip-november-2026": "companies",
   "affle-perion-acquisition-november-2026": "companies",
   "maruti-west-asia-shipping-disruption-november-2026": "markets",
