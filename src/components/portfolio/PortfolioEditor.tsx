@@ -13,8 +13,12 @@ import {
   type LivePortfolio,
 } from "@/lib/portfolio/holdings";
 import { runPortfolioImport } from "@/lib/portfolio/import-via-agent";
-import { FILE_PARSE_PROMPT, ZERODHA_IMPORT_PROMPT } from "@/lib/portfolio/setup-prompts";
-import { openZerodhaLoginTab, requestZerodhaLogin } from "@/lib/portfolio/zerodha-start";
+import { FILE_PARSE_PROMPT } from "@/lib/portfolio/setup-prompts";
+import {
+  fetchZerodhaHoldings,
+  openZerodhaLoginTab,
+  requestZerodhaLogin,
+} from "@/lib/portfolio/zerodha-start";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 type DraftRow = {
@@ -246,13 +250,15 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     setError(null);
     setParseStatus("Fetching holdings from Zerodha…");
     try {
-      const result = await runPortfolioImport({
-        text: ZERODHA_IMPORT_PROMPT,
-        getAuthHeaders: pocketedgeAuthHeaders,
-        onStatus: setParseStatus,
-      });
+      // Same MCP Kite session as Connections — direct get_holdings, not the chat agent.
+      const result = await fetchZerodhaHoldings();
       if (!result.ok) {
-        if (result.login) {
+        if (result.needsConnect) {
+          setZerodhaGate("need_connect");
+          setError(result.error);
+          return;
+        }
+        if (result.needsLogin) {
           setZerodhaGate("need_login");
           setError(result.error);
           return;

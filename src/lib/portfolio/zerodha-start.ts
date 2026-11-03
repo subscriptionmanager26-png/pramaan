@@ -1,9 +1,14 @@
+import type { PortfolioHoldingDraft } from "@/lib/agent/types";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 export type ZerodhaLoginResult =
   | { ok: true; url: string }
   | { ok: true; loggedInAs: string }
   | { ok: false; error: string };
+
+export type ZerodhaHoldingsResult =
+  | { ok: true; holdings: PortfolioHoldingDraft[] }
+  | { ok: false; error: string; needsLogin?: boolean; needsConnect?: boolean };
 
 /**
  * One-click Kite login: form POST in a new tab (survives popup blockers).
@@ -40,6 +45,71 @@ export async function openZerodhaLoginTab(action: "connect" | "login"): Promise<
     return { ok: true };
   } catch {
     return { ok: false, error: "Could not open Zerodha login." };
+  }
+}
+
+/**
+ * Direct Kite MCP holdings pull (same connection as Connect Zerodha).
+ * Avoids the portfolio chat agent, which often never called propose_portfolio_holdings.
+ */
+export async function fetchZerodhaHoldings(): Promise<ZerodhaHoldingsResult> {
+  try {
+    const headers = await pocketedgeAuthHeaders();
+    const res = await fetch("/api/agent/zerodha", {
+      method: "POST",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "holdings" }),
+      signal: AbortSignal.timeout(55_000),
+    });
+    const json = (await res.json().catch(() => ({}))) as {
+      ok?: boolean;
+      holdings?: PortfolioHoldingDraft[];
+      needsLogin?: boolean;
+      error?: { code?: string; message?: string } | string;
+    };
+    const err = json.error;
+    const code = typeof err === "object" ? err?.code : typeof err === "string" ? err : undefined;
+    const message =
+      (typeof err === "object" && err?.message) ||
+      (typeof err === "string" ? err : null) ||
+      "Could not fetch holdings from Zerodha.";
+
+    if (res.status === 404 || code === "zerodha_not_connected") {
+      return { ok: false, needsConnect: true, error: "Connect Zerodha first." };
+    }
+    if (res.status === 401 || json.needsLogin || code === "zerodha_login_required") {
+      return {
+        ok: false,
+        needsLogin: true,
+        error: typeof message === "string" ? message : "Log in to Zerodha, then try again.",
+      };
+    }
+    if (!res.ok) {
+      return { ok: false, error: typeof message === "string" ? message : "Could not fetch holdings from Zerodha." };
+    }
+    const holdings = Array.isArray(json.holdings)
+      ? json.holdings.filter(
+          (h) =>
+            h &&
+            typeof h.ticker === "string" &&
+            h.ticker.trim() &&
+            Number.isFinite(h.qty) &&
+            h.qty > 0,
+        )
+      : [];
+    if (!holdings.length) {
+      return { ok: false, error: "No equity holdings found in your Zerodha account." };
+    }
+    return { ok: true, holdings };
+  } catch (err) {
+    const timedOut =
+      err instanceof Error && (err.name === "TimeoutError" || /timeout/i.test(err.message));
+    return {
+      ok: false,
+      error: timedOut
+        ? "Zerodha timed out while fetching holdings. Try again in a minute."
+        : "Could not fetch holdings from Zerodha.",
+    };
   }
 }
 
