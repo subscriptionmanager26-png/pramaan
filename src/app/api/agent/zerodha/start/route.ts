@@ -72,10 +72,11 @@ export async function POST(request: Request) {
 
   try {
     await ensureAgentUserSynced(auth.user);
+    // PA may open a Kite MCP session (up to ~30s) then call login; keep under maxDuration=60.
     const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/zerodha`, {
       method: "POST",
       body: JSON.stringify({ action }),
-      signal: AbortSignal.timeout(45_000),
+      signal: AbortSignal.timeout(55_000),
     });
     const body = (await res.json().catch(() => ({}))) as {
       url?: string;
@@ -104,7 +105,14 @@ export async function POST(request: Request) {
       502,
     );
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Could not reach Zerodha.";
+    const timedOut =
+      err instanceof Error && (err.name === "TimeoutError" || /aborted due to timeout/i.test(err.message));
+    const message = timedOut
+      ? "Zerodha took too long to respond. Close this tab and try Connect again in a minute."
+      : err instanceof Error
+        ? err.message
+        : "Could not reach Zerodha.";
+    console.error("[zerodha-start]", { timedOut, message: err instanceof Error ? err.message : message });
     return tabPage("Zerodha", `<p>${escapeHtml(message)}</p><p><a href="${escapeHtml(returnTo)}">Back</a></p>`, 502);
   }
 }

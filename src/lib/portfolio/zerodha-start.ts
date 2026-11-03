@@ -51,7 +51,7 @@ export async function requestZerodhaLogin(action: "connect" | "login"): Promise<
       method: "POST",
       headers: { ...headers, "Content-Type": "application/json" },
       body: JSON.stringify({ action }),
-      signal: AbortSignal.timeout(45_000),
+      signal: AbortSignal.timeout(55_000),
     });
     const json = (await res.json().catch(() => ({}))) as {
       url?: string;

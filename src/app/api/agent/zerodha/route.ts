@@ -15,11 +15,29 @@ export async function POST(request: Request) {
   if ("response" in auth) return auth.response;
   await ensureAgentUserSynced(auth.user);
   const payload = await request.json().catch(() => ({}));
-  const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/zerodha`, {
-    method: "POST",
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(45_000),
-  });
-  const body = await res.json().catch(() => ({}));
-  return NextResponse.json(body, { status: res.status });
+  try {
+    const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/zerodha`, {
+      method: "POST",
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(55_000),
+    });
+    const body = await res.json().catch(() => ({}));
+    return NextResponse.json(body, { status: res.status });
+  } catch (err) {
+    const timedOut =
+      err instanceof Error && (err.name === "TimeoutError" || /aborted due to timeout/i.test(err.message));
+    return NextResponse.json(
+      {
+        error: {
+          code: timedOut ? "upstream_timeout" : "zerodha_proxy_failed",
+          message: timedOut
+            ? "Zerodha took too long to respond. Try again in a minute."
+            : err instanceof Error
+              ? err.message
+              : "Could not reach Zerodha.",
+        },
+      },
+      { status: timedOut ? 504 : 502 },
+    );
+  }
 }
