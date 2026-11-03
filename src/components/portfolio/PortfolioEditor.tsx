@@ -7,6 +7,7 @@ import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
 import { PortfolioUploadPanel } from "@/components/portfolio/PortfolioUploadPanel";
 import type { PortfolioHoldingDraft } from "@/lib/agent/types";
 import {
+  formatHoldingSource,
   formatInr,
   portfolioTotals,
   type LiveHolding,
@@ -27,7 +28,13 @@ type DraftRow = {
   qty: string;
   avg: string;
   name: string;
+  source: string;
+  assetType: string;
 };
+
+function emptyRow(source = "manual"): DraftRow {
+  return { key: newKey(), ticker: "", qty: "", avg: "", name: "", source, assetType: "" };
+}
 
 type SetupPath = "zerodha" | "manual" | "upload";
 /** choose → (upload|zerodha|edit) → verify → save */
@@ -45,17 +52,19 @@ function newKey() {
 }
 
 function rowsFromHoldings(holdings: LiveHolding[]): DraftRow[] {
-  if (!holdings.length) return [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }];
+  if (!holdings.length) return [emptyRow()];
   return holdings.map((h) => ({
     key: newKey(),
     ticker: h.ticker,
     qty: String(h.qty),
     avg: h.avg != null ? String(h.avg) : "",
     name: h.name ?? "",
+    source: h.source ?? "",
+    assetType: h.assetType ?? "",
   }));
 }
 
-function rowsFromProposal(holdings: PortfolioHoldingDraft[]): DraftRow[] {
+function rowsFromProposal(holdings: PortfolioHoldingDraft[], fallbackSource: string): DraftRow[] {
   const next = holdings
     .filter((h) => h.qty > 0)
     .map((h) => ({
@@ -64,8 +73,10 @@ function rowsFromProposal(holdings: PortfolioHoldingDraft[]): DraftRow[] {
       qty: String(h.qty),
       avg: h.avg != null ? String(h.avg) : "",
       name: h.name ?? "",
+      source: h.source || fallbackSource,
+      assetType: h.assetType ?? "",
     }));
-  return next.length ? next : [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }];
+  return next.length ? next : [emptyRow(fallbackSource)];
 }
 
 function parseDraft(rows: DraftRow[]) {
@@ -78,6 +89,8 @@ function parseDraft(rows: DraftRow[]) {
     const avg = Number(row.avg);
     if (row.avg.trim() && Number.isFinite(avg) && avg > 0) item.avg = avg;
     if (row.name.trim()) item.name = row.name.trim();
+    if (row.source.trim()) item.source = row.source.trim().toLowerCase();
+    if (row.assetType.trim()) item.assetType = row.assetType.trim().toLowerCase();
     out.push(item);
   }
   return out;
@@ -89,6 +102,8 @@ function draftAsLive(parsed: PortfolioHoldingDraft[]): LiveHolding[] {
     qty: h.qty,
     avg: h.avg,
     name: h.name,
+    source: h.source,
+    assetType: h.assetType,
     value: h.avg != null ? h.avg * h.qty : undefined,
   }));
 }
@@ -106,7 +121,7 @@ function EmptySetupChooser({
     {
       id: "zerodha",
       title: "Fetch from Zerodha",
-      detail: "Pull live holdings via Zerodha MCP",
+      detail: "Stocks and mutual funds via Zerodha MCP",
       icon: <Download className="h-5 w-5" strokeWidth={2} aria-hidden />,
     },
     {
@@ -168,7 +183,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
   const [step, setStep] = useState<Step>("choose");
   const [setupPath, setSetupPath] = useState<SetupPath | null>(null);
   const [rows, setRows] = useState<DraftRow[]>(() =>
-    empty ? [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }] : rowsFromHoldings(holdings),
+    empty ? [emptyRow()] : rowsFromHoldings(holdings),
   );
   const [saving, setSaving] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -267,7 +282,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         setError(result.error);
         return;
       }
-      setRows(rowsFromProposal(result.holdings));
+      setRows(rowsFromProposal(result.holdings, "zerodha"));
       setStep("edit");
       setParseStatus(null);
     } catch {
@@ -361,7 +376,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
           setError(result.error);
           return;
         }
-        setRows(rowsFromProposal(result.holdings));
+        setRows(rowsFromProposal(result.holdings, "upload"));
         setStep("edit");
         setParseStatus(null);
       } catch {
@@ -377,7 +392,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
     setSetupPath(path);
     setError(null);
     if (path === "manual") {
-      setRows(empty ? [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }] : rowsFromHoldings(holdings));
+      setRows(empty ? [emptyRow("manual")] : rowsFromHoldings(holdings));
       setStep("edit");
       window.setTimeout(() => firstTickerRef.current?.focus(), 80);
       return;
@@ -646,6 +661,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
               <tr className="border-b border-line text-meta text-ink-3">
                 <th className="px-4 py-3 font-normal">Ticker</th>
                 <th className="px-4 py-3 font-normal">Name</th>
+                <th className="px-4 py-3 font-normal">Source</th>
                 <th className="px-4 py-3 font-normal text-right">Qty</th>
                 <th className="px-4 py-3 font-normal text-right">Avg</th>
                 <th className="px-4 py-3 font-normal text-right">Amount</th>
@@ -655,7 +671,13 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
               {verifyLive.map((h) => (
                 <tr key={h.ticker} className="border-b border-line/70 last:border-0">
                   <td className="px-4 py-2.5 font-medium text-ink">{h.ticker}</td>
-                  <td className="px-4 py-2.5 text-ink-2">{h.name || "—"}</td>
+                  <td className="px-4 py-2.5 text-ink-2">
+                    {h.name || "—"}
+                    {h.assetType === "fund" ? (
+                      <span className="mt-0.5 block text-[11px] text-ink-3">Mutual fund</span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-2.5 text-ink-2">{formatHoldingSource(h.source)}</td>
                   <td className="px-4 py-2.5 text-right tabular-nums text-ink">
                     {h.qty.toLocaleString("en-IN")}
                   </td>
@@ -724,7 +746,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
             type="button"
             className="text-[12px] font-semibold text-ink-2 hover:text-rose-700 hover:underline"
             disabled={saving}
-            onClick={() => setRows([{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }])}
+            onClick={() => setRows([emptyRow(setupPath === "zerodha" ? "zerodha" : setupPath === "upload" ? "upload" : "manual")])}
           >
             Remove all rows
           </button>
@@ -733,19 +755,23 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
             className="text-[12px] font-semibold text-accent hover:underline"
             disabled={saving}
             onClick={() =>
-              setRows((cur) => [...cur, { key: newKey(), ticker: "", qty: "", avg: "", name: "" }])
+              setRows((cur) => [
+                ...cur,
+                emptyRow(setupPath === "zerodha" ? "zerodha" : setupPath === "upload" ? "upload" : "manual"),
+              ])
             }
           >
             + Add row
           </button>
         </div>
-        <table className="w-full min-w-[520px] border-collapse text-left text-[13px]">
+        <table className="w-full min-w-[600px] border-collapse text-left text-[13px]">
           <thead>
             <tr className="border-b border-line text-meta text-ink-3">
               <th className="pb-2 pr-2 font-normal">Ticker</th>
               <th className="pb-2 pr-2 font-normal">Qty</th>
               <th className="pb-2 pr-2 font-normal">Avg</th>
               <th className="pb-2 pr-2 font-normal">Name</th>
+              <th className="pb-2 pr-2 font-normal">Source</th>
               <th className="pb-2 w-8 font-normal" />
             </tr>
           </thead>
@@ -790,6 +816,12 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                     disabled={saving}
                     onChange={(e) => patchRow(row.key, { name: e.target.value })}
                   />
+                </td>
+                <td className="py-1.5 pr-2">
+                  <span className="inline-flex whitespace-nowrap rounded-md border border-line bg-paper-2 px-2 py-1 text-[12px] text-ink-2">
+                    {formatHoldingSource(row.source)}
+                    {row.assetType === "fund" ? " · MF" : ""}
+                  </span>
                 </td>
                 <td className="py-1.5 text-right">
                   <button

@@ -11,8 +11,25 @@ export type LiveHolding = {
   pnlPct?: number;
   changePct?: number;
   assetType?: string;
+  /** Where the line came from: zerodha | manual | upload | agent */
+  source?: string;
   logoUrl?: string;
 };
+
+export function formatHoldingSource(source: string | undefined) {
+  switch ((source || "").toLowerCase()) {
+    case "zerodha":
+      return "Zerodha";
+    case "manual":
+      return "Manual";
+    case "upload":
+      return "Upload";
+    case "agent":
+      return "Agent";
+    default:
+      return source?.trim() || "—";
+  }
+}
 
 export type LivePortfolio = {
   id: string;
@@ -40,6 +57,12 @@ export function normalizeHolding(raw: Record<string, unknown>): LiveHolding | nu
   const pnl = Number(raw.pnl);
   const pnlPct = Number(raw.pnlPct ?? raw.pnl_pct);
   const changePct = Number(raw.changePct ?? raw.change_pct ?? raw.dayChangePct);
+  const sourceRaw =
+    typeof raw.source === "string"
+      ? raw.source
+      : typeof raw.origin === "string"
+        ? raw.origin
+        : undefined;
   return {
     ticker,
     name: typeof raw.name === "string" ? raw.name : undefined,
@@ -51,6 +74,7 @@ export function normalizeHolding(raw: Record<string, unknown>): LiveHolding | nu
     pnlPct: Number.isFinite(pnlPct) ? pnlPct : undefined,
     changePct: Number.isFinite(changePct) ? changePct : undefined,
     assetType: typeof raw.assetType === "string" ? raw.assetType : typeof raw.asset_type === "string" ? raw.asset_type : undefined,
+    source: sourceRaw?.trim() ? sourceRaw.trim().toLowerCase().slice(0, 32) : undefined,
     logoUrl:
       typeof raw.logoUrl === "string"
         ? raw.logoUrl
@@ -173,19 +197,62 @@ export function formatPct(value: number, signed = false) {
   return `${prefix}${value.toFixed(2)}%`;
 }
 
+type HoldingWrite = {
+  ticker: string;
+  qty: number;
+  avg?: number;
+  name?: string;
+  source?: string;
+  assetType?: string;
+};
+
 /** Merge proposal into current book. */
 export function applyHoldingsUpdate(
   current: LiveHolding[],
-  draft: { ticker: string; qty: number; avg?: number; name?: string }[],
+  draft: HoldingWrite[],
   mode: "replace" | "merge",
-): { ticker: string; qty: number; avg?: number; name?: string }[] {
+): HoldingWrite[] {
+  const toWrite = (h: HoldingWrite): HoldingWrite => {
+    const out: HoldingWrite = { ticker: h.ticker, qty: h.qty };
+    if (h.avg != null) out.avg = h.avg;
+    if (h.name) out.name = h.name;
+    if (h.source) out.source = h.source;
+    if (h.assetType) out.assetType = h.assetType;
+    return out;
+  };
   if (mode === "replace") {
-    return draft.filter((h) => h.qty > 0).map((h) => ({ ticker: h.ticker, qty: h.qty, avg: h.avg, name: h.name }));
+    return draft.filter((h) => h.qty > 0).map(toWrite);
   }
-  const map = new Map(current.map((h) => [h.ticker, { ticker: h.ticker, qty: h.qty, avg: h.avg, name: h.name }]));
+  const map = new Map(
+    current.map((h) => [
+      h.ticker,
+      toWrite({
+        ticker: h.ticker,
+        qty: h.qty,
+        avg: h.avg,
+        name: h.name,
+        source: h.source,
+        assetType: h.assetType,
+      }),
+    ]),
+  );
   for (const h of draft) {
-    if (h.qty <= 0) map.delete(h.ticker);
-    else map.set(h.ticker, { ticker: h.ticker, qty: h.qty, avg: h.avg ?? map.get(h.ticker)?.avg, name: h.name ?? map.get(h.ticker)?.name });
+    if (h.qty <= 0) {
+      map.delete(h.ticker);
+      continue;
+    }
+    const prev = map.get(h.ticker);
+    map.set(
+      h.ticker,
+      toWrite({
+        ticker: h.ticker,
+        qty: h.qty,
+        avg: h.avg ?? prev?.avg,
+        name: h.name ?? prev?.name,
+        source: h.source ?? prev?.source,
+        assetType: h.assetType ?? prev?.assetType,
+      }),
+    );
   }
   return [...map.values()];
 }

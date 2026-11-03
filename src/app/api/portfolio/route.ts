@@ -30,7 +30,14 @@ export async function PUT(request: Request) {
 
   const mode = body.mode === "merge" ? "merge" : "replace";
   const rawHoldings = Array.isArray(body.holdings) ? body.holdings : [];
-  const draft: { ticker: string; qty: number; avg?: number; name?: string }[] = [];
+  const draft: {
+    ticker: string;
+    qty: number;
+    avg?: number;
+    name?: string;
+    source?: string;
+    assetType?: string;
+  }[] = [];
   for (const row of rawHoldings) {
     if (!row || typeof row !== "object") continue;
     const r = row as Record<string, unknown>;
@@ -39,9 +46,22 @@ export async function PUT(request: Request) {
       .toUpperCase();
     const qty = Number(r.qty);
     if (!ticker || !Number.isFinite(qty) || qty < 0) continue;
-    const item: { ticker: string; qty: number; avg?: number; name?: string } = { ticker, qty };
+    const item: {
+      ticker: string;
+      qty: number;
+      avg?: number;
+      name?: string;
+      source?: string;
+      assetType?: string;
+    } = { ticker, qty };
     if (typeof r.avg === "number" && Number.isFinite(r.avg)) item.avg = r.avg;
     if (typeof r.name === "string") item.name = r.name;
+    if (typeof r.source === "string" && r.source.trim()) item.source = r.source.trim().toLowerCase().slice(0, 32);
+    if (typeof r.assetType === "string" && r.assetType.trim()) {
+      item.assetType = r.assetType.trim().toLowerCase().slice(0, 32);
+    } else if (typeof r.asset_type === "string" && r.asset_type.trim()) {
+      item.assetType = r.asset_type.trim().toLowerCase().slice(0, 32);
+    }
     draft.push(item);
   }
 

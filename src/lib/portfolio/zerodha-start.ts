@@ -88,17 +88,28 @@ export async function fetchZerodhaHoldings(): Promise<ZerodhaHoldingsResult> {
       return { ok: false, error: typeof message === "string" ? message : "Could not fetch holdings from Zerodha." };
     }
     const holdings = Array.isArray(json.holdings)
-      ? json.holdings.filter(
-          (h) =>
-            h &&
-            typeof h.ticker === "string" &&
-            h.ticker.trim() &&
-            Number.isFinite(h.qty) &&
-            h.qty > 0,
-        )
+      ? json.holdings
+          .filter(
+            (h) =>
+              h &&
+              typeof h.ticker === "string" &&
+              h.ticker.trim() &&
+              Number.isFinite(h.qty) &&
+              h.qty > 0,
+          )
+          .map((h) => ({
+            ticker: h.ticker.trim().toUpperCase(),
+            qty: h.qty,
+            ...(h.avg != null && Number.isFinite(h.avg) ? { avg: h.avg } : {}),
+            ...(typeof h.name === "string" && h.name.trim() ? { name: h.name.trim() } : {}),
+            source: typeof h.source === "string" && h.source.trim() ? h.source.trim().toLowerCase() : "zerodha",
+            ...(typeof h.assetType === "string" && h.assetType.trim()
+              ? { assetType: h.assetType.trim().toLowerCase() }
+              : {}),
+          }))
       : [];
     if (!holdings.length) {
-      return { ok: false, error: "No equity holdings found in your Zerodha account." };
+      return { ok: false, error: "No equity or mutual fund holdings found in your Zerodha account." };
     }
     return { ok: true, holdings };
   } catch (err) {

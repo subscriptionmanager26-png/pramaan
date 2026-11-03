@@ -41,7 +41,14 @@ export async function upsertLiveHoldings(
   input: {
     portfolioId?: string | null;
     name?: string;
-    holdings: { ticker: string; qty: number; avg?: number; name?: string }[];
+    holdings: {
+      ticker: string;
+      qty: number;
+      avg?: number;
+      name?: string;
+      source?: string;
+      assetType?: string;
+    }[];
   },
 ) {
   const url = supabaseUrl();

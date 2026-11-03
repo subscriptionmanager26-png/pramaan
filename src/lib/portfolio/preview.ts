@@ -13,6 +13,7 @@ export const PREVIEW_HOLDINGS: LiveHolding[] = [
     pnlPct: 11.6,
     changePct: 0.4,
     assetType: "equity",
+    source: "zerodha",
   },
   {
     ticker: "INFY",
@@ -25,6 +26,7 @@ export const PREVIEW_HOLDINGS: LiveHolding[] = [
     pnlPct: 6.3,
     changePct: -0.2,
     assetType: "equity",
+    source: "zerodha",
   },
   {
     ticker: "NIFTYBEES",
@@ -37,6 +39,7 @@ export const PREVIEW_HOLDINGS: LiveHolding[] = [
     pnlPct: 9.4,
     changePct: 0.15,
     assetType: "etf",
+    source: "zerodha",
   },
   {
     ticker: "GOLDBEES",
@@ -49,6 +52,7 @@ export const PREVIEW_HOLDINGS: LiveHolding[] = [
     pnlPct: 11.2,
     changePct: 0.3,
     assetType: "commodity",
+    source: "manual",
   },
 ];
 

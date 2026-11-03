@@ -7,6 +7,7 @@ import { PortfolioAgentPanel } from "@/components/portfolio/PortfolioAgentPanel"
 import { PortfolioEditor } from "@/components/portfolio/PortfolioEditor";
 import {
   allocationFromHoldings,
+  formatHoldingSource,
   formatInr,
   formatPct,
   insightsFromHoldings,
@@ -183,7 +184,9 @@ function HoldingsTable({ rows }: { rows: LiveHolding[] }) {
                 <div className="min-w-0">
                   <p className="truncate font-medium text-ink">{row.name || row.ticker}</p>
                   <p className="text-meta text-ink-3">
-                    {row.ticker} · {row.qty.toLocaleString("en-IN")} sh
+                    {row.ticker} · {row.qty.toLocaleString("en-IN")}
+                    {row.assetType === "fund" ? " units" : " sh"}
+                    {row.source ? ` · ${formatHoldingSource(row.source)}` : ""}
                   </p>
                 </div>
                 <div className="shrink-0 text-right">
@@ -218,6 +221,7 @@ function HoldingsTable({ rows }: { rows: LiveHolding[] }) {
           <thead>
             <tr className="border-b border-line text-meta text-ink-3">
               <th className="pb-3 pr-4 font-normal">Holding</th>
+              <th className="pb-3 pr-4 font-normal">Source</th>
               <th className="pb-3 pr-4 text-right font-normal">Qty</th>
               <th className="pb-3 pr-4 text-right font-normal">Avg</th>
               <th className="pb-3 pr-4 text-right font-normal">LTP</th>
@@ -240,8 +244,12 @@ function HoldingsTable({ rows }: { rows: LiveHolding[] }) {
                 <tr key={row.ticker} className="border-b border-line/80 last:border-0">
                   <td className="py-3 pr-4">
                     <p className="font-medium text-ink">{row.name || row.ticker}</p>
-                    <p className="text-meta text-ink-3">{row.ticker}</p>
+                    <p className="text-meta text-ink-3">
+                      {row.ticker}
+                      {row.assetType === "fund" ? " · Mutual fund" : ""}
+                    </p>
                   </td>
+                  <td className="py-3 pr-4 text-ink-2">{formatHoldingSource(row.source)}</td>
                   <td className="py-3 pr-4 text-right tabular-nums text-ink-2">
                     {row.qty.toLocaleString("en-IN")}
                   </td>
