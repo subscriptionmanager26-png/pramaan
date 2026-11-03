@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bata-india-premiumisation-q2-november-2026",
+    title: "Bata India grew sales with higher ticket sizes even as its profit margin narrowed",
+    summary:
+      "Bata India Ltd reported on 3 November 2026 that consolidated revenue from operations rose about 7.5% year on year in the September quarter to roughly ₹862 crore while net profit increased about 29%, with management citing like-for-like growth and higher average selling prices even as EBITDA margin slipped to about 16.7%.",
+    category: "industry",
+    companyOrSector: "Footwear retail",
+    publishedAt: "2026-11-03T18:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bata-india-premiumisation-q2-november-2026"),
+    keyTakeaways: [
+      "Revenue from operations reached about ₹862 crore in Q2 FY27, up about 7.5% year on year, while consolidated net profit rose about 29% to roughly ₹18 crore.",
+      "Management said like-for-like sales and average selling prices improved in retail, with franchise and industrial channels posting double-digit growth; inventory freshness reached about 92%.",
+      "EBITDA was roughly flat at about ₹144 crore and margin fell to about 16.7% from about 18.1% a year earlier, partly reflecting forex and asset write-off costs called out in the update.",
+    ],
+    body: [
+      "What's going on here?",
+      "Bata India Ltd published September-quarter results on 3 November 2026. Consolidated revenue from operations grew about 7.5% year on year to roughly ₹862 crore. Net profit rose about 29% to about ₹18 crore. Chief executive Sanjay S Rao, who took charge on 1 October 2026, said retail like-for-like sales and average selling prices improved, franchise and industrial channels grew at double-digit rates, and inventory freshness stood at about 92% with net stock about 7% lower than a year earlier. Zero Base Merchandising, rolled out in about 850 stores, was cited as lifting revenue per square foot. EBITDA stayed near ₹144 crore but margin eased to about 16.7% from about 18.1%, with the company flagging a non-cash forex loss on licence fees and an asset write-off in the quarter.",
+      "What does this mean?",
+      "Footwear chains make money when shoppers pay closer to full price and when stores carry fresher sizes rather than ageing discount racks. Bata’s story in this print is fewer deep markdowns and higher tickets, not a traffic surge alone. That fits a wider pattern from the same earnings week where several consumer names talk about premium mixes and disciplined inventory even when margins wobble on wages or currency. A flat EBITDA rupee line with softer margin usually means input or operating costs rose faster than gross profit per pair, not that demand collapsed ahead of the festive quarter, which management said shifts into the December period this year.",
+      "Why should I care?",
+      "If you buy school shoes or formal footwear for the family, full-price availability and size freshness matter more than day-one share moves. Suppliers of leather and synthetics should note when large chains run leaner stock and push ASP rather than blanket promotions. Investors comparing Trent, Metro Brands, and Bata should read same-store metrics and gross margin commentary alongside headline profit growth. Watch Q3 festive sales, whether EBITDA margin recovers after one-off costs, and how franchise expansion tracks in smaller cities.",
+    ],
+  },
+  {
+    slug: "oil-india-dibru-drilling-supreme-court-november-2026",
+    title: "Oil India asked the Supreme Court to drill under an Assam national park",
+    summary:
+      "Oil India Ltd filed a petition on 3 November 2026 asking the Supreme Court to allow oil exploration and drilling beneath Dibru-Saikhowa National Park in Assam after the environment ministry rejected its proposal to divert forest land, arguing domestic output matters when India imports most of its crude.",
+    category: "industry",
+    companyOrSector: "Oil & gas",
+    publishedAt: "2026-11-03T18:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("oil-india-dibru-drilling-supreme-court-november-2026"),
+    keyTakeaways: [
+      "Oil India approached the Supreme Court on 3 November 2026 seeking permission for exploration beneath Dibru-Saikhowa National Park after the environment ministry declined forest diversion for the project.",
+      "The company cited India importing about 80% to 85% of crude consumption and pointed to hydrocarbon potential in the region, reported at about 3% of national reserves in wire copy.",
+      "The court agreed to list the matter and sought a response from the Centre; the disputed forest diversion covered about 0.069 hectares in the filing described in reports.",
+    ],
+    body: [
+      "What's going on here?",
+      "Oil India Ltd moved the Supreme Court on 3 November 2026 to pursue oil exploration and drilling beneath Dibru-Saikhowa National Park in Assam. Reporting said the company is challenging the Ministry of Environment, Forest and Climate Change decision to reject a proposal involving diversion of about 0.069 hectares of forest land. Oil India argued that India meets roughly 80% to 85% of crude demand through imports, leaving the economy exposed to price spikes and supply shocks, including disruption linked to conflict in West Asia. It also cited the hydrocarbon potential of the area. The bench agreed to hear the petition and asked the Centre to respond.",
+      "What does this mean?",
+      "Energy security cases in India often collide with forest and wildlife law. Directional drilling under a protected park is technically different from clearing forest on the surface, but regulators still treat the link to protected habitat as sensitive. A court win for Oil India would not instantly raise output; it would unlock a legal path for surveys and wells that could take years. A loss would keep barrels offshore or in other basins. For northeastern communities, the trade-off is local employment and royalties against environmental risk on the Brahmaputra floodplain ecosystem the park protects.",
+      "Why should I care?",
+      "Households feel this debate through fuel prices and LPG subsidies long before any well flows. If you follow climate or tribal rights issues in Assam, track how the Centre frames its affidavit and whether the court distinguishes under-park drilling from surface mining precedents. Investors in Oil India and other explorers should treat the case as a permitting clock, not a quarterly earnings line. Watch the Union government’s reply, any interim stay, and parallel policy moves on strategic petroleum reserves or import diversification.",
+    ],
+  },
+  {
+    slug: "yes-bank-at1-bondholders-deadline-november-2026",
+    title: "Yes Bank bondholders gave the lender three days to spell out an AT-1 restoration plan",
+    summary:
+      "The Yes Bank AT-1 Bond Holders Association said in a 3 November 2026 letter that it wants a dated plan within three calendar days to restore about ₹8,415 crore of written-off additional tier-1 bonds after a debenture trustee deadline passed, and it pressed for clarity on unpaid coupons including one due in October.",
+    category: "industry",
+    companyOrSector: "Banking",
+    publishedAt: "2026-11-03T18:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("yes-bank-at1-bondholders-deadline-november-2026"),
+    keyTakeaways: [
+      "Bondholder representatives wrote to Yes Bank on 3 November 2026 asking for a restoration plan within three calendar days after Axis Trustee Services’ compliance deadline on the write-off expired.",
+      "The association sought clarity on whether the 9% coupon due on 19 October 2026 is payable and asked for a series-wise reconciliation of coupons since March 2020.",
+      "Reporting tied the pressure to the Supreme Court’s 15 October 2026 judgment upholding bondholders’ claims on AT-1 paper cancelled during the 2020 reconstruction.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 3 November 2026, the Yes Bank AT-1 Bond Holders Association escalated its campaign to restore about ₹8,415 crore of additional tier-1 bonds that were written off during the lender’s March 2020 rescue. In a letter reported by Mint, the group gave Yes Bank three calendar days to publish a dated implementation plan and to state its position on outstanding coupons. The step followed a 28 October notice from debenture trustee Axis Trustee Services that set a short deadline for the bank to reverse write-off entries; that deadline has passed without the outcome bondholders wanted. The association also asked whether the 9% coupon due on 19 October 2026 will be paid and requested a reconciliation of coupon history since March 2020. The push lands three weeks after the Supreme Court dismissed appeals by Yes Bank, the Reserve Bank of India, and the Union government and upheld bondholders’ claims.",
+      "What does this mean?",
+      "Court victories do not automatically restart cash flows. AT-1 instruments sit between equity and senior debt, so every week of dispute over accounting and coupons keeps mutual funds, retirees, and direct holders guessing on accrued interest and trading value. Bondholders are now testing whether the bank and trustee will treat restoration and coupon payments as separate tracks or one bundled negotiation. For Yes Bank’s common equity, recognising restored tier-1 debt can compress capital ratios that management had rebuilt after the rescue, which is why equity investors and debt holders are pulling in opposite directions on timing.",
+      "Why should I care?",
+      "If you hold bank debt funds, check whether any scheme still marks Yes Bank AT-1 at zero and read trustee meeting agendas for 16 November 2026 cited in reports. Retail investors who bought through branch networks should follow exchange filings rather than social media rumours on payout dates. Other banks are not direct parties, but the case shapes how future rescues draft loss-absorption language. Watch Yes Bank’s response within the association’s deadline, any review petition news, and Securities and Exchange Board of India guidance on valuing disputed bank capital.",
+    ],
+  },
+  {
+    slug: "thomas-cook-forward-bookings-november-2026",
+    title: "Thomas Cook said forward travel bookings rose 30% despite a weak September quarter",
+    summary:
+      "Thomas Cook (India) Ltd reported on 3 November 2026 that consolidated net profit fell about 23% year on year in the September quarter on lower revenue, while chief executive Mahesh Iyer said forward bookings were up about 30% and inbound travel was recovering from earlier West Asia disruption.",
+    category: "industry",
+    companyOrSector: "Travel & leisure",
+    publishedAt: "2026-11-03T18:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("thomas-cook-forward-bookings-november-2026"),
+    keyTakeaways: [
+      "Net profit was about ₹53.7 crore in Q2 FY27, down about 23% year on year, while overall travel segment revenue declined about 7% in the period.",
+      "Management said forward bookings rose about 30% year on year despite higher airfares, with Europe and Asia packages performing well.",
+      "Foreign exchange and leisure hospitality revenue rose about 21% in the quarter, partially offsetting pressure on packaged travel.",
+    ],
+    body: [
+      "What's going on here?",
+      "Thomas Cook (India) Ltd reported September-quarter earnings on 3 November 2026. Consolidated net profit fell about 23% year on year to roughly ₹53.7 crore as revenue softened. Travel segment revenue declined about 7% year on year, reflecting a tough comparison and lingering route cancellations linked to West Asia security issues. On a post-results call, managing director Mahesh Iyer said inbound business was improving sequentially versus the June quarter and that forward bookings for outbound holidays were up about 30% year on year even with costlier tickets. Europe and Asia packages were called out as strong, Japan continued to draw interest, and corporate hotel bookings helped the business travel line. Foreign exchange and leisure hospitality revenue rose about 21% in the quarter.",
+      "What does this mean?",
+      "Travel agencies earn when customers prepay packages months ahead, so rising forward bookings can lead reported profits even when the current quarter looks weak. Higher airfares compress margins on fixed-price tours unless surcharges pass through quickly. Thomas Cook’s mix shift toward forex counters and owned hotels gives it a hedge when pure tour revenue stalls. For middle-class holiday planners, a 30% booking jump suggests pent-up demand for long-haul trips is still alive if visas and seats are available, aligning with other leisure signals from the same week where corporate offsite travel also rebounds.",
+      "Why should I care?",
+      "If you are planning a winter vacation, compare all-in package prices against booking flights and hotels separately; agency margins move with forex and fuel surcharges buried in fine print. Corporate travel managers should note which routes remain sensitive to West Asia schedules. Investors in Indian leisure names should weigh forward-booking commentary against current-quarter profit, not one number alone. Watch visa processing times for Schengen and Japan, Thomas Cook’s franchise store rollout, and whether inbound recovery holds through the peak season.",
+    ],
+  },
+  {
     slug: "medanta-hospital-volumes-november-2026",
     title: "Medanta’s September-quarter revenue rose a third as its Noida hospital broke even on EBITDA",
     summary:
@@ -9096,6 +9192,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bata-india-premiumisation-q2-november-2026": "markets",
+  "oil-india-dibru-drilling-supreme-court-november-2026": "policy",
+  "yes-bank-at1-bondholders-deadline-november-2026": "policy",
+  "thomas-cook-forward-bookings-november-2026": "markets",
   "medanta-hospital-volumes-november-2026": "markets",
   "happiest-minds-itc-infotech-merger-november-2026": "companies",
   "vmart-q2-loss-november-2026": "markets",

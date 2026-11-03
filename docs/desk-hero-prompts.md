@@ -1202,6 +1202,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic bottle silhouette |
 | Metaphor left | Descending tariff steps on a scale |
 
+### `bata-india-premiumisation-q2-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Fewer markdowns, higher ticket sizes |
+| Subject right | Generic shoe storefront |
+| Metaphor left | Single ascending price tag vs small footprint trail |
+
+### `oil-india-dibru-drilling-supreme-court-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Energy security vs protected forest |
+| Subject left | Wetland / river silhouette |
+| Metaphor right | Drill path arrow beneath surface line |
+
+### `yes-bank-at1-bondholders-deadline-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Bondholders demand a dated restoration plan |
+| Subject right | Generic bank facade |
+| Metaphor left | Hourglass / three-step countdown blocks |
+
+### `thomas-cook-forward-bookings-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Holiday demand booked ahead despite weak quarter |
+| Subject left | Suitcase / departure board motif |
+| Metaphor right | Upward booking curve overlay |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
