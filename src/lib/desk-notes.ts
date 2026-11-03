@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "trident-textile-capex-november-2026",
+    title: "Trident approved a ₹4,650 crore mill expansion while quarterly sales slipped",
+    summary:
+      "Trident Ltd said on 3 November 2026 that its board cleared a ₹4,650 crore capacity and modernisation programme across yarn, sheeting, paper and renewable energy, even as September-quarter revenue from operations fell about 4% year on year while net profit nearly doubled on lower costs.",
+    category: "industry",
+    companyOrSector: "Textiles / home linen",
+    publishedAt: "2026-11-03T11:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("trident-textile-capex-november-2026"),
+    keyTakeaways: [
+      "The board approved ₹1,660 crore for a new 1,99,680-spindle yarn plant at Dhar in Madhya Pradesh, ₹1,022 crore of upgrades at Budhni, ₹1,018 crore for 336 sheeting looms, ₹296 crore for paper capacity and ₹654 crore for a renewable energy project.",
+      "Consolidated net profit attributable to owners rose to about ₹175.5 crore in Q2FY27 from ₹90.9 crore a year earlier, while revenue from operations eased to about ₹1,719 crore from ₹1,787 crore.",
+      "EBITDA margin expanded to about 18% from 12% as total expenses fell roughly 10%; the capex plan is funded from internal accruals and debt and is sized at nearly one-third of the company’s market capitalisation.",
+    ],
+    body: [
+      "What's going on here?",
+      "Punjab-based textile and paper manufacturer Trident Ltd reported September-quarter results on 3 November 2026 and separately announced that directors approved a ₹4,650 crore investment package. The plan spans a greenfield yarn mill in Dhar, modernisation at its Budhni yarn unit, additional sheeting looms, a paper line expansion and a renewable energy project with staggered completion dates through 2029. In the same update, the company said consolidated profit attributable to owners jumped to about ₹175.5 crore from ₹90.9 crore a year earlier even though revenue from operations slipped to about ₹1,719 crore from ₹1,787 crore. Management highlighted margin gains as expenses fell faster than sales, with EBITDA margin moving to about 18% from 12%.",
+      "What does this mean?",
+      "When a home-textile maker commits capex of this size while top-line growth is flat, it is betting that export and domestic linen demand will absorb new spindle and loom capacity over the next three to four years. Yarn and bedsheet segments showed divergent quarter-on-quarter trends in the filing narrative, so the board is tilting spend toward yarn and sheeting rather than waiting for towel volumes to recover. Funding the plan through a mix of internal cash and borrowings raises execution risk if cotton or energy costs spike before new lines ramp. For competitors in Punjab and Madhya Pradesh, the announcement signals aggressive capacity addition in fine-count yarn and sheeting rather than a pause after a soft revenue print.",
+      "Why should I care?",
+      "If you supply machinery, power or logistics to textile clusters, multi-year capex schedules like this can mean steady order books when projects stay on timeline. Retail buyers of towels and bedsheets may not see prices move immediately, but added loom capacity eventually affects bargaining in business-to-business contracts. Investors should read project completion dates, debt covenants and whether margin gains came from one-off cost items versus sustained mix improvement. Watch Budhni and Dhar commissioning milestones, yarn segment revenue after spindle additions, and any export commentary on the next earnings call.",
+    ],
+  },
+  {
+    slug: "man-infra-epc-orders-november-2026",
+    title: "Man Infraconstruction won ₹583 crore of Mumbai tower and port reclamation work",
+    summary:
+      "Man Infraconstruction Ltd said on 3 November 2026 that fresh engineering, procurement and construction orders worth about ₹583 crore lifted its standalone EPC backlog to roughly ₹858 crore from ₹275 crore in September, including a Marine Lines residential tower and yard works at Jawaharlal Nehru Port.",
+    category: "industry",
+    companyOrSector: "Construction / EPC",
+    publishedAt: "2026-11-03T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("man-infra-epc-orders-november-2026"),
+    keyTakeaways: [
+      "The larger ₹508 crore contract covers construction of the Skyscraper residential tower at Marine Lines in Mumbai; a ₹75 crore letter of acceptance covers triangular yard surcharging reclamation for Bharat Mumbai Container Terminal at JNPA.",
+      "Management said standalone EPC order book rose to about ₹858 crore from ₹275 crore in September 2026, improving revenue visibility for the engineering segment.",
+      "The company reported consolidated Q2 net profit of about ₹65.2 crore on 29 October 2026, up from about ₹60 crore a year earlier, while EPC segment revenue was roughly flat near ₹63 crore.",
+    ],
+    body: [
+      "What's going on here?",
+      "Man Infraconstruction Ltd disclosed on 3 November 2026 that it secured two engineering, procurement and construction awards totalling about ₹583 crore. One contract, worth roughly ₹508 crore, is to build the Skyscraper residential tower at Marine Lines in south Mumbai. The second, a ₹75 crore letter of acceptance from Bharat Mumbai Container Terminal Private Limited, covers triangular yard surcharging reclamation works at Jawaharlal Nehru Port Authority near Navi Mumbai. The company said its standalone EPC portfolio climbed to about ₹858 crore from ₹275 crore in September, which management framed as stronger visibility for the contracting arm. The news followed quarterly results on 29 October in which consolidated net profit rose modestly while EPC revenue was little changed from the prior year.",
+      "What does this mean?",
+      "Mid-sized contractors live on order backlog: jumping from ₹275 crore to ₹858 crore in one announcement changes how many years of engineering revenue are already booked, assuming sites start on schedule. A luxury residential tower in Marine Lines and port yard reclamation at India’s busiest container gateway are different technical jobs, but both tie to Mumbai’s ongoing need for housing near transit and deeper berth capacity. Flat EPC revenue in the latest quarter suggests earlier projects were still winding down when these wins landed, so investors will watch mobilisation and billing curves rather than yesterday’s share price move. Cost inflation in cement, steel and labour still flows straight into fixed-price EPC margins if escalation clauses are weak.",
+      "Why should I care?",
+      "If you work in construction supply chains around Mumbai or Navi Mumbai, large tower and port packages can keep subcontractor demand active through the second half of the decade. Home buyers tracking premium south Mumbai projects should treat contractor awards as early-stage signals, not possession dates. Creditors to Man Infraconstruction should monitor how much of the ₹858 crore book is executable within 24 months versus longer port reclamation phases. Watch construction progress disclosures, any revised timelines from JNPA or the residential developer, and whether the EPC segment’s revenue run-rate catches up to the enlarged backlog in the next two quarters.",
+    ],
+  },
+  {
     slug: "hpcl-vizag-pitch-tank-fire-november-2026",
     title: "HPCL contained a pitch-tank fire at Visakhapatnam without shutting the refinery",
     summary:
@@ -8976,6 +9024,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "trident-textile-capex-november-2026": "companies",
+  "man-infra-epc-orders-november-2026": "companies",
   "hpcl-vizag-pitch-tank-fire-november-2026": "companies",
   "india-navy-corvettes-order-november-2026": "policy",
   "secl-coal-india-ipo-drhp-november-2026": "policy",

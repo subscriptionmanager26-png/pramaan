@@ -827,6 +827,29 @@ def motherson_wiring_content(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([1020, 180, 1140, 260], fill=RED)
 
 
+def man_infra_epc_orders(d: ImageDraw.ImageDraw) -> None:
+    # tower silhouette + port reclamation blocks
+    d.rectangle([120, 180, 420, 560], fill=BLUE)
+    for y in range(220, 520, 70):
+        d.rectangle([150, y, 390, y + 40], fill=CREAM if y % 140 else YELLOW)
+    d.polygon([(640, 520), (720, 420), (900, 400), (1080, 420), (1160, 520)], fill=RED)
+    d.line([(680, 560), (1120, 560)], fill=GOLD, width=4)
+    for i, h in enumerate([100, 180, 260]):
+        x = 700 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, BLUE, RED][i])
+
+
+def trident_textile_capex(d: ImageDraw.ImageDraw) -> None:
+    # fabric roll + stacked capex bars
+    d.ellipse([140, 280, 340, 520], outline=RED, width=8)
+    d.rectangle([180, 320, 300, 480], fill=BLUE)
+    for i, h in enumerate([120, 200, 280, 360, 440]):
+        x = 620 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, BLUE, YELLOW, RED, GOLD][i])
+    d.line([(600, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(980, 180), (1120, 240), (980, 300)], fill=GOLD)
+
+
 def india_pmi_october(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([100, 280, 460, 520], fill=BLUE)
     d.polygon([(280, 300), (380, 340), (380, 480), (280, 520), (180, 480), (180, 340)], fill=RED)
@@ -947,6 +970,8 @@ def main() -> None:
     save("reliance-independence-biscuits-tamil-nadu-november-2026", reliance_independence_biscuits)
     save("motherson-sumi-wiring-premiumisation-q2-november-2026", motherson_wiring_content)
     save("india-manufacturing-pmi-october-slowdown-november-2026", india_pmi_october)
+    save("man-infra-epc-orders-november-2026", man_infra_epc_orders)
+    save("trident-textile-capex-november-2026", trident_textile_capex)
 
 
 if __name__ == "__main__":
