@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 
-import { ensureAgentUserSynced } from "@/lib/agent/ensure-agent-user";
 import { requireAgentUser } from "@/lib/agent/require-agent-user";
-import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
+import { personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 30;
+/** Run next to Indian users / Kite — cuts Mumbai→US→Kite hairpin latency. */
+export const preferredRegion = ["bom1"];
 
 function escapeHtml(s: string) {
   return s
@@ -24,23 +25,70 @@ a{color:#0b6e4f}</style></head><body>${body}</body></html>`,
   );
 }
 
-/** HTML navigate beats a bare 303 from an API form POST (browsers often leave you on this URL). */
-function navigateTab(url: string, label: string) {
-  const safe = escapeHtml(url);
+/**
+ * Return a spinner tab immediately, then fetch the Kite URL from the JSON route.
+ * Keeps Connect from sitting on a blank tab while PA talks to mcp.kite.trade.
+ */
+function waitingTab(input: { action: string; token: string; returnTo: string }) {
+  const payload = JSON.stringify({
+    action: input.action,
+    token: input.token,
+    returnTo: input.returnTo,
+  });
   return new NextResponse(
-    `<!doctype html><html lang="en"><head><meta charset="utf-8"/>
-<meta http-equiv="refresh" content="0;url=${safe}"/>
-<title>${escapeHtml(label)}</title>
-<script>location.replace(${JSON.stringify(url)})</script>
-<style>body{font-family:ui-sans-serif,system-ui,sans-serif;padding:2rem;line-height:1.5}</style>
-</head><body><p>${escapeHtml(label)}…</p><p><a href="${safe}">Continue</a></p></body></html>`,
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Opening Zerodha</title>
+<style>
+body{font-family:ui-sans-serif,system-ui,sans-serif;padding:2rem;max-width:32rem;line-height:1.5;color:#111}
+.spin{display:inline-block;width:1.1rem;height:1.1rem;border:2px solid #ccc;border-top-color:#0b6e4f;border-radius:50%;animation:s .7s linear infinite;vertical-align:-.15rem;margin-right:.5rem}
+@keyframes s{to{transform:rotate(360deg)}}
+a{color:#0b6e4f}#err{display:none;color:#a11}
+</style></head><body>
+<p><span class="spin" aria-hidden="true"></span>Opening Zerodha login…</p>
+<p id="err"></p>
+<p><a href="${escapeHtml(input.returnTo)}">Back</a></p>
+<script>
+(async () => {
+  const cfg = ${payload};
+  const err = document.getElementById("err");
+  try {
+    const headers = { "Content-Type": "application/json" };
+    if (cfg.token) headers.Authorization = "Bearer " + cfg.token;
+    const res = await fetch("/api/agent/zerodha", {
+      method: "POST",
+      headers,
+      credentials: "same-origin",
+      body: JSON.stringify({ action: cfg.action }),
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const msg = (body && body.error && (body.error.message || body.error)) || "Could not start Zerodha login.";
+      throw new Error(typeof msg === "string" ? msg : "Could not start Zerodha login.");
+    }
+    if (body && typeof body.url === "string" && /^https:\\/\\//i.test(body.url)) {
+      location.replace(body.url);
+      return;
+    }
+    if (body && body.loggedInAs) {
+      const u = new URL(cfg.returnTo, location.origin);
+      u.searchParams.set("zerodha", "ready");
+      location.replace(u.toString());
+      return;
+    }
+    throw new Error("Zerodha did not return a login link. Try again in a minute.");
+  } catch (e) {
+    err.style.display = "block";
+    err.textContent = e && e.message ? e.message : "Could not reach Zerodha.";
+  }
+})();
+</script>
+</body></html>`,
     { status: 200, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } },
   );
 }
 
 /**
- * Form POST target for Connect / Log in — opens in a new tab, then 303s to Kite.
- * Matches the Pocketedge studio pattern (no about:blank + async location.assign).
+ * Form POST target for Connect / Log in — opens in a new tab with an instant spinner,
+ * then the tab fetches the Kite URL (does not block the form response on mcp.kite.trade).
  */
 export async function POST(request: Request) {
   if (!personalAgentsConfigured()) {
@@ -70,49 +118,5 @@ export async function POST(request: Request) {
     );
   }
 
-  try {
-    await ensureAgentUserSynced(auth.user);
-    // PA may open a Kite MCP session (up to ~30s) then call login; keep under maxDuration=60.
-    const res = await paFetch(`/api/v1/users/${encodeURIComponent(auth.user.id)}/zerodha`, {
-      method: "POST",
-      body: JSON.stringify({ action }),
-      signal: AbortSignal.timeout(55_000),
-    });
-    const body = (await res.json().catch(() => ({}))) as {
-      url?: string;
-      loggedInAs?: string;
-      error?: { message?: string } | string;
-    };
-    if (!res.ok) {
-      const err = body.error;
-      const message =
-        (typeof err === "object" && err?.message) ||
-        (typeof err === "string" ? err : null) ||
-        "Could not start Zerodha login.";
-      return tabPage("Zerodha", `<p>${escapeHtml(message)}</p><p><a href="${escapeHtml(returnTo)}">Back</a></p>`, res.status);
-    }
-    if (typeof body.url === "string" && /^https:\/\//i.test(body.url)) {
-      return navigateTab(body.url, "Opening Zerodha login");
-    }
-    if (body.loggedInAs) {
-      const dest = new URL(returnTo, request.url);
-      dest.searchParams.set("zerodha", "ready");
-      return navigateTab(dest.toString(), "Already logged in — returning");
-    }
-    return tabPage(
-      "Zerodha",
-      `<p>Zerodha did not return a login link. Close this tab and try again.</p><p><a href="${escapeHtml(returnTo)}">Back</a></p>`,
-      502,
-    );
-  } catch (err) {
-    const timedOut =
-      err instanceof Error && (err.name === "TimeoutError" || /aborted due to timeout/i.test(err.message));
-    const message = timedOut
-      ? "Zerodha took too long to respond. Close this tab and try Connect again in a minute."
-      : err instanceof Error
-        ? err.message
-        : "Could not reach Zerodha.";
-    console.error("[zerodha-start]", { timedOut, message: err instanceof Error ? err.message : message });
-    return tabPage("Zerodha", `<p>${escapeHtml(message)}</p><p><a href="${escapeHtml(returnTo)}">Back</a></p>`, 502);
-  }
+  return waitingTab({ action, token: formToken, returnTo });
 }
