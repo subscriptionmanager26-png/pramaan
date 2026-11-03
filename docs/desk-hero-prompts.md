@@ -1170,6 +1170,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Rate hike | Rising bars / arrow / dial up |
 | QSR LFL pickup | Same storefront, busier glow / repeat visit motif |
 
+### `hpcl-vizag-pitch-tank-fire-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Localised tank fire; refinery keeps running |
+| Subject right | Refinery silhouette |
+| Metaphor left | Single tank with containment shield |
+
+### `india-navy-corvettes-order-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Multi-year domestic warship order |
+| Subject right | Corvette hull silhouette |
+| Metaphor left | Shipyard blocks / chevron fleet |
+
+### `secl-coal-india-ipo-drhp-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Parent stake sale via subsidiary listing |
+| Subject left | Mine headframe |
+| Metaphor right | Stepped listing blocks |
+
+### `india-bulk-scotch-fta-assurance-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Trade pact duty path clarified for bulk imports |
+| Subject right | Generic bottle silhouette |
+| Metaphor left | Descending tariff steps on a scale |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.

@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hpcl-vizag-pitch-tank-fire-november-2026",
+    title: "HPCL contained a pitch-tank fire at Visakhapatnam without shutting the refinery",
+    summary:
+      "Hindustan Petroleum Corporation said on 2 November 2026 that a fire in a pitch intermediate storage tank at its 15 million tonne Visakhapatnam refinery was localised and extinguished with no casualties, while all processing units continued to operate safely.",
+    category: "industry",
+    companyOrSector: "Oil refining / energy",
+    publishedAt: "2026-11-03T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hpcl-vizag-pitch-tank-fire-november-2026"),
+    keyTakeaways: [
+      "HPCL reported the blaze at about 10 pm on 2 November 2026 in a pitch intermediate storage tank at Visakh Refinery; pitch is the heavy residue left after lighter fuels are extracted from crude.",
+      "The company said fire and safety teams contained the incident to the pitch tank area, that no one was injured, and that every refinery unit remained in safe operation.",
+      "Visakhapatnam is HPCL’s larger coastal refinery at 15 million tonnes per annum capacity, alongside a 9.5 million tonne plant in Mumbai.",
+    ],
+    body: [
+      "What's going on here?",
+      "State-run Hindustan Petroleum Corporation issued statements late on 2 November 2026 after a fire at its Visakhapatnam refinery on India’s east coast. The incident involved a pitch intermediate storage tank, which holds the viscous residue that remains once petrol, diesel, and other lighter products are processed from crude. HPCL said its on-site fire and safety team activated emergency procedures around 10 pm local time. Andhra Pradesh fire department equipment also supported the response. Local officials who visited the site said the blaze was fully extinguished using refinery and state firefighting assets and that no injuries or casualties were reported. HPCL repeated that all refinery units were working safely and that it would cooperate with any industrial safety enquiry.",
+      "What does this mean?",
+      "Pitch tanks sit at the heavy end of a refinery’s product chain, so a localised fire is serious for neighbours and regulators but different from a crude-unit outage that would instantly tighten transport fuel supply. HPCL’s message that main units kept running limits near-term panic about diesel or jet shortages from this site, though investigators will still ask how ignition occurred and whether maintenance or storage protocols failed. Visakhapatnam accounts for the bulk of HPCL’s refining footprint, so repeated safety lapses would invite tighter oversight from petroleum and environment ministries even when markets stay calm. For coastal communities, the episode is a reminder that large fuel complexes operate beside cities and ports year round.",
+      "Why should I care?",
+      "If you live near the refinery, follow official updates rather than unverified social clips about explosions. Fleet operators and airlines should treat this as a watch item, not a supply shock, unless HPCL announces unit shutdowns. Investors in HPCL or other oil marketing companies should separate one-off safety events from quarterly marketing margins on transport fuels. Watch the enquiry report from state industrial safety authorities, any penalty notices, and whether insurers or regulators order extra audits across pitch storage at other refineries.",
+    ],
+  },
+  {
+    slug: "india-navy-corvettes-order-november-2026",
+    title: "India ordered eight new corvettes in a ₹53,866 crore domestic shipbuilding deal",
+    summary:
+      "The Defence Ministry said on 2 November 2026 that it signed contracts worth about ₹53,866 crore with Garden Reach Shipbuilders and Engineers and Goa Shipyard to build eight next-generation corvettes designed by the Indian Navy, with GRSE building five hulls and GSL three.",
+    category: "industry",
+    companyOrSector: "Defence / shipbuilding",
+    publishedAt: "2026-11-03T05:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-navy-corvettes-order-november-2026"),
+    keyTakeaways: [
+      "Contracts cover eight corvettes with advanced missile, weapon, and sensor suites for surface, air, and sub-surface missions along India’s coastline and in the Indian Ocean.",
+      "GRSE will construct five ships and Goa Shipyard three; the ministry said it is the first project where the Navy’s own design feeds straight into public-sector yard builds.",
+      "Defence Minister Rajnath Singh said the programme should generate about 72 lakh person-days at the yards and roughly 460 lakh person-days across suppliers and MSMEs over ten years.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 2 November 2026 the Defence Ministry announced defence contracts totalling about ₹53,866 crore to add eight next-generation corvettes to the Indian Navy. Garden Reach Shipbuilders and Engineers Ltd in Kolkata will build five vessels; Goa Shipyard Ltd will build three. The ministry said the ships will carry modern missiles, guns, and sensors so they can handle anti-surface, anti-submarine, coastal defence, and surveillance tasks. Officials framed the order as part of a push to expand indigenous warship design rather than import complete platforms. The announcement lands amid steady concern about maritime traffic security in the Indian Ocean, though the ministry’s release focused on capability and employment rather than a single flashpoint.",
+      "What does this mean?",
+      "Large naval orders act like multi-year manufacturing programmes: steel, engines, electronics, and weapons subsystems flow through a chain of public yards, private firms, and small suppliers. When the Navy owns the design and PSUs execute construction, more rupees stay inside India’s industrial base instead of foreign shipyards. Corvettes are smaller than destroyers but suited to patrol choke points and coastal waters, which fits a strategy of monitoring busy sea lanes without deploying capital ships everywhere. For GRSE and GSL investors, the contract underpins revenue visibility across the next decade but also raises execution risk on timelines and cost overruns common in complex defence builds.",
+      "Why should I care?",
+      "If you work in defence supply chains, steel fabrication, or port services, multi-ship programmes can mean steady tender pipelines when payments track milestones. Households will not see a direct bill, but taxes ultimately fund capex of this size, so transparency on delivery dates matters. Watch launch and sea-trial schedules for the first hull, export controls on imported subsystems, and whether private yards share subcontract work. Broader policy watchers should read the order alongside other Make-in-India naval projects to see if design-localisation claims hold in practice.",
+    ],
+  },
+  {
+    slug: "secl-coal-india-ipo-drhp-november-2026",
+    title: "Coal India’s SECL arm filed for an IPO that would only sell the parent’s shares",
+    summary:
+      "South Eastern Coalfields Ltd, Coal India’s second-largest producing subsidiary, filed a draft red herring prospectus with Sebi on 1 November 2026 for an offer-for-sale of up to 66.81 crore shares by Coal India with no fresh issue, after reporting sharply higher half-year profit on stronger production.",
+    category: "industry",
+    companyOrSector: "Coal / public sector listings",
+    publishedAt: "2026-11-03T05:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("secl-coal-india-ipo-drhp-november-2026"),
+    keyTakeaways: [
+      "The proposed IPO is entirely an offer for sale by promoter Coal India; SECL will not receive primary proceeds, so the listing monetises part of the parent’s stake.",
+      "SECL said revenue from operations rose to about ₹16,594 crore in the six months to September 2026 from ₹15,090 crore a year earlier, while net profit nearly doubled to about ₹2,174 crore.",
+      "The draft cites production of about 176 million tonnes in FY26, roughly 17% of national coal output, with large opencast mines in Chhattisgarh’s Korba coalfield.",
+    ],
+    body: [
+      "What's going on here?",
+      "South Eastern Coalfields Ltd, a Coal India subsidiary and one of the country’s largest coal miners, filed preliminary IPO papers with the Securities and Exchange Board of India dated 1 November 2026. The issue comprises an offer for sale of up to 66.81 crore equity shares by Coal India alone; there is no fresh capital raise for SECL itself, meaning listing proceeds flow to the parent’s treasury rather than the subsidiary’s expansion budget. Book-running lead managers named in reporting include SBI Capital Markets and ICICI Securities. The filing arrives after other Coal India units moved toward market listings, continuing a government theme of unlocking value in state-owned miners while retaining strategic control.",
+      "What does this mean?",
+      "When a profitable coal subsidiary lists via offer for sale, policymakers trade partial divestment for public market discipline on disclosures and pricing without giving up majority control. SECL’s improved half-year earnings, tied to higher production and offtake in a tight power-coal market, make the story easier to sell to investors than a distressed asset. For power utilities and steel plants, a listed SECL does not by itself change fuel contracts, but it can sharpen focus on production targets at Korba and other operating areas that feed domestic demand. Retail investors should read the DRHP for OFS size, price band, and how much stake Coal India retains after the issue.",
+      "Why should I care?",
+      "If you buy IPOs, treat this as a coal production play tied to domestic energy security rather than a tech growth story. Fixed-income and ESG-focused funds may weigh coal exposure differently from general retail buyers. Watch Sebi observations on the draft, the final offer size versus Bloomberg reports citing up to about $800 million, and listing performance of earlier Coal India unit IPOs such as Bharat Coking Coal. Power-sector readers should still track monthly coal dispatch data, which matter more for plant operations than the listing timetable alone.",
+    ],
+  },
+  {
+    slug: "india-bulk-scotch-fta-assurance-november-2026",
+    title: "Delhi told liquor makers it will stand by bulk Scotch duty cuts under the UK trade pact",
+    summary:
+      "After a meeting on 2 November 2026, officials told International Spirits and Wines Association and Confederation of Indian Alcoholic Beverage Companies members that the government intends to honour India-UK free trade commitments on bulk Scotch imports, amid a customs classification dispute that had threatened the lower tariff path.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages / trade policy",
+    publishedAt: "2026-11-03T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-bulk-scotch-fta-assurance-november-2026"),
+    keyTakeaways: [
+      "Industry sources said the commerce secretary met ISWAI and CIABC representatives on 2 November after domestic and global distillers protested treatment of bulk Scotch shipped in tankers for local bottling.",
+      "Under the July 2026 India-UK agreement, eligible Scotch import duty moved toward 75% from 150%, with a staged path lower over ten years, but tax authorities had explored a separate classification that could keep bulk imports on the higher track.",
+      "Allied Blenders and other listed players had warned that excluding bulk spirit would favour imported bottles over Indian filling lines that handle most Scotch volume entering the country.",
+    ],
+    body: [
+      "What's going on here?",
+      "Reporting on 2 November 2026 said the Union commerce secretary met leaders from the International Spirits and Wines Association of India and the Confederation of Indian Alcoholic Beverage Companies after weeks of friction over how bulk Scotch whisky imports are classified for customs. The India-United Kingdom trade agreement in force since mid-July 2026 cut duty on eligible Scotch toward 75% from 150%, with further step-downs planned. Most Scotch entering India arrives in bulk for bottling and blending locally, while a smaller share lands as finished bottles. Revenue authorities had signalled that some bulk shipments might fall under a harmonised system code that attracts the older higher duty, prompting joint pushback from Diageo and Pernod Ricard affiliates alongside Indian manufacturers. People briefed on the meeting said officials reiterated that New Delhi would honour FTA commitments on bulk imports while also noting domestic industry interests.",
+      "What does this mean?",
+      "Customs classification is not a paperwork detail for spirits makers; it sets landed cost before state excise and marketing margins. If bulk stays on the concessional track, bottlers that invested in local plants keep the economics they modeled when the pact was signed. If bulk faced 150% duty while bottles enjoyed the UK deal, shelves would tilt toward imported miniatures and away from Make-in-India filling lines. United Spirits, Radico Khaitan, and Allied Blenders had already told investors that concessional clearances since July helped gross margins, while Tilaknagar said it was still working through older inventory. Monday’s assurance reduces one source of uncertainty but does not by itself publish a final circular; companies still need written rules.",
+      "Why should I care?",
+      "If you follow consumer staples, watch whether premium Scotch price gaps between locally bottled and imported labels narrow or widen in your state after any customs notification. Investors should read Q3 commentary from United Spirits, Allied Blenders, and Radico for quantified margin help once classification is settled. Hospitality buyers planning festive stocking should confirm landed costs with distributors rather than assuming the FTA benefit applies automatically. Track a formal commerce or finance ministry clarification, any Directorate of Revenue Intelligence follow-up, and whether the United Kingdom raises the issue if delays persist.",
+    ],
+  },
+  {
     slug: "trai-complaint-redressal-overhaul-november-2026",
     title: "Trai will fine telcos for closed complaints and require 24-hour support",
     summary:
@@ -8880,6 +8976,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hpcl-vizag-pitch-tank-fire-november-2026": "companies",
+  "india-navy-corvettes-order-november-2026": "policy",
+  "secl-coal-india-ipo-drhp-november-2026": "policy",
+  "india-bulk-scotch-fta-assurance-november-2026": "policy",
   "trai-complaint-redressal-overhaul-november-2026": "policy",
   "itc-cigarette-tax-non-cigarette-fmcg-q2-november-2026": "markets",
   "marico-copra-edible-oil-duty-q2-november-2026": "markets",
