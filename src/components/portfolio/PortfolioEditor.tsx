@@ -834,7 +834,15 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
                         const next = cur.filter((r) => r.key !== row.key);
                         return next.length
                           ? next
-                          : [{ key: newKey(), ticker: "", qty: "", avg: "", name: "" }];
+                          : [
+                              emptyRow(
+                                setupPath === "zerodha"
+                                  ? "zerodha"
+                                  : setupPath === "upload"
+                                    ? "upload"
+                                    : "manual",
+                              ),
+                            ];
                       })
                     }
                   >
