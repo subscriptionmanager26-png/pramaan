@@ -850,6 +850,39 @@ def trident_textile_capex(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(980, 180), (1120, 240), (980, 300)], fill=GOLD)
 
 
+def medanta_hospital_volumes(d: ImageDraw.ImageDraw) -> None:
+    # hospital cross + rising occupancy blocks
+    d.rectangle([160, 220, 420, 520], fill=BLUE)
+    d.rectangle([260, 160, 320, 560], fill=RED)
+    d.rectangle([180, 340, 400, 400], fill=RED)
+    for i, h in enumerate([140, 220, 300, 380]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, BLUE, RED, GOLD][i])
+    d.ellipse([1040, 200, 1160, 320], outline=GOLD, width=6)
+
+
+def happiest_minds_itc_merger(d: ImageDraw.ImageDraw) -> None:
+    # two panels merging + neural mesh
+    d.rectangle([80, 200, 520, 560], fill=BLUE)
+    d.rectangle([640, 200, 1080, 560], fill=RED)
+    d.polygon([(520, 280), (640, 360), (520, 440)], fill=YELLOW)
+    for y in range(260, 500, 40):
+        d.line([(120, y), (480, y + 20)], fill=GOLD, width=2)
+        d.line([(680, y + 20), (1040, y)], fill=GOLD, width=2)
+    d.ellipse([560, 320, 600, 360], fill=CREAM)
+
+
+def vmart_q2_loss(d: ImageDraw.ImageDraw) -> None:
+    # price tag up, margin bar down
+    d.polygon([(140, 240), (240, 200), (340, 240), (340, 480), (140, 480)], fill=YELLOW)
+    d.line([(240, 280), (240, 420)], fill=RED, width=8)
+    d.rectangle([520, 320, 1120, 380], fill=BLUE)
+    d.rectangle([520, 420, 900, 480], fill=RED)
+    for i, h in enumerate([320, 260, 200]):
+        x = 700 + i * 100
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[BLUE, YELLOW, RED][i])
+
+
 def india_pmi_october(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([100, 280, 460, 520], fill=BLUE)
     d.polygon([(280, 300), (380, 340), (380, 480), (280, 520), (180, 480), (180, 340)], fill=RED)
@@ -972,6 +1005,9 @@ def main() -> None:
     save("india-manufacturing-pmi-october-slowdown-november-2026", india_pmi_october)
     save("man-infra-epc-orders-november-2026", man_infra_epc_orders)
     save("trident-textile-capex-november-2026", trident_textile_capex)
+    save("medanta-hospital-volumes-november-2026", medanta_hospital_volumes)
+    save("happiest-minds-itc-infotech-merger-november-2026", happiest_minds_itc_merger)
+    save("vmart-q2-loss-november-2026", vmart_q2_loss)
 
 
 if __name__ == "__main__":

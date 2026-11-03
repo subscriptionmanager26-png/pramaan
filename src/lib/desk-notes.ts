@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "medanta-hospital-volumes-november-2026",
+    title: "Medanta’s September-quarter revenue rose a third as its Noida hospital broke even on EBITDA",
+    summary:
+      "Global Health Ltd, which runs the Medanta hospital chain, said on 3 November 2026 that consolidated revenue grew about 33.6% year on year in the September quarter while operating EBITDA margin expanded to about 25.2%, with management highlighting strong patient volumes, higher occupancy, and EBITDA breakeven at its Noida cluster.",
+    category: "industry",
+    companyOrSector: "Hospitals / healthcare",
+    publishedAt: "2026-11-03T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("medanta-hospital-volumes-november-2026"),
+    keyTakeaways: [
+      "Consolidated revenue rose about 33.6% year on year in Q2 FY27 while operating EBITDA increased about 60.2%, with EBITDA margin at about 25.2% versus a year earlier.",
+      "Profit after tax attributable to owners grew about 38.3% in the quarter; management cited volume growth, higher occupancy, and gains in Cluster 2 markets.",
+      "The Noida facility reached EBITDA breakeven in the period, a milestone for a newer cluster that had been absorbing start-up costs.",
+    ],
+    body: [
+      "What's going on here?",
+      "Global Health Ltd, listed as Medanta, published September-quarter results on 3 November 2026 showing consolidated revenue growth of about 33.6% year on year. Operating EBITDA rose about 60.2%, pushing EBITDA margin to about 25.2%. Profit after tax attributable to owners increased about 38.3%. In its update, the company pointed to strong patient volumes, better occupancy, and performance in its Cluster 2 geographies. It also said its Noida hospital cluster reached EBITDA breakeven during the quarter, meaning operating earnings at that site covered operating costs after earlier ramp-up losses.",
+      "What does this mean?",
+      "Private hospitals earn when beds fill and when payers accept tariff revisions on procedures and room categories. A one-third revenue jump with a wider EBITDA margin suggests both footfall and mix moved in Medanta’s favour, not a single one-off surgery line. Breakeven at Noida matters because new campuses depress group margins for years; crossing that line frees capital for the next specialty tower rather than endless subsidies from mature Gurugram units. For urban middle-class patients, sustained occupancy at branded chains is one signal that elective procedures, maternity packages, and planned surgeries are still being booked despite higher EMI burdens elsewhere in the household budget.",
+      "Why should I care?",
+      "If you are comparing health insurance or corporate tie-ups, occupancy and margin trends at large chains hint at whether networks can absorb more cashless volume without cutting corners. Employers renewing group mediclaim should watch whether hospital groups expand bed counts faster than admission growth. Investors in listed hospital names should read cluster-wise EBITDA disclosures and capex on new brownfield wings rather than day-one share reactions. Watch Medanta’s occupancy metrics on the next call, progress at other newer clusters, and whether tariff hikes stick after regulatory scrutiny on billing.",
+    ],
+  },
+  {
+    slug: "happiest-minds-itc-infotech-merger-november-2026",
+    title: "Happiest Minds agreed to merge with ITC Infotech after ITC buys a promoter stake",
+    summary:
+      "Happiest Minds Technologies reported on 3 November 2026 that ITC Infotech, a wholly owned ITC Ltd unit, will acquire about a 22.1% stake from founder Ashok Soota and related entities and then merge with Happiest Minds to build a combined AI-focused IT services platform targeting about $1 billion of turnover by FY28.",
+    category: "industry",
+    companyOrSector: "IT services",
+    publishedAt: "2026-11-03T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("happiest-minds-itc-infotech-merger-november-2026"),
+    keyTakeaways: [
+      "Happiest Minds posted Q2 FY27 consolidated net profit of about ₹62.2 crore, up about 15% year on year, on revenue of about ₹645.4 crore, up about 12.5%.",
+      "ITC Infotech will buy roughly 22.1% from promoter Ashok Soota and Ashok Soota Medical Research LLP before amalgamating Happiest Minds into ITC Infotech.",
+      "The companies said the merged entity aims for about $1 billion of turnover by FY28 as an AI-first services platform; Q2 results included about ₹4 crore of exceptional costs tied to the proposed merger.",
+    ],
+    body: [
+      "What's going on here?",
+      "Happiest Minds Technologies announced September-quarter results on 3 November 2026 alongside a structural deal with ITC Infotech. Consolidated net profit rose about 15% year on year to roughly ₹62.2 crore while revenue from operations grew about 12.5% to about ₹645.4 crore. Sequentially, profit eased about 8% even as revenue ticked up. The board also declared an interim dividend of ₹3.05 per share. Separately, the company disclosed that ITC Infotech, owned by diversified conglomerate ITC Ltd, will purchase about 22.1% of Happiest Minds from founder Ashok Soota and Ashok Soota Medical Research LLP. After that stake sale, Happiest Minds is to amalgamate with and into ITC Infotech. Management framed the combination as an AI-first enterprise services platform with a stated goal of about $1 billion of turnover by FY28. The quarter carried about ₹4 crore of exceptional expense linked to merger work.",
+      "What does this mean?",
+      "Mid-sized IT firms face a scale problem: clients want broader digital and AI benches, but standalone revenue bases below $500 million struggle to bid for large transformation deals. Selling a promoter block to a cash-rich parent and merging operations pools delivery centres, sales teams, and R&D spend without a public-market IPO process. For employees and clients, the risk is integration noise; the upside is a wider service catalogue spanning ITC Infotech’s legacy accounts and Happiest Minds’ digital specialty. The deal also shows ITC using its non-cigarette balance sheet to expand services rather than only FMCG and hotels.",
+      "Why should I care?",
+      "If you work in Indian IT, merger filings will eventually set retention packages, bench policies, and brand names on contracts. Enterprise buyers should ask which entity signs statements of work after the amalgamation and how AI delivery teams map across legacy ITC Infotech accounts. Investors holding either name should track shareholder approvals, exchange ratio details when filed, and whether revenue synergies appear before FY28 targets. Watch regulatory clearance timelines, any rival bids, and how Happiest Minds’ headcount trend stabilises after integration announcements.",
+    ],
+  },
+  {
+    slug: "vmart-q2-loss-november-2026",
+    title: "V-Mart swung to a September-quarter loss even as store revenue climbed",
+    summary:
+      "V-Mart Retail Ltd said on 3 November 2026 that it reported a consolidated net loss of about ₹16.3 crore in the September quarter despite revenue from operations of about ₹953 crore, with both its brick-and-mortar retail and digital marketplace segments posting segment losses in the period.",
+    category: "industry",
+    companyOrSector: "Value fashion retail",
+    publishedAt: "2026-11-03T17:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("vmart-q2-loss-november-2026"),
+    keyTakeaways: [
+      "Consolidated revenue from operations was about ₹953 crore in Q2 FY27, but the company reported a net loss of about ₹16.3 crore for the quarter.",
+      "Segment results showed losses in both the retail trade business and the digital marketplace arm during the period.",
+      "Half-year revenue and net profit were higher year on year according to exchange summaries, but the September quarter alone flipped to a loss despite top-line growth.",
+    ],
+    body: [
+      "What's going on here?",
+      "V-Mart Retail Ltd, a value fashion chain focused on smaller towns and cities, disclosed September-quarter numbers on 3 November 2026. Consolidated revenue from operations was about ₹953 crore in Q2 FY27. Despite that sales base, the company reported a consolidated net loss of about ₹16.3 crore for the quarter. Exchange filings and AI summaries of the results noted that both the retail trade segment and the digital marketplace segment recorded losses in the period. Earlier headline wires had flagged the loss alongside the revenue print as results landed during a heavy earnings day for consumer names.",
+      "What does this mean?",
+      "Discount apparel retailers live on tight gross margins and store productivity. Revenue can rise when new outlets open or festive footfall lifts basket sizes, but rent, staffing, and markdowns can rise faster if inventory is mismatched or online fulfilment costs spike. Losses in both store and marketplace arms suggest pressure was not isolated to e-commerce experiments. For shoppers, the short-term read is unchanged ticket prices on the rack; the longer-term read is whether chains slow expansion or sharpen promotions if losses persist into the second half.",
+      "Why should I care?",
+      "If you follow consumer spending in Bharat beyond metros, listed value retailers are a useful pulse on whether middle-income households still buy new clothing each season or trade down and reuse. Suppliers of denim, kurtas, and basics should watch how many stores V-Mart adds and whether inventory days creep up. Investors comparing Trent, Vishal Mega Mart, and V-Mart should look at same-store sales, rent as a share of revenue, and whether marketplace losses narrow after festive clearance. Watch the next quarter for gross margin commentary, store opening plans, and any working-capital strain in the filing footnotes.",
+    ],
+  },
+  {
     slug: "trident-textile-capex-november-2026",
     title: "Trident approved a ₹4,650 crore mill expansion while quarterly sales slipped",
     summary:
@@ -9024,6 +9096,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "medanta-hospital-volumes-november-2026": "markets",
+  "happiest-minds-itc-infotech-merger-november-2026": "companies",
+  "vmart-q2-loss-november-2026": "markets",
   "trident-textile-capex-november-2026": "companies",
   "man-infra-epc-orders-november-2026": "companies",
   "hpcl-vizag-pitch-tank-fire-november-2026": "companies",
