@@ -174,8 +174,7 @@ export default function HomePage() {
                 Ask what the market move means for you
               </h3>
               <p className="mt-2 max-w-xl text-[15px] leading-6 text-ink-2">
-                Turn today&apos;s wire and desk notes into a plain answer — rates, sectors, or a
-                company you follow.
+                Ask about rates, sectors, or a company you follow.
               </p>
               <Link href="/ai" className="btn-primary mt-5">
                 Open AI
@@ -210,10 +209,6 @@ export default function HomePage() {
                   All resources →
                 </Link>
               </div>
-              <p className="mt-3 max-w-2xl text-[15px] leading-6 text-ink-2">
-                New series: invest in global markets from India — LRS limits, routes (US stocks,
-                India-listed ETFs, international funds), costs, and tax basics.
-              </p>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/guides/global-markets-through-india"

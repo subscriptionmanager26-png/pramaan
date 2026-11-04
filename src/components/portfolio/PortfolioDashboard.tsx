@@ -31,7 +31,7 @@ function SignInGate() {
   return (
     <div className="rounded-2xl border border-line bg-white px-5 py-8 text-center">
       <h2 className="text-headline text-ink">Sign in to see your portfolio</h2>
-      <p className="mt-2 text-[14px] text-ink-2">We only show your real holdings — never sample data.</p>
+      <p className="mt-2 text-[14px] text-ink-2">We only show your real holdings, never sample data.</p>
       <a href="/account" className="btn-primary mt-5 inline-flex text-[13px]">
         Sign in
       </a>

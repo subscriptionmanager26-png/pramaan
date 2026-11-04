@@ -19,14 +19,14 @@ export const pocketedgeTools: Guide[] = [
     body: [
       "Compare last traded price to iNAV for hundreds of NSE-listed ETFs.",
       "Useful when buying global index feeders, gold ETFs, or sector ETFs where intraday premium matters.",
-      "Not investment advice — a execution-quality check, not a buy signal.",
+      "Not investment advice. An execution-quality check, not a buy signal.",
     ],
   },
   {
     slug: "gold-tracker",
     title: "Gold tracker",
     summary:
-      "Track gold ETF and related prices in one view — helpful when gold is part of your global or inflation hedge sleeve.",
+      "Track gold ETF and related prices in one view.",
     kind: "tool",
     topic: "Commodities",
     publishedAt: "2026-09-18T10:00:00+05:30",
@@ -42,7 +42,7 @@ export const pocketedgeTools: Guide[] = [
     slug: "mf-screener",
     title: "Mutual fund screener",
     summary:
-      "Filter Indian mutual funds — including international and feeder funds — by category, returns, and risk metrics.",
+      "Filter Indian mutual funds (including international and feeder funds) by category, returns, and risk metrics.",
     kind: "tool",
     topic: "Funds",
     publishedAt: "2026-09-15T10:00:00+05:30",
@@ -72,7 +72,7 @@ export const pocketedgeTools: Guide[] = [
     slug: "business-model-library",
     title: "Business model library",
     summary:
-      "Plain-language business model explainers for Indian listed companies — context before you size a global or domestic position.",
+      "Plain-language business model explainers for Indian listed companies.",
     kind: "tool",
     topic: "Research",
     publishedAt: "2026-09-10T10:00:00+05:30",
@@ -94,7 +94,7 @@ export const pocketedgeTools: Guide[] = [
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
     toolUrl: `${PE}/explore`,
     body: [
-      "Complements Pramaan company memos — start on PocketEdge for breadth, return here for depth on a name.",
+      "Complements Pramaan company memos. Start on PocketEdge for breadth, return here for depth on a name.",
     ],
   },
 ];

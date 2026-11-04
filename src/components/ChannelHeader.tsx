@@ -43,7 +43,7 @@ export function sourceDiscoverHref(kind: SourceKind) {
 }
 
 export function channelBlurb(kind: SourceKind) {
-  if (kind === "twitter") return "High cadence. Short posts — skim for signal.";
+  if (kind === "twitter") return "High cadence. Short posts; skim for signal.";
   if (kind === "substack") return "Slow cadence. Long reads when they publish.";
   if (kind === "youtube") return "A few videos go a long way. Open to watch.";
   return "Episodes drop less often. Listen on the host.";

@@ -80,7 +80,7 @@ function AgentSidebar({
         ) : null}
         {!threads.length && !threadsError ? (
           <p className="px-2 py-6 text-sm leading-relaxed text-ink-3">
-            Start a conversation — it will show up here on every device once you send a message.
+            Start a conversation. It will show up here on every device once you send a message.
           </p>
         ) : null}
         {threads.length ? (

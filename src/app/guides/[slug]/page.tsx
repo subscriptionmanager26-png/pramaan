@@ -91,7 +91,7 @@ export default async function GuidePage({
       )}
 
       <p className="text-meta mt-12 max-w-2xl border-t border-line pt-6">
-        Educational only — not tax, legal, or investment advice. Rules and rates change; confirm
+        Educational only, not tax, legal, or investment advice. Rules and rates change; confirm
         with your bank, broker, or chartered accountant before you remit or file.
       </p>
     </Page>

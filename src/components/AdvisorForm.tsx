@@ -22,7 +22,7 @@ export function AdvisorForm() {
     return (
       <div className="rounded-2xl border border-line bg-white p-6">
         <p className="font-medium text-ink">Request in. This is a mock.</p>
-        <p className="mt-2 text-sm text-ink-2">Nothing was sent — there is no backend yet.</p>
+        <p className="mt-2 text-sm text-ink-2">Nothing was sent. There is no backend yet.</p>
         <button type="button" onClick={() => setDone(false)} className="mt-4 text-sm text-accent hover:underline">
           Submit another
         </button>

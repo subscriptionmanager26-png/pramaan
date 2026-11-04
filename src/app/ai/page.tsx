@@ -7,7 +7,7 @@ import { siteUrl } from "@/lib/site-url";
 export const metadata: Metadata = {
   title: "AI assistant",
   description:
-    "Ask Pocketedge’s private AI about markets, portfolios, and research. Sign in with Google — same account as pocketedge.in.",
+    "Ask Pocketedge’s private AI about markets, portfolios, and research. Sign in with Google (same account as pocketedge.in).",
   alternates: { canonical: `${siteUrl()}/ai` },
 };
 

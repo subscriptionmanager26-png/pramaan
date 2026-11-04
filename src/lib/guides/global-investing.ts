@@ -36,9 +36,9 @@ export const globalInvestingGuides: Guide[] = [
       {
         heading: "The three buckets most Indians use",
         paragraphs: [
-          "Bucket 1 — Send rupees abroad under LRS and hold assets overseas. Typical use: US stocks and ETFs via an Indian broker’s global desk, or dedicated apps (Vested, INDmoney, etc.). You own securities in a US (or other) custodial account. Currency conversion happens at remittance.",
-          "Bucket 2 — Stay in rupees, buy a global wrapper listed in India. International mutual funds (fund of funds), ETFs such as Nasdaq 100 or S&P 500 feeders, gold or Hang Seng trackers. You trade on NSE/BSE in INR; the fund house handles underlying foreign assets.",
-          "Bucket 3 — GIFT City (IFSC) products for residents who want offshore-style funds with a Gujarat wrapper. Useful for certain dollar products and AIF structures; paperwork and minimums differ from retail MF.",
+          "Bucket 1. Send rupees abroad under LRS and hold assets overseas. Typical use: US stocks and ETFs via an Indian broker’s global desk, or dedicated apps (Vested, INDmoney, etc.). You own securities in a US (or other) custodial account. Currency conversion happens at remittance.",
+          "Bucket 2. Stay in rupees, buy a global wrapper listed in India. International mutual funds (fund of funds), ETFs such as Nasdaq 100 or S&P 500 feeders, gold or Hang Seng trackers. You trade on NSE/BSE in INR; the fund house handles underlying foreign assets.",
+          "Bucket 3. GIFT City (IFSC) products for residents who want offshore-style funds with a Gujarat wrapper. Useful for certain dollar products and AIF structures; paperwork and minimums differ from retail MF.",
           "Most beginners start in Bucket 2 (simple, INR ticketing) or a small Bucket 1 ticket via LRS once they understand conversion cost and US tax forms.",
         ],
       },
@@ -56,7 +56,7 @@ export const globalInvestingGuides: Guide[] = [
         paragraphs: [
           "Fix your domestic emergency fund and core equity/debt allocation first. Global is a satellite, not a substitute for rupee goals due in the next three years.",
           "Pick a route: INR ETF/MF for small monthly SIPs; LRS for direct US names you want to hold for years.",
-          "Budget all-in cost: spread on FX, platform fee, US dividend withholding, and Indian tax on gains — not just “zero brokerage”.",
+          "Budget all-in cost: spread on FX, platform fee, US dividend withholding, and Indian tax on gains. not just “zero brokerage”.",
           "Set calendar reminders: advance tax if gains are large; Schedule FA before filing; renew W-8BEN when your broker asks.",
         ],
       },
@@ -85,7 +85,7 @@ export const globalInvestingGuides: Guide[] = [
       {
         heading: "Where the money goes on each remittance",
         paragraphs: [
-          "FX spread: Banks quote a rupee rate worse than the interbank mid — often 0.25%–1% for retail, wider for small tickets. Brokers with bundled FX may show “commission free” but embed spread.",
+          "FX spread: Banks quote a rupee rate worse than the interbank mid. often 0.25%–1% for retail, wider for small tickets. Brokers with bundled FX may show “commission free” but embed spread.",
           "Outward remittance charges: Many banks charge a flat fee (roughly ₹500–₹1,500) plus GST per SWIFT transfer. Some fintech stacks absorb this on larger tickets.",
           "GST: Currently 18% on the bank’s service charge component (not on the full remitted amount).",
           "Correspondent fees: Occasionally a small intermediary fee is deducted in USD before credit to your US broker.",
@@ -95,9 +95,9 @@ export const globalInvestingGuides: Guide[] = [
       {
         heading: "TCS on LRS (high level)",
         paragraphs: [
-          "If you remit for overseas tour packages or other non-education/medical LRS purposes, TCS may apply once aggregate LRS outflows cross thresholds set in the Finance Act (rates and thresholds change — verify for the year you remit).",
+          "If you remit for overseas tour packages or other non-education/medical LRS purposes, TCS may apply once aggregate LRS outflows cross thresholds set in the Finance Act (rates and thresholds change. verify for the year you remit).",
           "For remittances specifically for overseas investment, rules have shifted across budgets; your bank will deduct TCS if applicable and issue a certificate.",
-          "TCS is not extra tax by default — it is collected upfront and can usually be adjusted against your final income-tax liability or claimed as credit when you file, subject to your CA’s reading of your facts.",
+          "TCS is not extra tax by default. it is collected upfront and can usually be adjusted against your final income-tax liability or claimed as credit when you file, subject to your CA’s reading of your facts.",
           "Keep Form 26AS / AIS and bank certificates; mismatches trigger notices.",
         ],
       },
@@ -115,7 +115,7 @@ export const globalInvestingGuides: Guide[] = [
     slug: "avenues-global-investing-india",
     title: "Avenues: US stocks, ETFs, and India-listed wrappers",
     summary:
-      "Direct US access via LRS, international mutual funds, and NSE/BSE ETFs — with trade-offs on cost, minimums, liquidity, and complexity.",
+      "Direct US access via LRS, international mutual funds, and NSE/BSE ETFs, with trade-offs on cost, minimums, liquidity, and complexity.",
     kind: "guide",
     topic: "Global investing",
     publishedAt: "2026-10-08T10:30:00+05:30",
@@ -124,7 +124,7 @@ export const globalInvestingGuides: Guide[] = [
     body: [],
     sections: [
       {
-        heading: "Route A — US brokerage via LRS",
+        heading: "Route A. US brokerage via LRS",
         paragraphs: [
           "How it works: Complete KYC with an Indian entity tied to a US broker (or a standalone global platform). Remit under LRS; USD lands in your brokerage account; you buy US-listed stocks and ETFs.",
           "Best for: Specific US companies, broad ETFs (VT, VOO, QQQ), and tax-loss harvesting in US wrappers where supported.",
@@ -133,7 +133,7 @@ export const globalInvestingGuides: Guide[] = [
         ],
       },
       {
-        heading: "Route B — International mutual funds (India domiciled)",
+        heading: "Route B. International mutual funds (India domiciled)",
         paragraphs: [
           "How it works: You buy units of a fund registered in India that invests overseas (often via a feeder into a Luxembourg or US mother fund). SIP in INR; no annual LRS tracking for the underlying investment.",
           "Best for: Hands-off global equity or debt, small ticket sizes, investors who do not want a US brokerage login.",
@@ -142,16 +142,16 @@ export const globalInvestingGuides: Guide[] = [
         ],
       },
       {
-        heading: "Route C — India-listed ETFs",
+        heading: "Route C. India-listed ETFs",
         paragraphs: [
           "How it works: Buy an ETF on NSE/BSE that tracks a foreign index (Nasdaq 100, S&P 500, Hang Seng, gold, etc.). Trades like a stock; iNAV vs market price can diverge intraday.",
           "Best for: Tactical allocation, intraday liquidity, pairing with existing demat account.",
-          "Costs: TER + brokerage + tracking error; premium/discount to iNAV matters — use live iNAV tools before large orders.",
-          "Tax: Treated as equity or non-equity depending on the ETF’s underlying classification — confirm with the factsheet; misclassification hurts at redemption.",
+          "Costs: TER + brokerage + tracking error; premium/discount to iNAV matters. use live iNAV tools before large orders.",
+          "Tax: Treated as equity or non-equity depending on the ETF’s underlying classification. confirm with the factsheet; misclassification hurts at redemption.",
         ],
       },
       {
-        heading: "Route D — GIFT City (IFSC)",
+        heading: "Route D. GIFT City (IFSC)",
         paragraphs: [
           "How it works: Invest through funds or platforms operating in Gujarat’s International Financial Services Centre with USD books.",
           "Best for: Specific offshore funds, some AIFs, and investors already working with private bankers.",
@@ -189,18 +189,18 @@ export const globalInvestingGuides: Guide[] = [
         ],
       },
       {
-        heading: "Capital gains — overseas direct stocks",
+        heading: "Capital gains. overseas direct stocks",
         paragraphs: [
           "Gains on US (or other foreign) shares are typically taxed in India as capital gains. Holding period and rate depend on whether the asset is treated as equity-oriented under the Income-tax Act for that year’s rules.",
-          "US securities held directly are usually non-equity for Indian tax — shorter holding periods can attract slab rates; longer holds may get indexation benefits only where applicable law allows (verify each year’s Finance Act).",
+          "US securities held directly are usually non-equity for Indian tax. shorter holding periods can attract slab rates; longer holds may get indexation benefits only where applicable law allows (verify each year’s Finance Act).",
           "Keep trade confirms in USD and INR; your CA will convert at RBI reference rates for the transaction date.",
         ],
       },
       {
-        heading: "Capital gains — India-listed international funds & ETFs",
+        heading: "Capital gains. India-listed international funds & ETFs",
         paragraphs: [
           "If the Indian fund or ETF qualifies as equity-oriented (≥65% domestic equity test or as defined for overseas funds in that year’s rules), long-term gains may get the equity LTCG treatment; otherwise debt-like rates apply.",
-          "Read the latest factsheet classification — fund houses state whether the scheme is equity or other for tax.",
+          "Read the latest factsheet classification. fund houses state whether the scheme is equity or other for tax.",
         ],
       },
       {
@@ -214,7 +214,7 @@ export const globalInvestingGuides: Guide[] = [
       {
         heading: "Schedule FA (foreign assets)",
         paragraphs: [
-          "If you hold foreign assets above de minimis thresholds, disclose them in Schedule FA of the ITR — including overseas brokerage accounts, foreign stock, and some foreign retirement accounts.",
+          "If you hold foreign assets above de minimis thresholds, disclose them in Schedule FA of the ITR. including overseas brokerage accounts, foreign stock, and some foreign retirement accounts.",
           "Missing FA when required is a common source of compliance pain; automate a year-end export from your US broker.",
         ],
       },
@@ -224,7 +224,7 @@ export const globalInvestingGuides: Guide[] = [
           "April: tally LRS used vs USD 250k cap.",
           "Year-end: download US 1099 / broker gain-loss report.",
           "Before ITR due date: reconcile TCS credits, FA schedule, and advance tax if gains are large.",
-          "Work with a CA the first year you sell — template yourself only after you understand the pattern.",
+          "Work with a CA the first year you sell. template yourself only after you understand the pattern.",
         ],
       },
     ],

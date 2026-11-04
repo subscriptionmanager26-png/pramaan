@@ -378,10 +378,7 @@ export function MfScreener() {
 
   if (selected) {
     return (
-      <ToolsFrame
-        title="MF screener"
-        description="Equity Direct Growth funds — filter by category or sector/theme, then compare rolling returns, CAGR, risk, and fundamentals."
-      >
+      <ToolsFrame title="MF screener">
         <FundDetail
           row={selected}
           scheme={metrics[selected.amfiCode]}
@@ -393,10 +390,7 @@ export function MfScreener() {
   }
 
   return (
-    <ToolsFrame
-      title="MF screener"
-      description="Equity Direct Growth funds — filter by category or sector/theme, then compare rolling returns, CAGR, risk, and fundamentals."
-    >
+    <ToolsFrame title="MF screener">
       {loadError ? (
         <p className="mb-4 rounded-[16px] bg-[var(--fv-negative)]/8 px-4 py-3 text-sm text-[var(--fv-negative)]">
           {loadError}

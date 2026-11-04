@@ -43,7 +43,7 @@ async function errorMessage(res: Response) {
     return "Upload timed out. Try a smaller file, or retry in a moment.";
   }
   if (res.status === 500 || res.status === 502 || res.status === 503) {
-    return "Upload failed on the server. Retry in a moment — the first attach after idle can be slow.";
+    return "Upload failed on the server. Retry in a moment; the first attach after idle can be slow.";
   }
   return `Upload failed (${res.status})`;
 }
@@ -63,7 +63,7 @@ async function errorMessageFromBody(status: number, body: unknown) {
   if (status === 401) return "Sign in again to upload files.";
   if (status === 504 || status === 408) return "Upload timed out. Try a smaller file, or retry in a moment.";
   if (status === 500 || status === 502 || status === 503) {
-    return "Upload failed on the server. Retry in a moment — the first attach after idle can be slow.";
+    return "Upload failed on the server. Retry in a moment; the first attach after idle can be slow.";
   }
   return `Upload failed (${status})`;
 }

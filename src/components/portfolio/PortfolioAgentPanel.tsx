@@ -264,7 +264,7 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
   const subtitle =
     mode === "edit"
       ? "Import or change positions. Changes save only after you confirm."
-      : "Ask about concentration, risk, or what is in the book — editing happens in Edit mode.";
+      : "Ask about concentration, risk, or what is in the book. Editing happens in Edit mode.";
 
   return (
     <div className="flex h-full min-h-[480px] flex-col rounded-2xl border border-line bg-white lg:min-h-[560px]">
@@ -289,7 +289,7 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
         ) : null}
         {!messages.length && mode === "review" ? (
           <p className="text-[13px] leading-5 text-ink-2">
-            Ask about your current holdings — allocation, concentration, or a specific position. Switch to Edit to change
+            Ask about your current holdings: allocation, concentration, or a specific position. Switch to Edit to change
             the book.
           </p>
         ) : null}
@@ -345,7 +345,7 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
           hint={
             mode === "edit"
               ? "Screenshot, PDF, CSV, or Excel · confirm before anything is saved"
-              : "Ask about the book — switch to Edit to change holdings"
+              : "Ask about the book. Switch to Edit to change holdings"
           }
         />
       </div>

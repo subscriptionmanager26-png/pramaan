@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s · PocketEdge",
   },
   description:
-    "Indian markets desk, company research, advisors, and your private Pocketedge AI — sign in with Google on pocketedge.in.",
+    "Indian markets desk, company research, advisors, and your private Pocketedge AI. Sign in with Google on pocketedge.in.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

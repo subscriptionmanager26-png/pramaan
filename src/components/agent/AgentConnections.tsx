@@ -124,7 +124,7 @@ export function AgentConnections() {
       <header className="border-b border-line px-4 py-5 sm:px-6">
         <h1 className="text-section text-xl sm:text-2xl">Connections</h1>
         <p className="mt-1 max-w-2xl text-sm text-ink-2">
-          Link brokers and tools your agent can use. Credentials stay encrypted — the agent never sees your password.
+          Link brokers and tools your agent can use. Credentials stay encrypted; the agent never sees your password.
         </p>
       </header>
 
@@ -176,7 +176,7 @@ export function AgentConnections() {
             )}
           </div>
           <p className="mt-3 text-xs text-ink-3">
-            Opens Zerodha in a new tab. Finish login there, then come back — status refreshes when this window is focused.
+            Opens Zerodha in a new tab. Finish login there, then come back. Status refreshes when this window is focused.
           </p>
         </section>
 

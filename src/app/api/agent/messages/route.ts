@@ -109,7 +109,7 @@ export async function POST(request: Request) {
     );
     if (timedOut) {
       return NextResponse.json(
-        { error: { code: "upstream_timeout", message: "Send timed out. Check the thread — the message may still have been accepted." } },
+        { error: { code: "upstream_timeout", message: "Send timed out. Check the thread; the message may still have been accepted." } },
         { status: 504 },
       );
     }

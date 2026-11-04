@@ -133,7 +133,7 @@ function EmptySetupChooser({
     {
       id: "upload",
       title: "Upload file or files",
-      detail: "CSV, Excel, screenshot, or PDF — AI parses only",
+      detail: "CSV, Excel, screenshot, or PDF",
       icon: <Upload className="h-5 w-5" strokeWidth={2} aria-hidden />,
     },
   ];

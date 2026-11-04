@@ -8,8 +8,8 @@ export function Footer() {
         <div>
           <Logo className="text-lg font-semibold" />
           <p className="mt-3 max-w-sm text-sm leading-6 text-white/65">
-            Public work from SEBI-registered voices — Twitter, Substack, YouTube, and podcasts. Events are listed here;
-            sign-up stays with the host.
+            Public work from SEBI-registered voices across Twitter, Substack, YouTube, and podcasts. Events are listed
+            here; sign-up stays with the host.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/70">

@@ -474,7 +474,7 @@ export function PramaanAgentChat() {
             : null;
         const agentBusy = parsed.status === 409 || errObj?.code === "agent_busy";
         const errText = agentBusy
-          ? "Still finishing the last reply — give it a few seconds, then try again."
+          ? "Still finishing the last reply. Give it a few seconds, then try again."
           : messageFromFailedResponse(parsed);
         if (agentBusy && threadId) {
           await loadThread(headers);
