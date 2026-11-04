@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { FolderOpen, MessageSquare } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import {
@@ -405,29 +406,22 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
         )}
         <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">
           {/* Mobile chat chrome — Files sits left of New Chat (desktop Files stays in the chat pane). */}
-          <div className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-white px-3 lg:hidden">
+          <div className="flex h-12 shrink-0 items-center justify-between gap-2 border-b border-line bg-white px-3 lg:hidden">
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink"
-              aria-label="Open chats"
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
               onClick={() => setSidebarOpen(true)}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path
-                  d="M4.5 6.5h11a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5H10l-3.5 2.5V15.5H4.5A1.5 1.5 0 0 1 3 14V8a1.5 1.5 0 0 1 1.5-1.5z"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinejoin="round"
-                />
-                <path d="M8 10.25h5M8 12.75h3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
+              <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+              Old Chats
             </button>
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                className="inline-flex h-9 items-center rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
+                className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
                 onClick={() => setFilesOpen(!filesOpen)}
               >
+                <FolderOpen className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
                 Files
               </button>
               <button
