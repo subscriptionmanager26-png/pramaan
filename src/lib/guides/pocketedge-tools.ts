@@ -13,8 +13,7 @@ export const pocketedgeTools: Guide[] = [
     kind: "tool",
     topic: "Markets data",
     publishedAt: "2026-09-20T10:00:00+05:30",
-    image:
-      "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1200&q=80",
+    image: "/resources/etf-inav-tracker.jpg",
     toolUrl: "/etf-tracker",
     body: [
       "Compare last traded price to iNAV for hundreds of NSE-listed ETFs.",
@@ -30,8 +29,7 @@ export const pocketedgeTools: Guide[] = [
     kind: "tool",
     topic: "Commodities",
     publishedAt: "2026-09-18T10:00:00+05:30",
-    image:
-      "https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=1200&q=80",
+    image: "/resources/gold-tracker.jpg",
     toolUrl: "/gold-tracker",
     body: [
       "Consolidates gold-linked instruments for quick comparison.",
@@ -46,8 +44,7 @@ export const pocketedgeTools: Guide[] = [
     kind: "tool",
     topic: "Funds",
     publishedAt: "2026-09-15T10:00:00+05:30",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    image: "/resources/mf-screener.jpg",
     toolUrl: "/resources/mf-screener",
     body: [
       "Shortlist international funds without opening five AMC sites.",
@@ -61,8 +58,7 @@ export const pocketedgeTools: Guide[] = [
     kind: "tool",
     topic: "Markets data",
     publishedAt: "2026-09-12T10:00:00+05:30",
-    image:
-      "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80",
+    image: "/resources/markets-overview.jpg",
     toolUrl: `${PE}/markets`,
     body: [
       "Start here for Nifty breadth and sector moves before you read the desk note.",
@@ -76,8 +72,7 @@ export const pocketedgeTools: Guide[] = [
     kind: "tool",
     topic: "Research",
     publishedAt: "2026-09-10T10:00:00+05:30",
-    image:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
+    image: "/resources/business-model-library.jpg",
     toolUrl: `${PE}/business-model`,
     body: [
       "Use when a global ETF overlaps with Indian ADRs or sector peers you want to understand first.",
@@ -90,8 +85,7 @@ export const pocketedgeTools: Guide[] = [
     kind: "tool",
     topic: "Research",
     publishedAt: "2026-09-08T10:00:00+05:30",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+    image: "/resources/explore-stocks.jpg",
     toolUrl: `${PE}/explore`,
     body: [
       "Complements Pramaan company memos. Start on PocketEdge for breadth, return here for depth on a name.",

@@ -1,14 +1,10 @@
 import type { Guide } from "./types";
 
 const IMG = {
-  globe:
-    "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80",
-  remit:
-    "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80",
-  avenues:
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
-  tax:
-    "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+  globe: "/resources/global-markets-through-india.jpg",
+  remit: "/resources/lrs-costs-and-limits.jpg",
+  avenues: "/resources/avenues-global-investing.jpg",
+  tax: "/resources/taxation-global-investments.jpg",
 };
 
 /** Explainers on investing in global markets as a resident Indian. Not tax or legal advice. */

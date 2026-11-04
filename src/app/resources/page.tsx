@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  BookOpen,
-  Building2,
-  CandlestickChart,
-  Coins,
-  Filter,
-  LineChart,
-  type LucideIcon,
-} from "lucide-react";
+import { BookOpen, Wrench } from "lucide-react";
 import { Page, PageHeader } from "@/components/shell/Page";
 import { guides, type Guide } from "@/lib/guides";
 
@@ -16,25 +8,6 @@ export const metadata: Metadata = {
   title: "Resources",
   description: "Tools and guides for investing from India.",
 };
-
-function toolIcon(slug: string): LucideIcon {
-  switch (slug) {
-    case "etf-inav-tracker":
-      return LineChart;
-    case "gold-tracker":
-      return Coins;
-    case "mf-screener":
-      return Filter;
-    case "markets-overview":
-      return CandlestickChart;
-    case "business-model-library":
-      return Building2;
-    case "explore-stocks":
-      return CandlestickChart;
-    default:
-      return BookOpen;
-  }
-}
 
 function resourceHref(item: Guide) {
   if (item.kind === "tool") {
@@ -46,7 +19,7 @@ function resourceHref(item: Guide) {
 function ResourceCard({ item }: { item: Guide }) {
   const href = resourceHref(item);
   const external = href.startsWith("http");
-  const Icon = item.kind === "tool" ? toolIcon(item.slug) : BookOpen;
+  const Icon = item.kind === "tool" ? Wrench : BookOpen;
 
   const card = (
     <>

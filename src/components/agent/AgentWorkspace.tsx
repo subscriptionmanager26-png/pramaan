@@ -413,8 +413,13 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
               onClick={() => setSidebarOpen(true)}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <rect x="3" y="4" width="7" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
-                <rect x="14" y="4" width="7" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+                <path
+                  d="M4.5 6.5h11a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5H10l-3.5 2.5V15.5H4.5A1.5 1.5 0 0 1 3 14V8a1.5 1.5 0 0 1 1.5-1.5z"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinejoin="round"
+                />
+                <path d="M8 10.25h5M8 12.75h3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
               </svg>
             </button>
             <div className="flex items-center gap-2">
