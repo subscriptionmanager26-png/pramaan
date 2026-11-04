@@ -12,8 +12,24 @@ const tabs = [
   { href: "/research", label: "Research", kind: "lucide" as const, Icon: ScanSearch },
   { href: "/ai", label: "Ask AI", kind: "askAi" as const },
   { href: "/portfolio", label: "Portfolio", kind: "lucide" as const, Icon: Briefcase },
-  { href: "/guides", label: "Guides", kind: "lucide" as const, Icon: BookOpen },
+  { href: "/resources", label: "Resources", kind: "lucide" as const, Icon: BookOpen },
 ] as const;
+
+function tabActive(pathname: string | null, href: string) {
+  if (!pathname) return false;
+  if (href === "/ai") return pathname.startsWith("/ai");
+  if (href === "/resources") {
+    return (
+      pathname === "/resources" ||
+      pathname.startsWith("/resources/") ||
+      pathname === "/guides" ||
+      pathname.startsWith("/guides/") ||
+      pathname === "/tools" ||
+      pathname.startsWith("/tools/")
+    );
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export function BottomNav() {
   const pathname = usePathname();
@@ -27,10 +43,7 @@ export function BottomNav() {
       <div className="mx-auto flex h-14 max-w-lg items-center justify-around px-1">
         {tabs.map((tab) => {
           const { href, label } = tab;
-          const active =
-            href === "/ai"
-              ? Boolean(pathname?.startsWith("/ai"))
-              : pathname === href || Boolean(pathname?.startsWith(`${href}/`));
+          const active = tabActive(pathname, href);
           return (
             <Link
               key={href}

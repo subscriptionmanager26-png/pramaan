@@ -28,8 +28,8 @@ export default async function GuidePage({
   const guide = getGuide(slug);
   if (!guide) notFound();
 
-  const backHref = guide.kind === "tool" ? "/tools" : "/guides";
-  const backLabel = guide.kind === "tool" ? "All tools" : "All guides";
+  const backHref = guide.kind === "tool" ? "/resources#tools" : "/resources#guides";
+  const backLabel = "All resources";
   const externalTool = guide.toolUrl?.startsWith("http");
 
   return (

@@ -5,8 +5,7 @@ const links = [
   { href: "/news", label: "News" },
   { href: "/research", label: "Research" },
   { href: "/advisors", label: "Advisors" },
-  { href: "/guides", label: "Guides" },
-  { href: "/tools", label: "Tools" },
+  { href: "/resources", label: "Resources" },
   { href: "/ai", label: "Ask AI" },
 ] as const;
 
@@ -17,8 +16,8 @@ export function SiteFooter() {
         <div>
           <Logo />
           <p className="mt-4 max-w-sm text-[14px] leading-6 text-ink-2">
-            Markets, research, advisors, guides, and tools. Understand what is happening, and what to
-            do next.
+            Markets, research, advisors, and resources. Understand what is happening, and what to do
+            next.
           </p>
         </div>
         <div>

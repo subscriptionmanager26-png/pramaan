@@ -204,10 +204,10 @@ export default function HomePage() {
             <div className="rounded-2xl border border-line bg-white p-5 sm:p-6">
               <div className="flex flex-wrap items-end justify-between gap-3">
                 <h3 className="text-section text-ink">
-                  <span className="mark">Guides</span>
+                  <span className="mark">Resources</span>
                 </h3>
-                <Link href="/guides" className="text-[13px] font-semibold text-accent">
-                  All guides →
+                <Link href="/resources" className="text-[13px] font-semibold text-accent">
+                  All resources →
                 </Link>
               </div>
               <p className="mt-3 max-w-2xl text-[15px] leading-6 text-ink-2">

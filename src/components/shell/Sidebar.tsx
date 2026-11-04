@@ -9,7 +9,7 @@ const nav = [
   { href: "/research", label: "Research", icon: "research" },
   { href: "/portfolio", label: "Portfolio", icon: "portfolio" },
   { href: "/advisors", label: "Advisors", icon: "user" },
-  { href: "/guides", label: "Guides", icon: "guides" },
+  { href: "/resources", label: "Resources", icon: "guides" },
 ];
 
 function NavIcon({ name, className = "h-4 w-4" }: { name: string; className?: string }) {
@@ -65,6 +65,16 @@ export function Sidebar({ mobile = false }: { mobile?: boolean }) {
   }
 
   function isActive(href: string) {
+    if (href === "/resources") {
+      return (
+        pathname === "/resources" ||
+        pathname.startsWith("/resources/") ||
+        pathname === "/guides" ||
+        pathname.startsWith("/guides/") ||
+        pathname === "/tools" ||
+        pathname.startsWith("/tools/")
+      );
+    }
     return pathname === href || pathname.startsWith(`${href}/`);
   }
 

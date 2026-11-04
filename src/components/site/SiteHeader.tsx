@@ -11,9 +11,23 @@ const nav = [
   { href: "/research", label: "Research" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/advisors", label: "Advisors" },
-  { href: "/guides", label: "Guides" },
-  { href: "/tools", label: "Tools" },
+  { href: "/resources", label: "Resources" },
 ] as const;
+
+function navItemActive(pathname: string | null, href: string) {
+  if (!pathname) return false;
+  if (href === "/resources") {
+    return (
+      pathname === "/resources" ||
+      pathname.startsWith("/resources/") ||
+      pathname === "/guides" ||
+      pathname.startsWith("/guides/") ||
+      pathname === "/tools" ||
+      pathname.startsWith("/tools/")
+    );
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 /**
  * Desktop: logo + center links + account + Ask AI.
@@ -35,7 +49,7 @@ export function SiteHeader() {
           aria-label="Main"
         >
           {nav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            const active = navItemActive(pathname, item.href);
             return (
               <Link
                 key={item.href}
