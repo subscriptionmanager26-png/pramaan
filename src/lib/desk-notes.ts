@@ -26,6 +26,30 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "festive-dhanteras-online-sales-november-2026",
+    title: "Dhanteras online orders for gold and two-wheelers surged outside the big metros",
+    summary:
+      "Business Line’s 4 November 2026 morning report said quick-commerce and e-commerce platforms logged sharp Dhanteras jumps, including Instamart gold sales up about 258% and Amazon India reporting sixfold two-wheeler growth with electric models up about eightfold, with fashion jewellery shoppers rising more than 50% year on year including in smaller cities.",
+    category: "industry",
+    companyOrSector: "Consumer / e-commerce",
+    publishedAt: "2026-11-04T12:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("festive-dhanteras-online-sales-november-2026"),
+    keyTakeaways: [
+      "Instamart’s gold sales rose about 258% and silver purchases about 185% during the Dhanteras window cited in the 4 November 2026 Business Line morning report.",
+      "Amazon India said fashion jewellery shoppers increased more than 50% year on year, two-wheeler sales grew sixfold, and electric two-wheeler sales rose about eightfold, with demand spreading beyond major metros.",
+      "The same week’s offline signals still look mixed on autos, but branded innerwear, hospitals, and beer tax changes also showed households spending when the offer is clear.",
+    ],
+    body: [
+      "What's going on here?",
+      "The Hindu Business Line’s morning report on 4 November 2026 described a festive burst on apps and marketplaces during Dhanteras. Swiggy’s Instamart quick-commerce arm saw gold sales jump about 258% and silver purchases rise about 185% compared with the prior year’s festive window in the coverage. Amazon India reported more than 50% growth in fashion jewellery shoppers, a sixfold increase in two-wheeler orders, and about an eightfold rise in electric two-wheeler sales, with the platform highlighting demand from smaller cities rather than only Mumbai, Delhi, or Bengaluru. The piece framed the numbers as part of a broader pattern where coins, jewellery, and mobility purchases move online when delivery promises shorten.",
+      "What does this mean?",
+      "Festive demand is not confined to showroom footfall. Quick-commerce dark stores and marketplace logistics let households buy small gold units and vehicles without visiting a jeweller or dealer on the busiest day. That shifts working capital needs for platforms, which must stock bullion partners and coordinate high-value deliveries, while jewellers compete on making charges and trust. The EV share within online two-wheeler orders is the structural signal: battery models are showing up in festival baskets, not only in corporate fleet tenders. It sits alongside other consumption prints from the same week, including premium innerwear expansion, hospital volume growth, and state tax tweaks on beer, which together suggest spending is selective rather than absent.",
+      "Why should I care?",
+      "If you buy gold coins or silver online during Diwali, compare making charges, delivery insurance, and return rules across Instamart, Amazon, and local jewellers before you lock a price. Two-wheeler shoppers should check whether festive platform offers match dealer on-road quotes once registration and insurance are included. Investors in listed e-commerce, quick-commerce, or jewellery names should read gross order value and contribution margin commentary, not just headline growth multiples that can reflect a low base. Watch full Diwali week tallies from marketplaces, SIAM or FADA retail releases for offline comparison, and whether bullion prices stay volatile after the festive window closes.",
+    ],
+  },
+  {
     slug: "ntpc-capacity-149gw-roadmap-november-2026",
     title: "NTPC plans to add 58 gigawatts of power capacity by 2032",
     summary:
@@ -9384,6 +9408,7 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "festive-dhanteras-online-sales-november-2026": "markets",
   "ntpc-capacity-149gw-roadmap-november-2026": "policy",
   "page-industries-plant-expansion-november-2026": "markets",
   "india-household-retail-credit-stress-november-2026": "policy",

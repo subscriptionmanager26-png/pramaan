@@ -930,6 +930,25 @@ def page_industries(d: ImageDraw.ImageDraw) -> None:
     d.line([(140, 420), (380, 420)], fill=CREAM, width=8)
 
 
+def festive_dhanteras_online(d: ImageDraw.ImageDraw) -> None:
+    # QR kirana tile + rising festive order bars + gold coin motif
+    d.rounded_rectangle([90, 300, 270, 540], radius=22, fill=BLUE)
+    d.rectangle([120, 340, 240, 500], fill=CREAM)
+    for row in range(5):
+        for col in range(4):
+            if (row + col) % 2 == 0:
+                d.rectangle(
+                    [130 + col * 26, 350 + row * 26, 148 + col * 26, 368 + row * 26],
+                    fill=INK,
+                )
+    d.ellipse([680, 220, 780, 320], fill=YELLOW)
+    d.ellipse([740, 260, 860, 360], fill=GOLD)
+    for i, h in enumerate([140, 260, 380, 500]):
+        x = 900 + i * 58
+        d.rectangle([x, 560 - h, x + 44, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.polygon([(520, 480), (620, 420), (720, 480), (720, 540), (520, 540)], fill=RED)
+
+
 def ntpc_capacity(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(200, 520), (280, 200), (360, 520)], fill=RED)
     d.rectangle([420, 280, 520, 520], fill=INK)
@@ -990,6 +1009,7 @@ def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("festive-dhanteras-online-sales-november-2026", festive_dhanteras_online)
     save("kotak-deutsche-cci-approval-november-2026", kotak_deutsche)
     save("india-household-retail-credit-stress-november-2026", household_credit)
     save("page-industries-plant-expansion-november-2026", page_industries)
