@@ -105,39 +105,34 @@ function ModeToggle({
   updateOnly?: boolean;
 }) {
   return (
-    <div className="inline-flex items-center gap-2">
-      <div
-        className="inline-flex overflow-hidden rounded-lg border border-line bg-white text-[13px] shadow-[2px_2px_0_#0b0b0b]"
-        role="tablist"
-        aria-label="Portfolio mode"
+    <div
+      className="grid w-full grid-cols-2 overflow-hidden rounded-lg border border-line bg-white text-[13px] shadow-[2px_2px_0_#0b0b0b] sm:inline-grid sm:w-auto"
+      role="tablist"
+      aria-label="Portfolio mode"
+    >
+      <button
+        type="button"
+        role="tab"
+        aria-selected={mode === "review"}
+        disabled={updateOnly}
+        className={`px-3.5 py-2.5 font-semibold transition-colors disabled:opacity-40 sm:py-2 ${
+          mode === "review" ? "bg-ink text-white" : "text-ink-2 hover:bg-paper-2 hover:text-ink"
+        }`}
+        onClick={() => onChange("review")}
       >
-        <button
-          type="button"
-          role="tab"
-          aria-selected={mode === "review"}
-          disabled={updateOnly}
-          className={`px-3.5 py-2 font-semibold transition-colors disabled:opacity-40 ${
-            mode === "review" ? "bg-ink text-white" : "text-ink-2 hover:bg-paper-2 hover:text-ink"
-          }`}
-          onClick={() => onChange("review")}
-        >
-          Review
-        </button>
-        <button
-          type="button"
-          role="tab"
-          aria-selected={mode === "update"}
-          className={`border-l border-line px-3.5 py-2 font-semibold transition-colors ${
-            mode === "update" ? "bg-ink text-white" : "text-ink-2 hover:bg-paper-2 hover:text-ink"
-          }`}
-          onClick={() => onChange("update")}
-        >
-          Update
-        </button>
-      </div>
-      <p className="hidden text-[12px] text-ink-3 sm:block">
-        {mode === "review" ? "See value, mix, and holdings" : "Zerodha · Manual · Upload"}
-      </p>
+        Review
+      </button>
+      <button
+        type="button"
+        role="tab"
+        aria-selected={mode === "update"}
+        className={`border-l border-line px-3.5 py-2.5 font-semibold transition-colors sm:py-2 ${
+          mode === "update" ? "bg-ink text-white" : "text-ink-2 hover:bg-paper-2 hover:text-ink"
+        }`}
+        onClick={() => onChange("update")}
+      >
+        Update
+      </button>
     </div>
   );
 }
@@ -156,10 +151,10 @@ function StatCard({
   const hintClass =
     tone === "up" ? "text-emerald-700" : tone === "down" ? "text-rose-700" : "text-ink-3";
   return (
-    <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
+    <div className="rounded-xl border border-line bg-white px-3 py-3 shadow-[2px_2px_0_#0b0b0b] sm:px-4 sm:py-4">
       <p className="text-meta text-ink-3">{label}</p>
-      <p className="mt-1 text-xl font-semibold tracking-tight text-ink tabular-nums sm:text-2xl">{value}</p>
-      {hint ? <p className={`mt-1 text-[13px] tabular-nums ${hintClass}`}>{hint}</p> : null}
+      <p className="mt-1 text-lg font-semibold tracking-tight text-ink tabular-nums sm:text-2xl">{value}</p>
+      {hint ? <p className={`mt-1 text-[12px] tabular-nums sm:text-[13px] ${hintClass}`}>{hint}</p> : null}
     </div>
   );
 }
@@ -299,22 +294,21 @@ function ReviewBook({
   const unrealizedTone = totals.unrealized >= 0 ? "up" : "down";
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div className="flex flex-wrap items-center gap-2 text-meta text-ink-3">
         <span className="rounded-full border border-line bg-white px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-ink">
           Live
         </span>
-        {asOf ? <span>Updated {asOf}</span> : null}
+        {asOf ? <span className="truncate">Updated {asOf}</span> : null}
       </div>
 
-      {/* Keep summary lean — value / invested / day / count. Skip diversification scores & flag taxonomies. */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard label="Portfolio value" value={formatInr(totals.totalValue)} />
+      <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
+        <StatCard label="Value" value={formatInr(totals.totalValue, true)} />
         <StatCard
           label="Invested"
           value={formatInr(totals.invested, true)}
           hint={
-            totals.invested > 0 ? `Unrealized ${formatInr(totals.unrealized, true)}` : "Add avg cost in Update"
+            totals.invested > 0 ? `P&L ${formatInr(totals.unrealized, true)}` : undefined
           }
           tone={totals.invested > 0 ? unrealizedTone : "neutral"}
         />
@@ -333,10 +327,10 @@ function ReviewBook({
         <StatCard label="Holdings" value={String(holdings.length)} />
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
-        <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+      <div className="grid gap-3 sm:gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+        <section className="rounded-2xl border border-line bg-white p-4 sm:p-6">
           <h2 className="text-headline text-ink">Allocation</h2>
-          <div className="mt-5">
+          <div className="mt-4 sm:mt-5">
             {allocation.length ? (
               <AllocationDonut slices={allocation} />
             ) : (
@@ -345,16 +339,16 @@ function ReviewBook({
           </div>
         </section>
 
-        <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
-          <div className="flex flex-wrap items-end justify-between gap-2">
+        <section className="rounded-2xl border border-line bg-white p-4 sm:p-6">
+          <div className="flex items-center justify-between gap-2">
             <h2 className="text-headline text-ink">At a glance</h2>
-            <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={onAskAi}>
+            <button type="button" className="shrink-0 text-[13px] font-semibold text-accent hover:underline" onClick={onAskAi}>
               Ask AI →
             </button>
           </div>
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-4 space-y-2.5 sm:mt-5 sm:space-y-3">
             {insights.map((item) => (
-              <li key={item.title} className="rounded-xl border border-line bg-paper-2 px-4 py-3">
+              <li key={item.title} className="rounded-xl border border-line bg-paper-2 px-3 py-2.5 sm:px-4 sm:py-3">
                 <p className="text-[13px] font-semibold text-ink">{item.title}</p>
                 <p className="mt-1 text-[13px] leading-5 text-ink-2">{item.body}</p>
               </li>
@@ -366,17 +360,14 @@ function ReviewBook({
         </section>
       </div>
 
-      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
-        <div className="flex flex-wrap items-end justify-between gap-2">
-          <div>
-            <h2 className="text-headline text-ink">Holdings</h2>
-            <p className="mt-1 text-[13px] text-ink-2">Current positions only.</p>
-          </div>
-          <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={onEdit}>
+      <section className="rounded-2xl border border-line bg-white p-4 sm:p-6">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="text-headline text-ink">Holdings</h2>
+          <button type="button" className="shrink-0 text-[13px] font-semibold text-accent hover:underline" onClick={onEdit}>
             Update →
           </button>
         </div>
-        <div className="mt-5">
+        <div className="mt-4 sm:mt-5">
           <HoldingsTable rows={holdings} />
         </div>
       </section>
@@ -516,7 +507,7 @@ export function PortfolioDashboard() {
     <div className="space-y-5">
       {previewSwitcher}
 
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <ModeToggle
           mode={activeMode}
           updateOnly={empty}
@@ -528,8 +519,13 @@ export function PortfolioDashboard() {
         {!empty && activeMode === "review" && !showReviewAi ? (
           <button
             type="button"
-            className="text-[13px] font-semibold text-accent hover:underline"
-            onClick={() => setShowReviewAi(true)}
+            className="self-end text-[13px] font-semibold text-accent hover:underline sm:self-auto"
+            onClick={() => {
+              setShowReviewAi(true);
+              window.setTimeout(() => {
+                document.getElementById("portfolio-ai")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }, 50);
+            }}
           >
             Ask AI →
           </button>
@@ -551,26 +547,41 @@ export function PortfolioDashboard() {
           onCancel={empty ? undefined : () => setMode("review")}
         />
       ) : (
-        <div className={`grid gap-6 ${showReviewAi ? "lg:grid-cols-5" : ""}`}>
-          <div className={showReviewAi ? "lg:col-span-3" : ""}>
-            {portfolio ? (
-              <ReviewBook
-                portfolio={portfolio}
-                onAskAi={() => setShowReviewAi(true)}
-                onEdit={() => setMode("update")}
-              />
-            ) : null}
-          </div>
+        <div className={`grid gap-4 sm:gap-6 ${showReviewAi ? "lg:grid-cols-5" : ""}`}>
           {showReviewAi && !preview ? (
-            <div className="lg:col-span-2" id="portfolio-ai">
+            <div className="order-first min-w-0 lg:order-last lg:col-span-2" id="portfolio-ai">
+              <div className="mb-2 flex items-center justify-between gap-2 lg:hidden">
+                <p className="text-[13px] font-semibold text-ink">Ask AI</p>
+                <button
+                  type="button"
+                  className="text-[13px] font-semibold text-ink-2 hover:underline"
+                  onClick={() => setShowReviewAi(false)}
+                >
+                  Close
+                </button>
+              </div>
               <PortfolioAgentPanel portfolio={portfolio} mode="review" onPortfolioSaved={onPortfolioSaved} />
             </div>
           ) : null}
           {showReviewAi && preview ? (
-            <p className="text-[13px] text-ink-3 lg:col-span-2">
+            <p className="order-first text-[13px] text-ink-3 lg:order-last lg:col-span-2">
               Ask AI needs a signed-in agent backend. Use Review/Update in preview.
             </p>
           ) : null}
+          <div className={`min-w-0 ${showReviewAi ? "lg:col-span-3" : ""}`}>
+            {portfolio ? (
+              <ReviewBook
+                portfolio={portfolio}
+                onAskAi={() => {
+                  setShowReviewAi(true);
+                  window.setTimeout(() => {
+                    document.getElementById("portfolio-ai")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }, 50);
+                }}
+                onEdit={() => setMode("update")}
+              />
+            ) : null}
+          </div>
         </div>
       )}
     </div>

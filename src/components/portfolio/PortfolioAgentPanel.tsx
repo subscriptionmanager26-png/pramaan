@@ -267,13 +267,13 @@ export function PortfolioAgentPanel({ portfolio, mode, onPortfolioSaved }: Props
       : "Ask about concentration, risk, or what is in the book. Editing happens in Edit mode.";
 
   return (
-    <div className="flex h-full min-h-[480px] flex-col rounded-2xl border border-line bg-white lg:min-h-[560px]">
+    <div className="flex h-[min(70vh,560px)] min-h-[360px] flex-col rounded-2xl border border-line bg-white lg:h-full lg:min-h-[560px]">
       <div className="border-b border-line px-4 py-3">
         <h2 className="text-headline text-ink">{title}</h2>
         <p className="mt-0.5 text-[13px] text-ink-2">{subtitle}</p>
       </div>
 
-      <div className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
+      <div className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain px-4 py-4">
         {!messages.length && mode === "edit" && empty ? (
           <EmptyGuidance
             busy={busy}

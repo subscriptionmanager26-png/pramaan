@@ -139,28 +139,25 @@ function EmptySetupChooser({
   ];
 
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col items-stretch px-1 py-6 sm:py-10">
-      <div className="text-center">
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-stretch py-2 sm:py-8">
+      <div className="text-center sm:text-left">
         <h2 className="text-headline text-ink">{updating ? "Update holdings" : "Add your holdings"}</h2>
-        <p className="mt-2 text-[15px] text-ink-2">
-          {updating ? "Choose how you want to change the book." : "Pick one way to start."}
-        </p>
       </div>
-      <div className="mt-8 grid gap-3">
+      <div className="mt-5 grid gap-2.5 sm:mt-8 sm:gap-3">
         {options.map((opt) => (
           <button
             key={opt.id}
             type="button"
             disabled={disabled}
             onClick={() => onChoose(opt.id)}
-            className="flex items-start gap-4 rounded-2xl border border-line bg-white px-5 py-5 text-left shadow-[3px_3px_0_#0b0b0b] transition-colors hover:border-ink/40 disabled:opacity-50 sm:gap-5 sm:px-6 sm:py-6"
+            className="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-4 text-left shadow-[3px_3px_0_#0b0b0b] transition-colors hover:border-ink/40 disabled:opacity-50 sm:items-start sm:gap-5 sm:px-6 sm:py-6"
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line bg-paper-2 text-ink">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-paper-2 text-ink sm:h-11 sm:w-11">
               {opt.icon}
             </span>
-            <span className="min-w-0 pt-0.5">
-              <p className="text-[17px] font-semibold tracking-tight text-ink sm:text-[18px]">{opt.title}</p>
-              <p className="mt-1 text-[14px] leading-5 text-ink-2">{opt.detail}</p>
+            <span className="min-w-0">
+              <p className="text-[16px] font-semibold tracking-tight text-ink sm:text-[18px]">{opt.title}</p>
+              <p className="mt-0.5 text-[13px] leading-5 text-ink-2 sm:mt-1 sm:text-[14px]">{opt.detail}</p>
             </span>
           </button>
         ))}
@@ -616,17 +613,12 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
 
   if (step === "verify") {
     return (
-      <div className="mx-auto w-full max-w-3xl space-y-5">
-        <div className="flex flex-wrap items-start justify-between gap-2">
-          <div>
-            <h2 className="text-headline text-ink">Verify holdings</h2>
-            <p className="mt-1 text-[14px] text-ink-2">
-              Check the totals and list. Go back to edit if something looks off.
-            </p>
-          </div>
+      <div className="mx-auto w-full max-w-3xl space-y-4 sm:space-y-5">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="text-headline text-ink">Verify holdings</h2>
           <button
             type="button"
-            className="text-[13px] font-semibold text-accent hover:underline"
+            className="shrink-0 text-[13px] font-semibold text-accent hover:underline"
             onClick={() => setStep("edit")}
           >
             ← Edit
@@ -635,28 +627,52 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
 
         {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
 
-        <div className="grid gap-3 sm:grid-cols-3">
-          <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
+          <div className="rounded-xl border border-line bg-white px-3 py-3 shadow-[2px_2px_0_#0b0b0b] sm:px-4 sm:py-4">
             <p className="text-meta text-ink-3">Holdings</p>
-            <p className="mt-1 text-xl font-semibold tabular-nums text-ink">{parsed.length}</p>
+            <p className="mt-1 text-lg font-semibold tabular-nums text-ink sm:text-xl">{parsed.length}</p>
           </div>
-          <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
-            <p className="text-meta text-ink-3">Invested (from avg)</p>
-            <p className="mt-1 text-xl font-semibold tabular-nums text-ink">
+          <div className="rounded-xl border border-line bg-white px-3 py-3 shadow-[2px_2px_0_#0b0b0b] sm:px-4 sm:py-4">
+            <p className="text-meta text-ink-3">Invested</p>
+            <p className="mt-1 text-lg font-semibold tabular-nums text-ink sm:text-xl">
               {totals.invested > 0 ? formatInr(totals.invested, true) : "—"}
             </p>
           </div>
-          <div className="rounded-xl border border-line bg-white px-4 py-4 shadow-[2px_2px_0_#0b0b0b]">
-            <p className="text-meta text-ink-3">Book value</p>
-            <p className="mt-1 text-xl font-semibold tabular-nums text-ink">
+          <div className="rounded-xl border border-line bg-white px-3 py-3 shadow-[2px_2px_0_#0b0b0b] sm:px-4 sm:py-4">
+            <p className="text-meta text-ink-3">Book</p>
+            <p className="mt-1 text-lg font-semibold tabular-nums text-ink sm:text-xl">
               {totals.totalValue > 0 ? formatInr(totals.totalValue, true) : "—"}
             </p>
-            <p className="mt-1 text-[12px] text-ink-3">Uses avg cost until live prices load after save</p>
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-line bg-white">
-          <table className="w-full min-w-[480px] border-collapse text-left text-[13px]">
+        <ul className="space-y-2 sm:hidden">
+          {verifyLive.map((h) => (
+            <li key={h.ticker} className="rounded-xl border border-line bg-white px-3 py-3">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="truncate font-medium text-ink">{h.name || h.ticker}</p>
+                  <p className="text-meta text-ink-3">
+                    {h.ticker}
+                    {h.assetType === "fund" ? " · MF" : ""}
+                    {" · "}
+                    {formatHoldingSource(h.source)}
+                  </p>
+                </div>
+                <div className="shrink-0 text-right tabular-nums">
+                  <p className="font-medium text-ink">{h.value != null ? formatInr(h.value, true) : "—"}</p>
+                  <p className="text-meta text-ink-3">
+                    {h.qty.toLocaleString("en-IN")}
+                    {h.avg != null ? ` @ ${formatInr(h.avg, true)}` : ""}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden overflow-x-auto rounded-2xl border border-line bg-white sm:block">
+          <table className="w-full border-collapse text-left text-[13px]">
             <thead>
               <tr className="border-b border-line text-meta text-ink-3">
                 <th className="px-4 py-3 font-normal">Ticker</th>
@@ -693,10 +709,10 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
           </table>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="sticky bottom-[calc(3.5rem+env(safe-area-inset-bottom,0px))] z-10 -mx-1 flex gap-2 border-t border-line bg-paper/95 px-1 py-3 backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none lg:bottom-0">
           <button
             type="button"
-            className="btn-primary text-[13px] disabled:opacity-50"
+            className="btn-primary flex-1 text-[13px] disabled:opacity-50 sm:flex-none"
             disabled={saving}
             onClick={() => void save()}
           >
@@ -708,157 +724,212 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
             disabled={saving}
             onClick={() => setStep("edit")}
           >
-            Back to edit
+            Back
           </button>
         </div>
       </div>
     );
   }
 
+  const defaultSource = setupPath === "zerodha" ? "zerodha" : setupPath === "upload" ? "upload" : "manual";
+
   // edit step
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <h2 className="text-headline text-ink">
-            {setupPath === "upload"
-              ? "Review parsed holdings"
-              : setupPath === "zerodha"
-                ? "Review Zerodha holdings"
-                : "Add holdings"}
-          </h2>
-          <p className="mt-1 text-[14px] text-ink-2">
-            {setupPath === "manual"
-              ? "Enter ticker, quantity, and average cost. Continue to verify totals."
-              : "Fix any mistakes, then continue to verify."}
-          </p>
-        </div>
-        <button type="button" className="text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
-          ← All options
+      <div className="flex items-center justify-between gap-2">
+        <h2 className="min-w-0 text-headline text-ink">
+          {setupPath === "upload"
+            ? "Review parsed holdings"
+            : setupPath === "zerodha"
+              ? "Review Zerodha holdings"
+              : "Add holdings"}
+        </h2>
+        <button type="button" className="shrink-0 text-[13px] font-semibold text-accent hover:underline" onClick={goChoose}>
+          ← Options
         </button>
       </div>
 
       {error ? <p className="text-[13px] text-rose-700">{error}</p> : null}
 
       <div className="rounded-2xl border border-line bg-white p-3 shadow-[3px_3px_0_rgba(11,11,11,0.06)] sm:p-4">
-        <div className="mb-2 flex flex-wrap justify-end gap-3">
+        <div className="mb-3 flex flex-wrap justify-end gap-3">
           <button
             type="button"
             className="text-[12px] font-semibold text-ink-2 hover:text-rose-700 hover:underline"
             disabled={saving}
-            onClick={() => setRows([emptyRow(setupPath === "zerodha" ? "zerodha" : setupPath === "upload" ? "upload" : "manual")])}
+            onClick={() => setRows([emptyRow(defaultSource)])}
           >
-            Remove all rows
+            Remove all
           </button>
           <button
             type="button"
             className="text-[12px] font-semibold text-accent hover:underline"
             disabled={saving}
-            onClick={() =>
-              setRows((cur) => [
-                ...cur,
-                emptyRow(setupPath === "zerodha" ? "zerodha" : setupPath === "upload" ? "upload" : "manual"),
-              ])
-            }
+            onClick={() => setRows((cur) => [...cur, emptyRow(defaultSource)])}
           >
             + Add row
           </button>
         </div>
-        <table className="w-full min-w-[600px] border-collapse text-left text-[13px]">
-          <thead>
-            <tr className="border-b border-line text-meta text-ink-3">
-              <th className="pb-2 pr-2 font-normal">Ticker</th>
-              <th className="pb-2 pr-2 font-normal">Qty</th>
-              <th className="pb-2 pr-2 font-normal">Avg</th>
-              <th className="pb-2 pr-2 font-normal">Name</th>
-              <th className="pb-2 pr-2 font-normal">Source</th>
-              <th className="pb-2 w-8 font-normal" />
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row, idx) => (
-              <tr key={row.key} className="border-b border-line/70 last:border-0">
-                <td className="py-1.5 pr-2">
+
+        <div className="space-y-3 md:hidden">
+          {rows.map((row, idx) => (
+            <div key={row.key} className="rounded-xl border border-line bg-paper-2 p-3">
+              <div className="mb-2 flex items-center justify-between gap-2">
+                <span className="text-[12px] font-medium text-ink-3">
+                  {formatHoldingSource(row.source)}
+                  {row.assetType === "fund" ? " · MF" : ""}
+                </span>
+                <button
+                  type="button"
+                  aria-label="Remove row"
+                  className="rounded-lg px-2 py-1 text-[13px] text-ink-3 hover:bg-white hover:text-ink"
+                  disabled={saving}
+                  onClick={() =>
+                    setRows((cur) => {
+                      const next = cur.filter((r) => r.key !== row.key);
+                      return next.length ? next : [emptyRow(defaultSource)];
+                    })
+                  }
+                >
+                  Remove
+                </button>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <label className="block">
+                  <span className="text-meta text-ink-3">Ticker</span>
                   <input
                     ref={idx === 0 ? firstTickerRef : undefined}
-                    className="w-full min-w-[5.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 uppercase outline-none focus:border-ink/40"
+                    className="mt-1 w-full rounded-lg border border-line bg-white px-2.5 py-2 uppercase outline-none focus:border-ink/40"
                     value={row.ticker}
                     placeholder="INFY"
                     disabled={saving}
                     onChange={(e) => patchRow(row.key, { ticker: e.target.value })}
                   />
-                </td>
-                <td className="py-1.5 pr-2">
+                </label>
+                <label className="block">
+                  <span className="text-meta text-ink-3">Qty</span>
                   <input
-                    className="w-full min-w-[4.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 tabular-nums outline-none focus:border-ink/40"
+                    className="mt-1 w-full rounded-lg border border-line bg-white px-2.5 py-2 tabular-nums outline-none focus:border-ink/40"
                     value={row.qty}
                     inputMode="decimal"
                     placeholder="10"
                     disabled={saving}
                     onChange={(e) => patchRow(row.key, { qty: e.target.value })}
                   />
-                </td>
-                <td className="py-1.5 pr-2">
+                </label>
+                <label className="block">
+                  <span className="text-meta text-ink-3">Avg</span>
                   <input
-                    className="w-full min-w-[4.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 tabular-nums outline-none focus:border-ink/40"
+                    className="mt-1 w-full rounded-lg border border-line bg-white px-2.5 py-2 tabular-nums outline-none focus:border-ink/40"
                     value={row.avg}
                     inputMode="decimal"
                     placeholder="—"
                     disabled={saving}
                     onChange={(e) => patchRow(row.key, { avg: e.target.value })}
                   />
-                </td>
-                <td className="py-1.5 pr-2">
+                </label>
+                <label className="block">
+                  <span className="text-meta text-ink-3">Name</span>
                   <input
-                    className="w-full min-w-[6rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 outline-none focus:border-ink/40"
+                    className="mt-1 w-full rounded-lg border border-line bg-white px-2.5 py-2 outline-none focus:border-ink/40"
                     value={row.name}
                     placeholder="—"
                     disabled={saving}
                     onChange={(e) => patchRow(row.key, { name: e.target.value })}
                   />
-                </td>
-                <td className="py-1.5 pr-2">
-                  <span className="inline-flex whitespace-nowrap rounded-md border border-line bg-paper-2 px-2 py-1 text-[12px] text-ink-2">
-                    {formatHoldingSource(row.source)}
-                    {row.assetType === "fund" ? " · MF" : ""}
-                  </span>
-                </td>
-                <td className="py-1.5 text-right">
-                  <button
-                    type="button"
-                    aria-label="Remove row"
-                    className="rounded-lg px-2 py-1 text-ink-3 hover:bg-paper-2 hover:text-ink"
-                    disabled={saving}
-                    onClick={() =>
-                      setRows((cur) => {
-                        const next = cur.filter((r) => r.key !== row.key);
-                        return next.length
-                          ? next
-                          : [
-                              emptyRow(
-                                setupPath === "zerodha"
-                                  ? "zerodha"
-                                  : setupPath === "upload"
-                                    ? "upload"
-                                    : "manual",
-                              ),
-                            ];
-                      })
-                    }
-                  >
-                    ×
-                  </button>
-                </td>
+                </label>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden overflow-x-auto md:block">
+          <table className="w-full border-collapse text-left text-[13px]">
+            <thead>
+              <tr className="border-b border-line text-meta text-ink-3">
+                <th className="pb-2 pr-2 font-normal">Ticker</th>
+                <th className="pb-2 pr-2 font-normal">Qty</th>
+                <th className="pb-2 pr-2 font-normal">Avg</th>
+                <th className="pb-2 pr-2 font-normal">Name</th>
+                <th className="pb-2 pr-2 font-normal">Source</th>
+                <th className="pb-2 w-8 font-normal" />
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {rows.map((row, idx) => (
+                <tr key={row.key} className="border-b border-line/70 last:border-0">
+                  <td className="py-1.5 pr-2">
+                    <input
+                      ref={idx === 0 ? firstTickerRef : undefined}
+                      className="w-full min-w-[5.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 uppercase outline-none focus:border-ink/40"
+                      value={row.ticker}
+                      placeholder="INFY"
+                      disabled={saving}
+                      onChange={(e) => patchRow(row.key, { ticker: e.target.value })}
+                    />
+                  </td>
+                  <td className="py-1.5 pr-2">
+                    <input
+                      className="w-full min-w-[4.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 tabular-nums outline-none focus:border-ink/40"
+                      value={row.qty}
+                      inputMode="decimal"
+                      placeholder="10"
+                      disabled={saving}
+                      onChange={(e) => patchRow(row.key, { qty: e.target.value })}
+                    />
+                  </td>
+                  <td className="py-1.5 pr-2">
+                    <input
+                      className="w-full min-w-[4.5rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 tabular-nums outline-none focus:border-ink/40"
+                      value={row.avg}
+                      inputMode="decimal"
+                      placeholder="—"
+                      disabled={saving}
+                      onChange={(e) => patchRow(row.key, { avg: e.target.value })}
+                    />
+                  </td>
+                  <td className="py-1.5 pr-2">
+                    <input
+                      className="w-full min-w-[6rem] rounded-lg border border-line bg-paper-2 px-2 py-1.5 outline-none focus:border-ink/40"
+                      value={row.name}
+                      placeholder="—"
+                      disabled={saving}
+                      onChange={(e) => patchRow(row.key, { name: e.target.value })}
+                    />
+                  </td>
+                  <td className="py-1.5 pr-2">
+                    <span className="inline-flex whitespace-nowrap rounded-md border border-line bg-paper-2 px-2 py-1 text-[12px] text-ink-2">
+                      {formatHoldingSource(row.source)}
+                      {row.assetType === "fund" ? " · MF" : ""}
+                    </span>
+                  </td>
+                  <td className="py-1.5 text-right">
+                    <button
+                      type="button"
+                      aria-label="Remove row"
+                      className="rounded-lg px-2 py-1 text-ink-3 hover:bg-paper-2 hover:text-ink"
+                      disabled={saving}
+                      onClick={() =>
+                        setRows((cur) => {
+                          const next = cur.filter((r) => r.key !== row.key);
+                          return next.length ? next : [emptyRow(defaultSource)];
+                        })
+                      }
+                    >
+                      ×
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="sticky bottom-[calc(3.5rem+env(safe-area-inset-bottom,0px))] z-10 -mx-1 flex gap-2 border-t border-line bg-paper/95 px-1 py-3 backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none lg:bottom-0">
         <button
           type="button"
-          className="btn-primary text-[13px] disabled:opacity-50"
+          className="btn-primary flex-1 text-[13px] disabled:opacity-50 sm:flex-none"
           disabled={saving || !parsed.length}
           onClick={continueToVerify}
         >

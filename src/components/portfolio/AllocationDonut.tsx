@@ -14,8 +14,8 @@ export function AllocationDonut({ slices }: { slices: AllocationSlice[] }) {
     .parts.join(", ");
 
   return (
-    <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-center sm:gap-10">
-      <div className="relative h-44 w-44 shrink-0">
+    <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-center sm:gap-10">
+      <div className="relative h-36 w-36 shrink-0 sm:h-44 sm:w-44">
         <div
           className="absolute inset-0 rounded-full border border-line shadow-[2px_2px_0_#0b0b0b]"
           style={{ background: `conic-gradient(${gradient})` }}

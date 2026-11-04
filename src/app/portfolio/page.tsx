@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <Page width="wide">
+    <Page width="wide" className="!py-5 sm:!py-10">
       <PageHeader title="Portfolio" />
-      <div className="mt-6 sm:mt-8">
+      <div className="mt-4 sm:mt-8">
         <PortfolioDashboard />
       </div>
     </Page>
