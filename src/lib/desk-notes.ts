@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "ntpc-capacity-149gw-roadmap-november-2026",
+    title: "NTPC plans to add 58 gigawatts of power capacity by 2032",
+    summary:
+      "Chairman Gurdeep Singh said on 4 November 2026 that NTPC Limited aims to lift installed generation capacity from about 91 gigawatts today to 149 gigawatts by 2032, including a target of roughly 30 gigawatts of nuclear power by 2037 as demand rose 21% in October.",
+    category: "industry",
+    companyOrSector: "Power / utilities",
+    publishedAt: "2026-11-04T11:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ntpc-capacity-149gw-roadmap-november-2026"),
+    keyTakeaways: [
+      "NTPC’s chairman outlined a path to 149 GW of installed capacity by 2032, adding about 58 GW to the current 91 GW base, mixing thermal, renewable, and nuclear sources.",
+      "The company is targeting roughly 30 GW of nuclear capacity as part of a longer 250 GW vision for 2037 and has completed feasibility work for projects in Madhya Pradesh, Bihar, and Odisha.",
+      "Singh cited a 21% year-on-year rise in electricity demand in October 2026 and said India had avoided the sharp energy price spikes seen in other regions despite global turmoil.",
+    ],
+    body: [
+      "What's going on here?",
+      "Speaking at the KPMG ENRich 2026 conference in New Delhi on 4 November 2026, NTPC Limited chairman and managing director Gurdeep Singh said the state-owned generator plans to expand installed capacity to 149 gigawatts by 2032 from about 91 gigawatts today, an addition of roughly 58 gigawatts across coal, renewables, and other sources. He framed the build-out as a response to rising load: power demand in October was up about 21% year on year and has been climbing month after month. Singh also highlighted nuclear as a longer-term pillar, targeting about 30 gigawatts of nuclear capacity toward a 250 gigawatt company vision for 2037. NTPC has finished feasibility studies for proposed nuclear sites in Madhya Pradesh, Bihar, and Odisha and is scouting additional states.",
+      "What does this mean?",
+      "India’s largest thermal generator is still adding coal and gas units even as it books large renewable pipelines, so the grid gets both baseload and variable clean power rather than a single-track pivot. Nuclear approvals and land acquisition take years, so the 2037 target is a planning signal to equipment vendors and state governments, not an immediate construction calendar. Faster demand growth than supply additions would keep spot tariffs and import dependence in focus, while successful execution would give discoms more long-term contracts from a creditworthy counterpart. Rivals such as Tata Power and Adani Green compete for the same renewable slots, but NTPC’s balance sheet lets it bundle storage and transmission in bids that smaller developers cannot match.",
+      "Why should I care?",
+      "Households and factories should expect continued investment in grid capacity, which supports reliability during evening peaks but does not automatically cut bills if fuel costs stay high. If you work in power equipment, civil construction, or nuclear supply chains, watch state clearances on the Madhya Pradesh, Bihar, and Odisha studies and NTPC’s next tender mix for solar, storage, and thermal upgrades. Investors in listed utilities should read Singh’s comments alongside quarterly plant availability and regulated tariff orders rather than treating the 149 GW headline as near-term earnings. Track monthly all-India demand prints, NTPC’s capex guidance in results, and any central policy moves on nuclear liability or financing.",
+    ],
+  },
+  {
+    slug: "page-industries-plant-expansion-november-2026",
+    title: "Page Industries is scouting a new factory to feed Jockey demand",
+    summary:
+      "Managing director V. S. Ganesh told Reuters on 4 November 2026 that Page Industries, the Indian licensee for Jockey innerwear and apparel, is evaluating sites in Karnataka, Odisha, Chhattisgarh, and Telangana for a plant costing up to about ₹300 crore that could take 12 to 18 months to build.",
+    category: "industry",
+    companyOrSector: "Apparel / retail",
+    publishedAt: "2026-11-04T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("page-industries-plant-expansion-november-2026"),
+    keyTakeaways: [
+      "Page Industries is in the blueprint stage for a new manufacturing unit likely costing up to about ₹3 billion, with Karnataka, Odisha, Chhattisgarh, and Telangana on the shortlist.",
+      "The company runs 16 plants today and plans two smaller satellite facilities near existing large sites in Odisha and Karnataka early in the next financial year.",
+      "Ganesh expects to open roughly 125 to 150 stores annually for several years while online channels already account for about 16% to 17% of sales and could reach the 30% range within three to five years.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 4 November 2026, Reuters quoted Page Industries managing director V. S. Ganesh saying the Jockey licensee is looking for land to build a new apparel factory that could cost up to about ₹3 billion and take 12 to 18 months to complete once approved. States under review include Karnataka, Odisha, Chhattisgarh, and Telangana. Page already operates 16 manufacturing units and intends to start two satellite plants near its large Odisha and Karnataka complexes early in the next financial year. Ganesh said the company plans to add about 125 to 150 stores each year for at least the next four to five years as branded innerwear and casual wear demand grows. Digital sales now make up roughly 16% to 17% of revenue, triple the share of five years ago, and he said online could reach the 30% range within another three to five years.",
+      "What does this mean?",
+      "Branded basics are a volume game tied to store openings, factory uptime, and fabric costs. Page is expanding physical retail and capacity at the same time it pushes e-commerce, which needs different inventory and return handling than mall stores. Ganesh said Middle East conflict-driven cost pressure is being absorbed through productivity and sourcing tweaks rather than immediate price hikes, though calibrated increases may follow if input inflation persists. That choice matters for shoppers comparing private labels with Jockey on shelf price during the festive quarter. Competitors such as Dollar and Rupa are also upgrading premium lines, so capacity additions help Page defend share without relying on imports.",
+      "Why should I care?",
+      "If you buy branded innerwear or athleisure, watch whether new stores in your city carry fuller size runs and whether online discounts stay stable as mix shifts. Job seekers in garment hubs should track which state wins the new plant and when satellite units hire operators. Investors in Page or peer retailers should pair store-count guidance with gross margin commentary on cotton and freight. Follow the site-selection outcome, satellite plant commissioning dates, and Ganesh’s updates on pricing if crude-linked polyester costs stay elevated.",
+    ],
+  },
+  {
+    slug: "india-household-retail-credit-stress-november-2026",
+    title: "Mint warned that rising household borrowing is straining bank books",
+    summary:
+      "A 4 November 2026 Mint opinion piece said retail loans have climbed to about 45.5% of GDP by September 2025, with nearly half of non-housing household debt funding current consumption, even as corporate bad loans sit at multi-decade lows and Bajaj Finance and Piramal Finance flag early gold-loan stress.",
+    category: "industry",
+    companyOrSector: "Household credit / banking",
+    publishedAt: "2026-11-04T11:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-household-retail-credit-stress-november-2026"),
+    keyTakeaways: [
+      "The Reserve Bank of India’s June 2026 Financial Stability Report put gross non-performing assets at a multi-decadal low near 1.8%, but the same report expects a modest NPA uptick next fiscal year.",
+      "Retail borrowing as a share of GDP reached about 45.5% by September 2025, and consumption-purpose non-housing loans accounted for nearly half of household borrowings in the analysis cited.",
+      "The piece linked tighter NBFC consumer-loan rules from August 2026 to early stress signals from Bajaj Finance and Piramal Finance on gold loans, alongside weak rural incomes after crop damage.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 4 November 2026, Mint published an opinion column arguing that India’s next credit worry sits with households, not zombie corporates. Dun and Bradstreet data cited in the piece show distressed firms shrinking to about 14% of a long sample as bankruptcy reforms and write-offs cleaned corporate balance sheets. The Reserve Bank of India’s June 2026 Financial Stability Report recorded gross non-performing assets at about 1.8%, a multi-decadal low, and bank credit was still growing about 18% year on year through mid-October. Yet retail loans as a share of GDP have risen steadily to about 45.5% by September 2025, and nearly half of non-housing household borrowing was funding current consumption rather than assets. The author pointed to August 2026 tightening of NBFC consumer-lending norms and early stress comments from Bajaj Finance and Piramal Finance on gold-loan books, plus rural income pressure after crop damage linked to extreme weather.",
+      "What does this mean?",
+      "When consumption is financed with unsecured or short-tenor debt, defaults show up in personal loans, credit cards, and gold loans before they appear in mortgage portfolios. RBI’s preventive rules on NBFC consumer underwriting aim to slow that risk, but existing books still face higher EMI burdens as the rate cycle turns. The column also notes a mismatch: industrial credit growth looks strong while September industrial production slowed to 6.7%, the weakest in four months, suggesting either a lag or divergent segments. Lenders may keep growing retail books during festive demand but set aside more provisions if gold-loan delinquencies tick up in agrarian districts.",
+      "Why should I care?",
+      "If you rely on personal loans, credit cards, or gold loans for regular expenses, rising rates and tighter rules can mean smaller ticket sizes or stricter income checks on new applications. Savers should not assume low corporate NPAs guarantee bank dividend safety if retail slippages rise next year. Policy watchers should read the next Financial Stability Report and RBI consumer-credit circulars for any further LTV or tenure caps. Track gold-loan collection trends from major NBFCs, rural wage indicators, and whether banks raise unsecured loan rates into the December quarter.",
+    ],
+  },
+  {
+    slug: "kotak-deutsche-cci-approval-november-2026",
+    title: "India’s antitrust body cleared Kotak to buy Deutsche Bank’s local retail bank",
+    summary:
+      "The Competition Commission of India approved on 4 November 2026 Kotak Mahindra Bank’s acquisition of Deutsche Bank Aktiengesellschaft’s Indian retail, private banking, and wealth management business as a slump sale, covering roughly ₹29,000 crore of loans, ₹16,000 crore of deposits, and about ₹10,500 crore of assets under management.",
+    category: "industry",
+    companyOrSector: "Banking / M&A",
+    publishedAt: "2026-11-04T11:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("kotak-deutsche-cci-approval-november-2026"),
+    keyTakeaways: [
+      "CCI said the combination covers retail banking, private banking, and wealth management run through Deutsche Bank’s Indian branches, to be acquired on a going-concern slump-sale basis by Kotak Mahindra Bank.",
+      "When the deal was announced in June 2026, the businesses comprised about ₹29,000 crore of loans, ₹16,000 crore of deposits, and roughly ₹10,500 crore of assets under management.",
+      "The filing also includes referral arrangements for Deutsche Investments India portfolio and advisory clients to Kotak group wealth subsidiaries.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 4 November 2026, the Competition Commission of India published approval for Kotak Mahindra Bank to acquire the retail banking, affluent private banking, and wealth management operations that Deutsche Bank runs through its branches in India. The regulator described the transaction as a slump sale of a going concern from Deutsche Bank Aktiengesellschaft to Kotak. When the banks announced the agreement in June 2026, they sized the portfolio at about ₹29,000 crore of loans, ₹16,000 crore of deposits, and roughly ₹10,500 crore of assets under management. CCI also noted referral arrangements under which customers of Deutsche Investments India’s investment advisory and portfolio management units would be referred to relevant wholly owned Kotak wealth subsidiaries.",
+      "What does this mean?",
+      "Foreign banks have been trimming capital-intensive retail books in India while domestic lenders chase fee-rich wealth clients and low-cost deposits. Kotak gains branch infrastructure and high-net-worth relationships without building them organically, but must integrate systems, staff, and compliance cultures under RBI oversight on change of control. Deutsche keeps corporate and markets lines separate from this sale, focusing its India footprint on institutional business. For customers, account terms should survive the transfer, yet card, wealth fee, and digital banking experiences may shift as products migrate to Kotak platforms over months.",
+      "Why should I care?",
+      "If you bank with Deutsche’s retail or wealth units in India, read transfer notices for account numbers, IFSC changes, and new fee schedules once Kotak closes the deal. Job holders in the sold branches should watch retention packages and role mapping. Investors in Kotak should model deposit mix and integration costs, not just assets acquired. Competitors such as HDFC Bank and ICICI Bank may respond with wealth promotions. Track RBI final approvals, the closing date, and Kotak’s first combined quarterly disclosure on migrated balances.",
+    ],
+  },
+  {
     slug: "nlmc-psu-land-monetization-november-2026",
     title: "The land agency expects another ₹5,000 crore from public-sector plot sales this year",
     summary:
@@ -9288,6 +9384,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "ntpc-capacity-149gw-roadmap-november-2026": "policy",
+  "page-industries-plant-expansion-november-2026": "markets",
+  "india-household-retail-credit-stress-november-2026": "policy",
+  "kotak-deutsche-cci-approval-november-2026": "policy",
   "nlmc-psu-land-monetization-november-2026": "policy",
   "stockal-unauthorized-trading-fraud-november-2026": "policy",
   "himachal-court-sbi-salary-freeze-november-2026": "policy",

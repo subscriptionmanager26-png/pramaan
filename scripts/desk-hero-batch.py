@@ -902,6 +902,44 @@ def himachal_freeze(d: ImageDraw.ImageDraw) -> None:
     d.line([(700, 340), (1050, 340)], fill=INK, width=2)
 
 
+def kotak_deutsche(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 200, 480, 560], fill=BLUE)
+    d.rectangle([520, 240, 620, 520], fill=GOLD)
+    d.rectangle([660, 200, 1180, 560], fill=RED)
+    d.ellipse([300, 320, 420, 440], fill=YELLOW)
+    d.line([(700, 380), (1100, 380)], fill=CREAM, width=12)
+    for x in range(720, 1080, 80):
+        d.rectangle([x, 420, x + 40, 520], fill=BLUE if x % 160 else YELLOW)
+
+
+def household_credit(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 400, 1180, 560], fill=BLUE)
+    for i, h in enumerate([180, 240, 300, 360]):
+        x = 140 + i * 120
+        d.rectangle([x, 560 - h, x + 80, 560], fill=[RED, YELLOW, RED, GOLD][i])
+    d.polygon([(720, 180), (900, 140), (1080, 180), (1080, 360), (720, 360)], fill=RED)
+    d.line([(720, 270), (1080, 270)], fill=CREAM, width=6)
+
+
+def page_industries(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 260, 420, 520], fill=RED)
+    d.rectangle([460, 300, 560, 520], fill=GOLD)
+    d.rectangle([600, 220, 900, 520], fill=BLUE)
+    d.polygon([(980, 480), (1120, 400), (1120, 560)], fill=YELLOW)
+    d.line([(140, 340), (380, 340)], fill=CREAM, width=8)
+    d.line([(140, 420), (380, 420)], fill=CREAM, width=8)
+
+
+def ntpc_capacity(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(200, 520), (280, 200), (360, 520)], fill=RED)
+    d.rectangle([420, 280, 520, 520], fill=INK)
+    d.polygon([(540, 520), (620, 240), (700, 520)], fill=BLUE)
+    d.ellipse([820, 360, 920, 460], fill=YELLOW)
+    d.rectangle([960, 300, 1140, 520], fill=RED)
+    for y in range(320, 500, 40):
+        d.line([(980, y), (1120, y)], fill=GOLD, width=2)
+
+
 def pnb_canara_fd(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([100, 220, 420, 560], fill=RED)
     d.rectangle([460, 220, 780, 560], fill=BLUE)
@@ -952,6 +990,10 @@ def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("kotak-deutsche-cci-approval-november-2026", kotak_deutsche)
+    save("india-household-retail-credit-stress-november-2026", household_credit)
+    save("page-industries-plant-expansion-november-2026", page_industries)
+    save("ntpc-capacity-149gw-roadmap-november-2026", ntpc_capacity)
     save("nlmc-psu-land-monetization-november-2026", nlmc_land)
     save("stockal-unauthorized-trading-fraud-november-2026", stockal_fraud)
     save("himachal-court-sbi-salary-freeze-november-2026", himachal_freeze)
