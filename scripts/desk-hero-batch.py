@@ -872,6 +872,45 @@ def happiest_minds_itc_merger(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([560, 320, 600, 360], fill=CREAM)
 
 
+def nlmc_land(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 480, 560], fill=BLUE)
+    for i in range(3):
+        d.rectangle([130 + i * 100, 320 + i * 40, 210 + i * 100, 560], fill=CREAM)
+    for i, h in enumerate([100, 180, 260, 340]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE, GOLD][i])
+    d.polygon([(980, 200), (1120, 260), (980, 320)], fill=RED)
+
+
+def stockal_fraud(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 240, 360, 520], radius=20, fill=BLUE)
+    d.rectangle([160, 300, 320, 380], fill=CREAM)
+    d.line([(480, 400), (720, 400)], fill=GOLD, width=5)
+    d.polygon([(720, 400), (780, 360), (780, 440)], fill=RED)
+    for i, h in enumerate([40, 80, 120]):
+        x = 820 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[YELLOW, RED, BLUE][i])
+    d.line([(720, 400), (820, 520)], fill=INK, width=3)
+
+
+def himachal_freeze(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 200, 460, 560], fill=BLUE)
+    d.rectangle([200, 280, 380, 360], fill=CREAM)
+    d.rectangle([640, 300, 1120, 380], fill=YELLOW)
+    d.rectangle([640, 420, 900, 500], fill=RED)
+    d.ellipse([980, 400, 1100, 520], outline=GOLD, width=6)
+    d.line([(700, 340), (1050, 340)], fill=INK, width=2)
+
+
+def pnb_canara_fd(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 220, 420, 560], fill=RED)
+    d.rectangle([460, 220, 780, 560], fill=BLUE)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 820 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[YELLOW, RED, BLUE, GOLD][i])
+    d.line([(80, 560), (1180, 560)], fill=INK, width=2)
+
+
 def vmart_q2_loss(d: ImageDraw.ImageDraw) -> None:
     # price tag up, margin bar down
     d.polygon([(140, 240), (240, 200), (340, 240), (340, 480), (140, 480)], fill=YELLOW)
@@ -913,6 +952,10 @@ def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("nlmc-psu-land-monetization-november-2026", nlmc_land)
+    save("stockal-unauthorized-trading-fraud-november-2026", stockal_fraud)
+    save("himachal-court-sbi-salary-freeze-november-2026", himachal_freeze)
+    save("pnb-canara-november-fd-rates-november-2026", pnb_canara_fd)
     save("sebi-eki-energy-md-bar-october-2026", sebi_eki_energy_bar)
     save("india-tax-devolution-festive-october-2026", tax_devolution_festive)
     save("lpg-under-recovery-december-370-october-2026", lpg_under_recovery_dec)

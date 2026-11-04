@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "nlmc-psu-land-monetization-november-2026",
+    title: "The land agency expects another ₹5,000 crore from public-sector plot sales this year",
+    summary:
+      "National Land Monetization Corporation chief executive Rohan Chand Thakur said on 3 November 2026 that CPSE surplus-land sales should raise about ₹4,000–5,000 crore more by March 2027, on top of roughly ₹9,000 crore already transacted, with the next parcels coming from telecom, chemicals, petroleum, and steel ministries.",
+    category: "industry",
+    companyOrSector: "Public-sector assets",
+    publishedAt: "2026-11-04T05:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nlmc-psu-land-monetization-november-2026"),
+    keyTakeaways: [
+      "NLMC expects ₹4,000–5,000 crore of additional proceeds from CPSE land sales before FY27 ends, after about ₹9,000 crore of deals already done.",
+      "The next pipeline includes surplus plots from CPSEs under telecom, chemicals and fertilisers, petroleum, and steel ministries, Thakur said at a pre-bid meeting for a HIL (India) parcel in Delhi.",
+      "A 5.119-acre Najafgarh industrial plot with a ₹829.69 crore reserve price drew interest from developers including Omaxe, M3M, and Godrej; RINL’s Visakhapatnam plot auction raised ₹366 crore on 150 parcels in October.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 3 November 2026, National Land Monetization Corporation (NLMC) chief executive Rohan Chand Thakur told reporters the government-owned agency expects to generate another ₹4,000–5,000 crore from selling surplus land held by central public sector enterprises before the fiscal year ends in March 2027. That would sit on top of parcels worth about ₹9,000 crore already sold, with several payments still moving through settlement. Thakur was speaking after a pre-bid meeting for a 5.119-acre HIL (India) site in Delhi’s Najafgarh industrial area, where the reserve price is ₹829.69 crore and developers including Omaxe, M3M, and Godrej have shown interest. He said CPSEs under the telecom, chemicals and fertilisers, petroleum, and steel ministries have approached NLMC to monetise idle land. The push sits inside the wider ₹80,000 crore disinvestment and asset-monetisation target for FY27; Dipam data cited in reports put stake-sale receipts at about ₹55,757 crore and other monetisation at about ₹6,367 crore.",
+      "What does this mean?",
+      "NLMC only sells land and buildings, not government equity stakes, so these auctions recycle industrial acreage into cash for ministries and enterprises without privatising the operating company. When reserve prices clear with double-digit premiums, as RINL’s Visakhapatnam plot sale did in October, it signals real developer demand rather than forced fire sales. For cities, converting surplus factory belts into housing or logistics depends on use-change approvals and transit rules; the HIL parcel advertises higher floor space under transit-oriented development norms subject to clearances. The pace also matters for state finances indirectly, because central asset receipts reduce pressure to borrow for capex, but they do not instantly add housing supply until builders break ground.",
+      "Why should I care?",
+      "If you follow real estate in Delhi NCR, Bengaluru, or Visakhapatnam, watch which CPSE plots hit e-auction next and whether conversion from industrial to mixed use is granted on time. Construction and cement names benefit when large parcels trade at a premium, but only after approvals. Investors in PSUs should read NLMC sales as balance-sheet clean-up, not as recurring earnings. Track the HIL Najafgarh auction outcome, the second phase of RINL plot sales, and Thakur’s ministry-wise pipeline updates through December.",
+    ],
+  },
+  {
+    slug: "stockal-unauthorized-trading-fraud-november-2026",
+    title: "Retail investors say a Bengaluru broker sold their US stocks without permission",
+    summary:
+      "Reporting on 3 November 2026 said nearly 30 Stockal Securities customers allege more than ₹100 crore in losses after US holdings were liquidated on 15 October without consent and proceeds were used to buy thinly traded shares, with complaints filed to Sebi and US regulators.",
+    category: "industry",
+    companyOrSector: "Retail investing",
+    publishedAt: "2026-11-04T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("stockal-unauthorized-trading-fraud-november-2026"),
+    keyTakeaways: [
+      "Moneycontrol reported that about 30 investors claim losses exceeding ₹100 crore linked to unauthorised trades on Stockal Securities accounts on 15 October 2026.",
+      "One investor said about $335,768 of large-cap US holdings were sold and the cash routed into about 300,000 shares of Zhibao Technology, which later fell sharply; another alleged a $3.1 million portfolio was liquidated in minutes.",
+      "Stockal told the publication the mechanism was under investigation and suggested possible credential compromise; DriveWealth wrote that activity came through the Stockal interface and that it froze accounts on Stockal’s instruction.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 3 November 2026, Moneycontrol published accounts from nearly 30 retail users of Stockal Securities, a Sebi-registered platform that lets Indians buy US stocks through partners such as DriveWealth. Investors said that on 15 October their US portfolios were sold without authorisation and the proceeds were used to purchase illiquid US listings, including Zhibao Technology. One senior corporate executive quoted in the story said about $335,768 of Apple, Tesla, Amazon, Alphabet, Nvidia, and AMD holdings were liquidated and swapped into about 300,000 ZBAO shares at about $1.05, with the stock later trading near $0.42. Another investor alleged about $3.1 million of holdings were sold within two minutes and replaced with 3.05 million shares of a thinly traded company within fifteen minutes. Complaints have gone to Sebi and the US Securities and Exchange Commission, and Bengaluru police registered an FIR naming Stockal, Borderless entities, DriveWealth, and HDFC Securities, which ended its distribution partnership in July 2024.",
+      "What does this mean?",
+      "Overseas investing stacks three layers: the Indian app, the clearing broker abroad, and the custodian of dollars. When each party points to the other on authentication, retail holders can be stuck without access while penny stocks sit in the account. The episode is separate from market direction; it is about control of login credentials, trade alerts, and who must make customers whole if orders were not theirs. Even if phishing caused the breach, platforms still face questions on two-factor controls, trade confirmations, and how quickly accounts are restored. Mutual funds and domestic brokers are not direct parties, but the case will shape how regulators treat liberalised remittance overseas portfolios.",
+      "Why should I care?",
+      "If you hold US stocks through any Indian fintech, turn on every alert for sells and logins, and keep offline records of holdings. Do not rely on a single email thread if a partner bank relationship has ended. Watch Sebi’s response and whether account insurance or guarantee funds cover unauthorised trading. Existing Stockal users should read exchange disclosures and police filings rather than chat-room recovery schemes. Others should compare how their broker handles credential resets and out-of-band confirmation before adding overseas exposure.",
+    ],
+  },
+  {
+    slug: "himachal-court-sbi-salary-freeze-november-2026",
+    title: "A court told SBI to unlock a salary account hit by a cybercrime freeze",
+    summary:
+      "The Himachal Pradesh High Court ruled on 3 November 2026 that State Bank of India must lift a full debit freeze on a government patwari’s salary account linked to a flagged ₹21,000 gaming credit, while allowing a lien on the disputed amount alone.",
+    category: "industry",
+    companyOrSector: "Banking",
+    publishedAt: "2026-11-04T05:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("himachal-court-sbi-salary-freeze-november-2026"),
+    keyTakeaways: [
+      "Justice Sandeep Sharma directed SBI to remove a complete debit freeze on Shiv Singh’s salary account after cybercrime probes from Maharashtra and Telangana flagged a ₹21,000 Yono Games credit.",
+      "The court said investigators may place a lien on the specific disputed sum but cannot block legitimate salary, savings, school fees, or loan EMIs without proportionate justification.",
+      "The order cited precedents from Delhi and Kerala high courts and Articles 14, 19(1)(g), and 21 on livelihood and due process during cyber fraud inquiries.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 3 November 2026, the Himachal Pradesh High Court ruled in favour of Shiv Singh, a state government patwari whose State Bank of India salary account had been fully frozen after cybercrime complaints from Thane and Malkajgiri traced a ₹21,000 credit from the Yono Games app. Singh told the court the blanket block left him unable to pay household bills, school fees, medical costs, or loan instalments even though only one incoming transfer was under investigation. Justice Sandeep Sharma held that while agencies may freeze accounts in cyber probes, the measure must be proportionate. SBI was ordered to lift the complete debit freeze immediately so salary and legitimate savings could move again, while the bank may keep a lien or hold on the disputed ₹21,000 until the investigation concludes.",
+      "What does this mean?",
+      "Banks often receive police requests to freeze accounts when mule money lands in retail balances. A full freeze is administratively simple but can cut off wages for weeks. The judgment pushes investigators and lenders toward partial holds on suspect credits instead of shutting the entire account, especially when the holder has a documented salary history. For scam victims elsewhere, the case does not erase liability if they knowingly laundered funds, but it limits collateral damage when a small gaming win triggers a cross-state FIR. Other public-sector banks face similar requests daily, so the order may be cited in bail and banking ombudsman complaints.",
+      "Why should I care?",
+      "If your account is frozen after an unexpected UPI or gaming credit, ask the branch in writing for a partial lien rather than a full block and keep salary slips handy. Cyber fraud victims should still report quickly, but innocent recipients need a path to pay rent and EMIs while police investigate. SBI customers are the direct audience, yet the principle applies across lenders. Watch whether SBI revises internal playbooks for cyber holds and if other high courts adopt the same proportionality test.",
+    ],
+  },
+  {
+    slug: "pnb-canara-november-fd-rates-november-2026",
+    title: "PNB and Canara Bank lifted fixed-deposit rates on select tenures in November",
+    summary:
+      "Punjab National Bank and Canara Bank revised retail fixed-deposit rates effective 1 and 2 November 2026, lifting returns on special tenures such as PNB’s 444-day and Canara’s 555-day schemes to about 6.60% and 6.75% for general customers and up to 7.25% for seniors on the longest special slot.",
+    category: "industry",
+    companyOrSector: "Banking",
+    publishedAt: "2026-11-04T05:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pnb-canara-november-fd-rates-november-2026"),
+    keyTakeaways: [
+      "Canara Bank’s new rate card effective 2 November 2026 raised select tenures by up to 15 basis points, with the 555-day special FD paying 6.75% for general customers and 7.25% for seniors.",
+      "PNB’s rates effective 1 November 2026 offer up to 6.60% on the 444-day special scheme for general depositors and 7.10% for seniors on the same tenure.",
+      "Both schedules apply to domestic term deposits below ₹3 crore; Axis Bank separately revised bulk deposit rates above ₹3 crore effective 3 November.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 3 November 2026, Mint reported that two large public-sector banks refreshed retail fixed-deposit pricing for November. Canara Bank’s revised table took effect on 2 November for deposits below ₹3 crore, lifting some tenures by up to 15 basis points. Its 555-day special scheme now pays 6.75% to general customers, up from about 6.60%, and 7.25% to senior citizens on the same slot. Punjab National Bank’s new chart started on 1 November, with general rates between 3% and 6.60%; the top 6.60% sits on the 444-day special FD, while seniors receive up to 7.10% on that tenure. Shorter buckets under one year remain in the mid-single digits. Axis Bank adjusted bulk rates for deposits of ₹3 crore and above from 3 November, separate from these retail menus.",
+      "What does this mean?",
+      "When the Reserve Bank of India has already tightened policy, lenders still compete for sticky retail deposits before the festive quarter peaks. Special tenure buckets such as 444 or 555 days let banks match liabilities to credit growth without repricing the entire curve. Savers who ladder FDs can pick up a few extra basis points by accepting odd maturities, while seniors gain another half-point on some slots. The moves do not yet signal a broad deposit war: SBI’s chairman said on the same day the bank felt no immediate pressure to raise retail deposit rates because liquidity was comfortable. For households, the practical effect is slightly better returns on new money, not automatic hikes on existing FDs until renewal.",
+      "Why should I care?",
+      "If you rely on bank FDs for income, compare special-tenure offers against your renewal dates this month and check senior-citizen add-ons before auto-rolling maturities. Tax and cash-flow planning still matter because odd tenures may not align with school fees or insurance premiums. Borrowers are unaffected directly, but higher deposit costs eventually feed into loan pricing if competition intensifies. Watch whether HDFC Bank, SBI, and private peers match Canara and PNB’s specials, and revisit rates after the next RBI policy if bond yields keep climbing.",
+    ],
+  },
+  {
     slug: "bata-india-premiumisation-q2-november-2026",
     title: "Bata India grew sales with higher ticket sizes even as its profit margin narrowed",
     summary:
@@ -9192,6 +9288,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "nlmc-psu-land-monetization-november-2026": "policy",
+  "stockal-unauthorized-trading-fraud-november-2026": "policy",
+  "himachal-court-sbi-salary-freeze-november-2026": "policy",
+  "pnb-canara-november-fd-rates-november-2026": "policy",
   "bata-india-premiumisation-q2-november-2026": "markets",
   "oil-india-dibru-drilling-supreme-court-november-2026": "policy",
   "yes-bank-at1-bondholders-deadline-november-2026": "policy",
