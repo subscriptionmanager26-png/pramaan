@@ -1008,7 +1008,49 @@ def capillary_impersonation_fraud(d: ImageDraw.ImageDraw) -> None:
     d.line([(80, 380), (1180, 380)], fill=INK, width=2)
 
 
+def titan_q2_jewellery(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 260, 480, 540], fill=BLUE)
+    d.ellipse([200, 320, 380, 480], fill=YELLOW)
+    for i, h in enumerate([100, 180, 260]):
+        x = 640 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, GOLD, RED][i])
+    d.polygon([(980, 220), (1120, 280), (980, 340)], fill=BLUE)
+
+
+def lg_appliances_q2(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 200, 420, 520], radius=16, fill=BLUE)
+    for i in range(5):
+        d.line([(140, 240 + i * 50), (400, 240 + i * 50)], fill=CREAM, width=2)
+    for i, h in enumerate([120, 200, 280]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE][i])
+    d.polygon([(980, 180), (1120, 240), (980, 300)], fill=GOLD)
+
+
+def bikaji_snacks_margin(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 280, 440, 520], radius=20, fill=RED)
+    for i, h in enumerate([200, 320, 400]):
+        x = 560 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[BLUE, YELLOW, BLUE][i])
+    d.line([(560, 420), (980, 520)], fill=GOLD, width=5)
+    d.ellipse([1020, 360, 1120, 460], outline=RED, width=6)
+
+
+def airtel_q2_network(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 200, 200, 560], fill=BLUE)
+    d.polygon([(160, 200), (220, 120), (280, 200)], fill=RED)
+    for i, h in enumerate([80, 160, 240, 320]):
+        x = 640 + i * 80
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, RED, BLUE, YELLOW][i])
+    d.line([(720, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(980, 220), (1080, 260), (980, 300)], fill=GOLD)
+
+
 def main() -> None:
+    save("titan-q2-jewellery-watches-november-2026", titan_q2_jewellery)
+    save("lg-electronics-india-q2-appliances-november-2026", lg_appliances_q2)
+    save("bikaji-snacks-growth-margin-squeeze-november-2026", bikaji_snacks_margin)
+    save("bharti-airtel-q2-network-costs-november-2026", airtel_q2_network)
     save("festive-dhanteras-online-sales-november-2026", festive_dhanteras_online)
     save("kotak-deutsche-cci-approval-november-2026", kotak_deutsche)
     save("india-household-retail-credit-stress-november-2026", household_credit)

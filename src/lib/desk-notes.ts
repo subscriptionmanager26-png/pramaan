@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bharti-airtel-q2-network-costs-november-2026",
+    title: "Airtel lifted average phone bills while network upkeep costs jumped",
+    summary:
+      "Bharti Airtel reported on 5 November 2026 that average revenue per user rose to ₹271 in the September quarter as it added 18.8 million 4G and 5G users and trimmed cheap prepaid plans, but consolidated profit of ₹88.88 billion missed estimates because network operating costs rose 11% and licence fees 13%.",
+    category: "industry",
+    companyOrSector: "Telecom / consumer",
+    publishedAt: "2026-11-05T17:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bharti-airtel-q2-network-costs-november-2026"),
+    keyTakeaways: [
+      "India’s second-largest operator said average revenue per user reached ₹271 in Q2 FY27, up 6% year on year, with no broad tariff hike since July 2024 and gains coming from premiumisation and plan discontinuations.",
+      "Network operating and maintenance costs rose 11% and licence fees 13%, lifting total expenses about 15% to ₹259.32 billion and pushing consolidated profit below the ₹96.73 billion average analyst estimate despite revenue beating forecasts.",
+      "The India user base grew 10.9% to 498.7 million subscribers, still behind Reliance Jio’s 542.4 million, while the Africa unit’s revenue rose 37.6%.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 5 November 2026, Bharti Airtel Ltd reported September-quarter results showing the operator is still steering subscribers toward higher-paying plans rather than announcing a fresh tariff round. Average revenue per user reached ₹271, up 6% from a year earlier, helped by an 18.8 million increase in 4G and 5G users and by dropping several low-price prepaid packs during the quarter. Consolidated net profit rose to ₹88.88 billion from ₹67.92 billion a year ago, but that figure fell short of the ₹96.73 billion average estimate compiled by LSEG. Network operating costs climbed 11% and licence fees 13%, lifting total expenses about 15%. Revenue still beat expectations at ₹608.78 billion, up 16.7%, with the Africa business contributing a 37.6% revenue jump.",
+      "What does this mean?",
+      "Indian telcos have been testing how far they can raise effective bills through plan mix rather than headline price hikes. When maintenance, spectrum charges, and 5G rollout costs run faster than ARPU, margins compress even if subscriber counts look healthy. Airtel’s India base reached 498.7 million users, up 10.9%, but Reliance Jio still leads at 542.4 million, so the fight remains about revenue per user, not raw scale. Brokerage notes cited in wire copy still talk about a possible 12% to 15% industry tariff step over the next few months, but that remains speculation until prepaid stickers change.",
+      "Why should I care?",
+      "If you are on Airtel prepaid, check whether your usual recharge still exists or whether you were nudged to a costlier pack when cheap plans disappeared. Postpaid households should read the next bill for family-plan changes and bundled roaming perks before comparing Vi or Jio. Investors should weigh ARPU gains against the cost line, not revenue alone. Watch whether rivals match plan cuts, any Trai consultation on tariffs, and whether network expense growth slows after current 5G densification passes.",
+    ],
+  },
+  {
+    slug: "bikaji-snacks-growth-margin-squeeze-november-2026",
+    title: "Bikaji sold more ethnic snacks but edible oil inflation ate into margins",
+    summary:
+      "Bikaji Foods International Ltd said on 5 November 2026 that revenue from operations rose 13% year on year to ₹938.5 crore in the September quarter while profit after tax fell 11.2% to ₹69 crore as EBITDA margin contracted 280 basis points to 12.6% on higher marketing and fuel costs, with ethnic snacks revenue up 19.7%.",
+    category: "industry",
+    companyOrSector: "Packaged food / FMCG",
+    publishedAt: "2026-11-05T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bikaji-snacks-growth-margin-squeeze-november-2026"),
+    keyTakeaways: [
+      "Revenue from operations reached ₹938.5 crore in Q2 FY27, up 13% year on year, with ethnic snacks growing 19.7% to ₹575.1 crore and western snacks up 44.2%, while packaged sweets revenue fell 11.3%.",
+      "EBITDA fell 7.4% to ₹118.7 crore and margin compressed to 12.6% from 15.4% a year earlier; gross margin slipped 60 basis points to 34.4% as edible oil costs indexed sharply higher.",
+      "Direct outlet coverage expanded to about 3.9 lakh stores and the retail store count rose to 34 from 21 a year ago, with retail revenue up 58.1%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Bikaji Foods International Ltd, the Bikaner-based snack maker, reported on 5 November 2026 that shoppers bought more branded namkeen and western formats even as input inflation narrowed profits. Revenue from operations rose 13% year on year to ₹938.5 crore for the quarter ended 30 September 2026. Ethnic snacks, the largest segment, grew 19.7% to ₹575.1 crore and now make up about 63% of the mix. Western snacks rose 44.2% to ₹81.5 crore, while packaged sweets declined 11.3%. EBITDA fell 7.4% to ₹118.7 crore and the EBITDA margin compressed 280 basis points to 12.6%. Profit after tax dropped 11.2% to ₹69 crore. Management pointed to higher marketing spends and fuel costs, while gross margin slipped 60 basis points to 34.4% as edible oil inflation intensified.",
+      "What does this mean?",
+      "Festive and everyday snacking demand can stay firm while commodity spikes still hurt packaged-food margins. Bikaji is pushing deeper distribution, with direct outlets reaching about 3.9 lakh and company-owned retail stores climbing to 34 from 21, which adds rent and staffing even as volumes grow. When oil and freight rise, brands either absorb costs, shrink pack sizes, or raise sticker prices. Competitors such as Haldiram’s and regional players face the same math, so shelf promotions may look aggressive even when profit lines soften.",
+      "Why should I care?",
+      "If you buy festival snack packs, compare gram prices and expiry dates across brands; volume promotions may hide smaller packs or higher oil content costs passed through slowly. Investors in listed FMCG names should read ethnic versus sweets mix, not just headline revenue growth. Job seekers in sales should note the rapid outlet expansion in north and west markets. Watch edible oil indices, management commentary on further price hikes, and whether sweets lines stabilise after the decline this quarter.",
+    ],
+  },
+  {
+    slug: "lg-electronics-india-q2-appliances-november-2026",
+    title: "LG India raised appliance prices after a strong festive quarter",
+    summary:
+      "LG Electronics India Ltd told Business Line on 5 November 2026 that net profit rose 25.7% year on year to ₹489.3 crore on revenue up 19.5% to ₹7,380 crore, with home appliances and air solutions growing 21% and large-screen TVs about half of TV revenue, while AC prices rose 5% on 1 October and other appliances 3% to 5% from 1 November.",
+    category: "industry",
+    companyOrSector: "Consumer durables",
+    publishedAt: "2026-11-05T16:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lg-electronics-india-q2-appliances-november-2026"),
+    keyTakeaways: [
+      "Net profit reached ₹489.3 crore in the September quarter, up 25.7% on revenue of ₹7,380 crore, with management citing balanced volume and value growth across metro and emerging markets.",
+      "Home appliances and air solutions grew 21%, the strongest quarterly pace since listing, while home entertainment rose 17.2% and TVs sized 55 inches and above now account for nearly half of TV revenue.",
+      "LG lifted air-conditioner prices 5% on 1 October 2026 and increased prices on other appliances by 3% to 5% from 1 November, while expanding EBITDA margin 63 basis points to 9.3% despite commodity and rupee pressure.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 5 November 2026, LG Electronics India Ltd reported September-quarter results and told Business Line that households kept upgrading cooling and entertainment products through the festive window. Net profit rose 25.7% year on year to ₹489.3 crore on revenue from operations of ₹7,380 crore, up 19.5%. The home appliances and air solutions division grew 21%, which executives called the strongest quarter since the company listed. Home entertainment rose 17.2%, helped by premium QNED and OLED lines that now make up nearly half of TV revenue by value. Fully automatic washing machines account for about 60% of the washing-machine portfolio. Management said growth came from both mass segments such as 32-inch LED TVs and single-door refrigerators and from premium tiers. LG raised air-conditioner prices 5% on 1 October and lifted prices on other appliances by 3% to 5% from 1 November, citing raw-material volatility and rupee depreciation, while still expanding EBITDA margin to 9.3%.",
+      "What does this mean?",
+      "Consumer durables makers are passing input costs through list prices rather than waiting for demand to collapse. When a brand can raise AC and fridge prices right after a festive quarter, it signals that replacement and upgrade cycles are still active, especially ahead of the post-Diwali wedding season management highlighted. Premium TV mix also shows households trading up on screen size when financing offers and energy labels are clear. Rivals such as Samsung, Voltas, and Haier face the same copper and compressor costs, so street-level discounting may narrow even as MRP steps up.",
+      "Why should I care?",
+      "If you are buying an AC or fridge this month, compare on-road offers against the new November price list and check installation bundles before the wedding-season rush. Renters upgrading TVs should weigh energy ratings and panel size against EMI plans from retailers. Investors in listed appliance names should track volume versus value growth and margin commentary after price hikes. Watch December channel checks, competitor price moves, and whether LG’s new Sri City automotive infotainment line adds meaningful B2B revenue over time.",
+    ],
+  },
+  {
+    slug: "titan-q2-jewellery-watches-november-2026",
+    title: "Titan’s jewellery and watch sales kept climbing through a shifted festive calendar",
+    summary:
+      "Titan Company Ltd reported on 5 November 2026 that consolidated operating growth was about 25% year on year in Q2 FY27, with jewellery revenue excluding bullion up roughly 24% and watches up 27%, while reported margins also reflected a ₹536 crore customs-duty related gain on gold that management adjusted out for comparison.",
+    category: "industry",
+    companyOrSector: "Jewellery / retail",
+    publishedAt: "2026-11-05T17:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("titan-q2-jewellery-watches-november-2026"),
+    keyTakeaways: [
+      "Jewellery revenue excluding bullion and digital gold rose about 24% year on year to roughly ₹17,495 crore, with Tanishq, Mia, and Zaya up about 20% and CaratLane up 31%; the company added 42 net jewellery stores in India during the quarter.",
+      "The watches division grew 27% to about ₹1,881 crore with analog sales up in the early thirties percent range and smartwatches returning to high single-digit growth; 34 net watch stores opened in India.",
+      "Reported jewellery EBIT included about ₹536 crore linked to customs duty changes on gold; adjusting for that item, India jewellery EBIT margin was about 10.7% versus 14% on a reported basis, and the board approved raising up to ₹2,500 crore via private debentures.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 5 November 2026, Titan Company Ltd published September-quarter results showing broad-based demand across jewellery, watches, and eyewear even though much of this year’s festive buying shifts into the December quarter. Consolidated operating growth was about 25% year on year. Jewellery revenue excluding bullion and digital gold rose about 24% to roughly ₹17,495 crore, helped by the Festival of Diamonds campaign and studded promotions. Tanishq, Mia, and Zaya grew about 20%, CaratLane about 31%, and international jewellery more than doubled. Watches grew 27% to about ₹1,881 crore, with analog formats up in the early thirties and smartwatches back to high single-digit growth. Eyewear rose 28%. The company opened 42 net jewellery stores and 34 net watch stores in India during the quarter. Reported profit also reflected accounting gains tied to customs duty changes on gold; management presented adjusted margins excluding those items.",
+      "What does this mean?",
+      "Shoppers are still buying studded and premium watches when campaigns are sharp, even if the traditional festive calendar moves later. Titan is funding that expansion with new stores and a board approval to raise up to ₹2,500 crore through private debentures, which signals continued capex on formats from CaratLane to Helios Luxe. Jewellery margins on an adjusted basis are lower than the reported line suggests, so investors should read footnotes on duty credits rather than headline EBIT alone. The pattern fits other consumption signals from the same week, including online festive orders and branded innerwear expansion, pointing to selective strength rather than a uniform slowdown.",
+      "Why should I care?",
+      "If you plan a large jewellery purchase, compare making charges and exchange policies across Tanishq, CaratLane, and local rivals before the December festive cluster arrives. Watch buyers should check whether promotions on studded lines continue after the duty-related accounting boost fades from headlines. Investors should track store openings, debenture issuance terms, and adjusted margins in the next update. Follow November and December same-store commentary from Titan and peers such as Kalyan to see whether demand was pulled forward or still building.",
+    ],
+  },
+  {
     slug: "festive-dhanteras-online-sales-november-2026",
     title: "Dhanteras online orders for gold and two-wheelers surged outside the big metros",
     summary:
@@ -9408,6 +9504,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bharti-airtel-q2-network-costs-november-2026": "companies",
+  "bikaji-snacks-growth-margin-squeeze-november-2026": "markets",
+  "lg-electronics-india-q2-appliances-november-2026": "markets",
+  "titan-q2-jewellery-watches-november-2026": "markets",
   "festive-dhanteras-online-sales-november-2026": "markets",
   "ntpc-capacity-149gw-roadmap-november-2026": "policy",
   "page-industries-plant-expansion-november-2026": "markets",
