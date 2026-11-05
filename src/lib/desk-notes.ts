@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-ports-evos-europe-november-2026",
+    title: "Adani Ports agreed to buy Europe’s Evos liquid-storage network for €2.56 billion",
+    summary:
+      "Adani Ports and Special Economic Zone Ltd said on 5 November 2026 it will acquire Netherlands-based Evos B.V. at an enterprise value of €2.56 billion, adding eight port terminals across five European countries and 6.3 million cubic metres of tank capacity funded largely through MUFG-underwritten euro debt.",
+    category: "industry",
+    companyOrSector: "Ports / logistics",
+    publishedAt: "2026-11-05T23:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-ports-evos-europe-november-2026"),
+    keyTakeaways: [
+      "APSEZ will pay €1.18 billion in cash to Igneo Infrastructure Partners for 100% of Evos and assume debt, taking enterprise value to €2.56 billion, its largest deal by that measure.",
+      "Evos reported €392 million of revenue and €219 million of Ebitda in calendar 2025 on 6.3 million cubic metres of storage across the Netherlands, Germany, Spain, Belgium, and Malta.",
+      "Management said the asset brings take-or-pay style cash flows, exposure to biofuels and sustainable aviation fuel, and pro forma net debt to Ebitda below 2.5 times after integration.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 5 November 2026, Adani Ports and Special Economic Zone Ltd announced its first major foray into European liquid storage through a proposed acquisition of Evos B.V. The deal values the business at an enterprise value of €2.56 billion, including €1.18 billion of equity paid to seller Igneo Infrastructure Partners and assumed debt. Evos runs eight port-linked terminals with 6.3 million cubic metres of capacity in the Amsterdam-Rotterdam-Antwerp corridor, Hamburg, and Mediterranean hubs. Chief executive Ashwani Gupta told analysts APSEZ still has appetite for overseas assets that meet return hurdles without pushing leverage too high. Financing is euro-denominated debt underwritten by MUFG, with completion subject to regulatory approvals and works council consultation over roughly 15 months.",
+      "What does this mean?",
+      "Indian port operators have spent a decade buying terminals in Sri Lanka, Israel, Tanzania, and Australia. Liquid storage in Europe adds a fee-based revenue stream tied to fuel, chemicals, and transition products rather than container throughput alone. Evos reported 56% Ebitda margins and high occupancy on contracts that often include take-or-pay features, which can smooth earnings when Indian cargo volumes swing with monsoon or coal import cycles. The transaction lifts APSEZ’s international footprint to 28 ports and terminals across ten countries and moves it closer to a stated goal of handling one billion tonnes of cargo by FY31. Near-term leverage rises, with pro forma net debt to Ebitda around 2.76 times before management targets a step down toward 2.5 times by FY27.",
+      "Why should I care?",
+      "If you work in energy logistics, watch how APSEZ integrates European health, safety, and environmental rules with its Indian operating playbook. Shippers and traders routing fuel through ARA or Mediterranean hubs may eventually deal with an Indian parent on storage tariffs and biofuel slots. Investors in listed port and logistics names should compare contract quality and currency mismatch on euro debt against domestic volume growth. Follow competition clearance in Europe, MUFG drawdowns, and whether rivals such as VTTI or international oil majors respond with counter-bids or capacity additions.",
+    ],
+  },
+  {
+    slug: "emami-d2c-brand-buying-november-2026",
+    title: "Emami wants more online-first brands after its acquired labels hit a quarter of India sales",
+    summary:
+      "Emami Ltd told Mint on 5 November 2026 that revenue from its strategic investment brands rose 73% to ₹239 crore in the September quarter, about 26% of domestic revenue, and vice chairman Harsha Vardhan Agarwal said further D2C acquisitions are likely within a year if valuations stay disciplined.",
+    category: "industry",
+    companyOrSector: "FMCG / consumer",
+    publishedAt: "2026-11-05T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("emami-d2c-brand-buying-november-2026"),
+    keyTakeaways: [
+      "Strategic investment brands including The Man Company, Brillare, Axiom Ayurveda, and IncNut generated ₹239 crore in the quarter, up 73% on a comparable basis and roughly 26% of India revenue.",
+      "Consolidated revenue grew 36% to ₹1,088 crore with domestic volumes up 43%, while profit after tax fell 2% to ₹145.5 crore as input costs linked to West Asia conflict pressure margins.",
+      "Management expects the portfolio to exceed ₹800 crore in sales this financial year and targets about 25% compound growth in D2C over three years excluding further deals.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 5 November 2026, Emami Ltd published September-quarter results and managing director Harsha Vardhan Agarwal told Mint the Kolkata-based group is actively scouting premium digital-first brands sold mainly online. Revenue from brands it classifies as strategic investments reached ₹239 crore in the quarter, up 73% year on year on a comparable basis and equal to about 26% of India sales. The set includes male grooming label The Man Company, beauty platform Brillare, Axiom Ayurveda, and IncNut, owner of Vedix and SkinKraft, with recent deals valued at ₹200 crore and ₹321 crore. Consolidated revenue rose 36% to ₹1,088 crore, driven by 49% domestic topline growth and 43% domestic volume growth, while profit after tax slipped 2% to ₹145.5 crore as commodity costs stayed elevated.",
+      "What does this mean?",
+      "Legacy FMCG houses are buying growth on marketplaces and quick-commerce aisles because core ayurvedic and winter-care lines alone cannot match the pace of online-native challengers. Emami is pairing factory brands such as BoroPlus with D2C labels that ship direct and advertise on short video, similar to Marico’s Plix stack and Hindustan Unilever’s push behind Minimalist. Agarwal said the group will not overpay and expects another investment within twelve months, with the acquired portfolio on track to cross ₹800 crore in FY27 sales. Margin pressure this quarter shows the trade-off: volume and mix can look strong while edible oil and packaging inflation still bite EBITDA.",
+      "Why should I care?",
+      "If you shop for grooming or personalised skincare online, watch whether Emami-backed brands bundle with core Emami packs on Amazon or Blinkit and how pricing compares with standalone D2C rivals. Founders selling niche consumer labels should note that strategics now expect proof of scale before paying premium multiples. Investors in Emami or peers should read D2C contribution each quarter, not just headline revenue growth. Track the next acquisition announcement, gross margin commentary on input costs, and whether PAT recovers once commodity pressure eases.",
+    ],
+  },
+  {
+    slug: "britannia-festive-biscuit-volume-november-2026",
+    title: "Britannia shipped 13% more biscuits in a quarter when shoppers stocked up for festivals",
+    summary:
+      "Britannia Industries Ltd reported on 5 November 2026 that consolidated revenue from operations rose 15.6% to ₹5,597.79 crore in the September quarter on 13% volume growth and 16.6% sales growth, with net profit up 11% to ₹725.99 crore despite management flagging inflation watchlists.",
+    category: "industry",
+    companyOrSector: "Packaged food / FMCG",
+    publishedAt: "2026-11-05T23:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("britannia-festive-biscuit-volume-november-2026"),
+    keyTakeaways: [
+      "Consolidated revenue from operations reached ₹5,597.79 crore in Q2 FY27, up 15.6% year on year, with sales growth of 16.6% and volume growth of 13% across channels and key states.",
+      "Net profit rose 11% to ₹725.99 crore from ₹655.06 crore a year earlier; standalone net profit grew more slowly at 2.3% to ₹705.54 crore on revenue up 15.9% to ₹5,404.63 crore.",
+      "Chief executive Rakshit Hargave cited double-digit volume and value growth in biscuits and adjacent categories, festive campaigns on brands such as Bourbon and 50-50, while warning the company remains alert to inflation.",
+    ],
+    body: [
+      "What's going on here?",
+      "Britannia Industries Ltd, India’s largest biscuit maker, reported September-quarter results on 5 November 2026 showing households still filled pantry shelves ahead of Ganesh Chaturthi, Onam, and the wider festive calendar. Consolidated revenue from operations increased 15.6% year on year to ₹5,597.79 crore. Sales rose 16.6% and volumes 13%, with growth spread across distribution channels and large states. Consolidated net profit climbed 11% to ₹725.99 crore. The company highlighted regional campaigns, including Bourbon activations for Ganesh Chaturthi and 50-50 Cheeze Dipped for Onam, plus digital pushes on Little Hearts, Winkin’ Cow, and NutriChoice. International and adjacent categories also accelerated, management said, and sequential revenue and profit improved versus the June quarter.",
+      "What does this mean?",
+      "Staple snacking often holds up when discretionary durables wobble because packs are small, branded, and easy to gift. Britannia’s volume-led growth suggests retailers ordered ahead of festivals rather than cutting biscuit facings, aligning with other consumption prints from the same week in jewellery, appliances, and ethnic snacks. Inflation in wheat, sugar, and edible oil can still compress standalone margins, which is why standalone profit lagged consolidated growth this quarter. Competitors such as Parle and ITC’s Sunfeast face the same shelf fight, so sustained low-teens volume is a signal of share defence, not just category tailwinds.",
+      "Why should I care?",
+      "If you buy family snack packs for Diwali or school tiffin, compare gram prices and promo bundles across brands before assuming headline inflation equals shelf hikes. Investors in FMCG should track Britannia’s volume line alongside margin commentary in the December quarter, when rural demand remains mixed after a weak monsoon in parts of the country. Job seekers in sales and supply chain should note the emphasis on state-level execution and digital campaigns. Watch input cost trends, competitor festive pricing, and whether international revenue keeps contributing after the September surge.",
+    ],
+  },
+  {
+    slug: "mahindra-suv-demand-q2-november-2026",
+    title: "Mahindra grew SUV sales 26% while Maruti and Hyundai profits fell on metal costs",
+    summary:
+      "Mahindra & Mahindra Ltd reported on 5 November 2026 that consolidated profit after tax rose 30% to ₹5,167 crore on revenue up 25% to ₹57,553 crore, with passenger vehicle sales up 26% to 183,000 units even as tractor volumes fell 6% on a weak monsoon.",
+    category: "industry",
+    companyOrSector: "Automobiles / consumer",
+    publishedAt: "2026-11-05T23:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mahindra-suv-demand-q2-november-2026"),
+    keyTakeaways: [
+      "Consolidated profit after tax increased 30% year on year to ₹5,167 crore on revenue from operations of ₹57,553 crore, up 25%, led by passenger vehicle sales of 183,000 units, up 26%.",
+      "Group chief executive Anish Shah cited pricing, hedging, product mix, and supplier diversification as margin tools while planning four new passenger models by June 2027, including an EV and a pickup.",
+      "Tractor sales fell 6% to 116,000 units on monsoon deficits and a delayed festive calendar, prompting management to cut full-year tractor growth guidance from 5% to flat versus last year.",
+    ],
+    body: [
+      "What's going on here?",
+      "On 5 November 2026, Mahindra & Mahindra Ltd became the first major Indian carmaker in the September quarter to report higher net profit while peers struggled with commodity bills. Consolidated profit after tax rose 30% year on year to ₹5,167 crore. Revenue from operations grew 25% to ₹57,553 crore. Passenger vehicle sales reached 183,000 units, up 26%, spanning petrol, diesel, and electric SUVs that have long waiting lists on models such as Scorpio and XUV lines. Tractor volumes declined 6% to 116,000 units as monsoon deficits and a later festive season weighed on rural demand. Group chief executive Anish Shah said the company used pricing, hedging, mix, and supplier changes to offset steel and copper inflation linked to West Asia conflict over the past nine months.",
+      "What does this mean?",
+      "Urban buyers are still paying for large SUVs and fresh launches when financing is available, even as entry-level carmakers absorb metal costs. Mahindra’s profit rise contrasts with Maruti Suzuki and Hyundai Motor India, which reported steep profit drops in the same quarter on commodity pressure. That divergence is about portfolio mix and pricing power, not a uniform auto boom. Weak tractors show rural income stress persists, and Mahindra now expects flat tractor sales for the full year versus an earlier 5% growth hope. Capacity additions of about 27% planned by exit FY27 signal confidence in passenger demand if metals ease, as Shah noted after the recent oil price drop.",
+      "Why should I care?",
+      "If you are waiting on a Mahindra SUV, check whether revised delivery timelines slip as new models launch through 2027 and compare on-road quotes against Tata or Hyundai alternatives. Farmers and rural dealers should plan inventory against flat tractor guidance rather than last year’s growth assumptions. Investors should weigh passenger vehicle margins against the farm segment drag. Watch November and December wholesale numbers, competitor discounting, metal cost pass-through, and booking trends after the wedding season.",
+    ],
+  },
+  {
     slug: "bharti-airtel-q2-network-costs-november-2026",
     title: "Airtel lifted average phone bills while network upkeep costs jumped",
     summary:
@@ -9504,6 +9600,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-ports-evos-europe-november-2026": "companies",
+  "emami-d2c-brand-buying-november-2026": "markets",
+  "britannia-festive-biscuit-volume-november-2026": "markets",
+  "mahindra-suv-demand-q2-november-2026": "markets",
   "bharti-airtel-q2-network-costs-november-2026": "companies",
   "bikaji-snacks-growth-margin-squeeze-november-2026": "markets",
   "lg-electronics-india-q2-appliances-november-2026": "markets",

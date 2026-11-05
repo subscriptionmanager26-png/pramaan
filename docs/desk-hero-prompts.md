@@ -1234,6 +1234,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject left | Suitcase / departure board motif |
 | Metaphor right | Upward booking curve overlay |
 
+### `adani-ports-evos-europe-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Indian port operator buys European liquid storage |
+| Subject left | Storage tanks motif |
+| Metaphor right | Arc toward European hub silhouette |
+
+### `emami-d2c-brand-buying-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Legacy FMCG buys online-native growth |
+| Subject left | Split brand panels merging |
+| Metaphor right | Ascending D2C revenue bars |
+
+### `britannia-festive-biscuit-volume-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive pantry stocking lifts biscuit volumes |
+| Subject left | Pack / shelf motif |
+| Metaphor right | Rising volume bars |
+
+### `mahindra-suv-demand-q2-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | SUV demand holds while rural tractors soften |
+| Subject left | SUV silhouette |
+| Metaphor right | Diverging urban up / farm flat curves |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.

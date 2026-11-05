@@ -1036,6 +1036,44 @@ def bikaji_snacks_margin(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([1020, 360, 1120, 460], outline=RED, width=6)
 
 
+def adani_ports_evos(d: ImageDraw.ImageDraw) -> None:
+    for i in range(4):
+        d.ellipse([120 + i * 90, 420, 200 + i * 90, 560], fill=BLUE if i % 2 else RED)
+        d.rectangle([150 + i * 90, 360, 170 + i * 90, 430], fill=GOLD)
+    d.arc([680, 160, 1160, 520], 220, 340, fill=YELLOW, width=8)
+    d.line([(720, 500), (900, 280), (1080, 240)], fill=GOLD, width=4)
+    d.rectangle([700, 120, 780, 180], fill=RED)
+
+
+def emami_d2c(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([100, 220, 420, 560], radius=24, fill=RED)
+    d.rounded_rectangle([460, 220, 780, 560], radius=24, fill=BLUE)
+    d.line([(420, 390), (460, 390)], fill=GOLD, width=6)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 820 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[YELLOW, RED, BLUE, GOLD][i])
+
+
+def britannia_festive_biscuits(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 280, 440, 520], radius=20, fill=BLUE)
+    for i, y in enumerate([320, 380, 440]):
+        d.rectangle([150, y, 410, y + 36], fill=[CREAM, YELLOW, RED][i])
+    for i, h in enumerate([140, 240, 340, 440]):
+        x = 560 + i * 70
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.polygon([(980, 200), (1120, 260), (980, 320)], fill=GOLD)
+
+
+def mahindra_suv_q2(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 320, 500, 520], radius=24, fill=BLUE)
+    d.ellipse([160, 360, 240, 440], fill=CREAM)
+    d.ellipse([380, 360, 460, 440], fill=CREAM)
+    d.polygon([(540, 520), (620, 420), (760, 400), (920, 440), (1000, 520)], fill=RED)
+    for i, h in enumerate([100, 180, 260]):
+        x = 640 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, RED, BLUE][i])
+
+
 def airtel_q2_network(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([120, 200, 200, 560], fill=BLUE)
     d.polygon([(160, 200), (220, 120), (280, 200)], fill=RED)
