@@ -1266,6 +1266,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject left | SUV silhouette |
 | Metaphor right | Diverging urban up / farm flat curves |
 
+### `india-gilt-rally-oil-midterms-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Cheaper oil and a firmer rupee ease pressure on long bond yields |
+| Subject right | Generic bond coupon strip / yield curve |
+| Metaphor left | Barrel silhouette fading behind a strengthening rupee motif |
+
+### `tata-power-mumbai-bess-60mwh-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Grid batteries shift solar power into evening peak |
+| Subject right | City substation / skyline silhouette |
+| Metaphor left | Stacked charge blocks + sunset demand arc |
+
+### `gujarat-energy-adnoc-lng-deal-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Long-term LNG supply secures industrial and city gas demand |
+| Subject right | LNG carrier silhouette |
+| Metaphor left | Pipeline arc from overseas portfolio to regas terminal |
+
+### `marico-cosmix-stake-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Strategics consolidate control of a wellness brand |
+| Subject right | Generic nutrition powder jar |
+| Metaphor left | Two ownership circles merging with an arrow |
+
+### `blue-dart-q2-profit-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Express courier earns more per shipment |
+| Subject right | Sort hub / conveyor silhouette |
+| Metaphor left | Ascending yield ticks along a route ribbon |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.

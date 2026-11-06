@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-gilt-rally-oil-midterms-november-2026",
+    title: "India’s 10-year government bond had its steepest weekly drop in yields since 2019",
+    summary:
+      "Reporting on 6 November 2026 said the benchmark 2036 gilt yield fell about 22 basis points over five sessions, its best weekly move since October 2019, as crude slid sharply and the rupee strengthened past 94 to the dollar, pulling foreign funds back into rupee debt.",
+    category: "industry",
+    companyOrSector: "Rates / fixed income",
+    publishedAt: "2026-11-06T17:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-gilt-rally-oil-midterms-november-2026"),
+    keyTakeaways: [
+      "The 6.94% government bond due 2036 settled at about 7.19% on Friday, down roughly 22 bps for the week despite a small daily wobble, described as the strongest weekly rally in that segment since October 2019.",
+      "Brent-style crude benchmarks were quoted as down about 17% over the week, easing inflation pressure for a large oil importer and helping the rupee past 94 per dollar with a gain of about 1.1% on the week.",
+      "Foreign investors bought a net of about ₹52 billion of Indian bonds, the largest weekly inflow since July, while overnight indexed swap curves shifted to price smaller rate increases ahead.",
+    ],
+    body: [
+      "What's going on here?",
+      "Bond desks in Mumbai spent the first week of November repricing risk-free rates after energy and currency markets moved quickly. Wire copy on 6 November described Indian government bonds outperforming emerging Asia, with the onshore 10-year benchmark posting its steepest weekly drop in yield in several years. Treasury yields abroad also fell, which increased the relative appeal of rupee paper for funds that can hedge or ride currency beta. Oil’s weekly slide mattered for India’s import bill and for headline inflation, both of which the Reserve Bank of India watches when it sets policy.",
+      "What does this mean?",
+      "When crude falls and the rupee firms, the central bank faces less urgency to keep long yields elevated purely to attract dollars. That chain often shows up first in swaps and gilt futures, then in mutual fund NAVs and new bond issues for banks and companies. The reported net foreign purchase figure is a concrete flow signal: offshore accounts were net buyers of gilts at a scale not seen in months. Retail investors usually access this through credit-risk funds, target-maturity debt funds, or bank FD ladders rather than primary auctions, but the level at which the sovereign borrows sets the floor for most rupee lending.",
+      "Why should I care?",
+      "If you are renewing a fixed deposit or buying a debt fund, lower benchmark yields can mean softer entry points on fresh long-duration bets even when the RBI stance stays tight. Home loan borrowers care indirectly: government bond levels influence bank marginal cost of funds over time, though mortgage rates move more slowly than the 10-year. Corporate treasurers watch this for new debenture pricing. Track the next policy guidance, monthly fiscal borrowing, and whether oil prices stabilize or keep sliding; each leg feeds back into whether this gilt rally extends or gives back a portion of the move.",
+    ],
+  },
+  {
+    slug: "tata-power-mumbai-bess-60mwh-november-2026",
+    title: "Tata Power switched on 60 MWh of grid batteries across three Mumbai zones",
+    summary:
+      "Tata Power said on 6 November 2026 it has commissioned 60 megawatt-hours of battery storage at Mahalaxmi, Saki, and Mankhurd, the first slice of a 200 MWh programme cleared by Maharashtra regulators to ease evening peaks for a city distribution network serving more than eight lakh consumers.",
+    category: "industry",
+    companyOrSector: "Power / utilities",
+    publishedAt: "2026-11-06T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-power-mumbai-bess-60mwh-november-2026"),
+    keyTakeaways: [
+      "Operational battery energy storage adds up to 60 MWh at three named locations, aimed at shifting energy from lower-cost daytime slots into high-demand evening hours.",
+      "The company linked the project to a broader 200 MWh build-out across ten sites after Maharashtra Electricity Regulatory Commission approval in April 2025.",
+      "Tata Power’s integrated generation and wires footprint exceeds 26 GW group-wide, with a large share now labeled clean or green including projects under construction.",
+    ],
+    body: [
+      "What's going on here?",
+      "Urban Indian utilities are adding batteries next to substations because rooftop solar and grid solar create a midday glut while air-conditioning and lighting still spike after sunset. Tata Power’s exchange-facing statement, carried in market news on 6 November, said 60 MWh of systems are now live in Mahalaxmi, Saki, and Mankhurd. That is a visible slice of a planned 200 MWh programme for Mumbai’s island distribution pocket. Batteries do not replace gas peakers overnight, but they give the operator more room to buy power when it is cheap and release it when marginal rates spike.",
+      "What does this mean?",
+      "For households on Tata Power’s Mumbai franchise, the change shows up as fewer voltage dips during tight evenings and, over time, in the way the utility structures power purchase costs. Industrial customers with time-of-day tariffs may see smoother ramp shapes once more megawatt-hours are online. For policymakers, urban BESS is a test bed before similar projects land in other humid metros with flat demand curves. Financing and MERC-approved returns still decide how fast the remaining 140 MWh arrives.",
+      "Why should I care?",
+      "If you live or run a shop in south or eastern Mumbai, outages during peak demand should edge lower as buffers grow, though maintenance and fuel risks never go to zero. Investors in power utilities compare Tata Power’s storage disclosures with peers rolling out pumped hydro or green hydrogen pilots elsewhere. Job seekers should note demand for grid integration, SCADA, and battery O&M roles. Watch MERC filings for the next commissioning dates, tariff true-ups that recover storage costs, and whether peak-time retail tariffs move once avoided costs are measurable.",
+    ],
+  },
+  {
+    slug: "gujarat-energy-adnoc-lng-deal-november-2026",
+    title: "Gujarat Energy locked in a 10-year Adnoc LNG supply deal for up to four million tonnes a year",
+    summary:
+      "Gujarat Energy Ltd said on 6 November 2026 it signed a long-term purchase contract with Abu Dhabi National Oil Company for as much as four million tonnes per annum of liquefied natural gas from 2028, sourcing molecules from Adnoc’s XRG international trading arm in the group’s fifth such arrangement with Indian buyers.",
+    category: "industry",
+    companyOrSector: "Energy / gas",
+    publishedAt: "2026-11-06T17:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gujarat-energy-adnoc-lng-deal-november-2026"),
+    keyTakeaways: [
+      "The heads-of-terms describe a ten-year sales-and-purchase agreement starting in 2028 for up to four million tonnes per year of LNG into India.",
+      "Adnoc positioned the cargo as drawn from XRG’s international gas portfolio, not a single domestic liquefaction train, and highlighted it as a first-of-type lift from that book.",
+      "Gujarat Energy noted city gas operations across dozens of districts in multiple states plus regas and trading activity, framing gas as an industrial and household transition fuel.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s gas users still rely on long charters from Qatar, the United States, and the Gulf to balance seasonal swings in fertiliser, power, and city gas demand. On 6 November, regulatory-style market copy said Gujarat Energy and Adnoc executed an SPA for index-linked LNG with volume up to four million tonnes annually over a decade beginning 2028. Adnoc’s marketing side cast the deal as an early cargo pull from XRG’s international merchant book, while the buyer emphasized its existing regas terminals and piped network as landing points. Either side needs credit support and shipping flexibility because LNG floats, unlike pipeline gas.",
+      "What does this mean?",
+      "Fresh term supply gives industrial buyers and city gas distributors more visibility on volume than depending purely on spot cargoes when Asian prices spike. It also deepens UAE–India energy links beyond crude, matching India’s push for more molecules ahead of coal-to-gas switching in some clusters. Competitors such as Petronet LNG and other state buyers will compare netback pricing and destination flexibility before signing rival deals. The start year of 2028 lines up with project timelines for global liquefaction capacity and with India’s own import terminal expansions.",
+      "Why should I care?",
+      "If you pay piped natural gas tariffs in Gujarat or neighbouring states served by the same traders, long contracts can anchor bill volatility relative to purely spot-indexed imports, though regulator-approved pass-through still applies. Investors in gas utilities and fertiliser names should map which entities hold the offtake and how leverage shifts with take-or-pay clauses. Climate watchers will ask how much of the volume lands in blending trials versus pure replacement of coal. Track commissioning updates on regas capacity, shipping fixtures, and any government guidance on LNG versus domestic production targets.",
+    ],
+  },
+  {
+    slug: "marico-cosmix-stake-november-2026",
+    title: "Marico lifted its Cosmix Wellness stake to 80% with another ₹1.14 billion purchase",
+    summary:
+      "Marico Ltd told exchanges on 6 November 2026 it bought a further 20% of Cosmix Wellness Private Limited for ₹114 crore, taking its holding from 60% to 80% as it doubles down on the premium ayurvedic-and-supplements brand folded into its health foods push.",
+    category: "industry",
+    companyOrSector: "FMCG / wellness",
+    publishedAt: "2026-11-06T17:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("marico-cosmix-stake-november-2026"),
+    keyTakeaways: [
+      "The incremental acquisition values the additional 20% equity at ₹114 crore and lifts Marico’s aggregate stake in Cosmix Wellness to four-fifths.",
+      "Cosmix operates in ayurvedic mixes and nutraceutical-style powders sold largely through modern trade and online channels, overlapping Marico’s Saffola portfolio.",
+      "Marico has been building a health-foods platform through Parachute Advansed and Saffola extensions; larger control simplifies supply chain and brand capex decisions.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian packaged food giants are buying stakes in digital-native wellness labels because standalone powders and functional drinks ramp faster on marketplaces than legacy atta brands do. Marico’s filing on 6 November said it acquired another fifth of Cosmix Wellness after already owning 60%, paying ₹114 crore for the slice. Consolidated control at 80% lets Marico fold ingredient sourcing, manufacturing, and influencer marketing into its existing health vertical without minority veto points. The transaction is small versus Marico’s total balance sheet but signals strategic priority, not a one-off venture bet.",
+      "What does this mean?",
+      "Higher ownership converts Cosmix from a partnership into something closer to a division, which usually brings shared logistics with Marico’s wider foods network and stricter margin targets. Competitors from Hindustan Unilever’s health snacks push to ITC’s nutraceutical experiments face the same playbook: acquire capability early before valuations rise with proof of repeat purchase. Premium powders also ride different GST and label rules than edible oil, so one owner reduces compliance fragmentation.",
+      "Why should I care?",
+      "If you buy Saffola or Cosmix packs online, expect bundled promos and shared distribution sooner rather than later, though Marico will still need to keep the boutique story credible for wellness shoppers. Founders scouting exits should note the valuation implied by the incremental cheque when negotiating with strategics. Investors should watch Marico’s next health-foods revenue disclosure to see whether growth accelerates enough to justify more capital. Track integration costs, goodwill, and any follow-on infusion to scale Cosmix manufacturing.",
+    ],
+  },
+  {
+    slug: "blue-dart-q2-profit-november-2026",
+    title: "Blue Dart grew quarterly profit 28% on better yields per shipment",
+    summary:
+      "Blue Dart Express Ltd reported on 6 November 2026 that consolidated net profit for the September quarter rose to ₹104 crore from ₹81 crore a year earlier on ₹1,774 crore of revenue, with management crediting yield improvement and cost discipline even as the courier’s EBITDA margin stayed almost flat year on year.",
+    category: "industry",
+    companyOrSector: "Logistics",
+    publishedAt: "2026-11-06T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("blue-dart-q2-profit-november-2026"),
+    keyTakeaways: [
+      "Consolidated net profit reached about ₹104 crore in Q2 FY27 versus about ₹81 crore in the year-ago quarter, a rise near 28% on revenue from operations of about ₹1,774 crore, up 14.5%.",
+      "EBITDA was about ₹287 crore with a margin near 16.2%, virtually unchanged from 16.3% a year earlier, showing most of the profit lift came from revenue scale and mix rather than a big margin jump.",
+      "The company pointed to better product mix, higher yield per shipment, and outreach to smaller enterprises even as street analysts kept watching reliance on its largest e-commerce customer as a margin variable.",
+    ],
+    body: [
+      "What's going on here?",
+      "Express logistics in India is a fight between integrated airlines with ground networks and newer asset-light players. Blue Dart’s Friday numbers, circulated through exchange feeds on 6 November, showed revenue growing faster than expenses in percentage terms, so profit expanded even though EBITDA margin barely moved. Management’s statement emphasized yield, or revenue per consignment, and cost controls across ground handling and linehaul. Larger customers can insource during slowdowns, so independent yield gains matter as much as volume for this business model.",
+      "What does this mean?",
+      "When margins stay flat while profit jumps, the operation is carrying more freight at similar unit economics, which is typical if fuel and labour inflation are offset by fuel surcharges and automation. Blue Dart’s mix tilts toward time-definite documents and parcels for financial services, pharma, and premium e-commerce, segments that pay for reliability. Competitors include DTDC-branded integrators and airline-owned express units; all face the same swing factor of how much large online retailers self-handle last-mile.",
+      "Why should I care?",
+      "Small exporters who depend on integrators for air express should compare total landed rates, not only headline discounts, when signing annual contracts this quarter. Investors need to weigh yield sustainability through Diwali volumes and any shift in customer concentration. Job seekers in operations should note continued hiring for hub automation and cold-chain pilots referenced across the sector. Track monthly tonnage disclosures, aviation fuel pass-throughs, and management commentary on enterprise versus consumer mix after the festive peak.",
+    ],
+  },
+  {
     slug: "adani-ports-evos-europe-november-2026",
     title: "Adani Ports agreed to buy Europe’s Evos liquid-storage network for €2.56 billion",
     summary:
@@ -9600,6 +9720,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-gilt-rally-oil-midterms-november-2026": "policy",
+  "tata-power-mumbai-bess-60mwh-november-2026": "companies",
+  "gujarat-energy-adnoc-lng-deal-november-2026": "policy",
+  "marico-cosmix-stake-november-2026": "markets",
+  "blue-dart-q2-profit-november-2026": "companies",
   "adani-ports-evos-europe-november-2026": "companies",
   "emami-d2c-brand-buying-november-2026": "markets",
   "britannia-festive-biscuit-volume-november-2026": "markets",
