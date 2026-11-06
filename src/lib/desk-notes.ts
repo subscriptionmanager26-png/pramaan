@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "karnataka-e20-omc-testing-dispute-november-2026",
+    title: "State marketers and Karnataka are arguing over how E20 petrol was tested",
+    summary:
+      "Reporting on 6 November 2026 described a Karnataka government release that flagged high ethanol readings at some pumps, while Indian Oil, BPCL, and HPCL said their national E20 supplies meet the Indian standard and questioned October sampling rules, lab paperwork, and the gas-chromatography method cited in public certificates.",
+    category: "industry",
+    companyOrSector: "Oil & gas / regulation",
+    publishedAt: "2026-11-06T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("karnataka-e20-omc-testing-dispute-november-2026"),
+    keyTakeaways: [
+      "Karnataka’s consumer affairs department published claims that retail petrol samples showed about 26% to 31% ethanol; the three main public oil marketers responded with a joint statement the same day.",
+      "The marketers said E20 supplied across India, including Karnataka, follows Bureau of Indian Standards specification IS 17021 and that they want full chain-of-custody samples, outlet lists, and tests done under the Marketing Discipline Guidelines with prescribed referee methods.",
+      "They argued the certificates shown in press coverage lacked standard method detail, dilution steps, and reference-material corrections required when gas chromatography measures ethanol in E20 blends.",
+    ],
+    body: [
+      "What's going on here?",
+      "Ethanol blending is a national energy policy lever, but quality checks sit in a shared lane between oil companies, state inspectors, and standard test labs. Wire copy on 6 November said Karnataka’s food and supplies department had issued findings on ethanol levels at certain outlets. The same window carried a joint reply from Indian Oil Corporation, Bharat Petroleum Corporation, and Hindustan Petroleum Corporation. They did not deny the state’s work outright. They asked whether the October sampling followed the six-bottle rule in the control order, whether OMC witnesses were present, whether matched retention samples moved to listed labs, and whether the certificates met the technical steps IS 17021 spells out for measuring ethanol in E20 gasoline.",
+      "What does this mean?",
+      "For drivers, the fight is about trust in the nozzle, not a headline stock move. E20 means roughly twenty percent ethanol in petrol under the standard name. If a test protocol skips dilution with oxygen-free petrol or the right reference fuel, a lab printout can read off without matching what refiners blend. Marketers also watch density and documented methodology because ethanol changes fuel volume and engine tuning. When state and supplier procedures diverge, dealers get caught between fines at the pump and corporate lab disputes. The next step is usually parallel testing on sealed splits at an authorised referee lab, with both sides watching.",
+      "Why should I care?",
+      "If you fill up in Karnataka, keep receipts and note the outlet until the state and OMCs publish reconciled lab outcomes; mileage complaints are hard to prove without matched samples. Fleet managers should treat this as a compliance diary issue for fuel audits rather than a panic. Policymakers elsewhere will watch whether other states copy Karnataka’s enforcement style or stick to MDG-coordinated sweeps. Follow releases from the state coordinator, any Petroleum Ministry comment, and whether independent labs repeat the contested readings under full IS 17021 steps.",
+    ],
+  },
+  {
+    slug: "honasa-consumer-hair-colour-expansion-q2-november-2026",
+    title: "Honasa will push into hair colour after profit jumped on younger brands",
+    summary:
+      "Honasa Consumer said on 6 November 2026 that September-quarter profit rose about 87% year on year to roughly ₹73 crore on about ₹731 crore of revenue, while management told analysts the company is weighing hair colour as a new category on top of faster growth from Mamaearth, Aqualogica, and its other younger labels.",
+    category: "industry",
+    companyOrSector: "FMCG / personal care",
+    publishedAt: "2026-11-06T23:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("honasa-consumer-hair-colour-expansion-q2-november-2026"),
+    keyTakeaways: [
+      "Profit after tax for the September 2026 quarter was reported near ₹73 crore against a smaller year-earlier base, on revenue from operations near ₹731 crore.",
+      "Leadership described younger portfolio brands growing more than 45% in the quarter and taking a large share of mix, with ad spend still near one-third of sales.",
+      "The company framed hair colour as an emerging segment worth roughly ₹7,000–7,500 crore excluding unorganised sales, with room to enter through an existing brand rather than a cold start.",
+    ],
+    body: [
+      "What's going on here?",
+      "Honasa built its listing story on digital-first skin and hair care under labels such as Mamaearth and The Derma Co. Exchange-facing commentary on 6 November showed the September quarter delivering sharp profit growth alongside roughly one-third revenue growth. Chief executive Varun Alagh told the analyst call the team will keep funding those younger lines because they are compounding faster than the legacy core. Hair colour came up as the next category test: large stated market size, migration from plain grey coverage to styling formats, and a rationale to bolt the move onto a brand shoppers already know rather than invent a fifth name overnight.",
+      "What does this mean?",
+      "Entering hair colour means plant compliance, shade stability, salon-channel politics, and GST slabs that differ from simple face washes. Honasa already spends heavily on performance marketing; adding another shelf with regrowth cycles and chemical safety talk can lift working capital for inventory even when gross margins look fine. Competitors span Hindustan Unilever’s long salon history, Godrej Consumer’s mass colour packs, and specialty labels online. Honasa’s edge is quick trials on marketplaces and chemists if it can keep claims tight and avoid stock-outs during spikes around festivals.",
+      "Why should I care?",
+      "If you buy grooming online, expect bundles that pair colour with oils or face washes while the company tests price ladders. Retailers should ask for early margin terms and return policies on slow shades. Investors need to split headline profit growth from operating leverage: ad ratios near prior levels mean scale, not automatic margin relief. Watch the next quarterly breakout of category sales, any regulatory notices on label claims, and whether general trade outlet counts keep climbing outside metros.",
+    ],
+  },
+  {
+    slug: "prestige-allure-noida-acquisition-november-2026",
+    title: "Prestige Estates agreed to buy an Allure Developers unit to build homes in Noida",
+    summary:
+      "Prestige Estates Projects said on 6 November 2026 it signed a deal to acquire Allure Developers, a vehicle developing a residential project in Noida Sector 150, for up to about ₹524 crore in cash to be paid in tranches with completion expected inside a week of signing.",
+    category: "industry",
+    companyOrSector: "Real estate",
+    publishedAt: "2026-11-06T23:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("prestige-allure-noida-acquisition-november-2026"),
+    keyTakeaways: [
+      "The buyer pegged total consideration near ₹523.76 crore for a hundred-percent stake, to be wired in tranches capped at ₹5,237.6 million per slug as set out in the share purchase agreement dated 6 November 2026.",
+      "Allure Developers is linked to a plotted residential development in Sector 150, Noida, a pocket Prestige flagged as expanding its National Capital Region footprint beyond Bengaluru-led launches.",
+      "Disclosures said the deal is not a related-party transaction and that no extra government approval was cited as a condition in the initial filing beyond normal registration steps.",
+    ],
+    body: [
+      "What's going on here?",
+      "National developers use local special-purpose vehicles when land or approvals sit in someone else’s name. Prestige Estates told exchanges on 6 November it would acquire Allure Developers fully so it can drive a Noida Sector 150 residential scheme without juggling minority partners. The cheque size is large for a thin-revenue SPV, which is common when the asset is early stage and the value sits in development rights and debt-free structuring. Timelines in the filing pointed to finishing the transfer within about seven working days, which suggests paperwork and lender clearances were already lined up before the announcement.",
+      "What does this mean?",
+      "For Prestige, NCR is incremental share of wallet against peers building expresswayside towers along the Yamuna belt. Sector 150 competes with Greater Noida West and Jewar-airport narratives; buyers compare ticket sizes, commuter pain, and hidden cancellation terms. All-cash consideration signals internal liquidity or undrawn lines rather than a distress rescue, though analysts will still model return on capital against the firm’s ₹36,000-crore annual sales ambition. Local brokers will watch whether Prestige rebrands the project or folds it into an existing luxury line.",
+      "Why should I care?",
+      "If you are shopping for an apartment in the Noida expressway band, compare this launch’s payment plan with older stalled inventory nearby before paying a brand premium. Existing Allure allotment holders should read the change-of-control clause in their builder agreements and demand written continuity of specs. Investors should track absorption disclosures on the first Prestige-led sales weekend and any incremental debt covenants. Follow RERA filings for the renamed entity and whether land dues stay clean through registration.",
+    ],
+  },
+  {
     slug: "india-gilt-rally-oil-midterms-november-2026",
     title: "India’s 10-year government bond had its steepest weekly drop in yields since 2019",
     summary:
@@ -9720,6 +9792,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "karnataka-e20-omc-testing-dispute-november-2026": "policy",
+  "honasa-consumer-hair-colour-expansion-q2-november-2026": "markets",
+  "prestige-allure-noida-acquisition-november-2026": "markets",
   "india-gilt-rally-oil-midterms-november-2026": "policy",
   "tata-power-mumbai-bess-60mwh-november-2026": "companies",
   "gujarat-energy-adnoc-lng-deal-november-2026": "policy",

@@ -1306,6 +1306,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Sort hub / conveyor silhouette |
 | Metaphor left | Ascending yield ticks along a route ribbon |
 
+### `karnataka-e20-omc-testing-dispute-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Who decides whether E20 pump samples match the national test rule |
+| Subject right | Generic fuel pump canopy |
+| Metaphor left | Split sample vials / chain-of-custody gate |
+
+### `honasa-consumer-hair-colour-expansion-q2-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Digital FMCG stretches into hair colour after younger brands surge |
+| Subject right | Abstract beauty shelf / colour panels |
+| Metaphor left | New shade swatch lane feeding a growing brand stack |
+
+### `prestige-allure-noida-acquisition-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Listed developer buys a local SPV to control a Noida land bank |
+| Subject right | High-rise silhouettes along an expressway |
+| Metaphor left | Title deed / key block moving across a transaction line |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
