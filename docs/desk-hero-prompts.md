@@ -1362,6 +1362,22 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Abstract services campus |
 | Metaphor left | Flat growth line turning upward |
 
+### `makemytrip-quick-ride-pooling-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | OTA buys daily ride-pool frequency |
+| Subject right | Split commute lane merging into mobility stack |
+| Metaphor left | Ascending trip bars on shared route |
+
+### `india-domestic-air-demand-soft-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Higher fares, fewer domestic flyers |
+| Subject right | Jet / terminal silhouette |
+| Metaphor left | Shrinking passenger chevrons beside rising fare steps |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.

@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "makemytrip-quick-ride-pooling-november-2026",
+    title: "MakeMyTrip bought ride-pooling app Quick Ride for daily commutes",
+    summary:
+      "On 6 November 2026 MakeMyTrip Ltd said it took a majority stake in Bengaluru ride-pooling platform Quick Ride via a new unit called Co Ride Mobility Pvt Ltd, folding pooled car trips into its ground-transport stack alongside redBus while the separate EV cab business stays with the older legal entity.",
+    category: "industry",
+    companyOrSector: "Online travel / urban mobility",
+    publishedAt: "2026-11-07T06:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("makemytrip-quick-ride-pooling-november-2026"),
+    keyTakeaways: [
+      "MakeMyTrip announced the Quick Ride deal on 6 November 2026; promoters stay in charge of the pooling business inside Co Ride Mobility Pvt Ltd.",
+      "Quick Ride matches riders on similar routes for shared daily trips and works with employers and IT campuses; its EV taxi line remains with iDisha Info Labs Pvt Ltd.",
+      "Management said the brand joins MakeMyTrip’s ground transport arm next to redBus to capture high-frequency city commutes and intercity hops.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian travel portals built their brands on flights and holidays, but weekday commutes repeat far more often. On 6 November 2026 MakeMyTrip said it acquired a majority stake in Quick Ride, a Bengaluru company that connects people driving similar routes so they can split a car. The ride-pooling brand and operations move into a fresh company, Co Ride Mobility Private Limited, where MakeMyTrip holds the controlling share. Quick Ride’s founders continue to run the pooling product. The firm’s electric taxi service stays under the older company, iDisha Info Labs Private Limited, so investors can separate pooled rides from owned EV fleets. Chief executive Rajesh Magow said ride pooling gives MakeMyTrip a slot in dense daily trips inside cities as well as shorter intercity legs.",
+      "What does this mean?",
+      "Pooling economics depend on route density and employer tie-ins. Quick Ride’s asset-light model leans on corporates, tech parks, and campuses that want to cut parking pressure. Folding it into MakeMyTrip’s ground transport desk next to redBus means the listed parent can cross-sell bus, cab, and now pooled seats in one account, chasing sticky weekday riders rather than only festival flyers. For rivals such as Ola, Uber, and city-specific startups, the deal signals that an OTA is willing to buy commute frequency instead of building it from scratch. Commuters should watch whether loyalty points, corporate billing, and redBus intercity bundles start to appear inside the Quick Ride app after integration.",
+      "Why should I care?",
+      "If you share a car to work, check whether your employer’s tie-up shifts billing or insurance once MakeMyTrip’s systems connect. Frequent bus travellers should see whether redBus and Quick Ride start offering combined receipts for tax or reimbursement claims. Investors in listed travel names can treat the move as a bet on urban mobility revenue beside hotels and flights, not as instant earnings. Watch integration timelines, any regulatory filings on related-party transfers, and whether competitors respond with similar pooling buys before the next results call.",
+    ],
+  },
+  {
+    slug: "india-domestic-air-demand-soft-november-2026",
+    title: "Indians are booking fewer domestic flights at much higher fares",
+    summary:
+      "Mint’s 7 November 2026 weekender cited official traffic statistics showing domestic air passengers stuck near pre-pandemic levels through mid-2026 even as retail airfare inflation crossed 20% by July and nearly 30% by September, with pre-Diwali one-way tickets on metro routes costing 45–186% more than second AC rail.",
+    category: "industry",
+    companyOrSector: "Aviation / consumer travel",
+    publishedAt: "2026-11-07T06:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-domestic-air-demand-soft-november-2026"),
+    keyTakeaways: [
+      "Domestic passenger counts fell year on year in ten of the past fifteen months; September 2026 traffic sat only slightly above a 2019 benchmark after peaking earlier in 2025.",
+      "Retail airfare inflation exceeded 20% in July 2026 and approached 30% by September, several times faster than overall travel inflation.",
+      "In the pre-Diwali week, cheapest one-way economy fares on busy metro routes carried a 45–186% premium to second AC rail tickets versus a usual 25–30% gap.",
+    ],
+    body: [
+      "What's going on here?",
+      "Festive headlines often assume everyone flies home, but the traffic dial tells a different story. Mint’s 7 November roundup of the week’s data showed domestic flyers in 2026 barely clearing the passenger counts seen in 2019. Volumes rose through parts of 2023 and 2025, then slid again: year-on-year declines hit ten of the last fifteen months. International routes recovered faster after the West Asia disruptions, while domestic demand stayed weaker once higher fuel costs passed through to tickets with a lag. Retail airfare inflation crossed 20% in July 2026 and neared 30% by September, far above broader travel inflation. In the pre-Diwali shopping week, the cheapest economy seats on major metro pairs cost 45% to 186% more than second AC rail for the same city pair, versus the usual 25–30% premium flyers once accepted.",
+      "What does this mean?",
+      "When fares jump but bodies in seats do not, households trade down to trains, buses, or shorter road trips. Airlines that consolidated capacity can keep prices firm, so the pain shows up in volumes before it shows up in bankruptcies. Rating agencies such as Icra have pointed to elevated fares and softer discretionary demand as reasons passengers stay grounded. A Supreme Court bench on 3 November declined an urgent hearing on a petition claiming Diwali fares spiked 700%, noting the actual increases were smaller but leaving price grievances unresolved. For carriers, the mix implies revenue per passenger may hold while load factors slip, a recipe for margin pressure if jet fuel or rupee weakness return.",
+      "Why should I care?",
+      "If you planned to fly domestically this festive season, compare rail timings and total door-to-door cost before assuming air is still faster value. Corporate travel policies should reset advance-booking rules because last-minute buckets no longer guarantee the old discounts. Investors in airline equities should read traffic reports alongside fare indices, not only quarterly fuel lines. Watch October and November passenger statistics, any ministry statements after airline petitions, and whether highway toll or rail data confirm the same downshift in premium mobility.",
+    ],
+  },
+  {
     slug: "zomato-limitless-delivery-november-2026",
     title: "Zomato will deliver food from restaurants up to 40 km away",
     summary:
@@ -9888,6 +9936,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "makemytrip-quick-ride-pooling-november-2026": "markets",
+  "india-domestic-air-demand-soft-november-2026": "markets",
   "zomato-limitless-delivery-november-2026": "markets",
   "mumbai-twelve-airlines-denied-slots-november-2026": "policy",
   "bharat-electronics-909cr-orders-november-2026": "companies",

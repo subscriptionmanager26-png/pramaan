@@ -1074,6 +1074,30 @@ def mahindra_suv_q2(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, RED, BLUE][i])
 
 
+def makemytrip_quick_ride(d: ImageDraw.ImageDraw) -> None:
+    """Shared commute lanes merging into one mobility stack."""
+    d.rounded_rectangle([100, 260, 480, 540], radius=28, fill=BLUE)
+    for y, col in zip([300, 380, 460], [RED, YELLOW, RED]):
+        d.rectangle([140, y, 440, y + 40], fill=col)
+    d.line([(520, 400), (560, 400)], fill=GOLD, width=8)
+    d.polygon([(560, 400), (620, 340), (620, 460)], fill=GOLD)
+    d.rounded_rectangle([640, 220, 1140, 580], radius=24, fill=YELLOW)
+    for i, h in enumerate([160, 260, 360]):
+        x = 700 + i * 90
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, BLUE, RED][i])
+
+
+def domestic_air_soft(d: ImageDraw.ImageDraw) -> None:
+    """Fewer passenger chevrons, rising fare steps."""
+    d.polygon([(120, 200), (460, 160), (500, 500), (80, 540)], fill=BLUE)
+    for i, w in enumerate([280, 220, 160, 100]):
+        d.polygon([(200 + i * 35, 520 - w), (250 + i * 35, 520 - w - 40), (300 + i * 35, 520 - w)], fill=GOLD)
+    d.rectangle([620, 260, 1180, 520], fill=RED)
+    for i, h in enumerate([320, 240, 180, 140, 120]):
+        x = 660 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, GOLD, BLUE, YELLOW, RED][i])
+
+
 def airtel_q2_network(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([120, 200, 200, 560], fill=BLUE)
     d.polygon([(160, 200), (220, 120), (280, 200)], fill=RED)
@@ -1193,6 +1217,8 @@ def main() -> None:
     save("medanta-hospital-volumes-november-2026", medanta_hospital_volumes)
     save("happiest-minds-itc-infotech-merger-november-2026", happiest_minds_itc_merger)
     save("vmart-q2-loss-november-2026", vmart_q2_loss)
+    save("makemytrip-quick-ride-pooling-november-2026", makemytrip_quick_ride)
+    save("india-domestic-air-demand-soft-november-2026", domestic_air_soft)
 
 
 if __name__ == "__main__":
