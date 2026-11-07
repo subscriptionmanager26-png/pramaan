@@ -1087,6 +1087,35 @@ def makemytrip_quick_ride(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, BLUE, RED][i])
 
 
+def gujarat_energy_cbg(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 280, 340, 480], fill=YELLOW)
+    d.rectangle([360, 360, 520, 540], fill=BLUE)
+    d.rectangle([640, 300, 720, 560], fill=RED)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 760 + i * 80
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, YELLOW, RED, GOLD][i])
+    d.line([(680, 560), (1180, 560)], fill=INK, width=2)
+
+
+def tpg_arka_fincap(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 520), (160, 320), (280, 240), (400, 320), (400, 520)], fill=RED)
+    d.rectangle([440, 360, 520, 520], fill=BLUE)
+    d.rounded_rectangle([100, 280, 320, 480], radius=24, fill=BLUE)
+    for i, h in enumerate([100, 180, 260, 340]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, RED, BLUE, GOLD][i])
+    d.line([(900, 400), (1120, 400)], fill=GOLD, width=4)
+
+
+def ongc_venezuela(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 320, 360, 520], fill=YELLOW)
+    d.rectangle([200, 280, 280, 320], fill=RED)
+    d.polygon([(640, 520), (760, 420), (900, 400), (1080, 360), (1160, 280)], fill=BLUE)
+    d.ellipse([900, 200, 1100, 360], fill=RED)
+    d.line([(360, 420), (640, 380)], fill=GOLD, width=5)
+    d.rectangle([980, 400, 1080, 520], fill=BLUE)
+
+
 def domestic_air_soft(d: ImageDraw.ImageDraw) -> None:
     """Fewer passenger chevrons, rising fare steps."""
     d.polygon([(120, 200), (460, 160), (500, 500), (80, 540)], fill=BLUE)
@@ -1217,6 +1246,9 @@ def main() -> None:
     save("medanta-hospital-volumes-november-2026", medanta_hospital_volumes)
     save("happiest-minds-itc-infotech-merger-november-2026", happiest_minds_itc_merger)
     save("vmart-q2-loss-november-2026", vmart_q2_loss)
+    save("gujarat-energy-cbg-biogas-jv-november-2026", gujarat_energy_cbg)
+    save("tpg-arka-fincap-secured-lending-november-2026", tpg_arka_fincap)
+    save("ongc-venezuela-operatorship-november-2026", ongc_venezuela)
     save("makemytrip-quick-ride-pooling-november-2026", makemytrip_quick_ride)
     save("india-domestic-air-demand-soft-november-2026", domestic_air_soft)
 

@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "gujarat-energy-cbg-biogas-jv-november-2026",
+    title: "Gujarat Energy is scouting partners for a ₹100 crore compressed biogas build",
+    summary:
+      "On 7 November 2026 managing director Avantika Singh told investors Gujarat Energy Ltd issued an expression of interest for joint ventures that can install about 200 tonnes per day of compressed biogas capacity, split evenly between Gujarat and other states, with the state-owned city gas distributor taking 49% in each special purpose vehicle.",
+    category: "industry",
+    companyOrSector: "Gas / city distribution",
+    publishedAt: "2026-11-07T17:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gujarat-energy-cbg-biogas-jv-november-2026"),
+    keyTakeaways: [
+      "The first-phase target is 200 tonnes per day of compressed biogas, with 100 tonnes planned inside Gujarat and 100 tonnes outside, built as clusters of 10–20 tonne plants matched to local feedstock.",
+      "GEL proposes 49% equity in each JV; partners hold 51%, own and run the plants, and sell gas into the distributor’s city network or the Gujarat Integrated Gas pipeline.",
+      "Management framed the move alongside six planned LNG fuelling stations for long-haul trucks and a first-half import tally of 24 LNG cargoes as the group widens beyond pipe CNG and PNG.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s largest city gas seller by volume is lining up domestic molecules beside its long LNG purchase book. On 7 November reporting from Gujarat Energy’s investor call quoted managing director Avantika Singh saying the company has issued an expression of interest for partners to build compressed biogas plants. The initial programme targets about 200 tonnes per day, half inside Gujarat and half in other states, typically as 10 to 20 tonne units sized to local waste streams such as paddy straw, press mud, napier grass, cattle dung, and poultry litter. Under the draft structure Gujarat Energy would hold 49% in each joint venture while the operating partner keeps 51% and runs the plant. Gas would flow into existing city gas zones or the Gujarat Integrated Gas pipeline for injection and resale.",
+      "What does this mean?",
+      "Compressed biogas sits at the intersection of farm waste disposal, rural income, and the centre’s blending mandate for city gas distributors. Operators must gradually mix biogas into piped supplies, which gives a listed CGD player a reason to own feedstock rather than only buy spot biomethane. Smaller modular plants near farms reduce trucking cost for bulky residue compared with one giant refinery. For industrial and household consumers on Gujarat Energy’s network, a thicker local gas slate can soften exposure to import parity LNG when Asian spot prices spike. Rivals such as Indraprastha Gas and Mahanagar Gas face the same blending rules, so Gujarat’s joint venture template may get copied if bids show workable returns.",
+      "Why should I care?",
+      "If you heat water on PNG in Gujarat or run a CNG fleet, watch whether tariffs separate blended gas from legacy contracts once CBG volumes arrive. Farmers near proposed sites should read offtake and moisture standards in the EOI before committing acreage. Investors in CGD stocks can treat the ₹100 crore headline as a pilot cheque against a much larger LNG portfolio the company is still expanding. Track partner shortlists, environmental clearances on press-mud sites, and regulator orders on how blending costs pass through to CNG and PNG bills.",
+    ],
+  },
+  {
+    slug: "tpg-arka-fincap-secured-lending-november-2026",
+    title: "TPG agreed to put up to ₹800 crore into Kirloskar-backed lender Arka Fincap",
+    summary:
+      "Arka Fincap said on 6 November 2026 global impact investor TPG’s Rise Funds will invest ₹525 crore immediately and another ₹275 crore if milestones and regulatory nods are met, backing secured retail loans across pre-owned vehicles, property-backed business credit, and wholesale desks from a roughly ₹8,000 crore book.",
+    category: "industry",
+    companyOrSector: "NBFC / secured credit",
+    publishedAt: "2026-11-07T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tpg-arka-fincap-secured-lending-november-2026"),
+    keyTakeaways: [
+      "The agreement starts with ₹525 crore from TPG’s Rise Funds, with a further ₹275 crore tranche tied to business milestones and approvals.",
+      "Arka Fincap, promoted by Kirloskar Oil Engines, reports about ₹8,000 crore assets under management and more than ₹1,000 crore in secured retail lending across 146 branches in ten states.",
+      "Management said fresh capital will fund geographic expansion, technology, and risk systems while wholesale lending continues on a parallel platform.",
+    ],
+    body: [
+      "What's going on here?",
+      "Private equity is still willing to fund collateral-heavy consumer and small-business credit when the promoter already carries a brand name. On 6 November Arka Fincap disclosed that TPG’s impact platform, The Rise Funds, signed a growth capital pact worth ₹525 crore upfront with a possible ₹275 crore follow-on. The non-bank lender is anchored by the Kirloskar group, carries a CRISIL AA stable rating, and focuses on secured retail products such as used-vehicle finance, loans against property, and secured business loans while running a wholesale book on the side. Management said the money will deepen branch coverage, improve origination tech, and strengthen collections analytics rather than pivot to unsecured cards.",
+      "What does this mean?",
+      "After a string of fintech stress headlines, investors are paying up for lenders that can point to hard collateral and promoter skin in the game. Arka’s retail pool is still a fraction of total assets, so the TPG cheque is meant to accelerate a shift toward granular tickets that regulators prefer over wholesale lend-and-onward arrangements. For borrowers buying a second-hand truck or pledging shop inventory, more branches and better digital KYC can shorten wait times. Competing NBFCs backed by OEMs or industrials may revisit their own growth equity plans if Arka’s milestones trigger the second tranche on schedule.",
+      "Why should I care?",
+      "If you finance a used commercial vehicle or a shop expansion through a mid-size NBFC, compare Arka’s rate card and foreclosure terms once the new capital lands in your state. Deposit-taking banks may still offer cheaper home loans, but specialist lenders often move faster on older assets with uneven documentation. Equity holders in Kirloskar Oil Engines should read related-party disclosures on how governance between the engine maker and the finance company evolves after a global fund enters the register. Watch RBI comments on the stake change, branch additions in tier-two towns, and whether net interest margins hold once the money is deployed.",
+    ],
+  },
+  {
+    slug: "ongc-venezuela-operatorship-november-2026",
+    title: "ONGC expects to run two Venezuelan oil blocks within three to six months",
+    summary:
+      "Finance director Anupam Agarwal said on 7 November 2026 ONGC Videsh is in advanced talks with Venezuelan and United States authorities to take operating control of the San Cristobal and PetroCarabobo fields, with more than $500 million in pending dividends likely to be adjusted once new agreements are signed.",
+    category: "industry",
+    companyOrSector: "Oil & gas / overseas upstream",
+    publishedAt: "2026-11-07T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ongc-venezuela-operatorship-november-2026"),
+    keyTakeaways: [
+      "ONGC Videsh has been an investor in San Cristobal (40% with PDVSA) and PetroCarabobo (18% alongside other Indian and international partners) with dividends stuck for years.",
+      "Management expects full operatorship at San Cristobal and joint operatorship at PetroCarabobo, letting the company market its own barrels rather than only receive equity cash calls.",
+      "Agarwal said the pending dividend pool of about $500 million would be reconciled after the new contracts, with room to add more Venezuelan stakes under a framework clause.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian state explorers built overseas portfolios when they could only invest, not operate, in politically volatile countries. On 7 November Mint-cited commentary from ONGC’s finance director Anupam Agarwal said ONGC Videsh is close to agreements that would let it run production and sell oil from two Venezuelan fields within three to six months, subject to Caracas and Washington sign-offs. The overseas arm holds 40% of San Cristobal alongside Venezuela’s PDVSA and 18% of PetroCarabobo with other investors including Repsol. Dividends on those stakes have been frozen for years, totaling a reported $500 million. Under the proposed shift, ONGC would book revenues from cargoes it lifts rather than wait for dividend declarations that rarely arrive.",
+      "What does this mean?",
+      "Operatorship changes how risk sits on ONGC’s balance sheet. Field costs, sanction compliance, and lifting schedules move from passive equity accounting to active operations, which can unlock barrels when global diplomacy allows but also exposes the company to local operational shocks. Adjusting the legacy dividend pile into the new contracts gives a path to recover sunk returns without a fresh cash call. For India’s import bill the prize is optional equity crude when heavy grades are cheap, though volumes remain modest next to Middle East term contracts. Oil ministry planners will watch whether ONGC can replicate the model at Sakhalin or other stranded stakes.",
+      "Why should I care?",
+      "Retail fuel buyers feel this only at the margin through long-run supply diversity, not next month’s pump price. ONGC shareholders should monitor quarterly commentary for impairment tests if sanctions snap back. Policymakers tracking energy security get another data point on how far Indian firms will go to monetize legacy Latin American stakes. Follow U.S. Treasury licence updates, cargo lift schedules from Venezuelan ports, and whether dividend adjustments show up as one-off gains or staggered recovery over several years.",
+    ],
+  },
+  {
     slug: "makemytrip-quick-ride-pooling-november-2026",
     title: "MakeMyTrip bought ride-pooling app Quick Ride for daily commutes",
     summary:
@@ -9936,6 +10008,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "gujarat-energy-cbg-biogas-jv-november-2026": "policy",
+  "tpg-arka-fincap-secured-lending-november-2026": "policy",
+  "ongc-venezuela-operatorship-november-2026": "policy",
   "makemytrip-quick-ride-pooling-november-2026": "markets",
   "india-domestic-air-demand-soft-november-2026": "markets",
   "zomato-limitless-delivery-november-2026": "markets",
