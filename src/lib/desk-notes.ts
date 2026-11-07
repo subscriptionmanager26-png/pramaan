@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "zomato-limitless-delivery-november-2026",
+    title: "Zomato will deliver food from restaurants up to 40 km away",
+    summary:
+      "Eternal’s Zomato rolled out Limitless Delivery on 6 November 2026 in seven large cities, letting logged-in users order from outlets far beyond the usual proximity filter, with CEO Aditya Mangla pitching wider restaurant choice though the company has not yet spelled out extra fees or wait times for long hops.",
+    category: "industry",
+    companyOrSector: "Food delivery / consumer apps",
+    publishedAt: "2026-11-07T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("zomato-limitless-delivery-november-2026"),
+    keyTakeaways: [
+      "Limitless Delivery is live in Bengaluru, Delhi NCR, Chennai, Mumbai, Kolkata, Pune, and Hyderabad as of 6 November 2026.",
+      "Customers can reach restaurants up to about 40 km from their delivery address via a homepage option or search, instead of only nearby listings.",
+      "Zomato has not yet detailed whether longer routes carry higher delivery charges or longer ETAs; Gold members today get free delivery within about 7 km before extra fees kick in.",
+    ],
+    body: [
+      "What's going on here?",
+      "Food apps usually sort restaurants by distance so kitchens can hit promised arrival times. On 6 November 2026, Zomato said it turned on Limitless Delivery in seven metros so users can still book favourite outlets even when they sit far from home. Chief executive Aditya Mangla framed it as unlocking more of each city’s menu rather than only what sits in a tight radius. Users can tap a dedicated tile on the homepage or search for a restaurant by name and place an order if the outlet appears in the expanded catchment, up to roughly 40 km. Reporting noted the feature does not yet come with clear pricing or delay guidance for these longer runs.",
+      "What does this mean?",
+      "Delivery economics change when riders cross town. Longer trips mean more dead mileage, higher fuel cost, and tougher batching, so platforms either absorb margin, pass charges to diners, or lean on subscription perks such as Gold’s current free-delivery band inside 7 km. For restaurants in premium clusters, the feature is free marketing reach into suburbs that were invisible on the default list. For competitors, it sets a bar on catalogue breadth without opening dark stores. Households who routinely order from one prized biryani shop or fine-dine kitchen may finally see it on the app; they should still compare total checkout price once distance fees are disclosed.",
+      "Why should I care?",
+      "If you split time between office and home in the same metro, test whether your regular outlet now appears at both pins and watch the delivery fee line before checkout. Restaurant owners should check kitchen capacity and rider hand-offs if distant orders spike. Investors in listed food-tech names can treat this as a retention play ahead of festive dining, not a profit lever until unit economics are reported. Follow Eternal’s next disclosure on average order value and contribution margin on long-distance runs, and whether Blinkit or rival apps copy the same radius logic.",
+    ],
+  },
+  {
+    slug: "mumbai-twelve-airlines-denied-slots-november-2026",
+    title: "Mumbai airport left twelve foreign airlines without summer slots",
+    summary:
+      "Reporting on 6 November 2026 said Mumbai International Airport’s coordination committee allocated summer 2027 slots to 38 of 50 requesting carriers and refused all twelve remaining applicants, prompting Gulf and West Asian airlines to ask the civil aviation ministry to reverse the call or force a shift to Navi Mumbai.",
+    category: "industry",
+    companyOrSector: "Aviation / airports",
+    publishedAt: "2026-11-07T05:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mumbai-twelve-airlines-denied-slots-november-2026"),
+    keyTakeaways: [
+      "MIAL finalised its slot list on 6 November 2026 with room for 38 international airlines starting the summer 2027 season and none for the other twelve applicants.",
+      "The barred set runs about 16 daily flights from Mumbai to 14 destinations, or roughly 112 weekly departures, close to 15% of the 770 weekly international movements at the hub.",
+      "The Airline Operators Committee met the ministry on 7 November asking officials to undo the decision; otherwise those flights would need to move to Navi Mumbai or be dropped.",
+    ],
+    body: [
+      "What's going on here?",
+      "Slot committees decide who can take off at peak hours when runways and gates are full. Mint’s 6 November copy said Mumbai International Airport Ltd, which runs Chhatrapati Shivaji Maharaj International Airport, published its summer 2027 allocation after airlines filed requests. Thirty-eight of fifty international carriers received timings; twelve received nothing. Most of the barred names are Gulf and West Asian operators running about sixteen departures a day between them, worth roughly 112 weekly flights and nearly fifteen percent of the airport’s international weekly departures. On the next day the Airline Operators Committee, speaking for foreign carriers, asked the civil aviation ministry to overturn the airport’s call.",
+      "What does this mean?",
+      "A full hub forces trade-offs. Adani’s airport company must reconcile Terminal 1 rebuild plans, existing international traffic, and the newer Navi Mumbai field across the harbour. Denying slots at the legacy airport pushes carriers to accept longer surface transfers and immature facilities, or shrink India service. Foreign airlines with premium connecting traffic resist moving until immigration, lounges, and road links match what they have today. Domestic airlines that hold larger slot banks face less immediate pain. Passengers booking summer 2027 tickets may see fewer non-stop options to Gulf hubs unless the ministry brokers a compromise.",
+      "Why should I care?",
+      "If you fly Emirates, Qatar Airways, or similar carriers from Mumbai, confirm airport codes and terminals before paying for itineraries starting April 2027. Corporate travel desks should update duty-of-care maps if colleagues connect through Mumbai. Investors in airport and airline equities should treat slot fights as timeline risk to yields and capex, not a one-day headline. Watch ministry statements after the operators’ meeting, any revised slot publication, and readiness milestones at Navi Mumbai for security lanes and ground transport.",
+    ],
+  },
+  {
+    slug: "bharat-electronics-909cr-orders-november-2026",
+    title: "Bharat Electronics booked ₹909 crore of new defence orders in two weeks",
+    summary:
+      "Bharat Electronics Ltd told exchanges on 6 November 2026 it signed additional contracts worth ₹909 crore since its 21 October disclosure, spanning stabilised optronic gear, communications, navigation, night-vision kit, software, upgrades, and spares, alongside a September-quarter profit beat.",
+    category: "industry",
+    companyOrSector: "Defence electronics",
+    publishedAt: "2026-11-07T05:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bharat-electronics-909cr-orders-november-2026"),
+    keyTakeaways: [
+      "Fresh orders total ₹909 crore between 21 October and 6 November 2026 across optronics, comms, navigation, night-vision devices, software, components, upgrades, and services.",
+      "The company did not split the value line by product bucket in the exchange filing.",
+      "Standalone profit after tax for the September 2026 quarter rose 19.8% year on year to about ₹1,541 crore, above market expectations in the same announcement cycle.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s defence procurement calendar keeps dropping milestone filings even when equity markets focus on consumer earnings. Bharat Electronics, the Navratna electronics PSU, said on 6 November 2026 it bagged ₹909 crore of incremental contracts after its last order update on 21 October. The basket includes stabilised optronic pedestals, communication and navigation systems, night-vision devices, software, components, upgrades, spares, and services. Management did not attach a sub-head breakdown in the brief exchange note. In the same news window, reporting highlighted a September-quarter standalone profit after tax of about ₹1,541 crore, up 19.8% year on year and ahead of consensus.",
+      "What does this mean?",
+      "Order inflows at BEL are a barometer for how fast the services are converting cleared defence programmes into signed work. Bundles that mix hardware, software, and long-term support stretch manufacturing and service teams for years, which supports utilisation at BEL’s Bengaluru and other plants. They also keep private tier-two suppliers busy on printed boards and precision machining. Profit beats without a detailed order bridge still leave investors guessing how much came from execution on older books versus new advance payments. Peers such as Bharat Dynamics and mid-cap avionics names compete for adjacent scopes, so BEL’s disclosure pace matters for the whole defence complex narrative.",
+      "Why should I care?",
+      "If you supply components into defence electronics, map your certifications against optronics and comms categories that keep reappearing in BEL updates. Exporters serving allied militaries should watch whether domestic order books crowd out export slots at shared fabs. Equity holders can pair these headlines with delivery commentary on earnings calls rather than treating each rupee crore as instant revenue. Track the next breakup in quarterly presentations, Defence Acquisition Council clears that feed similar kit, and inspection or payment delays that have tripped smaller vendors in prior cycles.",
+    ],
+  },
+  {
+    slug: "birlasoft-ceo-leadership-change-november-2026",
+    title: "Birlasoft named a new CEO after two years of flat revenue",
+    summary:
+      "Birlasoft Ltd said on 6 November 2026 that CKA Birla Group finance veteran Madhavan Hariharan will become chief executive on 8 December, replacing Angan Guha as the mid-cap IT firm logged near-stagnant compound growth while peers expanded and several senior leaders exited.",
+    category: "industry",
+    companyOrSector: "IT services",
+    publishedAt: "2026-11-07T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("birlasoft-ceo-leadership-change-november-2026"),
+    keyTakeaways: [
+      "Madhavan Hariharan, formerly chief financial officer at the CKA Birla Group, takes the CEO chair on 8 December 2026 after joining the Birlasoft board in May.",
+      "Outgoing CEO Angan Guha, who led the firm since December 2022, moves to Wipro Ltd as head of its Americas 2 market unit in a same-day announcement.",
+      "Coverage cited compound annual revenue growth of about 0.15% between fiscal 2023 and 2026 for Birlasoft versus high single-digit to low teens growth at Zensar, Sonata, and Firstsource.",
+    ],
+    body: [
+      "What's going on here?",
+      "Mid-sized Indian IT vendors live or die on client mining and steady leadership benches. On 6 November 2026 Birlasoft said Madhavan Hariharan will run the company from 8 December, replacing Angan Guha. Hariharan knows the CKA Birla stable from his CFO role and joined the Birlasoft board only in May. Guha’s tenure coincided with two years of declining revenue while comparable mid-caps such as Sonata and Firstsource crossed the billion-dollar revenue club. Reporting also noted roughly half a dozen senior departures in the prior twenty-four months, spanning operations, finance, and business heads. Hours later Wipro said Guha would lead its Americas 2 vertical covering Canada and several United States industry stripes.",
+      "What does this mean?",
+      "For Birlasoft customers, a CEO swap signals either a sharper vertical focus or a reset on underperforming accounts. Bringing in a group insider can speed decisions on capital allocation and M&A but may not by itself fix bench strength if delivery leaders have already left. The board is betting Hariharan’s turnaround experience at Whirlpool India translates to enterprise clients rethinking spend amid generative-AI pilots. Wipro’s hire recycles a veteran who knows its client map, yet Americas 2 has slipped from largest unit to third as revenue stagnated, so Guha inherits a repair job rather than a growth trophy.",
+      "Why should I care?",
+      "If you outsource application work to Birlasoft, ask account teams about continuity clauses and senior delivery anchors through the December handover. Job seekers should watch whether Hariharan backfills the leadership holes with external hires or promotions. Investors comparing mid-cap IT names should read Birlasoft’s next guidance for proof that growth can re-accelerate beyond cost saves. Track December transition announcements, attrition data on the coming concall, and whether Wipro’s Americas pipeline commentary improves after Guha starts.",
+    ],
+  },
+  {
     slug: "karnataka-e20-omc-testing-dispute-november-2026",
     title: "State marketers and Karnataka are arguing over how E20 petrol was tested",
     summary:
@@ -9792,6 +9888,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "zomato-limitless-delivery-november-2026": "markets",
+  "mumbai-twelve-airlines-denied-slots-november-2026": "policy",
+  "bharat-electronics-909cr-orders-november-2026": "companies",
+  "birlasoft-ceo-leadership-change-november-2026": "companies",
   "karnataka-e20-omc-testing-dispute-november-2026": "policy",
   "honasa-consumer-hair-colour-expansion-q2-november-2026": "markets",
   "prestige-allure-noida-acquisition-november-2026": "markets",

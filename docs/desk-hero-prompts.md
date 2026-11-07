@@ -1330,6 +1330,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | High-rise silhouettes along an expressway |
 | Metaphor left | Title deed / key block moving across a transaction line |
 
+### `zomato-limitless-delivery-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Delivery radius stretches across a metro |
+| Subject left | Generic restaurant storefront |
+| Metaphor right | Extended route arc / radius overlay |
+
+### `mumbai-twelve-airlines-denied-slots-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Full hub blocks a slice of international departures |
+| Subject right | Airport terminal silhouette |
+| Metaphor left | Blocked flight-path chevrons at a gate |
+
+### `bharat-electronics-909cr-orders-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Defence electronics order pipeline |
+| Subject right | Radar / circuit motif |
+| Metaphor left | Rising order blocks |
+
+### `birlasoft-ceo-leadership-change-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Leadership reset at a stalled IT services firm |
+| Subject right | Abstract services campus |
+| Metaphor left | Flat growth line turning upward |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
