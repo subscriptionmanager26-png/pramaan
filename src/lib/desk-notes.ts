@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hindustan-cocacola-holdings-ipo-drhp-november-2026",
+    title: "Coca-Cola’s India bottler filed for a stake-sale listing with no fresh cash to the company",
+    summary:
+      "Hindustan Coca-Cola Holdings Ltd lodged a draft red herring prospectus with Sebi on 6 November 2026 for an offer-for-sale of up to roughly 997.5 million shares by overseas promoter Hindustan Coca-Cola Overseas Holdings, which would cut its stake from about 60% to 45% while Jubilant Beverages keeps its 40% and the bottler itself receives no IPO proceeds.",
+    category: "industry",
+    companyOrSector: "Consumer staples / beverages",
+    publishedAt: "2026-11-07T22:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hindustan-cocacola-holdings-ipo-drhp-november-2026"),
+    keyTakeaways: [
+      "The DRHP dated 6 November 2026 proposes selling up to about 997.5 million shares entirely through an offer for sale by the overseas promoter, with no primary issuance.",
+      "The bottler bottles Thums Up, Sprite, Maaza and other Coca-Cola brands across ten states and four union territories, mainly in the west and south, under a refranchising map.",
+      "Revenue in the year to March 2026 fell about 9.4% to roughly ₹11,549 crore as territories moved to other Coca-Cola bottlers; six investment banks are named as book runners.",
+    ],
+    body: [
+      "What's going on here?",
+      "Multinational parents are using Indian IPO windows to crystallise long-held bottling stakes rather than fund new capex in the entity. On 6 November 2026 Hindustan Coca-Cola Holdings Ltd, the largest Coca-Cola bottler in India, filed draft papers with the Securities and Exchange Board of India. The issue is entirely an offer for sale by promoter Hindustan Coca-Cola Overseas Holdings Pte Ltd, offering up to about 997.5 million shares. Jubilant Beverages, which owns the remaining minority block, is not selling. Because there is no fresh issue, the listed company will not receive IPO money; proceeds flow to the selling shareholder. Draft disclosures cite revenue of about ₹11,549 crore in the year ended March 2026, down roughly 9.4% after some regions shifted to other franchise bottlers under Coca-Cola’s refranchising programme.",
+      "What does this mean?",
+      "A pure stake-sale listing tells you the story is about ownership change and public-market valuation, not expansion cheques inside HCCH. Refranchising shrank the footprint on paper even while iconic brands still move through its plants in states such as Maharashtra, Karnataka and Telangana. For Coca-Cola’s global portfolio, a partial float can set a price marker for Indian beverage distribution without forcing the parent to dilute operating control day to day. Jubilant’s decision to stay fully invested signals the local partner still wants skin in the game. Competing consumer listings this season have mix of fresh issues and offers for sale, so investors must read the use-of-proceeds table before treating every DRHP as a growth raise.",
+      "Why should I care?",
+      "If you follow consumer IPOs, compare how refranchising adjusted sales with territory-based profit rather than headline revenue alone once the price band is filed. Franchise bottlers and regional drink makers should watch whether a successful HCCH issue pushes other multinationals to list Indian arms. Employees with stock options should see whether any liquidity pools open only after the overseas promoter sells down. Watch Sebi observations, the price band, anchor allocation rules, and whether grocery inflation or summer volumes feature in management roadshow messaging before subscriptions open.",
+    ],
+  },
+  {
+    slug: "festive-automaker-dhanteras-deliveries-november-2026",
+    title: "Carmakers expect a sharp jump in Dhanteras vehicle handovers this year",
+    summary:
+      "Tata Motors Passenger Vehicles said on 7 November 2026 it expects more than 12,000 Dhanteras day deliveries after retail growth above 20% since Ganesh Chaturthi, while Hyundai Motor India targets about 16,000 festive handovers, roughly 14% above last year, and Mahindra & Mahindra reported SUV showroom stocks near zero at many dealers.",
+    category: "industry",
+    companyOrSector: "Passenger vehicles / festive retail",
+    publishedAt: "2026-11-07T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("festive-automaker-dhanteras-deliveries-november-2026"),
+    keyTakeaways: [
+      "Tata Motors Passenger Vehicles expects Dhanteras single-day deliveries to cross 12,000 units and cites retail growth of more than 20% since Ganesh Chaturthi versus the year-ago festive window.",
+      "Hyundai Motor India expects about 16,000 combined Dhanteras and Diwali deliveries, nearly 14% higher than the comparable stretch last year.",
+      "Mahindra said physical SUV stocks were close to zero across much of its range, with inventory below eight to nine days excluding in-transit vehicles as plants run at full capacity.",
+    ],
+    body: [
+      "What's going on here?",
+      "Festive calendars still pull forward big-ticket purchases even when loan rates stay high. On 7 November 2026 reporting from India’s passenger vehicle makers described Dhanteras showroom traffic translating into concrete delivery targets. Tata Motors Passenger Vehicles said it expects more than 12,000 handovers on Dhanteras alone and noted retail growth above 20% since Ganesh Chaturthi compared with the same span a year earlier, helped by newer models. Hyundai Motor India expects around 16,000 vehicles across Dhanteras and Diwali, about 14% more than the year-ago festive period. Mahindra & Mahindra said strong SUV demand left dealer lots nearly empty, with stock mostly below eight to nine days once in-transit units are stripped out, and plants running at full capacity including electric SUVs through October.",
+      "What does this mean?",
+      "When inventories sit near zero, growth is constrained by production and logistics, not lack of buyers. That is different from a discount-led push where factories build ahead of the festival. Mahindra’s comment fits a pattern also visible in October wholesale data from several brands: sport utilities still absorb the marginal rupee in many cities. Hyundai and Tata’s delivery guides suggest the upgrade cycle into new nameplates is holding even as finance costs bite elsewhere in the household budget. For suppliers and lenders, the near-term risk is fulfilment delays and working capital stretch rather than weak footfall. Rivals will watch whether post-Diwali cancellations stay low once the muhurat delivery window closes.",
+      "Why should I care?",
+      "If you booked a car for Dhanteras, chase your dealer on registration and insurance timelines because backlogs can slip into the next week when many outlets run extended hours. Fleet buyers should expect longer wait times on popular SUVs and hybrids. Investors in auto names should read retail commentary alongside wholesale numbers: empty lots support pricing but can cap volume surprise until capacity additions land. Watch November registration data on VAHAN, any festive discount rollbacks in December, and whether two-wheeler makers report a similar pickup after the passenger vehicle wave.",
+    ],
+  },
+  {
     slug: "gujarat-energy-cbg-biogas-jv-november-2026",
     title: "Gujarat Energy is scouting partners for a ₹100 crore compressed biogas build",
     summary:
@@ -10008,6 +10056,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hindustan-cocacola-holdings-ipo-drhp-november-2026": "markets",
+  "festive-automaker-dhanteras-deliveries-november-2026": "markets",
   "gujarat-energy-cbg-biogas-jv-november-2026": "policy",
   "tpg-arka-fincap-secured-lending-november-2026": "policy",
   "ongc-venezuela-operatorship-november-2026": "policy",
