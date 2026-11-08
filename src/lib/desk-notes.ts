@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "diwali-gift-tax-threshold-november-2026",
+    title: "Diwali gifts from friends can turn fully taxable once the year’s total crosses ₹50,000",
+    summary:
+      "Mint reporting on 8 November 2026 spells out how income tax treats festive cash, vouchers, and valuables: gifts from specified relatives stay exempt, employer cash is salary, and non-relative gifts become fully taxable at slab rates once their combined value in a financial year exceeds ₹50,000.",
+    category: "industry",
+    companyOrSector: "Personal tax / festive spending",
+    publishedAt: "2026-11-08T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("diwali-gift-tax-threshold-november-2026"),
+    keyTakeaways: [
+      "Gifts from friends and other non-relatives are tax-free only while their aggregate value in the financial year stays at or below ₹50,000; crossing that ceiling makes the entire amount taxable, not just the excess.",
+      "Gifts from parents, spouse, siblings, and other defined relatives face no monetary cap under the usual income tax gift rules.",
+      "Employer gifts in cash are taxable as salary; non-cash gifts and vouchers from employers are exempt only while the annual aggregate stays below ₹15,000.",
+    ],
+    body: [
+      "What's going on here?",
+      "Diwali week brings jewellery, appliances, cash envelopes, and employer vouchers into homes, and the tax treatment depends on who gave what and how much has already been received earlier in the year. Reporting on 8 November 2026 restates the standard income tax gift rules for the festival season. A chartered accountant quoted in the piece explained that non-relative gifts are tracked on an aggregate basis through the financial year ending 31 March. If you already accepted ₹25,000 from colleagues before Diwali and then receive ₹30,000 in festive gifts from friends, the total is ₹55,000 and the full ₹55,000 is taxable at your slab rate, not merely the ₹5,000 above the threshold. Gifts within the defined relative list remain fully exempt regardless of size.",
+      "What does this mean?",
+      "The mechanism is a cliff rule, not a marginal tax. Many people assume only the excess above ₹50,000 will be taxed, but the law treats the whole cumulative stack once the limit is breached. Employer gifting works on a different track: cash or cash-equivalent perks are always salary income, while gifts in kind or voucher form enjoy a separate ₹15,000 annual exemption before the entire value is taxed as a perquisite. That split matters for HR teams distributing Diwali bonuses versus hampers. For households, the practical task is a simple ledger of non-relative gifts since April, not just counting what arrived this weekend.",
+      "Why should I care?",
+      "If you exchange expensive gifts with friends or former colleagues, keep a running total for the year and factor tax into large transfers of cash or gold. Employer recipients should check whether a Diwali voucher counts toward the ₹15,000 employer-gift ceiling before assuming it is tax-free. When filing returns, unsupported gifts can attract scrutiny if values jump without matching income. Watch Form 16 and salary slips for employer perks, and consolidate friend gifts with any earlier non-relative receipts before March.",
+    ],
+  },
+  {
+    slug: "tata-chemicals-soda-ash-q2-november-2026",
+    title: "Tata Chemicals slipped to a ₹50 crore quarterly loss as soda ash prices stayed weak",
+    summary:
+      "The company reported on 8 November 2026 a consolidated net loss of about ₹50 crore for the quarter ended September 2026, against a ₹154 crore profit a year earlier, as global soda ash realisations stayed under pressure, UK gas costs spiked, and temporary Kenya plant suspension weighed on the group.",
+    category: "industry",
+    companyOrSector: "Chemicals / soda ash",
+    publishedAt: "2026-11-08T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-chemicals-soda-ash-q2-november-2026"),
+    keyTakeaways: [
+      "Consolidated net loss was about ₹50 crore in Q2 FY27 versus ₹154 crore profit in the year-ago quarter, while revenue from operations rose roughly 8% to about ₹4,177 crore on higher India and US volumes.",
+      "Management cited weak soda ash prices globally, elevated energy and logistics costs tied partly to Middle East conflict, a sharp rise in UK natural gas, and the temporary suspension of Kenya operations.",
+      "India operations saw better realisations and volumes, but export routes from the US to Southeast Asia suffered from unremunerative pricing, MD R Mukundan said.",
+    ],
+    body: [
+      "What's going on here?",
+      "Industrial consumers from glass makers to detergents makers still need soda ash, but the global market has been oversupplied and prices have been slow to recover. Tata Chemicals Ltd filed results on 8 November 2026 for the September quarter showing a consolidated loss of about ₹50 crore. Revenue grew to roughly ₹4,177 crore from higher sales in India and the United States, helped in part by the Kenya outage removing some consolidated tonnes. Year-on-year profit flipped negative because input and energy inflation outran the volume gains and because group earnings absorbed a jump in UK gas costs and lower joint-venture income. Management described soda ash export economics from the US toward Southeast Asia as particularly weak.",
+      "What does this mean?",
+      "Soda ash is a classic commodity chain: when Chinese and Middle Eastern supply competes into Asia and freight and energy spike, Indian producers with integrated mines can still sell domestically but struggle on export netbacks. Tata Chemicals’ India business operated with more resilience, yet consolidated numbers also carry UK and US assets where gas and freight moved faster than list prices. Glass and detergent manufacturers downstream may enjoy softer input costs when soda ash weakens, which can lag producer pain by a quarter or two. For the company, the stated priorities are cost takeout, cash generation, and disciplined capex rather than volume at any price.",
+      "Why should I care?",
+      "If you buy glass, tiles, or packaged cleaners, watch whether producers pass through cheaper soda ash or keep margins. Investors in Indian commodity names should read volume and geography splits, not headline revenue alone. Employees at overseas plants face energy-cost volatility that can reverse quickly if gas prices ease. Watch the next quarterly update on Kenya restart timing, UK energy hedges, and any India price hikes once export markets stabilise.",
+    ],
+  },
+  {
+    slug: "aster-dm-merger-q2-occupancy-november-2026",
+    title: "Aster DM’s first full quarter after its merger showed busier hospitals and higher margins",
+    summary:
+      "Aster DM Quality Care Ltd said on 8 November 2026 that revenue rose 19% year on year to about ₹2,829 crore in Q2 FY27 with normalised profit up 34% to roughly ₹281 crore, marking the first full quarter since Aster DM Healthcare combined with Quality Care India.",
+    category: "industry",
+    companyOrSector: "Hospitals / healthcare services",
+    publishedAt: "2026-11-08T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("aster-dm-merger-q2-occupancy-november-2026"),
+    keyTakeaways: [
+      "The combined entity served about 2.2 million patients in the quarter, up 12% year on year, with hospital occupancy improving to about 68% from 65%.",
+      "Complex procedures grew, including robotic surgeries up about 39%, kidney transplants up 31%, and medical value travel revenue up 36% with strong Gulf and Maldives inflows.",
+      "Return on capital employed improved about 152 basis points year on year to 23% on normalised profit after tax.",
+    ],
+    body: [
+      "What's going on here?",
+      "Listed hospital groups in India have spent the past two years stitching together acquisitions to fill geographic gaps and add bed capacity. Aster DM Quality Care reported on 8 November 2026 its first complete quarter after merging Aster DM Healthcare with Quality Care India. Revenue reached about ₹2,829 crore, up 19% from a year earlier, while normalised profit after tax rose about 34% to roughly ₹281 crore. Patient volumes crossed 2.2 million and occupancy ticked up to 68%. Management highlighted more complex cases, including faster growth in robotics, transplants, and international patient flows from the Gulf and Maldives.",
+      "What does this mean?",
+      "Hospital economics turn on occupancy, case mix, and payer blend. Higher occupancy with richer surgical mix usually lifts average revenue per occupied bed faster than headline bed additions. Medical value travel adds a foreign-exchange kicker when visa and air links stay open. Integration costs often hide in the first year, so a profit lift alongside volume growth suggests tariff and cost synergies are landing. Mature hospitals still contributed the bulk of revenue while newer clusters in Kasargod and Nagarcoil grew faster off smaller bases.",
+      "Why should I care?",
+      "If you hold health insurance or plan surgery, busier tertiary centres can mean longer wait lists for elective slots but also deeper specialist benches. Employers renewing corporate policies should compare network breadth after mergers. Investors should track occupancy and ARPOB trends rather than only top-line growth from new beds. Watch the Trivandrum project commissioning timeline and whether medical value travel holds once winter tourism normalises.",
+    ],
+  },
+  {
     slug: "hindustan-cocacola-holdings-ipo-drhp-november-2026",
     title: "Coca-Cola’s India bottler filed for a stake-sale listing with no fresh cash to the company",
     summary:
@@ -10056,6 +10128,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "diwali-gift-tax-threshold-november-2026": "policy",
+  "tata-chemicals-soda-ash-q2-november-2026": "companies",
+  "aster-dm-merger-q2-occupancy-november-2026": "companies",
   "hindustan-cocacola-holdings-ipo-drhp-november-2026": "markets",
   "festive-automaker-dhanteras-deliveries-november-2026": "markets",
   "gujarat-energy-cbg-biogas-jv-november-2026": "policy",

@@ -1116,6 +1116,37 @@ def ongc_venezuela(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([980, 400, 1080, 520], fill=BLUE)
 
 
+def diwali_gift_tax(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 240, 420, 540], radius=24, fill=RED)
+    d.rectangle([260, 240, 280, 540], fill=GOLD)
+    d.rectangle([120, 360, 420, 400], fill=GOLD)
+    for i, h in enumerate([60, 120, 200, 280]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, YELLOW, RED, BLUE][i])
+    d.line([(600, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(980, 200), (1120, 260), (980, 320)], fill=GOLD)
+
+
+def tata_chemicals_soda(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 300, 340, 500], fill=BLUE)
+    d.rectangle([200, 260, 280, 320], fill=YELLOW)
+    for i, h in enumerate([280, 220, 160, 100, 60]):
+        x = 560 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=GOLD if i < 2 else RED)
+    d.polygon([(900, 520), (980, 360), (1060, 520)], fill=RED)
+    d.line([(720, 400), (1080, 400)], fill=GOLD, width=4)
+
+
+def aster_dm_merger(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([200, 220, 420, 520], fill=BLUE)
+    d.rectangle([300, 160, 320, 560], fill=RED)
+    d.rectangle([220, 340, 400, 400], fill=RED)
+    for i, h in enumerate([140, 220, 300, 380]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, BLUE, RED, GOLD][i])
+    d.polygon([(520, 400), (600, 360), (600, 440)], fill=GOLD)
+
+
 def domestic_air_soft(d: ImageDraw.ImageDraw) -> None:
     """Fewer passenger chevrons, rising fare steps."""
     d.polygon([(120, 200), (460, 160), (500, 500), (80, 540)], fill=BLUE)
@@ -1138,6 +1169,9 @@ def airtel_q2_network(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("diwali-gift-tax-threshold-november-2026", diwali_gift_tax)
+    save("tata-chemicals-soda-ash-q2-november-2026", tata_chemicals_soda)
+    save("aster-dm-merger-q2-occupancy-november-2026", aster_dm_merger)
     save("titan-q2-jewellery-watches-november-2026", titan_q2_jewellery)
     save("lg-electronics-india-q2-appliances-november-2026", lg_appliances_q2)
     save("bikaji-snacks-growth-margin-squeeze-november-2026", bikaji_snacks_margin)
