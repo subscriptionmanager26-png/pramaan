@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "railways-passenger-schedule-redress-november-2026",
+    title: "A Punjab consumer court ordered Railways and IRCTC to refund a family that missed an early-departing train",
+    summary:
+      "Reporting on 8 November 2026 said the Ferozepur District Consumer Disputes Redressal Commission directed Northern Railway, Konkan Railway, and IRCTC to refund ₹10,620 in tickets plus pay ₹5,000 compensation after passengers reached Madgaon station on time but the train had already left under a monsoon timetable that moved departure up by two hours without direct notice to the booked travellers.",
+    category: "industry",
+    companyOrSector: "Rail travel / consumer rights",
+    publishedAt: "2026-11-08T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("railways-passenger-schedule-redress-november-2026"),
+    keyTakeaways: [
+      "The commission ordered a full ticket refund of ₹10,620 and ₹5,000 toward mental agony, harassment, and litigation costs after the family missed a June 2024 Madgaon–Hazrat Nizamuddin service.",
+      "Railways argued the monsoon timetable was posted at the station and online; IRCTC said it only sells tickets and does not control departures. The bench rejected both defences.",
+      "The order restates that passengers are entitled to timely service and adequate notice when departure times change, not only to static timetable boards at the station.",
+    ],
+    body: [
+      "What's going on here?",
+      "Train schedules in the Konkan corridor shift between monsoon and non-monsoon tables every June, but the legal question is whether ticket holders get a usable alert when the clock moves. On 8 November 2026, Indian Express-cited reporting described a consumer commission order against Northern Railway, Konkan Railway, and IRCTC. A family that had booked three berths for a June 2024 service reached Madgaon before the printed departure time yet found the train had already left after its start was advanced by two hours. Railways pointed to notice boards and website updates; IRCTC argued it is only the booking agent. The Ferozepur bench held that passengers should not bear the risk when operators fail to communicate a material schedule change and directed the refund of ₹10,620 plus ₹5,000 in compensation.",
+      "What does this mean?",
+      "Consumer courts treat rail tickets as a service contract, not just a seat inventory record. When monsoon timetables shorten running times or pull departures forward, the burden sits on the operator chain to push that change through the same channel that confirmed the booking. IRCTC’s millions of SMS and email confirmations create an expectation that big shifts will arrive on the phone, not only on a platform board the passenger may never re-read. The modest ticket value does not shrink the precedent: deficiency in service can attach even when the operator believes it published the revision somewhere on the network. Other sectors with seasonal timetable switches, including airlines during fog protocols, face similar scrutiny when apps still show the old clock.",
+      "Why should I care?",
+      "If you travel during monsoon on Konkan or other seasonal routes, verify the live departure on the IRCTC app on travel day and keep screenshots if the train leaves early. Employers reimbursing rail claims should note courts may award compensation beyond the fare when notice fails. IRCTC and railway IT teams may tighten push alerts before the next timetable churn. Watch whether Indian Railways codifies SMS obligations for material schedule changes and if similar orders appear in other state consumer forums this quarter.",
+    ],
+  },
+  {
+    slug: "nse-digital-gold-egr-target-november-2026",
+    title: "The NSE wants up to 300 tonnes of gold held as electronic receipts within a year",
+    summary:
+      "National Stock Exchange executives told reporters on 8 November 2026 they aim to convert 200 to 300 tonnes of gold into Electronic Gold Receipts over the next 12 months, a volume they said would exceed one-third of India’s typical annual bullion imports, as the exchange pushes households and jewellers toward dematerialised holdings after launching the EGR ecosystem in May.",
+    category: "industry",
+    companyOrSector: "Exchanges / gold markets",
+    publishedAt: "2026-11-08T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nse-digital-gold-egr-target-november-2026"),
+    keyTakeaways: [
+      "Chief business development officer Sriram Krishnan said the NSE is targeting 200–300 tonnes of gold in EGR form within 12 months, framing the goal as a way to trim physical import dependence.",
+      "The exchange launched its EGR framework in May 2026, allowing vaulted bullion to be represented as tradable receipts that can later be reconverted to metal.",
+      "Officials are pitching the product to retail savers and jewellers who today store bars at home or with dealers instead of in exchange-linked vaults.",
+    ],
+    body: [
+      "What's going on here?",
+      "India still imports most of the gold its households buy, even as regulators build pipes to keep metal inside domestic vaults. On 8 November 2026, wire reporting quoted National Stock Exchange executive Sriram Krishnan setting a conversion target of 200 to 300 tonnes into Electronic Gold Receipts over the coming year. The EGR platform, which went live in May 2026, lets approved vaults issue receipts against stored bullion that trade on the exchange and can be swapped back for physical delivery. Management said hitting the band would represent more than a third of the nation’s usual annual import bill measured in tonnes, though the path depends on persuading jewellers and retail savers to park gold already held in drawers and shop tills into the electronic system.",
+      "What does this mean?",
+      "Electronic receipts change where risk sits. A household that moves jewellery scrap or bars into EGR form reduces home theft exposure and gets a regulated record, but must trust vault chains, conversion fees, and liquidity on the exchange tape. For jewellers, dematerialised inventory can collateralise working capital without shipping metal between cities. For policymakers, successful uptake could smooth import spikes when festivals cluster, because some demand may rotate into existing domestic stocks rather than fresh overseas shipments. The plan is voluntary, not a ban on physical coins, so adoption hinges on clear tax treatment, assaying standards, and whether banks promote EGR savings alongside sovereign gold bonds.",
+      "Why should I care?",
+      "If you buy gold for weddings or savings, compare locker costs, making charges, and liquidity between EGR accounts, sovereign gold bonds, and traditional bars before shifting a large tranche. Jewellers should watch vault tie-ups and settlement times during peak season. Importers and refiners face mixed signals: exchange-led recycling could soften some months while ETF and coin demand still pulls cargoes. Track monthly EGR turnover disclosures, Sebi and RBI circulars on collateral use, and whether MCX or jeweller associations launch competing demat products that split liquidity.",
+    ],
+  },
+  {
     slug: "diwali-gift-tax-threshold-november-2026",
     title: "Diwali gifts from friends can turn fully taxable once the year’s total crosses ₹50,000",
     summary:
@@ -10128,6 +10176,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "railways-passenger-schedule-redress-november-2026": "policy",
+  "nse-digital-gold-egr-target-november-2026": "markets",
   "diwali-gift-tax-threshold-november-2026": "policy",
   "tata-chemicals-soda-ash-q2-november-2026": "companies",
   "aster-dm-merger-q2-occupancy-november-2026": "companies",

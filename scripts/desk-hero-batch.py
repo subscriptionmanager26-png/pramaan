@@ -1116,6 +1116,29 @@ def ongc_venezuela(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([980, 400, 1080, 520], fill=BLUE)
 
 
+def nse_digital_gold_egr(d: ImageDraw.ImageDraw) -> None:
+    """Vaulted bar dematerialised into exchange receipt tiles."""
+    d.rounded_rectangle([100, 280, 260, 520], radius=16, fill=YELLOW)
+    d.rectangle([140, 320, 220, 480], fill=GOLD)
+    d.polygon([(320, 520), (420, 360), (520, 520)], fill=BLUE)
+    for i in range(4):
+        x = 640 + i * 95
+        d.rectangle([x, 220 + i * 30, x + 70, 520], fill=[RED, BLUE, YELLOW, RED][i])
+    d.line([(520, 420), (640, 420)], fill=GOLD, width=5)
+    d.ellipse([980, 300, 1140, 460], outline=INK, width=4)
+
+
+def railways_schedule_redress(d: ImageDraw.ImageDraw) -> None:
+    """Station clock vs early-departing train."""
+    d.rectangle([120, 220, 460, 560], fill=BLUE)
+    d.ellipse([240, 280, 380, 420], fill=CREAM)
+    d.line([(240, 350), (380, 350)], fill=RED, width=6)
+    d.line([(310, 280), (310, 420)], fill=INK, width=4)
+    d.polygon([(720, 520), (900, 420), (1080, 520)], fill=RED)
+    d.ellipse([880, 400, 1020, 480], fill=YELLOW)
+    d.polygon([(1040, 440), (1160, 400), (1160, 480)], fill=GOLD)
+
+
 def diwali_gift_tax(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([120, 240, 420, 540], radius=24, fill=RED)
     d.rectangle([260, 240, 280, 540], fill=GOLD)
@@ -1169,6 +1192,8 @@ def airtel_q2_network(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("railways-passenger-schedule-redress-november-2026", railways_schedule_redress)
+    save("nse-digital-gold-egr-target-november-2026", nse_digital_gold_egr)
     save("diwali-gift-tax-threshold-november-2026", diwali_gift_tax)
     save("tata-chemicals-soda-ash-q2-november-2026", tata_chemicals_soda)
     save("aster-dm-merger-q2-occupancy-november-2026", aster_dm_merger)
