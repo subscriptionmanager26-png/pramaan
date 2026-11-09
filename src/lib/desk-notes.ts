@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bank-baroda-mclr-november-2026",
+    title: "Bank of Baroda is raising some loan reference rates from 12 November",
+    summary:
+      "Bank of Baroda Ltd told exchanges on 9 November 2026 it will lift marginal cost of funds based lending rates on four tenures from 12 November, including a 20 basis point increase on three-month and six-month MCLR to 8.50% and 8.70% while keeping overnight MCLR at 7.85%.",
+    category: "industry",
+    companyOrSector: "Banking / lending rates",
+    publishedAt: "2026-11-09T17:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bank-baroda-mclr-november-2026"),
+    keyTakeaways: [
+      "The three-month MCLR rises 20 bps to 8.50% and the six-month MCLR rises 20 bps to 8.70%, effective 12 November 2026; one-month MCLR edges up 5 bps to 8% and one-year MCLR rises 10 bps to 8.85%.",
+      "Overnight MCLR stays at 7.85% under the 9 November exchange filing.",
+      "Retail and small business loans linked to MCLR reprice on reset dates, so new and rolling borrowers face higher interest once their anniversary hits.",
+    ],
+    body: [
+      "What's going on here?",
+      "When a bank’s funding costs inch up, it often moves the internal rate sheet that anchors floating home loans, working-capital lines, and many small-business credits. On 9 November 2026, Bank of Baroda published revised marginal cost of funds based lending rates under Sebi listing rules. The three-month and six-month MCLR each climb 20 basis points to 8.50% and 8.70%. The one-month bracket rises 5 basis points to 8%, and the one-year rate increases 10 basis points to 8.85%. The overnight MCLR is unchanged at 7.85%. All revisions take effect from 12 November. The filing sits in the same week the lender reported record September-quarter profit, but the rate notice itself is a direct pass-through signal for borrowers on MCLR-linked products rather than new credit policy from the Reserve Bank of India.",
+      "What does this mean?",
+      "MCLR is the benchmark many Indian banks use before adding a spread for risk and tenure. A 20 basis point move on the three- and six-month legs matters for loans that reset every quarter or half year. Existing customers do not pay more overnight; they feel it on the next reset date written into the loan agreement. Fresh floating-rate borrowers may see the higher MCLR in quotes immediately after 12 November. Fixed-rate products and external benchmark linked loans that track the repo rate follow different rules, so not every Bank of Baroda customer moves in lockstep. Other lenders adjust their own sheets on their own calendar, which is why shopping quotes still matters even when one public sector bank moves first.",
+      "Why should I care?",
+      "If your home loan or overdraft references Bank of Baroda MCLR, check the reset date in your sanction letter and model a slightly higher EMI or interest accrual from the next cycle. Small businesses rolling working-capital limits should ask relationship managers whether spreads stay flat or widen on top of the higher benchmark. Savers may see little immediate change on deposits, since lending rates and deposit pricing do not move one for one. Watch whether Punjab National Bank, State Bank of India, and private peers publish matching MCLR changes this fortnight, and read the next RBI policy for whether funding costs keep drifting up despite softer bond yields on the trading desk.",
+    ],
+  },
+  {
+    slug: "makemytrip-india-ipo-sebi-november-2026",
+    title: "Sebi cleared MakeMyTrip’s Indian subsidiary to file for a local IPO",
+    summary:
+      "MakeMyTrip (India) Ltd received Securities and Exchange Board of India observations on 6 November 2026 approving its proposed initial public offering, letting the Nasdaq-listed parent move toward listing the domestic online travel entity through a primarily offer-for-sale structure filed confidentially in July.",
+    category: "industry",
+    companyOrSector: "Travel / capital markets",
+    publishedAt: "2026-11-09T16:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("makemytrip-india-ipo-sebi-november-2026"),
+    keyTakeaways: [
+      "Sebi issued final observations on 6 November on the draft filed by MakeMyTrip (India) Ltd after a confidential July 2026 submission.",
+      "The proposed issue is expected to be largely an offer for sale by the US-listed parent and a Singapore subsidiary, with MMT India remaining a consolidated subsidiary after listing.",
+      "The parent told US regulators it may use IPO proceeds for growth capital, acquisitions, buybacks of other securities, and talent retention in India’s competitive tech hiring market.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian travellers book flights and hotels through apps that are often subsidiaries of global listings, so a domestic IPO can change how investors access the cash engine without breaking up the consumer brand. Reporting on 9 November 2026 said MakeMyTrip (India) Ltd received Sebi’s final observations on 6 November for its planned initial public offering, following a confidential draft registration filed in July. The structure described in exchange and Nasdaq filings centres on an offer for sale of shares in the Indian entity by the Nasdaq-listed MakeMyTrip parent and its Singapore subsidiary ibibo Group Holdings. MMT India would stay a subsidiary with consolidated accounts at the parent. Price band, issue size, and dates are not yet public. The clearance is a gate passed, not a trading debut.",
+      "What does this mean?",
+      "An offer for sale sends cash to selling shareholders rather than into the Indian company’s balance sheet for capex, though the parent has flagged uses such as strategic deals, share repurchases of other classes, and competing for engineers in a tight hiring market. A local listing can widen the shareholder register for a name millions of Indians already use for Goibibo and redBus journeys, and may improve brand visibility for employee stock plans. For rivals such as EaseMyTrip and private OTAs, a listed peer raises the bar on disclosure and capital-raising optionality. Retail investors still wait for the red herring prospectus for exact dilution, promoter lock-ins, and financials at the Indian entity level.",
+      "Why should I care?",
+      "If you follow travel or consumer internet listings, watch for the price band and anchor investor list when the company opens the book. Employees holding esop units in the Indian unit should read how listing affects liquidity and tax. Frequent flyers need not change how they book; the regulatory step is about ownership, not fares. Track the prospectus for revenue mix between hotels, flights, and buses, any related-party agreements with the US parent, and whether the issue is timed around the festive travel season marketing cycle.",
+    ],
+  },
+  {
+    slug: "fpi-far-gsec-inflow-november-2026",
+    title: "Foreign funds added nearly ₹8,000 crore to India’s fully accessible government bonds",
+    summary:
+      "Reporting on 9 November 2026 citing Clearing Corporation of India data said foreign portfolio holdings in fully accessible route government securities rose about ₹7,969 crore in the first week of November to roughly ₹3.65 lakh crore, alongside a firmer rupee and lower 10-year yields.",
+    category: "industry",
+    companyOrSector: "Bond markets / capital flows",
+    publishedAt: "2026-11-09T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fpi-far-gsec-inflow-november-2026"),
+    keyTakeaways: [
+      "FAR government bond holdings climbed from about ₹3.57 lakh crore on 2 November to roughly ₹3.65 lakh crore on 9 November, per wire copy citing CCIL.",
+      "The rupee strengthened from about 94.90 to 93.74 per dollar in the same span while the 10-year benchmark yield eased toward 7.18% from 7.315%.",
+      "The inflow follows months when foreign investors had been net sellers of Indian government paper on rate and currency concerns.",
+    ],
+    body: [
+      "What's going on here?",
+      "Offshore funds can buy designated Indian government bonds without the caps that apply to other rupee debt categories, so weekly changes in those holdings are a clean read on global appetite. Wire reporting on 9 November 2026, citing Clearing Corporation of India statistics compiled by PTI, said foreign portfolio investment in fully accessible route government securities rose by about ₹7,969 crore in the first week of November. Holdings reached roughly ₹3.65 lakh crore on 9 November from about ₹3.57 lakh crore on 2 November. In the same window the rupee moved from near 94.90 to about 93.74 per US dollar and the 10-year government bond yield slipped. Reporting tied the shift to softer crude, stronger equity inflows, and hopes of easing geopolitical tension in West Asia.",
+      "What does this mean?",
+      "A stronger rupee improves dollar returns on existing bond positions for foreign holders, while falling yields deliver mark-to-market gains on long-duration books. That combination often attracts momentum-oriented offshore accounts back into FAR paper after a stretch of selling. The FAR route is the main channel for passive index inclusion strategies, so lump-sum weekly data can look chunky even when the underlying policy regime is unchanged. Domestic savers feel this indirectly through debt fund NAVs and through the borrowing costs the government faces at auction, not through a new retail product.",
+      "Why should I care?",
+      "If you hold long gilt or dynamic bond funds, foreign buying can support NAVs in the short run but does not remove duration risk if oil or global rates reverse. Corporate borrowers may see marginally easier benchmark levels for new rupee debentures when sovereign yields soften. Policy watchers should compare FAR flows with foreign equity purchases in the same week to see whether the move is part of a broader India risk-on tilt. Watch next CCIL weekly prints, RBI commentary on volatile capital flows, and October inflation data due later in the week for whether the buying streak extends.",
+    ],
+  },
+  {
     slug: "marico-bonorizon-d2c-stake-november-2026",
     title: "Marico agreed to buy half of a digital-native personal care startup",
     summary:
@@ -10320,6 +10392,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bank-baroda-mclr-november-2026": "policy",
+  "makemytrip-india-ipo-sebi-november-2026": "markets",
+  "fpi-far-gsec-inflow-november-2026": "policy",
   "marico-bonorizon-d2c-stake-november-2026": "markets",
   "international-mutual-fund-inflow-lock-november-2026": "policy",
   "india-small-satellite-launchers-november-2026": "policy",

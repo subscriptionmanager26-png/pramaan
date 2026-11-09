@@ -1235,7 +1235,35 @@ def marico_bonorizon(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([820, 180, 880, 280], fill=GOLD)
 
 
+def bank_baroda_mclr(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 280, 480, 560], fill=BLUE)
+    for i, h in enumerate([100, 160, 240, 320]):
+        x = 620 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, YELLOW, RED, BLUE][i])
+    d.polygon([(980, 200), (1120, 280), (980, 360), (840, 280)], fill=GOLD)
+    d.line([(480, 420), (620, 380)], fill=GOLD, width=3)
+
+
+def makemytrip_india_ipo(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 220, 360, 460], fill=BLUE)
+    d.polygon([(720, 520), (820, 320), (920, 520)], fill=RED)
+    d.rectangle([1000, 260, 1140, 400], fill=YELLOW)
+    d.line([(360, 340), (720, 420)], fill=GOLD, width=4)
+    d.polygon([(1020, 180), (1100, 220), (1020, 260)], fill=GOLD)
+
+
+def fpi_far_gsec(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 380, 520, 520], fill=BLUE)
+    for i, w in enumerate([900, 980, 1060, 1140]):
+        d.rectangle([700, 520 - 40 - i * 50, w, 520], fill=[RED, YELLOW, BLUE, RED][i])
+    d.ellipse([1080, 200, 1160, 280], fill=YELLOW)
+    d.line([(520, 450), (700, 420)], fill=GOLD, width=4)
+
+
 def main() -> None:
+    save("bank-baroda-mclr-november-2026", bank_baroda_mclr)
+    save("makemytrip-india-ipo-sebi-november-2026", makemytrip_india_ipo)
+    save("fpi-far-gsec-inflow-november-2026", fpi_far_gsec)
     save("marico-bonorizon-d2c-stake-november-2026", marico_bonorizon)
     save("international-mutual-fund-inflow-lock-november-2026", intl_mf_gate)
     save("india-small-satellite-launchers-november-2026", india_small_launchers)
