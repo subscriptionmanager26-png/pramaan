@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hul-detergent-mrp-hike-november-2026",
+    title: "Hindustan Unilever just raised MRPs on Surf Excel, Rin and Wheel again",
+    summary:
+      "Hindustan Unilever Ltd lifted maximum retail prices on core detergent packs by up to about 11% in early November 2026, with Surf Excel Quick Wash’s one-kilogram pouch up ₹10 to ₹245 and several Rin and Wheel SKUs seeing ₹2–₹3 list-price moves as commodity costs stay sticky.",
+    category: "industry",
+    companyOrSector: "FMCG / household goods",
+    publishedAt: "2026-11-09T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hul-detergent-mrp-hike-november-2026"),
+    keyTakeaways: [
+      "Surf Excel Quick Wash one-kg MRP rose ₹10 to ₹245; the 500-gm pack is now ₹128, up ₹5, per wire tables dated 9 November 2026.",
+      "Rin and Wheel powder packs saw mostly ₹2–₹3 increases across one-kg and 500-gm sizes; Moti Gulab 150-gm soap climbed ₹8 to ₹82.",
+      "CEO Priya Nair had flagged calibrated hikes when input costs move; the revisions land after a September quarter that still showed 7% volume growth.",
+    ],
+    body: [
+      "What's going on here?",
+      "When surfactant and palm-linked raw materials stay expensive, India’s largest home-care supplier often moves shelf prices rather than swallow the entire bill. Reporting on 9 November 2026 said Hindustan Unilever Ltd raised maximum retail prices across its detergent portfolio, including Surf Excel, Rin and Wheel, with increases up to roughly 11% on some packs. The one-kilogram Surf Excel Quick Wash pouch is now priced at ₹245, up ₹10 from ₹235. Rin Ala 500 ml costs ₹95 after a ₹5 increase. Wheel and Rin powder packs saw smaller rupee moves. Hindustan Unilever also lifted Moti Gulab 150-gm soap by ₹8 to ₹82. Management had already told investors in October that calibrated price action would continue while demand stayed resilient.",
+      "What does this mean?",
+      "Detergent is a high-frequency kirana purchase, so even ₹2–₹10 moves per pack add up for monthly household laundry budgets, especially when families buy larger pouches for festive cleaning. National brands pass input inflation to protect margins that slipped in the September quarter, while regional labels compete on promotions. Retailers typically update price labels and distributor schemes over a few weeks, so shoppers may still see older MRPs on some shelves briefly. Volume growth in the last results print suggests many buyers absorbed earlier hikes, but repeated list-price moves test whether trade-down to smaller packs or local brands accelerates.",
+      "Why should I care?",
+      "If you manage a household budget, compare per-kg prices on your usual detergent before stocking up for the week ahead. Kirana owners should refresh shelf labels and check distributor schemes so billing matches the new MRP. Investors watching Hindustan Unilever or peers such as Godrej Consumer should pair these hikes with volume data in the December quarter, not just margin recovery hopes. Watch palm oil futures, any parallel price moves from regional soap makers, and whether quick-commerce promos offset list prices on Surf Excel and Rin.",
+    ],
+  },
+  {
+    slug: "veritas-finance-sebi-ipo-november-2026",
+    title: "Sebi cleared Veritas Finance to take its ₹900 crore IPO forward",
+    summary:
+      "Chennai-based MSME lender Veritas Finance Pvt Ltd received Securities and Exchange Board of India observations on its draft IPO papers, paving the way for a proposed ₹900 crore fresh issue plus a promoter and investor offer for sale after an earlier filing stalled in 2025.",
+    category: "industry",
+    companyOrSector: "NBFC / capital markets",
+    publishedAt: "2026-11-09T20:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("veritas-finance-sebi-ipo-november-2026"),
+    keyTakeaways: [
+      "Sebi issued observations on 19 October 2026 on Veritas’s revised draft filed 29 July 2026, per exchange and wire reporting on 9 November.",
+      "The offer combines a ₹900 crore fresh issue with an offer for sale of up to about 1.28 crore shares by backers including Lok Capital and British International Investment.",
+      "FY26 net profit was about ₹330.4 crore on assets under management near ₹9,134 crore, with disbursements focused on MSME and self-employed borrowers.",
+    ],
+    body: [
+      "What's going on here?",
+      "Small-business credit in India still leans on non-bank lenders that can move faster than large banks on unsecured and secured MSME tickets. On 9 November 2026, reporting said Veritas Finance Pvt Ltd cleared a key regulatory gate when the Securities and Exchange Board of India issued observations on its draft initial public offering papers. The company had filed a revised draft on 29 July 2026 after an earlier ₹2,800 crore plan from January 2025 received clearance but never reached the market. The revived structure centres on a ₹900 crore primary issue to bolster capital for onward lending, alongside an offer for sale of up to roughly 1.28 crore shares by existing shareholders such as Lok Capital, British International Investment and promoter entities. Merchant bankers include ICICI Securities, JM Financial and SBI Capital Markets.",
+      "What does this mean?",
+      "Fresh equity into an NBFC’s balance sheet typically funds more disbursements and absorbs growth without pushing leverage ratios to uncomfortable levels. The offer-for-sale leg lets early private investors trim stakes, which is common when development-finance backers recycle capital into new funds. Veritas focuses on MSME loans, affordable housing finance, used commercial vehicle credit and working capital lines, putting it in the same peer set as Five-Star Business Finance and SBFC Finance cited in its filing narrative. Retail investors still await the red herring prospectus for precise price band, dilution and asset-quality trends.",
+      "Why should I care?",
+      "If you lend to or borrow from NBFCs, a listed Veritas would face quarterly disclosure on growth, funding costs and collection metrics that private books hide. MSME owners comparing loan quotes should not expect IPO proceeds to change branch rates overnight; capital hits the balance sheet first, then underwriting expands. Investors following financials listings should read the prospectus for borrowing mix, cost of funds and geographic concentration. Watch the price band announcement, pre-IPO placement if exercised, and how post-listing growth compares with other recently cleared consumer and lender IPOs in the same month.",
+    ],
+  },
+  {
+    slug: "cbi-future-retail-sbi-fraud-november-2026",
+    title: "The CBI filed a ₹904 crore bank fraud case against Future Retail",
+    summary:
+      "The Central Bureau of Investigation registered a case on 9 November 2026 on State Bank of India’s complaint against Future Retail Ltd and promoters including Kishore Biyani, alleging diversion of consortium credit and wrongful loss of about ₹904.32 crore to lenders.",
+    category: "industry",
+    companyOrSector: "Banking / enforcement",
+    publishedAt: "2026-11-09T19:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cbi-future-retail-sbi-fraud-november-2026"),
+    keyTakeaways: [
+      "CBI’s first information report follows a consortium led by SBI that had extended working capital, term loan and letter-of-credit facilities to the hypermarket operator.",
+      "The agency alleges funds were not used for sanctioned purposes and were siphoned through associates, prompting searches at promoter-linked premises in Mumbai on 9 November.",
+      "Future Retail’s Big Bazaar formats had already shrunk under insolvency proceedings; the criminal case adds another layer of recovery action for banks.",
+    ],
+    body: [
+      "What's going on here?",
+      "When a large retailer collapses, lenders often move from corporate restructuring forums to criminal complaints if they believe credit was misused. On 9 November 2026 the Central Bureau of Investigation said it registered a case against Future Retail Ltd, promoters including Kishore and Rakesh Biyani, and unnamed others after State Bank of India alleged cheating and criminal conspiracy. The complaint puts wrongful loss to the banking consortium at about ₹904.32 crore. Investigators claim the company drew working capital, term loans and letters of credit across a nine-bank consortium but diverted money away from stated purposes, routing funds through associate firms. CBI teams searched premises linked to the promoters in Mumbai and seized documents the same day.",
+      "What does this mean?",
+      "A criminal probe does not by itself recover paisa for banks, but it raises the stakes for individuals named and can run parallel to insolvency or asset-sale processes that already dismantled much of the Big Bazaar footprint. Consortium lenders must now balance negotiation on remaining collateral with prosecution timelines that can stretch for years. For the wider retail and FMCG ecosystem, the case is a reminder that rapid store expansion funded by short-term credit carries enforcement risk when cash cycles break. Suppliers and landlords with legacy claims already learned that lesson during Future Group’s insolvency era.",
+      "Why should I care?",
+      "If you hold shares or bonds in other promoter-led retailers with high leverage, watch how lenders document end-use of fresh credit lines. Bank investors should track whether SBI and consortium members provision further against this exposure or recover through asset sales. Shoppers see little day-to-day change because remaining stores operate under new ownership structures, but the headline matters for credit culture in Indian corporate lending. Follow court updates on the FIR, any bail or attachment orders, and whether recovery amounts from earlier insolvency sales offset the ₹904 crore figure cited in the complaint.",
+    ],
+  },
+  {
     slug: "bank-baroda-mclr-november-2026",
     title: "Bank of Baroda is raising some loan reference rates from 12 November",
     summary:
@@ -10392,6 +10464,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hul-detergent-mrp-hike-november-2026": "markets",
+  "veritas-finance-sebi-ipo-november-2026": "markets",
+  "cbi-future-retail-sbi-fraud-november-2026": "policy",
   "bank-baroda-mclr-november-2026": "policy",
   "makemytrip-india-ipo-sebi-november-2026": "markets",
   "fpi-far-gsec-inflow-november-2026": "policy",

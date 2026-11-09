@@ -1260,7 +1260,41 @@ def fpi_far_gsec(d: ImageDraw.ImageDraw) -> None:
     d.line([(520, 450), (700, 420)], fill=GOLD, width=4)
 
 
+def hul_detergent_mrp(d: ImageDraw.ImageDraw) -> None:
+    """Laundry pack on shelf; stepped MRP bars."""
+    d.rounded_rectangle([100, 240, 420, 540], radius=20, fill=BLUE)
+    d.rectangle([160, 300, 360, 380], fill=YELLOW)
+    d.rectangle([160, 400, 360, 480], fill=CREAM)
+    for i, h in enumerate([80, 130, 200, 270]):
+        x = 560 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, RED, BLUE][i])
+    d.polygon([(1040, 220), (1120, 280), (1040, 340)], fill=GOLD)
+
+
+def veritas_finance_ipo(d: ImageDraw.ImageDraw) -> None:
+    """Small-business storefront; listing arch / gate."""
+    d.rectangle([120, 360, 480, 560], fill=BLUE)
+    d.rectangle([180, 280, 420, 360], fill=YELLOW)
+    d.polygon([(140, 280), (300, 180), (460, 280)], fill=RED)
+    d.arc([620, 200, 1140, 600], 200, 340, fill=GOLD, width=6)
+    d.rectangle([700, 440, 1060, 500], fill=RED)
+
+
+def cbi_future_retail_fraud(d: ImageDraw.ImageDraw) -> None:
+    """Bank column; diverted flow / broken pipeline."""
+    d.rectangle([140, 200, 280, 560], fill=BLUE)
+    d.rectangle([200, 240, 240, 520], fill=CREAM)
+    d.line([(280, 400), (520, 400)], fill=GOLD, width=4)
+    d.polygon([(520, 400), (580, 340), (580, 460)], fill=GOLD)
+    for y in range(280, 520, 60):
+        d.line([(640, y), (1120, y + 40)], fill=RED, width=6)
+    d.ellipse([1020, 260, 1100, 340], outline=YELLOW, width=6)
+
+
 def main() -> None:
+    save("hul-detergent-mrp-hike-november-2026", hul_detergent_mrp)
+    save("veritas-finance-sebi-ipo-november-2026", veritas_finance_ipo)
+    save("cbi-future-retail-sbi-fraud-november-2026", cbi_future_retail_fraud)
     save("bank-baroda-mclr-november-2026", bank_baroda_mclr)
     save("makemytrip-india-ipo-sebi-november-2026", makemytrip_india_ipo)
     save("fpi-far-gsec-inflow-november-2026", fpi_far_gsec)
