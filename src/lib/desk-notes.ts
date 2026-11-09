@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "marico-bonorizon-d2c-stake-november-2026",
+    title: "Marico agreed to buy half of a digital-native personal care startup",
+    summary:
+      "FMCG major Marico Ltd told exchanges on 9 November 2026 it signed definitive agreements to acquire a 51% stake in Bonorizon Consumer Ventures Pvt Ltd from promoters for aggregate consideration of up to about ₹35 crore, extending its string of minority bets in online-first wellness and grooming brands.",
+    category: "industry",
+    companyOrSector: "FMCG / D2C",
+    publishedAt: "2026-11-09T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("marico-bonorizon-d2c-stake-november-2026"),
+    keyTakeaways: [
+      "Marico will pay up to roughly ₹35 crore for 51% of Bonorizon Consumer Ventures, a promoter-led company whose brands sell largely through quick commerce and social channels.",
+      "The deal follows Marico’s recent lift in Cosmix Wellness to 80% and sits beside Parachute and Saffola extensions as management hunts growth outside legacy oil sachets.",
+      "Exchange filings on 9 November listed Bonorizon among the stocks to watch as India’s listed consumer companies keep buying capability instead of building every niche label in-house.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large packaged-food groups keep writing small cheques for digital-native labels because household shoppers discover new personal care lines on apps and short video before they hit modern trade shelves. On 9 November 2026, Marico Ltd said it signed definitive agreements to acquire 51% of Bonorizon Consumer Ventures Private Limited from the promoters. Total consideration can reach about ₹35 crore under the filed terms. Bonorizon operates in consumer products positioned for online distribution, a segment where trial sizes, influencer marketing, and repeat subscription mechanics differ from Marico’s mass hair-oil model. The announcement landed in a morning market wrap alongside other corporate updates, but the strategic point is continuity: Marico is still aggregating D2C capability after deepening control in Cosmix Wellness earlier in the week.",
+      "What does this mean?",
+      "A majority stake lets Marico fold supply planning, compliance, and campaign budgets into one P&L without juggling veto rights on every price test. The ticket size is modest next to Marico’s quarterly revenue, yet it signals that management will keep funding experiments even when base oils face copra and duty volatility. Rivals from Hindustan Unilever to Emami run similar playbooks, buying brands that already speak to younger shoppers rather than waiting for organics to scale from scratch. For Bonorizon’s founders, a strategic buyer brings distribution reach and procurement scale; for Marico shareholders, success hinges on whether acquired brands grow fast enough to offset integration costs and goodwill.",
+      "Why should I care?",
+      "If you shop personal care online, expect more bundled offers between Marico’s legacy labels and newer niche names, though each brand may still keep its own story. Founders pitching consumer startups should note how strategics price incremental stakes after earlier wellness deals. Investors in listed FMCG names should watch whether Marico discloses revenue contribution from acquired digital labels in coming quarters rather than treating them as silent subsidiaries. Track closing timelines in exchange filings, any follow-on capital calls, and whether competitors announce rival D2C purchases in the same category.",
+    ],
+  },
+  {
+    slug: "international-mutual-fund-inflow-lock-november-2026",
+    title: "Only two international mutual funds still accept fresh lump-sum money",
+    summary:
+      "Analysis cited on 9 November 2026 by Value Research said just two of the roughly 60 international mutual fund schemes it tracks remain open to new lump-sum investments, and only one category still accepts fresh systematic plans, after industry-wide overseas quota pressure led most houses to close the tap.",
+    category: "industry",
+    companyOrSector: "Mutual funds / overseas investing",
+    publishedAt: "2026-11-09T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("international-mutual-fund-inflow-lock-november-2026"),
+    keyTakeaways: [
+      "Value Research reported on 9 November that only two international schemes among about 60 tracked still take new lump-sum subscriptions.",
+      "Fresh SIP openings are even narrower, with reporting suggesting only one route remains available for new overseas systematic plans.",
+      "Most closures trace to regulatory overseas investment limits that funds hit as retail demand for US and global tech exposure stayed strong.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian households poured into international equity funds when domestic valuations looked stretched and US technology names dominated headlines. Regulators cap how much aggregate overseas exposure mutual funds can hold, and when cumulative investments approach those ceilings, asset managers typically stop new money rather than breach compliance. Wire copy on 9 November 2026 cited Value Research data showing that only two of about 60 international schemes tracked still accept fresh lump-sum purchases. The same reporting said the pipeline for brand-new systematic investment plans into overseas funds is even tighter, with effectively one remaining path for investors who want to start a monthly overseas SIP today. The squeeze is administrative, not a ban on holding existing units.",
+      "What does this mean?",
+      "When gates close, money that would have gone into Nasdaq-heavy feeders gets redirected into domestic flexi-cap funds, gold, or direct offshore brokerage accounts that sit outside the mutual fund wrapper. Investors who already hold international units can usually continue SIPs started before the freeze, but newcomers face a shrinking menu. Fund houses ration capacity because breaching overseas limits triggers regulatory pushback and operational stress. Financial advisers must rewrite model portfolios for clients who assumed perpetual access to US diversification through rupee SIPs.",
+      "Why should I care?",
+      "If you planned to start an international SIP this month, check the scheme information document and the fund house website before assuming your bank’s basket still includes an open overseas plan. Existing holders should read emails on pauses or restrictions on additional purchases. Anyone comparing direct US brokers with mutual fund feeders should weigh currency costs, estate rules, and whether closed-end funds reopen sporadically. Watch Reserve Bank of India and Securities and Exchange Board of India commentary on overseas limits, any quota hikes, and whether fund houses recycle redemptions into fresh headroom for new investors.",
+    ],
+  },
+  {
+    slug: "india-small-satellite-launchers-november-2026",
+    title: "Indian space firms are betting on small rockets instead of chasing SpaceX scale",
+    summary:
+      "Mint reported on 9 November 2026 that while Elon Musk’s SpaceX pushes ultra-heavy reusable rockets to slash per-kilogram launch costs, Indian players such as Skyroot, Agnikul, and the privatised Small Satellite Launch Vehicle track aim for frequent launches of compact payloads, wagering that miniaturised satellites and sovereign security demand will reward a different economics.",
+    category: "industry",
+    companyOrSector: "Space / industrial policy",
+    publishedAt: "2026-11-09T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-small-satellite-launchers-november-2026"),
+    keyTakeaways: [
+      "Reporting on 9 November contrasts SpaceX’s mass-capacity Starship push with Indian rockets designed for payloads on the order of hundreds of kilograms.",
+      "Skyroot has quoted per-launch costs near $4 million for Vikram-I, a fraction of a heavy rocket flight even if per-kilogram math stays higher than SpaceX ride-share.",
+      "Policymakers since the 2022 private space opening still cite an ambition to capture about 8% of the global space economy by 2033.",
+    ],
+    body: [
+      "What's going on here?",
+      "Launch economics split into two bets: fly the most satellites per ignition, or fly smaller stacks more often on shorter notice. Mint’s 9 November 2026 feature laid out SpaceX’s push to cut launch costs toward roughly one-third of prevailing US averages by scaling Starship-class vehicles that can carry on the order of 100 tonnes to low Earth orbit. India’s active and planned rockets, including Skyroot’s Vikram-I, Agnikul’s small launchers, and Hindustan Aeronautics’ Small Satellite Launch Vehicle derived from Indian Space Research Organisation designs, target payloads closer to 500 kilograms. The piece cited Skyroot launch economics near $4 million per flight, far below a heavy Starship ticket but aimed at a handful of mini-satellites rather than a full ride-share manifest.",
+      "What does this mean?",
+      "Defence and intelligence customers often want a dedicated slot for sensitive birds rather than a shared manifest with foreign commercial cargo, even at higher per-kilogram prices. India’s strategy assumes that sovereign demand plus a global shift toward compact satellites can sustain domestic launch cadence without matching SpaceX tonnage. Investors still face long wait lists and uncertain profitability at the largest US player, which the article notes as context for why India may accept higher unit costs if launches are booked years ahead for strategic users. Miniaturised chips and components could eventually let small rockets carry constellations too, blurring the line between strategies.",
+      "Why should I care?",
+      "If you supply electronics, composites, or ground-station software, watch procurement from Indian Space Research Organisation-linked programmes and private launch startups for offset and vendor opportunities. Retail investors mostly access the theme through listed defence and industrial names with ancillary space exposure rather than pure-play launch IPOs. Policy watchers should track licensing timelines, insurance norms, and whether the 8% global market share goal translates into export contracts or stays domestic. Follow test-flight schedules for SSLV and private vehicles, foreign launch contracts won by Indian firms, and any fresh foreign direct investment rules for spaceports.",
+    ],
+  },
+  {
+    slug: "lt-noida-metro-aqua-extension-november-2026",
+    title: "Larsen & Toubro won a Noida Metro contract to extend the Aqua Line",
+    summary:
+      "Larsen and Toubro Ltd said on 9 November 2026 it secured a significant order from Noida Metro Rail Corporation to extend the Aqua Line, with the exchange filing placing contract value between ₹1,000 crore and ₹2,500 crore.",
+    category: "industry",
+    companyOrSector: "Infrastructure / urban transit",
+    publishedAt: "2026-11-09T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lt-noida-metro-aqua-extension-november-2026"),
+    keyTakeaways: [
+      "L&T reported on 9 November a significant Noida Metro order for Aqua Line extension work, valued between ₹10 billion and ₹25 billion under the company’s disclosure band.",
+      "The Aqua Line already connects Noida and Greater Noida corridors; extensions shift commuter access ahead of residential and industrial pockets along the expressway belt.",
+      "Large engineering orders feed L&T’s infrastructure book as management balances hydrocarbon, defence, and buildings work across the group.",
+    ],
+    body: [
+      "What's going on here?",
+      "Urban rail projects in the National Capital Region move in fits and starts, but each signed civil contract locks years of employment for contractors and signals which corridor gets priority over the next election cycle. On 9 November 2026, Larsen and Toubro Ltd announced it received a significant order from Noida Metro Rail Corporation for extension of the Aqua Line. The filing classified value between ₹1,000 crore and ₹2,500 crore, the standard bracket L&T uses before exact line-item schedules are public. The Aqua Line is the colour-coded service linking parts of Noida and Greater Noida; extensions typically add stations, depots, and elevated or underground structures that later lift property footprints within walking distance.",
+      "What does this mean?",
+      "Metro construction spends ripple through steel, cement, signalling vendors, and rolling-stock suppliers long before the first passenger boards. For L&T, another sizable urban transit entry complements airport, highway, and defence orders disclosed in the same earnings season. Commuters along the Noida expressway compare this corridor with the Jewar airport link and Delhi Metro phases when deciding leases; a funded extension makes transit-oriented offices more credible. State finances still depend on centre-state cost sharing and land acquisition pace, so announced orders can precede visible construction by quarters.",
+      "Why should I care?",
+      "If you rent or buy along the Aqua Line alignment, track geotechnical surveys and station names in Noida Metro public notices to see which micro-markets gain a stop. Businesses bidding into the subcontract chain should monitor L&T tender portals for packages on electrical, HVAC, and finishes. Equity investors hold L&T partly as an infrastructure proxy; watch order inflow versus execution margin on urban rail relative to hydrocarbon cyclicality. Follow financial closure with Noida Metro, land handover milestones, and any revised completion dates in investor presentations.",
+    ],
+  },
+  {
+    slug: "airtel-prepaid-299-return-november-2026",
+    title: "Bharti Airtel brought back its ₹299 prepaid plan after rivals ignored its price hike",
+    summary:
+      "Reporting on 9 November 2026 said Bharti Airtel Ltd reinstated its ₹299 prepaid recharge pack roughly three months after withdrawing it in August, a reversal Citi linked to competitive pressure because Reliance Jio and Vodafone Idea did not mirror Airtel’s earlier tariff action, while September-quarter net subscriber additions slowed to about seven lakh users.",
+    category: "industry",
+    companyOrSector: "Telecom / consumer tariffs",
+    publishedAt: "2026-11-09T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airtel-prepaid-299-return-november-2026"),
+    keyTakeaways: [
+      "Airtel restored the ₹299 prepaid plan in November 2026 after dropping it in August, according to wire copy on 9 November.",
+      "Citi research cited in the same reports said reinstating the pack highlights how hard it is to hold higher prices when competitors keep cheaper entry plans on the shelf.",
+      "Airtel added about 7.16 lakh net mobile subscribers in the September 2026 quarter versus roughly 32.65 lakh in the prior quarter, with monthly churn rising to 2.9%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Telecom operators have tried to lift effective revenue through plan mix, but cheap entry recharges still anchor how prepaid users compare apps on their phones. Wire reporting on 9 November 2026 said Bharti Airtel brought back its ₹299 prepaid pack about three months after discontinuing it in August 2026. Brokerage commentary bundled with the story argued that the reversal shows pricing discipline is difficult when rivals leave comparable plans untouched. In the same window, Airtel’s September-quarter results had shown average revenue per user still improving, yet net subscriber additions cooled to roughly 7.16 lakh against about 32.65 lakh added in the previous quarter, while monthly churn ticked up to 2.9 percent. The episode sits beside, not instead of, earlier results commentary on network costs and premiumisation.",
+      "What does this mean?",
+      "Prepaid remains volume-heavy in India, so removing a popular rupee-denominated pack without industry-wide follow-through can push switchers toward Jio or Vi before postpaid upsell economics kick in. Operators want higher ARPU through fewer low-end plans and more 4G and 5G users, but each unilateral step risks sim churn in price-sensitive states. Retailers and recharge apps must refresh SKU lists when packs return, and confused customers may double-buy or miss validity windows during the transition. Regulators watch for collusion, yet the wire narrative here is the opposite: lack of coordinated hikes.",
+      "Why should I care?",
+      "If you are on Airtel prepaid, check whether your usual recharge code is live again and compare validity and data against Jio and Vi before the next top-up. Postpaid households are less affected but may still see marketing nudges tied to the same competitive tension. Investors should read subscriber adds alongside ARPU, not revenue alone, when judging whether tariff experiments stick. Watch Trai consultation papers, any industry-wide tariff letters, and whether Vi matches or undercuts the restored ₹299 pack in key circles.",
+    ],
+  },
+  {
     slug: "bosch-split-bonus-november-2026",
     title: "Bosch’s board wants one share to become twenty through a split and a bonus",
     summary:
@@ -10200,6 +10320,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "marico-bonorizon-d2c-stake-november-2026": "markets",
+  "international-mutual-fund-inflow-lock-november-2026": "policy",
+  "india-small-satellite-launchers-november-2026": "policy",
+  "lt-noida-metro-aqua-extension-november-2026": "companies",
+  "airtel-prepaid-299-return-november-2026": "companies",
   "bosch-split-bonus-november-2026": "companies",
   "railways-passenger-schedule-redress-november-2026": "policy",
   "nse-digital-gold-egr-target-november-2026": "markets",

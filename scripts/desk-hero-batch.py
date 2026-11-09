@@ -1191,7 +1191,56 @@ def airtel_q2_network(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(980, 220), (1080, 260), (980, 300)], fill=GOLD)
 
 
+def airtel_299_return(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([100, 240, 420, 520], radius=24, fill=BLUE)
+    d.rectangle([160, 300, 360, 360], fill=YELLOW)
+    d.rectangle([160, 400, 300, 440], fill=CREAM)
+    for i in range(3):
+        d.polygon([(700 + i * 120, 520), (760 + i * 120, 420), (820 + i * 120, 520)], fill=[RED, YELLOW, BLUE][i])
+    d.line([(680, 520), (1150, 520)], fill=GOLD, width=3)
+
+
+def lt_noida_metro(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 480, 1180, 520], fill=INK, width=0)
+    d.rectangle([200, 360, 260, 480], fill=BLUE)
+    d.rectangle([500, 320, 560, 480], fill=RED)
+    d.rectangle([820, 280, 880, 480], fill=YELLOW)
+    d.line([(140, 480), (1120, 280)], fill=GOLD, width=4)
+    d.polygon([(1020, 200), (1120, 240), (1040, 280)], fill=RED)
+
+
+def india_small_launchers(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 220, 320, 420], fill=RED)
+    d.rectangle([280, 300, 420, 520], fill=BLUE)
+    d.polygon([(400, 300), (480, 180), (560, 300)], fill=YELLOW)
+    d.ellipse([780, 160, 1100, 380], outline=GOLD, width=6)
+    d.line([(880, 380), (1000, 520)], fill=BLUE, width=5)
+
+
+def intl_mf_gate(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 200, 520, 560], radius=20, fill=BLUE)
+    d.rectangle([200, 320, 440, 380], fill=YELLOW)
+    d.rectangle([200, 420, 360, 480], fill=CREAM)
+    d.line([(640, 200), (640, 560)], fill=GOLD, width=4)
+    for i, h in enumerate([40, 40, 180, 180]):
+        x = 720 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, RED, YELLOW, YELLOW][i])
+
+
+def marico_bonorizon(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 260, 340, 460], fill=YELLOW)
+    d.rectangle([320, 340, 520, 520], fill=RED)
+    d.polygon([(900, 520), (980, 360), (1060, 520)], fill=BLUE)
+    d.rectangle([700, 220, 760, 320], fill=GOLD)
+    d.rectangle([820, 180, 880, 280], fill=GOLD)
+
+
 def main() -> None:
+    save("marico-bonorizon-d2c-stake-november-2026", marico_bonorizon)
+    save("international-mutual-fund-inflow-lock-november-2026", intl_mf_gate)
+    save("india-small-satellite-launchers-november-2026", india_small_launchers)
+    save("lt-noida-metro-aqua-extension-november-2026", lt_noida_metro)
+    save("airtel-prepaid-299-return-november-2026", airtel_299_return)
     save("railways-passenger-schedule-redress-november-2026", railways_schedule_redress)
     save("nse-digital-gold-egr-target-november-2026", nse_digital_gold_egr)
     save("diwali-gift-tax-threshold-november-2026", diwali_gift_tax)
