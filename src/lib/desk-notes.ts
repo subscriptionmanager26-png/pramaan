@@ -26,6 +26,30 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bosch-split-bonus-november-2026",
+    title: "Bosch’s board wants one share to become twenty through a split and a bonus",
+    summary:
+      "The auto-parts maker said on 8 November 2026 its directors approved a 1:5 stock split and a 3:1 bonus issue alongside its September-quarter earnings briefing, a two-step plan that would turn each existing share into twenty smaller pieces once shareholders sign off and record dates are fixed.",
+    category: "industry",
+    companyOrSector: "Auto ancillaries / corporate actions",
+    publishedAt: "2026-11-08T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bosch-split-bonus-november-2026"),
+    keyTakeaways: [
+      "The board approved subdividing each ₹10 face-value share into five ₹2 shares, then issuing three bonus shares of ₹2 for every one post-split share held.",
+      "Management has not yet announced record dates; the split still needs shareholder approval through a postal ballot before execution.",
+      "Bosch’s BSE quote closed near ₹50,990 after the Diwali muhurat session on 8 November, so the mechanical change is partly about lowering the per-unit price tag for retail buyers.",
+    ],
+    body: [
+      "What's going on here?",
+      "High-priced manufacturing stocks can keep small accounts on the sidelines even when the underlying business is liquid. Bosch Ltd disclosed on 8 November 2026 that its board approved two linked equity actions while reporting September-quarter results. First, each existing share with a ₹10 face value would be split into five shares of ₹2. Second, holders would receive three bonus shares of ₹2 for every one share held after the split. If both steps complete, one original share would become twenty shares at the lower face value. The company said the split awaits shareholder approval via postal ballot and that record dates for both actions are still to come. Reporting framed the move next to a steady recent rally in the stock, but the corporate filings themselves centre on capital restructuring rather than new operating guidance.",
+      "What does this mean?",
+      "A split changes the ticket size, not the economics. Total market value should stay the same immediately after the action, but each quote moves to one-fifth of the pre-split level before the bonus shares credit. The bonus leg then increases share count again without a cash call, so long-term holders end with more certificates that each carry a proportionally smaller claim on earnings. For retail investors who could not easily buy even a single lot at a ₹50,000-plus price, the combined effect is practical: more shares per folio and a lower nominal price on the screen. For index trackers and foreign portfolios, free-float math and minimum lot rules can shift even when fundamentals are unchanged. Bosch sits in the auto-ancillary supply chain, so the actions do not by themselves alter order books from carmakers; they reshape how the equity trades.",
+      "Why should I care?",
+      "If you already hold Bosch, watch the postal-ballot notice and the record-date circulars so you know when the split and bonus shares hit your demat account. If you were waiting on price alone, remember value still tracks profits and orders from OEM clients, not the mechanical division. Brokers and registrars may see a short burst of rebalancing trades around the ex-dates. Rivals in the same peer set rarely copy split timing exactly, so compare this move with how other high-priced industrial names handle retail liquidity. Track the shareholder voting outcome and any update on record dates in the coming exchange filings.",
+    ],
+  },
+  {
     slug: "railways-passenger-schedule-redress-november-2026",
     title: "A Punjab consumer court ordered Railways and IRCTC to refund a family that missed an early-departing train",
     summary:
@@ -10176,6 +10200,7 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bosch-split-bonus-november-2026": "companies",
   "railways-passenger-schedule-redress-november-2026": "policy",
   "nse-digital-gold-egr-target-november-2026": "markets",
   "diwali-gift-tax-threshold-november-2026": "policy",
