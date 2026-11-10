@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "gmr-bhogapuram-distance-udf-november-2026",
+    title: "GMR wants Bhogapuram flyers to pay airport fees by distance flown",
+    summary:
+      "Reporting on 10 November 2026 said GMR Airports proposed distance-based user development fees at Bhogapuram that could roughly double some domestic departure and arrival charges by FY31, with IndiGo objecting that the tariff would exceed fees at the old Visakhapatnam airport and hurt price-sensitive demand.",
+    category: "industry",
+    companyOrSector: "Aviation / airport regulation",
+    publishedAt: "2026-11-10T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gmr-bhogapuram-distance-udf-november-2026"),
+    keyTakeaways: [
+      "GMR Visakhapatnam International Airport Ltd proposed separate domestic UDF slabs for trips up to 1,000 km and beyond, with departing passengers paying ₹1,000 on shorter routes and ₹1,230 on longer ones in FY27 under filings reported on 10 November.",
+      "The plan would lift those departure fees toward ₹2,090 and ₹2,460 respectively by FY31, while international departure UDF could rise from ₹1,720 in FY27 to ₹3,450 in FY31.",
+      "IndiGo told AERA in an October filing that higher airport charges reduce demand in India's price-sensitive market and asked the regulator not to adopt distance-based fees.",
+    ],
+    body: [
+      "What's going on here?",
+      "Airport charges sit inside your ticket price even when you never visit the terminal billing desk, so every rupee of user development fee (UDF) shapes whether short domestic hops stay cheap. Wire copy on 10 November 2026 said GMR Airports, through subsidiary GMR Visakhapatnam International Airport Ltd, asked the Airports Economic Regulatory Authority of India to approve a distance-based UDF structure at the new Bhogapuram airport in Andhra Pradesh for the first control period from FY27 through FY31. Domestic passengers would fall into two buckets: journeys up to 1,000 kilometres and those beyond. For FY27, departing travellers on shorter legs would pay ₹1,000 and longer legs ₹1,230, with arrival fees of ₹400 and ₹530 respectively. The proposal would lift departure charges toward ₹2,090 and ₹2,460 by FY31. International passengers would face a single slab rising from ₹1,720 on departure in FY27 to ₹3,450 by FY31. If approved, it would be India's first distance-linked UDF design at a major private airport built at a reported project cost near ₹5,640 crore.",
+      "What does this mean?",
+      "UDF is collected by airlines on behalf of airport operators and folded into the fare you see at checkout, so a doubling over five years works like a stepped surcharge on regional connectivity. Shorter routes, where trains and buses compete, feel the pinch first because a few hundred extra rupees can flip the choice away from flying. GMR told AERA the structure is meant to recover its approved total revenue requirement on a greenfield asset that replaced Visakhapatnam's older terminal from August 2026. IndiGo, the largest carrier, filed on 31 October 2026 that combined arrival and departure fees would be more than double the legacy airport for domestic passengers and more than triple for international flyers, and asked the regulator to reject distance bands. Willie Walsh, IndiGo's chief executive, separately pressed for lower airport taxes in early November interviews cited in the same reporting cycle.",
+      "Why should I care?",
+      "If you fly in or out of Andhra Pradesh's new coastal gateway, compare all-in fares against train options on sub-1,000 km sectors once AERA publishes a final order. Corporate travel desks should model UDF escalation when negotiating airline contracts through FY31. Investors in GMR Airports, IndiGo, or SpiceJet should watch AERA's reply to GMR's 5 November justification filing and whether other operators copy distance bands in tariff petitions. Follow the regulator's decision on interim ₹835 departure charges versus the steeper proposal, any state government comments on connectivity goals, and whether rivals match promotional fares to offset higher airport levies.",
+    ],
+  },
+  {
+    slug: "india-natural-rate-cad-sbi-capital-november-2026",
+    title: "SBI economists think India's natural rate may hold steady as US yields rise",
+    summary:
+      "An SBI Capital Markets study reported on 10 November 2026 argued India's natural interest rate may not follow the United States higher even as global bond yields climb, but a slimmer India-US yield gap could make foreign portfolio flows a less reliable way to finance the current account deficit.",
+    category: "industry",
+    companyOrSector: "Macro / external sector",
+    publishedAt: "2026-11-10T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-natural-rate-cad-sbi-capital-november-2026"),
+    keyTakeaways: [
+      "The natural rate of interest, or r*, is the theoretical policy rate that keeps growth near potential while inflation stays anchored; SBI Capital Markets said India's r* need not rise in lockstep with the US as fiscal and inflation paths diverge.",
+      "The report tied roughly three quarters of the rise in US Treasury yields since mid-2020 to inflation-driven repricing, and pointed to higher US government borrowing as further upward pressure abroad.",
+      "For India, a narrower inflation and rate gap versus the US could weaken the historical pull of foreign portfolio investment into bonds and equities as a current account deficit financier.",
+    ],
+    body: [
+      "What's going on here?",
+      "When US bond yields climb faster than India's, global fund managers reprice where they park surplus dollars, which matters for a country that still runs a current account deficit. On 10 November 2026, wire reports summarised a study by SBI Capital Markets on India's natural rate of interest, the theoretical level at which the economy can grow near potential without stoking inflation. The authors argued India's r* can stay comparatively stable because growth and inflation expectations look more anchored than in the United States, where higher government debt, heavier borrowing, and overseas diversification away from the dollar are pushing natural rates up. The note estimated that inflation shocks explain about 75 to 85 per cent of the increase in US Treasury yields since mid-2020. It contrasted that with India, where gradual fiscal consolidation, improving credit metrics, and recovering household savings may offset some pressure from higher global rates.",
+      "What does this mean?",
+      "Natural-rate stability at home does not automatically deliver easy external financing. The same report highlighted that the inflation and policy-rate gap between India and the US has narrowed over the past decade, shrinking the extra yield foreign investors once collected on rupee assets. When that premium fades, portfolio inflows that historically helped cover trade deficits become less dependable, especially if US rates stay elevated for longer. The authors pointed to export-led manufacturing, renewed foreign interest in equities, and adequate forex reserves as buffers. For borrowers, a steady domestic r* picture still leaves actual loan rates sensitive to RBI decisions and liquidity, not academic estimates alone.",
+      "Why should I care?",
+      "If you hold gilt funds or long-duration debt, treat US inflation prints and Treasury auctions as inputs to your India duration bet, not background noise. Exporters and software services firms benefit when the report's prescription on narrowing trade gaps gains policy attention. Retail investors should not assume that every US rate hike must force an identical RBI move. Watch the next current account print, RBI commentary on r* estimates, foreign portfolio flows into debt versus equity, and whether the government accelerates export incentive schemes after similar research notes from other state-run banks.",
+    ],
+  },
+  {
     slug: "airtel-prepaid-bogo-november-2026",
     title: "Airtel is testing a buy-one-get-one offer on two prepaid plans",
     summary:
@@ -10512,6 +10560,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "gmr-bhogapuram-distance-udf-november-2026": "policy",
+  "india-natural-rate-cad-sbi-capital-november-2026": "policy",
   "airtel-prepaid-bogo-november-2026": "companies",
   "union-bank-locker-rbi-rules-november-2026": "policy",
   "hul-detergent-mrp-hike-november-2026": "markets",
