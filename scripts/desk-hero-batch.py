@@ -1200,6 +1200,28 @@ def airtel_299_return(d: ImageDraw.ImageDraw) -> None:
     d.line([(680, 520), (1150, 520)], fill=GOLD, width=3)
 
 
+def medical_devices_pli(d: ImageDraw.ImageDraw) -> None:
+    """MRI silhouette; component pipeline."""
+    d.rounded_rectangle([100, 220, 460, 540], radius=24, fill=BLUE)
+    d.ellipse([180, 300, 380, 480], outline=GOLD, width=6)
+    d.rectangle([240, 360, 320, 420], fill=YELLOW)
+    d.line([(460, 380), (640, 380)], fill=GOLD, width=4)
+    for i, h in enumerate([60, 100, 140, 180]):
+        x = 680 + i * 90
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.polygon([(1040, 240), (1140, 320), (1040, 400)], fill=GOLD)
+
+
+def spicejet_winter_cancel(d: ImageDraw.ImageDraw) -> None:
+    """Thin schedule bars vs wide filed timetable; jet motif."""
+    d.polygon([(140, 220), (420, 180), (480, 420), (120, 480)], fill=RED)
+    for i, h in enumerate([80, 80, 80, 80, 80, 80, 80, 280]):
+        x = 560 + i * 70
+        d.rectangle([x, 560 - h, x + 45, 560], fill=BLUE if h < 120 else YELLOW)
+    d.line([(560, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(900, 200), (1080, 260), (900, 320)], fill=GOLD)
+
+
 def lt_noida_metro(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([80, 480, 1180, 520], fill=INK, width=0)
     d.rectangle([200, 360, 260, 480], fill=BLUE)
@@ -1421,6 +1443,8 @@ def main() -> None:
     save("ongc-venezuela-operatorship-november-2026", ongc_venezuela)
     save("makemytrip-quick-ride-pooling-november-2026", makemytrip_quick_ride)
     save("india-domestic-air-demand-soft-november-2026", domestic_air_soft)
+    save("medical-devices-pli-2-november-2026", medical_devices_pli)
+    save("spicejet-winter-cancellations-november-2026", spicejet_winter_cancel)
 
 
 if __name__ == "__main__":

@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "medical-devices-pli-2-november-2026",
+    title: "India extended medical-device subsidies toward parts, not just finished kits",
+    summary:
+      "On 10 November 2026 the Department of Pharmaceuticals reopened the Production Linked Incentive scheme for medical devices through 2035-36 with about ₹2,700 crore of outlay, shifting PLI 2.0 toward critical components and high-end equipment as industry bodies warned device imports could cross ₹1 lakh crore this year.",
+    category: "industry",
+    companyOrSector: "Healthcare manufacturing / industrial policy",
+    publishedAt: "2026-11-10T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("medical-devices-pli-2-november-2026"),
+    keyTakeaways: [
+      "Fresh applications under medical-device PLI 2.0 opened on 10 November 2026 with manufacturing incentives spread across consumables, critical components, advanced imaging gear, and equipment that is today only assembled domestically.",
+      "The revised programme removes minimum sales thresholds for claiming incentives, allows three years to commission projects, and offers differentiated rates where domestic capacity is thinnest.",
+      "Association of Indian Medical Device Industry coordinator Rajiv Nath said imports could exceed ₹1 lakh crore in 2026, making local component capacity a policy priority.",
+    ],
+    body: [
+      "What's going on here?",
+      "Hospitals buy devices every week, but much of the bill still lands on imports when domestic plants only screw together foreign kits. On 10 November 2026, the Department of Pharmaceuticals invited new applications under an expanded Production Linked Incentive scheme for medical devices, extending support through 2035-36 with an outlay of about ₹2,700 crore. PLI 2.0 splits the money across four buckets: everyday consumables and implants, critical components, high-end machines where local manufacturing is still nascent, and equipment that today reaches Indian plants mainly as an assembly line. The government said the first phase since FY21 had already enabled production of more than 60 categories, including MRI systems, CT scanners, cath labs, and dialysis lines worth over ₹16,000 crore of output. Industry forums welcomed the reboot but stressed that the earlier version left gaps on components and shop-floor scale.",
+      "What does this mean?",
+      "Incentives now follow where import bills hurt most. Finished device lines got attention in PLI 1.0; version 2.0 tilts toward syringes, probes, and precision parts that hospitals reorder constantly. Longer implementation windows and no minimum sales hurdle lower the entry bar for mid-sized Indian manufacturers and for global firms willing to localise deeper than a single assembly hall. Poly Medicure managing director Himanshu Baid, quoted in the same reporting cycle, said differentiated rates match how hard each segment is to build. Higher support where import dependence is deepest can nudge capital toward tool rooms and sterile packaging, not only finished machines. Procurement rules, tariff bands, and a dedicated medtech regulator still matter as much as cash rebates, but the subsidy map now signals components first.",
+      "Why should I care?",
+      "Hospital procurement managers should track which domestic vendors qualify for PLI 2.0 before the next bulk tender, because accredited local lines can shorten spare-part lead times. Medtech entrepreneurs weighing a factory bet get a clearer list of eligible segments and timelines. Investors in listed device makers should read annual reports for capex tied to component lines, not only assembly margin. Watch how many applications file by the first compliance window, whether AiMeD and MTaI push for faster customs and procurement preference, and if import statistics for the December quarter show any early shift away from China and Vietnam on disposables.",
+    ],
+  },
+  {
+    slug: "spicejet-winter-cancellations-november-2026",
+    title: "SpiceJet is still booking flights on a schedule its fleet cannot fly",
+    summary:
+      "Reporting on 10 November 2026 said SpiceJet Ltd cancelled 25 to 30 flights a day while operating only 26 to 38 rotations against a Directorate General of Civil Aviation winter roster of 69 to 80, with sources putting the active fleet near 12 aircraft and passengers facing multi-hour waits before learning a leg is dropped.",
+    category: "industry",
+    companyOrSector: "Aviation / consumer travel",
+    publishedAt: "2026-11-10T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("spicejet-winter-cancellations-november-2026"),
+    keyTakeaways: [
+      "Operational data cited on 10 November 2026 showed SpiceJet flew 26 to 38 airport movements on 5 to 9 November 2026 versus 69 to 80 listed in its approved winter timetable.",
+      "Sources said the airline had about 12 aircraft in service, including three grounded wet-leased jets, and was scrapping 25 to 30 departures daily, often announced only after passengers reached the terminal.",
+      "Directorate General of Civil Aviation data quoted in the same cycle put SpiceJet's domestic market share at 0.6% in September 2026 with on-time performance near 16.6% and more than a fifth of flights cancelled that month.",
+    ],
+    body: [
+      "What's going on here?",
+      "A winter timetable is a promise to regulators and passengers about how many take-offs an airline can staff and fuel. Wire copy on 10 November 2026, citing operational trackers and people familiar with the airline, said SpiceJet Ltd was flying only a slice of the winter schedule it filed with India's aviation regulator. The approved roster allows 69 to 80 daily airport movements; actual operations reportedly ranged from 26 on 9 November to 38 on 5 and 8 November. Sources attributed gaps to a fleet they sized near 12 airframes, including three wet-leased planes grounded over payments, and to daily cancellations estimated at 25 to 30 legs, many communicated after passengers had already waited hours at the gate. The coverage noted advance bookings remained open even as unpaid vendor and salary disputes, flagged earlier in the quarter, continued to shrink reliable capacity.",
+      "What does this mean?",
+      "When an airline sells seats on a network it cannot operate, the cost lands on travellers first through missed connections and refund queues, not on benchmark indices. SpiceJet's September 2026 market share had already slipped to 0.6% with on-time performance near 16.6% and cancellation rates above 20%, so the November gap between filed schedule and flown schedule widens trust risk on thin routes where rivals such as IndiGo and Air India hold most capacity. Wet-leased aircraft add flexibility when payments flow; when lessors park jets, the schedule collapses faster than ticket sales. Regulators can audit filed plans against flown data, but passengers still bear last-minute uncertainty unless refund rules and rebooking obligations tighten. The episode sits beside broader fare inflation on trunk routes, yet it is specific to one balance sheet under cash-and-carry operations with ground handlers and fuel suppliers.",
+      "Why should I care?",
+      "If you hold SpiceJet tickets through December, keep backup rail or rival-airline options on the same corridor and screen refund timelines before counting on connections. Corporate travel policies should treat the carrier as elevated operational risk until flown rotations match filed winter movements for several consecutive weeks. Investors already differentiate the stock from larger listed peers; the actionable watch item is regulatory follow-through on schedule compliance and passenger refunds. Track weekly movement counts against the DGCA roster, any fresh Directorate statements after prior financial stress, whether wet-leased jets return, and if advance-sale volumes fall once cancelled-leg complaints accumulate.",
+    ],
+  },
+  {
     slug: "blackstone-iifl-finance-capital-raise-november-2026",
     title: "Blackstone agreed to put ₹5,000 crore into IIFL Finance",
     summary:
@@ -10632,6 +10680,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "medical-devices-pli-2-november-2026": "policy",
+  "spicejet-winter-cancellations-november-2026": "markets",
   "blackstone-iifl-finance-capital-raise-november-2026": "markets",
   "india-two-wheeler-latin-america-exports-november-2026": "markets",
   "retail-investors-blue-chip-concentration-november-2026": "markets",
