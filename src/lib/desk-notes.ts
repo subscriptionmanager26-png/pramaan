@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "blackstone-iifl-finance-capital-raise-november-2026",
+    title: "Blackstone agreed to put ₹5,000 crore into IIFL Finance",
+    summary:
+      "On 10 November 2026 IIFL Finance said its board cleared a ₹6,414 crore preferential issue, with a Blackstone-backed vehicle subscribing to about ₹5,000 crore of compulsorily convertible preference shares at ₹602 apiece for a roughly 15.6% fully diluted stake and two board nomination rights if shareholding stays above agreed thresholds.",
+    category: "industry",
+    companyOrSector: "NBFC / capital markets",
+    publishedAt: "2026-11-10T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("blackstone-iifl-finance-capital-raise-november-2026"),
+    keyTakeaways: [
+      "The package comprises about 8.55 crore CCPS and 2.1 crore warrants at ₹602 each, with promoters Nirmal Jain and Venkataraman Rajamani putting in another ₹1,264 crore via warrants.",
+      "Ingot SG Pte Ltd, backed by Blackstone-managed funds, would hold about 15.57% on a fully diluted basis after conversion, with Anchorage Capital funds adding ₹150 crore.",
+      "IIFL Finance said the raise could lift its capital adequacy ratio toward 30% from 17%, supporting secured lending such as gold finance; shareholders vote at an EGM on 4 December 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "Non-bank lenders need equity when regulators tighten risk weights and unsecured books slow down, so a large anchor investor can reset both capital ratios and borrowing costs. On 10 November 2026, IIFL Finance told exchanges its board approved a ₹6,414.2 crore preferential issue split between compulsorily convertible preference shares and warrants priced at ₹602 each. Ingot SG Pte Ltd, an investment vehicle linked to funds managed or advised by Blackstone affiliates, is set to subscribe to CCPS worth nearly ₹5,000 crore, giving it about 15.57% on a fully diluted basis after conversion and relevant warrant exercise. Anchorage Capital's SEBI-registered schemes will add ₹60 crore and ₹90 crore respectively. Promoter Nirmal Jain, joint managing director Venkataraman Rajamani, and Ardent Impex will take warrants totalling about ₹1,264 crore, with 25% payable upfront. The company said the transaction is not a change of control and that Blackstone would count as a public shareholder while existing promoters remain in the promoter group.",
+      "What does this mean?",
+      "Fresh equity lands first on the balance sheet, which is why IIFL Finance guided that its capital adequacy ratio could move toward 30% from about 17%. That headroom matters for a lender leaning harder on gold-backed and other secured products while personal and microfinance lines stay under stress. Management tied the raise to growth in secured lending, possible rating upgrades, and lower wholesale funding costs over time. Board papers also spell out special rights for the Blackstone affiliate, including nomination of two non-executive directors while collective holding stays above roughly 10%, plus reserved matters and pre-emptive rights on future issuances, subject to shareholder approval at an extraordinary general meeting scheduled for 4 December 2026. The board separately proposed re-designating Venkataraman Rajamani to a non-executive non-independent role, pending votes and regulatory clearances.",
+      "Why should I care?",
+      "If you borrow against gold or hold NBFC debt funds, watch whether rating agencies treat the capital injection as durably lowering refinancing risk. Borrowers should not expect cheaper gold loans overnight, but a stronger capital base can slow branch and product closures when unsecured collections stay tough. Equity holders face dilution from the CCPS structure but gain a global allocator with board influence if the EGM passes. Track the December shareholder vote, RBI and stock-exchange clearances on preferential pricing, post-money capital adequacy in the next quarterly filing, and whether IIFL Samasta and IIFL Home Finance see parallel board representation under the agreed thresholds.",
+    ],
+  },
+  {
+    slug: "india-two-wheeler-latin-america-exports-november-2026",
+    title: "Indian two-wheeler makers are betting on Latin America over Africa",
+    summary:
+      "Mint reporting on 10 November 2026 said Hero, Bajaj, TVS, and Royal Enfield are deepening factories and product lines in Brazil, Mexico, and Colombia as delivery and mototaxi demand turns motorcycles into income assets, while battery-swap electric fleets in Africa push petrol-bike exporters to diversify geography.",
+    category: "industry",
+    companyOrSector: "Automotive / exports",
+    publishedAt: "2026-11-10T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-two-wheeler-latin-america-exports-november-2026"),
+    keyTakeaways: [
+      "Colombia has ranked as the largest export destination for Indian motorcycles for four straight years, with Kotak Institutional Equities estimating it at about 14% of industry exports in FY26.",
+      "Hero MotoCorp approved up to ₹300 crore more for its Netherlands holding company to fund Colombia and Brazil units; Bajaj's Manaus plant can build 50,000 units a year and KTM added a 20,000-unit Brazilian line in October.",
+      "Analysts cite Latin American buyers using bikes for courier and mototaxi work, while Spiro-style battery swapping in Uganda, Rwanda, and Kenya threatens legacy petrol volumes in Africa.",
+    ],
+    body: [
+      "What's going on here?",
+      "Export markets only stay attractive when the vehicle pays for itself, and Indian two-wheeler makers built scale in Africa on affordable petrol bikes before electrification and policy shifts began rewriting that map. Wire copy on 10 November 2026, drawing on recent earnings calls and exchange filings, said Latin America has overtaken Africa as the focal point for Hero MotoCorp, Bajaj Auto, TVS Motor Company, and Royal Enfield. Colombia has topped India's motorcycle export charts for four consecutive years, accounting for roughly a quarter of Hero's overseas shipments alongside Bangladesh. Executives describe Latin American buyers using motorcycles for delivery, courier, and mototaxi work, which favours utility-oriented and flex-fuel models. Hero's board approved up to ₹300 crore of fresh capital for its Netherlands subsidiary to route into Colombia and Brazil operations. Bajaj's Manaus factory, live since 2024, carries 50,000 units of annual capacity, while group company KTM opened a dedicated 20,000-unit plant in Brazil in October. Royal Enfield plans a Manaus CKD assembly site from 2027. At the same time, battery-swap operators such as Spiro are expanding in East Africa, raising the risk that petrol exporters become hardware suppliers in a market they once dominated.",
+      "What does this mean?",
+      "When a bike becomes an earnings tool, buyers care about financing, spare parts, and fuel flexibility more than showroom flair, which is why Brazilian flex-fuel portfolios and in-house dealer finance matter as much as headline cc ratings. Bajaj told investors that Latin American industry volumes grew about 12% while its own shipments rose 44%, with sports segments above 150cc up 50%. TVS attributed part of its 33% international two-wheeler growth in the September quarter to Latin America alongside Africa. The shift is defensive as well as offensive: Kotak Institutional Equities warned that Africa's electric two-wheeler segment could compound near 35% annually even if total market growth stays high single digits, potentially handing customer relationships to swap-network operators. Spreading capacity across Colombia, Brazil, and Mexico reduces dependence on any one continent when geopolitical or currency shocks hit.",
+      "Why should I care?",
+      "If you work in auto components or tyres, Latin American CKD plants can change order books for exports from India versus localised assembly. Fleet buyers in logistics should track which OEMs offer commercial-grade service density in Colombia and Brazil before signing bulk deals. Investors in Hero, Bajaj, TVS, or Enfield should read export mix disclosures each quarter, not just domestic festive numbers. Watch Hero's Brazil plant startup timeline, Royal Enfield's 2027 Manaus rollout, African e-bike subsidy updates, and whether Colombia and Brazil growth slows to the single-digit pace brokers model for FY27.",
+    ],
+  },
+  {
+    slug: "retail-investors-blue-chip-concentration-november-2026",
+    title: "Small shareholders trimmed stakes in half of BSE firms last quarter",
+    summary:
+      "A Mint analysis published 10 November 2026 of 4,729 BSE-listed companies found retail investors holding up to ₹1 lakh in equity cut positions in 49.4% of names during the September quarter, even as Reliance Industries, HDFC Bank, and PC Jeweller each added more than a million small shareholders.",
+    category: "industry",
+    companyOrSector: "Markets / household investors",
+    publishedAt: "2026-11-10T16:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("retail-investors-blue-chip-concentration-november-2026"),
+    keyTakeaways: [
+      "Retail ownership fell in 49.4% of BSE companies in Q2 FY27 versus 47.5% in the prior quarter, while share counts rose in 42.4% of names, per ACE Equity data cited on 10 November.",
+      "Reliance added 401,762 retail shareholders, HDFC Bank 273,525, PC Jeweller 242,298, and Cupid 173,458; Bajaj Auto, IDFC First Bank, and Wipro saw large retail exits.",
+      "Analysts quoted in the piece tied part of Reliance's jump to token holdings aimed at Jio Platforms' shareholder quota, while HDFC Bank drew buyers after an 11% quarterly share-price fall left valuations below its five-year price-to-book average.",
+    ],
+    body: [
+      "What's going on here?",
+      "When small investors own thousands of companies, quarterly shareholding filings become a stress test on whether that breadth is conviction or clutter. On 10 November 2026, Mint published an analysis of ACE Equity data covering 4,729 BSE-listed companies in the quarter ended September 2026. Investors holding up to ₹1 lakh in a single stock trimmed exposure in 49.4% of those companies, up from 47.5% in the previous quarter, while retail counts rose in 42.4% of names versus 43.2% before. Four companies each added more than a million net retail shareholders: Reliance Industries with 401,762, HDFC Bank with 273,525, PC Jeweller with 242,298, and Cupid with 173,458. On the exit side, Bajaj Auto lost 353,533 small holders, IDFC First Bank 138,832, and Wipro 103,653. Trackk chief executive Vedant Gupte described the pattern as portfolio pruning rather than a wholesale exit from equities, with money clustering into either large liquid names or selective turnaround bets.",
+      "What does this mean?",
+      "Concentration has different drivers in each marquee name. Reliance's retail base reached about 4.87 million holders, up 9% sequentially, with ownership inching to 7.24% from 7.16%. Portfolio managers quoted in the same reporting linked part of the surge to investors buying a single share near ₹1,300 to qualify for Jio Platforms' shareholder reservation during its recent IPO, where the reserved tranche was subscribed about 7.6 times even as the stock later listed roughly 27% above the issue price. HDFC Bank's retail roster grew from 3.54 million in December 2025 to 4.68 million by September 2026 as the stock fell 11.2% in the quarter and traded near 1.79 times book against a five-year average near 2.69 times. BSE itself added 161,456 retail holders, illustrating that momentum stories still pull cash even during a broader cleanup. The data do not prove the same individuals sold Wipro and bought HDFC Bank, but they show coexistence of exit lists and crowded entry lines.",
+      "Why should I care?",
+      "If you maintain a long tail of small positions, the aggregate filing is a nudge to decide which names still earn capital and which were holiday impulses. Reliance and HDFC Bank holders should separate quota-driven entries from long-term holders before reading attendance data at future AGMs. Turnaround punters in jewellery or specialty chemicals should remember that additions can reverse quickly when liquidity thins. Watch December-quarter shareholding trends for whether Reliance's retail count normalises post-Jio listing, if HDFC Bank retention holds after the recent drawdown, and whether mid-cap retail selling spreads beyond the 49% mark without fresh large-cap inflows.",
+    ],
+  },
+  {
     slug: "gmr-bhogapuram-distance-udf-november-2026",
     title: "GMR wants Bhogapuram flyers to pay airport fees by distance flown",
     summary:
@@ -10560,6 +10632,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "blackstone-iifl-finance-capital-raise-november-2026": "markets",
+  "india-two-wheeler-latin-america-exports-november-2026": "markets",
+  "retail-investors-blue-chip-concentration-november-2026": "markets",
   "gmr-bhogapuram-distance-udf-november-2026": "policy",
   "india-natural-rate-cad-sbi-capital-november-2026": "policy",
   "airtel-prepaid-bogo-november-2026": "companies",
