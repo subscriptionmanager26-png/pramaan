@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AskAiIcon } from "@/components/icons/AskAiIcon";
 import { Logo } from "@/components/Logo";
+import { AppNavLink } from "@/components/shell/AppNavLink";
 import { SiteAccountMenu } from "@/components/site/SiteAccountMenu";
 
 const nav = [
@@ -51,7 +52,7 @@ export function SiteHeader() {
           {nav.map((item) => {
             const active = navItemActive(pathname, item.href);
             return (
-              <Link
+              <AppNavLink
                 key={item.href}
                 href={item.href}
                 className={`rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors ${
@@ -59,7 +60,7 @@ export function SiteHeader() {
                 }`}
               >
                 {item.label}
-              </Link>
+              </AppNavLink>
             );
           })}
         </nav>

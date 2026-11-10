@@ -25,7 +25,10 @@ export default async function NewsPage({
   const { topic = "all" } = await searchParams;
   const active = topics.some((t) => t.id === topic) ? topic : "all";
   const items = active === "all" ? newsFeed : newsFeed.filter((n) => n.topic === active);
-  const sorted = [...items].sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
+  // Cap the rail — full desk archive is huge and soft-nav flights were dying on it.
+  const sorted = [...items]
+    .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt))
+    .slice(0, 60);
   const [featured, second, ...rest] = sorted;
 
   const researchSidebar = researchRailItems(5);

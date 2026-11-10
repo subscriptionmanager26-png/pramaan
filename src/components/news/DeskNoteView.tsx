@@ -12,9 +12,10 @@ export function DeskNoteView({
 }) {
   return (
     <>
-      <Link href="/news" className="text-[13px] font-semibold text-accent hover:underline">
+      {/* Full document nav: App Router soft-nav from /news/[slug] → /news returns 500. */}
+      <a href="/news" className="text-[13px] font-semibold text-accent hover:underline">
         ← All news
-      </Link>
+      </a>
 
       <p className="mt-5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink-3">
         Desk note · {note.category} · {note.companyOrSector}

@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpen, Briefcase, Newspaper, ScanSearch } from "lucide-react";
 
 import { AskAiIcon } from "@/components/icons/AskAiIcon";
+import { AppNavLink } from "@/components/shell/AppNavLink";
 
 /** Primary mobile destinations — Ask AI centered (old Pocketedge Shell sizing). */
 const tabs = [
@@ -45,7 +45,7 @@ export function BottomNav() {
           const { href, label } = tab;
           const active = tabActive(pathname, href);
           return (
-            <Link
+            <AppNavLink
               key={href}
               href={href}
               className={`relative flex h-full min-w-[4.25rem] flex-1 flex-col items-center justify-center gap-0.5 text-[12px] font-medium transition-colors ${
@@ -58,7 +58,7 @@ export function BottomNav() {
                 <tab.Icon className="h-6 w-6" strokeWidth={active ? 2.25 : 2} aria-hidden />
               )}
               {label}
-            </Link>
+            </AppNavLink>
           );
         })}
       </div>

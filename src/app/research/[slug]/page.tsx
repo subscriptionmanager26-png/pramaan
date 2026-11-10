@@ -57,9 +57,10 @@ export default async function ResearchArticlePage({
 
     return (
       <Page width="content">
-        <Link href="/research" className="text-[13px] font-semibold text-accent hover:underline">
+        {/* Full document nav: App Router soft-nav from /research/[slug] → /research returns 500. */}
+        <a href="/research" className="text-[13px] font-semibold text-accent hover:underline">
           ← All research
-        </Link>
+        </a>
 
         <div className="mt-5 flex flex-wrap items-center gap-2">
           <span
@@ -157,9 +158,9 @@ export default async function ResearchArticlePage({
 
   return (
     <Page width="content">
-      <Link href="/research" className="text-[13px] font-semibold text-accent hover:underline">
+      <a href="/research" className="text-[13px] font-semibold text-accent hover:underline">
         ← All research
-      </Link>
+      </a>
 
       <p className="mt-5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink-3">
         Research brief · {note.category} · {note.companyOrSector}
