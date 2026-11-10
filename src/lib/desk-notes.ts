@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "airtel-prepaid-bogo-november-2026",
+    title: "Airtel is testing a buy-one-get-one offer on two prepaid plans",
+    summary:
+      "Reporting on 9 November 2026 said Bharti Airtel Ltd is rolling out a limited 1+1 Recharge Free promotion on its ₹349 and ₹399 prepaid packs for selected users through the Airtel Thanks app, effectively stretching 28-day validity to about 56 days when the second recharge credits.",
+    category: "industry",
+    companyOrSector: "Telecom / consumer tariffs",
+    publishedAt: "2026-11-10T02:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airtel-prepaid-bogo-november-2026"),
+    keyTakeaways: [
+      "The buy-one-get-one tag appears on ₹349 and ₹399 prepaid plans inside Airtel Thanks for account holders the operator selects, not for every subscriber.",
+      "Under the promo, a paid recharge on either plan is matched with a second recharge of the same value, turning a 28-day pack into roughly 56 days of service.",
+      "The ₹349 plan still carries 2GB daily data and unlimited voice; the ₹399 plan offers unlimited 4G and 5G data without a daily cap on compatible handsets.",
+    ],
+    body: [
+      "What's going on here?",
+      "Prepaid users still compare operators rupee for rupee on the recharge screen, so limited double-validity deals are one way to keep sims active without announcing a full tariff cut. Wire copy on 9 November 2026 said Bharti Airtel started offering a buy-one-get-one promotion branded as 1+1 Recharge Free on its ₹349 and ₹399 prepaid plans. Eligible customers see the tag inside the Airtel Thanks app; others do not, which means the scheme is targeted rather than network-wide. When it applies, paying for one recharge triggers a second recharge of the same denomination, so a 28-day plan can stretch toward 56 days. The ₹349 pack continues to bundle 2GB high-speed data per day with unlimited calls, while the ₹399 pack advertises unlimited 4G and 5G data without a daily usage ceiling on supported phones, both subject to standard fair-use terms in the operator’s plan fine print.",
+      "What does this mean?",
+      "BOGO mechanics lower the effective monthly cost for heavy data users who qualify, which helps retention when rivals keep cheaper entry plans visible. Because eligibility is account-specific, churn-prone circles can receive sharper incentives while average revenue per user in mature bases is protected elsewhere. Kirana and app recharge counters must still sell standard SKUs; the free leg appears only through the Thanks journey for users who see the offer. The move sits in the same competitive chapter as Airtel’s earlier decision to bring back its ₹299 pack, but it is a distinct tactical promo rather than a permanent list-price change.",
+      "Why should I care?",
+      "If you are on Airtel prepaid, open Thanks before your next top-up and check whether the 1+1 tag shows on ₹349 or ₹399. Compare effective cost per month against Jio and Vi plans with similar data caps, not just headline MRP. Heavy streamers may favour the ₹399 unlimited-data leg if it appears on your account; lighter users should run the maths on the ₹349 double-validity deal. Investors should treat the offer as a subscriber-retention lever ahead of the December quarter, not a sustained ARPU hike. Watch how long the promo stays visible, whether Trai receives complaints on selective pricing, and if competitors mirror double-validity counters in the same circles.",
+    ],
+  },
+  {
+    slug: "union-bank-locker-rbi-rules-november-2026",
+    title: "A Delhi consumer court ordered Union Bank to pay ₹47 lakh after locker jewellery went missing",
+    summary:
+      "Reporting on 9 November 2026 said the Delhi State Consumer Commission directed Union Bank of India to refund about ₹47 lakh of jewellery plus interest after a Naraina Vihar customer found her joint locker surrendered without notice and items missing, a ruling lawyers said rests on RBI locker rules banks cannot skip.",
+    category: "industry",
+    companyOrSector: "Banking / consumer protection",
+    publishedAt: "2026-11-10T02:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("union-bank-locker-rbi-rules-november-2026"),
+    keyTakeaways: [
+      "The commission’s 27 October 2026 order cited about ₹47 lakh in missing jewellery, 6% simple interest from September 2018, plus ₹3 lakh for mental agony and ₹50,000 in litigation costs.",
+      "Lawyers quoted in the 9 November wire said banks need a customer’s signed surrender and key return receipt before closing a locker; joint holders must be notified under the operating mandate.",
+      "RBI guidelines cap routine locker-loss liability at 100 times annual rent, but consumer forums can award the actual value when they find the bank at fault.",
+    ],
+    body: [
+      "What's going on here?",
+      "Bank lockers are a regulated custody service, not a deposit account, so closure and liability rules matter when gold or documents are inside. On 9 November 2026, wire reports summarised a Delhi State Consumer Disputes Redressal Commission judgment from 27 October 2026 against Union Bank of India. A Naraina Vihar resident said her joint locker, opened with her late father-in-law, had been surrendered years earlier without her knowledge while annual rent debits continued. When she sought access, she alleged jewellery worth about ₹47 lakh was gone. The commission ordered the bank to refund that amount with 6% simple interest from 1 September 2018, plus ₹3 lakh for mental agony and ₹50,000 toward legal costs. Legal experts cited in the same reporting said Reserve Bank of India norms require written notice, documented surrender, and independent witnesses before forced openings after long unpaid rent.",
+      "What does this mean?",
+      "Joint mandates mean every authorised holder must be looped in before keys are taken or lockers broken open; a silent surrender violates the two-way process banks promise in locker agreements. For households storing wedding gold or documents, the case is a prompt to keep purchase bills, photos, and valuation certificates outside the branch, because banks usually log access, not contents. When disputes arise, customers can escalate to the RBI Ombudsman portal, which can award up to ₹30 lakh plus harassment costs, or approach consumer courts within two years for higher-value claims. Banks carry insurance and statutory caps, yet commissions are not bound by the 100-times-rent ceiling if negligence is proved.",
+      "Why should I care?",
+      "If you rent a locker, download rent receipts yearly, photograph the operating mandate, and ask the branch to confirm all joint holders on file. After a bereavement, update nominees and signatures promptly so a survivor is not locked out by outdated records. Before storing high-value items, read the bank’s locker agreement on notice periods and forced-entry triggers after three years of unpaid rent. Watch whether Union Bank appeals, if RBI tightens audit checklists for locker surrenders, and whether other public sector lenders refresh customer communications after the Delhi order.",
+    ],
+  },
+  {
     slug: "hul-detergent-mrp-hike-november-2026",
     title: "Hindustan Unilever just raised MRPs on Surf Excel, Rin and Wheel again",
     summary:
@@ -10464,6 +10512,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "airtel-prepaid-bogo-november-2026": "companies",
+  "union-bank-locker-rbi-rules-november-2026": "policy",
   "hul-detergent-mrp-hike-november-2026": "markets",
   "veritas-finance-sebi-ipo-november-2026": "markets",
   "cbi-future-retail-sbi-fraud-november-2026": "policy",
