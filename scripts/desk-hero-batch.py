@@ -1284,6 +1284,54 @@ def india_fertiliser_winter(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW][i])
 
 
+def tata_power_pumped_storage(d: ImageDraw.ImageDraw) -> None:
+    """Dual reservoirs; uphill pipe and turbine block."""
+    d.ellipse([100, 380, 320, 560], fill=BLUE)
+    d.ellipse([120, 360, 300, 500], fill=CREAM)
+    d.polygon([(160, 200), (260, 120), (360, 200), (360, 340), (160, 340)], fill=RED)
+    d.line([(260, 340), (260, 420)], fill=GOLD, width=8)
+    for i in range(4):
+        y = 200 + i * 40
+        d.polygon([(520, y), (560, y + 20), (520, y + 40)], fill=GOLD)
+    d.rectangle([600, 260, 1120, 520], fill=BLUE)
+    d.ellipse([780, 320, 940, 480], fill=YELLOW)
+    d.polygon([(940, 400), (1020, 360), (1020, 440)], fill=RED)
+
+
+def india_alcobev_packaging(d: ImageDraw.ImageDraw) -> None:
+    """Glass bottle blocks; rising cost bars."""
+    d.rounded_rectangle([120, 180, 260, 560], radius=24, fill=BLUE)
+    d.rectangle([150, 220, 230, 520], fill=CREAM)
+    d.rounded_rectangle([300, 240, 420, 560], radius=20, fill=RED)
+    for i, h in enumerate([140, 200, 280, 360]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, RED, BLUE, YELLOW][i])
+    d.line([(620, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(560, 300), (620, 260), (620, 340)], fill=GOLD)
+
+
+def india_scotch_customs_meet(d: ImageDraw.ImageDraw) -> None:
+    """Port crane silhouette; split duty arrows."""
+    d.rectangle([100, 400, 480, 560], fill=BLUE)
+    d.polygon([(300, 400), (300, 180), (360, 140), (420, 180), (420, 400)], fill=RED)
+    d.line([(300, 200), (480, 200)], fill=GOLD, width=4)
+    d.line([(660, 200), (1180, 200)], fill=GOLD, width=2)
+    d.polygon([(700, 280), (780, 240), (860, 280), (820, 380), (740, 380)], fill=YELLOW)
+    d.polygon([(920, 300), (1000, 260), (1080, 300), (1040, 400), (960, 400)], fill=RED)
+    d.line([(720, 440), (1080, 440)], fill=BLUE, width=6)
+
+
+def singapore_airlines_air_india(d: ImageDraw.ImageDraw) -> None:
+    """Twin tails; loss bar stepping down."""
+    d.polygon([(200, 520), (280, 200), (360, 520)], fill=BLUE)
+    d.polygon([(440, 520), (520, 240), (600, 520)], fill=RED)
+    for i, h in enumerate([380, 320, 260, 220]):
+        x = 720 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, RED, YELLOW, BLUE][i])
+    d.line([(700, 560), (1180, 560)], fill=INK, width=2)
+    d.arc([100, 120, 400, 200], 0, 180, fill=GOLD, width=3)
+
+
 def amex_reward_reversal(d: ImageDraw.ImageDraw) -> None:
     """Card slab; points counter U-turn arrow."""
     d.rounded_rectangle([100, 240, 480, 520], radius=28, fill=BLUE)
@@ -1552,6 +1600,10 @@ def main() -> None:
     save("bajaj-finance-qip-november-2026", bajaj_finance_qip)
     save("india-fertiliser-subsidy-winter-november-2026", india_fertiliser_winter)
     save("amex-reward-points-reversal-november-2026", amex_reward_reversal)
+    save("tata-power-shirwata-pumped-storage-november-2026", tata_power_pumped_storage)
+    save("india-alcobev-packaging-cost-west-asia-november-2026", india_alcobev_packaging)
+    save("india-scotch-customs-ministries-meet-november-2026", india_scotch_customs_meet)
+    save("singapore-airlines-air-india-losses-november-2026", singapore_airlines_air_india)
 
 
 if __name__ == "__main__":

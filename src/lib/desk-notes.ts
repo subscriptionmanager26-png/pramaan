@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tata-power-shirwata-pumped-storage-november-2026",
+    title: "Tata Power's board cleared an ₹11,871 crore pumped storage plant in Maharashtra",
+    summary:
+      "Tata Power Company Ltd told exchanges on 11 November 2026 that its board approved roughly ₹11,871 crore of spending on a 1.8 gigawatt pumped storage project at Shirwata in Maharashtra, with about three quarters of the cost set to be debt-funded and commissioning slated in roughly four years.",
+    category: "industry",
+    companyOrSector: "Power / renewables",
+    publishedAt: "2026-11-11T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-power-shirwata-pumped-storage-november-2026"),
+    keyTakeaways: [
+      "The board signed off on the Shirwata pumped storage scheme on 11 November 2026, with exchange filings citing total project cost near ₹11,871 crore and a 1.8GW scale.",
+      "Filings said about 75% of the outlay would be financed with debt and the balance with equity, with completion targeted in about 51 months.",
+      "Pumped storage moves water uphill when power is cheap or plentiful and releases it through turbines when demand peaks, which grid planners treat as a companion to solar and battery projects.",
+    ],
+    body: [
+      "What's going on here?",
+      "Pumped storage gives a grid operator a giant, reusable battery by shifting water between two reservoirs at different heights. On 11 November 2026, Tata Power Company Ltd filed with Indian exchanges that its board approved investment of about ₹11,871 crore in an 1.8 gigawatt pumped storage project at Shirwata in Maharashtra. The filing said roughly 75% of the cost would be funded through debt and 25% through equity, with the project expected to finish in about 51 months. The announcement arrived the same day the company discussed half-year capital spending that wire copy described as its highest ever for April through September, alongside solar manufacturing ramp and renewable additions. Central Electricity Authority statistics cited in wire reporting put a large pipeline of similar schemes nationally, with only a fraction operational today.",
+      "What does this mean?",
+      "Solar and wind produce power when the sun shines and the wind blows, not necessarily when factories and cities need it most. Pumped storage can soak up midday renewable surplus and discharge during evening peaks, which reduces the need to fire up expensive gas or import coal on short notice. For Tata Power, the project adds regulated-style long-life assets to a portfolio that already mixes distribution, rooftop solar engineering, and conventional plants. A multi-year build also locks in construction and equipment orders before the station earns transmission or merchant revenues. Rivals from NTPC to state utilities are bidding similar projects, so the Shirwata approval is one chess piece in a wider race for flexible capacity rather than a standalone headline.",
+      "Why should I care?",
+      "If you live in Maharashtra, the plant may eventually change how reliably evening power is supplied after more solar connects locally, though benefits arrive only after construction and water-use permissions clear. Investors in Tata Power should track debt raised for Shirwata, equity dilution if any follow-on raise appears, and whether returns resemble other pumped storage concessions in the country. Industrial buyers on corporate power contracts should watch whether peak tariffs soften in the western region once storage options expand. Follow environmental and land clearances for Shirwata, quarterly capex guidance, and central policy on competitive bidding for storage-linked transmission projects.",
+    ],
+  },
+  {
+    slug: "india-alcobev-packaging-cost-west-asia-november-2026",
+    title: "Indian liquor makers say West Asia turmoil is inflating bottle and can costs",
+    summary:
+      "Mint reporting on 11 November 2026 said alcoholic beverage companies are absorbing higher packaging bills as conflict in West Asia lifts energy-linked inputs, with glass suppliers citing roughly 13–14% cost increases and distillers quantifying quarterly margin hits from glass, PET, and laminates.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages / packaging",
+    publishedAt: "2026-11-11T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-alcobev-packaging-cost-west-asia-november-2026"),
+    keyTakeaways: [
+      "AGI Greenpac's chief executive told the newspaper packaging costs for spirit and beer clients are up about 13–14% recently, driven by fuel, gas, soda ash, and polymer inputs tied to global energy markets.",
+      "Radico Khaitan and Tilaknagar Industries described rising glass and laminate bills on September-quarter earnings calls, with Radico citing a packaging drag worth about ₹27 crore in the quarter.",
+      "Distillers are responding with value engineering, working-capital buffers for raw materials, and in-house bottling investments such as Allied Blenders' new Uttar Pradesh line.",
+    ],
+    body: [
+      "What's going on here?",
+      "A whisky or beer brand sold in India still depends on heavy glass bottles, aluminium cans, and plastic closures whose production runs on gas and electricity around the clock. Reporting published 11 November 2026 traced margin pressure across the alcobev chain to higher packaging bills after turmoil in West Asia disrupted gas supply and shipping lanes. Rajesh Khosla, chief executive of packaging supplier AGI Greenpac Ltd, told Mint costs for materials serving leading beer and spirit makers are up about 13 to 14 percent in recent months, with glass hit hardest because furnaces burn fuel continuously. Radico Khaitan Ltd's finance chief said on a second-quarter call that packaging inflation, including glass bottles and PET resin, offset part of gross-margin gains from premiumisation. Tilaknagar Industries Ltd and Allied Blenders and Distillers Ltd made similar comments about input inflation and cost-saving projects on their calls.",
+      "What does this mean?",
+      "When bottle and label costs rise faster than excise-linked retail prices, distillers must choose among raising shelf prices, shrinking bottle sizes, shifting mix toward premium labels that can carry higher rupees per millilitre, or squeezing marketing spend. Companies that import more glass and resin feel the pain immediately in gross margin lines itemised on earnings calls. Domestic packaging makers pass through energy costs to customers but also invest in cullet recycling and efficiency to keep furnaces running. Shoppers may not see uniform price hikes because state excise rules differ, yet premium spirit launches planned for the festive season can arrive with smaller promotions if margins tighten.",
+      "Why should I care?",
+      "If you stock hospitality bars or wedding bars, compare quotes for popular labels now versus last quarter and ask distributors whether list prices are changing. Investors in Radico, United Spirits, Tilaknagar, or packaging names like AGI Greenpac should read management guidance on how much of the cost spike can be passed through versus absorbed. Policy watchers should pair this story with separate customs disputes on bulk Scotch imports, since bottle economics and tariff treatment both touch landed costs. Track third-quarter margin bridges, any retail price circulars in your state, and whether gas and soda ash prices ease if West Asia shipping stabilises.",
+    ],
+  },
+  {
+    slug: "india-scotch-customs-ministries-meet-november-2026",
+    title: "Commerce and finance ministries met on disputed bulk Scotch import duties",
+    summary:
+      "ANI and wire copy on 11 November 2026 said officials from India's commerce and finance ministries held a joint meeting to address how bulk Scotch whisky is classified for customs after revenue officials kept a 150% duty path while importers sought the lower rate promised under the July India-United Kingdom trade pact.",
+    category: "industry",
+    companyOrSector: "Trade policy / spirits",
+    publishedAt: "2026-11-11T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-scotch-customs-ministries-meet-november-2026"),
+    keyTakeaways: [
+      "People familiar with the matter said commerce and finance ministry officials met on 11 November 2026 after industry lobbies raised a customs dispute over harmonised system codes for bulk Scotch imports.",
+      "Revenue investigators have argued higher-strength bulk spirit is an alcoholic concentrate rather than finished whisky, which would keep a 150% duty instead of the 75% rate available for eligible bottled Scotch under the 2026 pact.",
+      "Reporting said dozens of import containers remain held at ports as Pernod Ricard, Diageo, and Indian bottlers refuse to pay the higher levy while ministries search for a classification fix.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's July 2026 trade agreement with the United Kingdom cut import duty on eligible Scotch whisky toward 75% from 150%, but most British spirit enters India in bulk tankers for local blending into Indian-made foreign liquor brands. On 11 November 2026, ANI and subsequent wire copy said the commerce and finance ministries met to resolve a fight over which tariff line applies. Industry groups International Spirits and Wine Association of India and Confederation of Indian Alcoholic Beverage Companies had already pressed commerce officials after the Directorate of Revenue Intelligence told customs commissioners to continue charging 150% on bulk concentrate imports, according to reporting reviewed by news desks. Revenue officials contend bulk shipments above roughly 60% alcohol strength are not the same product class as bottled whisky at 42 to 46% strength. Several distillers' offices were visited last week, and more than 40 containers each for major importers were said to be stuck at ports pending duty payments.",
+      "What does this mean?",
+      "Harmonised system codes are not academic labels; they set the rupee tax on every litre cleared. If bulk stays on the old duty while bottled Scotch enjoys the pact rate, economics tilt toward imported miniatures and away from domestic filling lines that handle most volume. Bottlers from Radico Khaitan to Allied Blenders blend imported bulk with local spirit, so higher landed costs flow into working-capital needs and shelf prices. A joint commerce-finance sit-down signals the political layer wants a settlement without walking back FTA optics, but revenue departments rarely concede classification without a written circular. Until clarity arrives, festive stocking plans for premium labels carry execution risk.",
+      "Why should I care?",
+      "If you buy spirits for retail or hotels, confirm with distributors whether incoming inventory is delayed and whether they expect a duty top-up on invoices. Investors in listed Indian liquor names should separate marketing stories from landed-cost maths in the next results call. Policy readers should watch for a formal harmonised system notification, any public statement after the ministries' meeting, and whether the United Kingdom raises the issue bilaterally if containers stay idle. Track port clearance data, company inventory comments, and whether domestic bottlers restart bulk orders after a circular lands.",
+    ],
+  },
+  {
+    slug: "singapore-airlines-air-india-losses-november-2026",
+    title: "Singapore Airlines still counted losses at Air India worth hundreds of millions",
+    summary:
+      "Singapore Airlines Ltd told the Singapore exchange on 11 November 2026 that Air India's turnaround remains multi-year work, while its own accounts showed a lower share of associate losses even as Air India reportedly bled more than a billion Singapore dollars at group level in the six months to September.",
+    category: "industry",
+    companyOrSector: "Aviation",
+    publishedAt: "2026-11-11T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("singapore-airlines-air-india-losses-november-2026"),
+    keyTakeaways: [
+      "Singapore Airlines said Air India made tangible progress on customer experience and operations but profitability will take time, reaffirming support alongside Tata Sons after the Vistara merger gave it a 25.1% stake.",
+      "Mint calculations from Singapore Airlines' half-year filing suggested Air India lost on the order of S$1.4 billion before the partner's share, with Singapore Airlines booking about S$362 million of that burden in April–September.",
+      "Air India's new chief executive has tightened staff travel approvals and integration with Air India Express while Indian carriers still face fuel and rupee headwinds.",
+    ],
+    body: [
+      "What's going on here?",
+      "When Singapore Airlines Ltd merged its Vistara joint venture into Tata-controlled Air India in late 2024, it exchanged cash and a minority stake for exposure to India's vast but loss-making aviation market. On 11 November 2026 the carrier filed second-quarter results in Singapore and used the statement to repeat that Air India's transformation, including profitability, will take years even if customer and operational metrics improved. Wire copy citing Mint said Singapore Airlines' share of Air India losses in the six months to September amounted to about S$362 million, down from a higher year-ago figure but still large. Based on the 25.1% stake, journalists estimated group-level Air India losses near S$1.4 billion in the same window, subject to accounting adjustments. The disclosure lands as India's largest airline IndiGo also reported a heavy quarterly loss on fuel and currency, and as Air India leadership under Tewolde Gebremariam pushes cost cuts and closer integration with Air India Express.",
+      "What does this mean?",
+      "A foreign flag carrier can stomach associate losses if it believes network access and hub traffic will pay off over a decade, but the quarterly charge still flows through to Singapore Airlines' profit line and to parliamentary scrutiny at home. For Indian passengers, the statement is less about share prices than about whether the combined fleet keeps investing in on-time performance and cabin upgrades while management hunts fuel and maintenance savings. Competitors watch whether Tata-backed Air India can shrink unit costs without shrinking routes. Singapore Airlines' reassurance suggests no immediate exit, yet reports of possible further capital calls from Indian shareholders remain part of the risk map.",
+      "Why should I care?",
+      "If you fly Air India or Air India Express frequently, track whether schedule reliability and product upgrades continue while leadership emphasises austerity on internal travel. If you hold aviation or hospitality stocks, treat associate losses as a reminder that Indian market growth does not automatically mean near-term profits. Policy observers should note foreign investment tolerance for long incubation periods. Watch Tata Sons capital infusion headlines, quarterly operating statistics from Indian carriers, and any Singapore regulatory questions about offshore loss exposure.",
+    ],
+  },
+  {
     slug: "bajaj-finance-qip-november-2026",
     title: "Bajaj Finance opened a billion-dollar institutional share sale at ₹992.25",
     summary:
@@ -10872,6 +10968,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tata-power-shirwata-pumped-storage-november-2026": "policy",
+  "india-alcobev-packaging-cost-west-asia-november-2026": "markets",
+  "india-scotch-customs-ministries-meet-november-2026": "policy",
+  "singapore-airlines-air-india-losses-november-2026": "companies",
   "bajaj-finance-qip-november-2026": "markets",
   "india-fertiliser-subsidy-winter-november-2026": "policy",
   "amex-reward-points-reversal-november-2026": "markets",
