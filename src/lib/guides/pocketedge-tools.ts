@@ -37,6 +37,21 @@ export const pocketedgeTools: Guide[] = [
     ],
   },
   {
+    slug: "market-holidays",
+    title: "Market holidays",
+    summary:
+      "NSE cash-market holiday calendar for the year, with today’s open or closed status and the next holiday.",
+    kind: "tool",
+    topic: "Markets data",
+    publishedAt: "2026-11-11T10:00:00+05:30",
+    image: "/resources/market-holidays.jpg",
+    toolUrl: "/market-holidays",
+    body: [
+      "Pulled from NSE’s holiday master for the cash market segment.",
+      "Shows weekend holidays separately and flags Muhurat trading days when NSE lists them.",
+    ],
+  },
+  {
     slug: "mf-screener",
     title: "Mutual fund screener",
     summary:
