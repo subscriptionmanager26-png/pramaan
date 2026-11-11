@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 
 import { AgentUiProvider, useOptionalAgentUi } from "@/components/agent/agent-ui-context";
+import { PostHogIdentify } from "@/components/analytics/PostHogIdentify";
 import { BOTTOM_NAV_PAD, BottomNav } from "@/components/shell/BottomNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -38,6 +39,7 @@ function AppShellChrome({ children }: { children: React.ReactNode }) {
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <AgentUiProvider>
+      <PostHogIdentify />
       <AppShellChrome>{children}</AppShellChrome>
     </AgentUiProvider>
   );
