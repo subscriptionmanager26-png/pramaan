@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bajaj-finance-qip-november-2026",
+    title: "Bajaj Finance opened a billion-dollar institutional share sale at ₹992.25",
+    summary:
+      "Bajaj Finance Ltd told exchanges on 11 November 2026 that its board set a floor price of ₹992.25 per share for a qualified institutional placement opening the same day, a raise wire reports put at more than $1 billion for India's largest non-bank lender.",
+    category: "industry",
+    companyOrSector: "NBFC / capital markets",
+    publishedAt: "2026-11-11T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bajaj-finance-qip-november-2026"),
+    keyTakeaways: [
+      "The board authorised opening the QIP on 11 November 2026 with a floor price of ₹992.25 per share, according to exchange filings and wire copy the same day.",
+      "Reporting described the issue as worth more than $1 billion and aimed at qualified institutional buyers rather than retail shareholders.",
+      "Fresh equity at a listed non-bank lender typically shores up growth capital for unsecured and secured lending books while regulators watch consumer credit stress.",
+    ],
+    body: [
+      "What's going on here?",
+      "Non-bank lenders raise equity when loan books grow faster than retained earnings can fund them, especially while deposit-like liabilities stay competitive. On 11 November 2026, Bajaj Finance Ltd said its board approved opening a qualified institutional placement with a floor price of ₹992.25 per share and authorised the issue to begin that day. Wire services reported the transaction at more than $1 billion and framed it as one of the larger Indian NBFC equity raises of the year. QIPs sell new shares only to institutional investors under tightened pricing rules, so the floor sets the minimum subscription price book-runners cannot breach. The announcement landed alongside a busy earnings and capital-markets week for Indian lenders, but the filing itself is about balance-sheet ammunition rather than a single quarter's profit print.",
+      "What does this mean?",
+      "Equity proceeds can fund personal loans, SME credit, and secured products while keeping regulatory capital buffers comfortable as unsecured collections stay in focus industry-wide. A QIP can dilute existing holders, but it also reduces reliance on expensive wholesale debt for the marginal rupee of assets. Institutional demand at the floor price is a quick market test of how global and domestic funds view Bajaj Finance's growth versus consumer stress narratives. Competitors from HDFC Bank's NBFC arms to smaller personal lenders watch large raises because they signal where liquidity is willing to sit in Indian credit. Retail borrowers rarely see an immediate change in loan rates from an equity issue, though a stronger capital base can slow the pace of risk tightening on new approvals.",
+      "Why should I care?",
+      "If you hold Bajaj Finance shares, watch the final allotment price versus the floor and the resulting dilution percentage in the next exchange disclosure. Bond and commercial-paper investors in the group should read whether management guides lower borrowing costs after equity lands. Borrowers on Bajaj personal or business loans should treat the raise as a stability signal, not an instant rate cut. Track closure of the institutional book, total shares issued, post-money capital adequacy in the next results, and whether analysts revise growth targets after the money is in.",
+    ],
+  },
+  {
+    slug: "india-fertiliser-subsidy-winter-november-2026",
+    title: "Cabinet approved ₹62,370 crore of winter fertiliser subsidy for farmers",
+    summary:
+      "India's cabinet approved on 11 November 2026 a fertiliser subsidy outlay of ₹623.70 billion for the winter crop season, which wire reports valued near $6.65 billion, with Union Minister Ashwini Vaishnaw announcing the allocation for nutrient supply through the rabi planting window.",
+    category: "industry",
+    companyOrSector: "Agriculture policy / subsidies",
+    publishedAt: "2026-11-11T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-fertiliser-subsidy-winter-november-2026"),
+    keyTakeaways: [
+      "The cabinet cleared ₹623.70 billion of fertiliser subsidy for the winter season on 11 November 2026, according to wire copy citing Information Minister Ashwini Vaishnaw.",
+      "The envelope keeps retail nutrient prices capped for farmers sowing rabi crops when global input costs and freight still move with energy markets.",
+      "Subsidy releases flow through urea and nutrient schemes that manufacturers and importers settle with the government after sales at controlled prices.",
+    ],
+    body: [
+      "What's going on here?",
+      "Farmers buy urea and complex fertilisers at government-notified prices because Delhi reimburses companies for the gap between production or import cost and the retail tag. On 11 November 2026, wire services said the Union cabinet approved a fertiliser subsidy allocation of ₹623.70 billion for the winter crop season, with Information Minister Ashwini Vaishnaw announcing the figure. Reporting put the rupee sum near $6.65 billion at prevailing exchange rates. The decision lands as rabi sowing progresses across northern and central India and as global gas and commodity markets still feed into nutrient production economics. The approval is a budgetary commitment for the season, not a change in the per-bag price printed at the cooperative counter tomorrow.",
+      "What does this mean?",
+      "Subsidy money reaches fertiliser makers and trading agencies after farmers purchase at subsidised rates, which is why timely cabinet clearance matters for cash flow at plants and import desks. A large winter envelope reduces the risk of payment arrears that in past years forced companies to throttle production or delay imports. For farmers, stable urea and DAP prices support planting decisions on wheat, mustard, and chickpea even when international nutrient quotes swing. Fiscal cost sits on the central budget, so the move is also a political signal that input support continues despite wider deficit conversations. States still handle last-mile distribution, so local shortages can persist even when the centre has cleared funds.",
+      "Why should I care?",
+      "If you farm rabi crops, confirm availability and MRP at your local cooperative before bulk buying; subsidy approval does not by itself fill trucks. Investors in listed fertiliser names should watch subsequent government notifications on reimbursement timelines and any tweaks to nutrient-based schemes. Food inflation watchers should pair subsidy news with mandi arrivals later in the season because cheap inputs help planting more than they guarantee harvest prices. Track weekly sowing data from the agriculture ministry, company commentary on subsidy receipts, and any supplementary demands in the winter session if global nutrient prices spike.",
+    ],
+  },
+  {
+    slug: "amex-reward-points-reversal-november-2026",
+    title: "American Express put customers' reward points back after a mass deduction",
+    summary:
+      "Several American Express India cardholders reported on 9 November 2026 that large reward balances vanished overnight; after complaints in Mint and social posts, the issuer said it restored points to affected accounts and blamed a planned adjustment that executed too broadly.",
+    category: "industry",
+    companyOrSector: "Consumer finance / cards",
+    publishedAt: "2026-11-11T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("amex-reward-points-reversal-november-2026"),
+    keyTakeaways: [
+      "Mint reported on 11 November 2026 that cardholders woke on 9 November to find reward balances cut by thousands or lakhs of points before Amex reversed the deductions.",
+      "The issuer told the newspaper it credited points back to impacted members and was reviewing the incident after customers challenged the move.",
+      "Reward programmes sit outside core lending contracts, so banks can change earn-and-burn rules with notice, but sudden balance wipes trigger regulator and reputation risk.",
+    ],
+    body: [
+      "What's going on here?",
+      "Premium card customers treat membership rewards as a stored-value perk built from years of spend, so an unexplained balance drop feels like a silent fee. Mint reported on 11 November 2026 that multiple American Express cardholders in India logged in on 9 November to find reward points missing, in some cases worth lakhs of rupees if converted at typical redemption rates. Social posts and customer-service calls followed. The company told Mint it reversed the deductions for affected members and was examining why the adjustment ran wider than intended. Amex did not, in the reporting cited, publish a full list of programme rules changed in the same breath. The episode is a customer-policy execution story rather than a change in interest rates or credit limits.",
+      "What does this mean?",
+      "Issuers periodically expire inactive points, recategorise merchants, or migrate programmes to new platforms, but those moves are supposed to arrive with defined notice and account-level messaging. A batch error that debits active members blurs the line between housekeeping and a benefit cut, which is why premium segment customers react loudly. Card economics rely on breakage, the share of points never redeemed, so issuers walk a narrow path between profitability and trust. Rivals such as HDFC and ICICI run separate loyalty ledgers with their own terms; this incident is a reminder to screenshot balances before major redemptions. Regulators have in past cycles scrutinised unfair contract changes, though each case turns on facts and disclosures.",
+      "Why should I care?",
+      "If you hold a high-fee travel or rewards card, export your points balance periodically and read programme emails instead of ignoring them as marketing noise. Before funding a large purchase for points, check expiry and devaluation clauses in the terms PDF. If a balance drops unexpectedly, complain in writing and keep ticket ids; public reporting plus regulator routes exist when reversals do not arrive quickly. Watch whether Amex publishes a formal notice revising earn rates or expiry rules, and whether the Reserve Bank of India or consumer authorities comment on loyalty balance treatment across issuers.",
+    ],
+  },
+  {
     slug: "cochin-shipyard-repair-mix-november-2026",
     title: "Cochin Shipyard's repair yards made money while new-build lines lost it",
     summary:
@@ -10800,6 +10872,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bajaj-finance-qip-november-2026": "markets",
+  "india-fertiliser-subsidy-winter-november-2026": "policy",
+  "amex-reward-points-reversal-november-2026": "markets",
   "cochin-shipyard-repair-mix-november-2026": "companies",
   "jyoti-structures-nclat-guarantees-november-2026": "policy",
   "patna-municipal-bond-november-2026": "policy",

@@ -1258,6 +1258,43 @@ def jyoti_structures_guarantees(d: ImageDraw.ImageDraw) -> None:
     d.arc([1040, 280, 1140, 420], 270, 90, fill=GOLD, width=5)
 
 
+def bajaj_finance_qip(d: ImageDraw.ImageDraw) -> None:
+    """Institutional bid stacks; rupee block at floor price."""
+    for i, h in enumerate([100, 160, 220, 280, 340]):
+        x = 120 + i * 80
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, RED, YELLOW, BLUE, RED][i])
+    d.rounded_rectangle([640, 200, 1120, 480], radius=20, fill=RED)
+    d.rectangle([700, 280, 1060, 340], fill=GOLD)
+    d.rectangle([700, 380, 980, 440], fill=YELLOW)
+    d.ellipse([980, 360, 1060, 440], fill=BLUE)
+    d.polygon([(600, 400), (640, 360), (640, 440)], fill=GOLD)
+
+
+def india_fertiliser_winter(d: ImageDraw.ImageDraw) -> None:
+    """Wheat rows; subsidy sack motif."""
+    for i in range(6):
+        y = 320 + i * 36
+        d.rectangle([80, y, 520, y + 20], fill=YELLOW if i % 2 else GOLD)
+    d.rounded_rectangle([140, 160, 220, 280], radius=12, fill=BLUE)
+    d.rectangle([620, 220, 820, 520], fill=RED)
+    d.polygon([(620, 220), (720, 160), (820, 220)], fill=BLUE)
+    d.rectangle([700, 360, 740, 520], fill=YELLOW)
+    for i, h in enumerate([80, 120, 160]):
+        x = 880 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW][i])
+
+
+def amex_reward_reversal(d: ImageDraw.ImageDraw) -> None:
+    """Card slab; points counter U-turn arrow."""
+    d.rounded_rectangle([100, 240, 480, 520], radius=28, fill=BLUE)
+    d.rounded_rectangle([140, 300, 440, 380], radius=12, fill=YELLOW)
+    d.rectangle([140, 420, 300, 460], fill=CREAM)
+    d.arc([640, 200, 1100, 520], 200, 340, fill=RED, width=10)
+    d.polygon([(780, 360), (840, 320), (840, 400)], fill=GOLD)
+    for i, w in enumerate([1180, 1120, 1060]):
+        d.rectangle([640, 480 + i * 30, w, 510 + i * 30], fill=[RED, YELLOW, BLUE][i])
+
+
 def patna_municipal_bond(d: ImageDraw.ImageDraw) -> None:
     """City hall silhouette; bond certificate blocks."""
     d.rectangle([120, 260, 480, 540], fill=RED)
@@ -1512,6 +1549,9 @@ def main() -> None:
     save("cochin-shipyard-repair-mix-november-2026", cochin_shipyard_repair_mix)
     save("jyoti-structures-nclat-guarantees-november-2026", jyoti_structures_guarantees)
     save("patna-municipal-bond-november-2026", patna_municipal_bond)
+    save("bajaj-finance-qip-november-2026", bajaj_finance_qip)
+    save("india-fertiliser-subsidy-winter-november-2026", india_fertiliser_winter)
+    save("amex-reward-points-reversal-november-2026", amex_reward_reversal)
 
 
 if __name__ == "__main__":
