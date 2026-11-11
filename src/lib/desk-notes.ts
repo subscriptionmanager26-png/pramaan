@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "indigo-saudi-route-suspension-november-2026",
+    title: "IndiGo kept Saudi flights paused through late November over security reviews",
+    summary:
+      "On 10 November 2026 IndiGo said it extended suspensions on its India–Saudi network, halting Jeddah and Madinah links through 21 November and Riyadh and Dammam through 30 November, while it alerts booked passengers on refunds and rebooking after renewed regional hostilities.",
+    category: "industry",
+    companyOrSector: "Aviation / consumer travel",
+    publishedAt: "2026-11-11T02:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indigo-saudi-route-suspension-november-2026"),
+    keyTakeaways: [
+      "The airline's 10 November advisory extended earlier suspensions on four Saudi endpoints, with Jeddah and Madinah paused through 21 November inclusive and Riyadh and Dammam through 30 November inclusive.",
+      "IndiGo said it reviewed safety and security considerations before adjusting the schedule and is notifying customers using booking contact details for alternate plans.",
+      "Coverage tied the move to renewed fighting involving Houthi forces and Saudi infrastructure after a prior truce collapsed, including reported attempts targeting facilities near Riyadh.",
+    ],
+    body: [
+      "What's going on here?",
+      "When conflict near Gulf hubs flares, Indian carriers must decide whether scheduled seats are still safe to sell. On 10 November 2026, IndiGo said on social media it had further extended suspensions on commercial flights to four Saudi cities while it assessed security conditions. Services to and from Jeddah and Madinah stay paused through 21 November 2026 inclusive; Riyadh and Dammam remain off the schedule through 30 November 2026 inclusive. The carrier said the steps follow a careful review of safety and security considerations for passengers and crew. It added that customers with active bookings are receiving alerts using the contact information supplied at purchase, with support for re-accommodation or refunds. Reporting in the same cycle linked the caution to renewed hostilities after a 2022 Yemen truce lapsed, including claims of attempted strikes on Saudi energy and airport infrastructure.",
+      "What does this mean?",
+      "A suspension is not a one-day glitch; it freezes revenue on a slice of IndiGo's international map while fixed costs on aircraft and crews still run. Passengers holding tickets on those city pairs may only learn of a change close to departure unless the airline's proactive messages reach them in time. Rivals on India–Gulf routes can absorb diverted demand on trunk connections, but visa, transit, and fare rules differ, so last-minute replanning is rarely costless for families and small businesses. For the carrier, extended pauses also complicate crew rostering and slot usage at Indian hubs. The episode sits alongside broader Middle East volatility that has already pushed up jet fuel and insurance conversations across the industry, yet this note is about one operator's published schedule change and customer handling, not benchmark index moves.",
+      "Why should I care?",
+      "If you hold IndiGo tickets touching Saudi Arabia before December, confirm status before ground transport or hotel deposits, and keep refund timelines from the airline's advisory handy. Corporate travel desks should label those routes as elevated disruption risk and pre-approve alternate Gulf carriers where contracts allow. Investors in InterGlobe Aviation should read management commentary on international ASKM share and yield on the remaining network rather than headline capacity alone. Watch whether suspensions lift on the stated dates, how refund volumes trend in the next weekly traffic filing, and whether peers such as Air India match pauses on the same city pairs.",
+    ],
+  },
+  {
+    slug: "india-plfs-q2-unemployment-november-2026",
+    title: "India's official jobless rate eased to 5.1% last quarter as more rural workers joined in",
+    summary:
+      "National Statistics Office data released on 10 November 2026 put India's unemployment rate at 5.1% in the July–September 2026 quarter, down from 5.4% in the prior quarter, with rural joblessness at 4.3% and urban at 6.8% as kharif sowing pulled more people into the workforce.",
+    category: "industry",
+    companyOrSector: "Labour market / policy",
+    publishedAt: "2026-11-11T02:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-plfs-q2-unemployment-november-2026"),
+    keyTakeaways: [
+      "The Periodic Labour Force Survey showed overall unemployment at 5.1% in the September 2026 quarter versus 5.4% in April–June, with rural at 4.3% and urban at 6.8%.",
+      "Labour force participation for people aged 15 and above rose to 55.5% from 54.6%, driven by a rural increase to 58.1% during the kharif season.",
+      "Employment remained uneven: rural work leaned on self-employment and agriculture while urban jobs tilted toward regular wages; casual labour's share fell in both areas.",
+    ],
+    body: [
+      "What's going on here?",
+      "Headline unemployment is only half the labour story; participation and job type matter as much as the rate itself. On 10 November 2026, the National Statistics Office published Periodic Labour Force Survey results for the July–September 2026 quarter. The all-India unemployment rate eased to 5.1% from 5.4% in the previous three months. Rural joblessness fell 50 basis points to 4.3%, while urban unemployment edged up to 6.8% from 6.7%. More people entered the labour force: participation for those aged 15 and above rose to 55.5% from 54.6%, with rural participation climbing to 58.1% as kharif sowing absorbed seasonal workers. Female participation improved to 34.7% from 33.2%. The worker-population ratio also ticked up. Beneath the averages, rural employment stayed heavy on self-employment and farm work, urban jobs leaned on regular wages and salaries, and the share of casual labour declined in both geographies compared with the prior quarter.",
+      "What does this mean?",
+      "A falling unemployment print during sowing season often reflects temporary farm absorption, not a broad upgrade in factory or services hiring. Urban unemployment holding near 7% while participation barely rises suggests city job markets remain tighter for formal roles. The split between self-employed rural workers and salaried urban staffers shapes how policy relief lands: rural safety nets and MGNREGA demand differ from urban skilling and apprenticeship programmes. Staffing executives quoted in the same reporting cycle, including TeamLease Digital's Neeti Sharma, pointed to skills-heavy hiring in technology roles, a reminder that aggregate rates can mask sharp divergence by sector. For consumer-facing businesses, more people at work supports village discretionary spend during harvest months, while urban employers still compete for experienced talent.",
+      "Why should I care?",
+      "If you run hiring or workforce planning, pair this release with sector-specific vacancy data rather than the headline rate alone. Policymakers debating welfare and apprenticeship budgets will use PLFS composition to argue whether progress is seasonal or structural. Investors in staffing, consumer, and rural finance names should read the next quarterly release for whether urban unemployment retraces after the crop cycle. Watch the January 2027 PLFS print for post-harvest participation, any ministry commentary on gig and platform workers, and whether casual labour's share keeps falling or rebounds when rural off-season work thins.",
+    ],
+  },
+  {
     slug: "medical-devices-pli-2-november-2026",
     title: "India extended medical-device subsidies toward parts, not just finished kits",
     summary:
@@ -10680,6 +10728,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "indigo-saudi-route-suspension-november-2026": "markets",
+  "india-plfs-q2-unemployment-november-2026": "policy",
   "medical-devices-pli-2-november-2026": "policy",
   "spicejet-winter-cancellations-november-2026": "markets",
   "blackstone-iifl-finance-capital-raise-november-2026": "markets",

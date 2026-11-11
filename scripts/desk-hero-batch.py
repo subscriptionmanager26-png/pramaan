@@ -1222,6 +1222,32 @@ def spicejet_winter_cancel(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(900, 200), (1080, 260), (900, 320)], fill=GOLD)
 
 
+def indigo_saudi_suspension(d: ImageDraw.ImageDraw) -> None:
+    """Gulf route arc with break; grounded jet silhouette."""
+    d.arc([120, 180, 520, 560], 300, 60, fill=GOLD, width=5)
+    d.line([(340, 340), (380, 380)], fill=RED, width=8)
+    d.polygon([(140, 420), (360, 360), (400, 480), (160, 520)], fill=BLUE)
+    d.rectangle([620, 240, 1140, 280], fill=YELLOW)
+    d.rectangle([620, 340, 980, 380], outline=RED, width=4)
+    d.line([(980, 360), (1100, 360)], fill=RED, width=6)
+    for i in range(4):
+        d.ellipse([700 + i * 100, 420, 760 + i * 100, 480], outline=BLUE, width=3)
+
+
+def plfs_q2_unemployment(d: ImageDraw.ImageDraw) -> None:
+    """Rural field vs urban blocks; rising participation bars."""
+    d.rectangle([80, 380, 520, 560], fill=YELLOW)
+    for i in range(5):
+        d.line([(100 + i * 80, 560), (140 + i * 80, 420 - i * 15)], fill=GOLD, width=3)
+    d.rectangle([620, 260, 700, 560], fill=BLUE)
+    d.rectangle([740, 320, 820, 560], fill=RED)
+    d.rectangle([860, 300, 940, 560], fill=BLUE)
+    for i, h in enumerate([200, 260, 220, 300]):
+        x = 1000 + i * 55
+        d.rectangle([x, 560 - h, x + 40, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.line([(620, 560), (1180, 560)], fill=INK, width=2)
+
+
 def lt_noida_metro(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([80, 480, 1180, 520], fill=INK, width=0)
     d.rectangle([200, 360, 260, 480], fill=BLUE)
@@ -1445,6 +1471,8 @@ def main() -> None:
     save("india-domestic-air-demand-soft-november-2026", domestic_air_soft)
     save("medical-devices-pli-2-november-2026", medical_devices_pli)
     save("spicejet-winter-cancellations-november-2026", spicejet_winter_cancel)
+    save("indigo-saudi-route-suspension-november-2026", indigo_saudi_suspension)
+    save("india-plfs-q2-unemployment-november-2026", plfs_q2_unemployment)
 
 
 if __name__ == "__main__":
