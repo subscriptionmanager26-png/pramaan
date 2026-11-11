@@ -1234,6 +1234,42 @@ def indigo_saudi_suspension(d: ImageDraw.ImageDraw) -> None:
         d.ellipse([700 + i * 100, 420, 760 + i * 100, 480], outline=BLUE, width=3)
 
 
+def cochin_shipyard_repair_mix(d: ImageDraw.ImageDraw) -> None:
+    """Dry dock repair blocks vs hull scaffold; split earnings."""
+    d.rounded_rectangle([100, 280, 420, 540], radius=16, fill=BLUE)
+    d.rectangle([160, 360, 360, 500], fill=YELLOW)
+    d.line([(260, 300), (260, 540)], fill=GOLD, width=4)
+    d.polygon([(520, 220), (700, 280), (680, 520), (500, 480)], outline=RED, width=5)
+    d.line([(590, 260), (620, 500)], fill=RED, width=6)
+    for i, h in enumerate([200, 320]):
+        x = 760 + i * 120
+        d.rectangle([x, 560 - h, x + 80, 560], fill=[YELLOW, BLUE][i])
+    d.line([(680, 560), (1180, 560)], fill=INK, width=2)
+
+
+def jyoti_structures_guarantees(d: ImageDraw.ImageDraw) -> None:
+    """Transmission tower; unlocked guarantee scroll."""
+    d.polygon([(200, 520), (240, 200), (280, 520)], fill=BLUE)
+    d.line([(160, 360), (320, 360), (280, 120), (160, 360)], fill=GOLD, width=4)
+    d.rounded_rectangle([620, 240, 900, 480], radius=12, fill=YELLOW)
+    d.line([(680, 300), (840, 300)], fill=INK, width=3)
+    d.line([(680, 360), (840, 360)], fill=INK, width=3)
+    d.polygon([(960, 260), (1040, 320), (960, 380)], fill=RED)
+    d.arc([1040, 280, 1140, 420], 270, 90, fill=GOLD, width=5)
+
+
+def patna_municipal_bond(d: ImageDraw.ImageDraw) -> None:
+    """City hall silhouette; bond certificate blocks."""
+    d.rectangle([120, 260, 480, 540], fill=RED)
+    d.polygon([(120, 260), (300, 160), (480, 260)], fill=BLUE)
+    d.rectangle([200, 380, 260, 540], fill=YELLOW)
+    d.rectangle([340, 380, 400, 540], fill=YELLOW)
+    for i, h in enumerate([120, 180, 240]):
+        x = 640 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[BLUE, YELLOW, RED][i])
+    d.line([(620, 560), (1180, 560)], fill=GOLD, width=3)
+
+
 def plfs_q2_unemployment(d: ImageDraw.ImageDraw) -> None:
     """Rural field vs urban blocks; rising participation bars."""
     d.rectangle([80, 380, 520, 560], fill=YELLOW)
@@ -1473,6 +1509,9 @@ def main() -> None:
     save("spicejet-winter-cancellations-november-2026", spicejet_winter_cancel)
     save("indigo-saudi-route-suspension-november-2026", indigo_saudi_suspension)
     save("india-plfs-q2-unemployment-november-2026", plfs_q2_unemployment)
+    save("cochin-shipyard-repair-mix-november-2026", cochin_shipyard_repair_mix)
+    save("jyoti-structures-nclat-guarantees-november-2026", jyoti_structures_guarantees)
+    save("patna-municipal-bond-november-2026", patna_municipal_bond)
 
 
 if __name__ == "__main__":

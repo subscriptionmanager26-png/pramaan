@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "cochin-shipyard-repair-mix-november-2026",
+    title: "Cochin Shipyard's repair yards made money while new-build lines lost it",
+    summary:
+      "Cochin Shipyard's September 2026 quarter update on 11 November 2026 showed consolidated revenue up about 12% year on year but profit roughly halved, as ship-repair segment profit more than doubled to about ₹143 crore while shipbuilding posted a small segment loss against a ₹150 crore profit a year earlier.",
+    category: "industry",
+    companyOrSector: "Shipbuilding / defence manufacturing",
+    publishedAt: "2026-11-11T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cochin-shipyard-repair-mix-november-2026"),
+    keyTakeaways: [
+      "Reporting on 11 November 2026 cited Cochin Shipyard consolidated net profit near ₹54 crore for July–September 2026, down from about ₹108 crore a year earlier, on revenue near ₹1,249 crore versus about ₹1,119 crore.",
+      "Segment data in the same coverage put ship-repair profit before interest and tax above ₹143 crore, more than double the year-ago repair line, while shipbuilding swung to a roughly ₹6 crore segment loss from a ₹150 crore profit in the prior-year quarter.",
+      "The Miniratna yard's order book remained near ₹22,125 crore in broker commentary bundled with the results, with dry dock and international repair capacity cited as medium-term drivers.",
+    ],
+    body: [
+      "What's going on here?",
+      "A state shipyard can book strong headline revenue while margins move in opposite directions across its workshops. Wire coverage on 11 November 2026 of Cochin Shipyard Ltd's July–September 2026 results described consolidated revenue rising near 12% year on year to about ₹1,249 crore, even as consolidated net profit fell to roughly ₹54 crore from about ₹108 crore in the same quarter of the previous financial year. Sequentially, profit was also down sharply from the June quarter. Beneath the totals, segment profit before interest and tax told a sharper story: the ship-repair business generated more than ₹143 crore, more than double the repair segment's year-ago contribution, while the shipbuilding segment reported a small loss near ₹6 crore against a profit near ₹150 crore in the prior-year quarter. The company also declared an interim dividend of ₹3 per share with a 16 November record date. Broker notes bundled with the coverage kept medium-term targets, citing an order book near ₹22,125 crore and commissioning of a new dry dock and international repair facility.",
+      "What does this mean?",
+      "Repair work tends to turn faster and can carry better margins than long-cycle warship or commercial hull contracts, where milestone billing and cost overruns show up unevenly quarter to quarter. When repair out-earns new build in the same reporting window, it is a mix shift inside one balance sheet, not proof that Indian defence demand has stalled. Cochin Shipyard's medium-term pipeline still leans on large naval and commercial orders, so investors should read repair strength as cash-flow ballast while watching whether new-build execution improves after infrastructure additions. PSU yards elsewhere in the sector face similar execution lags; the repair line here is the part management can scale when global owners send ageing vessels for refit.",
+      "Why should I care?",
+      "If you supply equipment or labour to Kochi yards, repair-heavy quarters can keep purchase orders flowing even when launching new hulls slips. Defence procurement desks should still track original shipbuilding milestones and penalty clauses separately from repair revenue. Minority investors in the listed yard should compare segment margins each quarter instead of reacting only to the consolidated profit print. Watch third-quarter shipbuilding margin commentary, dry dock commissioning updates, and whether international repair volumes rise as advertised capacity comes on stream.",
+    ],
+  },
+  {
+    slug: "jyoti-structures-nclat-guarantees-november-2026",
+    title: "Jyoti Structures can use bank guarantees again after a five-year freeze",
+    summary:
+      "On 11 November 2026 Jyoti Structures Ltd said lenders began releasing bank guarantees and letters of credit worth ₹510.59 crore under its NCLT-approved resolution plan, ending a five-year gap that had blocked execution on power transmission orders.",
+    category: "industry",
+    companyOrSector: "Power transmission EPC / insolvency",
+    publishedAt: "2026-11-11T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jyoti-structures-nclat-guarantees-november-2026"),
+    keyTakeaways: [
+      "The company told exchanges on 11 November 2026 that lenders started progressively releasing bank guarantees and letters of credit from the ₹510.59 crore envelope approved in its insolvency resolution plan.",
+      "It linked prior non-availability of those facilities to restrictions on executing its order book in India's transmission and infrastructure EPC market.",
+      "Reporting tied the releases to NCLAT orders from May 2026 that followed an NCLT-approved plan under the Insolvency and Bankruptcy Code.",
+    ],
+    body: [
+      "What's going on here?",
+      "Transmission contractors cannot mobilise towers and lines without bank guarantees and letters of credit that utilities and state agencies insist on before work starts. In an exchange filing reported on 11 November 2026, Jyoti Structures Ltd said its lender group has begun releasing bank guarantees and letters of credit from a ₹510.59 crore package approved in its resolution plan under the Insolvency and Bankruptcy Code. The company said it had lacked access to those facilities for about five years, which constrained its ability to execute booked orders. Releases are being made in tranches aligned with current business needs after an order from the National Company Law Appellate Tribunal in May 2026 that followed tribunal approval of the restructuring blueprint. Jyoti Structures operates as an engineering, procurement and construction player focused on India's power transmission sector.",
+      "What does this mean?",
+      "A resolution plan can keep a company legally alive while operational credit lines stay frozen until trustees and banks agree on documentation. Each released guarantee converts paper approval into field capability: vendors get paid, utilities see performance security, and the contractor can bid on fresh tenders without asking shareholders for full cash collateral. For other stressed EPC names, the episode shows that NCLT outcomes and working-capital restoration can be years apart. For state power utilities, faster execution on delayed transmission projects can eventually ease grid congestion, though this note is about one mid-cap contractor regaining instruments, not about nationwide tariff changes.",
+      "Why should I care?",
+      "If you are a vendor or subcontractor owed money on stalled Jyoti projects, ask your counterparty when new guarantees are pledged on specific sites rather than assuming a headline release covers every job. Investors in stressed infrastructure credits should treat guarantee restoration as an operational milestone distinct from equity returns. Policy watchers tracking IBC outcomes should compare time lags between plan approval and bank line activation across sectors. Watch how much of the ₹510.59 crore envelope is drawn by year-end, whether fresh transmission tenders list Jyoti among qualified bidders, and if peer EPC firms under similar plans receive parallel releases.",
+    ],
+  },
+  {
+    slug: "patna-municipal-bond-november-2026",
+    title: "Patna listed Bihar's first municipal bond worth ₹200 crore",
+    summary:
+      "Patna Municipal Corporation's ₹200 crore municipal bond listed on the National Stock Exchange on 10 November 2026, the first such issue from Bihar, as Chief Minister Samrat Choudhary urged cities to fund revenue-generating infrastructure through the bond market rather than waiting on state grants alone.",
+    category: "industry",
+    companyOrSector: "Municipal finance / urban infrastructure",
+    publishedAt: "2026-11-11T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("patna-municipal-bond-november-2026"),
+    keyTakeaways: [
+      "The Patna Municipal Corporation bond listed on NSE on 10 November 2026 with a ₹200 crore issue size, described in wire copy as Bihar's first municipal bond on the exchange.",
+      "Chief Minister Samrat Choudhary said proceeds should flow into projects that generate recurring revenue so principal and interest can be serviced without relying only on future state transfers.",
+      "Officials at the listing event asked other Bihar municipal corporations to study the bond route and better monetise public assets for urban capex.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian cities have long depended on state grants and centrally sponsored schemes for sewers, roads, and lighting, while capital markets rules also allow rated urban local bodies to borrow in public issues when their revenue streams can support repayment. On 10 November 2026, Patna Municipal Corporation's ₹200 crore municipal bond listed on the National Stock Exchange, which wire reports described as the first bond from a Bihar municipality to trade on the exchange. Chief Minister Samrat Choudhary attended the listing ceremony in Patna and said money raised should be invested in income-producing assets so debt service does not rest solely on hope of higher future transfers. He thanked exchange officials for supporting the state and encouraged other municipal corporations in Bihar to explore similar issues. Senior state ministers and Patna's mayor were among those present.",
+      "What does this mean?",
+      "A listed municipal bond gives a city a benchmark price for debt and puts disclosure and repayment discipline in front of portfolio investors, not only on state finance department spreadsheets. Success depends on identifying tariffs, user charges, or lease income that cover coupons, and on maintenance contracts that keep assets earning after commissioning. For Bihar, which has pushed PPP highways, solar rooftops, and satellite townships in recent policy speeches, the Patna issue is a template other ULBs can copy if rating agencies and bankers see credible cash flows. Households feel the change indirectly through better services and municipal taxes, not through a new retail product on the trading app.",
+      "Why should I care?",
+      "If you work in urban infrastructure finance, compare Patna's covenants and revenue pledges with issuers in Maharashtra or Karnataka that have used the municipal bond route longer. Municipal employees and contractors should watch which projects receive bond proceeds and whether procurement timelines shorten. Investors in NBFCs or mutual funds that buy muni debt should read credit reports for concentration risk on a first-time Bihar issuer. Track whether other Bihar corporations file draft documents, how secondary market liquidity develops after listing, and if the state pairs bond raises with PPP bids on the larger townships officials have announced.",
+    ],
+  },
+  {
     slug: "indigo-saudi-route-suspension-november-2026",
     title: "IndiGo kept Saudi flights paused through late November over security reviews",
     summary:
@@ -10728,6 +10800,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "cochin-shipyard-repair-mix-november-2026": "companies",
+  "jyoti-structures-nclat-guarantees-november-2026": "policy",
+  "patna-municipal-bond-november-2026": "policy",
   "indigo-saudi-route-suspension-november-2026": "markets",
   "india-plfs-q2-unemployment-november-2026": "policy",
   "medical-devices-pli-2-november-2026": "policy",
