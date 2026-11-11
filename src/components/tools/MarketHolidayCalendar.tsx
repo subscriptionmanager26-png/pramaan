@@ -31,34 +31,21 @@ function statusCopy(state: ReturnType<typeof marketDayStatus>["state"], holiday:
   }
 }
 
-function StatusTone({ state }: { state: ReturnType<typeof marketDayStatus>["state"] }) {
-  const tone =
-    state === "open"
-      ? "border-emerald-300 bg-emerald-50 text-emerald-900"
-      : state === "muhurat"
-        ? "border-amber-300 bg-amber-50 text-amber-950"
-        : "border-line bg-paper-2 text-ink";
-  return tone;
+function statusTone(state: ReturnType<typeof marketDayStatus>["state"]) {
+  if (state === "open") return "border-emerald-300 bg-emerald-50 text-emerald-900";
+  if (state === "muhurat") return "border-amber-300 bg-amber-50 text-amber-950";
+  return "border-line bg-paper-2 text-ink";
 }
 
-function groupByMonth(holidays: MarketHoliday[]) {
-  const groups: { key: string; label: string; items: MarketHoliday[] }[] = [];
-  for (const h of holidays) {
-    const key = h.date.slice(0, 7);
-    const last = groups[groups.length - 1];
-    if (last?.key === key) {
-      last.items.push(h);
-      continue;
-    }
-    const [y, m] = key.split("-").map(Number);
-    const label = new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString("en-IN", {
-      month: "long",
-      year: "numeric",
-      timeZone: "UTC",
-    });
-    groups.push({ key, label, items: [h] });
-  }
-  return groups;
+function formatShortDate(isoDate: string): string {
+  const [y, m, d] = isoDate.split("-").map(Number);
+  if (!y || !m || !d) return isoDate;
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 export function MarketHolidayCalendar() {
@@ -90,15 +77,19 @@ export function MarketHolidayCalendar() {
   }, []);
 
   const status = useMemo(() => (data ? marketDayStatus(data.holidays) : null), [data]);
-  const visible = useMemo(() => {
-    if (!data) return [];
-    return showWeekend ? data.holidays : data.holidays.filter((h) => !h.weekend || h.muhurat);
-  }, [data, showWeekend]);
-  const months = useMemo(() => groupByMonth(visible), [visible]);
-  const upcomingCount = useMemo(() => {
-    if (!status) return 0;
-    return visible.filter((h) => h.date >= status.date && !h.weekend).length;
-  }, [visible, status]);
+
+  const { upcoming, past } = useMemo(() => {
+    if (!data || !status) return { upcoming: [] as MarketHoliday[], past: [] as MarketHoliday[] };
+    const filtered = showWeekend
+      ? data.holidays
+      : data.holidays.filter((h) => !h.weekend || h.muhurat);
+    return {
+      upcoming: filtered.filter((h) => h.date >= status.date),
+      past: filtered.filter((h) => h.date < status.date).slice().reverse(),
+    };
+  }, [data, status, showWeekend]);
+
+  const upcomingMuhurat = upcoming.find((h) => h.muhurat) ?? null;
 
   return (
     <ToolsFrame
@@ -130,25 +121,17 @@ export function MarketHolidayCalendar() {
 
       {data && status ? (
         <div className="space-y-6">
-          <section className={`rounded-2xl border px-4 py-4 sm:px-5 sm:py-5 ${StatusTone({ state: status.state })}`}>
+          <section className={`rounded-2xl border px-4 py-4 sm:px-5 sm:py-5 ${statusTone(status.state)}`}>
             <p className="text-meta uppercase tracking-[0.12em] opacity-80">Today · {formatHolidayLong(status.date)}</p>
             <h2 className="mt-1 text-headline">{statusCopy(status.state, status.holiday).label}</h2>
             <p className="mt-1 text-[14px] leading-6 opacity-90">
               {statusCopy(status.state, status.holiday).detail}
             </p>
-            {status.nextHoliday ? (
-              <p className="mt-3 text-[13px] opacity-90">
-                Next listed holiday:{" "}
-                <span className="font-semibold">
-                  {status.nextHoliday.description} · {formatHolidayLong(status.nextHoliday.date)}
-                </span>
-              </p>
-            ) : null}
           </section>
 
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-[13px] text-ink-3">
-              {upcomingCount} weekday holiday{upcomingCount === 1 ? "" : "s"} left in {data.year}
+              {upcoming.filter((h) => !h.weekend).length} upcoming
               {data.source === "fallback" ? " · cached list" : " · live from NSE"}
             </p>
             <label className="inline-flex cursor-pointer items-center gap-2 text-[13px] text-ink-2">
@@ -162,52 +145,61 @@ export function MarketHolidayCalendar() {
             </label>
           </div>
 
-          {data.note ? (
+          {upcomingMuhurat ? (
             <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-[13px] leading-5 text-amber-950">
-              {data.note}
+              Muhurat trading is typically held on {upcomingMuhurat.description} (
+              {formatHolidayLong(upcomingMuhurat.date)}). Session timings are notified by NSE circular.
             </p>
           ) : null}
 
-          <div className="space-y-5">
-            {months.map((month) => (
-              <section key={month.key} className="overflow-hidden rounded-2xl border border-line bg-white">
-                <div className="border-b border-line bg-paper-2 px-4 py-2.5 sm:px-5">
-                  <h3 className="text-[14px] font-semibold text-ink">{month.label}</h3>
-                </div>
-                <ul className="divide-y divide-line">
-                  {month.items.map((h) => {
-                    const past = h.date < status.date;
-                    const isToday = h.date === status.date;
-                    return (
-                      <li
-                        key={h.date}
-                        className={`flex flex-col gap-1 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 ${
-                          past ? "opacity-50" : ""
-                        } ${isToday ? "bg-amber-50/60" : ""}`}
-                      >
-                        <div className="min-w-0">
-                          <p className="text-[15px] font-semibold text-ink">{h.description}</p>
-                          <p className="mt-0.5 text-[13px] text-ink-3">
-                            {formatHolidayLong(h.date)}
-                            {h.weekend ? " · weekend" : ""}
-                            {h.muhurat ? " · Muhurat" : ""}
-                          </p>
-                        </div>
-                        <div className="shrink-0 text-[12px] font-semibold uppercase tracking-wide text-ink-3">
-                          {isToday ? "Today" : past ? "Past" : "Upcoming"}
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            ))}
-          </div>
+          <section className="overflow-hidden rounded-2xl border border-line bg-white">
+            <div className="border-b border-line bg-paper-2 px-4 py-2.5 sm:px-5">
+              <h3 className="text-[14px] font-semibold text-ink">Upcoming</h3>
+            </div>
+            {upcoming.length ? (
+              <ul className="divide-y divide-line">
+                {upcoming.map((h) => {
+                  const isToday = h.date === status.date;
+                  return (
+                    <li
+                      key={h.date}
+                      className={`flex flex-col gap-0.5 px-4 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4 sm:px-5 ${
+                        isToday ? "bg-amber-50/60" : ""
+                      }`}
+                    >
+                      <p className="text-[15px] font-semibold text-ink">{h.description}</p>
+                      <p className="shrink-0 text-[13px] text-ink-3">
+                        {formatHolidayLong(h.date)}
+                        {h.muhurat ? " · Muhurat" : ""}
+                        {isToday ? " · Today" : ""}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p className="px-4 py-4 text-[14px] text-ink-3 sm:px-5">No upcoming holidays left this year.</p>
+            )}
+          </section>
 
-          <p className="text-[12px] leading-5 text-ink-3">
-            Holidays can change if NSE issues a circular. Special sessions (Muhurat) and segment-specific closures
-            may differ from the cash-market list above.
-          </p>
+          {past.length ? (
+            <section className="overflow-hidden rounded-2xl border border-line bg-white">
+              <div className="border-b border-line bg-paper-2 px-4 py-2.5 sm:px-5">
+                <h3 className="text-[14px] font-semibold text-ink">Past</h3>
+              </div>
+              <ul className="divide-y divide-line">
+                {past.map((h) => (
+                  <li
+                    key={h.date}
+                    className="flex items-baseline justify-between gap-3 px-4 py-2.5 text-ink-3 sm:px-5"
+                  >
+                    <p className="min-w-0 truncate text-[14px]">{h.description}</p>
+                    <p className="shrink-0 text-[13px] tabular-nums">{formatShortDate(h.date)}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
         </div>
       ) : null}
     </ToolsFrame>
