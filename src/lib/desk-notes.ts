@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-pe-nbfc-ownership-curbs-november-2026",
+    title: "Regulators may bar private equity from controlling more than one NBFC",
+    summary:
+      "Reporting on 12 November 2026 said the Reserve Bank of India is drafting rules that would stop private equity firms from holding a controlling stake in more than one non-bank lender, worried that stress at one sponsor could infect several consumer-finance balance sheets at once.",
+    category: "industry",
+    companyOrSector: "NBFC regulation",
+    publishedAt: "2026-11-12T17:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-pe-nbfc-ownership-curbs-november-2026"),
+    keyTakeaways: [
+      "Wire reports said RBI wants to limit global private equity groups from running multiple Indian NBFCs as controlling shareholders, with draft rules possible after public consultation early next year.",
+      "Holdings of 15% or below could stay classified as financial investments with lighter scrutiny, while stakes above that band would face tougher approval tests.",
+      "The move lands in the same week as Blackstone's IIFL Finance deal and Temasek's Godrej Capital investment, deals that underscore how much foreign capital now sits inside Indian consumer credit.",
+    ],
+    body: [
+      "What's going on here?",
+      "Private equity and sovereign funds have poured billions into Indian lenders over the past three years because household credit was still growing while corporate bad loans looked contained. On 12 November 2026, Reuters and Mint carried reports that the Reserve Bank of India is preparing ownership rules that would prevent a private equity sponsor from holding a controlling position in more than one non-banking financial company. People briefed on the talks said the fear is contagion: if leverage rises at the parent fund, several Indian NBFCs tied to the same sponsor could face funding or governance shocks together. India's legal definition of control already looks at board appointments and policy influence, not only the headline stake percentage. Draft rules could classify stakes at 15% or below as passive financial investments, while larger positions would need deeper vetting. The Reserve Bank did not comment publicly when journalists asked.",
+      "What does this mean?",
+      "Indian regulators have applied the one-controller principle before. When Bain Capital bought into Manappuram Finance, authorities reportedly required it to exit another NBFC it controlled. Japan's Mizuho has also faced questions about holding multiple Indian consumer lenders. A formal PE-specific cap would make that stance predictable for every new deal. Venture and growth funds lobbied through the Indian Venture and Alternate Capital Association for flexibility across funds in the same group, because fintech and NBFC bets often sit in different vehicles. For borrowers, the immediate effect is small, but it could slow serial rollup strategies that rely on one global sponsor buying several mid-sized lenders and merging processes behind the scenes. Public consultation before issuance means the final text could soften thresholds, yet the direction is clear: consumer credit is systemic enough that the RBI wants fewer overlapping control chains.",
+      "Why should I care?",
+      "If you invest in NBFC stocks, read every large stake sale announcement for conditions on owning other lenders in the same sponsor stable. Founders raising growth equity should expect longer RBI questionnaires when their investor already backs another consumer finance platform. Policy watchers should compare the draft, when it appears, with the Securities and Exchange Board of India's upcoming scale-based rules for mutual funds, because both try to match oversight to size. Track Blackstone's IIFL closing, Godrej Capital's Temasek transaction, any published RBI discussion paper, and whether smaller 15% strategic stakes still get fast-tracked.",
+    ],
+  },
+  {
+    slug: "nbfc-rural-underwriting-drought-november-2026",
+    title: "NBFCs are slowing fresh loans in drought-hit rural districts",
+    summary:
+      "Business press on 12 November 2026 said vehicle, equipment, and microfinance lenders are tightening approvals in rain-short districts across Maharashtra, Karnataka, and Telangana even as industry profits rose, because early delinquencies are creeping up on farm-linked books.",
+    category: "industry",
+    companyOrSector: "Rural credit",
+    publishedAt: "2026-11-12T17:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nbfc-rural-underwriting-drought-november-2026"),
+    keyTakeaways: [
+      "Lenders including Shriram Finance reportedly saw higher early-stage delinquencies as rural cash flows weakened, while credit costs on vehicle finance climbed toward 2% in the September 2026 quarter.",
+      "Microfinance institutions logged lower gross Stage-3 assets near 2.3% but higher credit costs near 3.7%, with CreditAccess Grameen citing stress in Maharashtra, which holds about 22% of its assets.",
+      "JM Financial's tracker of 23 NBFCs still showed about 21% year-on-year asset growth and 40% profit growth in Q2FY27, so management is tightening origination rather than shrinking balance sheets outright.",
+    ],
+    body: [
+      "What's going on here?",
+      "Farm income shocks do not wait for headline GDP numbers to turn red. They show up first in collections on tractor finance, commercial vehicle loans, construction equipment tickets, and microfinance instalments in the districts that missed monsoon rain. Reporting on 12 November 2026 said several non-banking lenders have dialled back underwriting in drought-affected pockets of Maharashtra, Karnataka, and Telangana while keeping growth numbers strong at the consolidated level. Vehicle financiers logged credit costs near 2% in the September quarter, up from about 1.8% in the prior three months, and some names including Shriram Finance reported higher early delinquencies. Microfinance lenders saw gross bad assets improve slightly to near 2.3% but credit costs rise toward 3.7%. CreditAccess Grameen pointed to Maharashtra stress in its commentary. JM Financial's coverage of 23 NBFCs still found about 21% asset growth and 40% profit growth year on year in Q2FY27, which means boards are curating new business rather than pulling back everywhere.",
+      "What does this mean?",
+      "Rural collections lag the weather headline by a quarter or two. Lenders can post record profits on the legacy book while silently raising scorecards on new applications in stressed talukas. That pattern showed up after weak monsoon years before, when commercial vehicle disbursements slowed even as urban personal loans kept growing. Housing finance companies have already raised customer rates by 10 to 25 basis points between October and November to pass on funding costs, adding another pinch for borrowers who waited until after harvest to buy assets. For villages, tighter NBFC gates can push households back toward gold loans, cooperative societies, or informal lenders if banks also slow farm credit, a mix policymakers watch closely into the second half of FY27.",
+      "Why should I care?",
+      "If you finance a tractor, pickup, or micro-enterprise loan in a rain-deficient district, expect more income documentation, shorter tenors, or straight declines even when national NBFC ads still promise quick approvals. Investors should read management commentary on drought geographies alongside headline net interest margins. Auto and farm equipment OEMs should track whether financier tie-ups delay festive inventory. Watch the next Reserve Bank financial stability report, state relief packages for damaged crops, and whether microfinance portfolio-at-risk beyond 15 days keeps climbing after the harvest season.",
+    ],
+  },
+  {
+    slug: "beml-indigenous-tunnel-boring-november-2026",
+    title: "BEML wants to build India's small tunnel-boring machines at home",
+    summary:
+      "Bloomberg reported on 12 November 2026 that state-owned BEML Ltd plans to develop domestic tunnel-boring machines for metro, hydropower, and water projects, starting with smaller 3.5 to 6.5 metre diameters before tackling the giant units used on high-speed rail corridors.",
+    category: "industry",
+    companyOrSector: "Infrastructure equipment",
+    publishedAt: "2026-11-12T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("beml-indigenous-tunnel-boring-november-2026"),
+    keyTakeaways: [
+      "Chairman Shantanu Roy told Bloomberg BEML would focus first on metro-scale machines rather than the roughly 13.6 metre cutters deployed on India's bullet-train tunnels, which today come from foreign suppliers.",
+      "The company intends to keep intellectual property in India rather than assemble imported kits, and has hired a global consultant to design the product line.",
+      "Domestic tunnel demand is rising as cities expand metros and hydropower, while China's export controls on some construction equipment sharpened debate on import dependence.",
+    ],
+    body: [
+      "What's going on here?",
+      "Every new metro line and hydropower cavern needs tunnel-boring machines that cost crores of rupees and arrive on long import lead times. On 12 November 2026, Bloomberg quoted BEML Ltd chairman and managing director Shantanu Roy outlining a plan to develop indigenous machines starting at diameters between 3.5 and 6.5 metres, the sizes common on urban transit and utility tunnels. Giant cutters on the Mumbai stretch of the bullet-train corridor, by contrast, stretch near 13.6 metres and still come from overseas factories such as Germany's Herrenknecht. Roy said BEML wants proprietary technology that stays in India, not an assembly shop for foreign kits, and that a global consultant is already on board. The interview landed as domestic infrastructure spending accelerates and as China's tighter export controls on some construction equipment remind planners of supply-chain risk.",
+      "What does this mean?",
+      "Tunnel-boring is a niche where a handful of global OEMs dominate technology, spares, and field engineers. India can cut project costs and timeline risk only if it can service machines locally and train operators without flying in foreign crews for every breakdown. Starting small lets a public-sector engineer build credibility on metro packages before bidding into the technically brutal high-speed rail segment. States running aggressive underground networks in Delhi, Bengaluru, Mumbai, and Hyderabad would benefit if competition adds a domestic bid option, though execution discipline and warranty support will decide whether developers trust a first-generation Indian TBM on critical alignments.",
+      "Why should I care?",
+      "If you work on metro or water tunnel contracts, watch Ministry of Railways and urban rail tender documents for local-content clauses that might favour BEML once prototypes exist. Investors in engineering and construction stocks should treat this as a long-cycle capex story, not a next-quarter earnings kicker. Commuters ultimately feel the outcome through fewer delay claims when spare parts and engineers sit inside the country. Track BEML pilot contracts, collaboration announcements with foreign technology partners, and whether other public-sector firms such as L&T or Titagarh Rail compete in the same diameter band.",
+    ],
+  },
+  {
     slug: "msci-india-em-weight-november-2026",
     title: "MSCI added four Indian names and lifted weights on eleven others",
     summary:
@@ -11136,6 +11208,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-pe-nbfc-ownership-curbs-november-2026": "policy",
+  "nbfc-rural-underwriting-drought-november-2026": "policy",
+  "beml-indigenous-tunnel-boring-november-2026": "companies",
   "msci-india-em-weight-november-2026": "markets",
   "bhel-gujarat-renewable-transmission-november-2026": "policy",
   "hfcl-optical-fibre-export-orders-november-2026": "companies",

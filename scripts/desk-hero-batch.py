@@ -1332,6 +1332,41 @@ def singapore_airlines_air_india(d: ImageDraw.ImageDraw) -> None:
     d.arc([100, 120, 400, 200], 0, 180, fill=GOLD, width=3)
 
 
+def rbi_pe_nbfc_curbs(d: ImageDraw.ImageDraw) -> None:
+    """One key, two doors; regulatory split."""
+    d.rectangle([140, 200, 260, 520], fill=BLUE)
+    d.polygon([(200, 180), (240, 200), (200, 220)], fill=GOLD)
+    d.rectangle([360, 200, 480, 520], fill=RED)
+    d.polygon([(420, 180), (460, 200), (420, 220)], fill=GOLD)
+    d.line([(260, 360), (360, 360)], fill=INK, width=6)
+    d.ellipse([600, 240, 760, 400], fill=YELLOW)
+    for i, y in enumerate([260, 340, 420, 500]):
+        d.rectangle([820, y, 1120, y + 40], fill=[RED, BLUE, YELLOW, GOLD][i])
+
+
+def nbfc_rural_drought(d: ImageDraw.ImageDraw) -> None:
+    """Dry field left; gated loan bars right."""
+    d.rectangle([80, 320, 500, 560], fill=YELLOW)
+    for x in range(120, 460, 60):
+        d.line([(x, 560), (x, 380)], fill=GOLD, width=3)
+    d.ellipse([220, 200, 360, 300], fill=RED)
+    for i, h in enumerate([80, 120, 160, 120, 80]):
+        x = 640 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[BLUE, RED, YELLOW, BLUE, RED][i])
+    d.polygon([(1000, 560), (1100, 460), (1180, 560)], fill=BLUE)
+
+
+def beml_tunnel_boring(d: ImageDraw.ImageDraw) -> None:
+    """TBM disc left; underground arc right."""
+    d.ellipse([120, 220, 420, 520], fill=BLUE)
+    d.ellipse([180, 280, 360, 460], outline=GOLD, width=8)
+    d.line([(300, 260), (300, 480)], fill=RED, width=6)
+    d.line([(220, 370), (380, 370)], fill=RED, width=6)
+    d.arc([620, 280, 1100, 560], 200, 340, fill=YELLOW, width=14)
+    d.rectangle([700, 140, 780, 220], fill=RED)
+    d.polygon([(900, 160), (980, 200), (900, 240)], fill=GOLD)
+
+
 def msci_india_em_weight(d: ImageDraw.ImageDraw) -> None:
     """Index ladder blocks; passive flow chevrons."""
     for i, h in enumerate([100, 140, 180, 220, 260]):
@@ -1690,6 +1725,9 @@ def main() -> None:
     save("india-alcobev-packaging-cost-west-asia-november-2026", india_alcobev_packaging)
     save("india-scotch-customs-ministries-meet-november-2026", india_scotch_customs_meet)
     save("singapore-airlines-air-india-losses-november-2026", singapore_airlines_air_india)
+    save("rbi-pe-nbfc-ownership-curbs-november-2026", rbi_pe_nbfc_curbs)
+    save("nbfc-rural-underwriting-drought-november-2026", nbfc_rural_drought)
+    save("beml-indigenous-tunnel-boring-november-2026", beml_tunnel_boring)
     save("msci-india-em-weight-november-2026", msci_india_em_weight)
     save("bhel-gujarat-renewable-transmission-november-2026", bhel_gujarat_re_transmission)
     save("hfcl-optical-fibre-export-orders-november-2026", hfcl_ofc_export)
