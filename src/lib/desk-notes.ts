@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "msci-india-em-weight-november-2026",
+    title: "MSCI added four Indian names and lifted weights on eleven others",
+    summary:
+      "Index provider MSCI said on 11 November 2026 that its November review adds Adani Green Energy, Coforge, Life Insurance Corporation of India, and Meesho to the flagship Global Standard index while raising weights on eleven existing constituents, nudging India's share of the Emerging Markets benchmark.",
+    category: "industry",
+    companyOrSector: "Index / passive flows",
+    publishedAt: "2026-11-12T12:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("msci-india-em-weight-november-2026"),
+    keyTakeaways: [
+      "MSCI's November 2026 review places Adani Green Energy, Coforge, LIC, and Meesho into the Global Standard index effective after the month-end rebalance.",
+      "Eleven other Indian stocks receive higher index weights in the same cycle, which passive funds tracking MSCI Emerging Markets must buy or hold in larger size.",
+      "The change lands as foreign portfolio investors debate India's relative weight against North Asian tech exporters after months of dollar and crude volatility.",
+    ],
+    body: [
+      "What's going on here?",
+      "Passive money follows published index rules more closely than active managers follow earnings seasons. On 11 November 2026, MSCI announced outcomes from its semi-annual November review, adding four Indian companies to the flagship Global Standard index: Adani Green Energy, IT services firm Coforge, Life Insurance Corporation of India, and e-commerce marketplace Meesho. The same notice raised the index weights of eleven other India-listed names already in the basket. Because hundreds of exchange-traded and mutual funds clone MSCI weights, additions and step-ups force mechanical buying around the effective rebalance date even when macro headlines are noisy. Wire copy tied the moves to India's persistent position inside the MSCI Emerging Markets index, where every incremental fraction of weight can translate into billions of dollars of passive demand over a few settlement sessions.",
+      "What does this mean?",
+      "Index inclusion is not a verdict on fair value; it is a liquidity event. New entrants, especially large issuers such as LIC or brands with thin public floats, can see sharp volume spikes as trackers close tracking error. Meesho's entry is notable because the company is still transitioning from private markets to a full public capital structure, so passive demand meets a relatively young free float. Weight increases on existing names redistribute flows inside India rather than bringing fresh listings, but they still tilt ETF baskets toward those tickers versus mid-caps left outside the flagship set. For domestic retail investors, the practical effect is indirect: Nifty and Sensex moves on rebalance weeks often mix index-fund flows with local mutual fund activity, which can exaggerate daily swings without changing underlying profits.",
+      "Why should I care?",
+      "If you own emerging-market index funds or India-focused passive products, check whether your scheme tracks MSCI rather than FTSE or Nifty, because only MSCI-linked products must buy the four additions and the eleven weight step-ups. Active investors should separate rebalance liquidity from fundamentals, especially for newly listed internet and renewable names where passive flows can stretch valuations for a few sessions. Corporate treasurers planning QIPs or employee stock sales sometimes time them around index inclusion windows. Watch month-end MSCI implementation volumes, foreign portfolio investor daily flow data after the effective date, and whether rival index providers announce mirror changes.",
+    ],
+  },
+  {
+    slug: "bhel-gujarat-renewable-transmission-november-2026",
+    title: "BHEL won a Gujarat renewable power transmission job worth up to ₹900 crore",
+    summary:
+      "Bharat Heavy Electricals Ltd said on 12 November 2026 it received a ₹600 crore to ₹900 crore domestic order from Power Grid Corporation of India Ltd for a renewable energy transmission project in Gujarat, extending its grid-equipment backlog as solar capacity outruns evacuation lines.",
+    category: "industry",
+    companyOrSector: "Power equipment",
+    publishedAt: "2026-11-12T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bhel-gujarat-renewable-transmission-november-2026"),
+    keyTakeaways: [
+      "The state-owned power equipment maker pegged the Power Grid order at ₹600 crore to ₹900 crore for transmission works tied to renewable generation in Gujarat.",
+      "The contract adds to BHEL's transmission and distribution portfolio alongside its traditional thermal plant business.",
+      "Reporting framed the win as part of broader spending to move clean power from western generation clusters to demand centres that still rely on interstate grids.",
+    ],
+    body: [
+      "What's going on here?",
+      "Solar and wind farms in Gujarat and Rajasthan can generate more electrons than nearby towns consume, so planners contract long high-voltage lines to carry surplus power east and south. On 12 November 2026, Bharat Heavy Electricals Ltd announced a domestic order from Power Grid Corporation of India Ltd for a renewable-energy-linked transmission project in Gujarat, with the contract value guided between ₹600 crore and ₹900 crore. BHEL builds switchyards, transformers, and associated grid hardware, while Power Grid runs the interstate network that stitches state utilities together. The announcement arrived in the same news cycle as commentary on record renewable additions and periodic curtailment when lines are not ready, a pairing that shows spending is chasing generation as well as new plants.",
+      "What does this mean?",
+      "Equipment orders lag generation auctions by years, so today's transmission contracts are the physical response to solar bids awarded earlier in the decade. For BHEL, grid jobs diversify revenue away from declining domestic thermal boiler orders and align the order book with central policy on clean power evacuation. States and developers feel the benefit only after lines energise: until then, renewable operators risk backing down output during surplus hours, which shows up as softer merchant revenues even when capacity numbers rise. Rivals such as Siemens Energy India, Hitachi Energy, and private EPC firms compete for similar packages, but Power Grid's procurement still leans on qualified public-sector suppliers on many packages.",
+      "Why should I care?",
+      "If you live in a western renewable cluster, new transmission can eventually stabilise local power prices and reduce spillage of cheap solar into negative pricing windows. Factory owners outside Gujarat should still care because cheaper western electrons can displace costlier thermal power in pooled markets once lines are live. Investors in BHEL or other grid-equipment names should read transmission order announcements alongside working capital and execution timelines, not only generation headlines. Watch Power Grid commissioning schedules for the Gujarat corridor, state regulator orders on sharing transmission charges, and whether developers cite lower curtailment in the next earnings season after related lines energise.",
+    ],
+  },
+  {
+    slug: "hfcl-optical-fibre-export-orders-november-2026",
+    title: "HFCL booked ₹834 crore of overseas optical-fibre cable orders",
+    summary:
+      "HFCL Ltd said on 12 November 2026 its overseas wholly owned subsidiary signed export contracts worth about ₹834.36 crore for optical fibre cables to be supplied by June 2027, adding to India-based manufacturing orders tied to data-centre and telecom build-outs abroad.",
+    category: "industry",
+    companyOrSector: "Telecom equipment",
+    publishedAt: "2026-11-12T11:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hfcl-optical-fibre-export-orders-november-2026"),
+    keyTakeaways: [
+      "The company valued the export bundle at roughly ₹834.36 crore, executed through an overseas subsidiary rather than as a related-party deal.",
+      "Delivery is scheduled through June 2027, spreading production across several quarters of fibre drawing and cable assembly.",
+      "Management described the contracts as a vote of confidence in Indian optical-fibre manufacturing amid global demand for bandwidth infrastructure.",
+    ],
+    body: [
+      "What's going on here?",
+      "Data centres, 5G rollouts, and fibre-to-the-home projects all consume optical fibre cable before a single gigabit reaches consumers. On 12 November 2026, HFCL Ltd told exchanges that its overseas wholly owned subsidiary secured export orders worth approximately ₹834.36 crore for optical fibre cables, with execution targeted by June 2027. The filing said the deals were struck in the ordinary course of business and were not related-party transactions. HFCL runs fibre drawing and cable plants in India and has expanded overseas marketing arms to bid into markets where buyers want diversified suppliers after pandemic-era shortages. The order size is meaningful relative to mid-cap telecom hardware peers, though HFCL also serves domestic BharatNet-style programmes and private telco tenders.",
+      "What does this mean?",
+      "Export cable orders anchor factory utilisation when domestic tendering is lumpy. They also test whether Indian cost positions remain competitive after freight and energy swings. Optical fibre is a scale game: long runs improve margins, so multi-year export schedules help management plan precursor gas and silica supply without stopping drawing towers between government lot auctions. For India's broader industrial policy, repeated large export wins in connectivity hardware support the narrative that the country is moving up the stack from assembly to engineered cable products. Customers abroad are effectively underwriting capex maintenance at Indian plants that might otherwise idle between domestic auction cycles.",
+      "Why should I care?",
+      "If you follow telecom or data-centre infrastructure stocks, compare HFCL's order book growth with Sterlite Technologies, Birla Cable, and other fibre names to see who is capturing export share versus staying India-centric. Broadband users benefit indirectly when healthy equipment exports keep domestic plants running and competitive on price when Reliance Jio, Bharti Airtel, or BharatNet publish the next fibre tender. Investors should track quarterly shipment disclosures against the June 2027 deadline and watch for currency moves that can alter realised export margins. Follow follow-on filings on customer geography, any capacity expansions announced to meet the backlog, and domestic tender outcomes that compete for the same plant slots.",
+    ],
+  },
+  {
     slug: "india-onion-e-auction-mjunction-november-2026",
     title: "Released onion stocks are selling through government e-auctions",
     summary:
@@ -11064,6 +11136,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "msci-india-em-weight-november-2026": "markets",
+  "bhel-gujarat-renewable-transmission-november-2026": "policy",
+  "hfcl-optical-fibre-export-orders-november-2026": "companies",
   "india-onion-e-auction-mjunction-november-2026": "policy",
   "pricol-memory-chip-cost-pressure-november-2026": "companies",
   "india-coal-gasification-round-two-november-2026": "policy",

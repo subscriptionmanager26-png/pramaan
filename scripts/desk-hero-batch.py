@@ -1332,6 +1332,48 @@ def singapore_airlines_air_india(d: ImageDraw.ImageDraw) -> None:
     d.arc([100, 120, 400, 200], 0, 180, fill=GOLD, width=3)
 
 
+def msci_india_em_weight(d: ImageDraw.ImageDraw) -> None:
+    """Index ladder blocks; passive flow chevrons."""
+    for i, h in enumerate([100, 140, 180, 220, 260]):
+        x = 120 + i * 55
+        d.rectangle([x, 560 - h, x + 40, 560], fill=[RED, BLUE, YELLOW, BLUE, RED][i])
+    d.line([(80, 560), (520, 560)], fill=INK, width=2)
+    d.polygon([(520, 560), (600, 480), (680, 560)], fill=GOLD)
+    d.rectangle([720, 180, 1100, 520], fill=BLUE)
+    for row in range(5):
+        for col in range(4):
+            d.rectangle(
+                [740 + col * 80, 200 + row * 60, 800 + col * 80, 240 + row * 60],
+                fill=YELLOW if (row + col) % 2 else RED,
+            )
+    d.polygon([(1040, 300), (1160, 260), (1160, 340)], fill=GOLD)
+
+
+def bhel_gujarat_re_transmission(d: ImageDraw.ImageDraw) -> None:
+    """Transmission tower; solar arc evacuation."""
+    d.rectangle([200, 160, 280, 520], fill=BLUE)
+    d.line([(140, 220), (340, 220)], fill=GOLD, width=4)
+    d.line([(140, 320), (340, 320)], fill=GOLD, width=4)
+    d.line([(140, 420), (340, 420)], fill=GOLD, width=4)
+    d.ellipse([80, 360, 200, 480], fill=YELLOW)
+    d.polygon([(600, 480), (900, 200), (1100, 480)], fill=RED)
+    for i in range(6):
+        d.line([(620 + i * 80, 480), (760 + i * 40, 280)], fill=GOLD, width=3)
+    d.polygon([(980, 480), (1080, 400), (1180, 480)], fill=BLUE)
+
+
+def hfcl_ofc_export(d: ImageDraw.ImageDraw) -> None:
+    """Fibre coil; export arc to overseas tile."""
+    for i in range(8):
+        r = 60 + i * 18
+        d.ellipse([160 - r, 360 - r, 160 + r, 360 + r], outline=[RED, BLUE, YELLOW][i % 3], width=3)
+    d.rectangle([520, 260, 1120, 460], fill=CREAM)
+    d.arc([540, 280, 1100, 440], 20, 160, fill=BLUE, width=12)
+    d.polygon([(700, 360), (900, 300), (1050, 360), (900, 420)], fill=RED)
+    d.ellipse([1000, 180, 1120, 260], fill=YELLOW)
+    d.line([(900, 360), (1060, 220)], fill=GOLD, width=4)
+
+
 def india_onion_e_auction(d: ImageDraw.ImageDraw) -> None:
     """Onion dome form; bid ladder."""
     d.ellipse([120, 280, 320, 480], fill=YELLOW)
@@ -1648,6 +1690,9 @@ def main() -> None:
     save("india-alcobev-packaging-cost-west-asia-november-2026", india_alcobev_packaging)
     save("india-scotch-customs-ministries-meet-november-2026", india_scotch_customs_meet)
     save("singapore-airlines-air-india-losses-november-2026", singapore_airlines_air_india)
+    save("msci-india-em-weight-november-2026", msci_india_em_weight)
+    save("bhel-gujarat-renewable-transmission-november-2026", bhel_gujarat_re_transmission)
+    save("hfcl-optical-fibre-export-orders-november-2026", hfcl_ofc_export)
     save("india-onion-e-auction-mjunction-november-2026", india_onion_e_auction)
     save("pricol-memory-chip-cost-pressure-november-2026", pricol_memory_pressure)
     save("india-coal-gasification-round-two-november-2026", india_coal_gasification_round2)
