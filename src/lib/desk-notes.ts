@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "andhra-green-compute-power-investments-november-2026",
+    title: "Andhra Pradesh just tied gigawatts of clean power to new AI factories",
+    summary:
+      "At the CII Partnership Summit on 12 November 2026, ReNew Energy and CleanMax unveiled separate investment packages spanning green data centres, silicon supply chains, and round-the-clock renewable power for compute hubs in Andhra Pradesh, linking grid-scale generation to the fastest-growing slice of electricity demand.",
+    category: "industry",
+    companyOrSector: "Renewables / digital infrastructure",
+    publishedAt: "2026-11-12T23:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("andhra-green-compute-power-investments-november-2026"),
+    keyTakeaways: [
+      "Nasdaq-listed ReNew said it would invest about ₹67,000 crore in a one-gigawatt green hyperscale data centre at Anakapalli, plus ₹11,000 crore in polysilicon and metallurgical silicon plants and ₹1,500 crore in permanent-magnet manufacturing.",
+      "CleanMax signed a memorandum with the Andhra Pradesh Economic Development Board for roughly ₹50,000 crore covering three gigawatts of wind and solar plus one gigawatt of pumped storage to feed a two-gigawatt green compute factory planned with Blackstone-backed Neysa in Kurnool.",
+      "Both announcements lean on Andhra's existing wind and solar resources and state targets for tens of gigawatts of clean capacity, but they still need transmission build-outs and offtake contracts before electrons reach server halls.",
+    ],
+    body: [
+      "What's going on here?",
+      "Artificial intelligence training and inference need warehouses of graphics processors that draw power around the clock, not only when the sun shines. On 12 November 2026, at the Confederation of Indian Industry Partnership Summit in Visakhapatnam, two renewable developers unveiled parallel investment plans that try to pair generation, storage, and compute on the same map. ReNew Energy Global said it would spend about ₹67,000 crore on a one-gigawatt green hyperscale data centre in Anakapalli, another ₹11,000 crore on polysilicon and metallurgical silicon plants in Anakapalli and Nellore, and ₹1,500 crore on a permanent-magnet factory in Rambilli, alongside a technical training centre under the central PM SETU scheme. Separately, CleanMax Enviro Energy Solutions signed a memorandum with the Andhra Pradesh Economic Development Board for close to ₹50,000 crore of integrated wind, solar, and pumped hydro capacity that would feed a two-gigawatt compute factory being planned with Neysa, an AI cloud firm backed by Blackstone, in Kurnool district. CleanMax said its own distribution network would deliver twenty-four-hour green power rather than bolting generic renewable credits onto a brown grid contract.",
+      "What does this mean?",
+      "Data-centre developers used to buy whatever grid power was available and offset it later with certificates. The Andhra packages suggest a different model: build generation and storage beside or ahead of the server load so lenders and state officials can see a single economic story. ReNew's polysilicon and magnet investments also reach backward into the solar and wind supply chain, reducing import dependence for modules that might otherwise power those same servers. CleanMax's three-gigawatt renewable plus one-gigawatt pumped-storage envelope is sized to match a two-gigawatt compute campus, which implies years of transmission upgrades, water use debates for pumped hydro, and tariff negotiations with industrial consumers. None of the headline rupee figures are binding purchase orders yet; they are summit-stage commitments that still need environmental clearances, offtake agreements, and equity partners.",
+      "Why should I care?",
+      "If you work in industrial policy or state power departments, watch whether Andhra bundles compute incentives with firm renewable purchase obligations rather than generic capital subsidies. Cloud and enterprise buyers care because uptime and carbon claims will trace back to these physical projects, not marketing slides. Investors in listed renewable names should separate operational megawatts already spinning from MOU totals that may take a decade to mature. Residents near Anakapalli, Nellore, Kurnool, or Rambilli should follow land acquisition and water hearings early. Track Power Grid or state utility transmission tenders for coastal Andhra, ReNew and CleanMax exchange filings on special-purpose vehicles, and whether other states copy the compute-plus-clean-power packaging at their own investor summits.",
+    ],
+  },
+  {
+    slug: "vishay-kaynes-chip-assembly-jv-november-2026",
+    title: "Vishay and Kaynes will build a semiconductor finishing plant in India",
+    summary:
+      "US-based Vishay Intertechnology filed on 12 November 2026 that it will invest about $56.4 million for a 49% stake in a joint venture with Kaynes Technology India to add wafer sorting, assembly, test, and packaging capacity, with both sides planning to seek central semiconductor subsidies.",
+    category: "industry",
+    companyOrSector: "Semiconductors",
+    publishedAt: "2026-11-12T22:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("vishay-kaynes-chip-assembly-jv-november-2026"),
+    keyTakeaways: [
+      "Vishay would hold 49% of an existing Kaynes subsidiary while Kaynes keeps 51%, according to a US securities filing summarized in wire copy on 12 November 2026.",
+      "The venture is meant to add back-end steps after wafer fabrication, including post-fabrication processing, assembly, testing, and packaging, and may also serve outside customers.",
+      "Both companies said they intend to apply jointly for support under India's production-linked incentive scheme for semiconductor projects, subject to definitive agreements and regulatory approvals.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's semiconductor push has focused heavily on billion-dollar wafer fabs that take years to qualify. Back-end plants that sort, package, and test chips can come online faster and still capture value when finished goods leave the country. On 12 November 2026, wire services summarized a US filing in which Vishay Intertechnology said it would invest about $56.4 million for a 49% interest in a joint venture built around an existing Kaynes Technology India subsidiary, with Kaynes retaining 51%. The partners aim to stand up capabilities Vishay needs after wafers leave the foundry: post-fabrication wafer processing, assembly, test, and packaging, with room to contract work for other designers. The announcement lands as listed Kaynes expands beyond automotive and industrial electronics boards into higher-reliability segments that regulators watch closely.",
+      "What does this mean?",
+      "Packaging and test margins depend on yield discipline and customer qualifications more than on sheer scale. A Vishay partnership gives Kaynes process recipes and export channels, while Vishay gains a South Asia footprint that can diversify away from concentrated East Asian back-end sites. The filing said future capital calls would follow ownership splits, which spreads risk but also means neither side can pause spending unilaterally once tooling orders begin. Both parties flagged an intent to file jointly for central semiconductor incentives, yet the transaction still needs signed definitive agreements and antitrust clearances. For India's electronics supply chain, the deal is a mid-sized brick in a wall that still lacks leading-edge fabrication; it helps module and appliance makers shorten logistics loops even if cutting-edge processors still arrive from abroad.",
+      "Why should I care?",
+      "If you source chips for autos, industrial controls, or defence electronics, ask contract manufacturers whether India-based assembly lines are on their approved vendor lists before assuming fabs alone will fix shortages. Engineers planning SKUs should budget extra qualification cycles when new packagers join the chain. Investors in Kaynes should read the next exchange disclosure on capital structure and any related-party guarantees, not only the headline dollar cheque from Vishay. Policy watchers should see whether incentive committees treat assembly-test-mark-pack projects differently from full fabs when awarding subsidies. Track Kaynes shareholder meetings on the subsidiary transfer, commerce ministry responses to the joint incentive application, and Vishay customer announcements that cite Indian finished-goods capacity.",
+    ],
+  },
+  {
+    slug: "india-retail-cpi-609-october-2026",
+    title: "India's retail inflation crossed six percent again in October",
+    summary:
+      "Statistics ministry data released on 12 November 2026 showed consumer price inflation at 6.09% in October, breaching the Reserve Bank of India's upper tolerance band for the first time in the latest nine-month upswing, with food prices near 9% and vegetable costs still extreme in many districts.",
+    category: "industry",
+    companyOrSector: "Inflation / households",
+    publishedAt: "2026-11-12T21:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-retail-cpi-609-october-2026"),
+    keyTakeaways: [
+      "Headline consumer price inflation printed at 6.09% in October 2026 versus 5.54% in September, on the ministry's revised series with 2024 as the base year.",
+      "Food inflation accelerated to 8.94%, with onions still more than doubling on year-ago levels and restaurant, personal-care, and transport categories also firming.",
+      "Rural inflation ran hotter than urban at 6.63% against 5.41%, with Tamil Nadu, Telangana, and Andhra Pradesh among states above seven percent.",
+    ],
+    body: [
+      "What's going on here?",
+      "Households feel inflation in the market basket long before markets price in the next central bank meeting. On 12 November 2026, the Ministry of Statistics and Programme Implementation published October consumer price data showing headline inflation at 6.09%, up from 5.54% in September and above the Reserve Bank of India's mandated six percent ceiling for the first time in a steady nine-month climb from sub-three percent readings early in the year. Food remained the loudest component: the consumer food price index registered 8.94%, with rural food even higher at 9.09%. Onions were up more than 116% from a year earlier, garlic and ginger also painfully expensive, while potatoes and some other vegetables eased slightly on the margin. Outside the kitchen, restaurants and accommodation services rose about ten percent, personal-care categories double digits, and personal transport costs above seven percent, suggesting pressure is no longer confined to the vegetable aisle.",
+      "What does this mean?",
+      "When headline inflation crosses the upper band, the Reserve Bank's growth-versus-price debate narrows. Markets had already priced hawkish commentary; the October print gives officers a concrete domestic reason to keep policy tight even if global crude or portfolio flows turn friendlier for a few weeks. Food spikes driven by weather and hoarding do not map one-to-one into core inflation, yet persistent vegetable shocks bleed into wage demands and menu prices, which show up in the services lines that moved this month. Rural inflation above urban readings also matters politically because kharif income anxieties from weak rain coincide with expensive staples. Lenders may hesitate to cut retail loan rates while household budgets absorb both EMI levels set after prior hikes and grocery bills that refuse to soften.",
+      "Why should I care?",
+      "If you are shopping for a home loan or refinancing consumer credit, compare offers now and assume banks will move slowly on rate cuts until several inflation prints fall back inside the band. Kirana owners should watch onion and tomato procurement costs daily because sudden state buffer releases, covered in separate desk notes, can whipsaw margins. Investors should not confuse a single month above six percent with automatic repo action, but they should read the December monetary policy committee minutes for how many members cite food persistence versus one-off supply shocks. Track November mandi arrival data, winter sowing progress, state value-added tax moves on fuel, and the next employee cost-of-living adjustments from large employers.",
+    ],
+  },
+  {
+    slug: "india-qsr-dine-in-recovery-november-2026",
+    title: "Burger chains are posting their strongest dine-in quarters in years",
+    summary:
+      "Second-quarter updates from leading quick-service restaurant operators on 12 November 2026 showed double-digit same-store sales growth at Burger King India, Westlife's McDonald's West and South footprint, and improving life-for-like trends at Domino's, as diners returned to seats while still ordering delivery.",
+    category: "industry",
+    companyOrSector: "Restaurants / consumer",
+    publishedAt: "2026-11-12T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-qsr-dine-in-recovery-november-2026"),
+    keyTakeaways: [
+      "Restaurant Brands Asia, which runs Burger King in India, reported about 14% same-store sales growth in Q2 FY27 and said dine-in traffic rose for a fourteenth straight quarter.",
+      "Westlife Foodworld, the McDonald's franchisee for West and South India, posted 10.1% same-store sales growth with double-digit guest-count gains, calling it the strongest quarter in thirteen periods.",
+      "Jubilant Foodworks said Domino's India life-for-like growth reached 4.1% in the September quarter, up from 2.5% in the June quarter, helped by delivery momentum and early dine-in rebound.",
+    ],
+    body: [
+      "What's going on here?",
+      "Quick-service restaurants earn the best margins when dining rooms fill up because rent and kitchen payroll are largely fixed. Wire reports on 12 November 2026 summarised September-quarter earnings commentary from several chains showing that urban diners are eating out again while still using delivery apps. Restaurant Brands Asia, the listed operator of Burger King in India, posted about 14% same-store sales growth and said dine-in traffic improved for a fourteenth consecutive quarter even as management pushes new store openings. Westlife Foodworld, which runs McDonald's restaurants across Western and Southern India, recorded 10.1% same-store sales growth with double-digit guest-count gains, describing the quarter as its strongest performance in thirteen reporting periods. Jubilant Foodworks reported that Domino's India life-for-like growth reached 4.1%, up from 2.5% in the prior quarter, with management citing steady delivery demand and early signs of dine-in and takeaway recovery.",
+      "What does this mean?",
+      "Same-store sales combine ticket size and footfall, so double-digit readings usually mean more bodies through the door, not only price hikes on burgers and fries. The pattern across three large franchise systems suggests middle-income urban consumers still allocate cash to affordable meals out, even as grocery inflation pinches home kitchens. Value menus and combo deals remain part of the pitch because chains competed aggressively on price after prior input-cost spikes. Delivery keeps growing, but a dine-in rebound helps absorb mall rents and reduces reliance on aggregator commissions that can take a fifth of the bill. The data do not cover every format: fine dining and standalone cafes may still struggle, yet the mass-market quick-service layer is clearly not in retreat this quarter.",
+      "Why should I care?",
+      "If you lease high-street or mall food courts, a recovering dine-in base supports rent negotiations and reduces vacancy risk from quick-service tenants. Job seekers in metro hubs may see steadier part-time hiring as kitchens extend hours. Investors should compare same-store metrics with net new store counts because aggressive expansion can flatter revenue while hiding weak mature outlets. Shoppers benefit from continued value wars as long as chains chase traffic. Watch festive-week footfall updates in December, dairy and bun input costs on the next margin calls, and whether smaller regional chains report similar traffic or stay stuck in single-digit growth.",
+    ],
+  },
+  {
     slug: "rbi-pe-nbfc-ownership-curbs-november-2026",
     title: "Regulators may bar private equity from controlling more than one NBFC",
     summary:
@@ -11208,6 +11304,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "andhra-green-compute-power-investments-november-2026": "policy",
+  "vishay-kaynes-chip-assembly-jv-november-2026": "companies",
+  "india-retail-cpi-609-october-2026": "policy",
+  "india-qsr-dine-in-recovery-november-2026": "markets",
   "rbi-pe-nbfc-ownership-curbs-november-2026": "policy",
   "nbfc-rural-underwriting-drought-november-2026": "policy",
   "beml-indigenous-tunnel-boring-november-2026": "companies",
