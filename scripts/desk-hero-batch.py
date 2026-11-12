@@ -1332,6 +1332,50 @@ def singapore_airlines_air_india(d: ImageDraw.ImageDraw) -> None:
     d.arc([100, 120, 400, 200], 0, 180, fill=GOLD, width=3)
 
 
+def india_onion_e_auction(d: ImageDraw.ImageDraw) -> None:
+    """Onion dome form; bid ladder."""
+    d.ellipse([120, 280, 320, 480], fill=YELLOW)
+    d.arc([140, 200, 300, 320], 200, 340, fill=RED, width=12)
+    for i, h in enumerate([80, 120, 160, 200, 240]):
+        x = 640 + i * 70
+        d.rectangle([x, 560 - h, x + 45, 560], fill=[BLUE, RED, YELLOW, BLUE, RED][i])
+    d.polygon([(600, 360), (680, 320), (760, 360)], fill=GOLD)
+
+
+def pricol_memory_pressure(d: ImageDraw.ImageDraw) -> None:
+    """Dashboard arc; memory chip grid squeezing margin."""
+    d.rounded_rectangle([100, 320, 480, 520], radius=20, fill=BLUE)
+    d.arc([160, 260, 420, 420], 200, 340, fill=YELLOW, width=18)
+    for row in range(4):
+        for col in range(5):
+            x = 640 + col * 55
+            y = 240 + row * 70
+            d.rectangle([x, y, x + 40, y + 50], fill=[RED, YELLOW, BLUE][(row + col) % 3])
+    d.polygon([(580, 400), (620, 480), (660, 400)], fill=GOLD)
+
+
+def india_coal_gasification_round2(d: ImageDraw.ImageDraw) -> None:
+    """Coal block; lone pipeline vs empty bidder seats."""
+    d.rectangle([100, 360, 360, 540], fill=INK)
+    d.rectangle([140, 280, 320, 360], fill=RED)
+    d.polygon([(200, 540), (260, 200), (320, 540)], fill=BLUE)
+    for i in range(4):
+        x = 680 + i * 100
+        d.rectangle([x, 420, x + 60, 480], fill=CREAM if i else YELLOW)
+        d.rectangle([x, 500, x + 60, 520], fill=GOLD if i else BLUE)
+    d.line([(640, 400), (1180, 400)], fill=GOLD, width=2)
+
+
+def india_liquor_karnataka_tn(d: ImageDraw.ImageDraw) -> None:
+    """Two state map blocks; bottles stepping up."""
+    d.rectangle([100, 200, 280, 560], fill=BLUE)
+    d.rectangle([300, 240, 480, 560], fill=RED)
+    for y in range(240, 520, 60):
+        d.polygon([(520, y), (580, y + 30), (520, y + 60)], fill=GOLD)
+        h = min(220, 40 + (y - 200) // 3)
+        d.rounded_rectangle([640, 560 - h, 700, 560], radius=8, fill=YELLOW)
+
+
 def amex_reward_reversal(d: ImageDraw.ImageDraw) -> None:
     """Card slab; points counter U-turn arrow."""
     d.rounded_rectangle([100, 240, 480, 520], radius=28, fill=BLUE)
@@ -1604,6 +1648,10 @@ def main() -> None:
     save("india-alcobev-packaging-cost-west-asia-november-2026", india_alcobev_packaging)
     save("india-scotch-customs-ministries-meet-november-2026", india_scotch_customs_meet)
     save("singapore-airlines-air-india-losses-november-2026", singapore_airlines_air_india)
+    save("india-onion-e-auction-mjunction-november-2026", india_onion_e_auction)
+    save("pricol-memory-chip-cost-pressure-november-2026", pricol_memory_pressure)
+    save("india-coal-gasification-round-two-november-2026", india_coal_gasification_round2)
+    save("india-liquor-karnataka-tamil-nadu-q2-november-2026", india_liquor_karnataka_tn)
 
 
 if __name__ == "__main__":

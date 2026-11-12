@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-onion-e-auction-mjunction-november-2026",
+    title: "Released onion stocks are selling through government e-auctions",
+    summary:
+      "Wire reporting on 11 November 2026 said mjunction, the Tata Steel and SAIL e-commerce joint venture, auctioned more than 3,200 tonnes of onions for NAFED and NCCF as Delhi released buffer stocks to cool retail prices after sharp summer spikes.",
+    category: "industry",
+    companyOrSector: "Food retail / agri policy",
+    publishedAt: "2026-11-12T06:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-onion-e-auction-mjunction-november-2026"),
+    keyTakeaways: [
+      "mjunction said its platform handled sales above 3,200 tonnes of onions on behalf of National Agricultural Cooperative Marketing Federation of India and National Cooperative Consumers' Federation of India as prices firmed from July.",
+      "Daily electronic auctions ran in markets including Delhi-NCR, Guwahati, Ranchi, and Kolkata with registered buyers bidding online and payments collected within hours.",
+      "The same platform extended structured auctions to sugar for Haryana's state marketing federation, part of a wider government playbook to use digital bids for perishable releases.",
+    ],
+    body: [
+      "What's going on here?",
+      "When onion prices climb, the centre often taps cold-storage buffer stocks and pushes them into wholesale markets before retail shelves react. Reporting on 11 November 2026 traced how mjunction services, a business-to-business e-commerce venture owned by Tata Steel and SAIL, ran electronic auctions for government agencies during that release campaign. The company said more than 3,200 tonnes of onions were sold for National Agricultural Cooperative Marketing Federation of India and National Cooperative Consumers' Federation of India across Delhi-NCR, Guwahati, Ranchi, Kolkata, and other centres. Auctions ran daily, with registered buyers bidding on a digital platform and payments settled within a few hours. Field teams reached out to traders in major mandis to widen the bidder base. Separately, mjunction said it facilitated sugar e-auctions for Haryana State Cooperative Supply and Marketing Federation, offering lorry-wise lots with same-day delivery notes after payment.",
+      "What does this mean?",
+      "E-auctions turn a politically sensitive release into a traceable price-discovery exercise: every lot has a winner, a price, and a timestamp, which is easier to audit than informal allotment. For perishables such as onions, speed matters because delays can mean spoilage and wasted subsidy. A joint-venture platform with steel-sector parents is an odd but established operator in this niche; mjunction already works with Food Corporation of India and state warehousing corporations on grains and pulses. Households may see only a modest retail effect because mandi transmission is patchy, but the mechanism signals that buffer releases in 2026 are less ad hoc than a decade ago. Sugar auctions on the same rails suggest the government prefers reusable digital pipes when multiple commodities need fast placement.",
+      "Why should I care?",
+      "If you run a kirana or hotel kitchen, compare wholesale onion quotes this week with late-summer peaks and ask suppliers whether lots came from buffer releases. Investors in listed agri-logistics or e-commerce names should treat these wins as thin revenue lines but useful proof of government workflow stickiness. Policy readers should watch total tonnes auctioned versus total stocks released, mandi arrival data for Lasalgaon and other benchmarks, and whether states copy Haryana's sugar auction format. Track NAFED/NCCF release circulars, daily retail onion inflation prints, and any expansion to other perishables if prices flare again before winter harvests land.",
+    ],
+  },
+  {
+    slug: "pricol-memory-chip-cost-pressure-november-2026",
+    title: "Pricol warns dashboard margins face AI-linked memory and PCB costs",
+    summary:
+      "Coimbatore-based auto components maker Pricol Ltd told analysts on 11 November 2026 that rupee depreciation, dearer printed circuit boards, and memory chips bid away by data-centre demand could trim earnings before interest, taxes, depreciation and amortisation by about one to two percentage points while pass-through talks with car makers continue.",
+    category: "industry",
+    companyOrSector: "Auto components",
+    publishedAt: "2026-11-12T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pricol-memory-chip-cost-pressure-november-2026"),
+    keyTakeaways: [
+      "Chief executive P M Ganesh said on the September-quarter call that input inflation from currency, bare PCBs, and memory has persisted since the first quarter and may last several more quarters.",
+      "Management is negotiating extraordinary price recovery with customers because the latest PCB and memory spikes sit outside routine quarterly raw-material pass-through formulas.",
+      "Revenue still grew about 35% in the quarter on domestic demand and new TFT instrument clusters, including a next-generation cluster for Bajaj Pulsar motorcycles.",
+    ],
+    body: [
+      "What's going on here?",
+      "Instrument clusters and advanced driver-information modules knit imported semiconductors, memory, and printed circuit boards into every new two-wheeler and car dashboard. Pricol Ltd, a Coimbatore-based supplier of driver-information systems, plastics, and air-conditioning modules, told analysts on 11 November 2026 that it crossed ₹1,000 crore of quarterly revenue while fighting input costs that did not ease from the first quarter. Chief executive P M Ganesh cited three pressures: a weaker rupee raising dollar-linked bills of materials, bare PCB prices climbing on tight supply, and memory chips repriced higher as artificial-intelligence server build-outs absorb global production. He said the headwinds could linger for a few more quarters before supply chains settle. Regular contracts allow quarterly pass-through for routine raw-material and foreign-exchange moves, but the latest PCB and memory step-ups are being negotiated separately because they exceed normal formulas.",
+      "What does this mean?",
+      "Auto makers and their tier-one suppliers usually share formula-driven cost adjustments, yet unprecedented memory inflation gives OEM procurement teams reason to resist full recovery when they themselves struggle to pass higher costs to end buyers. Ganesh indicated EBITDA could absorb roughly a one- to two-percentage-point hit depending on product mix if negotiations stall, even while volumes grow on festive demand and new launches. The story matters beyond one company: any Indian cluster with imported electronics content faces the same AI-driven memory squeeze that looks distant from Chennai but shows up on local BOMs. Pricol's revenue growth shows demand is alive; the margin conversation shows affordability of tech-heavy content on mid-market vehicles.",
+      "Why should I care?",
+      "If you follow two-wheeler or passenger-car stocks, read whether OEMs concede interim price lists for electronics-rich trims or delay feature upgrades to protect entry prices. Component investors should compare Pricol's margin bridge with peers making clusters and wiring harnesses. Car and bike buyers may see fewer standard digital packs on value models if suppliers and OEMs split the difference on surcharges. Track customer settlement letters on PCB/memory surcharges, quarterly EBITDA margins across auto-ancillary earnings, rupee levels, and memory contract prices cited by larger electronics importers in the same results season.",
+    ],
+  },
+  {
+    slug: "india-coal-gasification-round-two-november-2026",
+    title: "Private firms skipped India's second coal gasification subsidy round",
+    summary:
+      "The coal ministry said on 11 November 2026 that the second bidding window under its ₹37,500 crore gasification promotion scheme closed with only NTPC Ltd filing two proposals for urea, methanol, and dimethyl ether, as industry voices called for credit guarantees beyond viability-gap funding.",
+    category: "industry",
+    companyOrSector: "Energy policy",
+    publishedAt: "2026-11-12T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-coal-gasification-round-two-november-2026"),
+    keyTakeaways: [
+      "Round two of the surface coal and lignite gasification scheme ended on 11 November 2026 with NTPC as the sole applicant, submitting two projects aimed at urea, methanol, and DME output.",
+      "Round one in September drew seven applications including Adani Enterprises, Talcher Fertilizers, and others now under ministry review.",
+      "The ministry opened round three on 10 November 2026 with applications due by 11 January 2027 toward a national goal of 100 million tonnes of gasification capacity by 2030.",
+    ],
+    body: [
+      "What's going on here?",
+      "Coal gasification converts mined fuel into syngas that can feed fertiliser, chemical, and fuel plants, offering an alternative to simply burning thermal coal. In May 2026 the Union cabinet approved a ₹37,500 crore scheme to subsidise surface gasification projects. On 11 November 2026 the coal ministry said the second application window had closed with no private-sector participants and only NTPC Ltd submitting two proposals covering urea, methanol, and dimethyl ether. The first round, which ended in September 2026, attracted seven applicants including NTPC, Adani Enterprises, Gallantt Ispat, Shyam Sel & Power, and Talcher Fertilizers, which remain under review. The ministry simultaneously opened a third round from 10 November 2026 through 11 January 2027. Industry commentary circulated by businessline quoted Dastur Energy's Atanu Mukherjee saying viability-gap funding alone may not bankable high-ash Indian coal projects without partial credit guarantees for lenders.",
+      "What does this mean?",
+      "A flagship industrial policy needs repeat private bids to prove market appetite, not repeated filings from a single public-sector powerhouse. Lenders treat first-of-a-kind gasifiers as construction and technology risk, especially where domestic operating precedents are thin, so equity sponsors stay on the sidelines even when capital grants are on the table. NTPC's repeat participation keeps the programme alive and tests urea and chemical offtake linkages, but it does not diversify sponsor risk. The third round is effectively a reset clock for promoters still sizing modular designs for high-ash coal. Fertiliser users care because gasified syngas could back domestic urea molecules; until plants are financed, import dependence persists.",
+      "Why should I care?",
+      "If you follow NTPC, Adani Enterprises, or fertiliser names, watch which round-one projects receive clearance and whether financing term sheets cite guarantee schemes. Policy readers should track any announcement of a partial credit guarantee framework and whether the third round draws more than one corporate bid. Farmers and agri-input traders should treat gasification headlines as long-dated urea-supply insurance, not near-term price relief. Monitor coal ministry press releases on round outcomes, lender commentary on gasification exposures, and capex guidance from sponsors that applied in round one.",
+    ],
+  },
+  {
+    slug: "india-liquor-karnataka-tamil-nadu-q2-november-2026",
+    title: "Karnataka excise tweaks lifted premium liquor while Tamil Nadu opened shelves",
+    summary:
+      "Earnings calls cited on 11 November 2026 showed Karnataka's progressive alcohol tax helped United Breweries, United Spirits, and Tilaknagar post sharp volume growth, while distillers from Allied Blenders to Radico Khaitan described Tamil Nadu brand registrations resuming on a market that moves more than fifty lakh cases a month.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages",
+    publishedAt: "2026-11-12T05:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-liquor-karnataka-tamil-nadu-q2-november-2026"),
+    keyTakeaways: [
+      "United Breweries reported beer category growth above 50% in Karnataka during the September quarter, with its own volumes up more than 60% and roughly 250 basis points of share gain.",
+      "United Spirits and Tilaknagar cited high twenties volume growth in Karnataka spirits, with Tilaknagar's Imperial Blue whisky crossing about 40% market share in the state.",
+      "Executives from Allied Blenders, United Breweries, Radico Khaitan, and Tilaknagar pointed to new brand registrations and tertiary orders picking up in Tamil Nadu, while Telangana pricing stayed tough for beer investments.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's liquor market is a patchwork of state excise rules, and a single reform can swing where companies push marketing rupees. Reporting and earnings-call commentary surfaced on 11 November 2026 showed Karnataka's progressive tax design feeding premium beer and spirits growth in the September quarter. United Breweries said beer category growth in the state exceeded 50%, with its own volumes up more than 60% and market share gaining roughly 250 basis points. United Spirits and Tilaknagar Industries described spirits volumes rising around 28% to 30% with value up slightly faster. Tilaknagar said Imperial Blue whisky hit record quarterly volumes with market share above 40% in Karnataka. At the same time, multiple distillers said Tamil Nadu, which can move more than fifty lakh cases a month, is reopening as new brands register and tertiary orders flow again; Allied Blenders' leadership likened the opportunity to how Uttar Pradesh evolved. Not every portfolio gained: popular-segment bottles still faced pressure in Karnataka and Maharashtra, and United Breweries limited trade spending in Telangana without price revisions.",
+      "What does this mean?",
+      "When a state makes tax slabs predictable for premium labels, shoppers trade up and companies redeploy working capital toward brands that earn better rupees per case. Karnataka's experience gives other states a live case study ahead of festive quarters. Tamil Nadu's gradual liberalisation shifts competitive energy toward the south after years when registration bottlenecks capped launches. Companies still fight packaging inflation and grain costs, topics covered separately in other filings, but state policy here is the demand driver executives keep citing. Telangana's stalemate shows the flip side: without excise moves, even large incumbents starve trade programmes.",
+      "Why should I care?",
+      "If you distribute spirits or beer in the south, map which SKUs cleared Tamil Nadu registration and whether Karnataka reorder rates stay elevated after the excise change anniversary. Investors in United Spirits, United Breweries, Radico Khaitan, Tilaknagar, or Allied Blenders should read state mix comments alongside national margins. Casual shoppers may see wider premium choice on Tamil Nadu shelves over coming months, not an overnight price cut. Track state excise circulars, company market-share disclosures by state, and whether Maharashtra or Telangana revisit pricing after seeing Karnataka's volumes.",
+    ],
+  },
+  {
     slug: "tata-power-shirwata-pumped-storage-november-2026",
     title: "Tata Power's board cleared an ₹11,871 crore pumped storage plant in Maharashtra",
     summary:
@@ -10968,6 +11064,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-onion-e-auction-mjunction-november-2026": "policy",
+  "pricol-memory-chip-cost-pressure-november-2026": "companies",
+  "india-coal-gasification-round-two-november-2026": "policy",
+  "india-liquor-karnataka-tamil-nadu-q2-november-2026": "policy",
   "tata-power-shirwata-pumped-storage-november-2026": "policy",
   "india-alcobev-packaging-cost-west-asia-november-2026": "markets",
   "india-scotch-customs-ministries-meet-november-2026": "policy",
