@@ -1284,6 +1284,42 @@ def india_fertiliser_winter(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW][i])
 
 
+def pli_bess_grid_shortlist(d: ImageDraw.ImageDraw) -> None:
+    """Grid substation; stacked charge blocks."""
+    d.rectangle([100, 280, 420, 560], fill=BLUE)
+    d.polygon([(200, 200), (320, 140), (440, 200), (440, 300), (160, 300)], fill=RED)
+    for i, h in enumerate([80, 140, 220, 300]):
+        x = 640 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[YELLOW, RED, BLUE, YELLOW][i])
+    d.line([(620, 560), (1180, 560)], fill=INK, width=2)
+    d.ellipse([900, 240, 1060, 400], fill=CREAM)
+    d.arc([920, 260, 1040, 380], 200, 340, fill=GOLD, width=6)
+
+
+def vodafone_idea_q2_funding(d: ImageDraw.ImageDraw) -> None:
+    """Telecom tower; capital pipe into network nodes."""
+    d.rectangle([480, 120, 560, 580], fill=RED)
+    d.line([(520, 120), (520, 80)], fill=GOLD, width=4)
+    for x in (500, 540):
+        d.line([(x, 160), (x - 40, 220)], fill=BLUE, width=3)
+        d.line([(x, 160), (x + 40, 220)], fill=BLUE, width=3)
+    d.rectangle([120, 360, 400, 560], fill=YELLOW)
+    for y in range(380, 520, 50):
+        d.rectangle([140, y, 380, y + 28], fill=CREAM)
+    d.polygon([(700, 400), (1120, 360), (1120, 440), (700, 480)], fill=BLUE)
+
+
+def yatra_mice_air_split(d: ImageDraw.ImageDraw) -> None:
+    """Flight arc vs empty event stage."""
+    d.polygon([(120, 480), (320, 320), (520, 480)], fill=BLUE)
+    d.ellipse([280, 300, 360, 380], fill=YELLOW)
+    d.rectangle([680, 400, 1120, 560], fill=RED)
+    d.rectangle([720, 440, 1080, 520], fill=CREAM)
+    d.line([(720, 480), (1080, 480)], fill=GOLD, width=3)
+    d.rectangle([800, 200, 880, 360], fill=BLUE)
+    d.polygon([(840, 200), (920, 240), (840, 280)], fill=GOLD)
+
+
 def tata_power_pumped_storage(d: ImageDraw.ImageDraw) -> None:
     """Dual reservoirs; uphill pipe and turbine block."""
     d.ellipse([100, 380, 320, 560], fill=BLUE)
@@ -1735,6 +1771,9 @@ def main() -> None:
     save("pricol-memory-chip-cost-pressure-november-2026", pricol_memory_pressure)
     save("india-coal-gasification-round-two-november-2026", india_coal_gasification_round2)
     save("india-liquor-karnataka-tamil-nadu-q2-november-2026", india_liquor_karnataka_tn)
+    save("india-pli-bess-10gwh-grid-shortlist-november-2026", pli_bess_grid_shortlist)
+    save("vodafone-idea-q2-funding-capex-november-2026", vodafone_idea_q2_funding)
+    save("yatra-corporate-mice-air-split-november-2026", yatra_mice_air_split)
 
 
 if __name__ == "__main__":

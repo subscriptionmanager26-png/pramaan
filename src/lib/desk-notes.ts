@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-pli-bess-10gwh-grid-shortlist-november-2026",
+    title: "Twenty-two firms are now in the running for India's grid battery subsidy round",
+    summary:
+      "On 12 November 2026 the heavy industries ministry shortlisted 22 bidders for a 10 gigawatt-hour advanced chemistry cell tranche earmarked for grid-scale storage, with Reliance Industries, Waaree Energy Storage Solutions, JSW Neo Energy, Exide Energy, and Amara Raja among the names competing for roughly ₹3,620 crore in production-linked incentives.",
+    category: "industry",
+    companyOrSector: "Battery storage / power policy",
+    publishedAt: "2026-11-13T01:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-pli-bess-10gwh-grid-shortlist-november-2026"),
+    keyTakeaways: [
+      "The ministry shortlisted 22 applicants for 10 GWh of battery energy storage manufacturing tied to grid use, distinct from earlier incentive pools that were end-use agnostic.",
+      "Incentive envelopes cited in reporting put about ₹3,620 crore on the table once plants qualify and domestic cells ship.",
+      "Earlier PLI-ACC rounds allocated 40 GWh among Ola Electric, Reliance New Energy, and Rajesh Exports, but disbursements have remained slow amid tooling and technology delays.",
+    ],
+    body: [
+      "What's going on here?",
+      "India keeps adding solar and wind faster than the grid can absorb midday power, which makes stored electricity valuable when demand spikes after sunset. On 12 November 2026, reporting said the ministry of heavy industries narrowed a fresh advanced chemistry cell tender to 22 bidders for 10 gigawatt-hours of capacity aimed specifically at grid-scale battery energy storage systems. Names on the list included Reliance Industries, Waaree Energy Storage Solutions, Megha Engineering and Infrastructures, JSW Neo Energy, Exide Energy Solutions, ACME Solar Holdings, and Amara Raja Advanced Cell Technologies, along with fifteen other applicants. The round sits inside the wider ₹18,100 crore production-linked incentive scheme meant to build 50 GWh of domestic cell-making capacity. Ministry commentary linked this slice to rising renewable deployment and routine curtailment of solar during peak daylight.",
+      "What does this mean?",
+      "Policy makers are trying to fix a chicken-and-egg problem: developers underbid storage tariffs hoping battery prices fall, while banks hesitate when past awards were cancelled or re-tendered. Ring-fencing 10 GWh for grid storage tells manufacturers where demand should land, even though plants still need environmental clearances, offtake contracts, and financeable tariffs before electrons move. The shortlisted incentives are meaningful on paper, yet earlier PLI-ACC tranches showed near-zero disbursements when beneficiaries struggled to import tooling or qualify cells on time. Grid batteries also differ from electric vehicle packs: they favour cheaper chemistries, longer cycles, and utility-grade warranties. Winners who convert shortlists into funded fabs could ease the afternoon solar waste that state discoms complain about every summer.",
+      "Why should I care?",
+      "Households and factories feel storage delays through voltage dips and industrial tariffs tied to renewable purchase obligations, not through a single stock ticker. If you work on solar or wind projects, ask EPC partners whether domestic BESS bills of material are firm before quoting fixed storage tariffs. Lenders should compare this shortlist with the separate viability-gap and state tender pipeline to avoid double counting capacity that never reaches financial close. Policy watchers should track which shortlisted names file definitive agreements, whether Rajesh Exports remains in earlier tranches amid securities regulator action, and ministry orders on how incentives claw back if commissioning slips. Watch quarterly heavy-industry updates on disbursements, Power Grid transmission awards near renewable parks, and whether any state bundles this supply into upcoming solar-plus-storage auctions.",
+    ],
+  },
+  {
+    slug: "vodafone-idea-q2-funding-capex-november-2026",
+    title: "Vodafone Idea lost subscribers again even as its quarterly funding picture improved",
+    summary:
+      "Vodafone Idea Ltd reported on 12 November 2026 a wider September-quarter net loss of about ₹5,975 crore on exceptional charges, revenue of roughly ₹11,884 crore, and average revenue per user near ₹178, while management said over ₹10,500 crore of funding was secured in the first half of FY27 and more than ₹13,200 crore of network capex orders were placed.",
+    category: "industry",
+    companyOrSector: "Telecom / mobile consumers",
+    publishedAt: "2026-11-13T01:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("vodafone-idea-q2-funding-capex-november-2026"),
+    keyTakeaways: [
+      "Net loss widened year on year to about ₹5,975 crore from ₹5,562 crore a year earlier, with an exceptional loss near ₹462 crore in the quarter.",
+      "The operator ended September with about 194.4 million subscribers, down 2.3 million year on year despite netting 1.3 million additions sequentially.",
+      "Management cited more than ₹13,200 crore of equipment orders placed, with roughly ₹6,000 crore executed, while fundraising discussions aim to support a ₹45,000 crore network programme.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's third-largest mobile operator still runs a network that must keep pace with Reliance Jio and Bharti Airtel on 4G and 5G coverage while servicing legacy debt. On 12 November 2026, Vodafone Idea published September-quarter results showing revenue from operations near ₹11,884 crore, up about 6% year on year but slightly below some analyst estimates. The net loss expanded to roughly ₹5,975 crore from ₹5,562 crore a year earlier, partly because an exceptional charge replaced a large fair-value gain booked in the June quarter on promoter shares earmarked for settlement. Subscriber count stood near 194.4 million at quarter end. The company added about 1.3 million users sequentially, its second straight quarterly net gain after years of declines, but the base was still 2.3 million lower than a year ago. Blended average revenue per user printed near ₹178 a month, barely above the June reading.",
+      "What does this mean?",
+      "Telecom economics reward scale and pricing power. Vodafone Idea's recovery narrative rests on two rails: fresh capital to finish a multi-year radio upgrade, and ARPU that can climb toward rivals posting ₹218 to ₹271 monthly averages. Management said it arranged more than ₹10,500 crore of funding in the first half of FY27, including bank facilities, and placed capex orders exceeding ₹13,200 crore with about ₹6,000 crore already executed. That spending matters because patchy data speeds push prepaid users toward better networks even when headline tariffs look similar. Sequential subscriber additions are encouraging, yet the operator still carries a heavy loss and depends on a larger bank debt package reportedly targeted around ₹35,000 crore. Until that closes, tower vendors and spectrum payments compete for the same cash pool.",
+      "Why should I care?",
+      "If you are on Vodafone Idea prepaid or postpaid, watch whether upgraded nodes in your city arrive before the next tariff round from Jio or Airtel. Number portability rules mean you can move, but churn costs time and deposits. Small businesses on corporate plans should read whether service levels improve before renewing multi-year contracts. Bondholders and lenders should treat subscriber additions and ARPU as leading indicators, not proof that leverage is solved. Track exchange disclosures on the bank syndication, Trai consultation on tariff floors, and whether Vodafone Idea restores entry-level plans that peers kept while Airtel briefly withdrew a ₹299 pack.",
+    ],
+  },
+  {
+    slug: "yatra-corporate-mice-air-split-november-2026",
+    title: "Yatra's corporate clients booked more flights but skipped big meeting packages",
+    summary:
+      "Yatra Online Ltd said on 12 November 2026 that gross bookings rose about 6% year on year to roughly ₹21,680 million in the September quarter even as reported revenue fell sharply because large meetings and incentive travel revenue collapsed, pushing the Nasdaq-listed agency to a quarterly loss.",
+    category: "industry",
+    companyOrSector: "Corporate travel / aviation",
+    publishedAt: "2026-11-13T00:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("yatra-corporate-mice-air-split-november-2026"),
+    keyTakeaways: [
+      "Gross bookings increased about 5.6% year on year to near ₹21,654 million while revenue from operations fell about 39% to roughly ₹2,099 million.",
+      "Management blamed the revenue drop on lower meetings, incentives, conferences, and exhibitions business, which is accounted for on a gross basis, while air ticketing margins improved.",
+      "The company cited higher airfares, Middle East conflict, elevated fuel costs, and airline capacity cuts as headwinds even as its own air passenger volumes grew sequentially.",
+    ],
+    body: [
+      "What's going on here?",
+      "Corporate travel agencies earn differently on a flight ticket than on a fully managed offsite. Yatra Online, which runs corporate travel desks and a consumer marketplace, reported results on 12 November 2026 for the quarter ended 30 September. Gross bookings grew about 5.6% year on year to near ₹21,654 million, with air ticketing bookings up roughly 15% and adjusted margin on air improving to about 7% of gross bookings. Yet revenue from operations fell about 39% to near ₹2,099 million because meetings, incentives, conferences, and exhibitions revenue dropped sharply. That segment is recognised on a gross basis, so when companies defer a ₹3 crore offsite, the top line looks wounded even if airline commissions hold up. Management said domestic industry air traffic fell about 6% year on year and 16% sequentially amid conflict in the Middle East, higher jet fuel, and tighter airline capacity, while Yatra still grew its own air volumes quarter on quarter.",
+      "What does this mean?",
+      "Finance teams have been resizing travel budgets in stages. Many employers kept essential client flights and approver-only trips while postponing large incentive events that need hotel blocks, banquets, and on-ground logistics. Yatra's split mirrors that behaviour: transactional air recovered faster than bundled MICE programmes. Standalone hotel bookings within Yatra reportedly grew around 20% year on year, which supports the idea that simple room nights return before sprawling conferences. Higher personnel and product investment also weighed on profitability this quarter, so the story is not only about deferred offsites but about spending to rebuild corporate wallet share while margins on air compete with promotions.",
+      "Why should I care?",
+      "If you plan sales kick-offs or leadership meetings for early 2027, compare agency quotes now because deferred programmes may collide in the same calendar window. Airlines and hotels should not assume one corporate client's rebound equals industry-wide MICE recovery. Investors in listed travel names must separate gross booking growth from reported revenue when MICE is lumpy. Employees awaiting incentive trips should check whether approvals hinge on total event cost or only on airfare caps. Watch Yatra's next update on rescheduled MICE pipelines, domestic airline capacity additions after winter schedules, and whether peers such as Thomas Cook report the same deferral pattern in their holiday and meetings divisions.",
+    ],
+  },
+  {
     slug: "andhra-green-compute-power-investments-november-2026",
     title: "Andhra Pradesh just tied gigawatts of clean power to new AI factories",
     summary:
@@ -11304,6 +11376,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-pli-bess-10gwh-grid-shortlist-november-2026": "policy",
+  "vodafone-idea-q2-funding-capex-november-2026": "companies",
+  "yatra-corporate-mice-air-split-november-2026": "markets",
   "andhra-green-compute-power-investments-november-2026": "policy",
   "vishay-kaynes-chip-assembly-jv-november-2026": "companies",
   "india-retail-cpi-609-october-2026": "policy",
