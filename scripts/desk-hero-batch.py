@@ -1660,7 +1660,54 @@ def travel_food_airport(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([980, 300, 1140, 480], radius=16, fill=YELLOW)
 
 
+def paytm_rbi_ppi(d: ImageDraw.ImageDraw) -> None:
+    """Wallet form left; compliance gate right."""
+    d.rounded_rectangle([100, 220, 420, 540], radius=24, fill=BLUE)
+    d.rounded_rectangle([150, 280, 370, 480], radius=18, fill=CREAM)
+    d.ellipse([220, 340, 300, 420], fill=YELLOW)
+    d.rectangle([640, 180, 720, 560], fill=GOLD)
+    d.polygon([(720, 240), (900, 200), (900, 360), (720, 400)], fill=RED)
+    d.rectangle([920, 260, 1100, 320], fill=BLUE)
+    d.rectangle([920, 360, 1060, 420], fill=YELLOW)
+
+
+def hdfc_hybrid_sif(d: ImageDraw.ImageDraw) -> None:
+    """Long bars up; short bars down; Dec symmetry."""
+    for i, h in enumerate([180, 260, 340, 420]):
+        x = 120 + i * 90
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    for i, h in enumerate([100, 160, 220]):
+        x = 800 + i * 90
+        d.rectangle([x, 560, x + 55, 560 + h], fill=BLUE)
+    d.line([(80, 400), (1200, 400)], fill=GOLD, width=3)
+    d.polygon([(600, 120), (680, 180), (600, 240), (520, 180)], fill=GOLD)
+
+
+def abb_record_orders(d: ImageDraw.ImageDraw) -> None:
+    """Transformer motif; rising order staircase."""
+    d.rectangle([120, 280, 280, 520], fill=BLUE)
+    d.rectangle([160, 320, 240, 480], fill=YELLOW)
+    d.line([(200, 200), (200, 280)], fill=GOLD, width=6)
+    for i, h in enumerate([140, 220, 300, 400, 480]):
+        x = 520 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, GOLD, BLUE, YELLOW, RED][i])
+    d.polygon([(1100, 260), (1180, 300), (1100, 340)], fill=GOLD)
+
+
+def tata_trusts_listing(d: ImageDraw.ImageDraw) -> None:
+    """Trust columns; listing steps ascending."""
+    for i, x in enumerate([100, 200, 300, 400]):
+        d.rectangle([x, 300 + i * 40, x + 60, 560], fill=[BLUE, RED, BLUE, YELLOW][i])
+    for i, w in enumerate([700, 850, 1000, 1150]):
+        d.rectangle([w - 80, 520 - (i + 1) * 80, w, 520], fill=GOLD if i % 2 else RED)
+    d.line([(660, 200), (660, 560)], fill=GOLD, width=2)
+
+
 def main() -> None:
+    save("paytm-rbi-ppi-preliminary-november-2026", paytm_rbi_ppi)
+    save("hdfc-mf-hybrid-sif-nfo-november-2026", hdfc_hybrid_sif)
+    save("abb-india-record-q3-orders-november-2026", abb_record_orders)
+    save("tata-trusts-tata-sons-listing-letter-november-2026", tata_trusts_listing)
     save("adani-intellismart-metering-close-november-2026", intellismart_metering)
     save("india-gem-jewellery-exports-october-2026", gem_jewellery_export)
     save("travel-food-airport-sales-november-2026", travel_food_airport)

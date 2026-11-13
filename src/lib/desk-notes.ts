@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "paytm-rbi-ppi-preliminary-november-2026",
+    title: "Paytm won preliminary RBI approval to rebuild its digital wallet business",
+    summary:
+      "One 97 Communications said on 13 November 2026 that Paytm Payments Services Ltd received preliminary Reserve Bank of India clearance to issue prepaid payment instruments, a regulatory step toward reviving wallets after the April 2026 cancellation of Paytm Payments Bank’s banking licence, though final authorisation still needs a systems audit within six months.",
+    category: "industry",
+    companyOrSector: "Payments / fintech",
+    publishedAt: "2026-11-13T18:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("paytm-rbi-ppi-preliminary-november-2026"),
+    keyTakeaways: [
+      "Preliminary approval covers prepaid payment instruments issued through Paytm Payments Services Ltd, not the cancelled Paytm Payments Bank entity.",
+      "PPSL can begin customer-facing wallet services only after RBI final authorisation following a systems and cybersecurity audit report due within six months.",
+      "Paytm shares touched levels last seen at the November 2021 listing day after the announcement, though operational wallet volumes still depend on completing the compliance runway.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian digital wallets need a payments-entity licence distinct from full-service banking, and Paytm has been rebuilding regulatory footing since the Reserve Bank of India shut Paytm Payments Bank in April 2026. On 13 November 2026, parent One 97 Communications told exchanges that Paytm Payments Services Ltd secured preliminary RBI approval to issue prepaid payment instruments, the product category that covers stored-value wallets. The clearance is separate from the online payment aggregator licence PPSL already held from August 2025: aggregators process merchant checkout flows, while a PPI licence lets a company hold customer balances inside a wallet app. Management said PPSL cannot onboard wallet users until the RBI grants final authorisation after reviewing an independent systems and cybersecurity audit to be filed within six months.",
+      "What does this mean?",
+      "Preliminary approval is a green signal on business plan and governance, not a switch flipped for millions of dormant wallet users. Paytm must harden technology stacks, complete the audit, and wait for the RBI’s written final nod before marketing wallet top-ups at scale. For merchants, the path matters because wallet-led consumer engagement historically fed Paytm’s distribution of loans, insurance, and devices. Rivals PhonePe and Google Pay already operate wallets or card products under their own PPI or bank partnerships, so every month Paytm spends in compliance mode is shelf space competitors can occupy. The development also clarifies that the post-Payments Bank strategy routes through PPSL rather than expecting a banking licence revival.",
+      "Why should I care?",
+      "If you still have a Paytm wallet balance stranded after the Payments Bank transition, watch exchange filings for the final authorisation date and any migration instructions rather than assuming instant access. Small merchants should compare settlement timing and dispute resolution across QR providers before locking into annual device contracts. Investors in listed fintech names should treat the headline as a regulatory milestone, not proof that wallet revenue returns next quarter. Track the audit filing, RBI final order language, monthly transacting user disclosures, and whether Paytm bundles the revived wallet with its new RuPay credit card offers.",
+    ],
+  },
+  {
+    slug: "hdfc-mf-hybrid-sif-nfo-november-2026",
+    title: "HDFC Mutual Fund opened its first specialised long-short investment scheme",
+    summary:
+      "HDFC Asset Management Company launched its first specialised investment fund on 13 November 2026, a hybrid long-short strategy with a ₹10 lakh minimum at the PAN level, twice-weekly redemptions, and up to 25% short exposure via derivatives, as industry data put hybrid long-short SIF assets near ₹38,287 crore.",
+    category: "industry",
+    companyOrSector: "Mutual funds / asset management",
+    publishedAt: "2026-11-13T18:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hdfc-mf-hybrid-sif-nfo-november-2026"),
+    keyTakeaways: [
+      "The H-SIF Hybrid Long-Short Fund NFO runs from 13 to 27 November 2026 with a ₹10 lakh aggregate minimum across SIF strategies per PAN, or ₹10,000 for accredited investors.",
+      "The portfolio mixes high-grade debt, arbitrage, REIT and InvIT exposure with derivatives for hedging, option premiums, and shorts capped at 25% of net assets.",
+      "Redemptions are limited to Mondays and Wednesdays with a 0.5% exit load on switches within 90 days of allotment.",
+    ],
+    body: [
+      "What's going on here?",
+      "India’s mutual fund rulebook now includes specialised investment funds, a category that permits long-short equity books and heavier derivative use than plain vanilla schemes. On 13 November 2026, HDFC Mutual Fund opened subscriptions for its first offering on the H-SIF platform, the Hybrid Long-Short Fund, with the new fund offer closing on 27 November 2026. The house cited Association of Mutual Funds in India data showing SIF assets climbing from about ₹2,010 crore in October 2025 to roughly ₹38,287 crore by September 2026, with hybrid long-short strategies taking the largest slice. Retail investors must commit at least ₹10 lakh in aggregate across SIF strategies at the permanent account number level unless they qualify as accredited investors with a ₹10,000 floor. Portfolio managers plan a core of relatively safe debt and arbitrage sleeves supplemented by selective equity shorts and event-driven trades around IPOs, buybacks, and mergers.",
+      "What does this mean?",
+      "SIFs target investors who want hedge-fund-style tools inside a mutual fund wrapper, including the ability to earn when markets fall modestly. That flexibility comes with liquidity constraints: this HDFC strategy allows redemption only twice a week and encourages horizons beyond eighteen months. Short exposure up to one quarter of net assets can cushion equity drawdowns but also creates losses if the market rallies sharply against the book. The ₹10 lakh entry bar keeps mass-market systematic investment plans out, which matches regulators’ intent to restrict complex products to wealthier households. For the industry, HDFC’s brand-heavy launch legitimises SIFs for bank distribution networks that already pitch portfolio management services.",
+      "Why should I care?",
+      "If you are considering the NFO, read the strategy information document for how shorts interact with the debt core and whether twice-weekly liquidity fits your cash needs. Investors in plain equity funds do not need to act, but competition for the same high-net-worth wallets may shift adviser recommendations away from portfolio management services with higher fees. Accredited investors should confirm eligibility paperwork before assuming the lower ticket applies. Watch subscription traction through 27 November 2026, peer launches from other AMCs, and whether Securities and Exchange Board of India issues further conduct rules as SIF assets scale.",
+    ],
+  },
+  {
+    slug: "abb-india-record-q3-orders-november-2026",
+    title: "ABB India's September-quarter orders hit a record on data-centre demand",
+    summary:
+      "ABB India Ltd reported on 13 November 2026 that September-quarter orders rose 56% year on year to a quarterly record, lifting backlog 36% to ₹12,927 crore, while revenue grew 19% to ₹3,738 crore on electrification and automation spending tied to data centres, grid upgrades, and renewables.",
+    category: "industry",
+    companyOrSector: "Electrification / industrial automation",
+    publishedAt: "2026-11-13T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("abb-india-record-q3-orders-november-2026"),
+    keyTakeaways: [
+      "Order intake in the September 2026 quarter rose 56% year on year, which management described as a record for that period.",
+      "Backlog stood at ₹12,927 crore, up 36% from a year earlier, giving multi-quarter revenue visibility.",
+      "Standalone net profit increased 8.2% to ₹443 crore on 19.4% revenue growth, while operating EBITDA margin eased slightly to 14.8%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Factories, grids, and server farms all need switchgear, drives, and control software before India can add manufacturing or compute capacity. ABB India Ltd, the local arm of the Swiss electrification group, published September-quarter results on 13 November 2026 showing orders up 56% year on year to a quarterly record. Backlog reached ₹12,927 crore, 36% higher than the year-ago period. Revenue from operations grew 19.4% to ₹3,738 crore and standalone net profit rose 8.2% to ₹443 crore. Country managing director Sanjeev Sharma pointed to demand from data centres, distribution grid modernisation, renewable integration, and energy-transition capex across metals, cement, rail, and commercial buildings. Operating earnings before interest, tax, depreciation, and amortisation expanded but margin slipped modestly to 14.8% from 15.5% as input and project mix shifted.",
+      "What does this mean?",
+      "Record orders with a fat backlog signal that corporate India is still placing equipment bets despite noisy macro headlines. Data-centre electrification requires medium-voltage gear, backup systems, and automation packages with long delivery cycles, which suits ABB’s project model. Grid and renewable jobs layer on top, stretching engineering teams but smoothing revenue once contracts convert to billings. Margin compression reminds investors that growth is not free: commodity costs and competitive bidding on public infrastructure can nibble at profitability even when volumes surge. The print sits alongside other industrial suppliers reporting strong pipelines, suggesting private capex is not frozen even as some consumer categories look uneven.",
+      "Why should I care?",
+      "If you manage commercial real estate or industrial plants, early electrification orders now determine whether power upgrades keep pace with expansion in 2027 and 2028. Procurement teams should lock supply slots on long-lead switchgear before festive shutdowns delay fabrication. Equity holders in capital goods names can use ABB’s backlog trajectory as a cross-check against their own holdings’ order commentary. Watch execution on the ₹12,927 crore book, margin guidance on the next call, rival bids from Siemens and Schneider on data-centre tenders, and policy moves that accelerate grid transmission awards.",
+    ],
+  },
+  {
+    slug: "tata-trusts-tata-sons-listing-letter-november-2026",
+    title: "Two Tata Trust leaders argued Tata Sons must follow RBI listing rules",
+    summary:
+      "Tata Trusts vice-chairmen Venu Srinivasan and Vijay Singh said in an 11 November 2026 letter that Tata Sons should comply with Reserve Bank of India requirements for upper-layer non-bank financial companies, challenging fellow trustee Darius Khambata's opposition to listing the holding company and backing chairman N Chandrasekaran's September reappointment.",
+    category: "industry",
+    companyOrSector: "Conglomerate governance",
+    publishedAt: "2026-11-13T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-trusts-tata-sons-listing-letter-november-2026"),
+    keyTakeaways: [
+      "The five-page letter dated 11 November 2026 responds to Khambata's criticism of Tata Sons board moves, including Chandrasekaran's five-year reappointment on 17 September 2026.",
+      "Srinivasan and Singh said the RBI's decision to keep Tata Sons under upper-layer NBFC rules after rejecting a deregistration bid cannot be blamed on weak advocacy with the regulator.",
+      "They cited listed global firms with foundation shareholders as proof that a Tata Sons initial public offering need not break the charitable trust model.",
+    ],
+    body: [
+      "What's going on here?",
+      "When a holding company sits inside India's upper-layer non-banking financial company framework, the Reserve Bank of India can require a stock market listing regardless of family tradition. On 11 November 2026, Tata Trusts vice-chairmen Venu Srinivasan and Vijay Singh published a five-page rebuttal to fellow trustee Darius Khambata, who had attacked Tata Sons board decisions including chairman N Chandrasekaran's five-year reappointment on 17 September 2026. The letter defended engagement with the RBI since 2023, noted Tata Sons repaid more than ₹21,000 crore of debt before seeking NBFC deregistration in March 2024, and said the regulator's September 2026 rejection of that application left compliance with listing norms as the realistic path. Srinivasan and Singh argued that listing Tata Sons would not sever charitable trusts from dividends funding philanthropy, pointing to overseas examples where foundations remain anchor shareholders of public companies.",
+      "What does this mean?",
+      "The feud is not only about personalities; it decides whether India's largest conglomerate faces public-market disclosure on capital allocation, related-party deals, and leverage at the top of the group. Opponents worry an initial public offering could shorten investment horizons on long-gestation bets in semiconductors, aviation, and batteries. Proponents, including the letter's authors, say accountability disciplines spending and that trusts would keep blocking power through shareholding. Uncertainty already stretched Chandrasekaran's renewal debate across seven months, which employees and lenders experience as governance noise. A listing route would also intersect with securities law timelines, merchant banker selection, and how Tata Sons values unlisted subsidiaries before filing a prospectus.",
+      "Why should I care?",
+      "If you work for a Tata group company, leadership stability and capital budgeting clarity matter more than daily share prices, yet the trust dispute directly influences both. Lenders to Tata Sons or its unlisted arms should monitor whether covenants assume continued private ownership. Investors in listed Tata companies may see parent-level transparency improve if the holding firm eventually floats, but minority shareholders should not assume automatic benefits until deal structure is public. Watch further trust votes, RBI comments on NBFC listing compliance, any Tata Sons board agenda on merchant bankers, and legal challenges to the September reappointment.",
+    ],
+  },
+  {
     slug: "adani-intellismart-metering-close-november-2026",
     title: "Adani Energy Solutions has closed its ₹3,050 crore IntelliSmart takeover",
     summary:
@@ -11496,6 +11592,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "paytm-rbi-ppi-preliminary-november-2026": "policy",
+  "hdfc-mf-hybrid-sif-nfo-november-2026": "policy",
+  "abb-india-record-q3-orders-november-2026": "companies",
+  "tata-trusts-tata-sons-listing-letter-november-2026": "policy",
   "adani-intellismart-metering-close-november-2026": "policy",
   "india-gem-jewellery-exports-october-2026": "markets",
   "travel-food-airport-sales-november-2026": "markets",
