@@ -1617,7 +1617,53 @@ def cbi_future_retail_fraud(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([1020, 260, 1100, 340], outline=YELLOW, width=6)
 
 
+def intellismart_metering(d: ImageDraw.ImageDraw) -> None:
+    """Smart meter disc; consolidation chevrons."""
+    d.rounded_rectangle([100, 240, 360, 520], radius=20, fill=BLUE)
+    d.ellipse([180, 300, 280, 400], fill=CREAM)
+    for a in range(0, 360, 45):
+        r = 90
+        cx, cy = 230, 350
+        x = cx + r * math.cos(math.radians(a))
+        y = cy + r * math.sin(math.radians(a))
+        d.line([(cx, cy), (x, y)], fill=GOLD, width=3)
+    d.rectangle([640, 280, 1120, 340], fill=RED)
+    d.rectangle([640, 380, 1050, 440], fill=YELLOW)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 700 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[BLUE, RED, YELLOW, GOLD][i])
+
+
+def gem_jewellery_export(d: ImageDraw.ImageDraw) -> None:
+    """Studded arc; outbound cargo lane."""
+    d.ellipse([140, 280, 340, 480], fill=YELLOW)
+    d.polygon([(220, 260), (260, 220), (300, 260)], fill=GOLD)
+    for i in range(5):
+        d.ellipse([170 + i * 35, 360, 200 + i * 35, 390], fill=RED if i % 2 else BLUE)
+    d.line([(520, 400), (720, 360)], fill=GOLD, width=5)
+    d.polygon([(720, 360), (1180, 300), (1180, 420), (720, 480)], fill=BLUE)
+    for i, h in enumerate([100, 160, 220]):
+        x = 900 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, YELLOW, RED][i])
+
+
+def travel_food_airport(d: ImageDraw.ImageDraw) -> None:
+    """Terminal gate; rising ticket bars on flat footfall."""
+    d.polygon([(120, 520), (260, 200), (400, 520)], fill=BLUE)
+    d.rectangle([200, 360, 320, 520], fill=CREAM)
+    for i in range(4):
+        x = 560 + i * 70
+        d.polygon([(x, 520), (x + 20, 480), (x + 40, 520)], fill=GOLD)
+    for i, h in enumerate([200, 280, 360, 440]):
+        x = 720 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.rounded_rectangle([980, 300, 1140, 480], radius=16, fill=YELLOW)
+
+
 def main() -> None:
+    save("adani-intellismart-metering-close-november-2026", intellismart_metering)
+    save("india-gem-jewellery-exports-october-2026", gem_jewellery_export)
+    save("travel-food-airport-sales-november-2026", travel_food_airport)
     save("hul-detergent-mrp-hike-november-2026", hul_detergent_mrp)
     save("veritas-finance-sebi-ipo-november-2026", veritas_finance_ipo)
     save("cbi-future-retail-sbi-fraud-november-2026", cbi_future_retail_fraud)

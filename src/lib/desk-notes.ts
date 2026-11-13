@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-intellismart-metering-close-november-2026",
+    title: "Adani Energy Solutions has closed its ₹3,050 crore IntelliSmart takeover",
+    summary:
+      "Adani Energy Solutions Ltd said on 13 November 2026 it completed the ₹3,050 crore acquisition of IntelliSmart Infrastructure, taking full ownership from NIIF and EESL after Competition Commission clearance in October and bringing its combined smart-meter footprint to more than 4.7 crore endpoints.",
+    category: "industry",
+    companyOrSector: "Power distribution / metering",
+    publishedAt: "2026-11-13T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-intellismart-metering-close-november-2026"),
+    keyTakeaways: [
+      "The exchange filing said equity transfer and redemption of NIIF's optionally convertible debentures are complete for the deal first announced in June 2026.",
+      "IntelliSmart had more than 2.2 crore advanced metering infrastructure endpoints across Uttar Pradesh, Gujarat, Madhya Pradesh, Bihar and Assam before the takeover.",
+      "Adani Energy Solutions said the combined smart-meter book crosses 4.7 crore units when merged with its own transmission and distribution metering orders.",
+    ],
+    body: [
+      "What's going on here?",
+      "State discoms still lose money when meters are read manually or bills are estimated, which is why advanced metering infrastructure has become a contest between utilities and specialist platforms. On 13 November 2026, Adani Energy Solutions Ltd told exchanges it closed the ₹3,050 crore purchase of IntelliSmart Infrastructure after the Competition Commission approved the transaction on 30 October 2026. The filing said Adani acquired 100% of IntelliSmart's equity and redeemed optionally convertible debentures NIIF held. National Investment and Infrastructure Fund and Energy Efficiency Services Ltd had jointly owned IntelliSmart, a company that deploys smart electricity meters and is expanding into smart gas metering. Reporting at signing in June 2026 put IntelliSmart's live portfolio above 2.2 crore meters across five large states. Adani said the deal lifts its own smart-metering pipeline above 4.7 crore devices once its prior order book is included.",
+      "What does this mean?",
+      "Advanced meters let discoms charge time-of-day tariffs, detect theft faster, and settle renewable purchase obligations with cleaner consumption data. Consolidation concentrates who installs, maintains, and finances millions of endpoints, which matters when states tender prepaid or postpaid AMI on tight timelines. A single large operator can standardize software and spare parts, but regulators will watch whether competition suffers on the next state-level bids. For households, the practical shift is still gradual: old meters get replaced when your discom's roll-out reaches your feeder, and billing accuracy depends on back-office systems catching up with the hardware on the pole.",
+      "Why should I care?",
+      "If your electricity bill still arrives on estimated units, check whether your discom has published an AMI schedule for your city and how disputed readings are handled once smart meters go live. Renters in prepaid-meter pilots should track how top-ups interact with security deposits. Investors in Adani Energy Solutions or rival meter makers should compare commissioning timelines on the merged book, not just headline endpoint counts. Watch Uttar Pradesh and Gujarat deployment data, any state-level tariff orders tied to AMI, and whether EESL bids independently on future central schemes after exiting IntelliSmart.",
+    ],
+  },
+  {
+    slug: "india-gem-jewellery-exports-october-2026",
+    title: "India's gem and jewellery exports jumped 34% in October",
+    summary:
+      "Gem and Jewellery Export Promotion Council data released on 13 November 2026 showed October exports at $2.92 billion, up 34% year on year, with gold jewellery and studded gold jewellery shipments leading the surge ahead of the overseas holiday season and an uninterrupted production month because Diwali fell in November rather than October.",
+    category: "industry",
+    companyOrSector: "Gems & jewellery / exports",
+    publishedAt: "2026-11-13T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-gem-jewellery-exports-october-2026"),
+    keyTakeaways: [
+      "October exports reached $2.92 billion versus $2.18 billion in October 2025, while the April-October tally rose 7.28% to $17.22 billion.",
+      "Gold jewellery exports climbed 48.2% in October and studded gold jewellery 67.3%; cut and polished diamonds returned to growth at 10.5%.",
+      "The United Arab Emirates remained the largest April-October destination at $4.87 billion even though shipments to the UAE fell 10.27% year on year; Hong Kong and US volumes rose.",
+    ],
+    body: [
+      "What's going on here?",
+      "Overseas jewellery orders peak before Christmas and year-end gifting in Western markets, so Indian manufacturers race to finish consignments in autumn. On 13 November 2026, the Gem and Jewellery Export Promotion Council published October trade data showing exports at $2.92 billion, a 34% jump from $2.18 billion in October 2025. Council commentary said timing helped: last year Diwali sat in October and disrupted factory shifts, while this year the festival landed in November, leaving October as a full production month. Gold jewellery exports rose 48.2% in the month and studded gold jewellery 67.3%. Cut and polished diamonds, a segment that had wobbled earlier in the year, posted 10.5% growth in October. On a cumulative basis, April-October exports reached $17.22 billion, up 7.28% from $16.05 billion a year earlier.",
+      "What does this mean?",
+      "Export values mix real volume with international gold prices, and chairman Kirit Bhansali noted both higher bullion costs abroad and continued demand for Indian-made pieces in key markets. Higher silver prices also lifted working-capital needs and made some overseas buyers cautious on order sizes, even as silver jewellery exports grew through the first seven months of the fiscal year. Geography is uneven: the UAE still leads on a cumulative basis but declined year on year, while Hong Kong, the US, Belgium, Singapore and Canada picked up slack. For domestic consumption, strong export throughput suggests Karigar capacity stayed busy, though it does not automatically translate into cheaper retail counters at home.",
+      "Why should I care?",
+      "If you work in jewellery manufacturing or polishing hubs, October's burst is a cue to confirm labour and working-capital lines before the next US holiday purchase orders land. Retail buyers in India should not read export surge as a local price drop; domestic gold rates still track import duties and bullion. Exporters should watch currency moves and any Middle East payment delays given softer UAE growth in the same data set. Track November GJEPC prints after Diwali, international gold and silver benchmarks, and the council's FY27 guidance of roughly 10% export growth if current momentum holds.",
+    ],
+  },
+  {
+    slug: "travel-food-airport-sales-november-2026",
+    title: "Travel Food's airport sales grew 19% even as passenger traffic fell",
+    summary:
+      "Travel Food Services Ltd reported on 13 November 2026 that system-wide sales rose 18.8% in the September quarter and 18.4% in the first half despite declining passenger traffic, with adjusted profit excluding provision write-backs near ₹100 crore in the quarter and more than fifty new outlets in the pipeline.",
+    category: "industry",
+    companyOrSector: "Airport retail / food",
+    publishedAt: "2026-11-13T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("travel-food-airport-sales-november-2026"),
+    keyTakeaways: [
+      "Quarterly system-wide sales growth landed near 18.8% year on year while first-half sales rose 18.4% despite softer passenger volumes cited in the results pack.",
+      "Profit after tax excluding one-off provision write-backs reached about ₹100 crore in the quarter and roughly ₹220 crore in the first half.",
+      "Management highlighted outlet expansion and a pipeline of about fifty units as passengers spend more per visit at existing airport concessions.",
+    ],
+    body: [
+      "What's going on here?",
+      "Airport concessionaires earn when passengers open wallets for meals, lounges, and duty-paid goods, not only when airlines add seats. On 13 November 2026, Travel Food Services Ltd published September-quarter numbers showing system-wide sales up 18.8% year on year, with first-half sales up 18.4% on the same basis. The company said passenger traffic declined in the period, so the revenue lift came from higher spend per traveller and new outlets rather than more bodies in terminals. Adjusted profit after tax, stripping provision write-backs, was about ₹100 crore in the quarter and near ₹220 crore in the first half. Management pointed to a roll-out pipeline of roughly fifty additional units and integration work on newer concessions.",
+      "What does this mean?",
+      "When traffic softens but sales still climb, ticket sizes and premium mix are doing the work. Business travellers and holiday flyers often trade up to sit-down meals or faster grab-and-go formats when security queues eat into gate time. Airport landlords also push minimum guarantees that force concessionaires to open more square footage, which can lift revenue even on flat footfall. The pattern sits beside other travel data this fortnight showing uneven domestic demand, yet it suggests the highest-spending slice of fliers has not retreated from terminal spending.",
+      "Why should I care?",
+      "If you fly frequently, compare all-in meal prices between terminals because concession inflation can outpace headline airfare moves on short hops. Investors watching listed airport retail plays should pair footfall disclosures from airport operators with same-store sales trends, not traffic alone. Franchise partners should read renewal terms on revenue-share percentages before bidding for new gates. Watch December traffic readings from major metros, Travel Food's outlet openings, and whether domestic airlines restore capacity on routes where cancellations have thinned crowds.",
+    ],
+  },
+  {
     slug: "godrej-capital-temasek-november-2026",
     title: "Temasek is putting ₹2,500 crore into Godrej's home-loan platform",
     summary:
@@ -11424,6 +11496,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-intellismart-metering-close-november-2026": "policy",
+  "india-gem-jewellery-exports-october-2026": "markets",
+  "travel-food-airport-sales-november-2026": "markets",
   "godrej-capital-temasek-november-2026": "policy",
   "spicejet-board-capital-raise-november-2026": "markets",
   "india-pli-bess-10gwh-grid-shortlist-november-2026": "policy",
