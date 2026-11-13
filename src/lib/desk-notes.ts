@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "godrej-capital-temasek-november-2026",
+    title: "Temasek is putting ₹2,500 crore into Godrej's home-loan platform",
+    summary:
+      "Godrej Industries said on 12 November 2026 that Temasek Holdings will invest about ₹2,500 crore in Godrej Capital through an affiliate, valuing the housing-finance arm at up to ₹28,000 crore while Godrej Industries keeps roughly 80% ownership.",
+    category: "industry",
+    companyOrSector: "Home finance / NBFC",
+    publishedAt: "2026-11-13T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("godrej-capital-temasek-november-2026"),
+    keyTakeaways: [
+      "Temasek's cheque is worth about $267 million at cited exchange rates and arrives as Godrej Capital scales home loans and developer finance off the family group's brand.",
+      "Godrej Industries will retain near 80% of Godrej Capital after the transaction, so the deal is growth capital rather than a control sale.",
+      "The investment sits in the same week as Blackstone's IIFL Finance raise and draft RBI talk on private-equity stakes in multiple NBFCs, underscoring how much foreign money now chases Indian retail credit.",
+    ],
+    body: [
+      "What's going on here?",
+      "Housing-finance platforms need long-dated equity when mortgage pipelines grow faster than deposit franchises can fund them. On 12 November 2026, Godrej Industries told markets that Singapore's Temasek Holdings will invest about ₹2,500 crore, or roughly $267 million, in Godrej Capital through an affiliate. Reporting put the transaction at a valuation of up to ₹28,000 crore for the lender focused on home loans and related developer exposures. Godrej Industries said it will keep about 80% ownership after the cheque clears, which frames the move as minority growth capital inside the family-controlled lender rather than a wholesale handover.",
+      "What does this mean?",
+      "Retail home lending in India still mixes secured mortgages with semi-finished project risk, so balance-sheet equity lowers wholesale borrowing costs and helps satisfy Reserve Bank of India rules as books cross size thresholds. Temasek arrives after Godrej Capital has spent several years building origination teams that sell both salaried mortgages and loans tied to Godrej Properties' projects. A large sovereign-style allocator gives Godrej an anchor for the next leg of loan growth without listing the unit separately. The deal also arrives alongside other foreign capital into non-bank lenders this month, which keeps regulator attention fixed on how much strategic equity one sponsor can hold across competing consumer-finance platforms.",
+      "Why should I care?",
+      "If you are shopping for a home loan, compare offers from NBFCs and banks on processing fees and rate-reset clauses, not only headline spreads, because equity-rich lenders can compete on service while funding costs adjust slowly. Builders negotiating construction finance should watch whether Godrej Capital tightens or loosens project exposure as fresh capital lands. Investors in Godrej Industries should read the filing on how the stake price relates to book and whether Temasek receives board or reserved matters akin to other recent NBFC deals. Track exchange disclosures on closing timelines, RBI comments on the ownership structure, and whether Godrej Capital files for a standalone listing or stays a subsidiary funded by internal cash and partner equity.",
+    ],
+  },
+  {
+    slug: "spicejet-board-capital-raise-november-2026",
+    title: "SpiceJet's board will meet on 18 November to seek fresh capital",
+    summary:
+      "SpiceJet Ltd said on 13 November 2026 that its board will meet on 18 November to consider raising funds through equity, preference shares, debt, or other instruments, after weeks of reports that the airline was flying far below its approved winter schedule.",
+    category: "industry",
+    companyOrSector: "Aviation / capital markets",
+    publishedAt: "2026-11-13T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("spicejet-board-capital-raise-november-2026"),
+    keyTakeaways: [
+      "The exchange filing lists 18 November 2026 as the board date and says the proposal may include equity, preference capital, debt securities, or other eligible instruments.",
+      "Prior reporting in the same fortnight put daily cancellations at 25 to 30 flights and active aircraft in the low teens against a winter roster approved for nearly 70 to 80 daily movements.",
+      "Capital injections would follow years of restructuring efforts and precede the peak holiday travel window when reliability matters most for advance bookings.",
+    ],
+    body: [
+      "What's going on here?",
+      "Airlines burn cash when they sell tickets on a network they cannot operate, so boards eventually face a straight choice between fresh funding or deeper schedule cuts. On 13 November 2026, SpiceJet Ltd informed exchanges that its board will meet on 18 November to consider a proposal for raising fresh capital. The notice said instruments on the table may include equity shares, preference shares, debt securities, or other permitted securities. The agenda lands days after wire copy described the carrier flying only a fraction of the winter timetable filed with India's aviation regulator, with operational trackers citing roughly 25 to 30 cancellations per day and a fleet active in the low teens against rostered capacity near 70 to 80 airport movements.",
+      "What does this mean?",
+      "Equity or quasi-equity gives lessors and fuel vendors confidence to release aircraft and credit lines, which is why any capital raise is linked to schedule recovery rather than abstract balance-sheet math. Preference shares or debt with converts could dilute existing holders while avoiding an immediate public rights issue, though shareholder approval and pricing norms still apply. Even if the board clears a structure, cash must arrive before passengers see stable operations because wet-leased jets and unpaid ground handlers have been central to the recent capacity gap. Competitors already hold most domestic market share, so each delayed infusion cedes revenue on thin routes SpiceJet once served with turboprops and narrow-bodies.",
+      "Why should I care?",
+      "If you hold SpiceJet tickets through December, treat backups as mandatory until flown rotations match the filed winter plan for several weeks, regardless of what the board approves on paper. Investors should read any term sheet for whether new money is equity with voting rights or debt that matures before the fleet is restored. Regulators may still compare filed schedules with flown data even as capital talks proceed. Watch the 18 November board outcome, exchange filings on instrument type and shareholder meetings, Directorate General of Civil Aviation statements on schedule compliance, and whether lessors return parked aircraft after funds hit escrow accounts.",
+    ],
+  },
+  {
     slug: "india-pli-bess-10gwh-grid-shortlist-november-2026",
     title: "Twenty-two firms are now in the running for India's grid battery subsidy round",
     summary:
@@ -11376,6 +11424,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "godrej-capital-temasek-november-2026": "policy",
+  "spicejet-board-capital-raise-november-2026": "markets",
   "india-pli-bess-10gwh-grid-shortlist-november-2026": "policy",
   "vodafone-idea-q2-funding-capex-november-2026": "companies",
   "yatra-corporate-mice-air-split-november-2026": "markets",
