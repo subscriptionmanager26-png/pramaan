@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "icici-bank-cad-forecast-fy27-november-2026",
+    title: "ICICI Bank expects India's current account gap to widen to $57 billion next year",
+    summary:
+      "An ICICI Bank research note on 14 November 2026 said India's current account deficit could reach about $57 billion, or 1.4% of GDP, in fiscal 2026-27 as strong domestic demand and higher oil prices keep imports ahead of exports, even after record October goods shipments.",
+    category: "industry",
+    companyOrSector: "External trade / rupee",
+    publishedAt: "2026-11-14T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("icici-bank-cad-forecast-fy27-november-2026"),
+    keyTakeaways: [
+      "ICICI Bank projects the goods trade deficit at about $380 billion in FY27, with October's merchandise gap near $40 billion.",
+      "Goods exports hit a record $49 billion in October but imports rose to $89 billion, led by oil and non-oil purchases.",
+      "Foreign portfolio inflows of about $8.8 billion in November through mid-month helped the rupee outlook despite the wider trade gap.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's current account measures how much the country borrows from the world after counting trade, services, and remittances. When households and factories buy more from abroad than foreigners buy here, the gap widens and the rupee faces more pressure. On 14 November 2026, ICICI Bank's research desk said it now expects the current account deficit to reach about $57 billion in fiscal 2026-27, equal to roughly 1.4% of GDP, up from earlier forecasts as import appetite stays firm. The bank sees the goods trade shortfall at about $380 billion for the year. October data already showed the merchandise deficit climbing close to $40 billion, its widest in a year, even as goods exports jumped 45% year on year to a record $49 billion.",
+      "What does this mean?",
+      "Strong export growth is not enough when oil and industrial inputs arrive in even larger volumes. October's oil import bill alone pushed the energy deficit to about $14 billion while non-oil, non-gold purchases added another $20 billion of red ink. Domestic demand is doing part of the work: factories and consumers are pulling in components and finished goods faster than services receipts can offset the bill. ICICI Bank still expects services exports and steady remittances to cushion the blow, but it warned that softer global AI-related spending could slow IT earnings. The near-term rupee picture improved after foreign investors poured about $8.8 billion into Indian equities in the first half of November, reversing months of selling, yet any flare-up in Middle East oil routes could quickly reopen import stress.",
+      "Why should I care?",
+      "If you import raw materials or pay dollar-linked loans, a wider current account deficit usually means more attention on the rupee and hedging costs. Households feel it indirectly through fuel and imported gadget prices when global oil moves. Mutual fund investors should not confuse short FPI spikes with a permanently easier external balance. Exporters benefit when the currency is competitive but lose if input costs rise faster than orders. Watch monthly trade prints, Brent crude swings, RBI foreign exchange reserves updates, and whether services export growth holds into the second half of the fiscal year.",
+    ],
+  },
+  {
+    slug: "senco-gold-retail-margin-guide-november-2026",
+    title: "Senco Gold is still opening stores faster than margins are recovering",
+    summary:
+      "Regional jeweller Senco Gold told investors its second-quarter revenue rose 34% year on year with 30% same-store sales growth, but EBITDA margin fell to 4.4%, and management guided the second half toward at least 25% revenue growth with margins between 7.5% and 7.8%.",
+    category: "industry",
+    companyOrSector: "Retail jewellery",
+    publishedAt: "2026-11-14T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("senco-gold-retail-margin-guide-november-2026"),
+    keyTakeaways: [
+      "First-half fiscal 2026-27 revenue grew 52% year on year, with profit after tax up 22%.",
+      "Second-quarter same-store sales growth was about 30% even as EBITDA margin compressed to 4.4%.",
+      "Management expects second-half revenue growth above 25% and EBITDA margin in a 7.5% to 7.8% band.",
+    ],
+    body: [
+      "What's going on here?",
+      "Tier-two and tier-three jewellery chains make money when festive footfall converts into high-margin studded and bridal sets, not just when gold prices rise on the tag. Senco Gold, which built its brand across eastern and central India, reported on 14 November 2026 that second-quarter revenue rose 34% year on year while first-half sales were up 52%. Same-store sales growth ran at about 30%, signalling existing outlets are pulling heavier baskets. Profit after tax for the first half climbed 22%. The catch sat in profitability: second-quarter EBITDA margin slipped to 4.4%, well below the range management wants for the back half of the year.",
+      "What does this mean?",
+      "Rapid store additions and promotions can lift revenue long before cost leverage shows up in margins. Senco is choosing growth over near-term percentage points, betting that scale and bridal season mix will pull margins back toward 7.5% to 7.8% in the second half while revenue keeps expanding at 25% or more. That pattern matches a wider festive season story in which Indians are still buying gold jewellery, but competition from national chains and high working-capital costs on inventory bite into shop-level returns. For shareholders, the quarter is a reminder that top-line fireworks do not equal earnings fireworks until making charges and studded mix improve.",
+      "Why should I care?",
+      "If you are shopping for wedding jewellery in Senco's markets, the expansion push can mean more design choice and financing tie-ups, but also heavier discounting on plain gold pieces. Retail investors comparing Senco with Titan or Kalyan should watch same-store growth alongside margin guidance, not just store count press releases. Employees and franchise partners should ask how much of the margin recovery plan depends on studded share versus aggressive gold coin sales. Track third-quarter operating margin disclosures, inventory days on the balance sheet, and new store openings versus closures in smaller towns.",
+    ],
+  },
+  {
+    slug: "india-mf-sip-stoppage-october-2026",
+    title: "More Indians paused mutual fund SIPs than started new ones in October",
+    summary:
+      "Association of Mutual Funds in India data showed systematic investment plan discontinuations exceeded fresh registrations in October 2026, lifting the SIP stoppage ratio to 116%, the highest since April 2025, even as total monthly SIP contributions stayed near record levels.",
+    category: "industry",
+    companyOrSector: "Household savings / mutual funds",
+    publishedAt: "2026-11-14T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-mf-sip-stoppage-october-2026"),
+    keyTakeaways: [
+      "The SIP stoppage ratio crossed 100% for the second time in fiscal 2026-27, meaning more plans ended than began in October.",
+      "At 116%, October's ratio was the highest reading since April 2025.",
+      "Overall SIP inflows remained close to the peaks seen in August and September 2026 despite the higher churn.",
+    ],
+    body: [
+      "What's going on here?",
+      "A systematic investment plan deducts a fixed sum each month into a mutual fund, and millions of Indian salary earners use it as their default wealth habit. When more people pause or cancel those mandates than sign up for new ones, it is a quiet signal that household cash is under strain or that past losses made savers nervous. Amfi statistics published in the week of 14 November 2026 showed that October 2026 was the second month in fiscal 2026-27 when SIP discontinuations outnumbered fresh registrations. The stoppage ratio reached 116%, the highest since April 2025. That means for every 100 new SIPs, about 116 existing plans stopped.",
+      "What does this mean?",
+      "Churn and growth can coexist because large legacy SIP books keep pumping money even as some users trim ticket sizes or exit. Industry data cited alongside the stoppage ratio said aggregate monthly SIP contributions still hovered near the record highs touched in August and September 2026, so the mutual fund industry is not shrinking overnight. The tension is in the middle class margin: equity inflows into large-cap funds held up in October, while mid-cap and small-cap buckets saw softer net additions, suggesting investors are trimming risk after volatile small-cap stretches. Advisers often see stoppages spike after a sharp drawdown or when EMIs and festival spending collide in the same quarter.",
+      "Why should I care?",
+      "If you run a monthly SIP, October's ratio is a prompt to check whether you paused out of convenience or fear, and whether your mandate still matches your goal date. Pausing during a dip can leave you behind when flows return, but overstretching a ₹25,000 ticket when cash is tight creates its own problems. Distributors should expect more rebalancing conversations and proof requests from clients who stopped mid-cap SIPs but kept large-cap tickets. Watch November Amfi flow tables, mid-cap versus large-cap net inflows, and whether stoppage ratios fall after the festive spending month ends.",
+    ],
+  },
+  {
     slug: "reliance-andhra-cbg-investment-november-2026",
     title: "Reliance plans ₹1 lakh crore of compressed biogas plants in Andhra Pradesh",
     summary:
@@ -11664,6 +11736,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "icici-bank-cad-forecast-fy27-november-2026": "policy",
+  "senco-gold-retail-margin-guide-november-2026": "markets",
+  "india-mf-sip-stoppage-october-2026": "markets",
   "reliance-andhra-cbg-investment-november-2026": "policy",
   "airtel-payments-bank-ipo-path-november-2026": "companies",
   "tata-motors-jlr-restructuring-november-2026": "companies",

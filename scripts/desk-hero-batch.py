@@ -1694,6 +1694,41 @@ def abb_record_orders(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(1100, 260), (1180, 300), (1100, 340)], fill=GOLD)
 
 
+def icici_cad_forecast(d: ImageDraw.ImageDraw) -> None:
+    """Trade ships vs inward cargo stacks."""
+    d.polygon([(140, 500), (280, 420), (420, 500), (280, 580)], fill=BLUE)
+    d.rectangle([100, 280, 460, 360], fill=RED)
+    for i, h in enumerate([180, 260, 340, 420, 500]):
+        x = 640 + i * 75
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[YELLOW, RED, BLUE, GOLD, YELLOW][i])
+    d.line([(620, 560), (1180, 560)], fill=INK, width=2)
+    d.ellipse([1000, 220, 1160, 380], outline=GOLD, width=5)
+    d.arc([1020, 240, 1140, 360], 200, 340, fill=RED, width=4)
+
+
+def senco_gold_retail(d: ImageDraw.ImageDraw) -> None:
+    """Storefront awning; margin bars lagging revenue steps."""
+    d.polygon([(120, 320), (480, 260), (480, 420), (120, 480)], fill=YELLOW)
+    d.rectangle([200, 360, 400, 440], fill=RED)
+    for i, h in enumerate([400, 340, 280]):
+        d.rectangle([620 + i * 90, 560 - h, 690 + i * 90, 560], fill=BLUE)
+    for i, h in enumerate([120, 180, 240, 300, 360, 420]):
+        x = 720 + i * 55
+        d.rectangle([x, 560 - h, x + 40, 560], fill=GOLD if i % 2 else RED)
+    d.line([(80, 560), (1180, 560)], fill=INK, width=2)
+
+
+def mf_sip_stoppage(d: ImageDraw.ImageDraw) -> None:
+    """Calendar SIP ticks; broken chain links on the right."""
+    for i in range(6):
+        x = 120 + i * 70
+        d.ellipse([x, 280, x + 50, 330], fill=BLUE)
+        d.line([(x + 25, 330), (x + 25, 400)], fill=GOLD, width=3)
+    d.arc([780, 260, 1140, 620], 30, 150, fill=RED, width=8)
+    d.arc([780, 260, 1140, 620], 210, 330, fill=RED, width=8)
+    d.line([(900, 380), (1020, 500)], fill=RED, width=6)
+
+
 def reliance_andhra_cbg(d: ImageDraw.ImageDraw) -> None:
     """Farm residue silo; methane flame pipeline."""
     d.ellipse([120, 320, 320, 520], fill=YELLOW)
@@ -1743,6 +1778,9 @@ def tata_trusts_listing(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("icici-bank-cad-forecast-fy27-november-2026", icici_cad_forecast)
+    save("senco-gold-retail-margin-guide-november-2026", senco_gold_retail)
+    save("india-mf-sip-stoppage-october-2026", mf_sip_stoppage)
     save("reliance-andhra-cbg-investment-november-2026", reliance_andhra_cbg)
     save("airtel-payments-bank-ipo-path-november-2026", airtel_payments_bank_ipo)
     save("tata-motors-jlr-restructuring-november-2026", tata_motors_jlr_restruct)
