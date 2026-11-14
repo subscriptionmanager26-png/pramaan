@@ -694,6 +694,37 @@ def strides_ex_us(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(900, 360), (980, 400), (900, 440)], fill=BLUE)
 
 
+def ashok_leyland_mhcv_q2(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 380, 520, 500], fill=RED)
+    d.ellipse([140, 480, 220, 560], fill=INK)
+    d.ellipse([400, 480, 480, 560], fill=INK)
+    d.rectangle([240, 300, 380, 380], fill=BLUE)
+    for i, h in enumerate([140, 220, 300, 380]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 65, 560], fill=[YELLOW, RED, BLUE, YELLOW][i])
+    d.polygon([(900, 240), (1040, 300), (1040, 380), (900, 440)], fill=GOLD)
+
+
+def pvr_inox_global_distribution(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 160, 520, 560], fill=BLUE)
+    d.rectangle([140, 220, 460, 500], fill=CREAM)
+    d.ellipse([240, 300, 360, 420], fill=RED)
+    d.polygon([(700, 480), (820, 400), (980, 420), (1100, 520), (860, 560)], fill=YELLOW)
+    d.rectangle([600, 180, 1180, 240], fill=RED)
+    d.rectangle([600, 280, 1100, 340], fill=BLUE)
+
+
+def india_us_trade_pact_last_stretch(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 200, 400, 480], outline=BLUE, width=6)
+    d.ellipse([180, 260, 340, 420], fill=YELLOW)
+    d.rectangle([700, 200, 1100, 560], fill=RED)
+    for i, w in enumerate([1100, 1020, 940]):
+        d.line([(700, 260 + i * 100), (w, 260 + i * 100)], fill=GOLD, width=4)
+        d.polygon([(w, 250 + i * 100), (w + 36, 270 + i * 100), (w, 290 + i * 100)], fill=BLUE)
+    d.rectangle([80, 520, 1180, 580], fill=BLUE)
+    d.rectangle([200, 536, 500, 564], fill=YELLOW)
+
+
 def ramkrishna_forgings_cv(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([120, 360, 520, 480], fill=RED)
     d.ellipse([160, 460, 240, 540], fill=INK)
@@ -1995,6 +2026,9 @@ def main() -> None:
     save("india-pli-bess-10gwh-grid-shortlist-november-2026", pli_bess_grid_shortlist)
     save("vodafone-idea-q2-funding-capex-november-2026", vodafone_idea_q2_funding)
     save("yatra-corporate-mice-air-split-november-2026", yatra_mice_air_split)
+    save("ashok-leyland-mhcv-q2-november-2026", ashok_leyland_mhcv_q2)
+    save("pvr-inox-global-distribution-november-2026", pvr_inox_global_distribution)
+    save("india-us-trade-pact-last-stretch-november-2026", india_us_trade_pact_last_stretch)
 
 
 if __name__ == "__main__":

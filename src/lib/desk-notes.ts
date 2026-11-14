@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "ashok-leyland-mhcv-q2-november-2026",
+    title: "Ashok Leyland sold one-third more trucks in the September quarter",
+    summary:
+      "Ashok Leyland reported on 14 November 2026 that medium and heavy commercial vehicle volumes rose 32% year on year to 64,677 units in the second quarter, lifting consolidated revenue 35% to about ₹17,030 crore while net profit grew 8.7% to ₹891 crore as input costs climbed faster than pricing.",
+    category: "industry",
+    companyOrSector: "Commercial vehicles / freight demand",
+    publishedAt: "2026-11-14T21:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ashok-leyland-mhcv-q2-november-2026"),
+    keyTakeaways: [
+      "Commercial vehicle volumes reached 64,677 units in Q2 FY27 versus 49,116 units a year earlier, a 32% increase.",
+      "Consolidated revenue from operations rose 35% to about ₹17,030 crore while net profit increased 8.7% to ₹891 crore.",
+      "Cost of materials and services consumed jumped 45% to about ₹9,899 crore, tempering profit growth despite higher wholesales.",
+    ],
+    body: [
+      "What's going on here?",
+      "When builders, miners and logistics firms order more trucks, it usually means freight and construction activity is picking up, not just that dealers cleared old stock. Ashok Leyland, one of India's largest commercial vehicle makers, said on 14 November 2026 that it sold 64,677 medium and heavy trucks and buses in the quarter ended September 2026, up 32% from 49,116 units a year earlier. Consolidated revenue from operations climbed 35% to about ₹17,030 crore. Net profit rose 8.7% to ₹891 crore. The company flagged that cost of materials and services consumed surged 45% to about ₹9,899 crore, which held back margin expansion even as volumes ran hot. On a standalone basis, net profit grew 13% to about ₹869 crore on revenue up 39% to roughly ₹13,364 crore.",
+      "What does this mean?",
+      "Commercial vehicle demand often turns before headline GDP prints because fleets replace aging tractors and tipper bodies when highway projects, mining dispatches and e-commerce lanes need more capacity. Ashok Leyland's wholesale jump aligns with other festive-season commentary that infrastructure and consumer goods movement stayed busy even as passenger car makers fought commodity inflation. The profit line growing slower than revenue shows steel, components and freight surcharges are still biting OEMs. For fleet buyers, strong OEM volumes can mean shorter delivery waits but also fewer festive discounts if plants run near capacity.",
+      "Why should I care?",
+      "If you operate a logistics or construction fleet, compare Ashok Leyland quotes with Tata Motors and Eicher wholesale trends before locking year-end purchases. Lenders to transport operators may read rising OEM volumes as a sign that route utilisation is holding up, though you should still check borrower fuel bills. Investors should line up MHCV growth with monthly SIAM releases and road ministry award data rather than treating one quarter as a multiyear boom. Watch third-quarter discounting, Ashok Leyland's parts pricing pass-through, and whether rival OEMs post similar volume spikes in the same week.",
+    ],
+  },
+  {
+    slug: "pvr-inox-global-distribution-november-2026",
+    title: "PVR INOX will distribute more Hollywood blockbusters in Indian cinemas itself",
+    summary:
+      "PVR INOX Pictures said on 14 November 2026 that it acquired Indian theatrical rights to several global releases, including The Hunger Games: Sunrise on the Reaping and Godzilla Minus Zero, betting that Gen Z audiences will buy tickets for foreign films when the chain controls marketing and screen placement.",
+    category: "industry",
+    companyOrSector: "Cinemas / entertainment",
+    publishedAt: "2026-11-14T21:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pvr-inox-global-distribution-november-2026"),
+    keyTakeaways: [
+      "PVR INOX Pictures expanded its distribution slate after earlier runs with anime and concert films such as Jujutsu Kaisen and a BTS tour release.",
+      "Upcoming titles include The Hunger Games: Sunrise on the Reaping and Godzilla Minus Zero, with additional Hollywood releases scheduled into early 2027.",
+      "Executive director Sanjeev Kumar Bijli told Live Mint the chain uses exhibition data to pick international titles Gen Z audiences already track online.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian multiplex chains make money when they can fill seats on opening weekend, not when they wait for a third-party distributor to drop a faded print. PVR INOX Pictures, the distribution arm of India's largest cinema operator, said on 14 November 2026 that it bought Indian theatrical rights to another batch of global movies after recent successes with anime and concert formats. The slate includes The Hunger Games: Sunrise on the Reaping, Godzilla Minus Zero, Paper Tiger and Guy Ritchie's Wife and Dog among others, stretching into early 2027. Executive director Sanjeev Kumar Bijli told Live Mint the integrated model lets the company market foreign titles directly to audiences that already follow Hollywood and Japanese releases on social media, instead of relying on a generic studio import schedule.",
+      "What does this mean?",
+      "When a chain controls both screens and distribution, it can place a niche title on more Friday shows, bundle popcorn offers, and cross-promote across its app before word of mouth spreads. Bijli pointed to global online buzz around Godzilla Minus Zero as an example of demand the company wants to capture at home. The push sits alongside PVR INOX's record September-quarter earnings disclosed in October, when footfalls benefited from Hindi blockbusters and regional hits. Owning distribution adds margin on ticket one if marketing works, but it also shifts inventory risk to the exhibitor if a title underperforms in tier-two cities.",
+      "Why should I care?",
+      "If you are a casual moviegoer in metro or tier-one markets, expect more foreign language posters and fan event screenings at PVR INOX properties as the chain self-distributes. Independent producers should note that strong performing niches may face tighter competition for prime weekend slots. Investors comparing PVR INOX with regional chains should watch the mix of self-distributed titles versus studio releases in footfall disclosures. Track opening-week occupancy on the November global slate, marketing spend commentary on the next earnings call, and whether rival chains copy the in-house distribution playbook.",
+    ],
+  },
+  {
+    slug: "india-us-trade-pact-last-stretch-november-2026",
+    title: "Jaishankar said India and the US are in the final stretch of a trade deal",
+    summary:
+      "External affairs minister S Jaishankar told the Hindustan Times Leadership Summit on 14 November 2026 that negotiators have resolved most tariff and market-access issues in the proposed India-US trade pact and that remaining friction largely reflects policy shifts in Washington rather than new Delhi.",
+    category: "industry",
+    companyOrSector: "Trade policy / exports",
+    publishedAt: "2026-11-14T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-us-trade-pact-last-stretch-november-2026"),
+    keyTakeaways: [
+      "Jaishankar said the bulk of bilateral trade issues are settled and that talks are approaching a finishing line, with many outstanding points on the US side.",
+      "Prime minister Narendra Modi may meet president Donald Trump around the G20 summit in Miami on 14 and 15 December 2026, when a pact announcement has been speculated.",
+      "Negotiations since early 2025 have focused on tariff parity, non-tariff barriers and better US market access for Indian goods versus competing suppliers.",
+    ],
+    body: [
+      "What's going on here?",
+      "Exporting factories care less about summit optics than about which duty lines and quality rules will govern shipments starting next fiscal year. On 14 November 2026, external affairs minister S Jaishankar told the Hindustan Times Leadership Summit that India and the United States are in the last stretch of talks on a bilateral trade pact after resolving most tariff and access questions. He said many remaining issues reflect policy changes in Washington rather than fresh demands from New Delhi. Jaishankar's comments follow commerce-ministry meetings on specific product lines and public remarks from US secretary of state Marco Rubio in Mumbai that both sides were close to firming up a deal. Reporting ahead of the mid-December G20 summit in Miami suggests leaders could use a Modi-Trump meeting on the sidelines to announce an agreement, though neither government has fixed a signing date.",
+      "What does this mean?",
+      "A pact would aim to lower friction on goods trade, non-tariff barriers and market access after two years of negotiation kicked off in early 2025. Indian officials have stressed securing US tariff treatment that keeps Indian shipments competitive with rivals such as Vietnam and Mexico. Recent disputes over Scotch whisky duty classifications show how small definitional fights can delay entire sectors even when framework deals look near complete. For businesses, the minister's language signals that the remaining work is political packaging in the US as much as technical drafting in India. Until text is published, landed-cost assumptions for autos, textiles, shrimp and electronics should still include a risk premium.",
+      "Why should I care?",
+      "If you export to the United States or compete with American imports, watch for actual duty schedule changes rather than headlines alone. Households will feel any deal indirectly through prices on electronics, apparel and farm inputs tied to energy and metals trade. Investors should separate refinery or defence announcements that can close on their own timelines from comprehensive trade language that needs congressional and regulatory clearance in Washington. Track any joint statement after the December G20 meetings, commerce ministry sectoral briefings, and follow-up clarifications on contentious lines such as alcohol, agriculture and digital services.",
+    ],
+  },
+  {
     slug: "india-telecom-fake-court-orders-november-2026",
     title: "Fake court orders convinced officials to block more than 100 Indian websites",
     summary:
@@ -11832,6 +11904,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "ashok-leyland-mhcv-q2-november-2026": "markets",
+  "pvr-inox-global-distribution-november-2026": "markets",
+  "india-us-trade-pact-last-stretch-november-2026": "policy",
   "india-telecom-fake-court-orders-november-2026": "policy",
   "mufin-green-ad-ii-forex-licence-november-2026": "policy",
   "mahanadi-coalfields-rhp-november-2026": "markets",
