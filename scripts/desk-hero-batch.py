@@ -1694,6 +1694,45 @@ def abb_record_orders(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(1100, 260), (1180, 300), (1100, 340)], fill=GOLD)
 
 
+def reliance_andhra_cbg(d: ImageDraw.ImageDraw) -> None:
+    """Farm residue silo; methane flame pipeline."""
+    d.ellipse([120, 320, 320, 520], fill=YELLOW)
+    d.rectangle([200, 260, 280, 320], fill=RED)
+    d.rectangle([340, 360, 480, 540], fill=BLUE)
+    for i in range(5):
+        y = 380 + i * 32
+        d.rectangle([120, y, 480, y + 18], fill=GOLD if i % 2 else CREAM)
+    d.line([(480, 420), (640, 420)], fill=GOLD, width=5)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 700 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.polygon([(1040, 240), (1140, 320), (1040, 400)], fill=GOLD)
+
+
+def airtel_payments_bank_ipo(d: ImageDraw.ImageDraw) -> None:
+    """SIM tower; deposit staircase to listing gate."""
+    d.rectangle([120, 180, 200, 560], fill=BLUE)
+    d.polygon([(160, 180), (220, 100), (280, 180)], fill=RED)
+    d.rounded_rectangle([320, 280, 520, 520], radius=20, fill=YELLOW)
+    d.rectangle([360, 340, 480, 400], fill=CREAM)
+    for i, h in enumerate([100, 180, 260, 340, 420]):
+        x = 620 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[RED, BLUE, YELLOW, RED, GOLD][i])
+    d.rectangle([1040, 200, 1120, 520], fill=GOLD)
+    d.polygon([(1000, 360), (1040, 320), (1040, 400)], fill=BLUE)
+
+
+def tata_motors_jlr_restruct(d: ImageDraw.ImageDraw) -> None:
+    """Luxury grille; shrinking workforce chevrons."""
+    d.rectangle([100, 320, 500, 520], fill=BLUE)
+    d.ellipse([160, 360, 440, 480], fill=CREAM)
+    d.line([(220, 400), (380, 400)], fill=RED, width=6)
+    for i, w in enumerate([1180, 1100, 1020, 940, 860]):
+        d.rectangle([640, 200 + i * 70, w, 260 + i * 70], fill=[YELLOW, RED, BLUE, YELLOW, RED][i])
+    d.polygon([(900, 480), (980, 420), (1060, 480)], fill=GOLD)
+    d.line([(80, 560), (1180, 560)], fill=INK, width=2)
+
+
 def tata_trusts_listing(d: ImageDraw.ImageDraw) -> None:
     """Trust columns; listing steps ascending."""
     for i, x in enumerate([100, 200, 300, 400]):
@@ -1704,6 +1743,9 @@ def tata_trusts_listing(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("reliance-andhra-cbg-investment-november-2026", reliance_andhra_cbg)
+    save("airtel-payments-bank-ipo-path-november-2026", airtel_payments_bank_ipo)
+    save("tata-motors-jlr-restructuring-november-2026", tata_motors_jlr_restruct)
     save("paytm-rbi-ppi-preliminary-november-2026", paytm_rbi_ppi)
     save("hdfc-mf-hybrid-sif-nfo-november-2026", hdfc_hybrid_sif)
     save("abb-india-record-q3-orders-november-2026", abb_record_orders)

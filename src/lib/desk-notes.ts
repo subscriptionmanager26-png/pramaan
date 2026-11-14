@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "reliance-andhra-cbg-investment-november-2026",
+    title: "Reliance plans ₹1 lakh crore of compressed biogas plants in Andhra Pradesh",
+    summary:
+      "On 13 November 2026, Reliance Industries executive director Anant Ambani said the group will invest about ₹1 lakh crore in Andhra Pradesh to build compressed biogas plants, projecting more than three lakh jobs and roughly ₹60,000 crore of state revenue over coming decades while tying farm waste to cleaner fuel supply.",
+    category: "industry",
+    companyOrSector: "Energy / agriculture",
+    publishedAt: "2026-11-14T01:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("reliance-andhra-cbg-investment-november-2026"),
+    keyTakeaways: [
+      "Ambani spoke at a foundation ceremony for the Rayalaseema Horticulture Hub and an Indian School of Agriculture in Madanapalle on 13 November 2026.",
+      "The proposed compressed biogas chain would process organic waste such as crop residue and cattle dung into methane-rich gas usable in transport and industry.",
+      "State data cited in the address put approved mega projects in Andhra Pradesh above ₹14 lakh crore of investment intent since June 2024.",
+    ],
+    body: [
+      "What's going on here?",
+      "Compressed biogas turns farm and municipal organic waste into pipeline-grade methane, giving villages a buyer for residue that might otherwise be burned. At a foundation event on 13 November 2026 in Madanapalle, Reliance Industries executive director Anant Ambani said the conglomerate plans about ₹1 lakh crore of investment in Andhra Pradesh to set up compressed biogas plants. He tied the programme to the new Rayalaseema Horticulture Hub, backed by about ₹40,000 crore of announced support, and to an Indian School of Agriculture meant to blend artificial intelligence tools with extension work. Management said the plants could create more than three lakh jobs and bring nearly ₹60,000 crore of revenue to the state over coming decades, while helping India rely less on imported fossil gas.",
+      "What does this mean?",
+      "Large energy groups need credible feedstock contracts before bankers fund clustered biogas units. Horticulture hubs and farm schools are partly about guaranteeing steady organic input and trained operators across Rayalaseema. If plants scale, farmers gain an offtake option beyond food crops, and local gas networks get a domestic molecule to blend into industrial and transport use. Reliance also highlighted existing clean-energy work in the region and Jio Krishi digital classrooms, signalling the biogas pitch sits inside a wider rural enterprise stack rather than a standalone capex line. Other states with crop waste headaches will watch whether Andhra converts investment pledges into commissioned digesters on a clear timetable.",
+      "Why should I care?",
+      "If you farm in south Andhra, watch district announcements on waste collection routes, minimum support prices for feedstock, and whether biogas offtake contracts are signed before land is leased. Households on piped gas should not expect immediate bill changes, but eventual local production can diversify supply away from single import lanes. Policy trackers should compare Reliance’s timeline with Gujarat and other states already running compressed biogas pilots. Follow environmental clearances, state cabinet orders on horticulture hub land, commissioning dates for the first commercial plants, and whether smaller biogas developers find room in the same clusters.",
+    ],
+  },
+  {
+    slug: "airtel-payments-bank-ipo-path-november-2026",
+    title: "Sunil Mittal sees an Airtel Payments Bank listing in three to four years",
+    summary:
+      "Bharti Enterprises chairman Sunil Mittal told CNBC-TV18 on 13 November 2026 that Airtel Payments Bank could aim for a stock market debut within three to four years once it reaches roughly ₹10,000 crore each of customer deposits, revenue, and annual profit, from about ₹4,389 crore of customer balances and ₹831 crore of revenue in the June 2026 quarter.",
+    category: "industry",
+    companyOrSector: "Payments / telecom-led banking",
+    publishedAt: "2026-11-14T00:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airtel-payments-bank-ipo-path-november-2026"),
+    keyTakeaways: [
+      "Mittal described the payments bank as a sleeping giant with close to 100 million customers and growing digital payment volumes.",
+      "June 2026 quarter profit was ₹19 crore on ₹831 crore revenue, up from ₹10.4 crore profit and ₹777 crore revenue a year earlier.",
+      "Customer balances rose 17% year on year to ₹4,389 crore in the first quarter of fiscal 2026-27.",
+    ],
+    body: [
+      "What's going on here?",
+      "Payments banks in India cannot lend like full banks, so their economics depend on transaction fees, float on customer balances, and distribution partnerships rather than large credit books. Bharti Enterprises chairman Sunil Mittal said in a 13 November 2026 interview with CNBC-TV18 that Airtel Payments Bank could be ready for an initial public offering in three to four years if it crosses about ₹10,000 crore of deposits, ₹10,000 crore of revenue, and ₹1,000 crore of profit. He called the business a sleeping giant with nearly 100 million users. Exchange filings show customer balances at ₹4,389 crore in the June 2026 quarter, up 17% from a year earlier, with net revenue at ₹831 crore and profit at ₹19 crore as digital payment and transit use expanded.",
+      "What does this mean?",
+      "A listing window matters because payments banks must keep investing in compliance, agent networks, and data centres while competitors bundle banking with wallets and credit. Mittal’s thresholds imply the unit needs roughly to triple scale from current quarterly run rates before bankers can market a growth story to public investors. The path runs through Airtel’s subscriber base: more customers treating the account as a primary safe second account lifts low-cost deposits and recurring payment volumes. Rivals such as Paytm and PhonePe are rebuilding or expanding wallet and PPI stacks, so timing an IPO also depends on regulatory clarity and whether Airtel can keep margins as it chases the ₹10,000 crore deposit marker.",
+      "Why should I care?",
+      "If you use Airtel Money or a linked savings pocket, expect continued pushes for bill pay, transit tickets, and merchant QR usage as the bank chases deposit and fee targets ahead of any listing. Small merchants should compare settlement costs across telecom-led banks and fintech aggregators before signing exclusive deals. Investors watching consumer finance listings should treat Mittal’s comments as guidance, not a filed prospectus. Track quarterly deposit and profit disclosures, Reserve Bank of India payments bank rules on deposit caps, any sibling IPO filings from the Bharti group, and whether transit and government payout wins accelerate balance growth.",
+    ],
+  },
+  {
+    slug: "tata-motors-jlr-restructuring-november-2026",
+    title: "Jaguar Land Rover cut its profit outlook after a costly factory reset",
+    summary:
+      "Jaguar Land Rover lowered its fiscal 2026-27 adjusted operating margin target to 2–3% from 4% on 13 November 2026, citing restructuring charges that included about 3,000 voluntary redundancies and asset write-downs, leaving parent Tata Motors Passenger Vehicles with a ₹5,451 crore consolidated loss in the September 2026 quarter despite 34% revenue growth.",
+    category: "industry",
+    companyOrSector: "Luxury autos / manufacturing",
+    publishedAt: "2026-11-14T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-motors-jlr-restructuring-november-2026"),
+    keyTakeaways: [
+      "JLR took about £530 million of exceptional charges in the September 2026 quarter, including roughly £295 million linked to a voluntary redundancy programme covering about 4,000 roles.",
+      "The luxury unit now expects fiscal 2026-27 revenue near £25 billion, down from a £26 billion forecast given in June 2026.",
+      "Tata Motors Passenger Vehicles reported consolidated net debt rising to about ₹50,800 crore, with JLR carrying about ₹53,000 crore of that burden.",
+    ],
+    body: [
+      "What's going on here?",
+      "Luxury carmakers are trimming headcount and product lines when electrification and regional tariffs collide with slower demand. On 13 November 2026, Jaguar Land Rover cut its fiscal 2026-27 adjusted operating margin guidance to 2–3% from 4% and reduced its revenue forecast to about £25 billion. The British unit booked roughly £530 million of exceptional charges in the September 2026 quarter, including about £295 million tied to voluntary redundancies across roughly 4,000 positions, with management saying about 3,000 staff had signed up to leave during the year. Parent Tata Motors Passenger Vehicles reported a ₹5,451 crore consolidated loss for the same quarter despite 34% revenue growth, as those charges and weak JLR profitability offset stronger domestic passenger vehicle sales.",
+      "What does this mean?",
+      "Restructuring is meant to pull JLR’s break-even volume closer to 300,000 units and free cash for new product launches, but the upfront cost shows up immediately in group accounts and borrowing. Tata Motors Passenger Vehicles ended September 2026 with consolidated net debt near ₹50,800 crore, largely because JLR sits in net debt of about ₹53,000 crore while the India business still holds net cash. Lower margin guidance also signals that luxury buyers face fewer discounts and possibly longer waits on certain trims as factories shed models. For suppliers in Pune and the West Midlands, redundancy rounds reduce near-term orders even as management promises cleaner portfolios after the reset.",
+      "Why should I care?",
+      "If you reserved a Jaguar or Land Rover in India, ask dealers how UK restructuring affects delivery dates, spare parts, and service staffing. Employees across JLR and Tata’s passenger unit should monitor internal communication on further Enterprise Mission cost cuts targeting about £1.7 billion of savings over two years. Investors holding Tata Motors Passenger Vehicles need to separate domestic SUV momentum from JLR’s cash drain until restructuring charges roll off. Watch quarterly JLR free cash flow, breakeven volume progress, UK tariff developments, and whether Tata raises group funding to accelerate deleveraging.",
+    ],
+  },
+  {
     slug: "paytm-rbi-ppi-preliminary-november-2026",
     title: "Paytm won preliminary RBI approval to rebuild its digital wallet business",
     summary:
@@ -11592,6 +11664,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "reliance-andhra-cbg-investment-november-2026": "policy",
+  "airtel-payments-bank-ipo-path-november-2026": "companies",
+  "tata-motors-jlr-restructuring-november-2026": "companies",
   "paytm-rbi-ppi-preliminary-november-2026": "policy",
   "hdfc-mf-hybrid-sif-nfo-november-2026": "policy",
   "abb-india-record-q3-orders-november-2026": "companies",
