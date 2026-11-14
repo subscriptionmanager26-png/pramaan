@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-telecom-fake-court-orders-november-2026",
+    title: "Fake court orders convinced officials to block more than 100 Indian websites",
+    summary:
+      "On 14 November 2026 Reuters reported that Prime Minister Narendra Modi's office summoned telecom secretary Amit Agrawal to explain how Department of Telecommunications officials ordered internet providers to take down 129 websites using fabricated high court orders emailed by people posing as lawyers.",
+    category: "industry",
+    companyOrSector: "Telecom regulation / internet policy",
+    publishedAt: "2026-11-14T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-telecom-fake-court-orders-november-2026"),
+    keyTakeaways: [
+      "Reuters cited two government officials saying the PMO summoned Agrawal on Saturday 14 November, cutting short an out-of-state visit.",
+      "The blocks targeted illegal betting sites, but the forged orders carried fake seals, logos and even a bogus QR code, according to the same reporting.",
+      "State police opened a forgery probe while the telecom ministry began an internal investigation, with at least one fake order still visible on a government site as of Saturday.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's website-blocking process depends on paperwork that looks like it came from a court. When that chain breaks, legitimate publishers can vanish from the internet as easily as illegal betting portals. On 14 November 2026, Reuters reported that officials in the Department of Telecommunications directed internet providers to block 129 sites after receiving orders that appeared to come from high courts but were forged. People posing as lawyers emailed the documents to field officers, who then pushed takedown instructions downstream. Online betting is banned in India, so many of the targets sat in a grey zone anyway, but the mechanism matters because the same workflow can touch news, commerce and government services. On Saturday, two officials told Reuters that Prime Minister Narendra Modi's office summoned telecom secretary Amit Agrawal to account for the lapse and shortened a scheduled trip to another state so he could appear. The ministry had already started an internal probe, and police in at least one state are treating the episode as potential forgery and cheating.",
+      "What does this mean?",
+      "Fake legal citations are no longer a classroom hypothetical. Courts in India and abroad have already disciplined lawyers who leaned on AI-generated judgments that never existed, and the Supreme Court warned last year that forged signatures on judicial orders strike at public trust. In the telecom case, the weakness sits in how quickly a PDF with a court logo can become a blocking memo without a registry check. Internet service providers usually comply fast because defying a government takedown letter invites penalties. Betting operators may deserve scrutiny, but the Reuters story also raises whether any non-gambling sites were swept up. Regulators now face pressure to separate speed from verification, perhaps by requiring registry confirmation or a dedicated legal cell before a block list goes live.",
+      "Why should I care?",
+      "If you run a consumer website or app in India, your uptime can hinge on someone else's document checks. Media, fintech and classified platforms should know their appeal path when a block order lands. Telecom investors should watch whether the ministry tightens procedures in ways that slow enforcement but reduce error rates. Privacy advocates will push for published block lists with verifiable court references. Watch whether Agrawal's review produces new authentication steps, what the criminal investigation uncovers about the email senders, and whether parliament questions the balance between anti-gambling enforcement and due process for lawful sites.",
+    ],
+  },
+  {
+    slug: "mufin-green-ad-ii-forex-licence-november-2026",
+    title: "RBI gave Mufin Green Finance a licence to sell forex and remittances",
+    summary:
+      "Mufin Green Finance said on 14 November 2026 that the Reserve Bank of India granted it an Authorised Dealer Category-II licence, letting the non-bank lender earn fee income on forex conversion and outward remittances for education, medical travel and other Liberalised Remittance Scheme uses.",
+    category: "industry",
+    companyOrSector: "NBFC / forex services",
+    publishedAt: "2026-11-14T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mufin-green-ad-ii-forex-licence-november-2026"),
+    keyTakeaways: [
+      "The AD-II status covers forex conversion, LRS remittances, family maintenance payments and smaller trade-related forex work.",
+      "Management framed the licence as a capital-light fee line that can run alongside balance-sheet lending with limited extra equity.",
+      "For the September 2026 quarter the NBFC reported net profit of about ₹15 crore on total income near ₹90 crore, with gross NPA at 1.77%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Small non-bank lenders make money mainly on interest spreads, which means every new loan chews capital. The Reserve Bank of India also controls who may sell foreign exchange to households and small traders. On 14 November 2026 Mufin Green Finance told exchanges it received an Authorised Dealer Category-II licence. That badge lets the company convert rupees into foreign currency, send money abroad under the Liberalised Remittance Scheme for education and medical treatment, handle family maintenance transfers and offer modest trade-linked forex services. Mufin positions itself as a green-focused NBFC; the licence does not change its lending mandate overnight, but it adds a regulated counter where customers can pay fees instead of borrowing more.",
+      "What does this mean?",
+      "Fee businesses scale differently from secured micro-loans. Forex desks earn commissions when volumes pass through, without holding the entire ticket on the balance sheet. Mufin said it expects the vertical to diversify revenue away from pure net interest income and improve operating leverage. Managing director Kapil Garg told reporters the company could see revenue double over the coming year with the new lane running next to credit. That is an ambitious guide, and it still depends on compliance staffing, anti-money-laundering checks and competition from banks that already own AD licences. The September-quarter print showed profit more than doubling year on year to about ₹15 crore while gross bad loans improved to 1.77%, so the lender enters the new product from a stable base.",
+      "Why should I care?",
+      "If you are a student or patient sending forex through an NBFC channel, compare all-in spreads and paperwork against your bank's rates before the festive travel season peaks. Rural borrowers who already know Mufin for loans may see bundled remittance counters at existing branches. Investors in small NBFCs should note whether AD-II approvals become a template for diversifying away from concentrated credit books. Watch RBI notifications on AD compliance audits, Mufin's disclosure on forex turnover versus loan growth, and whether larger peers respond with sharper pricing on education remittances.",
+    ],
+  },
+  {
+    slug: "mahanadi-coalfields-rhp-november-2026",
+    title: "Coal India's Mahanadi unit filed IPO papers for a roughly ₹10,000 crore sale",
+    summary:
+      "Coal India said on 14 November 2026 that wholly owned subsidiary Mahanadi Coalfields filed its red herring prospectus with regulators on 13 November for an offer-for-sale of up to 66.18 crore shares, a pure parent divestment with the issue expected to open on 19 November.",
+    category: "industry",
+    companyOrSector: "Coal / public sector divestment",
+    publishedAt: "2026-11-14T16:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mahanadi-coalfields-rhp-november-2026"),
+    keyTakeaways: [
+      "The IPO is entirely an offer for sale by Coal India; Mahanadi Coalfields will not raise fresh capital from the issue.",
+      "MCL produced about 218 million tonnes and dispatched roughly 211 million tonnes in fiscal 2026, making it India's largest single coal producer that year.",
+      "Book-running managers include SBI Capital Markets and Axis Capital, with anchor bidding set for 18 November and listing targeted around 27 November.",
+    ],
+    body: [
+      "What's going on here?",
+      "The government is still selling pieces of Coal India without letting go of control. Mahanadi Coalfields, the Odisha-based miner that contributes a large share of domestic output, moved one step closer to a stock market listing on 14 November 2026 when parent Coal India announced that the subsidiary's red herring prospectus dated 13 November was filed with the registrar, SEBI and the exchanges. The offer comprises up to 66.18 crore equity shares of face value ₹2 each, all sold by Coal India. There is no fresh issue, so proceeds flow to the parent's treasury after costs rather than funding new pits at MCL. Reporting ahead of the launch pegged the issue near ₹9,500 crore to ₹10,000 crore, though the price band was still unstated when the RHP landed. The calendar shows the book opening on 19 November, closing on 23 November, anchor allocation on 18 November and a tentative listing on 27 November.",
+      "What does this mean?",
+      "Listing coal subsidiaries is part of a repeatable playbook: bring transparency to mine economics, give retail investors a regulated wrapper, and let the government raise cash without privatising the entire seam. MCL's scale matters because it produced about 218 million tonnes and dispatched roughly 211 million tonnes in fiscal 2026, with mechanised surface mining covering most output. Power demand still anchors offtake, and the prospectus itself warns that revenue leans on non-coking coal sold to generators. Investors therefore price the stock as a regulated utility-like cash generator rather than a tech growth name. Employee and Coal India shareholder reservations carve out part of the book, while the rest splits among institutional and retail buckets per SEBI norms.",
+      "Why should I care?",
+      "If you subscribe to PSU IPOs, wait for the price band before sizing grey-market chatter; GMP quotes near ₹12.50 per share were circulating without a final offer price. Power-sector analysts should tie MCL's dispatch numbers to plant stock days, because mine listings do not fix railway bottlenecks on their own. Policy watchers should compare this issue with earlier listings of Bharat Coking Coal and Central Mine Planning and Design Institute to see whether the government accelerates South Eastern Coalfields next. Watch the band announcement, anchor investor participation, and whether Coal India signals how it will deploy OFS proceeds.",
+    ],
+  },
+  {
+    slug: "patanjali-foods-q2-rural-costs-november-2026",
+    title: "Patanjali Foods sold more groceries but earned less in the September quarter",
+    summary:
+      "Patanjali Foods reported on 14 November 2026 that consolidated revenue rose to about ₹11,406 crore in the second quarter while net profit fell 19% year on year to ₹420 crore, as higher operating costs and softer rural demand squeezed margins despite edible-oil volume growth.",
+    category: "industry",
+    companyOrSector: "FMCG / edible oils",
+    publishedAt: "2026-11-14T15:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("patanjali-foods-q2-rural-costs-november-2026"),
+    keyTakeaways: [
+      "Second-quarter total income grew from about ₹9,850 crore a year earlier while net profit dropped from ₹517 crore.",
+      "Operating expenses climbed to about ₹11,000 crore, outpacing the revenue gain on a consolidated basis.",
+      "First-half profit still rose to ₹755 crore on revenue near ₹22,748 crore, showing the margin squeeze is concentrated in the latest quarter.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian shoppers kept buying packaged foods and cooking oil through the September quarter, but the bill for making and moving those goods rose faster than ticket sizes in places. Patanjali Foods, the Baba Ramdev-linked company built around edible oils and household brands, told exchanges on 14 November 2026 that consolidated revenue reached about ₹11,406 crore in the three months ended 30 September 2026, up from roughly ₹9,850 crore a year ago. Net profit nonetheless slid 19% to about ₹420 crore from ₹517 crore in the same quarter last year. Total operating expenses jumped to about ₹11,000 crore. Management commentary in market summaries pointed to inflation on inputs and softer rural demand as the drag, even as festive pantry stocking supported volumes on oils and biscuits.",
+      "What does this mean?",
+      "Volume-led FMCG businesses can post headline sales growth while margins shrink if commodity costs reprice faster than MRP hikes. Edible oils are particularly exposed because global seed and crude swings pass through to retail bottles within weeks. Patanjali's portfolio mixes low-margin bulk oil with higher-margin packaged foods, so the profit miss is a signal that the mix did not offset cost pressure this quarter. The first half still shows profit up year on year at ₹755 crore on revenue near ₹22,748 crore, which tells you the squeeze is recent rather than a full-year collapse. Rivals such as Marico and HUL have reported similar tensions between festive demand and input inflation, so the print fits a wider pattern of shoppers buying but companies fighting to keep each rupee of margin.",
+      "Why should I care?",
+      "Households may see another round of small pack price tweaks on oil and staples if companies try to recoup costs after Diwali promotions end. Distributors should watch credit days from kirana stores in weaker rural belts, because that is where Patanjali flagged softness. Investors comparing FMCG names should line up volume growth, gross margin and rural contribution instead of stopping at revenue charts. Watch the November management commentary from the earnings call, third-quarter margin guides from peers, and wholesale price data on cooking oils.",
+    ],
+  },
+  {
     slug: "icici-bank-cad-forecast-fy27-november-2026",
     title: "ICICI Bank expects India's current account gap to widen to $57 billion next year",
     summary:
@@ -11736,6 +11832,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-telecom-fake-court-orders-november-2026": "policy",
+  "mufin-green-ad-ii-forex-licence-november-2026": "policy",
+  "mahanadi-coalfields-rhp-november-2026": "markets",
+  "patanjali-foods-q2-rural-costs-november-2026": "markets",
   "icici-bank-cad-forecast-fy27-november-2026": "policy",
   "senco-gold-retail-margin-guide-november-2026": "markets",
   "india-mf-sip-stoppage-october-2026": "markets",

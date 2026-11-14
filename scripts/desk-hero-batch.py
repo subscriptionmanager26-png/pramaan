@@ -1777,7 +1777,55 @@ def tata_trusts_listing(d: ImageDraw.ImageDraw) -> None:
     d.line([(660, 200), (660, 560)], fill=GOLD, width=2)
 
 
+def telecom_fake_court_orders(d: ImageDraw.ImageDraw) -> None:
+    """Gavel seal; broken chain on data flow."""
+    d.polygon([(140, 160), (340, 120), (420, 280), (280, 420), (120, 360)], fill=BLUE)
+    d.ellipse([200, 240, 300, 340], fill=YELLOW)
+    d.line([(620, 200), (1120, 200)], fill=RED, width=10)
+    for i, x in enumerate([700, 850, 1000]):
+        d.rectangle([x, 240, x + 40, 520], fill=[RED, BLUE, YELLOW][i])
+    d.line([(680, 380), (1180, 460)], fill=GOLD, width=4)
+    d.polygon([(900, 120), (980, 180), (900, 240)], fill=RED)
+
+
+def mufin_ad_ii_forex(d: ImageDraw.ImageDraw) -> None:
+    """Rupee coin; outbound remittance arcs."""
+    d.ellipse([120, 260, 320, 460], fill=RED)
+    d.line([(220, 300), (220, 420)], fill=CREAM, width=12)
+    d.arc([360, 180, 760, 500], 300, 30, fill=BLUE, width=8)
+    d.arc([400, 220, 720, 460], 20, 160, fill=GOLD, width=5)
+    for i, y in enumerate([300, 380, 460]):
+        d.rectangle([820 + i * 60, y, 880 + i * 60, 560], fill=[BLUE, YELLOW, RED][i])
+    d.polygon([(1040, 280), (1160, 320), (1040, 360)], fill=GOLD)
+
+
+def mahanadi_coalfields_ipo(d: ImageDraw.ImageDraw) -> None:
+    """Open pit silhouette; share ticket stack."""
+    d.polygon([(100, 560), (420, 220), (520, 560)], fill=BLUE)
+    d.rectangle([200, 400, 360, 560], fill=YELLOW)
+    for i, h in enumerate([140, 220, 300]):
+        x = 680 + i * 90
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, GOLD, BLUE][i])
+    d.rectangle([960, 180, 1140, 520], fill=CREAM)
+    d.line([(960, 240), (1140, 240)], fill=GOLD, width=3)
+    d.line([(960, 320), (1140, 320)], fill=RED, width=3)
+
+
+def patanjali_fmcg_margin(d: ImageDraw.ImageDraw) -> None:
+    """Grocery shelf; narrowing margin band."""
+    for y in range(240, 520, 56):
+        d.rectangle([100, y, 480, y + 36], fill=BLUE if y % 112 else YELLOW)
+    d.rectangle([560, 320, 1120, 380], fill=RED)
+    d.rectangle([560, 420, 900, 480], fill=GOLD)
+    d.polygon([(1000, 200), (1140, 260), (1000, 320)], fill=BLUE)
+    d.line([(520, 200), (520, 560)], fill=GOLD, width=2)
+
+
 def main() -> None:
+    save("india-telecom-fake-court-orders-november-2026", telecom_fake_court_orders)
+    save("mufin-green-ad-ii-forex-licence-november-2026", mufin_ad_ii_forex)
+    save("mahanadi-coalfields-rhp-november-2026", mahanadi_coalfields_ipo)
+    save("patanjali-foods-q2-rural-costs-november-2026", patanjali_fmcg_margin)
     save("icici-bank-cad-forecast-fy27-november-2026", icici_cad_forecast)
     save("senco-gold-retail-margin-guide-november-2026", senco_gold_retail)
     save("india-mf-sip-stoppage-october-2026", mf_sip_stoppage)
