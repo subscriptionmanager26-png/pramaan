@@ -1048,6 +1048,50 @@ def titan_q2_jewellery(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(980, 220), (1120, 280), (980, 340)], fill=BLUE)
 
 
+def maharashtra_atf_vat_extension(d: ImageDraw.ImageDraw) -> None:
+    """Jet fuel tax relief extended; lower VAT bars."""
+    d.rounded_rectangle([100, 280, 460, 520], radius=20, fill=BLUE)
+    d.ellipse([260, 340, 300, 380], fill=YELLOW)
+    d.line([(500, 400), (620, 400)], fill=GOLD, width=5)
+    d.polygon([(80, 180), (200, 140), (200, 260)], fill=RED)
+    for i, h in enumerate([280, 220, 160]):
+        x = 680 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[YELLOW, BLUE, RED][i])
+    d.polygon([(1050, 200), (1140, 240), (1050, 280)], fill=GOLD)
+
+
+def ongc_vedanta_cambay(d: ImageDraw.ImageDraw) -> None:
+    """Offshore block operatorship shifts after court."""
+    d.rectangle([120, 320, 520, 560], fill=BLUE)
+    d.ellipse([220, 200, 420, 320], fill=YELLOW)
+    d.line([(140, 400), (500, 400)], fill=CREAM, width=3)
+    d.line([(680, 280), (1150, 280)], fill=GOLD, width=4)
+    d.polygon([(900, 360), (1100, 320), (1100, 480), (900, 520)], fill=RED)
+    d.rectangle([720, 320, 780, 520], fill=INK)
+
+
+def liquor_excise_price_push(d: ImageDraw.ImageDraw) -> None:
+    """State excise gates on rising shelf prices."""
+    for i in range(4):
+        d.rectangle([140 + i * 30, 380 - i * 50, 220 + i * 30, 540], fill=[RED, BLUE, YELLOW, RED][i])
+    d.rectangle([520, 200, 620, 560], fill=INK)
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 720 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=GOLD if i % 2 else BLUE)
+    d.polygon([(400, 220), (480, 260), (400, 300)], fill=GOLD)
+
+
+def titan_jewellery_buyer_push(d: ImageDraw.ImageDraw) -> None:
+    """More footprints into larger tickets."""
+    d.rectangle([100, 260, 440, 520], fill=BLUE)
+    d.ellipse([180, 340, 240, 400], fill=GOLD)
+    d.ellipse([320, 320, 400, 400], fill=GOLD)
+    d.polygon([(500, 300), (540, 280), (540, 520), (500, 540)], fill=YELLOW)
+    for i, h in enumerate([80, 140, 220, 300]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, RED, BLUE][i])
+
+
 def lg_appliances_q2(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([120, 200, 420, 520], radius=16, fill=BLUE)
     for i in range(5):
@@ -2029,6 +2073,10 @@ def main() -> None:
     save("ashok-leyland-mhcv-q2-november-2026", ashok_leyland_mhcv_q2)
     save("pvr-inox-global-distribution-november-2026", pvr_inox_global_distribution)
     save("india-us-trade-pact-last-stretch-november-2026", india_us_trade_pact_last_stretch)
+    save("maharashtra-atf-vat-extension-november-2026", maharashtra_atf_vat_extension)
+    save("ongc-vedanta-cambay-takeover-november-2026", ongc_vedanta_cambay)
+    save("liquor-excise-price-requests-november-2026", liquor_excise_price_push)
+    save("titan-jewellery-buyer-recovery-november-2026", titan_jewellery_buyer_push)
 
 
 if __name__ == "__main__":

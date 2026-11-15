@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "maharashtra-atf-vat-extension-november-2026",
+    title: "Maharashtra will keep jet fuel VAT at 7% until April 2027",
+    summary:
+      "The Maharashtra government extended its reduced 7% value-added tax on aviation turbine fuel until 14 April 2027, keeping duty-paid jet fuel cheaper at Mumbai and other state airports after the earlier concession was due to lapse on 14 November 2026, while airlines still lobby Delhi for a similar rollover.",
+    category: "industry",
+    companyOrSector: "Aviation / state tax",
+    publishedAt: "2026-11-15T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maharashtra-atf-vat-extension-november-2026"),
+    keyTakeaways: [
+      "Maharashtra’s finance department notified the VAT extension on 12 November 2026, leaving the 7% rate on duty-paid ATF in place instead of reverting to 18%.",
+      "The Federation of Indian Airlines has urged Maharashtra and Delhi to retain lower VAT bands; reporting said Delhi cut ATF VAT from 25% to 7% earlier in 2026 with a review due around mid-November.",
+      "Industry groups say jet fuel now accounts for roughly half of airline operating costs, up from the usual 30% to 40% band, pushing carriers toward surcharges as longer international routes add burn.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian airlines refill most tanks at home airports, and state VAT on aviation turbine fuel can swing the rupee cost per litre even when global crude moves only modestly. Maharashtra had cut ATF VAT from 18% to 7% in May 2026 for a limited period. On 12 November 2026 the state finance department issued a notification extending that 7% rate on duty-paid jet fuel until 14 April 2027, one day after the prior concession would have expired on 14 November 2026. Wire reporting on 15 November 2026 said the move keeps the existing concession alive rather than announcing a fresh cut. The Federation of Indian Airlines, representing IndiGo, Air India, and SpiceJet among others, had asked Maharashtra and Delhi to maintain reduced rates. Delhi had earlier lowered VAT from 25% to 7% with an expiry review flagged for November 2026, and industry sources quoted in the same coverage expected a similar extension in the capital soon.",
+      "What does this mean?",
+      "Airlines treat ATF as a pass-through when they can: lower state VAT reduces the tax wedge on uplift in Mumbai, Pune, and Nagpur, which can slow fare increases on Maharashtra-origin sectors compared with full-tax states. The relief does not reverse global fuel spikes or longer routings around West Asia closures, which carriers say already pushed fuel to about half of operating costs. It does give finance teams six more months of predictable tax arithmetic when they set fuel surcharges. State governments trade some VAT revenue for higher uplift volumes; the federation cited a 40% rise in Delhi purchases after that state’s cut. Passengers still face higher tickets when crude and surcharges dominate, but the extension removes one scheduled cliff at Maharashtra airports.",
+      "Why should I care?",
+      "If you book flights out of Mumbai or other Maharashtra airports, compare total fare with fuel surcharge lines against sectors that lift from higher-VAT states on the same travel dates. Corporate travel desks should rebase 2027 budgets on the April 2027 Maharashtra expiry unless the concession rolls again. Investors in listed carriers should pair this with quarterly ATF cost guidance rather than treating VAT news as instant margin relief. Policy readers should watch Delhi’s notification timing and whether other states copy the 7% template during winter schedules. Track FIA filings, state excise circulars after April 2027, and whether domestic forward fares soften on Mumbai-origin routes relative to last month.",
+    ],
+  },
+  {
+    slug: "ongc-vedanta-cambay-takeover-november-2026",
+    title: "ONGC took operating control of Vedanta's Cambay offshore block after a court ruling",
+    summary:
+      "Oil and Natural Gas Corporation said it assumed operations of the CB-OS-02 Cambay offshore block on 22 July 2026 after the Delhi High Court dismissed Vedanta Oil and Gas's challenge to the Centre's refusal to extend the production-sharing contract, while Vedanta booked about ₹379 crore of impairment and appealed to a division bench.",
+    category: "industry",
+    companyOrSector: "Oil & gas / upstream",
+    publishedAt: "2026-11-15T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ongc-vedanta-cambay-takeover-november-2026"),
+    keyTakeaways: [
+      "Vedanta operated the block with 40% interest; ONGC held 50% and Invenire Petrodyne 10% under a PSC that expired on 29 June 2023.",
+      "The government declined extension in a 19 September 2025 letter; Vedanta's writ was dismissed on 22 July 2026, ending an interim stay and clearing ONGC's takeover.",
+      "Vedanta stopped recognising Cambay revenue from 22 July 2026 and recorded about ₹379 crore impairment in Q1 FY27 citing absent PSC coverage.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's older offshore production-sharing contracts set a fixed production period; when expiry arrives, operators either win an extension under 2017 policy rules or hand the field to the nominee explorer. Vedanta Oil and Gas ran the Cambay offshore block CB-OS-02 with a 40% stake, ONGC 50%, and Invenire Petrodyne 10%. The PSC ended on 29 June 2023 and Vedanta filed for extension on 28 June 2021. On 19 September 2025 the government declined renewal and directed handover to ONGC. Vedanta challenged the decision in the Delhi High Court on 22 September 2025. In exchange filings echoed in reporting on 15 November 2026, ONGC said a single-judge bench dismissed the petition on 22 July 2026, lifting an earlier status quo. ONGC took custody that day, applied for a petroleum lease on 28 July 2026, and said it now runs the block under nomination-regime terms. Vedanta halted revenue recognition from the asset the same day and booked roughly ₹379 crore of impairment on receivables and field balances. Vedanta has appealed to a division bench; hearings were completed and judgment reserved per both companies' disclosures.",
+      "What does this mean?",
+      "For Vedanta's oil and gas books, Cambay shifts from cash-generating joint operation to a legal and accounting overhang until the appeal concludes. The impairment reflects uncertain recovery without a valid PSC, not necessarily a permanent write-off of physical wells. For ONGC, operating a private-led block under nomination terms changes cost recovery mechanics and puts decommissioning spend on the state explorer unless the site restoration fund covers it, as ONGC stated. Gujarat offshore gas is a small slice of national supply, but the episode signals government willingness to let high-profile private operators lose control when extension tests fail. Other contractors nearing PSC ends will read the timeline closely.",
+      "Why should I care?",
+      "If you hold Vedanta or ONGC, read Q2 FY27 segment notes for Cambay production contributions and any appeal-related contingencies. Gas buyers in western India should watch whether nomination-regime output keeps flowing without interrupting supply contracts. Policy analysts should compare this outcome with other pending extension files to see if Delhi applies a uniform bar. Lenders to Vedanta's upstream arm should stress-test collateral tied to disputed fields. Track the division bench judgment, ONGC production disclosures from CB-OS-02, and any ministry circulars clarifying extension criteria for ageing offshore blocks.",
+    ],
+  },
+  {
+    slug: "liquor-excise-price-requests-november-2026",
+    title: "Liquor companies are pressing states for shelf-price hikes as input costs rise",
+    summary:
+      "United Breweries, Allied Blenders, Radico Khaitan, and Tilaknagar Industries told reporters and analysts in mid-November 2026 that rising glass, grain, and ethanol costs are forcing representations to state excise departments for price revisions, with Telangana and southern markets central to the lobbying season ahead of February policy resets.",
+    category: "industry",
+    companyOrSector: "Alcobev / state excise",
+    publishedAt: "2026-11-15T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("liquor-excise-price-requests-november-2026"),
+    keyTakeaways: [
+      "United Breweries said roughly 30% of its business sits in states without recent price hikes, including Telangana, Andhra Pradesh, and Tamil Nadu, and it submitted a cost case in Telangana in August 2026.",
+      "Allied Blenders said industry groups are pushing multiple states through the Association of Alcoholic Beverage Companies, with Telangana the immediate priority.",
+      "Radico Khaitan reported price increases in seven to eight states that added about 85 basis points to gross margin in Q2, while Tilaknagar cited Telangana receivables of about ₹550 crore on a six-month payment cycle.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian beer and spirits prices are set by state excise departments, not by brands at the shelf, so when glass, grain, neutral alcohol, and fuel costs jump, companies must open a formal representation rather than print a new label overnight. Reporting consolidated on 15 November 2026 from recent earnings calls showed distillers and brewers lining up requests across the federation. United Breweries managing director Vivek Gupta said nearly 30% of the company's volumes sit in states without fresh hikes, including Telangana, Andhra Pradesh, and Tamil Nadu, and that Telangana's government had asked for a pricing committee after the company filed costs in August 2026. United Breweries also said it would rather lose share in Telangana than fund unprofitable trade schemes. Allied Blenders managing director Amar Sinha said the Association of Alcoholic Beverage Companies is seeking revisions in several states with Telangana first in queue. Radico Khaitan executives said they secured hikes in seven to eight states, helping gross margin reach 48% in the quarter even as packaging added about ₹27 crore of cost. Tilaknagar said it is talking to Telangana and Andhra Pradesh while it already took increases in parts of the east, and flagged Telangana payment delays near ₹550 crore.",
+      "What does this mean?",
+      "November is the traditional start of excise lobbying before many states publish new annual policies around February. When companies simultaneously cite West Asia-linked packaging inflation and ethanol costs, they are building a file finance ministries expect each winter. Telangana matters because it is both a large consumption market and, for several suppliers, a slow-paying customer; United Breweries' willingness to cede share rather than buy volume with promotions shows how tight margins have become in unpaid states. Where hikes already landed, as Radico reported, gross margins can expand even as volumes mix toward prestige labels. Shoppers may not see immediate shelf moves until committees meet, but bars and liquor stores in holdout states could face narrower brand ranges if suppliers cut trade spending.",
+      "Why should I care?",
+      "If you operate restaurants or permit rooms in Telangana, Andhra Pradesh, or Tamil Nadu, ask distributors whether listed prices will move after committee meetings and whether credit terms are tightening. Home consumers in states that already granted hikes should compare bottle prices on the same SKU month to month. Investors in listed brewers and distillers should read state-wise margin commentary, not only consolidated volume growth. Policy watchers should track Telangana committee output and whether slow payments ease when prices reset. Follow excise circulars from February 2027 policy cycles, Tilaknagar and United Breweries market-share updates in the south, and packaging cost guidance on Q3 calls.",
+    ],
+  },
+  {
+    slug: "titan-jewellery-buyer-recovery-november-2026",
+    title: "Titan is chasing more jewellery buyers as high gold prices stop lifting tickets",
+    summary:
+      "Titan Company's jewellery leadership said on 15 November 2026 that buyer growth was flat in Q2 FY27 after a 5% rise in the prior quarter, and that the business must add customers through sub-₹1 lakh and lightweight lines because future revenue may not get the same lift from rising gold prices alone.",
+    category: "industry",
+    companyOrSector: "Jewellery / retail",
+    publishedAt: "2026-11-15T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("titan-jewellery-buyer-recovery-november-2026"),
+    keyTakeaways: [
+      "Jewellery CEO Arun Narayan said buyer counts were flat in Q2 FY27 versus 5% growth in Q1, partly due to calendar shift and lower gold-coin demand.",
+      "Management is pushing lightweight 14- and 18-carat lines and studded formats below ₹1 lakh to bring in first-time and occasional buyers.",
+      "Titan still reported strong Q2 revenue and profit in the 15 November coverage, but executives warned ticket-size growth from bullion may not repeat.",
+    ],
+    body: [
+      "What's going on here?",
+      "When gold prices run up, jewellers can show healthy revenue with the same footfall because each gram rings up higher, but that cushion fades if bullion pauses or falls. In coverage dated 15 November 2026 of Titan Company's post-earnings dialogue, jewellery division chief executive Arun Narayan said buyer growth was flat in the second quarter of FY27 after 5% buyer growth in the first quarter. He linked part of the pause to a shifted festive calendar and fewer gold-coin and investment purchases. Narayan said the company may not be able to rely on ticket inflation from bullion ahead, so adding buyers becomes the priority. Titan is merchandising more pieces under ₹1 lakh, especially below ₹50,000, through lightweight gold, 18-carat core jewellery, 14-carat studded lines at Tanishq, and lower-carat options at Mia. Studded jewellery is drawing younger first-time diamond buyers and some traditional gold clients, management said. Managing director Ajoy Chawla added that stable or softer gold could bring back customers who stayed away during sharp rallies.",
+      "What does this mean?",
+      "Titan's store expansion and campaign spend only pay off if counters attract new names, not merely larger bills from loyal families. Flat buyers with double-digit revenue growth, as the company still posted in the broader Q2 print cited alongside the story, implies average tickets rose. That is helpful until bullion stalls, at which point same-store growth needs traffic. Competitors such as Kalyan and Senco face the same physics, which is why exchange programmes and lightweight collections are industry-wide. For shoppers, the push below ₹1 lakh should widen choice in metros and tier-two towns without forcing a heavy bridal ticket. For investors, monitor buyer-count metrics in coming updates, not only revenue per store.",
+      "Why should I care?",
+      "If you plan wedding or festival purchases, compare making charges on lightweight and studded lines against traditional 22-carat sets; Titan's emphasis suggests promotions may cluster there. Gold investors who bought coins through jewellers may see fewer coin counters promoted until prices stabilize. Rivals may match ticket-size messaging with their own entry-price assortments ahead of the December festive cluster. Watch Titan's third-quarter buyer growth, bullion trends, and whether Tanishq's gold-exchange scheme volumes rise when prices dip. Track peer commentary from Kalyan and Senco on the same metric to see if the pause is Titan-specific or market-wide.",
+    ],
+  },
+  {
     slug: "kamarajar-port-ipo-bookrunners-november-2026",
     title: "Chennai's Kamarajar Port hired three banks to plan India's first listed state-owned port IPO",
     summary:
@@ -12120,6 +12216,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "maharashtra-atf-vat-extension-november-2026": "policy",
+  "ongc-vedanta-cambay-takeover-november-2026": "companies",
+  "liquor-excise-price-requests-november-2026": "policy",
+  "titan-jewellery-buyer-recovery-november-2026": "markets",
   "kamarajar-port-ipo-bookrunners-november-2026": "markets",
   "mfi-msme-diversification-rbi-portfolio-november-2026": "policy",
   "hindalco-novelis-china-divestiture-november-2026": "companies",
