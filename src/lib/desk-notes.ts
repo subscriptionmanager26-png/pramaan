@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hindalco-novelis-china-divestiture-november-2026",
+    title: "Novelis agreed to sell its China aluminum units for about $265 million",
+    summary:
+      "Hindalco Industries told exchanges on 15 November 2026 that its US subsidiary Novelis signed a definitive agreement on 14 November to divest Novelis (China) Aluminum Products and Novelis (Shanghai) Aluminum Trading to Shenzhen Hongzhi Industrial Investment for roughly $265 million plus up to $10 million in contingent earn-out, with closing expected within 12 months pending regulatory approvals.",
+    category: "industry",
+    companyOrSector: "Metals / Aditya Birla Group",
+    publishedAt: "2026-11-15T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hindalco-novelis-china-divestiture-november-2026"),
+    keyTakeaways: [
+      "The two China units recorded about $376 million of net sales in financial year 2026, roughly 1% of Hindalco's consolidated revenue, per the BSE filing dated 15 November 2026.",
+      "Their net worth contribution was about $259 million, close to 2% of group net worth at the last balance sheet date.",
+      "Buyer Shenzhen Hongzhi is outside the promoter group; Hindalco said the deal is not a related-party transaction.",
+    ],
+    body: [
+      "What's going on here?",
+      "Global aluminum makers still sell rolled sheet into Chinese auto and packaging plants, but geopolitical friction and cost competition have made some foreign-owned plants harder to hold for the long term. On 15 November 2026, Hindalco Industries filed with Indian exchanges that Novelis Inc., its US subsidiary, executed a definitive sale agreement on 14 November for two wholly owned China entities: Novelis (China) Aluminum Products Co. and Novelis (Shanghai) Aluminum Trading Co. The buyer is Shenzhen Hongzhi Industrial Investment Co. and/or affiliates, with headline consideration of about $265 million and a further earn-out of up to $10 million if specified conditions are met. Hindalco expects the transaction to close within 12 months, subject to regulatory clearances. After closing, the China units will cease to be subsidiaries of the listed Indian parent.",
+      "What does this mean?",
+      "The revenue footprint is small relative to Hindalco's India aluminum and copper operations and Novelis's larger North American and European network. Still, the sale crystallises book value tied to those plants and removes ongoing capex and compliance spend in a market where trade rules and energy costs shift quickly. Cash proceeds can be redeployed toward capacity already under execution in India, including the Aditya Aluminium smelter expansion in Odisha, or toward balance-sheet strength after years of metals capex. For customers, the change is mostly about who owns local rolling capacity; for shareholders, it is a portfolio decision that trims distant exposure without altering the core India metals earnings engine.",
+      "Why should I care?",
+      "If you hold Hindalco or Birla group cyclicals, read the filing's earn-out triggers and any purchase-price adjustments at close rather than treating $265 million as instant cash. Auto and packaging buyers sourcing Novelis sheet in China should confirm continuity clauses with the new owner. Rivals such as Norsk Hydro and Constellium will watch whether Shenzhen Hongzhi keeps customer qualifications or rebrands capacity. Policy watchers should note another large Indian conglomerate reshaping China exposure while keeping domestic expansion plans intact. Track antitrust filings in China, Novelis exchange disclosures on use of proceeds, and Hindalco's next capex guidance after the deal closes.",
+    ],
+  },
+  {
+    slug: "delhivery-ev-intracity-fleet-november-2026",
+    title: "Delhivery signed deals to put up to 2,000 electric vans on city routes",
+    summary:
+      "Delhivery Ltd said on 13 November 2026 it signed memoranda of understanding with Tata Motors, Euler Motors, and Montra Electric to deploy 1,500 to 2,000 four-wheeler electric commercial vehicles across intra-city logistics over 12 to 18 months, starting in Delhi-NCR, as part of a plan to reach nearly 5,000 electric vans within three years.",
+    category: "industry",
+    companyOrSector: "Logistics / electric commercial vehicles",
+    publishedAt: "2026-11-15T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("delhivery-ev-intracity-fleet-november-2026"),
+    keyTakeaways: [
+      "Electric vans already make up about 12% to 13% of Delhivery's eligible sub-200 km intra-city fleet, according to the 13 November 2026 release.",
+      "The company aims to lift that share above 50% within two to three years and fully electrify the sub-200 km segment in four to five years.",
+      "Tata Intra EV, Euler Turbo City Plus, and Montra's EVIATOR models are earmarked for the rollout, with charging pilots at Delhivery facilities.",
+    ],
+    body: [
+      "What's going on here?",
+      "E-commerce parcels still move through diesel mini-trucks on tight city loops, but battery prices and state incentives have narrowed the total cost gap for routes under two hundred kilometres a day. On 13 November 2026, Delhivery, India's largest listed integrated logistics firm, announced memoranda of understanding with Tata Motors, Euler Motors, and Montra Electric to add 1,500 to 2,000 four-wheeler electric commercial vehicles to its intra-city network over the next 12 to 18 months. Rollout begins in Delhi-NCR. Tata will supply the Intra EV, Euler will lead with the Turbo City Plus for smaller loads, and Montra will expand EVIATOR deployments that already run in parts of Delhivery's fleet. The MoUs sit inside a broader target of nearly 5,000 electric commercial vehicles within three years and eventual full electrification of the sub-200 km fleet in four to five years.",
+      "What does this mean?",
+      "Logistics margins hinge on fuel, labour at hubs, and utilisation per route. Delhivery says electric vans already account for roughly 12% to 13% of eligible intra-city assets and wants more than half electrified within two to three years. That only works if vendors see predictable charging and parking: the company is piloting low-cost charging and free parking at its own sites, including advances to fleet partners. For Tata Motors and Euler, a parcel network order de-risks production of small electric trucks beyond demo fleets. For sellers on marketplaces, it is a bet that festive season volumes can be served without adding diesel kilometres in cities with tightening emission norms.",
+      "Why should I care?",
+      "If you run a brand shipping through Delhivery, ask your account manager how EV routes affect cut-off times and whether green delivery labels are available in your pin codes. Fleet owners should compare vendor financing on Intra EV and Turbo City Plus against diesel total cost, factoring in state commercial-EV subsidies. Investors in Delhivery should tie the announcement to upcoming disclosures on vendor advances and charging capex, not only shipment growth. Policy readers should watch whether state transport departments relax weight or permit rules for electric goods carriers in other metros after the Delhi-NCR start. Track monthly EV share updates from Delhivery, Tata Motors small commercial EV bookings, and Euler deployment numbers outside the NCR cluster.",
+    ],
+  },
+  {
+    slug: "allahabad-hc-vehicle-repossession-november-2026",
+    title: "The Allahabad high court blocked a lender from grabbing a truck at gunpoint",
+    summary:
+      "In Sadab Ahmad v. State of Uttar Pradesh, a division bench of the Allahabad High Court on 26 October 2026 held that HDB Financial Services could not use recovery agents to seize a financed goods carrier by force, ordered the vehicle returned, imposed Rs 10,000 costs, and directed a loan restructure without penal interest while leaving default claims to arbitration or civil court.",
+    category: "industry",
+    companyOrSector: "Vehicle finance / consumer protection",
+    publishedAt: "2026-11-15T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("allahabad-hc-vehicle-repossession-november-2026"),
+    keyTakeaways: [
+      "Sadab Ahmad financed a Tata goods carrier in December 2023 with 45 monthly instalments and had paid 31 by August 2026, according to filings summarized in court coverage.",
+      "The court said the financier seized the truck near Chandauli on 9 August 2026 through agents using threats, a route it called unlawful compared with arbitration used for the borrower's brother.",
+      "HDB must return the vehicle without preconditions, issue a fresh repayment schedule at normal interest after a two-month moratorium, and pursue any future default only through court or arbitrator.",
+    ],
+    body: [
+      "What's going on here?",
+      "Thousands of small businesses depend on financed trucks; when instalments slip, the contract often lets lenders repossess the asset. What the contract allows on paper and what recovery agents do on the highway are not always the same. Sadab Ahmad, a self-employed borrower in Uttar Pradesh, took a loan from HDB Financial Services in December 2023 for a Tata goods carrier with 45 equated monthly instalments. Court papers summarized in legal reporting show he had paid 31 instalments by early August 2026. On 9 August, he alleged that recovery agents intercepted him near Chandauli, threatened him at gunpoint, took the vehicle, and made him sign a repossession inventory. He moved the Allahabad High Court. In a judgment dated 26 October 2026, reported widely on 14 and 15 November 2026, Justices J.J. Munir and Indrajeet Shukla held that even a valid repossession clause must be enforced through a civil court or arbitrator, not private force, and that arming a financier with coercive seizure would duplicate state power.",
+      "What does this mean?",
+      "Non-bank financiers and banks already route many defaults through arbitration under loan agreements, including interim orders that appoint receivers. The bench contrasted Ahmad's case with his brother Shoaib's file, where HDB had used arbitration before taking possession. The court ordered HDB to return the truck forthwith, pay Rs 10,000 in costs, furnish an updated statement of account, and restructure remaining dues at usual interest without penal charges, with EMIs restarting after a two-month moratorium. It left the factual dispute over default to be proved later in the proper forum. The message for the industry is that self-help repossession backed by intimidation is offside even when accounts are delinquent.",
+      "Why should I care?",
+      "If you finance commercial vehicles, audit recovery vendor contracts and GPS disable protocols to ensure agents never cross into criminal intimidation. Borrowers should keep payment proofs and escalate unlawful seizures to police and the banking ombudsman quickly. Fleet insurers may see claim disputes when trucks are taken without court orders. Regulators may use the judgment to press NBFCs on fair-practices code training for field agents. Watch whether RBI or the finance ministry issue fresh guidance on repossession standards, if HDB appeals, and whether other high courts cite the Allahabad order in similar writs.",
+    ],
+  },
+  {
     slug: "trai-telecom-spam-enforcement-q2-november-2026",
     title: "TRAI data show Vodafone Idea drew the most spam complaints last quarter",
     summary:
@@ -12000,6 +12072,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hindalco-novelis-china-divestiture-november-2026": "companies",
+  "delhivery-ev-intracity-fleet-november-2026": "markets",
+  "allahabad-hc-vehicle-repossession-november-2026": "policy",
   "trai-telecom-spam-enforcement-q2-november-2026": "policy",
   "jk-high-court-pension-guarantor-november-2026": "policy",
   "india-corporate-earnings-q2fy27-november-2026": "markets",
