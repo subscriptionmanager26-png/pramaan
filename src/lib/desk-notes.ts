@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "trai-telecom-spam-enforcement-q2-november-2026",
+    title: "TRAI data show Vodafone Idea drew the most spam complaints last quarter",
+    summary:
+      "Telecom Regulatory Authority of India statistics for the July-September 2026 quarter, published in wire reports on 14 November 2026, show Vodafone Idea faced more actionable complaints on unsolicited commercial calls and messages originating on its network than Reliance Jio or Bharti Airtel despite a far smaller subscriber base, while regulators disconnected more than 1.24 lakh telecom resources industry-wide.",
+    category: "industry",
+    companyOrSector: "Telecom regulation / consumer protection",
+    publishedAt: "2026-11-15T02:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("trai-telecom-spam-enforcement-q2-november-2026"),
+    keyTakeaways: [
+      "Jio had about 527.25 million subscribers at 30 September 2026 versus Airtel's 506.7 million and Vodafone Idea's 200.88 million, per TRAI's Q2 FY27 UCC report cited on 14 November 2026.",
+      "Actionable complaints on calls and SMS originating from Vodafone Idea's network reached about 319,629 in the quarter, above Airtel's 186,013 and Jio's 172,622 in the same classification.",
+      "Across operators, more than 1.24 lakh telecom resources faced enforcement in the quarter, including disconnections, blacklists and SMS header blocks.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian phone users judge a carrier as much by spam calls as by data speeds. On 14 November 2026, Mint and other outlets published TRAI's second-quarter fiscal 2027 report on action against unsolicited commercial communications, the marketing calls and texts that flood handsets despite do-not-disturb registers. Jio remained the largest operator with about 527.25 million subscribers on 30 September 2026, followed by Airtel at roughly 506.7 million and Vodafone Idea near 200.88 million. Yet Vodafone Idea recorded the highest count of actionable complaints tied to traffic originating on its own network, about 319,629 in the regulator's classification, compared with about 186,013 for Airtel and 172,622 for Jio. Jio still logged the most complaints on calls and messages terminating on its network, about 696,283, reflecting its scale as the destination for cross-network spam. TRAI said it received about 1.529 million UCC complaints in the quarter against a backdrop of hundreds of billions of originating calls, with most consumers filing through the TRAI DND app.",
+      "What does this mean?",
+      "Spam enforcement is a compliance cost for carriers. Operators must trace originating numbers, disconnect repeat offenders and blacklist senders or risk regulatory heat. Vodafone Idea's higher complaint intensity on a smaller base adds reputational pressure as it fights for survival against two stronger balance sheets. The data also show uneven uptake of formal DND registration: only about 10.7% of Jio users had registered preferences, versus 17.2% at Airtel and 32.7% at Vodafone Idea. That gap affects how quickly consumers escalate complaints through official channels. Industry-wide, TRAI action included one-year disconnections, sender blacklists and SMS header blocks, with more than 1.24 lakh telecom resources penalised in three months.",
+      "Why should I care?",
+      "If you are on Vodafone Idea prepaid or postpaid, expect continued marketing SMS unless you use the DND app and escalate persistent callers. Businesses using bulk SMS gateways should verify partner compliance, because downstream carriers face stricter disconnect rules. Investors in telecom debt should read spam statistics as one proxy for operational discipline, not as a substitute for ARPU and funding milestones. Watch Trai's next quarterly UCC tables, Vodafone Idea's network investment disclosures, and whether the regulator tightens penalties on high-complaint operators.",
+    ],
+  },
+  {
+    slug: "jk-high-court-pension-guarantor-november-2026",
+    title: "A Jammu high court stopped a bank from debiting a retiree's pension for someone else's loan",
+    summary:
+      "In Nazir Ahmad Kuchay v. Jammu and Kashmir Bank, the Jammu and Kashmir and Ladakh High Court on 13 November 2026 restrained the lender from recovering a principal borrower's default from a retired government employee's pension account after he had stood guarantor while still in service, citing pension as his family's sole income.",
+    category: "industry",
+    companyOrSector: "Banking / consumer protection",
+    publishedAt: "2026-11-15T01:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jk-high-court-pension-guarantor-november-2026"),
+    keyTakeaways: [
+      "Kuchay, a retired police personnel, guaranteed another individual's loan while in government service; the bank deducted instalments after the borrower defaulted.",
+      "Justice Moksha Khajuria Kazmi set aside a trial court order that denied interim relief on 2 November 2020 and blocked further pension-account deductions in the 13 November 2026 judgment.",
+      "The court allowed the bank to pursue the principal borrower through other lawful recovery routes but did not order a refund of amounts already deducted.",
+    ],
+    body: [
+      "What's going on here?",
+      "Guaranteeing a colleague's or relative's loan feels like a favour until the EMIs land on your account. Nazir Ahmad Kuchay, a retired police personnel in Jammu and Kashmir, stood guarantor for another person's Jammu and Kashmir Bank loan while still in government service. When the borrower stopped paying, the bank debited Kuchay's account even after he retired and depended on pension for his household. He sued for refunds and an injunction. A trial court rejected interim protection on 2 November 2020, accepting that a guarantor's liability mirrors the borrower's. On 13 November 2026, Justice Moksha Khajuria Kazmi of the Jammu and Kashmir and Ladakh High Court reversed that stance for pension recovery, restrained the bank from further deductions from his pension account, and noted pension had become his family's primary sustenance after retirement. Reporting on 14 November 2026 noted the bank may still pursue the original borrower.",
+      "What does this mean?",
+      "Indian courts treat pension as a welfare stream distinct from ordinary savings, especially for government retirees. The high court leaned on Supreme Court precedent on protecting retiral benefits and prior judgments shielding pension from attachment. That does not erase guarantee liability; it limits one recovery channel when the only visible income is pension credited for post-retirement living costs. The same high court had reached a different conclusion in February 2026 in Chuni Lal v. Jammu and Kashmir Bank, allowing recovery from a pensioner's account once funds were credited, which shows outcomes hinge on facts such as when the guarantee was given and whether pension is the sole support.",
+      "Why should I care?",
+      "If you are asked to guarantee a loan near retirement, treat it as unsecured debt you may have to repay from limited income. Read whether your pension account terms allow set-off. Banks should document borrower track records before leaning on guarantors' retirement accounts. Pensioners already guaranteeing loans should monitor borrower payments and seek legal advice before defaults cascade. Watch whether other high courts cite the Kuchay order, any RBI guidance on pension set-off, and trial court proceedings on refunds of earlier deductions.",
+    ],
+  },
+  {
+    slug: "india-corporate-earnings-q2fy27-november-2026",
+    title: "India Inc revenue rose 23% in the September quarter across 2,864 reporting companies",
+    summary:
+      "Business Line's 14 November 2026 roundup of second-quarter fiscal 2027 results said 2,864 companies that reported by 12 November posted about 23% year-on-year revenue growth and 29% adjusted profit growth, with banks, steel, refineries, power and autos leading while IT and parts of cement lagged.",
+    category: "industry",
+    companyOrSector: "Earnings season / corporate India",
+    publishedAt: "2026-11-15T01:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-corporate-earnings-q2fy27-november-2026"),
+    keyTakeaways: [
+      "Aggregated revenue and adjusted profit for 2,864 reporters grew about 23% and 29% year on year in Q2 FY27, per Business Line on 14 November 2026.",
+      "Excluding financials, revenue and adjusted profit growth were about 26% and 34%; ex-refineries, growth was still about 23% and 25%.",
+      "Gross margins fell 257 basis points year on year but EBITDA margins expanded 30 basis points as volumes spread fixed costs.",
+    ],
+    body: [
+      "What's going on here?",
+      "Festive wholesalers and factory floors often show demand before headline GDP revisions do. A Business Line earnings review published on 14 November 2026 tallied 2,864 companies that had filed September-quarter results by 12 November 2026. Combined revenue from operations rose about 23% year on year and adjusted profit after tax about 29%. Strip out banking and financial services and growth accelerated to roughly 26% on revenue and 34% on profit. Even after removing refiners, which benefited from tight diesel margins globally, underlying revenue and profit still grew about 23% and 25%. Gross margins contracted 257 basis points as coal, power, logistics, steel and copper costs ran hot, but EBITDA margins widened 30 basis points because higher volumes absorbed employee and overhead costs.",
+      "What does this mean?",
+      "The quarter was led by volume-heavy cyclicals. Steel, refineries and power posted standout profit growth; banks reported solid credit expansion; passenger vehicle makers such as Maruti Suzuki and Mahindra & Mahindra logged strong wholesales though commodity inflation squeezed auto margins. Cement lagged steel despite similar input pressures because price increases were smaller. IT remained soft, with Infosys trimming guidance on client cost pressure. FMCG volumes held up across urban and rural shelves, but companies warned El Niño could dent rural demand in the next quarter. The mix says corporate India grew through operating leverage, not painless pricing power.",
+      "Why should I care?",
+      "If you own diversified equity funds, your portfolio already reflects this skew toward banks, energy and autos. Job seekers in capital goods and power EPC may see hiring stay active while IT services firms remain cautious. Households should not read aggregate profit growth as proof that everyday prices are falling; input costs are still being passed through selectively. Watch third-quarter margin commentary from autos and FMCG, RBI liquidity signals that affect bank NIMs, and whether steel and cement realisations soften as global commodity prices ease.",
+    ],
+  },
+  {
+    slug: "rbi-mobikwik-ppi-penalty-november-2026",
+    title: "The RBI fined Mobikwik Rs 9 lakh for prepaid wallet and fraud-reporting lapses",
+    summary:
+      "The Reserve Bank of India imposed a Rs 9 lakh penalty on One Mobikwik Systems Ltd in an order dated 6 November 2026, disclosed to exchanges on 13 November 2026, after a statutory inspection found prepaid payment instrument transfers beyond prescribed limits and delayed fraud reports.",
+    category: "industry",
+    companyOrSector: "Digital payments / regulation",
+    publishedAt: "2026-11-15T00:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-mobikwik-ppi-penalty-november-2026"),
+    keyTakeaways: [
+      "The RBI acted under the Payment and Settlement Systems Act after inspecting Mobikwik's operations between June 2025 and March 2026.",
+      "The regulator said certain wallet holders transferred funds to non-pre-registered beneficiaries beyond allowed limits.",
+      "Mobikwik also failed to report some frauds within the stipulated timeline, according to the RBI order disclosed on 13 November 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "Prepaid wallets sit in a tightly written rulebook. Merchants and consumers only trust them if balances move within limits the Reserve Bank of India sets on know-your-customer tiers and beneficiary registration. On 13 November 2026, One Mobikwik Systems Ltd told stock exchanges that the RBI had imposed a monetary penalty of Rs 9 lakh in an order dated 6 November 2026. The central bank said a statutory inspection covering June 2025 through March 2026 found Mobikwik allowed some wallet users to send money to beneficiaries who were not pre-registered beyond the prescribed cap, and that the company reported certain frauds later than rules require. The RBI stressed the penalty speaks to compliance gaps, not to the validity of customer transactions, and that further action remains possible.",
+      "What does this mean?",
+      "Small fines still signal scrutiny on a listed fintech that recently returned to public markets. PPI rules exist to limit anonymous hop-scotch transfers that can hide fraud or money laundering. Delayed fraud reporting slows industry-wide blacklisting of mule accounts. Mobikwik competes with PhonePe, Paytm and bank-led UPI apps for recharge and bill-pay habits; regulatory slips can invite tighter audits even when headline amounts are modest. The penalty lands in the same week Paytm secured preliminary approval to rebuild its wallet stack through a separate payments entity, underscoring how the RBI is simultaneously clearing new licences and policing existing ones.",
+      "Why should I care?",
+      "If you keep float in a Mobikwik wallet, watch app notices on transfer limits and beneficiary registration steps. Merchants should confirm settlement and dispute timelines before routing festival collections through any single PPI. Investors should treat digital payment stocks as regulatory compounding stories, not only user-growth stories. Track Mobikwik's compliance filings, any follow-up RBI directions, fraud-loss disclosures, and whether competitors market safety certifications after this order.",
+    ],
+  },
+  {
     slug: "ashok-leyland-mhcv-q2-november-2026",
     title: "Ashok Leyland sold one-third more trucks in the September quarter",
     summary:
@@ -11904,6 +12000,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "trai-telecom-spam-enforcement-q2-november-2026": "policy",
+  "jk-high-court-pension-guarantor-november-2026": "policy",
+  "india-corporate-earnings-q2fy27-november-2026": "markets",
+  "rbi-mobikwik-ppi-penalty-november-2026": "policy",
   "ashok-leyland-mhcv-q2-november-2026": "markets",
   "pvr-inox-global-distribution-november-2026": "markets",
   "india-us-trade-pact-last-stretch-november-2026": "policy",
