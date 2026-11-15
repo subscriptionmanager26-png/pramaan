@@ -63,7 +63,7 @@ export const ADVISORS: Advisor[] = [
     tagline: "Setups & technicals",
     description:
       "Technical patterns, levels, and short-horizon setups — not a substitute for your risk rules.",
-    status: "unlocked",
+    status: "soon",
     accent: "#ea580c",
     monogram: "TR",
     suggestions: [
@@ -71,7 +71,7 @@ export const ADVISORS: Advisor[] = [
       "Which large caps look oversold on daily RSI?",
       "Plan a breakout watchlist for this week",
     ],
-    greeting: "Talk setups, levels, and technical patterns.",
+    greeting: "Trader AI is coming soon.",
   },
   {
     id: "stock",
@@ -80,7 +80,7 @@ export const ADVISORS: Advisor[] = [
     tagline: "Fundamentals & business quality",
     description:
       "Company deep-dives: earnings quality, moats, valuation, and what the numbers imply.",
-    status: "unlocked",
+    status: "soon",
     accent: "#7c3aed",
     monogram: "ST",
     suggestions: [
@@ -88,7 +88,7 @@ export const ADVISORS: Advisor[] = [
       "Is this stock expensive vs its 5-year history?",
       "What risks matter most for this business?",
     ],
-    greeting: "Ask about a company’s fundamentals and valuation.",
+    greeting: "Stock AI is coming soon.",
   },
   {
     id: "tax",
@@ -96,11 +96,11 @@ export const ADVISORS: Advisor[] = [
     shortName: "Tax",
     tagline: "Filing, Schedule FA, residency",
     description: "Cross-border tax framing, Schedule FA, and residency questions — educational only.",
-    status: "locked",
+    status: "soon",
     accent: "#64748b",
     monogram: "TX",
     suggestions: [],
-    greeting: "Unlock Tax AI for residency and Schedule FA help.",
+    greeting: "Tax AI is coming soon.",
   },
   {
     id: "macro",

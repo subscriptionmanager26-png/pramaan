@@ -461,7 +461,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
             Your <span className="mark">private</span> AI team
           </p>
           <p className="mt-3 text-sm text-ink-2">
-            Specialist agents for funds, trading, stocks — plus a general co-pilot. Same Google account as
+            General and MF are live. Trader, Stock, Tax, and Macro are coming soon. Same Google account as
             Pocketedge.
           </p>
           <button type="button" className="btn-primary mt-8" onClick={() => void signInWithGoogleOnPramaan()}>

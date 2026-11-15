@@ -7,7 +7,7 @@ import { siteUrl } from "@/lib/site-url";
 export const metadata: Metadata = {
   title: "AI team",
   description:
-    "Talk to PocketEdge’s private AI team — general market co-pilot plus specialist advisors for mutual funds, trading, and stocks.",
+    "Talk to PocketEdge’s private AI team — a general market co-pilot and MF AI. Trader, Stock, Tax, and Macro are coming soon.",
   alternates: { canonical: `${siteUrl()}/ai` },
 };
 
