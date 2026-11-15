@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 
-import { AgentUiProvider, useOptionalAgentUi } from "@/components/agent/agent-ui-context";
 import { PostHogIdentify } from "@/components/analytics/PostHogIdentify";
 import { BOTTOM_NAV_PAD, BottomNav } from "@/components/shell/BottomNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -11,36 +10,34 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 function AppShellChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const agentArea = pathname?.startsWith("/ai") ?? false;
-  const agentUi = useOptionalAgentUi();
-  // Live conversation: immersive — hide site header + bottom tabs (Multibagg / Pocketedge pattern).
-  const immersiveAi = agentArea && Boolean(agentUi?.conversationLive);
-  const showBottomNav = !immersiveAi;
 
+  // /ai is one product surface inside the site — keep SiteHeader + BottomNav always.
+  // Do not strip chrome for “immersive” chat; News / Research / Portfolio must stay reachable.
   return (
     <div
       className={`flex flex-col bg-paper text-ink ${agentArea ? "h-dvh max-h-dvh min-h-0" : "min-h-screen"}`}
     >
-      {!immersiveAi ? <SiteHeader /> : null}
+      <SiteHeader />
       <main
         className={
           agentArea
-            ? `flex min-h-0 flex-1 flex-col overflow-hidden ${showBottomNav ? BOTTOM_NAV_PAD : ""}`
-            : `flex-1 ${showBottomNav ? BOTTOM_NAV_PAD : ""}`
+            ? `flex min-h-0 flex-1 flex-col overflow-hidden ${BOTTOM_NAV_PAD}`
+            : `flex-1 ${BOTTOM_NAV_PAD}`
         }
       >
         {children}
       </main>
       {!agentArea ? <SiteFooter /> : null}
-      {showBottomNav ? <BottomNav /> : null}
+      <BottomNav />
     </div>
   );
 }
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
-    <AgentUiProvider>
+    <>
       <PostHogIdentify />
       <AppShellChrome>{children}</AppShellChrome>
-    </AgentUiProvider>
+    </>
   );
 }

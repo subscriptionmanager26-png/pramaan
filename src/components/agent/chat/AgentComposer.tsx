@@ -74,6 +74,7 @@ export function AgentComposer({
   getAuthHeaders,
   suggestions,
   hint,
+  placeholder = "Message your agent…",
   initialText,
   seedToken,
   openFilePickerToken,
@@ -85,6 +86,7 @@ export function AgentComposer({
   onSend: (text: string, attachmentIds: string[]) => Promise<boolean>;
   suggestions?: string[];
   hint?: ReactNode;
+  placeholder?: string;
   /** Prefill textarea when `seedToken` increments. */
   initialText?: string | null;
   seedToken?: number;
@@ -268,7 +270,7 @@ export function AgentComposer({
                 setText(s);
                 input.current?.focus();
               }}
-              className="rounded-full border border-line bg-white px-3 py-1.5 text-xs text-ink-2 transition-colors hover:border-accent hover:text-ink"
+              className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[13px] font-medium text-ink-2 transition-colors hover:border-accent hover:bg-accent-2 hover:text-accent"
             >
               {s}
             </button>
@@ -379,7 +381,7 @@ export function AgentComposer({
           value={text}
           onChange={(e) => setText(e.target.value)}
           rows={1}
-          placeholder="Message your agent…"
+          placeholder={placeholder}
           disabled={disabled}
           className="max-h-60 min-h-14 w-full resize-none border-0 bg-transparent px-4 pt-3.5 text-[15px] text-ink outline-none"
           onKeyDown={(e) => {

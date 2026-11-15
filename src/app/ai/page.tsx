@@ -5,9 +5,9 @@ import { PramaanAgentChat } from "@/components/agent/PramaanAgentChat";
 import { siteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
-  title: "AI assistant",
+  title: "AI team",
   description:
-    "Ask Pocketedge’s private AI about markets, portfolios, and research. Sign in with Google (same account as pocketedge.in).",
+    "Talk to PocketEdge’s private AI team — general market co-pilot plus specialist advisors for mutual funds, trading, and stocks.",
   alternates: { canonical: `${siteUrl()}/ai` },
 };
 

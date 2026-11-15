@@ -3,16 +3,23 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import { AdvisorAvatar } from "@/components/agent/AdvisorAvatar";
 import { useAgentShell } from "@/components/agent/agent-shell-context";
-import { useAgentUi } from "@/components/agent/agent-ui-context";
 import { AgentComposer } from "@/components/agent/chat/AgentComposer";
 import { ChatTurn } from "@/components/agent/chat/AgentChatMessages";
 import { AgentFilesPanel } from "@/components/agent/chat/AgentFilesPanel";
 import { ScrollAnchor } from "@/components/agent/chat/ScrollAnchor";
 import { useThreadArtifacts } from "@/components/agent/chat/MessageArtifacts";
+import {
+  aiHref,
+  DEFAULT_ADVISOR_ID,
+  durableAdvisorThreadId,
+  getAdvisor,
+} from "@/lib/agent/advisors";
+import { aiTeamPreviewEnabled } from "@/lib/agent/ai-team-preview";
 import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { formatBytes, MAX_FILE_BYTES } from "@/lib/agent/file-limits";
-import { isValidThreadId, newThreadId } from "@/lib/agent/thread-id";
+import { isValidThreadId } from "@/lib/agent/thread-id";
 import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
@@ -21,33 +28,50 @@ import { messageFromFailedResponse, parseJsonResponse } from "@/lib/agent/parse-
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 import { usePocketedgeAuth } from "@/lib/pocketedge/use-pocketedge-auth";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
-
-const SUGGESTIONS = [
-  "What moved in Indian markets today?",
-  "Summarise my portfolio risk",
-  "Explain the latest RBI stance on rates",
-];
+import { Lock } from "lucide-react";
 
 export function PramaanAgentChat() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { threads, threadsReady, filesOpen, setFilesOpen, refreshThreads, upsertThread, draftNonce } =
-    useAgentShell();
-  const { setConversationLive } = useAgentUi();
+  const {
+    threads,
+    threadsReady,
+    filesOpen,
+    setFilesOpen,
+    refreshThreads,
+    upsertThread,
+    draftNonce,
+    activeAdvisorId,
+    showAgentInbox,
+  } = useAgentShell();
   const auth = usePocketedgeAuth();
+  const advisorId = activeAdvisorId ?? DEFAULT_ADVISOR_ID;
+  const advisor = getAdvisor(advisorId);
+  const durableId = durableAdvisorThreadId(advisorId);
   const threadParam = searchParams.get("t");
-  const threadId = threadParam && isValidThreadId(threadParam) ? threadParam : "";
-  /** Composer-ready draft: no ?t= yet — thread id is minted only on first send. */
-  const isDraft = !threadParam || threadParam === "new" || !isValidThreadId(threadParam);
+  const hasAgent = Boolean(activeAdvisorId);
+  // One continuous thread per agent — history is the context about you.
+  const threadId = hasAgent
+    ? threadParam && isValidThreadId(threadParam) && threadParam !== "new"
+      ? threadParam
+      : durableId
+    : "";
+  /** No agent selected (mobile inbox). With an agent we always bind the durable thread. */
+  const isDraft = !hasAgent;
+
+  const chatUrl = useCallback(
+    (tid: string) => aiHref({ agent: advisorId, threadId: tid === durableId ? undefined : tid }),
+    [advisorId, durableId],
+  );
 
   const authHeaders = useCallback(() => pocketedgeAuthHeaders(), []);
 
-  // Strip invalid / placeholder ?t= so refresh of /ai stays a draft (no orphan thread ids).
+  // Strip invalid / placeholder ?t=.
   useEffect(() => {
     if (threadParam === "new" || (threadParam && !isValidThreadId(threadParam))) {
-      router.replace("/ai");
+      router.replace(aiHref({ agent: hasAgent ? advisorId : undefined, inbox: !hasAgent }));
     }
-  }, [threadParam, router]);
+  }, [threadParam, router, hasAgent, advisorId]);
 
   const [ready, setReady] = useState(false);
   const [agentState, setAgentState] = useState<"unknown" | "active" | "disabled" | "error">("unknown");
@@ -168,10 +192,10 @@ export function PramaanAgentChat() {
     [authHeaders, loadThread, threadId],
   );
 
-  // Draft: composer immediately. URL thread: paint cache + fetch (don't wait on sidebar).
+  // Draft / localhost preview: composer immediately. Otherwise paint cache + fetch.
   useEffect(() => {
-    if (isDraft) {
-      const draftKey = `__draft__:${draftNonce}`;
+    if (isDraft || aiTeamPreviewEnabled()) {
+      const draftKey = isDraft ? `__draft__:${draftNonce}` : `__agent__:${advisorId}:${draftNonce}`;
       // First send still on /ai — keep optimistic turns on this draft only.
       if (draftSendIdRef.current && loadedThreadRef.current === draftKey) {
         setReady(true);
@@ -256,7 +280,7 @@ export function PramaanAgentChat() {
       // Invalidate only if this effect's gen is still current (Strict Mode / deps change).
       if (loadGenRef.current === gen) loadGenRef.current += 1;
     };
-  }, [isDraft, threadId, reloadChat, draftNonce]);
+  }, [isDraft, threadId, reloadChat, draftNonce, advisorId]);
   // Lazy-load files/orders when the Files panel opens.
   useEffect(() => {
     if (!filesOpen || !threadId || !isExistingThread || libraryLoaded.current) return;
@@ -370,8 +394,13 @@ export function PramaanAgentChat() {
     setError(null);
     let sentId: string | undefined;
     // Mint id only when sending so empty drafts never become threads.
-    const sendThreadId = threadId || newThreadId();
-    const promotedFromDraft = !threadId;
+    if (advisor.status !== "unlocked") {
+      setBusy(false);
+      setError(`Unlock ${advisor.name} to chat with this advisor.`);
+      return false;
+    }
+    const sendThreadId = threadId || durableId;
+    const promotedFromDraft = isDraft || !threadParam;
     const optimisticId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
     const optimistic: AgentMessage = {
       id: optimisticId,
@@ -483,7 +512,7 @@ export function PramaanAgentChat() {
         if (promotedFromDraft) {
           draftSendIdRef.current = sendThreadId;
           loadedThreadRef.current = sendThreadId;
-          router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+          router.replace(chatUrl(sendThreadId));
         }
         markFailed(errText, {
           httpStatus: parsed.status,
@@ -493,7 +522,7 @@ export function PramaanAgentChat() {
         });
         return false;
       }
-      const msg = { ...(json.message as AgentMessage), steps: ["Starting your agent…"] };
+      const msg = { ...(json.message as AgentMessage), steps: [`Starting ${advisor.name}…`] };
       sentId = msg.id;
       reportAgentClientEvent("chat_send_ok", {
         threadId: sendThreadId,
@@ -511,7 +540,7 @@ export function PramaanAgentChat() {
       if (promotedFromDraft) {
         draftSendIdRef.current = sendThreadId;
         loadedThreadRef.current = sendThreadId;
-        router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+        router.replace(chatUrl(sendThreadId));
       }
       refreshThreads();
       const final = await streamMessage(msg.id, headers);
@@ -551,7 +580,7 @@ export function PramaanAgentChat() {
           if (promotedFromDraft && !threadId) {
             draftSendIdRef.current = sendThreadId;
             loadedThreadRef.current = sendThreadId;
-            router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+            router.replace(chatUrl(sendThreadId));
           }
           refreshThreads();
         } catch {
@@ -603,7 +632,7 @@ export function PramaanAgentChat() {
             if (promotedFromDraft) {
               draftSendIdRef.current = sendThreadId;
               loadedThreadRef.current = sendThreadId;
-              router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+              router.replace(chatUrl(sendThreadId));
             }
             refreshThreads();
             const final = await streamMessage(match.id, headers);
@@ -620,7 +649,7 @@ export function PramaanAgentChat() {
         if (promotedFromDraft) {
           draftSendIdRef.current = sendThreadId;
           loadedThreadRef.current = sendThreadId;
-          router.replace(`/ai?t=${encodeURIComponent(sendThreadId)}`);
+          router.replace(chatUrl(sendThreadId));
         }
         markFailed(e instanceof Error ? e.message : "Something went wrong.");
       }
@@ -663,13 +692,8 @@ export function PramaanAgentChat() {
 
   const hasConversation = thread.length > 0;
   /** Greeting only for a true draft — never flash "new chat" while on ?t=. */
-  const showEmptyHome = isDraft && !hasConversation;
+  const showEmptyHome = hasAgent && !hasConversation;
   const greetName = auth.displayName?.split(/\s+/)[0] || "there";
-
-  useEffect(() => {
-    setConversationLive(hasConversation || busy || Boolean(threadId));
-    return () => setConversationLive(false);
-  }, [hasConversation, busy, threadId, setConversationLive]);
 
   if (!ready) {
     return (
@@ -699,10 +723,11 @@ export function PramaanAgentChat() {
 
   const composer = (
     <AgentComposer
-      disabled={!chatActive || busy}
+      disabled={!chatActive || busy || advisor.status !== "unlocked"}
       getAuthHeaders={authHeaders}
       onSend={onSend}
-      suggestions={showEmptyHome ? SUGGESTIONS : undefined}
+      placeholder={`Message ${advisor.name}…`}
+      suggestions={showEmptyHome && advisor.status === "unlocked" ? advisor.suggestions : undefined}
       hint={
         !showEmptyHome
           ? `PDF, CSV and Excel up to ${formatBytes(MAX_FILE_BYTES)}. Shift+Enter for a new line.`
@@ -711,32 +736,64 @@ export function PramaanAgentChat() {
     />
   );
 
+  if (!hasAgent) {
+    return null;
+  }
+
+  if (showEmptyHome && advisor.status !== "unlocked") {
+    return (
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-8 sm:px-6">
+        <div className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center gap-6 pb-10 text-center">
+          <AdvisorAvatar advisor={advisor} size="lg" dimmed />
+          <div>
+            <p className="text-[clamp(1.4rem,4vw,1.85rem)] font-semibold tracking-tight text-ink">
+              {advisor.name}
+            </p>
+            <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{advisor.description}</p>
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-[13px] font-semibold text-ink-2 shadow-[3px_3px_0_rgba(11,11,11,0.06)]">
+            <Lock className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
+            {advisor.status === "soon" ? "Coming soon" : "Locked"}
+          </div>
+          <p className="max-w-sm text-[13px] text-ink-3">
+            Use <span className="font-semibold text-ink-2">More → Request an agent</span> if you want this
+            unlocked — specialists are curated, not created on the fly.
+          </p>
+          <button type="button" className="btn-ghost text-sm lg:hidden" onClick={showAgentInbox}>
+            Back to agents
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex min-h-0 flex-1 overflow-hidden">
-      <div className="flex min-w-0 flex-1 flex-col">
-        {/* Desktop: Files stays top-right. Mobile: Files is next to New Chat in AgentWorkspace chrome. */}
-        <div className="hidden items-center justify-end gap-2 px-3 py-2 sm:px-5 lg:flex">
-          <button type="button" className="btn-ghost text-xs" onClick={() => setFilesOpen(!filesOpen)}>
-            Files
-          </button>
+      <div className="grid-paper flex min-w-0 flex-1 flex-col">
+        <div className="hidden h-12 shrink-0 items-center border-b border-line bg-white/90 px-4 backdrop-blur-md lg:flex">
+          <div className="inline-flex max-w-full items-center gap-2">
+            <AdvisorAvatar advisor={advisor} size="sm" />
+            <div className="min-w-0">
+              <p className="truncate text-[14px] font-bold tracking-tight text-ink">{advisor.name}</p>
+              <p className="text-meta truncate">{advisor.tagline}</p>
+            </div>
+          </div>
         </div>
 
         {showEmptyHome ? (
-          /* New chat: greeting + composer live in the screen body (not the site nav). */
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6">
-            <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-8 pb-8">
-              <div className="text-center">
-                <p className="text-[clamp(1.5rem,5vw,2rem)] font-semibold tracking-tight text-ink">
+            <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center gap-8 pb-8">
+              <div className="flex flex-col items-center text-center">
+                <AdvisorAvatar advisor={advisor} size="lg" />
+                <p className="text-section mt-4 text-ink">{advisor.name}</p>
+                <p className="mt-3 max-w-md text-[15px] leading-6 text-ink-2">
                   Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"},{" "}
-                  {greetName}.
-                </p>
-                <p className="mt-2 text-[14px] text-ink-2">
-                  Ask about markets, your portfolio, or research.
+                  {greetName}. {advisor.greeting}
                 </p>
               </div>
               <div className="w-full">
                 {error ? (
-                  <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                  <p className="mb-3 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
                     {error}
                   </p>
                 ) : null}
@@ -747,7 +804,7 @@ export function PramaanAgentChat() {
         ) : (
           <>
             <div className="flex-1 overflow-y-auto px-4 pb-4 sm:px-6">
-              <div className="mx-auto max-w-3xl space-y-12 py-2">
+              <div className="mx-auto max-w-2xl space-y-10 py-4">
                 {thread.map((message) => (
                   <ChatTurn
                     key={message.id}
@@ -775,13 +832,13 @@ export function PramaanAgentChat() {
                 <ScrollAnchor version={scrollKey} />
               </div>
             </div>
-            <div className="border-t border-line/70 bg-white/90 px-4 py-3 backdrop-blur-sm sm:px-6 sm:py-4">
+            <div className="border-t border-line bg-white/95 px-4 py-3 backdrop-blur-sm sm:px-6 sm:py-4">
               {error && hasConversation ? (
-                <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                <p className="mb-3 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
                   {error}
                 </p>
               ) : null}
-              <div className="mx-auto max-w-3xl">{composer}</div>
+              <div className="mx-auto max-w-2xl">{composer}</div>
             </div>
           </>
         )}
@@ -790,6 +847,7 @@ export function PramaanAgentChat() {
       <AgentFilesPanel
         open={filesOpen}
         onClose={() => setFilesOpen(false)}
+        advisor={advisor}
         threadUploads={threadUploads}
         library={fileLibrary}
         agentArtifacts={messages.flatMap((m) =>

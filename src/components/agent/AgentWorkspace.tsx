@@ -2,13 +2,44 @@
 
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { FolderOpen, MessageSquare } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Briefcase,
+  FolderOpen,
+  Lock,
+  Newspaper,
+  ScanSearch,
+  Settings,
+  Users,
+} from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import { AdvisorAvatar } from "@/components/agent/AdvisorAvatar";
 import {
   AgentShellContext,
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
+import { RequestAgentSheet } from "@/components/agent/RequestAgentSheet";
+import { AskAiIcon } from "@/components/icons/AskAiIcon";
+import { AppNavLink } from "@/components/shell/AppNavLink";
+import {
+  getAdvisorActivity,
+  latestThreadForAdvisor,
+  markAdvisorRead,
+  type AdvisorActivityState,
+} from "@/lib/agent/advisor-activity";
+import {
+  ADVISORS,
+  advisorIdFromThread,
+  aiHref,
+  DEFAULT_ADVISOR_ID,
+  durableAdvisorThreadId,
+  getAdvisor,
+  isAdvisorId,
+  type AdvisorId,
+} from "@/lib/agent/advisors";
+import { aiTeamPreviewEnabled } from "@/lib/agent/ai-team-preview";
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
 import { clearThreadsCache, readThreadsCache, writeThreadsCache } from "@/lib/agent/threads-cache";
 import { mergeThreadLists, prunePendingThreads } from "@/lib/agent/threads-from-messages";
@@ -19,7 +50,33 @@ import {
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
 
-function formatThreadWhen(iso: string) {
+/** Product destinations — same surfaces as the rest of PocketEdge, not AI utility chrome. */
+const PRODUCT_NAV = [
+  { href: "/news", label: "News", Icon: Newspaper },
+  { href: "/research", label: "Research", Icon: ScanSearch },
+  { href: "/ai", label: "Ask AI", Icon: null },
+  { href: "/portfolio", label: "Portfolio", Icon: Briefcase },
+  { href: "/advisors", label: "Advisors", Icon: Users },
+  { href: "/resources", label: "Resources", Icon: BookOpen },
+] as const;
+
+function productNavActive(pathname: string | null, href: string) {
+  if (!pathname) return false;
+  if (href === "/ai") return pathname.startsWith("/ai");
+  if (href === "/resources") {
+    return (
+      pathname === "/resources" ||
+      pathname.startsWith("/resources/") ||
+      pathname === "/guides" ||
+      pathname.startsWith("/guides/") ||
+      pathname === "/tools" ||
+      pathname.startsWith("/tools/")
+    );
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function formatWhen(iso: string) {
   const d = new Date(iso);
   const now = new Date();
   const sameDay =
@@ -32,106 +89,204 @@ function formatThreadWhen(iso: string) {
   return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
-function AgentSidebar({
+function ActivityMark({ state }: { state: AdvisorActivityState }) {
+  if (state === "in_progress") {
+    return <span className="size-1.5 shrink-0 animate-pulse rounded-full bg-accent" title="In progress" />;
+  }
+  if (state === "unread") {
+    return <span className="size-1.5 shrink-0 rounded-full bg-accent" aria-label="Unread" />;
+  }
+  if (state === "locked" || state === "soon") {
+    return <Lock className="h-3 w-3 shrink-0 text-ink-3" strokeWidth={2} aria-hidden />;
+  }
+  return null;
+}
+
+/**
+ * Desktop AI shell left rail: product destinations first (News, Research, …),
+ * then the agent roster. Not Cursor utility chrome — PocketEdge is a multi-surface product.
+ */
+function ProductLeftSidebar({
   threads,
-  activeThreadId,
-  threadsError,
-  onRetryThreads,
-  onNewChat,
-  onCloseMobile,
+  activeAdvisorId,
+  onSelectAdvisor,
+  onRequestAgent,
 }: {
   threads: AgentThreadSummary[];
-  activeThreadId: string;
-  threadsError: string | null;
-  onRetryThreads: () => void;
-  onNewChat: () => void;
-  onCloseMobile?: () => void;
+  activeAdvisorId: AdvisorId | null;
+  onSelectAdvisor: (id: AdvisorId) => void;
+  onRequestAgent: () => void;
 }) {
   const pathname = usePathname();
   const onConnections = pathname === "/ai/connections";
 
+  const navBtn =
+    "flex w-full items-center gap-2.5 rounded-full px-3 py-2 text-left text-[13px] font-medium transition-colors";
+
   return (
-    <aside className="flex h-full w-full flex-col bg-paper-2">
-      <div className="flex items-center gap-2 p-3">
-        <button type="button" className="btn-primary flex-1 justify-center text-sm" onClick={onNewChat}>
-          <span aria-hidden>+</span>
-          New chat
-        </button>
-        {onCloseMobile && (
-          <button
-            type="button"
-            className="btn-ghost px-3 py-2 text-xs lg:hidden"
-            onClick={onCloseMobile}
-            aria-label="Close sidebar"
-          >
-            ✕
-          </button>
-        )}
+    <aside className="flex h-full w-[16rem] shrink-0 flex-col border-r border-line bg-paper-2">
+      <nav className="space-y-1 px-2.5 pt-3" aria-label="Product">
+        {PRODUCT_NAV.map((item) => {
+          const active = productNavActive(pathname, item.href);
+          return (
+            <AppNavLink
+              key={item.href}
+              href={item.href === "/ai" ? aiHref({ agent: activeAdvisorId ?? DEFAULT_ADVISOR_ID }) : item.href}
+              className={`${navBtn} ${
+                active
+                  ? "border border-accent bg-accent-2 font-semibold text-accent"
+                  : "border border-transparent text-ink-2 hover:border-line hover:bg-white hover:text-ink"
+              }`}
+            >
+              {item.Icon ? (
+                <item.Icon className="h-4 w-4 shrink-0" strokeWidth={active ? 2.25 : 2} aria-hidden />
+              ) : (
+                <AskAiIcon className="h-4 w-4 shrink-0" />
+              )}
+              {item.label}
+            </AppNavLink>
+          );
+        })}
+      </nav>
+
+      <div className="mt-5 px-4">
+        <p className="text-meta uppercase tracking-[0.14em]">Agents</p>
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-2">
-        <p className="px-2 py-1.5 text-meta">Your chats</p>
-        {threadsError ? (
-          <div className="mx-2 mb-2 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2.5 text-[12px] leading-relaxed text-rose-900">
-            {threadsError}
-            <button type="button" className="mt-2 block font-semibold text-rose-950 underline" onClick={onRetryThreads}>
-              Try again
-            </button>
-          </div>
-        ) : null}
-        {!threads.length && !threadsError ? (
-          <p className="px-2 py-6 text-sm leading-relaxed text-ink-3">
-            Start a conversation. It will show up here on every device once you send a message.
-          </p>
-        ) : null}
-        {threads.length ? (
-          <ul className="space-y-0.5">
-            {threads.map((t) => {
-              const active = !onConnections && t.id === activeThreadId;
-              return (
-                <li key={t.id}>
-                  <Link
-                    href={`/ai?t=${encodeURIComponent(t.id)}`}
-                    onClick={onCloseMobile}
-                    className={`group block rounded-xl px-3 py-2.5 text-left transition-colors ${
-                      active
-                        ? "bg-white text-ink shadow-[3px_3px_0_rgba(11,11,11,0.06)] ring-1 ring-line"
-                        : "text-ink-2 hover:bg-white/90 hover:text-ink"
-                    }`}
-                  >
-                    <p className="truncate text-[13px] font-medium leading-snug">{t.title}</p>
-                    <p className="mt-1 flex items-center gap-2 text-[11px] text-ink-3">
-                      {formatThreadWhen(t.updatedAt)}
-                      {t.working && (
-                        <span className="inline-flex items-center gap-1 font-medium text-accent">
-                          <span className="size-1.5 animate-pulse rounded-full bg-accent" />
-                          Live
-                        </span>
-                      )}
-                    </p>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        ) : null}
-      </div>
+      <ul className="mt-2 min-h-0 flex-1 space-y-1.5 overflow-y-auto px-2.5 pb-3">
+        {ADVISORS.map((advisor) => {
+          const active = !onConnections && advisor.id === activeAdvisorId;
+          const activity = getAdvisorActivity(advisor, threads);
+          const locked = advisor.status !== "unlocked";
+          return (
+            <li key={advisor.id}>
+              <button
+                type="button"
+                aria-current={active ? "page" : undefined}
+                onClick={() => onSelectAdvisor(advisor.id)}
+                className={`group flex w-full items-center gap-2.5 rounded-2xl border px-2.5 py-2 text-left transition-colors ${
+                  active
+                    ? "border-line bg-white text-ink shadow-[3px_3px_0_rgba(11,11,11,0.08)]"
+                    : "border-transparent text-ink-2 hover:border-line hover:bg-white hover:text-ink"
+                }`}
+              >
+                <AdvisorAvatar advisor={advisor} size="sm" dimmed={locked} />
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-center gap-1.5">
+                    <span
+                      className={`truncate text-[13px] leading-snug ${
+                        activity.state === "unread" ? "font-bold text-ink" : "font-semibold"
+                      }`}
+                    >
+                      {advisor.shortName}
+                    </span>
+                    <ActivityMark state={activity.state} />
+                  </span>
+                  <span className="mt-0.5 block truncate text-[11px] text-ink-3">
+                    {activity.state === "in_progress"
+                      ? activity.preview
+                      : activity.state === "empty"
+                        ? "No messages yet"
+                        : activity.preview}
+                  </span>
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
 
-      <div className="mt-auto space-y-0.5 border-t border-line p-2">
+      <div className="mt-auto space-y-2 border-t border-line px-2.5 py-3">
         <Link
           href="/ai/connections"
-          onClick={onCloseMobile}
-          className={`block rounded-xl px-3 py-2.5 text-[13px] font-medium ${
-            onConnections ? "bg-white text-accent ring-1 ring-line" : "text-ink-2 hover:bg-white/80 hover:text-ink"
-          }`}
+          className="flex w-full items-center gap-2.5 rounded-full border border-line bg-white px-3 py-2 text-[13px] font-medium text-ink-2 transition-colors hover:border-ink/30 hover:text-ink"
         >
+          <Settings className="h-4 w-4 shrink-0" strokeWidth={2} />
           Connections
         </Link>
-        <p className="px-3 py-2 text-[10px] leading-relaxed text-ink-3">
-          Not investment advice. You confirm every trade.
-        </p>
+        <button
+          type="button"
+          onClick={onRequestAgent}
+          className="w-full px-3 text-left text-[12px] font-semibold text-accent hover:underline"
+        >
+          Request an agent →
+        </button>
       </div>
     </aside>
+  );
+}
+
+/** Mobile: agent inbox only — product tabs stay in BottomNav. */
+function AgentInbox({
+  threads,
+  onSelectAdvisor,
+  onRequestAgent,
+}: {
+  threads: AgentThreadSummary[];
+  onSelectAdvisor: (id: AdvisorId) => void;
+  onRequestAgent: () => void;
+}) {
+  return (
+    <div className="flex min-h-0 flex-1 flex-col bg-paper-2 lg:hidden">
+      <div className="flex h-12 shrink-0 items-center border-b border-line bg-white px-4">
+        <p className="text-[15px] font-semibold tracking-tight text-ink">Agents</p>
+      </div>
+      <ul className="min-h-0 flex-1 divide-y divide-line overflow-y-auto bg-white">
+        {ADVISORS.map((advisor) => {
+          const activity = getAdvisorActivity(advisor, threads);
+          const locked = advisor.status !== "unlocked";
+          return (
+            <li key={advisor.id}>
+              <button
+                type="button"
+                onClick={() => onSelectAdvisor(advisor.id)}
+                className="flex w-full items-center gap-3 px-4 py-3.5 text-left hover:bg-paper-2"
+              >
+                <span className="relative shrink-0">
+                  <AdvisorAvatar advisor={advisor} size="md" dimmed={locked} />
+                  {activity.state === "unread" ? (
+                    <span className="absolute -right-0.5 -top-0.5 size-2.5 rounded-full bg-accent ring-2 ring-white" />
+                  ) : null}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-center justify-between gap-2">
+                    <span
+                      className={`truncate text-[15px] tracking-tight ${
+                        activity.state === "unread" ? "font-bold text-ink" : "font-semibold text-ink"
+                      }`}
+                    >
+                      {advisor.name}
+                    </span>
+                    <span className="flex shrink-0 items-center gap-1.5">
+                      <ActivityMark state={activity.state} />
+                      {activity.updatedAt && activity.state !== "empty" ? (
+                        <span className="text-meta">{formatWhen(activity.updatedAt)}</span>
+                      ) : null}
+                    </span>
+                  </span>
+                  <span
+                    className={`mt-1 block truncate text-[13px] ${
+                      activity.state === "in_progress" ? "font-medium text-accent" : "text-ink-2"
+                    }`}
+                  >
+                    {activity.preview}
+                  </span>
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="shrink-0 border-t border-line bg-white px-4 py-3 text-center">
+        <button
+          type="button"
+          onClick={onRequestAgent}
+          className="text-[13px] font-semibold text-accent hover:underline"
+        >
+          Request an agent →
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -147,8 +302,17 @@ async function syncAgentInBackground() {
 export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const threadFromUrl = searchParams.get("t") || "";
-  const activeThreadId = threadFromUrl;
+  const agentParam = searchParams.get("agent");
+  const onConnections = pathname === "/ai/connections";
+
+  const activeAdvisorId: AdvisorId | null = isAdvisorId(agentParam)
+    ? agentParam
+    : threadFromUrl
+      ? advisorIdFromThread(threadFromUrl)
+      : null;
+
   const authError = searchParams.get("auth_error");
   const [ready, setReady] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
@@ -159,14 +323,40 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   const [threadsError, setThreadsError] = useState<string | null>(null);
   const threadsEtagRef = useRef<string | null>(null);
   const [draftNonce, setDraftNonce] = useState(0);
-  const [filesOpen, setFilesOpen] = useState(false);
+  const [filesOpen, setFilesOpen] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [requestOpen, setRequestOpen] = useState(false);
+  const [activityTick, setActivityTick] = useState(0);
 
   useEffect(() => {
     const open = () => setSidebarOpen(true);
     window.addEventListener(AGENT_OPEN_SIDEBAR_EVENT, open);
     return () => window.removeEventListener(AGENT_OPEN_SIDEBAR_EVENT, open);
   }, []);
+
+  // Desktop: default into General when landing on bare /ai.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (onConnections) return;
+    if (agentParam || threadFromUrl) return;
+    const wide = window.matchMedia("(min-width: 1024px)").matches;
+    if (wide) router.replace(aiHref({ agent: DEFAULT_ADVISOR_ID }));
+  }, [agentParam, threadFromUrl, onConnections, router]);
+
+  // Desktop: keep right context rail open by default; mobile starts closed.
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const sync = () => setFilesOpen(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  useEffect(() => {
+    if (!ready || !signedIn || !activeAdvisorId) return;
+    markAdvisorRead(activeAdvisorId);
+    setActivityTick((n) => n + 1);
+  }, [ready, signedIn, activeAdvisorId]);
 
   const threads = useMemo(
     () => mergeThreadLists(serverThreads, pendingThreads),
@@ -177,25 +367,13 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     try {
       const headers = await pocketedgeAuthHeaders();
       if (threadsEtagRef.current) headers["If-None-Match"] = threadsEtagRef.current;
-      const t0 =
-        typeof performance !== "undefined" ? performance.now() : Date.now();
       const res = await fetch("/api/agent/threads", { headers, cache: "no-store" });
-      const timing = res.headers.get("server-timing");
-      if (timing && typeof console !== "undefined") {
-        console.debug(
-          `[agent-threads] ${res.status} ${Math.round((typeof performance !== "undefined" ? performance.now() : Date.now()) - t0)}ms`,
-          timing,
-        );
-      }
-
       if (res.status === 304) {
         setThreadsError(null);
         setThreadsReady(true);
         return;
       }
-
       if (!res.ok) {
-        // Keep any cached sidebar visible; only surface error if we have nothing.
         const body = await res.json().catch(() => ({}));
         const msg =
           (body as { error?: { message?: string } }).error?.message ||
@@ -222,10 +400,48 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
 
   const upsertThread = useCallback((thread: AgentThreadSummary) => {
     setPendingThreads((prev) => mergeThreadLists(prev, [thread]));
-    // Optimistic only — avoid an immediate full refetch; stream/settle refresh covers it.
   }, []);
 
   useEffect(() => {
+    if (aiTeamPreviewEnabled()) {
+      setSignedIn(true);
+      setUserId("preview-local");
+      const now = Date.now();
+      setServerThreads([
+        {
+          id: durableAdvisorThreadId("general"),
+          title: "Summarized your watchlist for the week",
+          updatedAt: new Date(now - 12 * 60_000).toISOString(),
+          working: false,
+        },
+        {
+          id: durableAdvisorThreadId("mf"),
+          title: "Comparing SIP options in large-cap funds…",
+          updatedAt: new Date(now - 2 * 60_000).toISOString(),
+          working: true,
+        },
+        {
+          id: durableAdvisorThreadId("trader"),
+          title: "Nifty futures setup for tomorrow open",
+          updatedAt: new Date(now - 3 * 3600_000).toISOString(),
+          working: false,
+        },
+      ]);
+      try {
+        const map = {
+          mf: new Date(now).toISOString(),
+          general: new Date(now - 60_000).toISOString(),
+        };
+        localStorage.setItem("pe_advisor_last_read_v1", JSON.stringify(map));
+      } catch {
+        // ignore
+      }
+      setPendingThreads([]);
+      setThreadsReady(true);
+      setThreadsError(null);
+      setReady(true);
+      return;
+    }
     if (!pocketedgeAuthConfigured()) {
       setReady(true);
       return;
@@ -248,7 +464,6 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       } else if (user?.id) {
         const cached = readThreadsCache(user.id);
         if (cached) {
-          // Instant paint from cache (including empty list); network revalidates after.
           setServerThreads(cached.threads);
           threadsEtagRef.current = cached.etag;
           setThreadsReady(true);
@@ -280,21 +495,20 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (!signedIn) return;
-    // Sync is not on the critical path for sidebar paint.
+    if (!signedIn || aiTeamPreviewEnabled()) return;
     void syncAgentInBackground();
     void loadThreads();
   }, [signedIn, loadThreads]);
 
   const anyWorking = useMemo(() => threads.some((t) => t.working), [threads]);
   useEffect(() => {
-    if (!signedIn || anyWorking) return;
+    if (!signedIn || anyWorking || aiTeamPreviewEnabled()) return;
     const id = window.setInterval(() => void loadThreads(), 120_000);
     return () => window.clearInterval(id);
   }, [signedIn, anyWorking, loadThreads]);
 
   useEffect(() => {
-    if (!signedIn) return;
+    if (!signedIn || aiTeamPreviewEnabled()) return;
     let last = 0;
     const refresh = () => {
       const now = Date.now();
@@ -313,12 +527,30 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     };
   }, [signedIn, loadThreads]);
 
-  const startNewChat = useCallback(() => {
-    // Draft only — no sidebar row and no server thread until the first message.
+  const setActiveAdvisor = useCallback(
+    (id: AdvisorId) => {
+      markAdvisorRead(id);
+      setActivityTick((n) => n + 1);
+      setDraftNonce((n) => n + 1);
+      const latest = latestThreadForAdvisor(threads, id);
+      router.push(
+        aiHref({
+          agent: id,
+          threadId: latest?.id && latest.id !== durableAdvisorThreadId(id) ? latest.id : undefined,
+        }),
+      );
+      setSidebarOpen(false);
+    },
+    [router, threads],
+  );
+
+  const showAgentInbox = useCallback(() => {
     setDraftNonce((n) => n + 1);
     router.push("/ai");
     setSidebarOpen(false);
   }, [router]);
+
+  const openRequestAgent = useCallback(() => setRequestOpen(true), []);
 
   const shellValue = useMemo(
     () => ({
@@ -331,20 +563,35 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       setFilesOpen,
       sidebarOpen,
       setSidebarOpen,
-      startNewChat,
+      openRequestAgent,
+      activeAdvisorId,
+      setActiveAdvisor,
+      showAgentInbox,
     }),
-    [threads, threadsReady, loadThreads, upsertThread, draftNonce, filesOpen, sidebarOpen, startNewChat],
+    [
+      threads,
+      threadsReady,
+      loadThreads,
+      upsertThread,
+      draftNonce,
+      filesOpen,
+      sidebarOpen,
+      openRequestAgent,
+      activeAdvisorId,
+      setActiveAdvisor,
+      showAgentInbox,
+    ],
   );
 
   if (!ready) {
     return (
       <div className="flex flex-1 items-center justify-center p-8">
-        <p className="text-ink-2">Loading agent…</p>
+        <p className="text-ink-2">Loading…</p>
       </div>
     );
   }
 
-  if (!pocketedgeAuthConfigured()) {
+  if (!pocketedgeAuthConfigured() && !aiTeamPreviewEnabled()) {
     return (
       <div className="flex flex-1 items-center justify-center p-8">
         <p className="max-w-md rounded-2xl border border-dashed border-line bg-paper-2 px-6 py-12 text-center text-ink-2">
@@ -364,10 +611,11 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
             </p>
           ) : null}
           <p className="text-section text-2xl">
-            Your <span className="mark">private</span> market agent
+            Your <span className="mark">private</span> AI team
           </p>
           <p className="mt-3 text-sm text-ink-2">
-            Same Google account as Pocketedge. Chats sync to your account and appear on any device you sign into.
+            Specialist agents for funds, trading, stocks — plus a general co-pilot. Same Google account as
+            Pocketedge.
           </p>
           <button type="button" className="btn-primary mt-8" onClick={() => void signInWithGoogleOnPramaan()}>
             Continue with Google
@@ -377,65 +625,72 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
     );
   }
 
-  const sidebarProps = {
-    threads,
-    activeThreadId,
-    threadsError,
-    onRetryThreads: () => void loadThreads(),
-    onNewChat: startNewChat,
-  };
+  const mobileInbox = !onConnections && !activeAdvisorId;
+  const mobileChat = !onConnections && Boolean(activeAdvisorId);
+  const advisor = activeAdvisorId ? getAdvisor(activeAdvisorId) : null;
+  void activityTick;
 
   return (
     <AgentShellContext.Provider value={shellValue}>
-      <div className="flex min-h-0 flex-1 overflow-hidden">
-        <div className="hidden h-full w-[min(100%,15.5rem)] shrink-0 border-r border-line lg:block xl:w-64">
-          <AgentSidebar {...sidebarProps} />
+      <div className="flex min-h-0 flex-1 overflow-hidden bg-white" data-activity={activityTick}>
+        <div className="hidden lg:flex">
+          <ProductLeftSidebar
+            threads={threads}
+            activeAdvisorId={activeAdvisorId}
+            onSelectAdvisor={setActiveAdvisor}
+            onRequestAgent={openRequestAgent}
+          />
         </div>
-        {sidebarOpen && (
-          <>
-            <button
-              type="button"
-              className="fixed inset-0 z-40 bg-ink/40 lg:hidden"
-              aria-label="Close menu"
-              onClick={() => setSidebarOpen(false)}
+
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col bg-white">
+          {mobileInbox ? (
+            <AgentInbox
+              threads={threads}
+              onSelectAdvisor={setActiveAdvisor}
+              onRequestAgent={openRequestAgent}
             />
-            <div className="fixed inset-y-0 left-0 z-50 w-[min(88vw,17rem)] border-r border-line bg-paper-2 shadow-2xl lg:hidden">
-              <AgentSidebar {...sidebarProps} onCloseMobile={() => setSidebarOpen(false)} />
-            </div>
-          </>
-        )}
-        <div className="grid-paper flex min-h-0 min-w-0 flex-1 flex-col">
-          {/* Mobile chat chrome — Files sits left of New Chat (desktop Files stays in the chat pane). */}
-          <div className="flex h-12 shrink-0 items-center justify-between gap-2 border-b border-line bg-white px-3 lg:hidden">
-            <button
-              type="button"
-              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
-              onClick={() => setSidebarOpen(true)}
-            >
-              <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-              Old Chats
-            </button>
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                className="inline-flex h-9 items-center gap-1.5 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
-                onClick={() => setFilesOpen(!filesOpen)}
-              >
-                <FolderOpen className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-                Files
-              </button>
-              <button
-                type="button"
-                className="inline-flex h-9 items-center gap-1 rounded-full border border-line px-3 text-[13px] font-semibold text-ink"
-                onClick={startNewChat}
-              >
-                New Chat <span aria-hidden>+</span>
-              </button>
-            </div>
-          </div>
-          {children}
+          ) : null}
+
+          {mobileChat || onConnections || activeAdvisorId ? (
+            <>
+              {mobileChat && advisor ? (
+                <div className="flex h-12 shrink-0 items-center gap-2 border-b border-line bg-white px-2 lg:hidden">
+                  <button
+                    type="button"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full text-ink hover:bg-paper-2"
+                    aria-label="Back to agents"
+                    onClick={showAgentInbox}
+                  >
+                    <ArrowLeft className="h-5 w-5" strokeWidth={2} />
+                  </button>
+                  <AdvisorAvatar advisor={advisor} size="sm" />
+                  <p className="min-w-0 flex-1 truncate text-[14px] font-bold tracking-tight text-ink">
+                    {advisor.name}
+                  </p>
+                  <button
+                    type="button"
+                    className="btn-ghost !px-2.5 !py-1.5"
+                    aria-label="Files"
+                    onClick={() => setFilesOpen(!filesOpen)}
+                  >
+                    <FolderOpen className="h-4 w-4" strokeWidth={2} />
+                  </button>
+                </div>
+              ) : null}
+
+              <div className={mobileInbox ? "hidden" : "flex min-h-0 flex-1 flex-col"}>
+                {threadsError && !aiTeamPreviewEnabled() ? (
+                  <p className="sr-only">{threadsError}</p>
+                ) : null}
+                {children}
+              </div>
+            </>
+          ) : null}
         </div>
       </div>
+
+      <RequestAgentSheet open={requestOpen} onClose={() => setRequestOpen(false)} />
+      {sidebarOpen ? null : null}
     </AgentShellContext.Provider>
   );
 }

@@ -159,9 +159,6 @@ export default function HomePage() {
             <span className="mark">What&apos;s Going On. And Why You Should Care.</span>
           </h2>
           <p className="text-meta mt-4">{today}</p>
-          <div className="mt-4 rounded-lg bg-sky px-4 py-2 text-center">
-            <p className="text-meta text-ink-2">Today&apos;s issue is curated · AI brief available</p>
-          </div>
         </div>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
