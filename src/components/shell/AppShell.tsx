@@ -1,10 +1,11 @@
 "use client";
 
+import { Suspense } from "react";
 import { usePathname } from "next/navigation";
 
 import { PostHogIdentify } from "@/components/analytics/PostHogIdentify";
 import { BOTTOM_NAV_PAD, BottomNav } from "@/components/shell/BottomNav";
-import { ProductRail } from "@/components/shell/ProductRail";
+import { PRODUCT_RAIL_WIDTH, ProductRail } from "@/components/shell/ProductRail";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 
@@ -20,7 +21,16 @@ function AppShellChrome({ children }: { children: React.ReactNode }) {
     >
       <SiteHeader />
       <div className={`flex min-h-0 flex-1 ${agentArea ? "overflow-hidden" : ""}`}>
-        {agentArea ? null : <ProductRail />}
+        <Suspense
+          fallback={
+            <aside
+              className={`sticky top-14 hidden h-[calc(100dvh-3.5rem)] self-start border-r border-line bg-paper-2 lg:block ${PRODUCT_RAIL_WIDTH}`}
+              aria-hidden
+            />
+          }
+        >
+          <ProductRail />
+        </Suspense>
         <div className={`flex min-h-0 min-w-0 flex-1 flex-col ${agentArea ? "overflow-hidden" : ""}`}>
           <main
             className={

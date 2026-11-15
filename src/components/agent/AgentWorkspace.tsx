@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { ArrowLeft, FolderOpen, Lock, Settings } from "lucide-react";
+import { ArrowLeft, FolderOpen, Lock } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { AdvisorAvatar } from "@/components/agent/AdvisorAvatar";
@@ -11,7 +10,6 @@ import {
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
 import { RequestAgentSheet } from "@/components/agent/RequestAgentSheet";
-import { PRODUCT_RAIL_WIDTH, ProductNav } from "@/components/shell/ProductRail";
 import {
   getAdvisorActivity,
   latestThreadForAdvisor,
@@ -65,96 +63,7 @@ function ActivityMark({ state }: { state: AdvisorActivityState }) {
   return null;
 }
 
-/**
- * Desktop AI shell left rail: product destinations first (News, Research, …),
- * then the agent roster. Not Cursor utility chrome — PocketEdge is a multi-surface product.
- */
-function ProductLeftSidebar({
-  threads,
-  activeAdvisorId,
-  onSelectAdvisor,
-  onRequestAgent,
-}: {
-  threads: AgentThreadSummary[];
-  activeAdvisorId: AdvisorId | null;
-  onSelectAdvisor: (id: AdvisorId) => void;
-  onRequestAgent: () => void;
-}) {
-  const pathname = usePathname();
-  const onConnections = pathname === "/ai/connections";
-
-  return (
-    <aside className={`flex h-full shrink-0 flex-col border-r border-line bg-paper-2 ${PRODUCT_RAIL_WIDTH}`}>
-      <ProductNav aiHref={aiHref({ agent: activeAdvisorId ?? DEFAULT_ADVISOR_ID })} />
-
-      <div className="mt-5 px-4">
-        <p className="text-meta uppercase tracking-[0.14em]">Agents</p>
-      </div>
-
-      <ul className="mt-2 min-h-0 flex-1 space-y-1.5 overflow-y-auto px-2.5 pb-3">
-        {ADVISORS.map((advisor) => {
-          const active = !onConnections && advisor.id === activeAdvisorId;
-          const activity = getAdvisorActivity(advisor, threads);
-          const locked = advisor.status !== "unlocked";
-          return (
-            <li key={advisor.id}>
-              <button
-                type="button"
-                aria-current={active ? "page" : undefined}
-                onClick={() => onSelectAdvisor(advisor.id)}
-                className={`group flex w-full items-center gap-2.5 rounded-2xl border px-2.5 py-2 text-left transition-colors ${
-                  active
-                    ? "border-line bg-white text-ink shadow-[3px_3px_0_rgba(11,11,11,0.08)]"
-                    : "border-transparent text-ink-2 hover:border-line hover:bg-white hover:text-ink"
-                }`}
-              >
-                <AdvisorAvatar advisor={advisor} size="sm" dimmed={locked} />
-                <span className="min-w-0 flex-1">
-                  <span className="flex items-center gap-1.5">
-                    <span
-                      className={`truncate text-[13px] leading-snug ${
-                        activity.state === "unread" ? "font-bold text-ink" : "font-semibold"
-                      }`}
-                    >
-                      {advisor.shortName}
-                    </span>
-                    <ActivityMark state={activity.state} />
-                  </span>
-                  <span className="mt-0.5 block truncate text-[11px] text-ink-3">
-                    {activity.state === "in_progress"
-                      ? activity.preview
-                      : activity.state === "empty"
-                        ? "No messages yet"
-                        : activity.preview}
-                  </span>
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-
-      <div className="mt-auto space-y-2 border-t border-line px-2.5 py-3">
-        <Link
-          href="/ai/connections"
-          className="flex w-full items-center gap-2.5 rounded-full border border-line bg-white px-3 py-2 text-[13px] font-medium text-ink-2 transition-colors hover:border-ink/30 hover:text-ink"
-        >
-          <Settings className="h-4 w-4 shrink-0" strokeWidth={2} />
-          Connections
-        </Link>
-        <button
-          type="button"
-          onClick={onRequestAgent}
-          className="w-full px-3 text-left text-[12px] font-semibold text-accent hover:underline"
-        >
-          Request an agent →
-        </button>
-      </div>
-    </aside>
-  );
-}
-
-/** Mobile: agent inbox only — product tabs stay in BottomNav. */
+/** Mobile: agent inbox only — product tabs stay in BottomNav. Desktop uses ProductRail. */
 function AgentInbox({
   threads,
   onSelectAdvisor,
@@ -571,15 +480,6 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
   return (
     <AgentShellContext.Provider value={shellValue}>
       <div className="flex min-h-0 flex-1 overflow-hidden bg-white" data-activity={activityTick}>
-        <div className="hidden lg:flex">
-          <ProductLeftSidebar
-            threads={threads}
-            activeAdvisorId={activeAdvisorId}
-            onSelectAdvisor={setActiveAdvisor}
-            onRequestAgent={openRequestAgent}
-          />
-        </div>
-
         <div className="flex min-h-0 min-w-0 flex-1 flex-col bg-white">
           {mobileInbox ? (
             <AgentInbox
