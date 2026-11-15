@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "kamarajar-port-ipo-bookrunners-november-2026",
+    title: "Chennai's Kamarajar Port hired three banks to plan India's first listed state-owned port IPO",
+    summary:
+      "Chennai-based Kamarajar Port Ltd has appointed SBI Capital Markets, IDBI Capital and ICICI Securities as book-running lead managers for an initial public offering that would make it the only listed state-backed major port in India, with Mint reporting a likely offer-for-sale of about Rs 1,200 crore and a targeted completion within calendar 2027.",
+    category: "industry",
+    companyOrSector: "Ports / public sector listings",
+    publishedAt: "2026-11-15T12:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("kamarajar-port-ipo-bookrunners-november-2026"),
+    keyTakeaways: [
+      "Kamarajar is India's first corporate major port, wholly owned by Chennai Port Authority after the Centre sold its stake in 2020.",
+      "The port handled 49.08 million tonnes of cargo and 1,008 vessels in financial year 2026, with net profit of about Rs 596 crore on net revenue near Rs 1,239 crore.",
+      "Listed port peers today are Adani Ports, JSW Infrastructure and Gujarat Pipavav; a Kamarajar float would be the first from the state-owned major-port system.",
+    ],
+    body: [
+      "What's going on here?",
+      "Major ports on India's east coast still move coal, containers and automobiles through a mix of government-owned landlord ports and private terminal operators. Kamarajar Port at Ennore, near Chennai, was set up in 1999 as the country's first corporate major port under the Companies Act rather than as a statutory trust. On 15 November 2026, Mint reported that Kamarajar has selected SBI Capital Markets, IDBI Capital Markets and Securities, and ICICI Securities to structure a public listing. People familiar with the matter told the paper the issue is likely to centre on an offer for sale of roughly Rs 1,200 crore, with any fresh capital raise still to be decided. The Chennai Port Authority, which bought out the central government's stake in 2020, remains the sole owner today. An earlier September document from the port flagged merchant bankers; emails to the port and banks on 14 November had not drawn responses by press time.",
+      "What does this mean?",
+      "A listed Kamarajar would give equity markets direct exposure to tariff and volume trends at a state-backed gateway without going through diversified conglomerates such as Adani Ports. The port's FY26 numbers in the Mint story show mid-single-digit revenue growth and profit above Rs 500 crore, with capex more than doubling year on year to about Rs 478 crore as terminals expand. Coal remains the largest cargo, but petroleum, vehicles and containers add mix. For the ministry of ports, shipping and waterways, a successful IPO tests whether investor appetite exists for partial privatisation of cash-generative PSU infrastructure without full strategic sale. Fee income for the three appointed banks depends on completing valuation work, regulatory filings and timing the issue against volatile primary-market windows.",
+      "Why should I care?",
+      "If you ship bulk cargo through the Chennai cluster, watch whether listing preparation changes landlord capex timelines or tariff petitions at Kamarajar versus older Chennai Port facilities. Investors comparing port stocks should note Kamarajar's smaller, coal-heavy book against APSEZ's diversified network. Policy readers should track SEBI and exchange filings once the draft prospectus appears, and whether other corporate major ports copy the structure. Employees and unions may press for clarity on minority shareholder rights while the Authority retains control. Monitor DRHP filing dates, the split between offer for sale and fresh issue, FY27 cargo guidance, and competing Coal India subsidiary listings such as Mahanadi Coalfields that are moving through the pipeline in the same season.",
+    ],
+  },
+  {
+    slug: "mfi-msme-diversification-rbi-portfolio-november-2026",
+    title: "Micro lenders are adding MSME and gold loans after RBI relaxed portfolio rules",
+    summary:
+      "Nearly a year after the Reserve Bank of India cut the minimum share of qualifying microfinance assets in an MFI's book from 75% to 60%, lenders including Fusion Finance and Aarohan Financial Services are rolling out higher-ticket MSME credit, loans against property, vehicle finance and gold-backed products, executives told Mint in a 15 November 2026 report.",
+    category: "industry",
+    companyOrSector: "Microfinance / NBFC regulation",
+    publishedAt: "2026-11-15T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mfi-msme-diversification-rbi-portfolio-november-2026"),
+    keyTakeaways: [
+      "Fusion Finance raised MSME ticket sizes from Rs 5–15 lakh toward Rs 5–50 lakh and launched a prime joint liability group product for loans above Rs 3 lakh, per its MD Sanjay Garyali.",
+      "Aarohan Financial Services is choosing among loans against property, home improvement, vehicle and gold lines after board preparation, with microfinance still about 68% of its portfolio.",
+      "Fusion aims to lift non-microfinance assets from roughly 14% today to 30–35% over two years using branches already in MSME-heavy markets.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian microfinance institutions built village-level joint liability groups for two decades, but concentration in unsecured micro loans left several lenders exposed when repayment stress rose in 2024 and 2025. The Reserve Bank of India responded by lowering the floor on qualifying microfinance assets from 75% to 60% of total portfolio, giving boards room to add secured and small-business products without losing their NBFC-MFI classification. In a Mint story dated 15 November 2026, Fusion Finance managing director Sanjay Garyali said the company widened MSME tickets from Rs 5–15 lakh up to Rs 50 lakh and added a prime joint liability group variant for customers seeking more than Rs 3 lakh. Aarohan Financial Services managing director Manoj Nambiar said preparatory work is done across loans against property, home improvement, vehicles and gold, with the board set to pick one line to launch. Satin Creditcare executives noted they were already diversified before the circular, while industry voices caution that MSME and gold segments face entrenched bank and NBFC competition.",
+      "What does this mean?",
+      "Branch networks that once served only women's self-help groups can now reuse credit officers for larger tickets without building a parallel franchise from scratch. Fusion's target to take non-microfinance share from about 14% to 30–35% in two years implies faster balance-sheet mix shift than Aarohan's plan to keep core micro near 65% while testing one new vertical. For borrowers, more choice can mean quicker access to gold or vehicle collateral loans in districts where banks are thin, but pricing may stay steep until lenders prove collection discipline off the old group-lending model. For the RBI, the policy is a bet that broader books reduce single-segment shocks; the trade-off is underwriting risk in products MFIs historically avoided.",
+      "Why should I care?",
+      "If you borrow through a local MFI, ask whether your next renewal could move you into a secured product with different documentation and recovery rules. Investors in listed MFIs should read quarterly mix disclosures, not only gross loan growth. Banks competing in the same towns may respond with sharper MSME rates, which could compress new entrants' margins. Watch Fusion and Aarohan board minutes and product launches, RBI monitoring notes on asset-quality trends outside micro, and whether delinquency on newer secured books stays near legacy group-loan performance through the next two earnings seasons.",
+    ],
+  },
+  {
     slug: "hindalco-novelis-china-divestiture-november-2026",
     title: "Novelis agreed to sell its China aluminum units for about $265 million",
     summary:
@@ -12072,6 +12120,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "kamarajar-port-ipo-bookrunners-november-2026": "markets",
+  "mfi-msme-diversification-rbi-portfolio-november-2026": "policy",
   "hindalco-novelis-china-divestiture-november-2026": "companies",
   "delhivery-ev-intracity-fleet-november-2026": "markets",
   "allahabad-hc-vehicle-repossession-november-2026": "policy",
