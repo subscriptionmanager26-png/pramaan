@@ -2,17 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import {
-  ArrowLeft,
-  BookOpen,
-  Briefcase,
-  FolderOpen,
-  Lock,
-  Newspaper,
-  ScanSearch,
-  Settings,
-  Users,
-} from "lucide-react";
+import { ArrowLeft, FolderOpen, Lock, Settings } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { AdvisorAvatar } from "@/components/agent/AdvisorAvatar";
@@ -21,8 +11,7 @@ import {
   type AgentThreadSummary,
 } from "@/components/agent/agent-shell-context";
 import { RequestAgentSheet } from "@/components/agent/RequestAgentSheet";
-import { AskAiIcon } from "@/components/icons/AskAiIcon";
-import { AppNavLink } from "@/components/shell/AppNavLink";
+import { PRODUCT_RAIL_WIDTH, ProductNav } from "@/components/shell/ProductRail";
 import {
   getAdvisorActivity,
   latestThreadForAdvisor,
@@ -49,32 +38,6 @@ import {
   signInWithGoogleOnPramaan,
 } from "@/lib/pocketedge/client-auth";
 import { getPocketedgeSupabase, pocketedgeAuthConfigured } from "@/lib/pocketedge/supabase-browser";
-
-/** Product destinations — same surfaces as the rest of PocketEdge, not AI utility chrome. */
-const PRODUCT_NAV = [
-  { href: "/news", label: "News", Icon: Newspaper },
-  { href: "/research", label: "Research", Icon: ScanSearch },
-  { href: "/ai", label: "Ask AI", Icon: null },
-  { href: "/portfolio", label: "Portfolio", Icon: Briefcase },
-  { href: "/advisors", label: "Advisors", Icon: Users },
-  { href: "/resources", label: "Resources", Icon: BookOpen },
-] as const;
-
-function productNavActive(pathname: string | null, href: string) {
-  if (!pathname) return false;
-  if (href === "/ai") return pathname.startsWith("/ai");
-  if (href === "/resources") {
-    return (
-      pathname === "/resources" ||
-      pathname.startsWith("/resources/") ||
-      pathname === "/guides" ||
-      pathname.startsWith("/guides/") ||
-      pathname === "/tools" ||
-      pathname.startsWith("/tools/")
-    );
-  }
-  return pathname === href || pathname.startsWith(`${href}/`);
-}
 
 function formatWhen(iso: string) {
   const d = new Date(iso);
@@ -120,34 +83,9 @@ function ProductLeftSidebar({
   const pathname = usePathname();
   const onConnections = pathname === "/ai/connections";
 
-  const navBtn =
-    "flex w-full items-center gap-2.5 rounded-full px-3 py-2 text-left text-[13px] font-medium transition-colors";
-
   return (
-    <aside className="flex h-full w-[16rem] shrink-0 flex-col border-r border-line bg-paper-2">
-      <nav className="space-y-1 px-2.5 pt-3" aria-label="Product">
-        {PRODUCT_NAV.map((item) => {
-          const active = productNavActive(pathname, item.href);
-          return (
-            <AppNavLink
-              key={item.href}
-              href={item.href === "/ai" ? aiHref({ agent: activeAdvisorId ?? DEFAULT_ADVISOR_ID }) : item.href}
-              className={`${navBtn} ${
-                active
-                  ? "border border-accent bg-accent-2 font-semibold text-accent"
-                  : "border border-transparent text-ink-2 hover:border-line hover:bg-white hover:text-ink"
-              }`}
-            >
-              {item.Icon ? (
-                <item.Icon className="h-4 w-4 shrink-0" strokeWidth={active ? 2.25 : 2} aria-hidden />
-              ) : (
-                <AskAiIcon className="h-4 w-4 shrink-0" />
-              )}
-              {item.label}
-            </AppNavLink>
-          );
-        })}
-      </nav>
+    <aside className={`flex h-full shrink-0 flex-col border-r border-line bg-paper-2 ${PRODUCT_RAIL_WIDTH}`}>
+      <ProductNav aiHref={aiHref({ agent: activeAdvisorId ?? DEFAULT_ADVISOR_ID })} />
 
       <div className="mt-5 px-4">
         <p className="text-meta uppercase tracking-[0.14em]">Agents</p>

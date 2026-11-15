@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 
 import { PostHogIdentify } from "@/components/analytics/PostHogIdentify";
 import { BOTTOM_NAV_PAD, BottomNav } from "@/components/shell/BottomNav";
+import { ProductRail } from "@/components/shell/ProductRail";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 
@@ -18,16 +19,21 @@ function AppShellChrome({ children }: { children: React.ReactNode }) {
       className={`flex flex-col bg-paper text-ink ${agentArea ? "h-dvh max-h-dvh min-h-0" : "min-h-screen"}`}
     >
       <SiteHeader />
-      <main
-        className={
-          agentArea
-            ? `flex min-h-0 flex-1 flex-col overflow-hidden ${BOTTOM_NAV_PAD}`
-            : `flex-1 ${BOTTOM_NAV_PAD}`
-        }
-      >
-        {children}
-      </main>
-      {!agentArea ? <SiteFooter /> : null}
+      <div className={`flex min-h-0 flex-1 ${agentArea ? "overflow-hidden" : ""}`}>
+        {agentArea ? null : <ProductRail />}
+        <div className={`flex min-h-0 min-w-0 flex-1 flex-col ${agentArea ? "overflow-hidden" : ""}`}>
+          <main
+            className={
+              agentArea
+                ? `flex min-h-0 flex-1 flex-col overflow-hidden ${BOTTOM_NAV_PAD}`
+                : `flex-1 ${BOTTOM_NAV_PAD}`
+            }
+          >
+            {children}
+          </main>
+          {agentArea ? null : <SiteFooter />}
+        </div>
+      </div>
       <BottomNav />
     </div>
   );

@@ -1,0 +1,15 @@
+---
+description: AI is one surface inside PocketEdge — never strip the rest of the site chrome.
+alwaysApply: true
+---
+
+# Site shell vs AI
+
+PocketEdge is a full product (News, Research, Portfolio, Advisors, Resources, AI). `/ai` is one section, not a separate app.
+
+- Always keep `SiteHeader` and mobile `BottomNav` on `/ai`. Do not hide them for “immersive” chat, live conversations, or agent threads.
+- AI UI lives inside `AppShell` `main` — below the header, above the bottom nav.
+- Every desktop page uses the same chrome as `/ai`: full-bleed header (logo in the rail column, section title, account) and the product left rail (News, Research, Ask AI, Portfolio, Advisors, Resources). Do not put those links back in a centered header.
+- On `/ai` only, the agent roster sits under that same product nav. Other pages do not show the roster.
+- Files / connections belong in the right context rail or demoted footer, not as primary left-rail destinations.
+- Do not invent a parallel IA inside AI that ignores the rest of the product.
