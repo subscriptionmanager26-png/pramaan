@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "irdai-insurer-eom-glide-path-november-2026",
+    title: "Life insurers want three years to meet IRDAI's 15% expense cap",
+    summary:
+      "IndiaFirst Life chief executive Rushabh Gandhi told BusinessLine on 15 November 2026 that most insurers will need a longer runway than the two years in IRDAI's September consultation paper to cut expenses of management toward a 15% threshold, while credit-life commission caps may squeeze bank-led protection sales unless single-premium products align with term-plan pay scales.",
+    category: "industry",
+    companyOrSector: "Insurance / regulation",
+    publishedAt: "2026-11-16T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("irdai-insurer-eom-glide-path-november-2026"),
+    keyTakeaways: [
+      "IRDAI's 23 September 2026 consultation proposed tighter expenses-of-management limits and lower distributor commissions; industry feedback was due by 1 November 2026.",
+      "Gandhi said IndiaFirst runs about 40% protection and 60% savings on individual annualised premium equivalent, with bank partnerships still near two-thirds of sales.",
+      "He argued a three-year glide path, with lighter rules for mid-sized insurers, would avoid deferring growth spend just to hit a uniform ratio quickly.",
+    ],
+    body: [
+      "What's going on here?",
+      "Insurance regulation in India is moving from rate tables on products to hard caps on what it costs to sell and run a policy book. The Insurance Regulatory and Development Authority of India circulated a consultation paper on 23 September 2026 that would trim insurers' expenses of management and shave commissions paid to banks, brokers, and point-of-sale persons. IndiaFirst Life Insurance managing director Rushabh Gandhi laid out the trade-offs in a 15 November 2026 interview with BusinessLine, saying directionally the 15% EoM goal makes sense but only a handful of players already sit below that ratio today. Gandhi asked for a three-year transition instead of two, and for differentiated timelines for smaller and mid-sized insurers whose fixed costs spread over thinner premium bases. He also flagged credit-life pay: the draft caps commissions lower than today's bank-bundle economics, while single-premium term plans in the same consultation allow 7.5%. Gandhi suggested aligning single-premium credit life to that 7.5% benchmark as a fair middle ground.",
+      "What does this mean?",
+      "EoM is the operating tax an insurer pays before product pricing: higher ratios leave less room for agents and bank counters to earn on each policy, which often shows up as fewer home visits or slower branch pushes. IndiaFirst leans on bancassurance for most of its volume, with direct digital channels under 10% today; Gandhi expects direct to rise toward low teens if the draft rules land as written, while bancassurance might slip a few points from about two-thirds of sales. Protection products, including government-linked micro schemes and credit life tied to loans, make up roughly two-fifths of his company's mix; tighter credit-life pay could cool optional cover at loan sanction unless lenders offset with sharper rates. A longer glide path does not delay the policy intent, but it buys time to automate underwriting and cut legacy branch costs instead of freezing hiring.",
+      "Why should I care?",
+      "If you buy term cover through a bank counter, compare the add-on premium with a standalone quote once commission caps bite. Borrowers offered credit life should check whether the bundled rate still beats an independent term plan after distributor pay resets. Corporate wellness buyers should watch whether group protection quotes widen as insurers model lower EoM. Investors holding bank or insurer shares should treat the consultation as a margin modelling exercise through FY28, not a one-quarter headline. Follow IRDAI's final circular, rival CEO comments during Q3 earnings calls, and whether Parliament-linked GST relief on pure protection continues to lift term demand.",
+    ],
+  },
+  {
+    slug: "mahindra-last-mile-e3w-ipo-november-2026",
+    title: "Mahindra's electric three-wheeler unit may list in 18 months as fuel bills bite",
+    summary:
+      "Mahindra Last Mile Mobility chief executive Suman Mishra said at a Bloomberg Mumbai event on 15 November 2026 that the Mahindra Group electric three-wheeler business could pursue an initial public offering in about 18 months if growth stays strong, while higher pump prices are pushing undecided drivers into battery fleets where daily kilometres clear economics quickly.",
+    category: "industry",
+    companyOrSector: "Electric mobility / last mile",
+    publishedAt: "2026-11-16T00:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mahindra-last-mile-e3w-ipo-november-2026"),
+    keyTakeaways: [
+      "Mishra said the unit will list when funding needs and a sustained growth story justify a public market, not on a fixed calendar, and that the parent group can fund expansion meanwhile.",
+      "Mahindra raised about ₹322 crore from investors led by Lightrock in mid-2026 at a valuation near ₹10,822 crore, per exchange filings cited in reporting.",
+      "She said more than 45% of India's larger three-wheeler segment is already electric, with fuel price spikes accelerating switches among commercial drivers who run 150 kilometres a day.",
+    ],
+    body: [
+      "What's going on here?",
+      "Passenger auto demand gets the headlines, but India's last-mile freight and ride routes run on three-wheelers that live or die on daily fuel math. Mahindra Last Mile Mobility chief executive Suman Mishra told a Bloomberg-hosted event in Mumbai on 15 November 2026 that the business could target an initial public offering in about 18 months if operations are ready, though she would not rush a listing while the Mahindra Group can finance capacity additions. Reporting on the same day said the unit drew roughly ₹322 crore from investors including Lightrock earlier in 2026 at a valuation of about ₹10,822 crore. Mishra linked the listing decision to proving steady growth after electrification, localisation, and new competition from Bajaj Auto and TVS Motor in the three-wheeler lane. She also said conflict-driven fuel price spikes are nudging hesitant drivers into electric options because savings appear quickly on high daily mileage.",
+      "What does this mean?",
+      "Electric three-wheelers win when operators measure total cost per kilometre, not showroom sticker price. Mishra cited more than 45% penetration in the larger three-wheeler category and said a driver covering about 150 kilometres daily sees economics flip toward batteries even while cell and semiconductor imports still tie margins to global supply. Mahindra is spending on new capacity and scouting a larger plant site while expecting profitability without subsidies within a couple of years, though management has not yet posted a clean profit without incentive support. Rivals entering the space widen buyer choice and dealer service networks, which Mishra argued also validates the category for fleet buyers. A listing would test whether public investors reward scale and local content over near-term earnings in a segment still sensitive to government incentive timelines.",
+      "Why should I care?",
+      "If you operate a delivery fleet or auto-rickshaw association, benchmark diesel or CNG bills against lease or finance offers on electric three-wheelers using your actual route lengths, not brochure ranges. Commuters in cities with expanding e3W permits should expect more electric options on aggregator apps as fleet owners refresh stock. Investors comparing auto OEM listings should separate Mahindra's mature tractor and SUV cash flows from this growth carve-out when IPO paperwork appears. Watch quarterly volume disclosures from Mahindra Last Mile, Bajaj and TVS three-wheeler launches, FAME or state subsidy rule changes, and cell import cost guidance on management calls.",
+    ],
+  },
+  {
     slug: "maharashtra-atf-vat-extension-november-2026",
     title: "Maharashtra will keep jet fuel VAT at 7% until April 2027",
     summary:
@@ -12216,6 +12264,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "irdai-insurer-eom-glide-path-november-2026": "policy",
+  "mahindra-last-mile-e3w-ipo-november-2026": "companies",
   "maharashtra-atf-vat-extension-november-2026": "policy",
   "ongc-vedanta-cambay-takeover-november-2026": "companies",
   "liquor-excise-price-requests-november-2026": "policy",

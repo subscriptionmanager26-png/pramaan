@@ -1370,6 +1370,22 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Split commute lane merging into mobility stack |
 | Metaphor left | Ascending trip bars on shared route |
 
+### `mahindra-last-mile-e3w-ipo-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Fuel bills push commercial drivers toward electric three-wheelers |
+| Subject right | Stylised electric three-wheeler on city lane |
+| Metaphor left | Rising fuel gauge bars fading behind battery charge blocks |
+
+### `irdai-insurer-eom-glide-path-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Insurer expense caps need a longer glide path |
+| Subject right | Policy / regulator architecture silhouette |
+| Metaphor left | Shrinking expense ladder toward 15% dial over calendar blocks |
+
 ### `india-domestic-air-demand-soft-november-2026`
 
 | Field | Value |
