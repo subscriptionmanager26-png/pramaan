@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-premium-banking-suitability-november-2026",
+    title: "RBI will make banks prove wealth products fit customers from January",
+    summary:
+      "Reporting on 16 November 2026 said lenders are widening premium and priority banking tiers to chase fee income on mutual funds and insurance, while the Reserve Bank of India's Responsible Business Conduct Directions effective 1 January 2027 will bar bundled mis-selling, dark-pattern nudges, and require refunds when products are unsuitable.",
+    category: "industry",
+    companyOrSector: "Banking / consumer protection",
+    publishedAt: "2026-11-16T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-premium-banking-suitability-november-2026"),
+    keyTakeaways: [
+      "HDFC Bank, Kotak Mahindra Bank, and DBS Bank India have lowered relationship-value entry points for privilege tiers, often pooling family balances to hit ₹10 lakh to ₹50 lakh thresholds.",
+      "The RBI directions issued on 15 June 2026 introduce a Right to Suitability standard from 1 January 2027, with mandatory compensation when advice or cross-sells breach fit tests.",
+      "Advisers quoted in the coverage warned that relationship managers on large books may struggle to personalise advice when sales targets stay aggressive.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian lenders earn a growing share of profit from wealth, insurance, and card fees, not only from lending spreads. A 16 November 2026 explainer in Mint walked through how banks pitch premium, priority, and privilege programmes that bundle relationship managers, faster branch service, lounge access, and curated investment menus. HDFC Bank's revised preferred rules from October 2025 let customers link up to eight immediate family accounts to meet a ₹50 lakh total relationship value across savings, term deposits, mutual funds, and demat holdings. Kotak Mahindra Bank's Privy League permits family-pooled balances toward a ₹10 lakh threshold on its entry Neon tier, while DBS Bank India's Aspire proposition targets emerging affluent customers at ₹10 lakh of relationship value or ₹2 lakh of average monthly savings. Banks frame the tiers as a continuum as customers graduate from savings to private wealth. The same article noted an incoming regulatory floor: the Reserve Bank of India's Responsible Business Conduct Directions, dated 15 June 2026, take effect on 1 January 2027. They introduce a Right to Suitability principle that restricts bundled cross-selling, bans certain digital dark patterns, and requires refunds or compensation when customers receive unsuitable investment or insurance products.",
+      "What does this mean?",
+      "Eligibility for a fancy banking badge is not the same as suitability for a product sold at the counter. When entry thresholds fall, relationship managers serve wider books, and compensation often still ties to product targets. Wealth advisers interviewed said an RM with a few hundred clients can learn cash-flow needs; with thousands, calls shorten and model portfolios repeat. The RBI rule change pushes banks to document why a recommendation fits a customer's horizon, risk appetite, and existing holdings before debiting a fee. That may slow impulse sales of unit-linked plans or structured products at branch events tied to privilege upgrades. It may also force clearer separation between concierge perks and investment advice in training manuals. Consumers still benefit from pooled balances that unlock lower loan processing fees or locker discounts, but they should read whether the investments pitched inside the programme carry lock-ins or exit loads that do not match their goals.",
+      "Why should I care?",
+      "If you maintain ₹2 lakh or more in savings to unlock a premium tier, compare the rupee value of lounge passes and fee waivers against any product you are nudged to buy in the same meeting. Ask for suitability notes in writing before signing insurance or mutual fund forms, especially after January 2027 when refunds become a statutory backstop. If you already use direct mutual fund platforms, decide whether a bank's bundled portfolio still beats net-of-fee returns once relationship balances sit idle at low deposit rates. Watch RBI circulars on implementation timelines, whether banks revise RM incentive grids before 1 January, and any ombudsman precedents on mis-sold policies linked to privilege upgrades.",
+    ],
+  },
+  {
+    slug: "associated-alcohols-tequila-arcana-november-2026",
+    title: "Associated Alcohols launched a ₹7,500 tequila as ethanol costs hurt profits",
+    summary:
+      "Associated Alcohols and Breweries Ltd introduced Arcana, a premium blanco tequila priced at ₹7,500 in Madhya Pradesh, on 16 November 2026 while reporting Q2 FY27 profit after tax down 43% to ₹8 crore as ethanol oversupply and grain inflation squeezed margins even though proprietary Indian-made foreign liquor revenue rose 39%.",
+    category: "industry",
+    companyOrSector: "Liquor / distillers",
+    publishedAt: "2026-11-16T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("associated-alcohols-tequila-arcana-november-2026"),
+    keyTakeaways: [
+      "Arcana is crafted in Mexico and retailing at ₹7,500 in Madhya Pradesh, with Karnataka, Maharashtra, Haryana, Goa, and Delhi listed as the next rollout states.",
+      "Q2 FY27 net revenue grew 7% to ₹271.6 crore but earnings before interest, taxes, depreciation and amortisation margin fell to 7% from 9% a year earlier.",
+      "Proprietary IMFL revenue rose 39% in the quarter and contributed a larger share of alcohol EBITDA than a year ago, partially offsetting ethanol segment pressure.",
+    ],
+    body: [
+      "What's going on here?",
+      "Regional distillers in India make much of their money on Indian-made foreign liquor sold through state corporations, but ethanol policy and grain costs can swing the commodity side of the plant even when branded bottles do well. Associated Alcohols and Breweries Ltd, an Indore-based distiller listed on Indian exchanges, said on 16 November 2026 that it entered the tequila segment with Arcana, a premium blanco product made in Mexico. The company priced the launch at ₹7,500 in Madhya Pradesh and said it would stage rollouts in Karnataka, Maharashtra, Haryana, Goa, and Delhi in coming months. In the same reporting window it posted September-quarter results: net revenue of ₹271.6 crore, up about 7% year on year, but profit after tax fell to ₹8 crore from ₹14 crore. Earnings before interest, taxes, depreciation and amortisation slipped to ₹17.7 crore with margin at 7% versus 9% a year earlier. Management attributed part of the squeeze to ethanol segment oversupply and higher grain input costs that weighed on the industrial alcohol book, even as proprietary IMFL revenue rose 39% in the quarter and lifted its share of alcohol EBITDA.",
+      "What does this mean?",
+      "Tequila is a prestige play in a market where whisky still dominates shelves. Importing and marketing a Mexican-origin spirit lets a mid-cap distiller chase affluent urban drinkers and on-premise accounts without waiting for a state tender on bulk spirit. The ₹7,500 tag positions Arcana above mass premium brands and signals marketing spend ahead of festive and wedding seasons in the named states. The contrast with quarterly numbers shows the balancing act: proprietary brands can grow quickly from a small base, yet ethanol capacity tied to fuel-blending policy can drag consolidated margins when surplus output meets weak realisation. Competitors with deeper distribution may respond with promotional pricing on existing premium labels. Shoppers may not see tequila on every neighbourhood store immediately because each state runs its own label registration and pricing committee calendar.",
+      "Why should I care?",
+      "If you operate bars or licensed retail in the listed states, track excise label approvals and whether corporations accept imported-origin tequila in the same listing cycles as IMFL. Investors in liquor stocks should separate proprietary brand growth rates from ethanol exposure when reading margins. Consumers curious about agave spirits should compare duty and state markup on tequila against established whisky price bands before assuming imports will stay niche. Watch Associated Alcohols' investor presentation corrections on EBITDA figures, state-wise launch dates for Arcana, and whether grain and ethanol spreads ease in the second half of the fiscal year.",
+    ],
+  },
+  {
+    slug: "bank-baroda-fcnr-credit-guidance-november-2026",
+    title: "Bank of Baroda lifted its loan growth target after a record FCNR dollar mop-up",
+    summary:
+      "Managing director Debadatta Chand told BusinessLine on 16 November 2026 that Bank of Baroda mobilised $8.08 billion of FCNR(B) deposits between 8 June and 31 August 2026 under the Reserve Bank of India incentive window and raised FY27 credit growth guidance by one percentage point to 13–15% as retail, agriculture and MSME loans now make up about 64% of advances.",
+    category: "industry",
+    companyOrSector: "Public-sector banking",
+    publishedAt: "2026-11-16T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bank-baroda-fcnr-credit-guidance-november-2026"),
+    keyTakeaways: [
+      "The bank collected $8.08 billion of FCNR(B) balances during the RBI's June to August 2026 concession period, among the largest public-sector raises disclosed.",
+      "FY27 advances growth guidance moved to 13–15% from a prior 12–14% band, with RAM portfolios growing near 18–20% versus a slower overseas book.",
+      "Retail, agriculture and MSME advances account for roughly 64% of the loan book, up from about 57% three years earlier.",
+    ],
+    body: [
+      "What's going on here?",
+      "Public-sector banks compete for stable deposits before they chase double-digit loan growth, and the Reserve Bank of India's 2026 FCNR(B) window offered dollar funding without squeezing rupee deposit rates. Bank of Baroda, India's second-largest state-owned lender by assets, told BusinessLine in an interaction published 16 November 2026 that it raised $8.08 billion of foreign-currency non-resident deposits between 8 June and 31 August 2026 under that scheme. Managing director Debadatta Chand said the inflow gives headroom to support faster credit expansion and led the bank to lift its fiscal 2027 advances growth guidance by one percentage point to a 13–15% range. He noted that retail, agriculture and MSME loans, often grouped as RAM, now account for about 64% of advances compared with roughly 57% three years ago, with that segment growing around 18–20% while the overseas book expands more slowly from a network of about 80 international offices across 15 countries.",
+      "What does this mean?",
+      "FCNR dollars sit on the liability side until converted into rupee loans or swaps; a record raise signals confidence in deployment pipelines, especially in RAM categories where festival working-capital and tractor finance demand stays firm. Raising guidance while margins across the industry remain sensitive to gilt mark-to-market and deposit pricing shows management betting on volume over spread stability in the near term. For non-resident depositors, attractive FCNR coupons may persist while banks deploy the pool into rupee assets. For domestic borrowers, faster PSU lending can keep competition sharp on home, MSME, and gold loans if BoB redirects liquidity homeward rather than only into international trade lines. Investors should pair the deposit win with upcoming quarterly net interest margin commentary because idle FCNR balances can compress spreads temporarily, a pattern other lenders flagged earlier in the results season.",
+      "Why should I care?",
+      "If you shop for a home or MSME loan, compare BoB's processing timelines and effective rates against private banks now that management is explicitly targeting mid-teens loan growth. NRIs considering dollar deposits should read lock-in and repatriation terms on FCNR(B) against forward rupee views. Depositors in PSU banks should watch whether surplus liquidity translates into steadier savings rates rather than aggressive certificate cuts. Track BoB's next exchange disclosure on credit growth by segment, margin guidance on earnings calls, RBI decisions on extending FCNR incentives, and whether RAM bad-loan ratios stay benign as volumes scale.",
+    ],
+  },
+  {
     slug: "rediff-enterprise-ipo-india-hosted-november-2026",
     title: "Rediff is filing for a ₹600 crore IPO built around India-hosted office email",
     summary:
@@ -12360,6 +12432,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-premium-banking-suitability-november-2026": "policy",
+  "associated-alcohols-tequila-arcana-november-2026": "markets",
+  "bank-baroda-fcnr-credit-guidance-november-2026": "policy",
   "rediff-enterprise-ipo-india-hosted-november-2026": "companies",
   "urban-company-shareholder-capital-raise-november-2026": "companies",
   "eicher-royal-enfield-capacity-bookings-november-2026": "markets",
