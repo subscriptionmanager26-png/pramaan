@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rediff-enterprise-ipo-india-hosted-november-2026",
+    title: "Rediff is filing for a ₹600 crore IPO built around India-hosted office email",
+    summary:
+      "Rediff.com India Limited is preparing a ₹600 crore fresh-issue initial public offering centred on Rediffmail Enterprise, rCloud storage, and India-only data hosting, after consolidated revenue jumped to ₹133.59 crore in FY26 from ₹37.23 crore in FY25 following a promoter-led business acquisition rebranded as Rediff One.",
+    category: "industry",
+    companyOrSector: "Enterprise software / data residency",
+    publishedAt: "2026-11-16T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rediff-enterprise-ipo-india-hosted-november-2026"),
+    keyTakeaways: [
+      "The draft filing described a fresh equity issue of up to ₹600 crore, with about ₹408 crore earmarked for technology, marketing, and platform expansion.",
+      "Management cited roughly 19,179 enterprise customers as of 30 September 2026 and about 80% retention on enterprise accounts.",
+      "Pitch materials stress that customer data sits on infrastructure hosted exclusively in India, aimed at regulated banks, government, and healthcare buyers.",
+    ],
+    body: [
+      "What's going on here?",
+      "Enterprise buyers in India now ask where employee email, contracts, and payroll files physically live before they renew software contracts. Rediff.com India Limited, once known for consumer Rediffmail accounts, filed an updated draft red herring prospectus ahead of a ₹600 crore initial public offering composed entirely of a fresh issue, with no offer-for-sale component. Reporting on 16 November 2026 said the company wants to fund Rediff One, a bundle that includes Rediffmail Enterprise with custom domains, rCloud file storage, and collaboration tools, plus newer bets Rediff Pay and Rediff TV. Consolidated revenue from operations reached ₹133.59 crore in FY26 versus ₹37.23 crore in FY25 after it acquired and rebranded a promoter-linked software business. Profit metrics improved with the scale-up: EBITDA excluding other income was ₹65.24 crore in FY26 and operating cash flow turned positive. Chairman Vishal Mehta, a former Amazon executive, is steering the pivot toward regulated sectors that prize local hosting.",
+      "What does this mean?",
+      "Data residency rules and audit questionnaires push hospitals, insurers, and public-sector units to prefer vendors that can show Indian servers and Indian support desks. Rediff is not competing head-on with global hyperscalers on raw compute size; it sells familiarity to legacy accounts plus a compliance narrative. The prospectus cited about 19,179 enterprise customers and retention near 80%, which implies upgrade revenue from cross-selling productivity modules matters more than chasing free consumer inboxes. The ₹600 crore raise would mostly fund product development and marketing, with a slice allowed for tuck-in acquisitions. Success depends on converting historical brand recall into recurring subscription revenue, because consumer news traffic alone does not pay for enterprise-grade security investments.",
+      "Why should I care?",
+      "If you procure IT for a regulated Indian entity, compare total cost of Rediff against Microsoft 365 or Google Workspace quotes, but also score data-location clauses and escrow terms in the contract. Startups pitching to government buyers should watch whether evaluators start demanding domestic hosting as a default checkbox. Investors comparing new-age SaaS listings should read how much of Rediff's FY26 revenue came from the acquired Rediff One stack versus legacy advertising. Track Securities and Exchange Board of India observation comments on the draft filing, enterprise customer additions each quarter, and whether large banks publish requests for proposal that mention India-only hosting.",
+    ],
+  },
+  {
+    slug: "urban-company-shareholder-capital-raise-november-2026",
+    title: "Urban Company shareholders cleared up to ₹2,500 crore of fresh fundraising",
+    summary:
+      "Urban Company Ltd said on 16 November 2026 that shareholders approved an enabling resolution with 99.29% of votes cast in favour, allowing the board to pursue equity or convertible securities of up to ₹2,500 crore after months of on-demand home-services rivalry with Snabbit and Pronto.",
+    category: "industry",
+    companyOrSector: "Consumer services / platforms",
+    publishedAt: "2026-11-16T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("urban-company-shareholder-capital-raise-november-2026"),
+    keyTakeaways: [
+      "The extraordinary general meeting backed capital-raising instruments worth up to ₹2,500 crore; the outcome still needs board pricing and regulatory filings.",
+      "Management has been scaling InstaHelp instant chores, where cash loss per order improved but competition is adding jobs faster on public metrics.",
+      "The vote follows an October board notice and sits in the same capital-raise arc as other listed consumer internet names tapping markets after IPO.",
+    ],
+    body: [
+      "What's going on here?",
+      "Listed home-services platforms burn cash to keep beauticians, cleaners, and repair technicians busy in each neighbourhood, because empty travel time destroys unit economics. Urban Company Ltd told stock exchanges on 16 November 2026 that shareholders approved an enabling resolution to raise up to ₹2,500 crore through equity shares, convertible securities, or related instruments. About 99.29% of votes cast backed the proposal at an extraordinary general meeting. The clearance does not by itself price a qualified institutions placement or other issue; it gives the board room to return with specific terms. Urban Company competes with Snabbit and Pronto on same-day home tasks while defending its core beauty and appliance repair bookings. Earlier in November, wire copy bundled the shareholder vote with quarterly earnings noise, but the formal approval is the governance step that unlocks banker roadshows.",
+      "What does this mean?",
+      "Instant home help behaves like ride-hailing a decade ago: whoever subsidises wait times and training in dense pin codes can grab habit share. Urban Company has said InstaHelp losses per trip are falling, yet rivals quote much faster job growth from small bases. Fresh equity would let the listed company match discounting and technician incentives without leaning only on pre-IPO backers. A ₹2,500 crore ceiling is large relative to recent quarterly revenue, so dilution and use-of-proceeds language in the eventual term sheet will matter to public holders. For households, more capital often shows up as introductory rates and wider evening slots before platforms hunt for margin. Workers should read whether new money funds insurance and skilling or mostly marketing coupons.",
+      "Why should I care?",
+      "If you book salon or cleaning visits through apps, compare total checkout prices and cancellation policies across Urban Company, Snabbit, and Pronto in your pin code once festive discounts fade. Investors already holding the stock should wait for the priced placement filing rather than treating the enabling vote as instant cash on the balance sheet. Gig partners should ask platforms how capital plans affect wage floors and travel reimbursements. Watch the next exchange intimation on instrument type, anchor investor participation, InstaHelp order volume per city, and whether losses per trip keep falling after any raise closes.",
+    ],
+  },
+  {
+    slug: "eicher-royal-enfield-capacity-bookings-november-2026",
+    title: "Royal Enfield bookings are running ahead of what factories can ship",
+    summary:
+      "Eicher Motors reported record Q2 FY27 Royal Enfield dispatches of 376,722 motorcycles on 13 November 2026 while management said dealer inventory sat near seven to eight days, bookings rose about 20% year to date, and steel costs left margins below estimates even after four calendar-year price hikes recovered only about half the commodity inflation.",
+    category: "industry",
+    companyOrSector: "Two-wheelers / premium motorcycles",
+    publishedAt: "2026-11-16T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("eicher-royal-enfield-capacity-bookings-november-2026"),
+    keyTakeaways: [
+      "Royal Enfield wholesales rose 15% year on year to 376,722 units in Q2 FY27, the highest quarterly dispatch tally the company disclosed.",
+      "Management told analysts bookings stayed strong after the festive season but supply, not demand, capped retail; dealers held roughly a week of stock.",
+      "Capacity is slated to rise from about 1.65 million units toward 1.8 million by Q4 FY27 and two million by Q2 FY28, plus a greenfield plant plan in Andhra Pradesh.",
+    ],
+    body: [
+      "What's going on here?",
+      "Premium motorcycle buyers in India often book weeks ahead when a brand goes viral in small towns and export markets reopen. Eicher Motors, which makes Royal Enfield, reported on 13 November 2026 results for the quarter ended 30 September 2026. Revenue from operations reached ₹7,422 crore, up about 20% year on year, and Royal Enfield dispatches hit 376,722 units, up 15%. Profit grew too, but earnings before interest, tax, depreciation, and amortisation margin slipped to 23.7% as commodity bills rose. On subsequent analyst calls summarized in 16 November 2026 wire copy, management said bookings climbed roughly 20% year to date and remained in double digits after Diwali, yet festive retail was constrained because motorcycles were not rolling off lines fast enough. Dealer inventory was unusually thin at about seven to eight days versus a more typical three to four weeks. The company is pulling forward brownfield expansion and targeting 1.8 million units of annual capacity by Q4 FY27, two million by Q2 FY28, and a larger Andhra Pradesh greenfield later in the decade.",
+      "What does this mean?",
+      "When backlogs stretch, manufacturers choose between holding prices, losing buyers to rivals, or importing components to lift output. Eicher lifted prices four times in calendar 2026 but recovered only about half of input-cost inflation, which explains why strong volume did not fully translate into margin beats. Low dealer stock reduces costly inventory funding for showrooms but frustrates walk-in shoppers who want immediate delivery. Capacity additions should ease wait lists if labor and parts keep pace, though each new module needs export and domestic homologation before ramps count. Competitors in the mid-size segment are launching fresh models, so Royal Enfield's pipeline of 250cc products flagged by brokers becomes a retention tool, not just a growth story.",
+      "Why should I care?",
+      "If you plan to buy a Royal Enfield, book early and confirm production slots instead of assuming on-road discounts because the dealership looks quiet. Accessory and riding-gear sellers in highway towns benefit when wait-listed buyers spend while they wait. Investors should separate volume momentum from margin recovery and watch whether the accelerated capacity timeline ships on schedule. Track monthly wholesale versus retail estimates from SIAM, management commentary on commodity pass-through, Andhra land acquisition milestones, and whether export markets absorb extra units once plants debottleneck.",
+    ],
+  },
+  {
+    slug: "belrise-h-one-merger-assembly-november-2026",
+    title: "Belrise will fold H-One India into the parent as it wins chassis assembly work",
+    summary:
+      "Belrise Industries Ltd reported on 16 November 2026 that Q2 FY27 manufacturing revenue rose 26% year on year, announced a no-cash merger of wholly owned subsidiary H-One India, and listed new chassis and suspension contracts starting between Q3 FY27 and Q1 FY28 for commercial vehicles, three-wheelers, and aerospace parts.",
+    category: "industry",
+    companyOrSector: "Auto components / contract manufacturing",
+    publishedAt: "2026-11-16T10:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("belrise-h-one-merger-assembly-november-2026"),
+    keyTakeaways: [
+      "Total revenue reached ₹2,746 crore in Q2 FY27, up 17% year on year, while manufacturing revenue grew faster at ₹2,344 crore.",
+      "The proposed H-One India merger carries no share consideration because the unit is already wholly owned; FY26 subsidiary turnover was about ₹209 crore.",
+      "New orders include a heavy commercial vehicle chassis assembly program with production from Q1 FY28 and additional three-wheeler body orders.",
+    ],
+    body: [
+      "What's going on here?",
+      "Carmakers increasingly outsource not only stamped parts but entire sub-assemblies to suppliers who can run welding lines beside the OEM plant. Belrise Industries Ltd, an automotive components manufacturer, posted Q2 FY27 results on 16 November 2026 showing total revenue of ₹2,746 crore, up 17% year on year, with manufacturing revenue up 26% to ₹2,344 crore. Adjusted profit after tax rose 25% to ₹166 crore even as reported EBITDA margin eased slightly to 12%. In the same release, Belrise proposed merging wholly owned subsidiary H-One India, which makes pressed and welded panels, into the parent without cash or share exchange because ownership is already 100%. Management rescinded an earlier merger scheme from November 2025 and substituted this simpler structure to cut duplicate compliance costs. During the quarter Belrise announced chassis assembly awards from a leading Indian heavy commercial vehicle maker with start of production in Q1 FY28, a three-wheeler body program, a sixth suspension OEM partner, and aerospace track-beam business with a major aircraft manufacturer.",
+      "What does this mean?",
+      "Assembly contracts lift revenue per vehicle compared with shipping individual brackets, but they also tie Belrise capex and working capital to OEM production schedules. Folding H-One into the parent should reduce inter-company billing and free management time as integration projects multiply. Growth was broad-based: two- and three-wheeler revenue rose 24% to ₹1,868 crore, passenger vehicle content rose 41%, and commercial vehicle revenue rose 47%. Powertrain-agnostic sales, which span electric and combustion platforms, grew 22%, suggesting the supplier is hedging propulsion shifts. Margins may stay mid-teens while new lines ramp because paint shops and robotics require upfront spending before utilisation hits target.",
+      "Why should I care?",
+      "If you source fleet vehicles, ask OEMs whether outsourcing chassis welding to Belrise or rivals changes warranty responsibility or delivery lead times. Tier-two stamping shops near Pune and Chennai should watch whether merged operations consolidate purchase orders. Investors comparing auto-ancillary names should model assembly mix separately from pure component sales because working capital cycles differ. Track Securities and Exchange Board of India and National Company Law Tribunal filings on the merger, quarterly commentary on H-One integration savings, and whether disclosed order books convert on the stated Q1 FY28 timelines.",
+    ],
+  },
+  {
     slug: "irdai-insurer-eom-glide-path-november-2026",
     title: "Life insurers want three years to meet IRDAI's 15% expense cap",
     summary:
@@ -12264,6 +12360,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rediff-enterprise-ipo-india-hosted-november-2026": "companies",
+  "urban-company-shareholder-capital-raise-november-2026": "companies",
+  "eicher-royal-enfield-capacity-bookings-november-2026": "markets",
+  "belrise-h-one-merger-assembly-november-2026": "companies",
   "irdai-insurer-eom-glide-path-november-2026": "policy",
   "mahindra-last-mile-e3w-ipo-november-2026": "companies",
   "maharashtra-atf-vat-extension-november-2026": "policy",
