@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-tata-sons-listing-reply-november-2026",
+    title: "RBI told Tata Sons it still has to list under upper-layer NBFC rules",
+    summary:
+      "The Reserve Bank of India said in a 16 November 2026 letter that Tata Sons must comply with regulations for upper-layer non-banking financial companies, including listing requirements, after the company sought guidance following the regulator's September rejection of its bid to surrender NBFC registration.",
+    category: "industry",
+    companyOrSector: "Conglomerate governance / NBFC regulation",
+    publishedAt: "2026-11-16T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-tata-sons-listing-reply-november-2026"),
+    keyTakeaways: [
+      "RBI classified Tata Sons as an upper-layer NBFC in September 2022, triggering a three-year listing deadline that passed on 30 September 2025.",
+      "CNBC-TV18 and Reuters reported the 16 November letter as the regulator's reply to Tata Sons' 6 October request for guidance after RBI rejected deregistration in September 2026.",
+      "The board meeting on 26 November is expected to weigh the letter against trustee divisions over whether the holding company should pursue a public listing.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large conglomerate parents that borrow in public markets can be swept into India's scale-based non-banking financial company framework even when operating companies already trade on exchanges. Tata Sons Pvt Ltd, which owns stakes in Tata Consultancy Services, Tata Steel, Tata Motors, and Air India, has remained unlisted for more than a century. The Reserve Bank of India classified it as an upper-layer NBFC on 30 September 2022, which under current rules required listing within three years. Tata Sons repaid debt and applied in March 2024 to surrender its core investment company registration, but on 11 September 2026 the RBI rejected that application and said full upper-layer rules still apply. Reporting on 16 November 2026, including a Reuters review of regulator correspondence, said RBI replied to Tata Sons' 6 October letter seeking clarity. The communication told the holding company to comply with all applicable regulations, explicitly including listing requirements. CNBC-TV18 said the note is dated 16 November, signed by a deputy general manager in the Department of Regulation, and asks Tata Sons to acknowledge receipt.",
+      "What does this mean?",
+      "A second written insistence from the RBI narrows Tata Sons' options compared with informal lobbying alone. Trustee factions already split on whether listing breaks philanthropic control, but the regulator's message treats the 2025 deadline as a live obligation rather than a historical formality. Going public would force quarterly disclosure on dividend flows, related-party transactions, and leverage at the group apex, which could ripple into capital allocation for newer bets in aviation, chips, and batteries. Staying private while contesting classification invites legal friction because the RBI filed a caveat in the Bombay High Court on listing matters. The 26 November board meeting becomes the next decision gate for merchant banker appointments, trust restructuring proposals, and formal responses to the RBI.",
+      "Why should I care?",
+      "If you hold listed Tata operating companies, parent-level transparency could eventually clarify how surplus cash moves across the group, though timing and structure remain unsettled. Employees should watch board minutes for governance changes that affect long-horizon projects. Lenders to Tata Sons or unlisted arms should stress-test covenants against a possible listing filing. Follow Tata Sons' acknowledgment to RBI, trust votes on Noel Tata's reorganisation proposals, court hearings where the regulator sought standing, and any Securities and Exchange Board of India observation on a draft prospectus if bankers are appointed.",
+    ],
+  },
+  {
+    slug: "hindustan-zinc-hzl-growth-program-november-2026",
+    title: "Hindustan Zinc approved an ₹80,000 crore plan to double metal output",
+    summary:
+      "Hindustan Zinc Ltd's board approved the HZL 2.0 growth programme on 16 November 2026 to lift refined metal capacity from about 1.1 million tonnes a year toward 2 million tonnes over three to five years, budgeting roughly ₹80,000 crore including the Debari smelter and exploration spend.",
+    category: "industry",
+    companyOrSector: "Zinc / base metals",
+    publishedAt: "2026-11-16T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hindustan-zinc-hzl-growth-program-november-2026"),
+    keyTakeaways: [
+      "Management said existing smelters ran near 92% utilisation in FY26, leaving little headroom before the expansion.",
+      "The programme folds in the previously cleared 250 kilo tonnes per annum integrated smelter at Debari in Rajasthan and other board-approved infrastructure.",
+      "Funding is expected from internal accruals and debt while wire copy tied demand to galvanised steel used in roads, renewables, and urban construction.",
+    ],
+    body: [
+      "What's going on here?",
+      "Zinc's main industrial job in India is protecting steel from rust, so infrastructure and automotive output pull directly on smelter utilisation. Hindustan Zinc Ltd, the Vedanta Group miner and smelter, told stock exchanges on 16 November 2026 that its board approved the HZL 2.0 growth programme. The plan targets lifting refined metal capacity from about 1.1 million tonnes per annum to 2 million tonnes over the next three to five years. Capital spending is envisaged at roughly ₹80,000 crore, financed through a mix of internal cash generation and borrowing. The filing said FY26 capacity use already hovered near 92%, underscoring why management wants brownfield and greenfield additions rather than incremental debottlenecking alone. The bundle includes the earlier 250 kilo tonnes per annum integrated zinc smelter at Debari, exploration work, and other infrastructure the board had cleared from time to time. The same day Hindustan Zinc reported September-quarter profit more than doubling year on year on higher metal prices and volumes, which gives lenders comfort on servicing expansion debt.",
+      "What does this mean?",
+      "Doubling smelter output is a bet that India's galvanising demand stays firm as transmission towers, renewable mountings, and affordable housing steel expand. More domestic zinc can trim import reliance when global prices spike, but ₹80,000 crore of capex raises execution and environmental permitting risk across Rajasthan's mining belt. Competitors and steel mills may negotiate offtake contracts earlier to secure volumes once new lines ramp. Workers and host communities should expect longer construction cycles at Debari and associated mines before the tonnes show up in revenue. Investors must model higher depreciation and interest before incremental EBITDA arrives, especially if zinc prices cool from recent highs.",
+      "Why should I care?",
+      "If you buy structural steel for construction or run galvanising lines, track Hindustan Zinc's quarterly production guidance and contract premiums once new capacity is commissioned. Portfolio holders in mining and metals should separate volume growth from price-driven earnings spikes in the strong September quarter. Policymakers watching critical minerals will note whether expanded output feeds Make-in-India transmission and auto programmes. Watch environment and forest clearances for Debari, quarterly capex disclosure, debt raised for the programme, and global zinc inventory trends that could move realisations.",
+    ],
+  },
+  {
+    slug: "cbdt-ltcg-stt-prebudget-review-november-2026",
+    title: "Tax officials are still weighing capital gains changes for the budget",
+    summary:
+      "Central Board of Direct Taxes chairperson Ravi Agrawal said on 16 November 2026 that stakeholder suggestions on long-term capital gains tax and securities transaction tax remain under study ahead of the Union budget, with outcomes to be known on 1 February rather than through interim announcements.",
+    category: "industry",
+    companyOrSector: "Tax policy / retail investing",
+    publishedAt: "2026-11-16T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cbdt-ltcg-stt-prebudget-review-november-2026"),
+    keyTakeaways: [
+      "Agrawal spoke at the Income Tax Pavilion inauguration at the India International Trade Fair in Delhi on 16 November 2026.",
+      "He said pre-budget meetings are collecting views on rationalising LTCG and STT on equity transactions, without confirming any specific cut.",
+      "Brokerages and mutual funds have argued that combined levies on stock sales affect competitiveness versus other Asian markets.",
+    ],
+    body: [
+      "What's going on here?",
+      "Retail and foreign investors judge Indian equities partly on how much of a gain survives tax when shares are sold. On 16 November 2026, Central Board of Direct Taxes chairperson Ravi Agrawal told reporters at the inauguration of an Income Tax Pavilion at the India International Trade Fair in Delhi that the government is examining suggestions from stakeholders on long-term capital gains tax and securities transaction tax. He said pre-budget consultations are active and that any decision would be revealed on 1 February, referring to budget day, rather than through ad hoc signals beforehand. Market participants have pressed for relief since the July 2024 budget tightened LTCG rules on several instruments and left STT on cash market trades unchanged. Agrawal did not promise a rate cut or outline which investor categories might benefit.",
+      "What does this mean?",
+      "Tax changes flow through budget legislation and follow-on notifications, so a CBDT chief's timeline mainly resets expectations that forum headlines equal immediate relief. Lower STT could lift short-term turnover on cash markets, while LTCG tweaks would alter after-tax returns for mutual fund holders and direct equity savers holding beyond one year. Foreign portfolio investors compare India's combined tax stack with markets that exempt or lightly tax capital gains, which influences allocation models. Asset managers may still steer clients toward tax-efficient wrappers until law text changes. Revenue officials must weigh fiscal cost against market sentiment after volatile foreign flows in 2026.",
+      "Why should I care?",
+      "If you plan to rebalance a portfolio or harvest long-term gains, do not assume lower rates until the finance minister's budget speech and subsequent notifications spell them out. SIP investors should continue basing decisions on today's rules. Brokers and platforms should prepare client education for February rather than marketing premature cuts. Watch the Union budget on 1 February, finance bill clauses on LTCG and STT, and any follow-up circulars from the CBDT clarifying holding periods or asset-class parity.",
+    ],
+  },
+  {
+    slug: "amca-prototype-partner-timeline-november-2026",
+    title: "India will name the AMCA fighter partner within a month",
+    summary:
+      "Defence Secretary Rajesh Kumar Singh said on 16 November 2026 that the government expects to announce the winning consortium for the ₹15,000 crore Advanced Medium Combat Aircraft prototype programme within a month after three private-sector-led bids closed on 30 October.",
+    category: "industry",
+    companyOrSector: "Defence manufacturing",
+    publishedAt: "2026-11-16T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("amca-prototype-partner-timeline-november-2026"),
+    keyTakeaways: [
+      "Shortlisted contenders include an L&T-led group with Bharat Electronics and Dynamatic, Tata Advanced Systems, and a Bharat Forge-led consortium with BEML and Data Patterns.",
+      "The selected development-cum-production partner will build five prototypes and a structural test specimen for the Aeronautical Development Agency design.",
+      "Singh said the winner must base manufacturing near Puttaparthi in Andhra Pradesh, where integration and flight-testing facilities are planned.",
+    ],
+    body: [
+      "What's going on here?",
+      "Fifth-generation fighters combine stealth, sensor fusion, and supercruise, but India has never serial-produced such an airframe domestically. The Ministry of Defence's Advanced Medium Combat Aircraft programme aims to change that by funding prototype work before full production. Defence Secretary Rajesh Kumar Singh said on 16 November 2026 that authorities will declare the winning bidder within a month. Three private-sector-led consortiums submitted bids by the extended 30 October deadline: Larsen and Toubro with Bharat Electronics and Dynamatic Technologies, Tata Advanced Systems Ltd, and Bharat Forge partnering BEML and Data Patterns. The chosen development-cum-production partner will manufacture five prototypes plus a structural test specimen based on Aeronautical Development Agency designs from the Defence Research and Development Organisation stable. Singh spoke at an industry event the same day Air Chief Marshal Ashutosh Dixit highlighted progress on Tejas programmes, reinforcing that AMCA is the longer-range indigenous bet while current squadrons rely on earlier-generation aircraft.",
+      "What does this mean?",
+      "Picking a partner locks in who absorbs prototyping risk before the Indian Air Force commits serial orders. The ₹15,000 crore envelope covers design maturation, tooling, and initial builds, not the full fleet cost, so component suppliers and MSME machine shops in Andhra Pradesh and defence clusters could see multi-year work if timelines hold. Competing consortiums span autos, heavy engineering, and electronics, signalling that Delhi wants private execution muscle paired with public design agencies. Delays in engine or avionics integration have historically stretched fighter programmes worldwide, so the one-month announcement is a start rather than a production guarantee. Stocks tied to shortlisted names may move on headline wins even though revenue recognition will lag flight testing by years.",
+      "Why should I care?",
+      "If you supply precision machining, composites, or avionics into defence, watch the ministry's winner declaration for subcontract opportunities and site requirements near Puttaparthi. Investors should treat prototype awards as long-dated options rather than near-term earnings upgrades. Taxpayers benefit only if indigenous content eventually lowers import bills on front-line fighters. Follow the formal bid outcome, Aeronautical Development Agency milestones, integration complex construction in Andhra Pradesh, and whether engine partnerships firm up after the partner selection.",
+    ],
+  },
+  {
     slug: "rbi-premium-banking-suitability-november-2026",
     title: "RBI will make banks prove wealth products fit customers from January",
     summary:
@@ -12432,6 +12528,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-tata-sons-listing-reply-november-2026": "policy",
+  "hindustan-zinc-hzl-growth-program-november-2026": "companies",
+  "cbdt-ltcg-stt-prebudget-review-november-2026": "policy",
+  "amca-prototype-partner-timeline-november-2026": "policy",
   "rbi-premium-banking-suitability-november-2026": "policy",
   "associated-alcohols-tequila-arcana-november-2026": "markets",
   "bank-baroda-fcnr-credit-guidance-november-2026": "policy",
