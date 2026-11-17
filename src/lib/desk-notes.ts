@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "ongc-konaseema-gas-blowout-november-2026",
+    title: "A pre-dawn gas blowout near an ONGC well forced evacuations in Andhra Pradesh",
+    summary:
+      "Natural gas erupted from an ONGC drilling site near Nagaram village in Andhra Pradesh's Konaseema district before dawn on 17 November 2026, prompting Chief Minister N Chandrababu Naidu to order evacuations within a one-kilometre radius while specialist teams worked to plug the well.",
+    category: "industry",
+    companyOrSector: "Oil and gas / upstream safety",
+    publishedAt: "2026-11-17T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ongc-konaseema-gas-blowout-november-2026"),
+    keyTakeaways: [
+      "Gas began escaping around 4:30 am on 17 November at Tadivarimeraka in Mamidikuduru mandal with no fire reported and the wellhead said to remain intact.",
+      "District officials evacuated residents within one kilometre of the site; ONGC shut diesel generators and moved non-essential staff away as a cementing team headed to plug the leak.",
+      "Naidu asked state officials to speak with ONGC leadership and review safety protocols after similar incidents in the region.",
+    ],
+    body: [
+      "What's going on here?",
+      "Offshore and onshore drilling carries rare but high-consequence blowout risk when pressurised hydrocarbons escape before a well is fully controlled. On 17 November 2026, reporting including the Chief Minister's Office said gas suddenly gushed from an Oil and Natural Gas Corporation drilling well near Nagaram village in Dr B R Ambedkar Konaseema district, Andhra Pradesh, with a loud noise around 4:30 am. Andhra Pradesh Chief Minister N Chandrababu Naidu spoke with district officers and directed immediate evacuation of nearby residents, stressing that public safety should come first. ONGC told reporters no fire had broken out and the wellhead remained intact. Technical teams aimed to stop gas from pooling near the ground, shut off site generators, and keep personnel away from the immediate area. A cementing unit was en route to seal the leak, with ONGC expressing hope the situation could be fully contained within a few hours.",
+      "What does this mean?",
+      "Blowouts interrupt production timelines, invite state oversight, and can halt neighbouring exploration if regulators lose confidence in field procedures. For villagers, the immediate issue is air quality and ignition risk rather than share prices. For ONGC, repeated incidents in the same region push management and the petroleum ministry toward tighter audits of contractor competence and emergency response drills. Gas supply to the national grid from one Andhra well is usually a rounding error, but the episode feeds political scrutiny on how quickly state-owned explorers respond when communities wake to noise and odour. Insurance and contractor indemnities often activate after the physical seal is confirmed.",
+      "Why should I care?",
+      "If you live near hydrocarbon blocks in coastal Andhra or work on rig services, expect tighter access controls and more frequent safety briefings after the evacuation order. Lenders and minority investors in ONGC should read upcoming exchange disclosures for production impact, force-majeure claims, and any provision for community compensation. Policy watchers should track whether the ministry orders a third-party safety review beyond ONGC's internal report. Watch confirmation that the well is fully shut in, any pollution control board testing, district rehabilitation assistance, and ONGC's timeline to resume drilling at the site.",
+    ],
+  },
+  {
+    slug: "ioc-panipat-saff-blending-november-2026",
+    title: "Indian Oil says its Panipat plant can meet India's early jet biofuel blending target",
+    summary:
+      "Indian Oil Corporation's chair told investors on 17 November 2026 that regulatory approvals are in place to sell sustainable aviation fuel at commercial scale from the Panipat refinery, with output large enough to cover the government's 1% blending goal for 2027.",
+    category: "industry",
+    companyOrSector: "Aviation fuel / refiners",
+    publishedAt: "2026-11-17T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ioc-panipat-saff-blending-november-2026"),
+    keyTakeaways: [
+      "Indian Oil secured approvals to deliver sustainable aviation fuel commercially and wants long-term offtake contracts with airlines.",
+      "Management said Panipat's green jet fuel production can satisfy the 1% national blending target slated for 2027.",
+      "Blending mandates shift refinery capex toward bio-pathways while airlines negotiate who pays the green premium.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's airlines buy most of their jet fuel from state refiners under a tax and logistics framework that is now adding a sustainability layer. Sustainable aviation fuel, typically produced from bio-feedstocks or waste oils, can cut lifecycle emissions but costs more than conventional jet fuel. On 17 November 2026, exchange disclosures quoted Indian Oil Corporation's chair saying the company received regulatory clearances to supply sustainable aviation fuel at commercial scale. The chair said Indian Oil is keen to sign customers for future volumes and that output from the Panipat refinery complex would be sufficient to meet the government's targeted 1% blending rate in 2027. The comment lands as carriers face investor questions on decarbonisation and as refiners compete to host demo plants that can graduate to steady supply.",
+      "What does this mean?",
+      "A 1% mandate sounds small in volume terms but forces airlines to line up certified fuel batches at specific airports and to track reporting for regulators. When a refiner with Panipat's scale says one site can cover the early national goal, it signals that initial blending may concentrate at Delhi-NCR hubs before spreading to Bengaluru or Mumbai import terminals. Airlines must decide whether to absorb the premium, pass it through fares, or lean on corporate buyers seeking lower-emission business travel. For Indian Oil, locking multi-year offtake underwrites biofuel units that might otherwise sit idle between policy announcements. Competitors such as Hindustan Petroleum and Bharat Petroleum will watch whether Indian Oil's approvals become a template.",
+      "Why should I care?",
+      "If you fly domestically on business, sustainable aviation fuel rollouts may show up first as footnotes on corporate travel policies rather than ticket stickers. Procurement teams at airlines should start screening fuel suppliers for certification and airport logistics now, not in 2027. Investors in listed carriers and refiners should compare capex on bio-units against expected mandate ramps. Policymakers still have to set penalty and reporting rules for missed blends. Watch civil aviation ministry blending timelines, airport fuel farm upgrades, Indian Oil customer announcements, and rival refinery project filings.",
+    ],
+  },
+  {
+    slug: "bse-cftc-bankex-futures-november-2026",
+    title: "US regulators cleared BSE to market its BANKEX futures to American investors",
+    summary:
+      "BSE Ltd said on 17 November 2026 that the US Commodity Futures Trading Commission completed a 45-day review and allowed it to offer and sell BSE BANKEX Index Futures contracts to investors in the United States.",
+    category: "industry",
+    companyOrSector: "Market infrastructure / derivatives",
+    publishedAt: "2026-11-17T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bse-cftc-bankex-futures-november-2026"),
+    keyTakeaways: [
+      "The CFTC approval followed an expedited review window and lets BSE list BANKEX futures for US-based participants under US commodity law.",
+      "BANKEX tracks bank stocks, so the contract is a cross-border bridge into India's credit cycle narrative.",
+      "Exchange revenue increasingly depends on licensing indices offshore, not just domestic membership fees.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian exchanges earn more when global funds can hedge or express views on local themes without opening a full brokerage stack in Mumbai. BSE Ltd, the smaller of India's two nationwide stock exchanges, operates cash and derivatives markets including index futures on bank stocks through its BANKEX series. On 17 November 2026, BSE told stock exchanges that the United States Commodity Futures Trading Commission finished a 45-day expedited review and approved the exchange to offer and sell BSE BANKEX Index Futures to investors in the United States, subject to US commodity exchange rules. The clearance lets overseas commodity trading firms and institutional hedgers access Indian bank exposure through a US-regulated wrapper rather than only through GIFT City linkages or participatory routes.",
+      "What does this mean?",
+      "Cross-listing derivatives shifts competition from domestic broker tariffs to index branding and clearing partnerships. BANKEX futures give macro desks a cleaner instrument for India's rate-sensitive lenders than stitching single-stock swaps. For BSE, each incremental US user lifts licensing and data income, supporting the investment case as it trails the NSE in equity turnover. Liquidity will still hinge on market makers quoting tight spreads; approval is permission, not volume. Regulators in both countries must align on surveillance and margin flows if open interest grows.",
+      "Why should I care?",
+      "If you run treasury at a multinational bank or manage a macro fund with India limits, ask whether BANKEX futures fit existing CFTC clearing lines before building new onboarding. Domestic investors gain indirectly when a better-hedged foreign audience stabilises bank stock flows during policy weeks. BSE shareholders should track quarterly derivatives revenue and US member onboarding disclosures. Watch first-week US trading volumes, competing NSE bank index products, and any Securities and Exchange Board of India comments on offshore duplication of domestic contracts.",
+    ],
+  },
+  {
+    slug: "cipla-dri-import-searches-november-2026",
+    title: "Tax investigators searched Cipla sites in Mumbai over how an imported drug was classified",
+    summary:
+      "Cipla Ltd said on 17 November 2026 that the Directorate of Revenue Intelligence searched its Vikhroli office and Bhiwandi depot on 16 November over classification and duty exemption on an imported finished pharmaceutical product, adding that operations and financials should be unaffected.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / customs enforcement",
+    publishedAt: "2026-11-17T10:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cipla-dri-import-searches-november-2026"),
+    keyTakeaways: [
+      "DRI's Mumbai unit conducted searches on 16 November at Cipla's corporate office and a Thane district depot.",
+      "The case centres on how an imported finished medicine was classified for customs duty and exemption treatment.",
+      "Cipla said it does not expect a material impact on financials or day-to-day operations.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large Indian pharma companies import finished doses and active ingredients under tariff lines that can change duty bills by double-digit percentages. Misclassification risk invites revenue intelligence scrutiny because exchequer collections and domestic price caps both depend on declared landed cost. On 17 November 2026, Cipla Ltd informed stock exchanges that the Directorate of Revenue Intelligence, Mumbai Zonal Unit, carried out search proceedings on 16 November at its Vikhroli office in Mumbai and its depot in Bhiwandi, Thane district. The company said the action related to classification and exemption treatment for an imported finished pharmaceutical product. Cipla stated the proceedings should not materially affect its financial position or operations.",
+      "What does this mean?",
+      "DRI searches do not equal guilt, but they freeze document rooms, pull senior finance staff into affidavits, and can delay release of inventory held at the searched depot until valuations are reconciled. For pharma, a single high-value import under dispute can ripple through pricing to hospitals if duty demands are raised retroactively. Peers with similar import mixes often run immediate tariff re-audits to avoid parallel notices. Investors usually treat such disclosures as headline risk unless penalties hit guidance.",
+      "Why should I care?",
+      "Hospital procurement managers sourcing the specific imported brand should keep alternate suppliers qualified in case depot clearance slows. If you hold Cipla or other import-heavy drug makers, read footnotes on customs contingencies in quarterly filings. Exporters benefit when enforcement stays predictable because foreign buyers demand clean compliance records. Watch any showcause notice numbers, duty demand amounts, appellate filings, and whether DRI widens the classification theme to other molecules in the same therapeutic class.",
+    ],
+  },
+  {
     slug: "tvs-lakshmi-venu-partition-notice-november-2026",
     title: "Lakshmi Venu sent a legal notice to split the TVS family holding stack",
     summary:
@@ -12624,6 +12720,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "ongc-konaseema-gas-blowout-november-2026": "policy",
+  "ioc-panipat-saff-blending-november-2026": "policy",
+  "bse-cftc-bankex-futures-november-2026": "markets",
+  "cipla-dri-import-searches-november-2026": "policy",
   "tvs-lakshmi-venu-partition-notice-november-2026": "companies",
   "idbi-fairfax-union-strike-rbi-december-2026": "policy",
   "ncdrc-exportersindia-explosives-listings-november-2026": "policy",
