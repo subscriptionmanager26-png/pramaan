@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tvs-lakshmi-venu-partition-notice-november-2026",
+    title: "Lakshmi Venu sent a legal notice to split the TVS family holding stack",
+    summary:
+      "Lakshmi Venu issued a formal partition notice on 16 November 2026 seeking a share of coparcenary assets held through the VS Trust and related vehicles covering TVS Motor, TVS Holdings, TVS Credit Services and Sundaram-Clayton, after earlier attempts at an amicable settlement failed.",
+    category: "industry",
+    companyOrSector: "Family business / autos",
+    publishedAt: "2026-11-17T00:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tvs-lakshmi-venu-partition-notice-november-2026"),
+    keyTakeaways: [
+      "Mint reported on 16 November 2026 that Lakshmi Venu asked her father Venu Srinivasan and brother Sudarshan Venu for a lawful partition, citing equal daughter rights under the 2005 Hindu Succession Act amendment.",
+      "The notice covers interests linked to TVS Holdings, TVS Motor Company, TVS Credit Services and Sundaram-Clayton that were allotted to the Venu Srinivasan branch in the 2020 family settlement but not divided within that branch.",
+      "Counsel C. Aryama Sundaram said the notice gives one week to respond before court; her mother Mallika Srinivasan issued a statement backing an equitable settlement.",
+    ],
+    body: [
+      "What's going on here?",
+      "Succession at Indian promoter families often runs through trusts and holding companies long after operating businesses are listed. The TVS industrial group split among founder branches in 2020, but ownership within Venu Srinivasan's line stayed bundled in the VS Trust, where he remains sole trustee. On 16 November 2026, reporting including Mint said Lakshmi Venu, who runs die-casting operations at Sundaram-Clayton, sent a legal notice to her father and brother Sudarshan, who chairs TVS Motor and oversees financial services bets. She seeks partition of what she describes as coparcenary property spanning TVS Holdings, TVS Motor, TVS Credit Services and Sundaram-Clayton interests allotted to this branch. Senior advocate C. Aryama Sundaram, quoted in the coverage, said she invoked the Hindu Succession Act and the 2005 amendment that extended daughter rights in joint family property. The notice reportedly allows seven days for a response. Tension surfaced publicly in March 2026 over board reporting lines at Sundaram-Clayton; this step escalates it into a formal claim on the holding structure. Mallika Srinivasan, Lakshmi's mother, issued a statement the same day asking for transparent dialogue and saying a daughter's share should not be smaller than a son's.",
+      "What does this mean?",
+      "A partition notice does not instantly split share registers, but it forces the family and boards to treat governance and dividend flows as negotiable rather than informal. VS Trust holds majority stakes in listed TVS Motor and TVS Holdings and large blocks in unlisted TVS Credit; any court or settlement track could require valuations, buybacks, or inter-se transfers that ripple through creditor covenants and succession planning. Sudarshan already leads the flagship two-wheeler business; Lakshmi's claim tests whether the 2024 brand-usage memorandum, which exchanges said addressed trademarks rather than ownership, left economic rights unsettled. For minority shareholders in TVS Motor and Sundaram-Clayton, the dispute mainly signals headline risk and possible board attention diverted to family counsel until a structure is frozen. Competing auto houses watch because India's next-generation wealth transfer increasingly runs through law, not handshake deals alone.",
+      "Why should I care?",
+      "If you hold TVS group equities or work at its finance or manufacturing arms, read trust deeds and exchange disclosures for any indemnities or change-of-control clauses tied to promoter voting blocks. Lenders to TVS Credit should stress-test scenarios where promoter pledges or dividend upstreaming pause during negotiation. Family businesses elsewhere may use the case as a template for documenting branch splits versus intra-branch shares. Watch responses from Venu and Sudarshan Srinivasan within the notice window, any Bombay High Court or family court filing, trust board minutes, and whether independent directors ask for a formal related-party review.",
+    ],
+  },
+  {
+    slug: "idbi-fairfax-union-strike-rbi-december-2026",
+    title: "IDBI staff set a nationwide strike for 3 December over the Fairfax sale",
+    summary:
+      "IDBI Bank employee unions told the Reserve Bank of India on 16 November 2026 to withhold approvals on Fairfax Financial's ₹52,878 crore acquisition until ownership and funding are scrutinised, and called a one-day nationwide strike on 3 December after an earlier two-day protest in November.",
+    category: "industry",
+    companyOrSector: "Banking / privatisation",
+    publishedAt: "2026-11-17T01:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("idbi-fairfax-union-strike-rbi-december-2026"),
+    keyTakeaways: [
+      "Mint on 16 November 2026 said the United Forum of IDBI Officers and Employees asked RBI Governor Sanjay Malhotra to examine funding sources, leverage and conflicts with Fairfax's existing CSB Bank stake before any management transfer.",
+      "The forum wants binding safeguards on jobs, pensions, priority-sector lending and branch access, and asked the government and LIC to pause the 60.72% stake sale cleared in September 2026.",
+      "Unions scheduled a nationwide strike on 3 December 2026 following a two-day stoppage earlier in November against the same privatisation plan.",
+    ],
+    body: [
+      "What's going on here?",
+      "Selling a public-sector bank to a foreign strategic buyer must pass both cheque clearance and regulatory comfort on who ends up in control. The Cabinet Committee on Economic Affairs approved 10955230 Canada Inc, Fairfax Financial Holdings' acquisition vehicle, to buy a 60.72% stake in IDBI Bank for about ₹52,878 crore, split between government and Life Insurance Corporation holdings. Employee resistance has run in parallel. On 16 November 2026, Mint reported that the United Forum of IDBI Officers and Employees wrote to Reserve Bank of India Governor Sanjay Malhotra urging the central bank to withhold fit-and-proper and change-in-control approvals until it independently vets funding sources, ultimate beneficial ownership, leverage, encumbrances and related-party links. The letter opposes using the lender's deposits or future cash flows to finance the acquisition and raised concentration questions because Fairfax already controls CSB Bank. In the same reporting window, the forum notified a one-day nationwide strike on 3 December 2026, adding to a two-day protest held earlier in November. Separately, DIPAM Secretary Arunish Chawla told CNBC-TV18 the government still hopes to complete the transaction in the current fiscal year once regulatory steps conclude.",
+      "What does this mean?",
+      "Labour action shifts privatisation from a valuation headline into a sequencing problem. RBI and Securities and Exchange Board of India timelines do not pause because unions strike, but absent employee charters embedded in the share purchase agreement, management may spend weeks on conciliation instead of integration planning with CSB Bank. The union demand for RBI to scrutinise acquisition funding is unusual for a trade body and aims to slow approvals even if Fairfax's bid cleared cabinet. Depositors usually keep uninterrupted digital access, yet branch counters can see delays if the December strike draws wide participation. For investors, the strike date is a calendar marker ahead of open-offer mechanics and any LIC stake sale in the secondary market.",
+      "Why should I care?",
+      "If you bank with IDBI or hold its bonds, keep alternate channels ready around 3 December and read any RBI communication on change-of-control conditions. Policy watchers tracking remaining PSU bank sales should treat IDBI as the live test of whether foreign buyers can close with Indian unions unsatisfied. Fairfax and LIC investors should model regulatory slippage beyond March 2027 fiscal-year targets cited in ministry comments. Watch RBI fit-and-proper hearings, published employee guarantees in the share purchase agreement, strike turnout, and whether Parliament questions the sale before December.",
+    ],
+  },
+  {
+    slug: "ncdrc-exportersindia-explosives-listings-november-2026",
+    title: "A consumer court upheld fines on a B2B site that listed explosive chemicals",
+    summary:
+      "The National Consumer Disputes Redressal Commission on 16 November 2026 dismissed appeals by ExportersIndia.com operator Weblink.In and left in place ₹20 lakh in penalties for hosting ammonium nitrate, PETN and picric acid listings without licence checks, reinforcing due diligence duties on online marketplaces.",
+    category: "industry",
+    companyOrSector: "E-commerce regulation / consumer protection",
+    publishedAt: "2026-11-16T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ncdrc-exportersindia-explosives-listings-november-2026"),
+    keyTakeaways: [
+      "A consumer affairs ministry statement on 16 November 2026 said NCDRC upheld two ₹10 lakh Central Consumer Protection Authority orders against Weblink.In for hazardous listings on ExportersIndia.com.",
+      "The commission rejected safe-harbour arguments under Section 79 of the Information Technology Act, saying B2B directories must still verify regulated explosive sales.",
+      "Dial4Trade's appeal on similar facts was dismissed on 9 October 2026; CCPA reviews of IndiaMART, Justdial and other platforms continue.",
+    ],
+    body: [
+      "What's going on here?",
+      "B2B directories often describe themselves as passive listing services, yet regulators treat hazardous product ads as consumer-facing when anyone can request a quote. Following a Central Consumer Protection Authority sweep, officials flagged online displays of ammonium nitrate, gunpowder, picric acid and PETN with \"Get Best Quotes\" buttons and verified badges that did not reflect licence checks. The authority fined Weblink.In, which runs ExportersIndia.com, ₹10 lakh in each of two September 2026 orders and directed permanent delisting of the substances. On 16 November 2026, the consumer affairs ministry said the National Consumer Disputes Redressal Commission dismissed Weblink.In's appeals and upheld the ₹20 lakh total penalty plus takedown directions. The commission, per the statement, held that intermediary protection under the Information Technology Act applies only when platforms meet due-diligence rules, including the intermediary guidelines of 2021, and that knowledge of explosive notifications can be attributed to operators facilitating trade enquiries. A similar appeal by Dial4Trade had already failed on 9 October 2026.",
+      "What does this mean?",
+      "Courts are drawing a line between hosting user content and curating quote flows that look like retail shopping. Paid verification ticks and membership tiers weigh against claims that a site never knew seller credentials. Compliance teams at IndiaMART, TradeIndia and Justdial must extend KYC beyond payment onboarding to regulated chemicals, not only after a CCPA notice. Sellers of industrial inputs should expect more document uploads before listings go live. Penalties stay modest in rupee terms but attach reputational risk for SMEs that depend on lead generation. The rulings do not ban legitimate licensed trade, but they shift burden to platforms to block unlicensed enquiries up front.",
+      "Why should I care?",
+      "If you procure chemicals or list products on Indian B2B portals, budget time for licence uploads and expect moderators to reject explosive keywords even in industrial categories. Marketplace operators should revisit verified-badge criteria and audit legacy listings flagged in the 2026 CCPA review. Investors in listed platform stocks should read contingent liability notes for consumer-authority proceedings still open. Watch further NCDRC outcomes on IndiaMART and peers, any appellate moves, and whether the IT ministry amends intermediary rules to codify chemical screening.",
+    ],
+  },
+  {
+    slug: "rbi-yes-bank-at1-review-petition-november-2026",
+    title: "The RBI asked the Supreme Court to review its Yes Bank bond ruling",
+    summary:
+      "The Reserve Bank of India filed a review petition on 13 November 2026 asking the Supreme Court to reconsider its 15 October judgment that restored ₹8,415 crore of Yes Bank additional tier-1 bonds written off during the March 2020 reconstruction, arguing loss-absorption rules must prevail.",
+    category: "industry",
+    companyOrSector: "Banking regulation / capital instruments",
+    publishedAt: "2026-11-16T22:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-yes-bank-at1-review-petition-november-2026"),
+    keyTakeaways: [
+      "Mint and other outlets on 16 November 2026 confirmed RBI's 13 November review plea against the judgment reinstating AT-1 instruments cancelled in March 2020.",
+      "Yes Bank filed its own review petition the same day, warning that restoring the bonds could shave roughly 240 basis points off common equity tier-1 capital.",
+      "Bondholders had secured Bombay High Court relief in 2023; the Supreme Court upheld that outcome on 15 October 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "Additional tier-1 bonds are designed to convert or write down before taxpayers inject capital into a failing bank. When Yes Bank Ltd faced stress in March 2020, the administrator wrote off ₹8,415 crore of such paper even though the final reconstruction scheme text did not explicitly repeat an earlier draft write-down clause. Bondholders challenged the move; the Bombay High Court quashed it in January 2023, and on 15 October 2026 the Supreme Court dismissed appeals by Yes Bank, the Union government and the Reserve Bank of India. Reporting on 16 November 2026, including Mint, said the RBI filed a review petition on 13 November 2026 seeking reconsideration. The central bank argues the court underweighted Basel III loss-absorption mechanics and statutory powers tied to Section 45 reconstructions. Yes Bank lodged a parallel review the same day, citing capital-ratio pressure if the instruments return to its books. Yes Bank separately disclosed that recognising the judgment in the September 2026 quarter would have swung results to a large loss.",
+      "What does this mean?",
+      "A review petition rarely reopens settled law, but it buys time and signals regulators will keep defending write-down powers in future rescues. Mutual funds and wealthy individuals holding the AT-1 notes face continued uncertainty on coupons and trading marks while dockets stay active. For other lenders, the case sets expectations on how prospectus language, administrator actions and government notifications must align before perpetual debt can be cancelled. Equity investors in Yes Bank must weigh dilution risk if tier-1 debt re-enters capital calculations without a matching equity raise. Credit rating agencies will watch whether the court grants an oral hearing or rejects the reviews in chambers.",
+      "Why should I care?",
+      "If you own bank debt funds, check scheme factsheets for any Yes Bank AT-1 exposure and whether trustees have shifted valuations after the October ruling. Fixed-income buyers should treat perpetual bank paper as part legal bet, part credit bet. Boards at other private banks should ask counsel to map reconstruction clauses against current RBI master directions. Watch Supreme Court listing of the review petitions, Yes Bank exchange filings on capital ratios, and whether bondholder associations press for coupon payments during the appeal window.",
+    ],
+  },
+  {
     slug: "rbi-tata-sons-listing-reply-november-2026",
     title: "RBI told Tata Sons it still has to list under upper-layer NBFC rules",
     summary:
@@ -12528,6 +12624,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tvs-lakshmi-venu-partition-notice-november-2026": "companies",
+  "idbi-fairfax-union-strike-rbi-december-2026": "policy",
+  "ncdrc-exportersindia-explosives-listings-november-2026": "policy",
+  "rbi-yes-bank-at1-review-petition-november-2026": "policy",
   "rbi-tata-sons-listing-reply-november-2026": "policy",
   "hindustan-zinc-hzl-growth-program-november-2026": "companies",
   "cbdt-ltcg-stt-prebudget-review-november-2026": "policy",
