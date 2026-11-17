@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "hcltech-cohere-sovereign-ai-november-2026",
+    title: "HCLTech tied up with Cohere to sell sovereign AI in regulated markets",
+    summary:
+      "HCL Technologies Ltd said on 17 November 2026 it will act as a preferred systems integrator for Cohere in Canada and Germany, combining Cohere’s North agentic platform with HCLTech services so insurers, banks and factories can run AI inside their own data boundaries.",
+    category: "industry",
+    companyOrSector: "Technology / enterprise AI",
+    publishedAt: "2026-11-17T12:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hcltech-cohere-sovereign-ai-november-2026"),
+    keyTakeaways: [
+      "The companies announced on 17 November 2026 that HCLTech becomes a preferred global systems integrator for Cohere in Canada and Germany, with plans to extend the tie-up elsewhere.",
+      "Deployments will use Cohere’s North platform inside each customer’s chosen cloud or on-premises setup to meet data residency and sector rules.",
+      "Initial build targets include insurance claims workflows, secure financial data analysis and faster access to manufacturing documentation; both firms cite ISO 42001 AI governance certification.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large employers no longer buy generative AI only for chat demos. Regulators in finance, health and government increasingly ask where model data lives and who can see prompts. On 17 November 2026, HCL Technologies Ltd and Cohere, a Toronto-based sovereign AI vendor, announced a partnership to design and deploy sovereign AI for enterprises and public bodies. HCLTech will serve as one of Cohere’s preferred systems integrators in Canada and Germany, two markets the Indian IT firm already treats as strategic. The bundle pairs Cohere’s North agentic AI platform with HCLTech’s industry delivery teams and AI labs. Customer environments can stay on public cloud, private cloud, on-premises hardware or air-gapped networks so sensitive records do not leave approved jurisdictions. Work will start in insurance, financial services and manufacturing, covering jurisdiction-aware claims handling, secure analysis of confidential financial files and quicker retrieval of technical manuals on shop floors. Both companies noted they hold ISO 42001 certification for AI management systems.",
+      "What does this mean?",
+      "Sovereign AI deals shift Indian IT revenue from body-shopping hours toward architecture, compliance mapping and long-run model operations. Choosing Cohere alongside an earlier Anthropic alliance shows HCLTech hedging across model providers while pitching control to risk officers. For Canadian and German clients, the tie-up offers a local integrator that already runs government and bank projects, not a startup pitch deck alone. Contracts are unlikely to move the stock this quarter because no rupee value was disclosed, but they signal where margins may firm if regulators keep tightening cross-border data rules. Competitors such as Infosys, Wipro and TCS will watch whether Cohere grants similar integrator status in other geographies.",
+      "Why should I care?",
+      "If you procure AI for a regulated Indian or overseas entity, ask vendors whether models can run inside your VPC and how liability is split between the model owner and the integrator. HCLTech shareholders should track pipeline commentary on AI services mix in the next earnings call rather than treating one press release as revenue. Employees in banking or insurance IT should expect more RFP language about residency and audit trails. Watch follow-on customer wins in Canada and Germany, any India sovereign-cloud guidelines that mirror the same demands, and whether peers announce competing platform bundles before year end.",
+    ],
+  },
+  {
+    slug: "xiaomi-flextronics-royalty-customs-november-2026",
+    title: "Tax officials say Xiaomi hid royalty deals from customs in a ₹1,200 crore fight",
+    summary:
+      "Reuters on 17 November 2026 cited Indian government court filings alleging Xiaomi India and its former contract manufacturer Flextronics did not fully disclose technology royalty payments until investigators stepped in, in a customs case that could exceed $150 million and test how India values imports from electronics plants.",
+    category: "industry",
+    companyOrSector: "Smartphones / customs valuation",
+    publishedAt: "2026-11-17T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("xiaomi-flextronics-royalty-customs-november-2026"),
+    keyTakeaways: [
+      "Filings in the Supreme Court dispute say Xiaomi paid 2% to 5% royalties to technology partners but treated those payments as separate from dutiable component values on imports routed through contract manufacturers.",
+      "The government contends Xiaomi shared licensing agreements only after the investigation began, supporting demands for back taxes and penalties on roughly three pre-2020 years.",
+      "Authorities are also resisting Flextronics Technologies India’s appeal, arguing the contract manufacturer should have presented the full contractual stack to customs; experts say a government win could widen scrutiny to pharma and auto contract plants.",
+    ],
+    body: [
+      "What's going on here?",
+      "India taxes most imported phone parts when they cross the border. Customs officers add royalties and design fees to the invoice value when they believe those payments are tied to the same shipment. Xiaomi India, which holds about a tenth of the country’s smartphone market, has fought a tribunal order that said it underpaid duties before 2020 by keeping royalty payouts out of the import valuation. Xiaomi took the case to the Supreme Court in January 2026, arguing components enter through separate contract manufacturers and that royalty bills should not inflate tariff lines. Reporting on 17 November 2026, citing fresh government filings, said investigators believe Xiaomi knew the licensing structure but did not make complete disclosures until the probe started. The revenue department is seeking recovery that media estimates above $150 million. Separately, Flextronics Technologies India, the former assembler that still brands itself Flextronics locally, asked the court to reject claims it deliberately helped layer transactions; the government’s September 2026 counter said the plant failed to place underlying contracts before customs to reach the correct valuation.",
+      "What does this mean?",
+      "Contract manufacturing underpins India’s electronics push, with Foxconn, Jabil, Tata Electronics and others hosting foreign brands’ lines. If courts back the revenue department, every royalty-bearing import through a third-party factory may need upfront paperwork, slowing line commissioning and raising working-capital needs for duty deposits. Xiaomi also faces other Indian regulatory heat, including a proposed Serious Fraud Investigation Office probe reported earlier in 2026, so customs is one front in a wider compliance reset for Chinese phone makers. Officials stressed in the filing that they are not banning contract manufacturing outright, but the message to assemblers is that pass-through import invoices must show the full economic deal. Pharma, autos and industrial goods that use similar royalty-plus-CKD models could see parallel audits if this case sets precedent.",
+      "Why should I care?",
+      "If you run sourcing for an OEM that imports through Indian EMS partners, align legal, tax and plant teams on one customs narrative before shipments start. Electronics investors should model higher contingent liabilities on Chinese brands with large India assembly bases. Contract manufacturers must budget compliance staff to reconcile each brand’s licensing stack with bill-of-material values. Shoppers rarely see immediate price changes, but duty disputes can delay new model launches if parts sit in bond. Watch Supreme Court hearing dates, any settlement numbers, Flextronics’ separate appeal, and whether customs circulars clarify royalty add-backs for other sectors.",
+    ],
+  },
+  {
     slug: "ongc-konaseema-gas-blowout-november-2026",
     title: "A pre-dawn gas blowout near an ONGC well forced evacuations in Andhra Pradesh",
     summary:
@@ -12720,6 +12768,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "hcltech-cohere-sovereign-ai-november-2026": "companies",
+  "xiaomi-flextronics-royalty-customs-november-2026": "policy",
   "ongc-konaseema-gas-blowout-november-2026": "policy",
   "ioc-panipat-saff-blending-november-2026": "policy",
   "bse-cftc-bankex-futures-november-2026": "markets",
