@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "delhi-hc-gst-corporate-guarantee-november-2026",
+    title: "Delhi High Court says free parent company guarantees still attract GST",
+    summary:
+      "The Delhi High Court ruled on 17 November 2026 that a parent guaranteeing an SPV's bank loan supplies a taxable service even without a fee, but companies can contest the government's 1% valuation rule with evidence of a lower open-market value.",
+    category: "industry",
+    companyOrSector: "GST / corporate finance",
+    publishedAt: "2026-11-17T23:03:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("delhi-hc-gst-corporate-guarantee-november-2026"),
+    keyTakeaways: [
+      "A bench held that Sterlite Power, Azure Power and other petitioners supplied a service when they backed subsidiary loans, triggering GST even on no-charge guarantees.",
+      "The 1% of guaranteed amount rule from 26 October 2023 is a rebuttable presumption, not a mandatory floor; taxpayers may prove lower value.",
+      "Tax applies when a guarantee is issued, renewed, extended or enhanced; mere continuation without change does not create fresh liability each year.",
+    ],
+    body: [
+      "What's going on here?",
+      "Renewable energy and infrastructure groups routinely set up special purpose vehicles that borrow from banks while a parent company signs a corporate guarantee. Tax officers treat that backing as a service because the lender relies on the parent's balance sheet if the project company defaults. On 17 November 2026, a Delhi High Court bench ruled on a batch led by Sterlite Power Transmission Ltd and Azure Power India Pvt. Ltd. The court agreed that issuing such a guarantee is a GST-taxable supply even when no fee changes hands. At the same time, it gave businesses room to fight how the government values that supply. A notification from 26 October 2023 had pegged many guarantees at 1% of the guaranteed sum. The court said that benchmark is not an automatic minimum. Companies that show a lower open-market value with evidence should pay GST only on that lower amount. The judges set aside several demand notices that ignored those principles and told revenue authorities to reassess after hearing the companies.",
+      "What does this mean?",
+      "Power, roads, telecom and ports finance run on parent guarantees to SPVs. Until now, groups debated whether free guarantees were taxable at all. The ruling ends that ambiguity but opens a documentation fight on valuation. Finance teams must timestamp every guarantee grant, renewal or extension because each fresh issuance is a taxable event, while a guarantee that simply rolls on year after year is not taxed again unless terms change. Input tax credit rules mean the borrowing SPV's eligibility to claim GST paid by the parent also needs a fresh look. The decision sits beside a Gujarat High Court judgment from August 2026 on the same theme, and taxpayers have appealed to the Supreme Court with a stay on some demands, so nationwide treatment may still converge.",
+      "Why should I care?",
+      "If you run treasury for a group with project SPVs, pull the full guarantee register and mark issue dates against GST returns filed since October 2023. Borrowers should align with parents on who books the tax and whether credit can flow to the project entity. Investors in listed renewables or infrastructure names should watch contingent tax lines in footnotes after fresh reassessment notices. Watch whether the Supreme Court harmonises Delhi and Gujarat readings, any GST Council clarification, and whether tax officers issue standard valuation templates for intra-group guarantees.",
+    ],
+  },
+  {
+    slug: "rbi-api-governance-cyber-november-2026",
+    title: "RBI told banks to tighten controls on APIs after lending cyber raids",
+    summary:
+      "A Reserve Bank of India advisory dated 16 November 2026 lays out API inventories, owner accountability and stricter authentication for banks and NBFCs, following CERT-In alerts on attacks that exploited loan-disbursement interfaces.",
+    category: "industry",
+    companyOrSector: "Banking / cyber regulation",
+    publishedAt: "2026-11-17T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-api-governance-cyber-november-2026"),
+    keyTakeaways: [
+      "The Good Practices for API Governance and Security applies to commercial banks, small finance banks, payments banks, NBFCs and urban co-operative banks.",
+      "Regulators want a live register of APIs, risk-tiered reviews, named business and technology owners for critical interfaces, and periodic permission audits for fintech partners.",
+      "Separate guidance covers AI and machine learning APIs, including data minimisation and monitoring of prompts sent to external model providers.",
+    ],
+    body: [
+      "What's going on here?",
+      "Banks no longer serve customers only through branches. Most account opening, loan sanction and payment triggers run through application programming interfaces that connect core banking systems to fintech lenders, aggregators and merchant platforms. When those pipes leak credentials, attackers can move money without breaking into the main data centre. On 16 November 2026 the Reserve Bank of India issued an advisory titled Good Practices for API Governance and Security after a thematic review of how regulated entities manage these connections. The paper covers the full lifecycle from design to retirement. It asks for board-approved policies, split accountability between business, technology, risk and audit teams, and inventories that include third-party and discontinued interfaces. Critical APIs need named owners on both the business and tech side. The RBI also nudges multi-factor authentication, rate limits, gateway controls and continuous logging because Indian Computer Emergency Response Team alerts in October and November 2026 described NBFCs and payment firms losing money through compromised disbursement APIs, sometimes on weekends when monitoring thins out.",
+      "What does this mean?",
+      "Compliance cost rises for lenders that grew quickly by plugging dozens of fintech partners into the same API layer. Incumbent banks must map which external apps can originate loans or pull customer data, then prove access matches current contracts. Fintech partners face more frequent permission reviews and may see slower sandbox approvals until gateways catch up. For borrowers the near-term product set should look unchanged, but fraud response teams should expect more step-up checks on large transfers routed through partner apps. The AI section matters as banks trial external large language models for credit memos or customer chat: data leaving the firewall through an API must be scoped, logged and sometimes tokenised.",
+      "Why should I care?",
+      "If you use a digital lender or payments app, expect occasional friction as banks tighten API limits after patching holes. NBFC and bank technology vendors should budget for quarterly access reviews and penetration tests that mimic authorised API abuse, not only external hackers. Investors should read cyber disclosures in the next quarterly risk sections of private banks and large NBFCs. Watch follow-on RBI circulars that turn the advisory into binding directions, CERT-In updates on the CRAFTY FALCON campaign, and whether smaller urban co-operative banks receive delayed compliance timelines.",
+    ],
+  },
+  {
+    slug: "fairfax-iifl-block-sale-november-2026",
+    title: "Fairfax set to sell its entire IIFL Finance stake to fund the IDBI purchase",
+    summary:
+      "Reporting on 17 November 2026 said Fairfax Financial plans a block sale of up to 13.25% in IIFL Finance on 18 November at a floor price of ₹611 per share, raising about ₹3,454 crore to help pay for its majority IDBI Bank acquisition.",
+    category: "industry",
+    companyOrSector: "NBFCs / bank privatisation",
+    publishedAt: "2026-11-17T22:48:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fairfax-iifl-block-sale-november-2026"),
+    keyTakeaways: [
+      "FIH Mauritius Investments, a Fairfax affiliate, offered up to 56.53 million IIFL Finance shares in a clean-out trade described as selling the full 13.25% stake.",
+      "The floor price sat roughly 4% below the 17 November close of ₹635, with proceeds earmarked alongside other asset sales for the ₹52,878 crore IDBI deal.",
+      "Blackstone is separately raising capital at IIFL Finance through warrants; Fairfax also seeks control of IIFL Capital Services via an open offer.",
+    ],
+    body: [
+      "What's going on here?",
+      "Canada's Fairfax Financial Holdings is buying a 60.72% stake in government-owned IDBI Bank in one of India's largest cross-border banking deals. Paying roughly ₹52,878 crore requires more than balance-sheet cash. On 17 November 2026, Mint and other outlets reported that Fairfax's Mauritius affiliate would offer its entire 13.25% holding in IIFL Finance Ltd in a block deal scheduled for 18 November. The term sheet set a floor price of ₹611 per share on up to 56.53 million shares, implying proceeds near ₹3,454 crore. Fairfax had built the IIFL Finance stake since 2015, though dilution from the lender's own capital raises trimmed its percentage over time. The same week, IIFL Finance announced a Blackstone-linked capital infusion via convertible instruments, and Fairfax pressed an open offer to lift its stake in brokerage arm IIFL Capital Services Ltd toward 51%. Fairfax has said it may also fold other Indian insurance and broking assets into IDBI over time.",
+      "What does this mean?",
+      "Shadow lenders and universal banks now sit in the same strategic map for Fairfax. Selling down IIFL Finance frees rupee firepower without waiting for a slow secondary market placement, but signals the buyer is prioritising bank control over long-held NBFC equity. IIFL Finance minority shareholders face a large overhang clearing in one night, which can anchor near-term pricing even if fundamentals stay intact. For IDBI employees and depositors, the block is a reminder that the acquirer is actively recycling Indian financial holdings to meet regulatory capital tests on the bank purchase. Competing NBFCs may pitch stability to advisors who lent alongside Fairfax for a decade.",
+      "Why should I care?",
+      "If you hold IIFL Finance stock, check block-deal outcomes on 18 November for clearing price versus floor and whether domestic institutions absorb the supply. Borrowers and wealth clients should see little immediate product change, but watch whether Fairfax accelerates integration talks between IDBI, CSB Bank and IIFL Capital Services. Policy watchers tracking PSU bank sales should treat the stake sale as part of the financing mosaic, not a surprise retreat from India. Follow exchange disclosures on the block, Reserve Bank of India fit-and-proper progress on IDBI, and employee union strike plans in early December.",
+    ],
+  },
+  {
+    slug: "groww-ribbit-block-sale-november-2026",
+    title: "Ribbit Capital sold ₹1,905 crore of Groww parent stock to funds",
+    summary:
+      "Venture firm Ribbit Capital divested about 1.38% of Billionbrains Garage Ventures, owner of the Groww investing app, in a 17 November 2026 block sale to domestic mutual funds and global institutions at ₹219 per share.",
+    category: "industry",
+    companyOrSector: "Fintech / broking",
+    publishedAt: "2026-11-17T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("groww-ribbit-block-sale-november-2026"),
+    keyTakeaways: [
+      "Ribbit sold 8.7 crore shares for ₹1,905.3 crore, trimming a combined stake that stood near 8.29% as of September 2026.",
+      "Kotak Mahindra Mutual Fund bought the largest slice at about ₹449 crore; BlackRock, Société Générale, Norges Bank and Tata Mutual Fund also participated.",
+      "Groww's parent recently reported strong quarterly profit even as derivatives activity cooled industry-wide.",
+    ],
+    body: [
+      "What's going on here?",
+      "Retail investing platforms that listed after rapid user growth now face a second test: whether institutional buyers will absorb early venture capital exits without breaking the share price. Billionbrains Garage Ventures Ltd, which owns the Groww stockbroking and mutual fund app, has seen its stock touch record levels in November 2026 after profitable quarterly results. On 17 November, block deal data showed Ribbit Capital funds selling 8.7 crore shares, about 1.38% of the company, for ₹1,905 crore at ₹219 apiece. Kotak Mahindra Mutual Fund was the largest buyer, adding roughly 0.3% for about ₹449 crore. BlackRock schemes, Société Générale, Norges Bank, Morgan Stanley, HDFC Standard Life and Tata Mutual Fund also picked up stock. Ribbit remained a meaningful shareholder after the trade, but the sale is among the first large secondary liquidity events for a listed Indian consumer fintech at scale.",
+      "What does this mean?",
+      "Venture backers typically sell partial stakes after listing to return capital to limited partners. When marquee mutual funds and sovereign vehicles buy those blocks, it signals confidence that broking platforms can keep earning through mutual fund distribution and listed equity volumes even if leveraged derivatives rules stay tight. For Groww users, product pricing should not move because of a sponsor sale, but the company may feel less pressure to rush another equity raise if strategics keep absorbing supply. Competing brokers watch the clearing price as a comp for their own valuation narratives. The block lands the same week Urban Company attracted heavy institutional bids for its qualified institutional placement, showing continued appetite for consumer-tech paper despite competition in home services and investing apps.",
+      "Why should I care?",
+      "If you own Groww's stock or follow listed fintech, compare the block price with your cost basis and watch whether Ribbit files further sales in coming months. Mutual fund investors indirectly participated through Kotak, Tata and other schemes; check fact sheets if you want exposure without single-name risk. Regulators and exchanges will monitor whether retail investors receive equal disclosure on large sponsor exits. Watch the next shareholding pattern, any further Ribbit filings, September-quarter metrics on average revenue per user, and SEBI commentary on block-trade transparency for newly listed consumer platforms.",
+    ],
+  },
+  {
     slug: "hcltech-cohere-sovereign-ai-november-2026",
     title: "HCLTech tied up with Cohere to sell sovereign AI in regulated markets",
     summary:
@@ -12768,6 +12864,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "delhi-hc-gst-corporate-guarantee-november-2026": "policy",
+  "rbi-api-governance-cyber-november-2026": "policy",
+  "fairfax-iifl-block-sale-november-2026": "companies",
+  "groww-ribbit-block-sale-november-2026": "companies",
   "hcltech-cohere-sovereign-ai-november-2026": "companies",
   "xiaomi-flextronics-royalty-customs-november-2026": "policy",
   "ongc-konaseema-gas-blowout-november-2026": "policy",

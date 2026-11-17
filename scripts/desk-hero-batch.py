@@ -1896,7 +1896,53 @@ def patanjali_fmcg_margin(d: ImageDraw.ImageDraw) -> None:
     d.line([(520, 200), (520, 560)], fill=GOLD, width=2)
 
 
+def gst_corporate_guarantee(d: ImageDraw.ImageDraw) -> None:
+    """Parent guarantee linking SPV loan to tax ledger."""
+    d.rectangle([100, 200, 460, 560], fill=BLUE)
+    d.rectangle([160, 280, 400, 480], fill=CREAM)
+    d.line([(280, 300), (280, 460)], fill=GOLD, width=4)
+    for i, h in enumerate([100, 160, 220, 280]):
+        x = 700 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, BLUE, YELLOW, GOLD][i])
+    d.polygon([(900, 220), (1100, 260), (900, 300)], fill=RED)
+    d.line([(520, 380), (680, 380)], fill=GOLD, width=6)
+
+
+def rbi_api_cyber(d: ImageDraw.ImageDraw) -> None:
+    """API gateway with padlock."""
+    d.rectangle([120, 240, 500, 520], fill=BLUE)
+    for y in range(280, 500, 40):
+        d.rectangle([150, y, 470, y + 20], fill=YELLOW if y % 80 else RED)
+    d.rounded_rectangle([720, 260, 1080, 500], radius=20, fill=CREAM)
+    d.arc([820, 180, 980, 340], 0, 180, fill=GOLD, width=12)
+    d.rectangle([860, 340, 940, 500], fill=RED)
+
+
+def fairfax_iifl_block(d: ImageDraw.ImageDraw) -> None:
+    """Stake blocks moving between vaults."""
+    d.rounded_rectangle([100, 280, 420, 520], radius=24, fill=BLUE)
+    d.rounded_rectangle([180, 340, 340, 480], fill=GOLD)
+    d.polygon([(620, 520), (780, 360), (940, 520), (780, 680)], fill=RED)
+    for i, w in enumerate([700, 860, 1020]):
+        d.rectangle([w, 200 + i * 40, w + 50, 360], fill=[YELLOW, BLUE, GOLD][i])
+
+
+def groww_ribbit_block(d: ImageDraw.ImageDraw) -> None:
+    """Smartphone stack with sponsor exit arrow."""
+    d.rounded_rectangle([140, 220, 400, 540], radius=32, fill=BLUE)
+    d.rectangle([180, 280, 360, 500], fill=CREAM)
+    d.ellipse([240, 460, 300, 500], fill=YELLOW)
+    d.polygon([(700, 480), (1100, 400), (1100, 520)], fill=RED)
+    for i, h in enumerate([120, 200, 260]):
+        x = 820 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[GOLD, BLUE, YELLOW][i])
+
+
 def main() -> None:
+    save("delhi-hc-gst-corporate-guarantee-november-2026", gst_corporate_guarantee)
+    save("rbi-api-governance-cyber-november-2026", rbi_api_cyber)
+    save("fairfax-iifl-block-sale-november-2026", fairfax_iifl_block)
+    save("groww-ribbit-block-sale-november-2026", groww_ribbit_block)
     save("india-telecom-fake-court-orders-november-2026", telecom_fake_court_orders)
     save("mufin-green-ad-ii-forex-licence-november-2026", mufin_ad_ii_forex)
     save("mahanadi-coalfields-rhp-november-2026", mahanadi_coalfields_ipo)
