@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "gold-loan-federation-rbi-capital-november-2026",
+    title: "Gold lenders formed a federation to ask RBI for easier capital rules",
+    summary:
+      "At a Cochin summit on 17 November 2026, major gold-loan NBFCs launched the Federation of Gold Loan Companies and flagged stress from the Reserve Bank of India's April 2026 LTV norms, pressing for Tier I capital at 10% instead of 12% and cheaper funding.",
+    category: "industry",
+    companyOrSector: "Gold finance / RBI regulation",
+    publishedAt: "2026-11-18T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gold-loan-federation-rbi-capital-november-2026"),
+    keyTakeaways: [
+      "FGLOC launched at the Gold Summit in Cochin on 17 November with 23 members and plans to become a self-regulatory organisation.",
+      "Lenders want minimum Tier I capital cut from 12% to 10% and say bullet-repayment LTV rules that include accrued interest have shrunk ticket sizes.",
+      "Industry data cited at the event put NBFC gold loans at about Rs 3.64 trillion in August, up 69% year on year, as falling gold prices raise collateral risk.",
+    ],
+    body: [
+      "What's going on here?",
+      "Households pledge jewellery when they need quick credit, and NBFCs built a large business on that model. The Reserve Bank of India tightened gold-lending rules from 1 April 2026, including how loan-to-value is measured on bullet loans that roll interest into the repayment amount. Lenders must also show repayment capacity on larger tickets. On 17 November 2026, industry leaders met at a Gold Summit in Cochin and formed the Federation of Gold Loan Companies to speak to the regulator with one voice. Muthoot Finance executive vice-chairman George Alexander Muthoot said more than three quarters of the sector was already represented and urged smaller lenders to join rather than avoid supervisory contact. The federation wants to graduate into a self-regulatory organisation. Executives used the forum to air complaints about uneven inspection intensity between large and small players and about NPAs that surfaced after the new LTV framework. IIFL Finance also argued for bringing NBFC gold loans back into priority-sector lending so rates could fall.",
+      "What does this mean?",
+      "When collateral rules change, the amount a borrower can draw on the same ornaments drops even if gold prices stay flat. If prices fall, loan-to-value breaches rise faster, forcing top-up payments or auction risk. A 12% Tier I floor for gold NBFCs sits above the 10% threshold other finance companies face, so a cut would free balance-sheet room for fresh disbursements. Priority-sector status would open cheaper bank lines to NBFCs, which could pass through as lower EMIs. The federation's pitch is both defensive and offensive: defend margins after a rapid book growth phase and ask the RBI for symmetry with housing finance, where capital ratios track LTV bands. For households, the near-term effect is tighter ticket sizes at the counter even as festivals lift demand.",
+      "Why should I care?",
+      "If you rely on gold loans, compare new sanction amounts with older agreements and ask how interest is counted in LTV before you renew. Investors in Muthoot, Manappuram, or IIFL should watch management commentary on collection efficiency and any FGLOC-led representations in the next RBI policy booklet. Savers with bank deposits should note that faster gold-loan growth can mean more consumer credit risk on NBFC balance sheets that banks fund. Watch RBI responses on Tier I norms, any priority-sector clarification, and quarterly slippage data as gold prices move into the wedding season.",
+    ],
+  },
+  {
+    slug: "prestige-mumbai-andheri-office-jv-november-2026",
+    title: "Prestige Estates bought half of a Rs 4,500 crore Mumbai office project",
+    summary:
+      "On 17 November 2026 Prestige Estates Projects took a 50% stake in a Sahar, Andheri East commercial development through Advent Convention and Hotels International, targeting about 1.5 million square feet of leasable space, and separately lifted its holding in Prestige Vaishnaoi Projects to 42.83%.",
+    category: "industry",
+    companyOrSector: "Commercial real estate",
+    publishedAt: "2026-11-18T05:27:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("prestige-mumbai-andheri-office-jv-november-2026"),
+    keyTakeaways: [
+      "Prestige Falcon Realty Ventures subscribed to a 50% equity stake in Advent on a 21,978 sq m Sahar village parcel in Andheri East.",
+      "The project carries an estimated gross development value of about Rs 4,500 crore with roughly 1.5 million sq ft of leasable commercial area.",
+      "The developer also invested Rs 110.925 crore to raise its combined interest in Prestige Vaishnaoi Projects to 42.83% from 38.24%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Grade A office demand in Mumbai still clusters around the airport belt because global banks and tech firms want short commutes for travelling teams. Bengaluru-based Prestige Estates Projects has been trying to replicate its residential scale in that corridor. On 17 November 2026 it told exchanges that Prestige Falcon Realty Ventures completed a 50% investment in Advent Convention and Hotels International, which holds a land parcel in Sahar village, Andheri East. The site spans about 21,978 square metres. Prestige expects roughly 1.5 million square feet of leasable area once the commercial block is built, with a gross development value near Rs 4,500 crore. The initial equity cheque covers subscription to about 26.96 lakh shares at face value, with further funding promised through loans or convertible instruments as construction milestones arrive. Advent was incorporated in 2024 and has not yet reported revenue. Separately on the same day, Prestige put Rs 110.925 crore into Prestige Vaishnaoi Projects, lifting its stake to 42.83%. Vaishnaoi's turnover has been rising, from about Rs 4.1 crore in FY24 to Rs 26.7 crore in FY26.",
+      "What does this mean?",
+      "Large listed developers often use joint ventures on expensive Mumbai land so equity checks are phased with leasing pre-commitments. A 50% stake shares both upside from rent escalations and risk if tech tenants delay fit-outs. Prestige's parallel Vaishnaoi top-up shows it is building a pipeline of smaller partnership vehicles alongside headline Mumbai towers. For office tenants, more supply near the airport can mean competitive rents once the block nears completion, though completion timelines on airport-zone projects often stretch because of height and access norms. Competing builders will watch whether Prestige pre-leases before ramping construction spend.",
+      "Why should I care?",
+      "If you run a business hunting Mumbai office space, track Andheri East and BKC parity on rents as this project moves from foundation to fitting. Commercial real estate investors should read Prestige's partnership funding tables in the next annual report for contingent liabilities on Advent. Home buyers already in Prestige communities should expect the group's capital allocation to tilt toward long-gestation commercial cash flows. Watch Mumbai civic clearances on the Sahar parcel, any anchor tenant announcements, and whether Prestige raises debt or equity to fund the Vaishnaoi and Advent tranches together.",
+    ],
+  },
+  {
+    slug: "ndr-auto-dya-hyundai-kia-seats-november-2026",
+    title: "NDR Auto tied up with a Korean seat maker to supply Hyundai and Kia",
+    summary:
+      "NDR Auto Components signed a joint venture on 17 November 2026 with South Korea's DYA Co. Ltd to build passenger car seats in India, holding 51% in a Rs 10 crore initial equity vehicle aimed mainly at Kia India and Hyundai India.",
+    category: "industry",
+    companyOrSector: "Auto components",
+    publishedAt: "2026-11-18T05:24:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ndr-auto-dya-hyundai-kia-seats-november-2026"),
+    keyTakeaways: [
+      "The board had approved the DYA joint venture framework on 4 November; the agreement was executed on 17 November.",
+      "NDR Auto will own 51% of the Indian JV and DYA, listed on the Korean exchange, will hold 49%.",
+      "The partnership will design, manufacture and supply passenger car seats primarily for Kia and Hyundai's local plants.",
+    ],
+    body: [
+      "What's going on here?",
+      "Carmakers localise faster when tier-one suppliers set up joint ventures beside their plants. NDR Auto Components makes seating and related parts and on 17 November 2026 told stock exchanges it signed a joint venture agreement with DYA Co. Ltd of South Korea. The board had cleared the structure on 4 November. NDR will hold 51% and DYA 49% in a new Indian company capitalised with Rs 10 crore of initial equity. The venture will design, manufacture and supply passenger car seats, with Kia India and Hyundai India named as the primary customers. DYA is listed in Korea. NDR said the subsidiary will be a related party once incorporated. Terms otherwise match the November 4 disclosure.",
+      "What does this mean?",
+      "Hyundai and Kia have been expanding SUV and sedan lines from Tamil Nadu and Telangana, which pulls more seating content into local currency costs and shorter logistics loops. A Korean partner brings design templates and quality systems that export customers already recognise, while NDR handles plant approvals and labour sourcing. For car buyers the change is invisible in the showroom, but it can stabilize delivery schedules when global seat frame shortages hit pure importers. Suppliers that are not in the JV may see tougher share-of-wallet competition on the next model refresh.",
+      "Why should I care?",
+      "If you work in auto ancillaries, watch whether Hyundai and Kia dual-source or sole-source the new JV on upcoming platforms. Investors in NDR Auto should track capex guidance once the entity is incorporated and any revenue contribution from FY28 model years. Fleet buyers caring about delivery timelines should note that localized seats reduce exposure to shipping shocks but tie quality audits to a single new plant ramp. Follow exchange filings on incorporation dates, Kia and Hyundai purchase orders, and capacity additions in NDR's existing seating plants.",
+    ],
+  },
+  {
+    slug: "reliance-campa-vijayapura-plant-november-2026",
+    title: "Reliance broke ground on a Rs 1,600 crore Campa Cola plant in north Karnataka",
+    summary:
+      "Karnataka Industries Minister M B Patil laid the foundation on 17 November 2026 for a Reliance Group beverage plant at Mulawad near Vijayapura, budgeted at Rs 1,600 crore on 109 acres and promising about 2,000 direct jobs.",
+    category: "industry",
+    companyOrSector: "Beverages / industrial policy",
+    publishedAt: "2026-11-18T05:21:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("reliance-campa-vijayapura-plant-november-2026"),
+    keyTakeaways: [
+      "The Campa Cola facility in Vijayapura district is sized at Rs 1,600 crore on 109 acres in the Mulawad industrial area.",
+      "The state said the plant should create about 2,000 direct jobs and over 3,000 indirect roles once operations scale.",
+      "Patil said land losers must get first preference in hiring and asked Reliance to weigh local horticulture for future food-processing lines.",
+    ],
+    body: [
+      "What's going on here?",
+      "Karnataka has tried for years to move large factories beyond the Bengaluru ring without losing investors to neighbouring states. On 17 November 2026 Industries Minister M B Patil laid the foundation stone for a Reliance Group plant that will bottle Campa Cola at Mulawad in Vijayapura district. The project is budgeted at Rs 1,600 crore across 109 acres. The minister's office said it should generate about 2,000 direct jobs and more than 3,000 indirect positions. Patil noted that land was set aside for industry as early as 2009 but few anchor plants arrived until recently. He asked Reliance to prioritise families that surrendered land for the site, then hire within a 25-kilometre radius and across the district. He also pitched horticulture linkages because Vijayapura grows pomegranates, grapes and lemons, and said the state is talking to more than twenty other investors for the region.",
+      "What does this mean?",
+      "A branded cola plant deep in north Karnataka signals that beverage majors think rural and semi-urban demand can support national-scale bottling economics when state power and water links are in place. Reliance has been rebuilding Campa as a mass-market cola alongside its retail network, so owning production east of Maharashtra reduces freight into the Deccan. For local households, hiring rules tied to land losers can shift incomes from farming to wages if training programmes appear before commissioning. Competing drink makers may respond with distributor incentives rather than new greenfield plants in the same district.",
+      "Why should I care?",
+      "If you live near Vijayapura, watch recruitment notices for operator and maintenance roles and whether Reliance publishes skill-centre tie-ups before trial runs. Kirana owners should expect Campa availability to widen in Karnataka and adjoining Maharashtra markets once lines start. Policy readers can compare this ground-breaking with other pending Mulawad proposals Patil listed, including food and solar investments. Track environmental clearances, water allocation orders, and any state incentive notifications tied to the Reliance unit.",
+    ],
+  },
+  {
     slug: "delhi-hc-gst-corporate-guarantee-november-2026",
     title: "Delhi High Court says free parent company guarantees still attract GST",
     summary:
@@ -12864,6 +12960,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "gold-loan-federation-rbi-capital-november-2026": "policy",
+  "prestige-mumbai-andheri-office-jv-november-2026": "markets",
+  "ndr-auto-dya-hyundai-kia-seats-november-2026": "companies",
+  "reliance-campa-vijayapura-plant-november-2026": "companies",
   "delhi-hc-gst-corporate-guarantee-november-2026": "policy",
   "rbi-api-governance-cyber-november-2026": "policy",
   "fairfax-iifl-block-sale-november-2026": "companies",

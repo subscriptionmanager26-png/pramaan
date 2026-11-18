@@ -1896,6 +1896,51 @@ def patanjali_fmcg_margin(d: ImageDraw.ImageDraw) -> None:
     d.line([(520, 200), (520, 560)], fill=GOLD, width=2)
 
 
+def gold_loan_fgloc(d: ImageDraw.ImageDraw) -> None:
+    """Gold bar stack with regulatory scale."""
+    d.rectangle([120, 260, 460, 540], fill=YELLOW)
+    d.rectangle([160, 300, 420, 380], fill=GOLD)
+    d.rectangle([160, 400, 420, 480], fill=GOLD)
+    d.line([(520, 200), (520, 560)], fill=GOLD, width=2)
+    for i, h in enumerate([80, 140, 200, 260]):
+        x = 600 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.polygon([(960, 220), (1120, 300), (960, 380)], fill=BLUE)
+    d.rectangle([1000, 420, 1140, 500], fill=RED)
+
+
+def prestige_mumbai_office(d: ImageDraw.ImageDraw) -> None:
+    """Twin towers with JV split."""
+    d.rectangle([140, 220, 280, 560], fill=BLUE)
+    d.rectangle([300, 180, 440, 560], fill=RED)
+    d.rectangle([200, 260, 380, 300], fill=GOLD)
+    d.line([(520, 160), (520, 580)], fill=GOLD, width=2)
+    d.rectangle([620, 280, 1120, 520], fill=CREAM)
+    d.rectangle([700, 340, 1040, 380], fill=YELLOW)
+    d.rectangle([700, 420, 1040, 460], fill=BLUE)
+
+
+def ndr_auto_seats(d: ImageDraw.ImageDraw) -> None:
+    """Car seat form with Korea-India bridge."""
+    d.rounded_rectangle([100, 300, 480, 520], radius=28, fill=RED)
+    d.rounded_rectangle([140, 340, 440, 480], fill=CREAM)
+    d.line([(520, 200), (520, 560)], fill=GOLD, width=2)
+    d.polygon([(640, 400), (820, 320), (1000, 400), (820, 480)], fill=BLUE)
+    d.rectangle([900, 220, 1140, 280], fill=YELLOW)
+    d.rectangle([900, 500, 1140, 540], fill=RED)
+
+
+def reliance_campa_plant(d: ImageDraw.ImageDraw) -> None:
+    """Bottling line with orchard hint."""
+    for i in range(4):
+        d.rectangle([120 + i * 80, 360, 180 + i * 80, 560], fill=BLUE if i % 2 else RED)
+    d.ellipse([200, 280, 320, 360], fill=YELLOW)
+    d.line([(520, 180), (520, 580)], fill=GOLD, width=2)
+    d.polygon([(700, 500), (780, 300), (860, 500)], fill=RED)
+    d.polygon([(900, 520), (960, 380), (1020, 520)], fill=BLUE)
+    d.rectangle([1040, 400, 1160, 560], fill=GOLD)
+
+
 def gst_corporate_guarantee(d: ImageDraw.ImageDraw) -> None:
     """Parent guarantee linking SPV loan to tax ledger."""
     d.rectangle([100, 200, 460, 560], fill=BLUE)
@@ -1939,6 +1984,10 @@ def groww_ribbit_block(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("gold-loan-federation-rbi-capital-november-2026", gold_loan_fgloc)
+    save("prestige-mumbai-andheri-office-jv-november-2026", prestige_mumbai_office)
+    save("ndr-auto-dya-hyundai-kia-seats-november-2026", ndr_auto_seats)
+    save("reliance-campa-vijayapura-plant-november-2026", reliance_campa_plant)
     save("delhi-hc-gst-corporate-guarantee-november-2026", gst_corporate_guarantee)
     save("rbi-api-governance-cyber-november-2026", rbi_api_cyber)
     save("fairfax-iifl-block-sale-november-2026", fairfax_iifl_block)
