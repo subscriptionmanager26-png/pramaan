@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { ArticleBody } from "@/components/research/ArticleBody";
 import { ResearchDossier } from "@/components/research/ResearchDossier";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
@@ -15,6 +16,8 @@ import { articleCover } from "@/lib/articles/images";
 import { getDeepResearchForArticle } from "@/lib/research";
 import { formatDate } from "@/lib/utils";
 import { getDeskNote } from "@/lib/desk-notes";
+import { researchArticleJsonLd } from "@/lib/seo/json-ld";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { getResearch, researchArticles } from "@/lib/site";
 import { redirect } from "next/navigation";
 
@@ -30,10 +33,31 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const path = `/research/${slug}`;
   const article = getArticleSummary(slug);
-  if (article) return { title: article.title };
+  if (article) {
+    return pageMetadata({
+      path,
+      title: article.title,
+      description: article.dek,
+      openGraph: {
+        type: "article",
+        publishedTime: `${article.publishedAt}T12:00:00+05:30`,
+      },
+    });
+  }
   const note = getResearch(slug);
-  return { title: note?.title ?? "Research" };
+  if (!note) return { title: "Research" };
+  return pageMetadata({
+    path,
+    title: note.title,
+    description: note.summary,
+    openGraph: {
+      type: "article",
+      publishedTime: note.publishedAt,
+      images: note.image ? [note.image] : undefined,
+    },
+  });
 }
 
 const verdictStyle = {
@@ -55,8 +79,18 @@ export default async function ResearchArticlePage({
   if (article && article.blocks.length && research) {
     const related = relatedArticles(slug, 6);
 
+    const path = `/research/${slug}`;
+    const jsonLd = researchArticleJsonLd({
+      headline: article.title,
+      description: article.dek,
+      path,
+      datePublished: `${article.publishedAt}T12:00:00+05:30`,
+      image: articleCover(article.slug, "hero"),
+    });
+
     return (
       <Page width="content">
+        <JsonLd data={jsonLd} />
         {/* Full document nav: App Router soft-nav from /research/[slug] → /research returns 500. */}
         <a href="/research" className="text-[13px] font-semibold text-accent hover:underline">
           ← All research
@@ -158,6 +192,15 @@ export default async function ResearchArticlePage({
 
   return (
     <Page width="content">
+      <JsonLd
+        data={researchArticleJsonLd({
+          headline: note.title,
+          description: note.summary,
+          path: `/research/${note.slug}`,
+          datePublished: note.publishedAt,
+          image: note.image,
+        })}
+      />
       <a href="/research" className="text-[13px] font-semibold text-accent hover:underline">
         ← All research
       </a>

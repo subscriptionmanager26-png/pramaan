@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/",
+  description:
+    "Indian markets news, company research memos, advisor directory, and free ETF and gold tools. Outthink the market on PocketEdge.",
+});
 import { NewsMagazineCard, ResearchList } from "@/components/magazine/MagazineCards";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";
 import { listArticles } from "@/lib/articles/catalog";

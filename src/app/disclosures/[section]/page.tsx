@@ -8,7 +8,7 @@ import {
   isDisclosureSection,
   type DisclosureSection,
 } from "@/lib/legal/disclosures";
-import { siteUrl } from "@/lib/site-url";
+import { pageMetadata } from "@/lib/seo/metadata";
 
 type Props = { params: Promise<{ section: string }> };
 
@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { section } = await params;
   if (!isDisclosureSection(section)) return { title: "Legal" };
   const doc = disclosureLegal[section];
-  return {
+  return pageMetadata({
+    path: `/disclosures/${section}`,
     title: doc.title,
-    description: doc.sections[0]?.body.slice(0, 160),
-    alternates: { canonical: `${siteUrl()}/disclosures/${section}` },
-  };
+    description: doc.sections[0]?.body ?? doc.title,
+  });
 }
 
 export default async function DisclosureSectionPage({ params }: Props) {

@@ -3,11 +3,14 @@ import Link from "next/link";
 import { BookOpen, Wrench } from "lucide-react";
 import { Page, PageHeader } from "@/components/shell/Page";
 import { guides, type Guide } from "@/lib/guides";
+import { pageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/resources",
   title: "Resources",
-  description: "Tools and guides for investing from India.",
-};
+  description:
+    "Guides on global investing from India plus free tools: ETF iNAV, gold tracker, mutual fund screener, and market holidays.",
+});
 
 function resourceHref(item: Guide) {
   if (item.kind === "tool") {

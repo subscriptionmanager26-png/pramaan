@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 
 import { PortfolioDashboard } from "@/components/portfolio/PortfolioDashboard";
 import { Page, PageHeader } from "@/components/shell/Page";
+import { pageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/portfolio",
   title: "Portfolio",
-  description: "Your current holdings and insights.",
-};
+  description: "Track holdings, performance, and AI-assisted insights after you sign in on PocketEdge.",
+});
 
 export default function PortfolioPage() {
   return (

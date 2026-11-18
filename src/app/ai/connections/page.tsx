@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
 import { AgentConnections } from "@/components/agent/AgentConnections";
-import { siteUrl } from "@/lib/site-url";
+import { pageMetadata, privatePageRobots } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/ai/connections",
   title: "Agent connections",
-  description: "Connect Zerodha and tools for your Pocketedge agent on Pramaan.",
-  alternates: { canonical: `${siteUrl()}/ai/connections` },
-};
+  description: "Connect Zerodha and tools for your PocketEdge agent.",
+  robots: privatePageRobots,
+});
 
 export default function AgentConnectionsPage() {
   return <AgentConnections />;

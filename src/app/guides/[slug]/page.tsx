@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Page } from "@/components/shell/Page";
 import { formatDate } from "@/lib/utils";
 import { getGuide, guides } from "@/lib/guides";
+import { pageMetadata } from "@/lib/seo/metadata";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -16,7 +17,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const guide = getGuide(slug);
-  return { title: guide?.title ?? "Guide" };
+  if (!guide) return { title: "Guide" };
+  const path = `/guides/${slug}`;
+  const onSiteTool =
+    guide.kind === "tool" && guide.toolUrl?.startsWith("/") ? guide.toolUrl : undefined;
+  return pageMetadata({
+    path,
+    title: guide.title,
+    description: guide.summary,
+    canonicalPath: onSiteTool ?? path,
+    openGraph: {
+      type: "article",
+      publishedTime: guide.publishedAt,
+      images: guide.image ? [guide.image] : undefined,
+    },
+  });
 }
 
 export default async function GuidePage({

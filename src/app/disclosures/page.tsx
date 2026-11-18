@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { disclosureDocs } from "@/lib/legal/disclosures";
-import { siteUrl } from "@/lib/site-url";
+import { pageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/disclosures",
   title: "Legal & policies",
   description:
     "Privacy, terms, and how PocketEdge operates as an information platform, not as a broker or advisor.",
-  alternates: { canonical: `${siteUrl()}/disclosures` },
-};
+});
 
 export default function DisclosuresIndexPage() {
   return (

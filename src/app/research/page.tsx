@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { ResearchFilters } from "@/components/research/ResearchFilters";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { Page, PageHeader } from "@/components/shell/Page";
 import { listArticles } from "@/lib/articles/catalog";
 import { listCompanies, listIndustries } from "@/lib/articles/taxonomy";
 import type { Verdict } from "@/lib/articles/types";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/research",
   title: "Research",
-};
+  description:
+    "Company memos and sector briefs on Indian equities: verdicts, key takeaways, and downloadable research dossiers.",
+});
 
 export default async function ResearchPage({
   searchParams,

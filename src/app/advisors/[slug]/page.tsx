@@ -8,6 +8,7 @@ import {
   getSebiAdvisor,
   sebiAdvisors,
 } from "@/lib/advisors";
+import { pageMetadata } from "@/lib/seo/metadata";
 
 export function generateStaticParams() {
   return sebiAdvisors
@@ -22,7 +23,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const advisor = getSebiAdvisor(slug);
-  return { title: advisor?.name ?? "Advisor" };
+  if (!advisor) return { title: "Advisor" };
+  const scope = advisor.globalAdvisory
+    ? "global advisory"
+    : advisor.globalInvesting
+      ? "global investing"
+      : categoryFullLabel(advisor.category);
+  return pageMetadata({
+    path: `/advisors/${slug}`,
+    title: advisor.name,
+    description: `${advisor.name} (${advisor.registration}) — ${scope}. Contact and official links on PocketEdge.`,
+  });
 }
 
 export default async function AdvisorPage({

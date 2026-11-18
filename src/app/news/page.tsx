@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { NewsMagazineCard, ResearchList } from "@/components/magazine/MagazineCards";
 import { Page, SoftChip } from "@/components/shell/Page";
 import { researchRailItems } from "@/lib/articles/research-rail";
 import { newsFeed } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: "/news",
   title: "News",
-};
+  description:
+    "India markets and business desk notes: what happened, what it means, and why investors should care.",
+});
 
 const topics = [
   { id: "all", label: "All" },
