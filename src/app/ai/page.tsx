@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { PramaanAgentChat } from "@/components/agent/PramaanAgentChat";
-import { pageMetadata, privatePageRobots } from "@/lib/seo/metadata";
+import { pageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = pageMetadata({
   path: "/ai",
   title: "AI team",
   description:
     "Talk to PocketEdge’s private AI team — a general market co-pilot and MF AI. Trader, Stock, Tax, and Macro are coming soon.",
-  robots: privatePageRobots,
 });
 
 export default function AiPage() {

@@ -4,6 +4,7 @@ export type UiBlock =
   | {
       kind: "table";
       title?: string;
+      /** `percent` = fraction (0.125) or legacy points if |v|>1.5; `percent_pts` = already in % (9.22). */
       columns: { key: string; label: string; format?: string }[];
       rows: Record<string, string | number | null>[];
     }

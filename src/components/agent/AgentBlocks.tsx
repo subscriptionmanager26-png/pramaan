@@ -1,11 +1,22 @@
 import { AgentMarkdown } from "@/components/agent/chat/AgentMarkdown";
 import type { AgentAction, OrderState, UiBlock } from "@/lib/agent/types";
 
+function formatPercent(value: number) {
+  return `${value.toLocaleString("en-IN", { maximumFractionDigits: 2 })}%`;
+}
+
+/** Fraction (0.125) or legacy percent points (9.22) when |v| > 1.5. */
+function formatPercentAuto(value: number) {
+  const display = Math.abs(value) > 1.5 ? value : value * 100;
+  return formatPercent(display);
+}
+
 function formatCell(value: string | number | null, format?: string) {
   if (value === null || value === undefined || value === "") return "—";
   if (typeof value !== "number") return value;
   if (format === "currency") return `₹${Math.round(value).toLocaleString("en-IN")}`;
-  if (format === "percent") return `${(value * 100).toLocaleString("en-IN", { maximumFractionDigits: 2 })}%`;
+  if (format === "percent_pts") return formatPercent(value);
+  if (format === "percent") return formatPercentAuto(value);
   return value.toLocaleString("en-IN");
 }
 

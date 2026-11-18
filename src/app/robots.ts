@@ -7,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/settings", "/activity", "/portfolio/holdings", "/feed", "/account", "/ai"],
     },
     sitemap: absoluteUrl("/sitemap.xml"),
   };

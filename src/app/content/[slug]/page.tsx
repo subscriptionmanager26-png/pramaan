@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { content, getContent } from "@/lib/data";
-import { pageMetadata, privatePageRobots } from "@/lib/seo/metadata";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { previewHeadline } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -20,7 +20,6 @@ export async function generateMetadata({
     path: `/content/${slug}`,
     title: previewHeadline(item.title, item.summary),
     description: "Redirect to the creator’s original post. PocketEdge does not host full text.",
-    robots: privatePageRobots,
   });
 }
 

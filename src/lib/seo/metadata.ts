@@ -61,8 +61,3 @@ export function pageMetadata(options: PageMetadataOptions): Metadata {
     ...(options.robots ? { robots: options.robots } : {}),
   };
 }
-
-export const privatePageRobots: Metadata["robots"] = {
-  index: false,
-  follow: false,
-};
