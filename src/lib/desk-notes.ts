@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-eu-cold-rolled-duties-november-2026",
+    title: "Europe imposed fresh duties on Indian cold-rolled steel",
+    summary:
+      "The European Commission began charging anti-dumping levies of up to 9.5% on certain cold-rolled flat steel from India from 17 November 2026, after a Eurofer complaint, hitting mills such as Tata Steel and JSW that sell coated sheet into the bloc.",
+    category: "industry",
+    companyOrSector: "Steel exports / EU trade",
+    publishedAt: "2026-11-18T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-eu-cold-rolled-duties-november-2026"),
+    keyTakeaways: [
+      "Reuters said duties of 9.5% took effect on 17 November 2026 on specific Indian cold-rolled flat products, part of a wider case covering five countries with rates up to 27.9%.",
+      "Tata Steel chief executive T V Narendran told reporters on 18 November that Indian and European producers disagree on whether exports should face the same carbon costs as EU-made steel.",
+      "Narendran separately warned that Chinese steel exports could reach about 130 million tonnes in 2026, adding pressure on Indian mills investing in new capacity.",
+    ],
+    body: [
+      "What's going on here?",
+      "European buyers use Indian cold-rolled and coated flat steel in autos, appliances, and construction. On 17 November 2026 the European Commission imposed anti-dumping duties on certain cold-rolled flat products from India, with a 9.5% rate cited for shipments from Tata Steel and JSW Steel in wire reporting tied to a Reuters story. The step follows a 2025 complaint from European steel association Eurofer. The commission's investigation pointed to government-linked measures that it said had distorted domestic iron ore prices in India, according to the same coverage. Duties are part of a broader measure on five origins, with the top tariff in the package reaching 27.9%. Speaking at the India Steel Conclave on 18 November, Tata Steel managing director T V Narendran said European producers want imported steel to carry the same carbon tax they pay locally, while Indian exporters resist an extra levy to access the EU market.",
+      "What does this mean?",
+      "Anti-dumping margins sit on top of freight and any carbon border charges, so landed costs for Indian sheet rise immediately for contracts not already priced in. Mills that counted on EU outlets for surplus cold-rolled volume may redirect cargoes to the Middle East, South-East Asia, or domestic customers, which can soften home-market prices if supply backs up. The ruling is separate from India's own debate on shielding local mills from Chinese imports, but both speak to a crowded global steel map. Tata Steel is expanding Kalinganagar and other sites while funding a green transition in the Netherlands and UK, so export friction in Europe adds a second policy headache beside surplus Chinese tonnage.",
+      "Why should I care?",
+      "If you buy steel for manufacturing or construction, ask suppliers whether EU-bound grades are being reallocated and whether domestic list prices change as mills seek alternate buyers. Investors in Tata Steel, JSW, and SAIL should read quarterly export mix and realisation data, not only day-ahead equity moves. Policy watchers should track whether New Delhi responds through WTO channels or opens fresh market access talks. Watch for commission review timelines, any Indian government statements on iron-ore pricing in trade filings, and monthly export statistics to Europe.",
+    ],
+  },
+  {
+    slug: "spicejet-board-approves-5500-crore-november-2026",
+    title: "SpiceJet's board cleared a plan to raise up to Rs 5,500 crore",
+    summary:
+      "SpiceJet Ltd said on 18 November 2026 that its board approved raising as much as Rs 5,500 crore through equity or other permitted instruments and lifting authorised share capital to Rs 7,500 crore, while Mumbai passengers still faced mass cancellations.",
+    category: "industry",
+    companyOrSector: "Aviation / SpiceJet",
+    publishedAt: "2026-11-18T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("spicejet-board-approves-5500-crore-november-2026"),
+    keyTakeaways: [
+      "Exchange disclosures on 18 November 2026 said the board approved a fundraise of up to Rs 5,500 crore subject to shareholder and regulatory approvals.",
+      "The same filing proposed increasing authorised share capital from Rs 2,000 crore to Rs 7,500 crore and noted talks with potential investors.",
+      "ANI reporting on 18 November cited a dozen SpiceJet cancellations from Mumbai on 17 November and long waits before passengers learned flights were dropped.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian airlines need working capital to pay lessors, fuel vendors, and airport charges before they can run a published schedule reliably. On 18 November 2026 SpiceJet Ltd informed stock exchanges that its board approved a proposal to raise up to Rs 5,500 crore through one or more routes, including equity and other permitted securities. The board also cleared increasing authorised share capital from Rs 2,000 crore to Rs 7,500 crore, steps that still require shareholder and regulator sign-off. The filing said directors were updated on investment discussions and asked management to close them quickly. Wire copy the same day described the carrier operating under cash-and-carry terms with vendors and struggling to match its winter timetable, with Mumbai passengers facing clusters of cancelled legs and hours-long gate waits.",
+      "What does this mean?",
+      "Board approval starts the capital process; cash only changes the operational story once money hits escrow accounts and lessors release aircraft. The authorised capital hike signals room for a large equity or convertible issue rather than a token top-up. Prior desk coverage already flagged wide gaps between filed winter movements and flown rotations, so travellers should treat bookings as contingent until cancellations stay low for several weeks after any funds arrive. A successful raise could fund fleet repairs, deferred payments, and schedule restoration, but dilution and pricing will matter to existing shareholders. Rivals IndiGo and Air India keep most domestic share, so each day of thin operations cedes revenue on routes SpiceJet once served with turboprops and narrow-bodies.",
+      "Why should I care?",
+      "If you hold SpiceJet tickets through December, keep backup options on the same corridor until the airline flies near its filed schedule consistently. Investors should read any term sheet for instrument type, use of proceeds, and whether new money is conditional on operational milestones. Regulators may continue comparing filed timetables with flown data even while fundraising progresses. Watch shareholder meeting notices, pricing in the eventual issue, Directorate General of Civil Aviation statements on schedule compliance, and weekly cancellation counts at busy airports.",
+    ],
+  },
+  {
+    slug: "india-psc-extension-norms-november-2026",
+    title: "India will grant longer oil and gas contract extensions with steeper profit sharing",
+    summary:
+      "New Delhi relaxed production sharing contract extension rules on 18 November 2026 so eligible fields can renew in blocks of up to 30 years, while operators pay extra profit petroleum to the government and nomination-style royalty during the added tenure.",
+    category: "industry",
+    companyOrSector: "Upstream oil and gas",
+    publishedAt: "2026-11-18T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-psc-extension-norms-november-2026"),
+    keyTakeaways: [
+      "Reporting on 18 November 2026 said extensions can run in instalments of up to 30 years for select Pre-NELP, small, medium, and discovered fields subject to reserve audits and development commitments.",
+      "Operators face an additional government profit-petroleum share of 10% in the first 10 years of extension, 5% in the next decade, and 2.5% for each 10-year block after that, plus nomination-regime royalty and cess.",
+      "Analyst commentary the same day named Cairn's Rajasthan and Ravva assets, Hindustan Oil Exploration, and ONGC joint ventures as likely beneficiaries of longer tenure.",
+    ],
+    body: [
+      "What's going on here?",
+      "Older production sharing contracts set a fixed production period; when those years end, operators must either win an extension under current policy or hand the field back to the nominee explorer. On 18 November 2026 wire reports said the government relaxed extension norms so eligible oil and gas blocks can renew until the end of economic field life, granted in slices of up to 30 years. The framework covers select Pre-NELP blocks and small, medium, and discovered fields. Each extension still needs independent reserve certification, firm development plans, and regulatory clearances. The concession is not free: companies must share extra profit petroleum with the government, starting with an additional 10% in the first 10 years of extension, 5% over the following decade, and 2.5% for each subsequent 10-year slice, and they must pay royalty and cess at nomination-regime rates through the extended period.",
+      "What does this mean?",
+      "Longer tenure lets operators justify enhanced recovery and late-life capex because revenue streams are visible beyond the original contract clock. Cairn's Rajasthan and Ravva fields, Hindustan Oil Exploration's Pre-NELP portfolio, and ONGC's joint ventures are among the assets analysts flagged on 18 November. Higher government take can still erode returns if crude prices soften, so boards will model profit petroleum steps before approving new wells. The policy sits beside a tense moment for private upstream players after Vedanta lost control of the Cambay offshore block when an extension bid failed, a reminder that not every mature asset automatically qualifies.",
+      "Why should I care?",
+      "If you follow energy supply, longer productive life on legacy fields can slow import dependence when investments in enhanced recovery go ahead. Investors in Vedanta, HOEC, Oil India, and ONGC should compare extension economics against the extra profit petroleum ladder rather than treating the headline as a pure positive. Service contractors near ageing fields may see slower decommissioning timelines if extensions clear. Watch petroleum ministry notifications listing eligible blocks, operator filings on reserve audits, and quarterly production guidance after companies recalculate field life.",
+    ],
+  },
+  {
+    slug: "sagarmala-blue-bond-withdrawn-november-2026",
+    title: "Sagarmala Finance pulled its maiden blue bond when yields topped 8%",
+    summary:
+      "Sagarmala Finance Corporation did not go ahead with a planned Rs 600 crore blue-labelled bond issue after investors demanded yields above 8%, a Business Line column on 18 November 2026 said, despite AA+ ratings and maritime lending use of proceeds.",
+    category: "industry",
+    companyOrSector: "Maritime finance",
+    publishedAt: "2026-11-18T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sagarmala-blue-bond-withdrawn-november-2026"),
+    keyTakeaways: [
+      "The intended issue carried a Rs 600 crore base with a Rs 500 crore greenshoe, 10-year tenure, AA+ ratings from ICRA and CARE, and SBI Capital Markets as arranger.",
+      "Proceeds were earmarked for maritime sector lending, greenfield ports, and coastal roads within the ongoing financial year, according to the 18 November commentary.",
+      "Investors reportedly sought yields above 8% on launch day while benchmark 10-year government securities traded near multi-month highs.",
+    ],
+    body: [
+      "What's going on here?",
+      "Blue bonds label proceeds for ocean, coastal, or water-linked projects, a niche next to green bonds in India's sustainable debt market. Commentary published on 18 November 2026 said Sagarmala Finance Corporation Ltd planned India's first explicitly blue-labelled corporate bond: Rs 600 crore with a Rs 500 crore greenshoe, 10-year maturity, AA+ credit grades, and SBI Capital Markets as arranger. Money was tagged for maritime loans, greenfield ports, and coastal road networks in the current fiscal year. On the bidding day the issuer walked away because investors wanted coupons above 8%, the piece said. Vadodara Municipal Corporation had issued a smaller Rs 200 crore blue bond earlier in 2025, but a central public-sector style maiden issue would have been a bigger signal for insurers and provident funds seeking long infrastructure paper.",
+      "What does this mean?",
+      "When sovereign and high-quality corporate yields rise, labelled bonds rarely secure a concession unless the market believes the story lowers risk. Sagarmala's withdrawal highlights an asset-liability mismatch problem noted in the same column: maritime lending often runs longer than the company's existing liabilities, so a 10-year bond was meant to extend the funding side. Missing the window leaves port and coastal projects dependent on bank lines or vanilla bonds without the blue branding that might attract ESG mandates later. Regulators have yet to offer a dedicated blue-bond framework comparable to green debt rules, which the commentary said makes verification and investor comfort harder.",
+      "Why should I care?",
+      "If you manage long-duration insurance or pension money, the episode sets a live benchmark for where AA+ maritime issuers must price in late 2026. Port developers and logistics firms bidding on Sagarmala-linked loans should expect tighter bank timelines until a bond return succeeds. Policy readers should watch whether SEBI or the finance ministry publishes blue-bond guidance and whether Sagarmala reprices a vanilla issue without the label. Track the next attempt at public issuance, movement in 10-year G-Sec yields, and ministry announcements on coastal project financing.",
+    ],
+  },
+  {
     slug: "sebi-mtf-free-float-cap-november-2026",
     title: "SEBI may cap margin loans against thinly traded stocks",
     summary:
@@ -13032,6 +13128,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-eu-cold-rolled-duties-november-2026": "policy",
+  "spicejet-board-approves-5500-crore-november-2026": "companies",
+  "india-psc-extension-norms-november-2026": "policy",
+  "sagarmala-blue-bond-withdrawn-november-2026": "policy",
   "sebi-mtf-free-float-cap-november-2026": "policy",
   "tata-steel-kalinganagar-hydrogen-november-2026": "policy",
   "ashoka-buildcon-vadodara-mumbai-nhai-november-2026": "companies",
