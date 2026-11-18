@@ -1963,6 +1963,54 @@ def rbi_api_cyber(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([860, 340, 940, 500], fill=RED)
 
 
+def infosys_ntt_docomo_jv(d: ImageDraw.ImageDraw) -> None:
+    """Partnership arc across telecom tower and data flow."""
+    d.rectangle([100, 200, 480, 560], fill=BLUE)
+    d.polygon([(300, 240), (380, 320), (380, 500), (300, 560), (220, 500), (220, 320)], fill=YELLOW)
+    d.line([(700, 360), (1180, 360)], fill=GOLD, width=6)
+    for x in range(720, 1160, 80):
+        d.ellipse([x, 300, x + 40, 340], fill=RED)
+
+
+def psb_business_300_lakh(d: ImageDraw.ImageDraw) -> None:
+    """Rising loan bars from public-sector bank facade."""
+    d.rectangle([120, 180, 460, 580], fill=BLUE)
+    d.rectangle([200, 260, 380, 520], fill=CREAM)
+    for i, h in enumerate([140, 220, 300, 380, 440]):
+        x = 620 + i * 90
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, GOLD, BLUE, YELLOW, RED][i])
+
+
+def it_contract_staffing(d: ImageDraw.ImageDraw) -> None:
+    """Fast contract bars overtaking slow permanent ladder."""
+    d.line([(200, 560), (200, 180)], fill=GOLD, width=4)
+    for y in range(200, 520, 80):
+        d.rectangle([220, y, 460, y + 40], fill=BLUE)
+    for i, h in enumerate([180, 280, 400, 520]):
+        x = 700 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=RED)
+
+
+def biocon_pebrilzo_eu(d: ImageDraw.ImageDraw) -> None:
+    """Laboratory motif with approval shield."""
+    d.rounded_rectangle([120, 220, 440, 540], radius=28, fill=BLUE)
+    d.ellipse([220, 320, 340, 440], fill=YELLOW)
+    d.polygon([(720, 260), (900, 360), (720, 460)], fill=RED)
+    d.rectangle([960, 300, 1120, 420], fill=GOLD)
+
+
+def sbi_mf_pnb_distribution(d: ImageDraw.ImageDraw) -> None:
+    """Branch doorways feeding mutual-fund vault."""
+    for i in range(3):
+        x = 100 + i * 140
+        d.rectangle([x, 260, x + 100, 560], fill=BLUE)
+        d.rectangle([x + 20, 320, x + 80, 500], fill=CREAM)
+    d.rounded_rectangle([640, 240, 1100, 520], radius=24, fill=RED)
+    d.ellipse([780, 340, 960, 420], fill=GOLD)
+    for i, h in enumerate([100, 160, 220]):
+        d.rectangle([1000 + i * 50, 520 - h, 1040 + i * 50, 520], fill=YELLOW)
+
+
 def fairfax_iifl_block(d: ImageDraw.ImageDraw) -> None:
     """Stake blocks moving between vaults."""
     d.rounded_rectangle([100, 280, 420, 520], radius=24, fill=BLUE)
@@ -1984,6 +2032,11 @@ def groww_ribbit_block(d: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    save("infosys-ntt-docomo-jv-november-2026", infosys_ntt_docomo_jv)
+    save("india-psb-business-300-lakh-crore-november-2026", psb_business_300_lakh)
+    save("india-it-contract-staffing-faster-november-2026", it_contract_staffing)
+    save("biocon-pebrilzo-eu-approval-november-2026", biocon_pebrilzo_eu)
+    save("sbi-mf-pnb-distribution-november-2026", sbi_mf_pnb_distribution)
     save("gold-loan-federation-rbi-capital-november-2026", gold_loan_fgloc)
     save("prestige-mumbai-andheri-office-jv-november-2026", prestige_mumbai_office)
     save("ndr-auto-dya-hyundai-kia-seats-november-2026", ndr_auto_seats)

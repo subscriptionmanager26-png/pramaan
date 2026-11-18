@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "infosys-ntt-docomo-jv-november-2026",
+    title: "Infosys will form a Japan joint venture with NTT Docomo",
+    summary:
+      "Infosys Ltd said on 18 November 2026 that its Singapore subsidiary will sign a joint venture agreement with NTT Docomo, extending Indian IT services into a telecom partner's home market through a separately capitalised entity.",
+    category: "industry",
+    companyOrSector: "IT services / telecom",
+    publishedAt: "2026-11-18T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("infosys-ntt-docomo-jv-november-2026"),
+    keyTakeaways: [
+      "An exchange filing on 18 November 2026 said Infosys Singapore will enter a joint venture agreement with NTT Docomo.",
+      "Wire copy did not disclose ownership splits, capital commitments, or a product scope when the alert moved.",
+      "Japanese carriers have been restructuring legacy networks while selling cloud and enterprise digitisation projects to corporate clients.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large IT exporters often use joint ventures when a domestic telecom or industrial partner must sit on the cap table to win local contracts. On 18 November 2026, Infosys Ltd informed stock exchanges that Infosys Singapore Pte Ltd will enter into a joint venture agreement with NTT Docomo Inc. The disclosure was brief and did not spell out equity contributions, governance rights, or which services lines the venture would sell first. NTT Docomo is one of Japan's major mobile operators and has been repositioning beyond pure connectivity toward enterprise solutions. Infosys already runs global application and infrastructure contracts; a Docomo-linked entity could package those skills for Japanese enterprises that prefer buying through a familiar telecom brand.",
+      "What does this mean?",
+      "Until term sheets become public, investors should treat the filing as a direction signal rather than a revenue forecast. Joint ventures can take quarters to win their first material statement of work because boards must align on go-to-market rules and compliance with Japan's telecom and data rules. For Infosys employees, the structure may create a second hiring lane for Japanese-speaking architects and account managers without folding everyone into the parent payroll. Rivals TCS, NTT Data, and Fujitsu already compete in the same accounts, so pricing and delivery geography will matter. If the venture focuses on 5G edge, billing modernisation, or network automation, margins may resemble managed services rather than the low-growth maintenance work that has weighed on India's IT sector this year.",
+      "Why should I care?",
+      "If you work in enterprise technology sales, watch whether the venture pursues Japan-only mandates or becomes a beachhead for cross-border manufacturing clients. Infosys shareholders should wait for board-approved capital calls before modeling earnings accretion. Corporate buyers in Japan should ask whether contracts sit with the JV or the parent when data residency questions arise. Track a fuller exchange filing with shareholding ratios, any exclusivity on Docomo accounts, and first customer wins named in quarterly commentary.",
+    ],
+  },
+  {
+    slug: "india-psb-business-300-lakh-crore-november-2026",
+    title: "Public sector banks crossed three hundred lakh crore of business",
+    summary:
+      "Ministry of Finance data on 18 November 2026 showed public sector banks' combined business rose 15.5% year on year to about Rs 301.6 lakh crore at September-end, with advances up 18.8% and H1 profit up 16.9%.",
+    category: "industry",
+    companyOrSector: "Public sector banks",
+    publishedAt: "2026-11-18T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-psb-business-300-lakh-crore-november-2026"),
+    keyTakeaways: [
+      "Aggregate PSB deposits reached about Rs 275 lakh crore and advances about Rs 136.4 lakh crore as of 30 September 2026.",
+      "Retail, agricultural, and MSME loan books grew 17%, 19.5%, and 20.4% respectively in the ministry release.",
+      "The gross non-performing asset ratio fell to 1.69% while the tier-one style capital adequacy measure improved to 16.89%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Public sector banks still carry most of India's household and small-business credit even as private lenders and NBFCs expand. On 18 November 2026, the Ministry of Finance published half-year performance statistics showing their combined business crossed Rs 300 lakh crore for the first time, reaching about Rs 301.6 lakh crore as of 30 September 2026. That metric adds deposits and advances, so it tracks how large the state-owned banking footprint has become, not a single balance-sheet line. Deposits grew 13.1% year on year to roughly Rs 275 lakh crore while advances expanded 18.8% to about Rs 136.4 lakh crore. Net profit for April-September 2026 rose 16.9% to about Rs 1.10 lakh crore and operating profit increased 13.9%. The release highlighted growth across retail, farm, and MSME portfolios, segments where festive demand and working-capital needs often show up before headline gross domestic product prints.",
+      "What does this mean?",
+      "Faster loan growth than deposit growth can tighten liquidity at individual banks unless they raise certificates of deposit or lean on parent treasury support. The ministry linked improved returns to governance reforms, digital channels, and lower credit costs. A gross NPA ratio of 1.69% and net NPA near 0.33% suggest prior bad-loan clean-ups are still paying off, though slippages must be watched after rapid MSME expansion. Cost-to-income ratios improved to 47.38%, which matters because state banks compete on branches and rural reach, not only on app experience. For borrowers, active PSB competition can keep certain home, tractor, and small-business loan categories well supplied even when wholesale funding markets twitch.",
+      "Why should I care?",
+      "If you run a shop or farm operation, compare PSB branch schemes against NBFC offers this quarter because state lenders are visibly chasing MSME and agricultural balances. Investors in SBI, PNB, and Bank of Baroda should read the release alongside individual bank slides to see who is driving the advance growth. Policy readers should note the ministry's emphasis on digital transformation as proof points for continued consolidation and governance oversight. Watch December-quarter slippage data, deposit repricing after recent rate moves, and whether private banks cede or defend share in the same retail categories.",
+    ],
+  },
+  {
+    slug: "india-it-contract-staffing-faster-november-2026",
+    title: "IT contract hiring grew four times faster than permanent jobs",
+    summary:
+      "A CIEL HR report cited on 18 November 2026 said India's technology contract staffing rose 10.1% in fiscal 2026 while permanent tech employment grew 2.3%, as demand for AI and cybersecurity skills pushes flexible hiring.",
+    category: "industry",
+    companyOrSector: "Technology employment",
+    publishedAt: "2026-11-18T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-it-contract-staffing-faster-november-2026"),
+    keyTakeaways: [
+      "CIEL HR said contract staffing expanded 10.1% versus 2.3% growth in permanent technology jobs during FY26.",
+      "Demand for AI and machine learning skills rose 86.5% and cybersecurity roles 81.8% in the staffing firm's research.",
+      "Contract roles accounted for nearly 25% of positions in Indian global capability centres by the end of 2026, up from about 15%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian technology companies adjust headcount through a mix of full-time hires and project-based contractors, especially when clients want specialists for short programs. Coverage on 18 November 2026 cited a CIEL HR Services report showing contract staffing in technology grew 10.1% in fiscal 2026 while permanent technology employment rose only 2.3%. Sector revenue growth of 6.1% in the same period was faster than permanent hiring, which the report framed as a deliberate shift toward flexible talent deployment. Separate figures in the same research said demand for artificial intelligence and machine learning skills climbed 86.5% and cybersecurity roles 81.8%. Global capability centres in India reportedly sourced about a quarter of roles through contractors by the end of 2026, compared with near 15% in earlier years. Large listed IT firms also logged higher subcontracting expenses in recent results.",
+      "What does this mean?",
+      "When projects need scarce skills, vendors hire consultants for defined durations instead of carrying them on bench between phases. That can protect margins on fixed-price deals but may frustrate employees seeking stable benefits. For graduates, contract routes can be an entry point into GCC campuses even when full-time conversion slots are limited. Clients gain speed but must manage knowledge continuity when contractors rotate. Regulators and tax authorities continue to scrutinise whether long-tenure contractors are effectively permanent staff. The pattern sits alongside softer revenue guidance at several Indian IT majors, suggesting employers are cautious on fixed payroll even while buying niche expertise.",
+      "Why should I care?",
+      "If you negotiate a job offer, ask how long the role is funded and whether conversion to permanent employment is realistic. HR teams should review compliance on contractor tenure and social security obligations. Investors in IT services should compare subcontracting lines in quarterly filings, not only net headcount. Policy watchers may debate whether gig-style tech labour needs clearer benefits rules. Watch the next ministry and industry employment surveys, campus placement packages for AI specialisations, and whether GCCs disclose contractor share in annual sustainability reports.",
+    ],
+  },
+  {
+    slug: "biocon-pebrilzo-eu-approval-november-2026",
+    title: "Europe approved Biocon's breast cancer biosimilar Pebrilzo",
+    summary:
+      "Biocon Ltd said on 18 November 2026 that the European Commission cleared Pebrilzo, its pertuzumab biosimilar for HER2-positive breast cancer, calling it the first such product approved under the bloc's tailored clinical pathway.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / oncology",
+    publishedAt: "2026-11-18T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("biocon-pebrilzo-eu-approval-november-2026"),
+    keyTakeaways: [
+      "Chief executive Shreehas Tambe said the commission approval is Biocon's fifth oncology biosimilar cleared in both Europe and the United States.",
+      "Pebrilzo is indicated for HER2-positive breast cancer regimens that combine pertuzumab with trastuzumab and chemotherapy.",
+      "The company tied the clearance to the European Union's newer streamlined evidence rules for certain biosimilar filings.",
+    ],
+    body: [
+      "What's going on here?",
+      "Pertuzumab is a high-cost biologic used alongside trastuzumab in HER2-positive breast cancer treatment. Biosimilar makers must run clinical and analytical programmes before regulators allow interchangeable marketing. On 18 November 2026, Biocon Ltd said the European Commission approved Pebrilzo, its pertuzumab biosimilar, for the same combination therapy settings as the reference drug across neoadjuvant, adjuvant, and metastatic care pathways described in the company statement. Chief executive Shreehas Tambe said the decision is the first pertuzumab biosimilar approved under the European Union's tailored clinical pathway, a route designed to reduce duplicate trials when science already matches the originator closely. Biocon framed the win as its fifth oncology biosimilar approved in both Europe and the United States, strengthening a portfolio that already includes other targeted cancer therapies.",
+      "What does this mean?",
+      "European approval lets Biocon begin commercial discussions with hospital tenders and wholesalers, subject to country-level pricing and pharmacovigilance rules. Hospitals that buy trastuzumab biosimilars may now negotiate dual sourcing on pertuzumab, which can lower total regimen costs for public payers. Biocon still needs manufacturing campaigns, cold-chain logistics, and physician education before volume shows up in revenue. The United States path may follow separate Food and Drug Administration timelines. Domestic Indian patients may not see immediate price effects, but export earnings from EU sales support Biocon's biologics investments in Bengaluru.",
+      "Why should I care?",
+      "If you follow health-care budgets, track whether state schemes add Pebrilzo to approved lists after import parity clears. Oncology patients should rely on physician advice on switching; biosimilar acceptance varies by hospital protocol. Biocon investors should read management guidance on launch quarters and any royalty obligations carried from earlier patent settlements with Roche's Genentech unit. Watch country-by-country reimbursement decisions, competitor filings for other pertuzumab copies, and US FDA review milestones if the company pursues near-term American launches.",
+    ],
+  },
+  {
+    slug: "sbi-mf-pnb-distribution-november-2026",
+    title: "SBI Mutual Fund will sell schemes through Punjab National Bank branches",
+    summary:
+      "SBI Funds Management said on 18 November 2026 it signed a distribution pact with Punjab National Bank, starting at more than 3,200 wealth-service branches with plans to widen access to low and moderate-risk funds.",
+    category: "industry",
+    companyOrSector: "Mutual funds / distribution",
+    publishedAt: "2026-11-18T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-mf-pnb-distribution-november-2026"),
+    keyTakeaways: [
+      "Chief executive Debasish Mishra said the tie-up will begin at PNB branches that already run wealth desks, then expand toward the lender's wider network.",
+      "PNB reported more than 10,300 branches and a customer base Mishra estimated at 15 to 20 crore people.",
+      "SBI MF's parent-channel assets were near Rs 3 lakh crore of its roughly Rs 13.09 lakh crore average AUM in the July-September quarter.",
+    ],
+    body: [
+      "What's going on here?",
+      "Mutual fund houses depend on bank counters and digital platforms to reach first-time investors outside major metros. On 18 November 2026, reporting from an interview with SBI Funds Management managing director Debasish Mishra described a strategic partnership with Punjab National Bank to distribute SBI Mutual Fund schemes. The rollout will start at more than 3,200 PNB branches that already offer wealth management services, with APIs and co-branded digital onboarding tools such as the Mitra Portal and InvestEG app made available to PNB customers. Mishra said the fund house is in talks with additional public sector lenders but declined to name them while discussions remain internal. SBI Mutual Fund already sources a large share of assets through its parent State Bank of India's branches; expanding through PNB is part of a stated goal to become a national distributor rather than a single-bank captive.",
+      "What does this mean?",
+      "Banks earn trail commissions when customers buy mutual funds at branches, while fund houses gain reach without building proprietary physical networks in every district. Mishra emphasised low to moderate risk schemes for new investors rather than pushing complex products at rural counters on day one. For PNB, the partnership can lift fee income and give wealth desks a fuller product shelf. Competition among asset managers may intensify as other PSU banks sign similar deals. The near-term focus is customer acquisition; assets under management will lag because small ticket systematic investment plans take time to compound.",
+      "Why should I care?",
+      "If you bank with PNB and have only used fixed deposits, ask what diversified funds are offered at your branch and whether hybrid or debt-oriented plans fit your horizon. Advisers at rival fund houses should expect PSU bank customers to see more on-counter pitches. Regulators will still enforce suitability and know-your-client rules regardless of branding. Watch how many PNB branches go live this financial year, net inflows reported in category-wise mutual fund data, and whether other PSU tie-ups announce similar wealth-desk rollouts.",
+    ],
+  },
+  {
     slug: "india-eu-cold-rolled-duties-november-2026",
     title: "Europe imposed fresh duties on Indian cold-rolled steel",
     summary:
@@ -13128,6 +13248,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "infosys-ntt-docomo-jv-november-2026": "companies",
+  "india-psb-business-300-lakh-crore-november-2026": "markets",
+  "india-it-contract-staffing-faster-november-2026": "policy",
+  "biocon-pebrilzo-eu-approval-november-2026": "companies",
+  "sbi-mf-pnb-distribution-november-2026": "markets",
   "india-eu-cold-rolled-duties-november-2026": "policy",
   "spicejet-board-approves-5500-crore-november-2026": "companies",
   "india-psc-extension-norms-november-2026": "policy",
