@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-mtf-free-float-cap-november-2026",
+    title: "SEBI may cap margin loans against thinly traded stocks",
+    summary:
+      "Reporting on 17 November 2026 said India's market regulator is weighing a free-float limit on margin trading facility books, which could push leveraged bets away from small counters and toward more liquid shares.",
+    category: "industry",
+    companyOrSector: "SEBI / retail broking",
+    publishedAt: "2026-11-18T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-mtf-free-float-cap-november-2026"),
+    keyTakeaways: [
+      "Reuters reported SEBI is considering capping MTF exposure at 5% or 10% of a stock's free float.",
+      "India's MTF book has roughly doubled to about Rs 1.5 lakh crore in two years, Jefferies estimates.",
+      "Brokerage notes say most of today's MTF stock is still within a 10% free-float ceiling, but a 5% cap would hit a larger slice.",
+    ],
+    body: [
+      "What's going on here?",
+      "Margin trading lets stock buyers borrow from brokers to buy more shares than their cash would cover, using the shares themselves as collateral. The Margin Trading Facility book in India has grown quickly as retail activity expanded after 2024. Reporting on 17 November 2026, citing people familiar with the matter, said the Securities and Exchange Board of India is considering limits tied to how much of a company actually trades in the open market. The idea is to stop concentrated leverage in shares with shallow liquidity. Follow-up analysis from Jefferies and Macquarie in wire stories on 18 November said only a small share of the aggregate MTF book today exceeds a 10% free-float threshold, but the share at risk rises materially if regulators pick the tighter 5% option.",
+      "What does this mean?",
+      "When a cap binds, brokers must cut fresh MTF limits on affected stocks or refuse top-ups until exposure falls. Retail traders who leaned on leverage in mid-cap and small-cap names would need to liquidate other holdings, bring cash, or shift bets into Nifty-heavy shares with deeper turnover. Exchanges and depositories earn only a slice of revenue from cash-market activity linked to MTF, so analysts expect the earnings hit to stay modest if flows migrate toward liquid stocks rather than disappear. Digital brokers such as Groww have smaller MTF penetration than bank-backed peers, which may cushion their books. The policy is not final: SEBI has not published draft rules, and broking industry lobby groups often negotiate implementation timelines.",
+      "Why should I care?",
+      "If you use MTF, check how much of your pledged stock is in thinly traded names and whether your broker already warns on concentration. Investors in listed brokers, exchanges, and CDSL should read management comments on MTF mix rather than headline stock moves after the Reuters report. Households who do not use leverage still face indirect effects if forced selling in small caps adds volatility on busy days. Watch for a formal SEBI consultation paper, any phased compliance window, and monthly MTF disclosure data once rules firm up.",
+    ],
+  },
+  {
+    slug: "tata-steel-kalinganagar-hydrogen-november-2026",
+    title: "Tata Steel will make hydrogen from waste gases at Kalinganagar",
+    summary:
+      "On 18 November 2026 Tata Steel said it is planning a hydrogen production project that uses by-product gases from its Kalinganagar steel plant in Odisha, as the CEO separately urged government action on cheap Chinese steel imports.",
+    category: "industry",
+    companyOrSector: "Steel / green hydrogen",
+    publishedAt: "2026-11-18T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-steel-kalinganagar-hydrogen-november-2026"),
+    keyTakeaways: [
+      "Tata Steel disclosed the Kalinganagar hydrogen plan in an exchange statement on 18 November 2026.",
+      "Chief executive T V Narendran on the same day said Chinese finished steel imports remain a threat and industry talks with government on protection are ongoing.",
+      "Narendran said domestic iron ore costs are rising and most coking coal still comes from Australia, with no plan to buy overseas coal mines.",
+    ],
+    body: [
+      "What's going on here?",
+      "Integrated steel plants vent and burn off gases from blast furnaces and coke ovens. Those streams can be captured and reformed into hydrogen instead of being flared. Tata Steel told stock exchanges on 18 November 2026 that it is planning a hydrogen production project using off-gases from its Kalinganagar complex in Odisha. The filing gave few commercial details but signals the group is experimenting with circular use of plant gases as India pushes steelmakers toward lower-carbon routes. On the same day, speaking to reporters in New Delhi, chief executive T V Narendran said imports of finished steel from China remain a threat to domestic mills that are spending heavily on new capacity. He said the steel industry is in continuing discussions with government on measures to shield local producers, and that iron ore costs inside India are climbing even as coking coal is sourced mainly from Australia.",
+      "What does this mean?",
+      "Hydrogen from off-gases is not a full green-steel pivot, but it can trim fuel purchases and support pilot uses in downstream processes if purity and volume economics work. For Tata Steel, Kalinganagar is a large coastal hub where any successful gas-capture loop can be copied across other integrated sites. The import comments sit in a separate policy lane: China supplied nearly a third of India's finished steel imports in the first half of FY27 according to prior wire reporting, while the ministry has so far been reluctant to add fresh trade barriers. Domestic users of long products and sheets face a tug of war between lower import prices and the need for local supply security. Rising ore costs squeeze margins unless companies pass through prices or secure captive mines.",
+      "Why should I care?",
+      "If you buy steel for construction or manufacturing, track whether policy moves beyond talk toward duties or licensing changes that alter landed prices from China. Investors in Tata Steel, JSW, and SAIL should separate decarbonisation capex timelines from near-term spread moves driven by ore and coal. Engineers and local vendors near Kalinganagar should watch EPC tenders if the hydrogen project moves to board approval. Follow Tata Steel's next capital-allocation statements, any steel ministry notification on import curbs, and quarterly commentary on Chinese shipment volumes.",
+    ],
+  },
+  {
+    slug: "ashoka-buildcon-vadodara-mumbai-nhai-november-2026",
+    title: "Ashoka Buildcon won a Rs 1,465 crore NHAI expressway contract",
+    summary:
+      "Ashoka Buildcon emerged as the lowest bidder on 18 November 2026 for a Rs 1,465 crore National Highways Authority of India package to finish a 35.4 km stretch of the Vadodara-Mumbai Expressway in Gujarat.",
+    category: "industry",
+    companyOrSector: "Roads / infrastructure",
+    publishedAt: "2026-11-18T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ashoka-buildcon-vadodara-mumbai-nhai-november-2026"),
+    keyTakeaways: [
+      "The NHAI package excludes GST and covers the Jujuwa-Gandeva section on the eight-lane Vadodara-Mumbai Expressway.",
+      "Wire reports on 18 November said Ashoka Buildcon shares reacted positively after the L1 declaration.",
+      "Large expressway awards depend on land availability, aggregate supply, and NHAI's staged payment schedules.",
+    ],
+    body: [
+      "What's going on here?",
+      "The Vadodara-Mumbai Expressway is meant to shorten haul times between western India's industrial belt and the Mumbai port region. On 18 November 2026, Ashoka Buildcon said it was declared the lowest bidder for a National Highways Authority of India contract worth Rs 1,465 crore before goods and services tax. The work covers about 35.4 kilometres between Jujuwa and Gandeva in Gujarat on the eight-lane corridor. NHAI awards such packages after technical and financial bids; the L1 contractor still signs agreements and posts performance security before work orders flow. Market wires the same morning linked the announcement with active trading in Ashoka Buildcon stock, though the desk note focuses on the project economics rather than the daily price.",
+      "What does this mean?",
+      "Road builders earn revenue across multi-year construction milestones, so a single large win lengthens the order book but ties up equipment and working capital until NHAI certifies progress. Ashoka's concentration in highway engineering means success on the expressway stretch influences how aggressively it can bid on parallel NHAI tenders in Maharashtra and Madhya Pradesh. For logistics firms and manufacturers along the corridor, earlier completion reduces truck hours between Vadodara chemical hubs and Mumbai consumption centres. Competitors that lost the bid may redirect idle paving fleets to other NHAI pipelines or state highway programmes.",
+      "Why should I care?",
+      "If you operate fleets between Gujarat and Maharashtra, model toll and fuel savings once NHAI publishes opening timelines for this segment. Investors in Ashoka and peer contractors should read the formal work order for margin assumptions, escalation clauses, and completion penalties. Local cement and bitumen suppliers near Bharuch and Surat may see tender spikes when construction ramps. Watch NHAI's financial approval letter, Ashoka's disclosure on bank guarantees, and quarterly execution updates in investor presentations.",
+    ],
+  },
+  {
     slug: "gold-loan-federation-rbi-capital-november-2026",
     title: "Gold lenders formed a federation to ask RBI for easier capital rules",
     summary:
@@ -12960,6 +13032,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-mtf-free-float-cap-november-2026": "policy",
+  "tata-steel-kalinganagar-hydrogen-november-2026": "policy",
+  "ashoka-buildcon-vadodara-mumbai-nhai-november-2026": "companies",
   "gold-loan-federation-rbi-capital-november-2026": "policy",
   "prestige-mumbai-andheri-office-jv-november-2026": "markets",
   "ndr-auto-dya-hyundai-kia-seats-november-2026": "companies",
