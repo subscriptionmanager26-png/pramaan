@@ -1377,6 +1377,54 @@ def india_defence_capex_budget_ask(d: ImageDraw.ImageDraw) -> None:
     d.line([(620, 560), (1180, 560)], fill=GOLD, width=3)
 
 
+def go_digit_gift_city_ifsca(d: ImageDraw.ImageDraw) -> None:
+    """IFSC tower motif; shield over policy gate."""
+    d.polygon([(200, 180), (280, 140), (360, 180), (360, 520), (200, 520)], fill=BLUE)
+    for y in range(220, 480, 60):
+        d.rectangle([220, y, 340, y + 28], fill=CREAM)
+    d.polygon([(700, 260), (820, 200), (940, 260), (940, 480), (700, 480)], fill=RED)
+    d.ellipse([760, 300, 880, 420], fill=YELLOW)
+    d.line([(600, 400), (700, 360)], fill=GOLD, width=4)
+    d.polygon([(1040, 320), (1100, 380), (1040, 440), (980, 380)], fill=GOLD)
+
+
+def india_refinery_throughput_october(d: ImageDraw.ImageDraw) -> None:
+    """Refinery stack left; rising crude bars right."""
+    d.rectangle([100, 200, 220, 560], fill=BLUE)
+    d.rectangle([240, 260, 360, 560], fill=RED)
+    d.ellipse([160, 160, 300, 240], fill=YELLOW)
+    d.rectangle([400, 320, 480, 560], fill=BLUE)
+    for i, h in enumerate([180, 240, 300, 360, 420, 480]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW, RED, BLUE, YELLOW][i])
+    d.line([(620, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(520, 400), (600, 360), (600, 440)], fill=GOLD)
+
+
+def coal_india_rare_earth_magnet_loi(d: ImageDraw.ImageDraw) -> None:
+    """Magnet horseshoe; order blocks rising."""
+    d.arc([80, 220, 400, 540], 200, 340, fill=RED, width=28)
+    d.arc([80, 220, 400, 540], 20, 160, fill=BLUE, width=28)
+    d.rectangle([320, 280, 420, 500], fill=GOLD)
+    for i, h in enumerate([120, 180, 240, 300, 360]):
+        x = 640 + i * 95
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[BLUE, YELLOW, RED, BLUE, YELLOW][i])
+    d.polygon([(560, 200), (620, 160), (680, 200), (680, 360), (560, 360)], fill=RED)
+
+
+def ashoka_diriyah_cancel(d: ImageDraw.ImageDraw) -> None:
+    """Construction scaffold; pause gate over chevrons."""
+    d.rectangle([120, 180, 480, 560], outline=BLUE, width=6)
+    for y in range(200, 540, 80):
+        d.line([(140, y), (460, y)], fill=GOLD, width=2)
+    for x in range(180, 440, 80):
+        d.line([(x, 200), (x, 520)], fill=GOLD, width=2)
+    d.rectangle([700, 280, 900, 480], fill=RED)
+    d.line([(760, 340), (840, 420)], fill=CREAM, width=14)
+    d.line([(840, 340), (760, 420)], fill=CREAM, width=14)
+    d.polygon([(980, 400), (1040, 360), (1100, 400), (1100, 520), (980, 520)], fill=YELLOW)
+
+
 def india_upi_merchant_fee_open(d: ImageDraw.ImageDraw) -> None:
     """QR tile left; question-mark fee ladder right."""
     d.rectangle([120, 220, 420, 520], fill=BLUE)
@@ -2290,6 +2338,10 @@ def main() -> None:
     save("india-bulk-scotch-162-duty-november-2026", india_bulk_scotch_162_duty)
     save("india-defence-capex-budget-ask-november-2026", india_defence_capex_budget_ask)
     save("india-upi-merchant-fee-still-open-november-2026", india_upi_merchant_fee_open)
+    save("go-digit-gift-city-ifsca-november-2026", go_digit_gift_city_ifsca)
+    save("india-refinery-throughput-october-2026", india_refinery_throughput_october)
+    save("coal-india-rare-earth-magnet-loi-november-2026", coal_india_rare_earth_magnet_loi)
+    save("ashoka-buildcon-diriyah-cancel-november-2026", ashoka_diriyah_cancel)
 
 
 if __name__ == "__main__":

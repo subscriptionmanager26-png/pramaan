@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "go-digit-gift-city-ifsca-november-2026",
+    title: "Go Digit won IFSCA clearance to sell insurance from GIFT City",
+    summary:
+      "Go Digit General Insurance Ltd received a Certificate of Registration from the International Financial Services Centres Authority on 18 November 2026, allowing it to operate an IFSC Insurance Office at Gujarat International Finance Tec-City.",
+    category: "industry",
+    companyOrSector: "Insurance / IFSC",
+    publishedAt: "2026-11-19T17:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("go-digit-gift-city-ifsca-november-2026"),
+    keyTakeaways: [
+      "The insurer told exchanges on 19 November 2026 that IFSCA granted registration on 18 November under the IFSCA Act, 2019, read with the Insurance Act, 1938.",
+      "An IFSC Insurance Office lets a domestic insurer write offshore-linked business from GIFT City under a separate regulatory lane from onshore retail branches.",
+      "The filing landed the same week Go Digit reported higher total premiums in its latest results, with investors watching distribution economics.",
+    ],
+    body: [
+      "What's going on here?",
+      "Gujarat's GIFT City was built so Indian financial firms could serve global clients without routing every product through mainland licensing alone. Insurers need a dedicated IFSC registration before they can open an International Financial Services Centre insurance office with its own compliance stack. On 19 November 2026, Go Digit General Insurance Ltd filed with stock exchanges that it received a Certificate of Registration from the International Financial Services Centres Authority on 18 November. The document allows it to operate as an IFSC Insurance Office. The approval rests on the IFSCA Act, 2019, read with the Insurance Act, 1938, and the company said the office is expected to bring strategic, operational and fiscal benefits available inside the IFSC framework. Registration stays conditional on meeting IFSCA circulars and directions.",
+      "What does this mean?",
+      "For Go Digit, GIFT City is less about kirana motor policies and more about a regulated beachhead for offshore reinsurance flows, dollar-linked covers and partnerships that mainland retail licences handle awkwardly. IFSC rules often offer lighter withholding and easier currency matching, which matters when an insurer wants to reinsure large industrial risks or pilot marine covers for export clients. Domestic rivals such as ICICI Lombard and HDFC ERGO have watched IFSC pilots closely; each new registration expands the menu of India-domiciled options for global brokers. The move does not change premium pricing on your car policy tomorrow, but it signals where growth capital and actuarial hiring may shift inside the firm.",
+      "Why should I care?",
+      "If you work in corporate risk or marine insurance, ask whether your broker can place facultative covers through an IFSC window once Go Digit's office goes live. Investors in Go Digit should read management's next call for capital allocated to GIFT versus retail motor expansion. Policy readers should track whether IRDAI and IFSCA publish harmonised conduct rules so retail customers do not confuse mainland grievance channels with IFSC desks. Watch Go Digit's exchange filings on office opening dates, initial product approvals, and any partnerships cited for offshore business.",
+    ],
+  },
+  {
+    slug: "india-refinery-throughput-october-2026",
+    title: "Indian refiners processed more crude in October than in September",
+    summary:
+      "Ministry of Petroleum and Natural Gas data on 19 November 2026 put October crude throughput at about 5.70 million barrels per day, up nearly 2% month on month, as plants ran harder to meet stronger domestic fuel use.",
+    category: "industry",
+    companyOrSector: "Oil refining / fuel demand",
+    publishedAt: "2026-11-19T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-refinery-throughput-october-2026"),
+    keyTakeaways: [
+      "Provisional throughput was 24.11 million metric tons in October 2026 versus 22.88 million in September.",
+      "Trade sources quoted in the same coverage said India imported a record 5.58 million barrels per day of crude in October to feed the higher runs.",
+      "Earlier ministry data showed October petroleum product consumption up nearly 10% month on month to about 20.49 million metric tons.",
+    ],
+    body: [
+      "What's going on here?",
+      "Refinery utilization is one of the cleaner real-time gauges of how much fuel India is burning through factories, farms, airlines and highways. When throughput rises, marketers are usually confident they can place diesel, petrol and jet fuel domestically instead of chasing export netbacks alone. On 19 November 2026, provisional statistics from the Ministry of Petroleum and Natural Gas showed Indian refiners processed about 5.70 million barrels per day of crude in October 2026, equal to roughly 24.11 million metric tons. That was nearly 2% above September's 5.59 million barrels per day pace and about 7% above October 2025. Coverage tied the lift to record crude imports near 5.58 million barrels per day and to October fuel consumption climbing about 10% from September to 20.49 million metric tons, the highest since March. Reliance's Jamnagar units, Indian Oil's Panipat and Paradip trains, and Nayara's Vadinar complex were among the large blocks listed in the ministry table.",
+      "What does this mean?",
+      "Higher runs absorb more crude even when global prices stay elevated, which matters for state refiners balancing LPG subsidies with marketing margins. October also saw Saudi Arabia regain share over the UAE in India's import mix as Riyadh offered discounted cargoes after earlier Gulf disruptions, reshaping who earns the freight without changing the fact that India remains import-dependent. This week's government decision to raise export levies on diesel and aviation turbine fuel while leaving petrol unchanged nudges companies to prioritize domestic tanks when utilization is already high. For drivers and airlines, the connection is simple: more domestic offtake plus high utilization usually keeps local supply ample even if it does not guarantee lower pump prices when crude itself is firm.",
+      "Why should I care?",
+      "If you manage fleet fuel budgets, track whether your marketer passes through import-parity changes after festive demand peaks. Investors in Indian Oil, BPCL, HPCL, Reliance or Nayara should pair throughput tables with marketing margin disclosures rather than daily equity moves. Households feel the story at the pump and LPG cylinder counter, not in barrel-per-day jargon. Watch November throughput and import tables, Saudi versus UAE share in trade data, and any further tweaks to export duties on diesel or jet fuel.",
+    ],
+  },
+  {
+    slug: "coal-india-rare-earth-magnet-loi-november-2026",
+    title: "Coal India secured a ministry letter of intent for rare earth magnets",
+    summary:
+      "Coal India Ltd said on 19 November 2026 that the Ministry of Heavy Industries named it L2 consortium lead for a 1,200 tonne-per-year sintered neodymium-iron-boron magnet plant to be built through a special purpose vehicle.",
+    category: "industry",
+    companyOrSector: "Industrial policy / rare earths",
+    publishedAt: "2026-11-19T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("coal-india-rare-earth-magnet-loi-november-2026"),
+    keyTakeaways: [
+      "The Ministry of Heavy Industries issued a letter of intent dated 19 November 2026 for a facility with 1,200 TPA capacity over a seven-year contract window.",
+      "Coal India leads a consortium with the Non-Ferrous Materials Technology Development Centre as partner on the manufacturing scheme.",
+      "Union minister H D Kumaraswamy handed letters of intent to four bidders the same day under a wider rare earth permanent magnet programme.",
+    ],
+    body: [
+      "What's going on here?",
+      "Electric vehicles, wind turbines and defence electronics all need powerful permanent magnets, yet India still imports most of the finished NdFeB blocks from China-centric supply chains. New Delhi's rare earth permanent magnet scheme tries to pull mining, processing and fabrication inside the country by awarding letters of intent to consortia that can build volume at scale. On 19 November 2026, Coal India Ltd told exchanges the Ministry of Heavy Industries declared it the L2 bidder as lead member alongside the Non-Ferrous Materials Technology Development Centre. The letter of intent covers setting up a sintered neodymium-iron-boron magnet plant through a special purpose vehicle with nameplate capacity of 1,200 tonnes per annum. Execution is scheduled across seven years, including two years of pre-construction and five years of operations. The same day, minister H D Kumaraswamy handed similar letters to Prozeal Green Energy, ReNew and Midwest Energy under the wider programme.",
+      "What does this mean?",
+      "Coal India's involvement is less about pits and more about balance-sheet muscle and procurement discipline for a capital-intensive fab that must certify magnet grades for automotive and industrial buyers. Teaming with NFTDC brings materials expertise the coal major does not house in-house. Success still depends on securing rare earth oxide feed, power and environmental clearances, and on customers such as EV drive-train makers qualifying Indian magnets versus incumbent imports. If the SPV hits 1,200 TPA, it will not replace all import demand, but it gives domestic assemblers a local quote for long-term contracts. Missed milestones would leave the project in the same import trap the scheme was meant to break.",
+      "Why should I care?",
+      "If you source components for EVs or renewable equipment, ask vendors when Indian magnet lines enter their approved supplier lists. Investors in Coal India should treat the LoI as a capex option until the SPV signs binding offtake and discloses equity splits. Policy readers should watch how the ministry sequences feedstock mines, processing incentives and magnet fabs so plants do not stall for lack of oxides. Track SPV incorporation filings, environmental nod timelines, and customer qualification tests from auto and wind OEMs.",
+    ],
+  },
+  {
+    slug: "ashoka-buildcon-diriyah-cancel-november-2026",
+    title: "Ashoka Buildcon's Saudi hotel contract was cancelled by the client",
+    summary:
+      "Ashoka Buildcon Ltd said on 19 November 2026 that Saudi Arabia's Diriyah Company cancelled a main construction package worth about SAR 351.37 million for its share, citing internal employer reasons.",
+    category: "industry",
+    companyOrSector: "Construction / Middle East",
+    publishedAt: "2026-11-19T16:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ashoka-buildcon-diriyah-cancel-november-2026"),
+    keyTakeaways: [
+      "The project, awarded in February 2026, covered delivery-partner works for a hotel within the Diriyah II development.",
+      "Ashoka's wholly owned Saudi subsidiary held the contract in joint venture with BEC Arabia Contracting Co.",
+      "The company said it is approaching Diriyah Company to understand details and next steps after the cancellation notice.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian EPC firms have chased Gulf hospitality and giga-project awards to diversify beyond domestic highways, but overseas employers can unwind contracts when master plans shift. Ashoka Buildcon Ltd accepted a Saudi package in February 2026 titled main construction works of Diriyah II for a hotel delivery partner role. Its wholly owned Saudi entity executed the deal in joint venture with BEC Arabia Contracting Co. On 19 November 2026, Ashoka told Indian exchanges that Diriyah Company, the employer, has cancelled the project because of internal reasons on the client side. The accepted value for Ashoka's share was SAR 351.37 million, roughly Rs 846 crore before value-added tax. Management said it is contacting the employer to learn more and decide the next course of action. The disclosure arrives days after Ashoka was declared lowest bidder on a large National Highways Authority of India package in Gujarat, so the overseas loss does not idle the entire order book.",
+      "What does this mean?",
+      "Cancellation before heavy spend can limit sunk costs, but it still forces redeployment of engineers, equipment booked for Saudi and joint-venture governance time. Gulf clients often retain replacement bidders internally, so Indian contractors may not automatically regain the scope. For investors, the episode is a reminder that Middle East revenue is lumpy compared with NHAI milestones billed in rupees. Peers such as Larsen and Toubro and Shapoorji Pallonji have faced similar client-driven pauses; the key is whether termination payments or partial reimbursements cover mobilisation. Ashoka must also reassure lenders that Saudi concentration risk is managed alongside domestic wins.",
+      "Why should I care?",
+      "If you hold Ashoka shares, read the next exchange update for break-fee language, work-in-progress already expensed, and redeployment plans for the JV team. Subcontractors who reserved capacity for Diriyah should confirm billing status. Broader construction investors should compare Saudi hospitality exposure across portfolios as Gulf tourism projects compete for the same labour pools ahead of global events. Watch Ashoka's clarification filing with Diriyah, any arbitration notices, and execution updates on the Vadodara-Mumbai NHAI stretch won this week.",
+    ],
+  },
+  {
     slug: "india-bulk-scotch-162-duty-november-2026",
     title: "India is charging bulk Scotch imports at 162.5% duty",
     summary:
@@ -13368,6 +13464,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "go-digit-gift-city-ifsca-november-2026": "policy",
+  "india-refinery-throughput-october-2026": "markets",
+  "coal-india-rare-earth-magnet-loi-november-2026": "policy",
+  "ashoka-buildcon-diriyah-cancel-november-2026": "companies",
   "india-bulk-scotch-162-duty-november-2026": "policy",
   "india-defence-capex-budget-ask-november-2026": "policy",
   "india-upi-merchant-fee-still-open-november-2026": "policy",
