@@ -1356,6 +1356,42 @@ def bajaj_finance_qip_allotment(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([860, 300, 940, 380], fill=RED)
 
 
+def india_bulk_scotch_162_duty(d: ImageDraw.ImageDraw) -> None:
+    """Tanker left; climbing duty steps right."""
+    d.ellipse([120, 320, 400, 560], fill=BLUE)
+    d.rectangle([200, 380, 320, 520], fill=CREAM)
+    for i, h in enumerate([160, 220, 280, 340, 400]):
+        x = 620 + i * 100
+        d.rectangle([x, 560 - h, x + 72, 560], fill=[RED, YELLOW, RED, BLUE, YELLOW][i])
+    d.line([(600, 560), (1180, 560)], fill=INK, width=2)
+    d.polygon([(520, 260), (600, 220), (680, 260), (640, 320)], fill=GOLD)
+
+
+def india_defence_capex_budget_ask(d: ImageDraw.ImageDraw) -> None:
+    """Rising procurement bars beside shield chevron."""
+    d.polygon([(280, 180), (360, 140), (440, 180), (400, 520), (320, 520)], fill=RED)
+    d.ellipse([310, 240, 410, 340], fill=YELLOW)
+    for i, h in enumerate([140, 200, 260, 320, 380]):
+        x = 640 + i * 95
+        d.rectangle([x, 560 - h, x + 68, 560], fill=[BLUE, RED, YELLOW, BLUE, RED][i])
+    d.line([(620, 560), (1180, 560)], fill=GOLD, width=3)
+
+
+def india_upi_merchant_fee_open(d: ImageDraw.ImageDraw) -> None:
+    """QR tile left; question-mark fee ladder right."""
+    d.rectangle([120, 220, 420, 520], fill=BLUE)
+    for r in range(4):
+        for c in range(4):
+            if (r + c) % 2 == 0:
+                d.rectangle([140 + c * 65, 240 + r * 65, 200 + c * 65, 300 + r * 65], fill=CREAM)
+    d.rectangle([640, 280, 720, 360], fill=YELLOW)
+    d.rectangle([800, 240, 880, 320], fill=RED)
+    for i, h in enumerate([100, 160, 220, 280]):
+        x = 720 + i * 100
+        d.rectangle([x, 560 - h, x + 56, 560], fill=[RED, BLUE, YELLOW, GOLD][i])
+    d.ellipse([1040, 200, 1140, 300], outline=GOLD, width=6)
+
+
 def city_union_neft_shutdown(d: ImageDraw.ImageDraw) -> None:
     """Transfer arrows broken mid-line; vault left."""
     d.rounded_rectangle([100, 200, 460, 560], radius=18, fill=BLUE)
@@ -2251,6 +2287,9 @@ def main() -> None:
     save("titan-jewellery-buyer-recovery-november-2026", titan_jewellery_buyer_push)
     save("city-union-bank-neft-shutdown-november-2026", city_union_neft_shutdown)
     save("bajaj-finance-qip-allotment-november-2026", bajaj_finance_qip_allotment)
+    save("india-bulk-scotch-162-duty-november-2026", india_bulk_scotch_162_duty)
+    save("india-defence-capex-budget-ask-november-2026", india_defence_capex_budget_ask)
+    save("india-upi-merchant-fee-still-open-november-2026", india_upi_merchant_fee_open)
 
 
 if __name__ == "__main__":

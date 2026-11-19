@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-bulk-scotch-162-duty-november-2026",
+    title: "India is charging bulk Scotch imports at 162.5% duty",
+    summary:
+      "Reporting on 19 November 2026 said revenue authorities are applying total duties of about 162.5% on bulk Scotch whisky used for local blending, above even the 150% rate that applied before the July India-United Kingdom trade pact cut bottle tariffs.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages / trade",
+    publishedAt: "2026-11-19T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-bulk-scotch-162-duty-november-2026"),
+    keyTakeaways: [
+      "Wire copy on 19 November 2026 said total duties of 162.5%, partly backed by bank guarantees, have started on bulk Scotch imports.",
+      "New Delhi argues bulk spirit is a raw material for blending, not finished whisky eligible for the pact's lower bottle rate near 75%.",
+      "United Spirits, Radico Khaitan, and Allied Blenders shares fell in morning trade as investors priced higher landed costs and working-capital strain.",
+    ],
+    body: [
+      "What's going on here?",
+      "The India-United Kingdom trade agreement that took effect in July 2026 halved import duty on eligible bottled Scotch toward 75% from 150%, but most British whisky still reaches India in bulk tankers for blending into Indian-made foreign liquor sold on domestic shelves. For weeks, distillers and global majors such as Diageo and Pernod Ricard have fought a customs classification battle over whether that bulk concentrate qualifies for the pact rate or stays on the older high-duty track. On 19 November 2026, wire reports said authorities have begun applying total duties of about 162.5%, partly collectible through bank guarantees, a headline rate above the 150% levy that existed before the deal. New Delhi maintains bulk Scotch above roughly 60% alcohol strength is an intermediate product, not the bottled whisky the agreement was written to liberalise. United Spirits Ltd, Radico Khaitan Ltd, and Allied Blenders and Distillers Ltd were among listed names that slipped in early trade after the reports moved.",
+      "What does this mean?",
+      "Harmonised system labels set the rupee tax on every cleared litre. A higher bulk duty reverses the margin relief bottlers had begun to model when officials promised to honour FTA commitments earlier in November. Companies that import concentrate to finish in Indian plants carry more inventory financing when duties rise and when guarantees tie up bank lines. The dispute is also the first major crack in India-UK trade optics since Prime Minister Narendra Modi met British royals in India this week, and London said ministers are working with New Delhi to resolve the fight. Bottle economics and bulk economics diverge: a punitive bulk line nudges portfolios toward imported miniatures while raising costs on the SKUs most Indians actually buy after local blending.",
+      "Why should I care?",
+      "If you buy premium whisky or run a bar, ask distributors whether list prices on blended labels are changing and whether festive stock was imported under the new duty stack. Investors in United Spirits, Radico, or Allied Blenders should read management commentary on working capital and margin bridges in the next quarterly update. Policy watchers should track any joint commerce-finance circular that redefines bulk versus bottled treatment and whether the United Kingdom escalates through bilateral trade channels. British government statements already promised engagement after the Reuters report that preceded the 19 November market reaction.",
+    ],
+  },
+  {
+    slug: "india-defence-capex-budget-ask-november-2026",
+    title: "The defence ministry wants another 20% jump in capital spending",
+    summary:
+      "Defence Secretary Rajesh Kumar Singh said on 19 November 2026 that the ministry has asked for capital expenditure to rise roughly 20% in compound annual terms in the next Union Budget cycle, after FY27's capital allocation of about Rs 2.19 lakh crore.",
+    category: "industry",
+    companyOrSector: "Defence / fiscal policy",
+    publishedAt: "2026-11-19T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-defence-capex-budget-ask-november-2026"),
+    keyTakeaways: [
+      "Singh told an industry convention that the ministry sought a further 20% CAGR increase in capital outlay for the coming budget year.",
+      "For FY27 the Union Budget already allocated about Rs 2.19 lakh crore of defence capital spend versus a FY26 budget estimate near Rs 1.8 lakh crore.",
+      "He reiterated that the Advanced Medium Combat Aircraft prototype partner could be named in about a month, with the winner running India's first private-led fighter production line for early prototypes.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's defence modernisation rides on two levers: annual capital budgets that pay for ships, missiles, and aircraft, and separate development programmes that pick private partners for complex platforms. On 19 November 2026, Defence Secretary Rajesh Kumar Singh told FICCI's annual convention that the ministry has requested another increase of about 20% in capital expenditure measured as a compound annual growth rate for the coming Union Budget exercise. The FY27 budget already assigned roughly Rs 2.19 lakh crore to defence capital outlay, around 22% above the Rs 1.8 lakh crore budget estimate for FY26. Singh said the ministry is confident of securing the higher allocation. The same appearance renewed a timeline investors had been watching: authorities expect to announce the Advanced Medium Combat Aircraft development partner within about a month, selecting a private-sector entity or private-led consortium that would operate the country's first private-led fighter prototype line before serial production decisions.",
+      "What does this mean?",
+      "Capital budgets are not contracts, but they set which programmes move from files to purchase orders. A sustained 20% growth path would keep shipyards, ammunition lines, and electronics suppliers bidding aggressively through the decade even when global rates stay elevated. Listed names such as Bharat Electronics Ltd, Bharat Dynamics Ltd, and Mazagon Dock Shipbuilders Ltd often trade on budget hints before individual order wins land. Separately, naming an AMCA partner unlocks prototype funding flows to whichever consortium among Larsen and Toubro, Tata Advanced Systems, or Bharat Forge-linked bids wins. India's push to export defence goods also depends on capital budgets funding enough domestic absorption to prove reliability before foreign buyers sign.",
+      "Why should I care?",
+      "If you work in defence manufacturing or tier-two machining, map your order book against capital budget timelines rather than headline index moves. Households will not receive a separate bill, but higher defence capex competes with other Union spending lines when fiscal consolidation is debated. Investors should pair Singh's budget ask with quarterly order inflows at shipyards and munitions makers rather than one-day sector index pops. Watch the upcoming Union Budget capital allocation table, the AMCA partner announcement, and whether Canada-India defence cooperation mentioned for December adds export channels alongside domestic absorption.",
+    ],
+  },
+  {
+    slug: "india-upi-merchant-fee-still-open-november-2026",
+    title: "UPI shop fees still have no start date after Diwali",
+    summary:
+      "On 19 November 2026, reporting said National Payments Corporation of India's plan to charge merchants on select UPI payments above Rs 2,000 remains undated, with insiders citing ongoing talks involving the central bank and government while Paytm, Mobikwik, and Pine Labs shares slid.",
+    category: "industry",
+    companyOrSector: "Digital payments",
+    publishedAt: "2026-11-19T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-upi-merchant-fee-still-open-november-2026"),
+    keyTakeaways: [
+      "NPCI had announced a 0.4% merchant charge on many transactions above Rs 2,000, originally slated from 15 October 2026, then deferred until after Diwali with no replacement date.",
+      "Sources quoted on 19 November 2026 said the implementation calendar is still unsettled and a further delay cannot be ruled out.",
+      "Listed payment names fell in morning trade as investors weighed longer uncertainty on interchange revenue versus merchant pushback.",
+    ],
+    body: [
+      "What's going on here?",
+      "Person-to-merchant UPI transfers have been free for most of a decade because banks and the government subsidised rapid adoption among kirana stores and large retailers. In September 2026 the National Payments Corporation of India said it would introduce a 0.4% merchant discount rate on many payments above Rs 2,000 from 15 October, ending that era for specified categories. Retail associations pushed back, NPCI postponed the switch until after Diwali, and promised a new date later. On 19 November 2026, wire reports said listed payment firms fell as traders absorbed that no fresh implementation date has been announced. People familiar with the talks said the calendar likely needs sign-off from the Reserve Bank of India and the government, and that another delay remains possible. Paytm parent One 97 Communications Ltd, One Mobikwik Systems Ltd, and Pine Labs Ltd were among the names that weakened in the reports reviewed by desks.",
+      "What does this mean?",
+      "Fees on high-ticket UPI scans would let payment apps earn interchange that today mostly stays with issuing banks, but only if merchants keep accepting UPI once economics change. Large chains can negotiate; small retailers may revert partly to cash or card rails if sticker prices cannot absorb the charge. A continued pause keeps consumer checkout frictionless through the post-festive season but prolongs revenue-model uncertainty for fintechs pitching investors on profitability after years of growth spending. For NPCI, the balancing act is sustaining network growth while persuading merchants that digitisation still beats cash handling costs.",
+      "Why should I care?",
+      "If you run a shop, compare total cost of cash handling, card terminals, and prospective UPI fees before changing checkout signage. Households are not billed directly on standard UPI transfers, but merchants may pass part of any future fee into prices on big-ticket categories such as appliances or jewellery. Investors in payment stocks should treat daily share moves as sentiment until NPCI publishes a firm calendar. Track the next NPCI steering committee update, any RBI circular on merchant pricing, and whether retailer associations strike a compromise on categories or thresholds.",
+    ],
+  },
+  {
     slug: "city-union-bank-neft-shutdown-november-2026",
     title: "City Union Bank paused NEFT and RTGS after a fraud hit one account",
     summary:
@@ -13296,6 +13368,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-bulk-scotch-162-duty-november-2026": "policy",
+  "india-defence-capex-budget-ask-november-2026": "policy",
+  "india-upi-merchant-fee-still-open-november-2026": "policy",
   "city-union-bank-neft-shutdown-november-2026": "policy",
   "bajaj-finance-qip-allotment-november-2026": "markets",
   "infosys-ntt-docomo-jv-november-2026": "companies",
