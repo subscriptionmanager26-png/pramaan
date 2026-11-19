@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "gift-nifty-open-interest-record-november-2026",
+    title: "GIFT Nifty open interest set a fresh record above $22 billion",
+    summary:
+      "NSE International Exchange said on 19 November 2026 that GIFT Nifty open interest reached $22.21 billion on 18 November, topping the prior October peak as offshore index contracts keep drawing hedging and speculative flow at GIFT City.",
+    category: "industry",
+    companyOrSector: "Markets / GIFT IFSC",
+    publishedAt: "2026-11-19T22:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gift-nifty-open-interest-record-november-2026"),
+    keyTakeaways: [
+      "Open interest stood at 438,887 contracts on 18 November 2026, versus the earlier record near $21.84 billion on 23 October.",
+      "GIFT Nifty has traded more than 80.7 million contracts with cumulative turnover above $3.73 trillion since full-scale operations began in July 2023.",
+      "NSE IX at GIFT City offers Indian and global equity derivatives alongside depository receipts under IFSCA rules, separate from onshore NSE contracts.",
+    ],
+    body: [
+      "What's going on here?",
+      "Overseas funds and prop desks use GIFT Nifty when they want India index exposure before the Mumbai session opens or when IFSC rules suit their booking entity. Open interest measures how many contracts remain alive after each session, so a rising total usually means more players are keeping hedges or directional bets on the book rather than day-trading flat. On 19 November 2026, NSE International Exchange said GIFT Nifty open interest hit $22.21 billion on 18 November, equal to 438,887 outstanding contracts. That beat the exchange’s prior peak near $21.84 billion set on 23 October 2026. Since full-scale GIFT Nifty trading began on 3 July 2023, cumulative volume has crossed 80.70 million contracts and notional turnover has passed $3.73 trillion. The milestone lands the same week Go Digit received IFSCA registration for an insurance office, underscoring how multiple financial products are stacking onto the Gujarat hub.",
+      "What does this mean?",
+      "Deeper open interest tends to tighten spreads and makes it easier for large accounts to roll positions without moving the book. That matters for foreign portfolio investors balancing cash equities with futures, and for domestic groups that route trades through IFSC subsidiaries for currency or tax treatment. GIFT Nifty is not a replacement for the onshore Nifty 50 contract, but it is becoming the parallel venue analysts watch on pre-open screens. A record open interest figure does not by itself predict index direction; it signals participation and balance-sheet commitment. Regulators still police client segregation and margin at NSE IX the same as onshore, so growth in contracts also raises surveillance workload for IFSCA.",
+      "Why should I care?",
+      "If you hedge India equity exposure from offshore, ask your broker whether GIFT Nifty rolls are cheaper than layering Singapore or Dubai proxies when liquidity is deep. CFOs with treasury centres in GIFT City should track whether risk teams treat GIFT and onshore margin as one pool or separate silos. Investors reading macro pieces should not confuse participation records with bullishness. Watch the next open-interest print after expiry weeks, any IFSCA circulars on client onboarding, and whether single-stock derivatives at NSE IX show similar depth.",
+    ],
+  },
+  {
+    slug: "fairfax-iifl-capital-majority-november-2026",
+    title: "Fairfax now owns more than half of IIFL Capital Services",
+    summary:
+      "FIH Mauritius Investments bought an 11.8% block from promoters on 19 November 2026 for about ₹1,540 crore, lifting the Fairfax group's combined holding in IIFL Capital Services Ltd past 50% as it funds the IDBI Bank takeover.",
+    category: "industry",
+    companyOrSector: "Financial services / broking",
+    publishedAt: "2026-11-19T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fairfax-iifl-capital-majority-november-2026"),
+    keyTakeaways: [
+      "The buyer acquired 4.4 crore shares at ₹350 apiece from Nirmal Jain, R Venkatraman and related entities, exchange block data showed on 19 November.",
+      "Fairfax affiliates already held about 40.83% before the trade; total group share rose to 52.63%.",
+      "The deal follows a block sale that nearly exited Fairfax from IIFL Finance on 18 November, recycling NBFC equity toward bank control.",
+    ],
+    body: [
+      "What's going on here?",
+      "Fairfax Financial is paying for its majority purchase of IDBI Bank partly by selling older Indian financial stakes and doubling down on businesses it still wants to control. IIFL Capital Services Ltd is the listed broking and wealth arm that competes for trading terminals, margin funding, and advisory fees. On 19 November 2026, exchange disclosures showed FIH Mauritius Investments, a Fairfax affiliate, bought 4.4 crore shares, or 11.8% of paid-up equity, from promoter Nirmal Jain, co-promoter R Venkatraman, and related trusts at ₹350 per share. Consideration was about ₹1,540 crore. Combined with the roughly 40.83% stake Fairfax entities already held, group ownership crossed 50% at 52.63%. Promoters sold down rather than Fairfax buying only from the open market. The block landed a day after Fairfax nearly sold out of IIFL Finance in a separate ₹3,488 crore trade, highlighting a deliberate shuffle of Indian holdings.",
+      "What does this mean?",
+      "Crossing 50% turns Fairfax from a powerful minority into the controlling shareholder of a listed broker. That can trigger open-offer rules for any remaining public float, shape board appointments, and steer whether IIFL Capital merges with IDBI wealth units later. For customers, day-to-day trading may not change immediately, but strategy on funding costs, technology spend, and cross-sell to banking clients often follows the new controller. The stock fell about 5.5% on the session despite the vote of confidence, suggesting some investors priced promoter exits or integration uncertainty ahead of fundamentals. Competing brokers may recruit teams if they sense leadership churn.",
+      "Why should I care?",
+      "If you maintain broking or wealth accounts with IIFL Capital, read the next annual report for related-party policy once Fairfax consolidates control. Investors comparing financial groups should map how Fairfax capital flows from NBFC sales into bank and broking stakes, not treat each block as isolated. Policy watchers tracking PSU bank privatisation should note Fairfax still needs regulatory sign-offs on IDBI even as it rearranges satellite holdings. Watch Securities and Exchange Board of India filings on change-of-control, any open offer timeline, and integration statements on earnings calls.",
+    ],
+  },
+  {
+    slug: "adani-energy-bihar-transmission-november-2026",
+    title: "Adani Energy won a Bihar link for a 2,400 megawatt power plant",
+    summary:
+      "Adani Energy Solutions Ltd secured a tariff-based transmission project on 19 November 2026 to evacuate power from the 2,400 MW Pirpainti thermal plant in Bihar, adding 881 circuit kilometres and about ₹500 crore of annual regulated revenue when the lines go live by late 2028.",
+    category: "industry",
+    companyOrSector: "Power transmission",
+    publishedAt: "2026-11-19T21:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-energy-bihar-transmission-november-2026"),
+    keyTakeaways: [
+      "Vikramshila Power Transmission, a special purpose vehicle, will build gas-insulated substations and 400 kV and 220 kV corridors connecting Pirpainti with Jhanjharpur, Begusarai, and Bakhtiyarpur.",
+      "The award lifts Adani Energy’s portfolio to about 30,683 circuit kilometres of lines and 146,585 MVA of transformation capacity.",
+      "Adani Power is developing the underlying three-unit Pirpainti supercritical plant in Bhagalpur district.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large thermal projects in eastern India only matter to the grid once dedicated high-voltage corridors exist to move megawatts without choking local networks. India auctions many of those links through tariff-based competitive bidding, where the winner earns a fixed annual charge over the life of the asset. On 19 November 2026, reporting said Adani Energy Solutions Ltd won the transmission system for the Pirpainti ultra-supercritical plant in Bihar. The scheme targets completion in the fourth quarter of 2028. Scope includes 881 circuit kilometres of lines, 3,160 MVA of transformation capacity, four gas-insulated substations, and loops between Pirpainti, Jhanjharpur, Begusarai, and Bakhtiyarpur. Vikramshila Power Transmission, a project SPV, will implement the work. Management cited roughly ₹500 crore of annual tariff revenue once the network is operational. Adani Power is building the 2,400 MW generation complex itself as three 800 MW units.",
+      "What does this mean?",
+      "Transmission awards arrive years before generation units synchronise, which lets planners sequence environmental clearances, land, and lender comfort. For Bihar, new evacuation capacity can reduce the bottleneck risk that otherwise leaves a plant stranded when local demand is weak. Adani Energy’s regulated asset base keeps growing, which supports predictable cash flows even when merchant power prices swing. The project does not change household tariffs directly on day one; regulated transmission charges pass through the broader power purchase and open-access stack over time. Competing transmission developers must price construction inflation and right-of-way delays when they bid, or return assumptions slip.",
+      "Why should I care?",
+      "If you buy power through open access in eastern India, track whether new corridors change available transfer capacity and congestion charges after 2028. Investors in Adani Energy should read how incremental tariff revenue fits leverage and project-finance covenants. Communities near Pirpainti should monitor construction timelines and employment during the build phase. Watch Central Electricity Authority commissioning schedules for the thermal units, transmission regulatory orders on tariff adoption, and any state discom payment discipline on the new flows.",
+    ],
+  },
+  {
+    slug: "vip-industries-premiumisation-november-2026",
+    title: "VIP Industries is pushing premium luggage after two growth quarters",
+    summary:
+      "Managing director Atul Jain said on 19 November 2026 that VIP Industries grew consolidated revenue 15% in the September quarter, narrowed losses, and leaned on premium SKUs, roughly 65 new ranges, and wider retail reach while passing three price hikes totalling 7–8% in six months.",
+    category: "industry",
+    companyOrSector: "Consumer durables / travel goods",
+    publishedAt: "2026-11-19T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("vip-industries-premiumisation-november-2026"),
+    keyTakeaways: [
+      "Jain told BusinessLine the quarter was the second consecutive period of growth after seven quarters of decline.",
+      "The company expanded distribution to nearly twice as many outlets between August and October and runs about 350 exclusive brand stores.",
+      "Online channels grew more than 20% and now contribute roughly a quarter of sales; gross margin improved sequentially despite input inflation.",
+    ],
+    body: [
+      "What's going on here?",
+      "Travel goods makers suffered when post-pandemic demand normalised and raw materials jumped, forcing heavy discounting on entry-level suitcases. VIP Industries Ltd, owner of brands such as VIP, Skybags, Aristocrat, and Caprese, is trying to climb back by selling fewer promotions and more higher-priced shells and handbags. On 19 November 2026, managing director Atul Jain told BusinessLine that consolidated revenue from operations rose 15% in the second quarter of FY27, marking a second straight growth quarter after seven periods of decline. He said gross margin improved sequentially even with raw material inflation, helped by premiumisation. The company launched about 65 new product ranges in the first half of the fiscal year. Between August and October it nearly doubled reachable outlets, while exclusive brand stores stand near 350. Jain also noted three rounds of price increases over six months, adding roughly 7–8% at the ticket level, and said online sales grew more than 20%, now near 25% of the business.",
+      "What does this mean?",
+      "Premiumisation here means steering shelf space toward hardside luggage, fashion-led Caprese bags, and better warranty stories instead of racing on the cheapest polypropylene trolley. Wider distribution only works if replenishment keeps pace; doubling reachable stores without stock-outs is harder than signing trade partners. Price hikes suggest VIP believes middle-income travellers will absorb inflation rather than downgrade to unbranded bags. Online growth above 20% fits a category where specs and reviews travel well, but marketplaces still compete on festive coupons. The company continues to target break-even on a full-year view, so marketing and Insta-style rivals in travel accessories still pressure margins even as top-line returns.",
+      "Why should I care?",
+      "If you are shopping for festival travel, compare effective prices across Skybags and Aristocrat lines against unbranded options after the recent list-price increases. Investors should watch whether premium mix sticks into the December quarter or fades when competitors discount. Mall tenants near VIP exclusive stores may see steadier footfall if the format scales. Track the next quarterly update on outlet count, gross margin, and inventory days, plus whether raw material costs allow a pause in further hikes.",
+    ],
+  },
+  {
     slug: "go-digit-gift-city-ifsca-november-2026",
     title: "Go Digit won IFSCA clearance to sell insurance from GIFT City",
     summary:
@@ -13464,6 +13560,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "gift-nifty-open-interest-record-november-2026": "markets",
+  "fairfax-iifl-capital-majority-november-2026": "companies",
+  "adani-energy-bihar-transmission-november-2026": "policy",
+  "vip-industries-premiumisation-november-2026": "markets",
   "go-digit-gift-city-ifsca-november-2026": "policy",
   "india-refinery-throughput-october-2026": "markets",
   "coal-india-rare-earth-magnet-loi-november-2026": "policy",

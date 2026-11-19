@@ -1394,6 +1394,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Jet / terminal silhouette |
 | Metaphor left | Shrinking passenger chevrons beside rising fare steps |
 
+### `gift-nifty-open-interest-record-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Offshore index hedging depth at GIFT City |
+| Subject right | IFSC exchange / terminal silhouette |
+| Metaphor left | Rising open-interest stack bars |
+
+### `fairfax-iifl-capital-majority-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Controller stake crosses fifty percent in brokerage |
+| Subject right | Generic bank / trading architecture |
+| Metaphor left | Majority ownership dial past halfway |
+
+### `adani-energy-bihar-transmission-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Regulated wires evacuate new thermal megawatts |
+| Subject right | Transmission tower silhouette |
+| Metaphor left | Power flow from plant blocks into grid |
+
+### `vip-industries-premiumisation-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Travel shoppers trade up on luggage tickets |
+| Subject right | Generic travel-goods storefront |
+| Metaphor left | Single ascending price tag vs faint footprints |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
