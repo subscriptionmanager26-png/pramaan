@@ -1345,6 +1345,30 @@ def bajaj_finance_qip(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(600, 400), (640, 360), (640, 440)], fill=GOLD)
 
 
+def bajaj_finance_qip_allotment(d: ImageDraw.ImageDraw) -> None:
+    """Filled bars vs dashed floor line; capital funnel."""
+    d.line([(80, 420), (1180, 420)], fill=GOLD, width=3)
+    for i, h in enumerate([260, 300, 340, 380]):
+        x = 140 + i * 100
+        d.rectangle([x, 420 - h, x + 70, 420], fill=[RED, BLUE, YELLOW, RED][i])
+    d.polygon([(700, 180), (900, 140), (1100, 180), (1100, 520), (700, 520)], fill=BLUE)
+    d.polygon([(780, 220), (1020, 260), (1020, 480), (780, 440)], fill=YELLOW)
+    d.ellipse([860, 300, 940, 380], fill=RED)
+
+
+def city_union_neft_shutdown(d: ImageDraw.ImageDraw) -> None:
+    """Transfer arrows broken mid-line; vault left."""
+    d.rounded_rectangle([100, 200, 460, 560], radius=18, fill=BLUE)
+    d.rectangle([180, 280, 380, 480], fill=CREAM)
+    d.line([(280, 320), (280, 440)], fill=GOLD, width=12)
+    d.line([(640, 340), (780, 340)], fill=RED, width=8)
+    d.line([(820, 340), (960, 340)], fill=RED, width=8)
+    d.polygon([(780, 300), (820, 340), (780, 380)], fill=YELLOW)
+    d.rectangle([1000, 260, 1140, 420], fill=BLUE)
+    d.line([(1020, 300), (1120, 400)], fill=GOLD, width=4)
+    d.line([(1120, 300), (1020, 400)], fill=GOLD, width=4)
+
+
 def india_fertiliser_winter(d: ImageDraw.ImageDraw) -> None:
     """Wheat rows; subsidy sack motif."""
     for i in range(6):
@@ -2225,6 +2249,8 @@ def main() -> None:
     save("ongc-vedanta-cambay-takeover-november-2026", ongc_vedanta_cambay)
     save("liquor-excise-price-requests-november-2026", liquor_excise_price_push)
     save("titan-jewellery-buyer-recovery-november-2026", titan_jewellery_buyer_push)
+    save("city-union-bank-neft-shutdown-november-2026", city_union_neft_shutdown)
+    save("bajaj-finance-qip-allotment-november-2026", bajaj_finance_qip_allotment)
 
 
 if __name__ == "__main__":

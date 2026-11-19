@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "city-union-bank-neft-shutdown-november-2026",
+    title: "City Union Bank paused NEFT and RTGS after a fraud hit one account",
+    summary:
+      "City Union Bank Ltd told exchanges on 18 November 2026 that an unauthorised NEFT movement on 16 November forced it to shut the affected customer’s NEFT and RTGS rails while investigators trace the breach.",
+    category: "industry",
+    companyOrSector: "Private banks / payments",
+    publishedAt: "2026-11-18T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("city-union-bank-neft-shutdown-november-2026"),
+    keyTakeaways: [
+      "The lender said on 18 November 2026 that it spotted an unauthorised transaction through NEFT in one customer account on 16 November.",
+      "It closed the NEFT and RTGS gateways linked to that account and brought in external experts to find the root cause.",
+      "Management stated core banking, financial performance and business continuity were not materially disrupted beyond the targeted shutdown.",
+    ],
+    body: [
+      "What's going on here?",
+      "Retail and corporate transfers in India still ride on NEFT for smaller batches and RTGS for high-value, same-day credits. When a bank sees money leave without customer consent, regulators expect it to freeze the payment pipes tied to the incident while auditors reconstruct the trail. On 18 November 2026, City Union Bank Ltd, a Tamil Nadu-based private lender with a strong base in small businesses, told stock exchanges it detected an unauthorised movement through NEFT in a single customer account on 16 November 2026. The bank said it shut down the NEFT and RTGS gateways pertaining to that account, began an internal investigation immediately, and hired outside specialists to determine how the payment slipped through. In the same filing it stressed that core operations, reported financials and day-to-day customer service outside the affected account continued without material disruption.",
+      "What does this mean?",
+      "Payment fraud at a mid-sized private bank rarely threatens the entire network, but it forces boards to prove that channel controls and reconciliation catch problems within hours, not days. Closing NEFT and RTGS only for the compromised account is a narrower response than a bank-wide outage, yet customers on that account cannot push or receive large rupee transfers until gates reopen. Peers such as Karur Vysya and Tamilnad Mercantile watch incident response playbooks because small-business clients often keep payroll and supplier files on one primary account. The Reserve Bank of India’s cybersecurity and digital payment directives increasingly ask lenders to rehearse breach notifications with timetables measured in single business days. Until the investigation ends, City Union must document whether credentials, API access or branch override enabled the transfer.",
+      "Why should I care?",
+      "If you bank with City Union, confirm whether your account was affected before scheduling RTGS vendor payments or property closings that depend on same-day settlement. Corporate treasuries should keep a secondary bank rail for critical transfers when any incident filing mentions gateway shutdowns. Investors in the stock should read whether management accrues losses or insurance recoveries in the next results, and whether the lender discloses customer compensation. Regulators and depositors will watch how quickly NEFT and RTGS reopen for the impacted account and whether any pattern ties to third-party connectors. Track the final investigation summary in exchange filings, RBI cyber incident reporting if applicable, and peer commentary on authentication upgrades.",
+    ],
+  },
+  {
+    slug: "bajaj-finance-qip-allotment-november-2026",
+    title: "Bajaj Finance raised ₹11,700 crore from global institutions at ₹1,025",
+    summary:
+      "Bajaj Finance Ltd allotted about 114 million shares at ₹1,025 apiece in a qualified institutional placement, raising roughly ₹11,700 crore from investors including Norges Bank, GIC, BlackRock and domestic mutual funds, according to exchange filings and reporting on 18 November 2026.",
+    category: "industry",
+    companyOrSector: "NBFC / capital markets",
+    publishedAt: "2026-11-18T22:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bajaj-finance-qip-allotment-november-2026"),
+    keyTakeaways: [
+      "The company allotted around 114 million equity shares to qualified institutional buyers at ₹1,025 each, above the ₹992.25 floor set when the issue opened.",
+      "Wire reports on 18 November 2026 said global names such as Norges Bank Investment Management, GIC, BlackRock and FMR participated alongside ICICI Prudential and HDFC Asset Management domestically.",
+      "Proceeds are earmarked for debt repayment and general corporate purposes at India's largest listed non-bank lender.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's largest non-bank lender funds its personal, SME and rural loans through a mix of deposits, bonds and periodic equity. A qualified institutional placement sells new shares only to sophisticated buyers under pricing rules that tie subscriptions to a board-approved floor. Bajaj Finance Ltd opened such a placement earlier in November 2026 with a floor of ₹992.25 per share. On 18 November 2026, reporting and exchange filings said the company allotted about 114 million shares at ₹1,025 each to eligible institutions, lifting roughly ₹11,700 crore into the balance sheet. The issue price cleared the floor by a thin margin, signaling demand without a large premium. People familiar with the book named global allocators such as Norges Bank Investment Management, Singapore's GIC, BlackRock and FMR, as well as domestic giants ICICI Prudential Asset Management and HDFC Asset Management. Management guided that proceeds would retire debt and meet other corporate needs.",
+      "What does this mean?",
+      "Fresh equity lets Bajaj Finance grow assets while wholesale borrowing costs stay elevated and regulators scrutinise unsecured collections. Paying down debt with part of the proceeds can lower interest expense on the margin, even though loan growth still drives revenue. Institutional participation from sovereign wealth and pension funds is a confidence vote in Indian consumer credit, but new shares dilute existing holders who did not receive allotment rights. Competing NBFCs read successful QIPs as proof that global money will still fund Indian retail books despite chatter on gold-loan stress and tighter consumer norms from August 2026. Retail borrowers should not expect immediate EMI cuts; the raise is balance-sheet repair and growth fuel, not a promotional lending campaign.",
+      "Why should I care?",
+      "If you own Bajaj Finance stock, model the diluted share count and watch the next disclosure on debt repayment from QIP proceeds. Bond and commercial-paper holders may see modestly stronger coverage ratios if leverage falls. Borrowers should treat the capital raise as stability for new loan approvals, not a signal that underwriting rules will loosen. Policy readers tracking NBFC systemic risk should note that the country's biggest shadow lender can still tap global liquidity at scale. Track utilisation of proceeds in quarterly filings, post-issue capital adequacy, and whether management revises growth guidance after the money lands.",
+    ],
+  },
+  {
     slug: "infosys-ntt-docomo-jv-november-2026",
     title: "Infosys will form a Japan joint venture with NTT Docomo",
     summary:
@@ -13248,6 +13296,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "city-union-bank-neft-shutdown-november-2026": "policy",
+  "bajaj-finance-qip-allotment-november-2026": "markets",
   "infosys-ntt-docomo-jv-november-2026": "companies",
   "india-psb-business-300-lakh-crore-november-2026": "markets",
   "india-it-contract-staffing-faster-november-2026": "policy",
