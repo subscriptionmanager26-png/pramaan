@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "dilip-buildcon-gurugram-metro-order-november-2026",
+    title: "Dilip Buildcon won a Rs 419 crore Gurugram metro corridor package",
+    summary:
+      "Dilip Buildcon Ltd said on 20 November 2026 that Gurugram Metro Rail Ltd awarded it civil works worth about Rs 418.89 crore for Package UG-02 on the Gurugram Metro Corridor, extending underground and elevated construction as the NCR expands commuter rail.",
+    category: "industry",
+    companyOrSector: "Infrastructure / urban transit",
+    publishedAt: "2026-11-20T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dilip-buildcon-gurugram-metro-order-november-2026"),
+    keyTakeaways: [
+      "Exchange disclosures and market wires on 20 November 2026 linked the award to Dilip Buildcon after Gurugram Metro Rail issued the UG-02 works order.",
+      "The contract value cited was about Rs 418.89 crore for civil construction on the Gurugram Metro Corridor.",
+      "NCR planners are stitching metro lines across Gurugram, Delhi, and neighbouring hubs to move office workers off congested arterial roads.",
+    ],
+    body: [
+      "What's going on here?",
+      "Gurugram's office clusters and residential townships keep growing faster than road capacity, so planners rely on metro corridors that can move commuters underground or on elevated tracks instead of competing with cars on the Delhi-Jaipur highway. Gurugram Metro Rail Ltd awards civil packages in slices so multiple contractors can work parallel sections. On 20 November 2026, market reporting said Dilip Buildcon Ltd rose after receiving an order worth about Rs 418.89 crore for Package UG-02 on the Gurugram Metro Corridor. The work sits in the category of heavy civil engineering that the company already executes on highways and rail-adjacent projects across central and western India. The award lands in the same week when other capital-goods names won domestic rail and road jobs, showing state-led metro capex still feeding listed EPC order books even as some overseas hospitality contracts were cancelled.",
+      "What does this mean?",
+      "Metro civil packages pay through milestone certificates as tunnels, stations, and viaducts cross inspection gates. Winning UG-02 lengthens Dilip Buildcon's order book but also locks equipment, subcontractors, and working capital into a multi-year build. For Gurugram employers and residents, faster corridor completion eventually means shorter commutes and less reliance on diesel buses during peak hours. Competitors that missed the package may bid harder on upcoming Delhi Metro or Rapid Metro extensions to backfill capacity. Lenders look at performance bank guarantees and joint-venture risk on underground sections, where geological surprises can inflate costs.",
+      "Why should I care?",
+      "If you commute on the Delhi-Gurugram route, track Gurugram Metro Rail notices on station locations and opening phases tied to Package UG-02. Investors in highway and metro contractors should compare this ticket size with the firm's disclosed order inflow and margin guidance on quarterly calls. Cement and rebar suppliers in Haryana may see localized demand when casting picks up. Watch the formal work-order filing for completion timelines, penalty clauses, and whether Dilip Buildcon bids the next Gurugram package as lead contractor or in a consortium.",
+    ],
+  },
+  {
+    slug: "paytm-cardup-singapore-stake-november-2026",
+    title: "Paytm will buy a minority stake in Singapore payments firm CardUp",
+    summary:
+      "One 97 Communications Ltd said on 19 November 2026 that Paytm Singapore will invest up to about Rs 200 crore in Funding Societies affiliates, starting with a 19.1% cash stake in CardUp Pte Ltd and a technology partnership that exports Paytm’s acceptance stack abroad under its partner-operated model.",
+    category: "industry",
+    companyOrSector: "Fintech / payments",
+    publishedAt: "2026-11-20T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("paytm-cardup-singapore-stake-november-2026"),
+    keyTakeaways: [
+      "Paytm Singapore’s board approved up to Rs 200 crore of investments in Funding Societies group companies, with roughly Rs 162 crore earmarked first for a 19.1% CardUp stake.",
+      "Management expects the CardUp equity leg to complete by 20 May 2027 after due diligence and regulatory steps, alongside a five-year tech pact to supply payments and lending rails.",
+      "Paytm separately confirmed another Rs 500 crore downstream into Paytm Singapore via Paytm Cloud Technologies, following an October 2026 capital injection plan.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian fintech groups spent years scaling UPI acceptance at kirana counters at home. Growth abroad usually means complying with local licensing, hiring merchant sales teams, and funding working capital in foreign currency. Paytm has been testing a lighter template it calls partner operated: Paytm supplies devices, risk engines, and software while a local operator owns distribution and compliance on the ground. On 19 November 2026, One 97 Communications Ltd told Indian exchanges that Paytm Singapore Pte Ltd will invest up to about Rs 200 crore in subsidiaries of Singapore-based Funding Asia Group, known as Funding Societies. The first tranche of roughly Rs 162 crore will buy a 19.1% stake in CardUp Pte Ltd, a payments firm incorporated in 2015 with rising turnover in recent years. A remaining slice may go into another affiliate after diligence. Paytm will also sign a technology and business agreement so CardUp can use its payments and lending stack in Singapore, earning licensing and revenue-share fees rather than operating every storefront itself.",
+      "What does this mean?",
+      "The cheque is small against Paytm’s balance sheet, but it shows how management wants to monetize intellectual property without cloning the full Indian cost base overseas. CardUp gains proven checkout and lending modules; Paytm gains a listed path to fees if Singapore merchants adopt the toolkit. The structure limits balance-sheet risk compared with owning a bank abroad, yet currency moves and Singapore regulatory approvals still matter. Domestic investors were already debating UPI merchant discount rate rules when the overseas deal was announced; the offshore bet does not resolve home-market fee uncertainty but diversifies the narrative toward exportable tech revenue.",
+      "Why should I care?",
+      "If you hold Paytm shares, weigh whether licensing income abroad can move the consolidated profit line or remains a strategic option value for years. Merchants using Paytm in India should not assume Singapore features appear locally, but successful exports sometimes flow back as product upgrades. Competitors such as Pine Labs and PhonePe are also scouting international rails, so partnership races may accelerate. Watch definitive agreements with CardUp, Monetary Authority of Singapore filings if any, completion of the Rs 500 crore downstream capital into Paytm Singapore, and whether management discloses revenue-share metrics on the next earnings call.",
+    ],
+  },
+  {
+    slug: "tips-films-voluntary-delisting-november-2026",
+    title: "Tips Films promoters want to buy out public investors and delist the company",
+    summary:
+      "Tips Films Ltd received a voluntary delisting proposal on 19 November 2026 from promoters Kumar and Ramesh Taurani, who plan to acquire about 10.82 lakh shares representing 25.02% of the public float so the mini-studio can leave the BSE and NSE under SEBI’s reverse book-building rules.",
+    category: "industry",
+    companyOrSector: "Media / corporate governance",
+    publishedAt: "2026-11-20T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tips-films-voluntary-delisting-november-2026"),
+    keyTakeaways: [
+      "Inga Ventures Pvt Ltd, manager to the offer, filed an initial public announcement on 19 November 2026 outlining acquisition of the entire public shareholding.",
+      "Promoters already held 74.98% at the September 2026 quarter-end; the proposal targets the remaining 25.02% held by minority investors.",
+      "SEBI delisting regulations require shareholder approval, tender thresholds, and a price discovery process before trading stops on the exchanges.",
+    ],
+    body: [
+      "What's going on here?",
+      "Public markets give companies access to capital and visibility, but they also impose quarterly compliance, disclosure costs, and scrutiny of every strategic bet. Film producers with lumpy project revenues sometimes prefer private balance sheets when they want to restructure or chase acquisitions without daily stock-price feedback. Tips Films Ltd, the listed arm of the Tips music and entertainment group, said on 19 November 2026 that promoters Kumar S Taurani and Ramesh S Taurani filed a voluntary delisting proposal through manager Inga Ventures Pvt Ltd under the Securities and Exchange Board of India delisting regulations. The plan aims to buy all equity held by public shareholders, equal to 10,81,770 shares or 25.02% of issued capital, while the promoter block retains the other roughly 75%. The company cited flexibility for corporate restructuring, lower listing compliance costs, and an exit for minorities at a price determined through the regulatory floor-price and reverse book-building process.",
+      "What does this mean?",
+      "Voluntary delisting is not automatic. The board must approve, a special resolution needs twice as many public votes in favour as against, and tendering shareholders must cross minimum thresholds before quotes disappear from NSE and BSE. Until those gates clear, the stock continues to trade and minorities can reject a bid they deem too low. Promoters argue that saving listing costs and gaining strategic freedom outweigh staying public in a volatile small-cap film name. For media investors, the case is a reminder that entertainment assets with uneven cash flows may cycle between IPO windows and buyouts depending on content cycles.",
+      "Why should I care?",
+      "If you own Tips Films shares, read the forthcoming detailed public announcement for floor price mechanics, timelines, and how to tender. Even if you do not hold the stock, delisting filings are a live template for how SEBI protects minorities when controllers want to go private. Listed peers in content and music should watch whether investors demand higher float sizes or put options before backing new issues. Track board meetings on the proposal, public shareholder voting ratios, tender participation, and the discovered exit price versus recent market trades.",
+    ],
+  },
+  {
     slug: "india-japan-unicorn-naval-mast-november-2026",
     title: "Delhi will seek Acceptance of Necessity for Japan’s UNICORN naval mast by February",
     summary:
@@ -13608,6 +13680,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "dilip-buildcon-gurugram-metro-order-november-2026": "policy",
+  "paytm-cardup-singapore-stake-november-2026": "companies",
+  "tips-films-voluntary-delisting-november-2026": "policy",
   "india-japan-unicorn-naval-mast-november-2026": "policy",
   "diamond-power-hvdc-adani-order-november-2026": "companies",
   "gift-nifty-open-interest-record-november-2026": "markets",

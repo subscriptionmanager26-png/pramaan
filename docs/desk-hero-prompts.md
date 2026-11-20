@@ -1426,6 +1426,30 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Generic travel-goods storefront |
 | Metaphor left | Single ascending price tag vs faint footprints |
 
+### `tips-films-voluntary-delisting-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Promoters buy out public float and exit exchanges |
+| Subject right | Stock exchange / market architecture silhouette |
+| Metaphor left | Shrinking public-share wedge + sealed ticker motif |
+
+### `paytm-cardup-singapore-stake-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Domestic payments tech licensed abroad via local partner |
+| Subject right | Generic smartphone / terminal motif |
+| Metaphor left | Partnership bridge arc to overseas hub |
+
+### `dilip-buildcon-gurugram-metro-order-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Metro civil capex feeds EPC order books |
+| Subject right | Elevated metro train silhouette |
+| Metaphor left | Rising construction chevrons + contract blocks |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
