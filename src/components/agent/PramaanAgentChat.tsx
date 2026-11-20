@@ -808,7 +808,7 @@ export function PramaanAgentChat() {
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6">
             <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center gap-8 pb-8">
               <div className="flex flex-col items-center text-center">
-                <AdvisorAvatar advisor={advisor} size="lg" surface="paper" mfPose={mfPose} />
+                <AdvisorAvatar advisor={advisor} size="lg" />
                 <p className="text-section mt-4 text-ink">{advisor.name}</p>
                 <p className="mt-3 max-w-md text-[15px] leading-6 text-ink-2">
                   Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"},{" "}
