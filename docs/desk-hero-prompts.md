@@ -1490,6 +1490,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Smartphone / QR motif |
 | Metaphor left | Map pins radiating from tier-two hub |
 
+### `cert-in-payment-fraud-advisory-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Hijacked payout approvals through legitimate rails |
+| Subject right | Government payment architecture silhouette |
+| Metaphor left | Broken approval chain overlay |
+
+### `india-unified-bharat-e-charge-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | One interface for many charger networks |
+| Subject right | EV charging canopy (generic) |
+| Metaphor left | Converging network lines |
+
+### `sebi-mii-tenure-limits-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Caps on exchange leadership tenure |
+| Subject right | Exchange building silhouette |
+| Metaphor left | Shrinking tenure ladder |
+
+### `irdai-star-health-claims-penalty-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Regulator fines unfair claim denials |
+| Subject right | Hospital pharmacy counter |
+| Metaphor left | Shrinking penalty ladder on claim form |
+
+### `india-festive-smartphone-units-fell-22-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Fewer upgrades, higher ticket prices |
+| Subject right | Smartphone silhouettes (no logos) |
+| Metaphor left | Falling unit bars, rising ASP curve |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.

@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "cert-in-payment-fraud-advisory-november-2026",
+    title: "CERT-In warned payment firms about hijacked payout approvals",
+    summary:
+      "India's Computer Emergency Response Team said on 20 November 2026 that fraudsters altered business records or approver relationships at banking, fintech, and government-linked payout platforms before routing money through legitimate payment rails, and flagged AI-driven attack frameworks used across sectors.",
+    category: "industry",
+    companyOrSector: "Cybersecurity / payments",
+    publishedAt: "2026-11-20T23:12:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("cert-in-payment-fraud-advisory-november-2026"),
+    keyTakeaways: [
+      "A CERT-In advisory on 20 November 2026 said unauthorised transactions were reported at service providers for banks, non-bank lenders, and technology vendors supporting government-linked payments.",
+      "Attackers changed master data or approval hierarchies, then used normal payment workflows to move funds; the agency did not quantify losses.",
+      "The notice also cited AI-driven attack frameworks and asked government bodies, payout platforms, and tech vendors to tighten controls.",
+    ],
+    body: [
+      "What's going on here?",
+      "Payment fraud in India often starts inside systems that already passed know-your-customer checks, because crooks edit who can sign off rather than break encryption on the wire. The national cyber agency CERT-In issues advisories when it sees patterns across multiple institutions. On 20 November 2026 it said unauthorised transactions had surfaced at service providers supporting banks and non-bank financial firms, and at technology vendors that run government-linked payout stacks. The advisory said attackers altered business records or approval relationships and then pushed payments through legitimate channels. It did not name victims or cite a rupee loss. The same notice pointed to AI-driven attack frameworks appearing in incidents across sectors, building on earlier warnings this month that named specific hacking tools linked to financial raids. Reserve Bank of India supervisors have been pressing lenders to prove cyber resilience after a run of incidents at digital lenders and smaller banks.",
+      "What does this mean?",
+      "When fraud rides on valid user accounts, regulators focus on segregation of duties, maker-checker rules, and logging around master-data changes, not only on SMS one-time passwords. Fintech aggregators and payout gateways that sit between ministries and beneficiaries inherit the same scrutiny as core banking because a single tampered approver list can release thousands of small transfers. AI-assisted reconnaissance can speed up social engineering and script generation, so incident response teams need playbooks that assume partially automated attacks. CERT-In's recommendations to government organisations and non-financial payout platforms widen the audience beyond listed banks. Compliance teams should map which APIs can change payee directories or dual-authorisation matrices without a secondary human check.",
+      "Why should I care?",
+      "If you run vendor payouts or salary files through a fintech connector, ask for audit trails on approver changes and test whether a compromised admin account can add a payee in one session. Corporate treasurers should keep call-back verification for new beneficiaries even when payments originate inside enterprise resource planning software. Investors in payment stocks should read cyber disclosures in quarterly risk factors for spikes in operational losses. Watch follow-on RBI directions, named enforcement actions if CERT-In identifies victims, and whether insurers tighten cyber policies for payout platforms.",
+    ],
+  },
+  {
+    slug: "india-unified-bharat-e-charge-november-2026",
+    title: "Twelve charger networks now sit on one national EV payment platform",
+    summary:
+      "The Ministry of Heavy Industries said on 20 November 2026 that about twelve charging operators are live on the Unified Bharat e-Charge pilot across five states, with NPCI BHIM Services and BHEL developing the shared discover-and-pay layer and officials planning a wider rollout once reliability improves.",
+    category: "industry",
+    companyOrSector: "Electric vehicles / charging policy",
+    publishedAt: "2026-11-20T23:01:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-unified-bharat-e-charge-november-2026"),
+    keyTakeaways: [
+      "Reporting on 20 November 2026 cited ministry officials saying twelve charging network operators are integrated on Unified Bharat e-Charge, a pilot running in five states.",
+      "The platform lets drivers find, access, and pay at chargers run by different companies through one interface; most electric two-, three-, and four-wheeler brands are linked.",
+      "PM E-DRIVE rules require subsidised public chargers to onboard the platform, and Rs 2,000 crore is earmarked for public charging under the scheme.",
+    ],
+    body: [
+      "What's going on here?",
+      "Electric vehicle drivers in India often juggle multiple apps because each charging company runs its own payment stack. The government wants a common digital layer so discovery and billing work like interoperable UPI, reducing range anxiety on highways and in apartment clusters. The Unified Bharat e-Charge platform is being built by NPCI BHIM Services and Bharat Heavy Electricals. On 20 November 2026 wire copy cited Ministry of Heavy Industries officials saying the pilot is active in five states and about twelve charging network operators have joined. Additional secretary Hanif Qureshi told reporters the network will expand as uptime and coverage improve, without fixing a nationwide launch date. Operational guidelines under the PM Electric Drive scheme already require chargers funded by the programme to register on the platform and to meet uptime monitoring through it.",
+      "What does this mean?",
+      "Interoperability shifts competition from owning the payment login to owning reliable hardware at busy coordinates. Operators that already invested in branded apps may still keep loyalty features, but baseline sessions could clear through the national interface, similar to how Bharat BillPay aggregated utility payments. Carmakers benefit because in-dash navigation can query one API instead of many. States pitching land and power for charging parks will track how quickly unified sessions convert to billed kilowatt-hours. The Rs 2,000 crore PM E-DRIVE charging allocation and priority corridors for freight and passenger highways give developers a visible pipeline if they meet onboarding and uptime rules.",
+      "Why should I care?",
+      "If you drive an EV or plan to buy one, check whether your frequent routes list Bharat e-Charge-compatible stations before long trips, even if you keep a private operator app for faster support. Fleet managers should model downtime costs assuming unified billing but not unified maintenance SLAs. Investors in BHEL, charge-point operators, and grid equipment makers should watch state-wise onboarding counts and uptime scores once the ministry publishes them. Follow cabinet approvals on PM E-DRIVE disbursements, rival roaming alliances, and whether oil-marketing company chargers meet the mandated uptime thresholds.",
+    ],
+  },
+  {
+    slug: "sebi-mii-tenure-limits-november-2026",
+    title: "SEBI wants shorter careers for exchange bosses and public directors",
+    summary:
+      "A Securities and Exchange Board of India consultation paper released on 20 November 2026 proposes lowering the maximum age for public interest directors on exchanges to 70 from 75, capping managing-director tenure at eight years at one market infrastructure institution and twelve across institutions, and letting the AMFI chief join the AMC Repo Clearing board as capital needs rise.",
+    category: "industry",
+    companyOrSector: "Capital markets / governance",
+    publishedAt: "2026-11-20T20:54:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-mii-tenure-limits-november-2026"),
+    keyTakeaways: [
+      "The 20 November 2026 consultation proposes two three-year terms for public interest directors on stock exchanges and clearing corporations, down from three terms.",
+      "Managing directors would face an eight-year cap at one institution and twelve years across institutions; incumbent MDs get a transitional fifteen-year ceiling.",
+      "Comments are open until 11 December 2026; a separate proposal would seat the AMFI CEO on AMC Repo Clearing Ltd's board to help raise capital.",
+    ],
+    body: [
+      "What's going on here?",
+      "Market infrastructure institutions run the matching engines, clearing houses, and depositories that sit at the centre of India's securities business. SEBI sets who can lead those boards and for how long, because extended tenures can entrench governance cultures. On 20 November 2026 the regulator released a consultation paper with five governance changes, inviting comments until 11 December 2026. It proposed cutting the maximum age for public interest directors to 70 from 75 and limiting them to two three-year terms instead of three. Managing directors could serve five years per term but only eight years at one institution and twelve years across institutions, with a fifteen-year transitional cap for those already in office. Executive directors would face similar cross-institution limits. The paper also suggested letting the Association of Mutual Funds in India chief executive join the board of AMC Repo Clearing Ltd as a non-independent director, tied to further capital from asset managers, because the clearing house's net worth trailed Reserve Bank thresholds for central counterparties.",
+      "What does this mean?",
+      "Shorter director and MD horizons speed up board refresh and reduce the risk that one leadership team shapes rule implementation for a decade without challenge. Exchanges may accelerate succession planning and external searches rather than extending incumbents through re-designations. The AMFI board seat is a pragmatic response to mutual funds dominating repo lending on ARCL; without fresh capital the platform risks falling short of systemic importance buffers. PID committee load limits aim to keep independent directors from stretching across too many oversight panels. None of the proposals bind issuers directly, but they shape how quickly settlement failures get escalated and how repo markets absorb stress.",
+      "Why should I care?",
+      "If you trade derivatives or park cash in liquid mutual funds, clearing-house capital and governance affect whether margin calls and repo lines stay open during volatile sessions. Listed exchange shares react to leadership stability narratives, though consultation papers are not final law. Compliance officers at brokers should read comment letters from industry bodies for clues on implementation timing. Track SEBI's final circular after 11 December 2026, ARCL's capital raise timeline, and any announced CEO transitions at NSE, BSE, or depositories.",
+    ],
+  },
+  {
+    slug: "irdai-star-health-claims-penalty-november-2026",
+    title: "IRDAI fined Star Health Rs 2 crore for Covid claim cuts",
+    summary:
+      "The Insurance Regulatory and Development Authority of India imposed a Rs 2 crore penalty on Star Health and Allied Insurance on 20 November 2026 after inspections found Covid-related health claims declined or trimmed on untenable grounds, with policyholders often not told which policy clause justified the decision.",
+    category: "industry",
+    companyOrSector: "Health insurance",
+    publishedAt: "2026-11-20T20:51:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("irdai-star-health-claims-penalty-november-2026"),
+    keyTakeaways: [
+      "IRDAI's 20 November 2026 order imposed Rs 2 crore under the Insurance Act after supervisory reviews of Star Health's Covid-era claim handling.",
+      "The authority said deductions were not always supported by policy terms and many repudiations lacked clear clause citations for policyholders.",
+      "Star Health was warned on hospital discount pass-through and on collecting renewal premiums more than ninety days ahead; claim letters must itemise allowed and disallowed amounts.",
+    ],
+    body: [
+      "What's going on here?",
+      "Health insurers in India negotiate package rates with hospital networks, but policyholders only benefit if those discounts show up on bills and in claim settlements. IRDAI inspections after the Covid wave tested whether insurers paid what contracts promised when intensive-care stays spiked. On 20 November 2026 the regulator ordered Star Health and Allied Insurance to pay a Rs 2 crore penalty after finding Covid-related claims rejected or reduced without adequate policy support. The authority said many policyholders received repudiation or reduction letters that did not spell out the governing clause, leaving them unable to challenge decisions. It also warned the insurer over renewals collected more than ninety days in advance and over network-hospital discounts not flowing through to members. Star Health must now itemise allowed, disallowed, and non-payable amounts in settlement letters and share insurance ombudsman contact details with complainants.",
+      "What does this mean?",
+      "Penalties on a listed health insurer signal that claim-handling transparency is an enforceable line, not a customer-service nicety. Hospitals may face more audits on whether agreed tariffs match submitted bills when IRDAI checks discount pass-through. Competing insurers will scrub Covid-era files to avoid similar findings. For retail buyers, clearer settlement letters should make it easier to escalate disputes with documentation. The Rs 2 crore fine is small relative to Star Health's premium base but carries reputational weight in a renewals-driven market.",
+      "Why should I care?",
+      "If you hold a Star Health policy or are shopping among private insurers, demand written clause references whenever a claim is partly denied and compare network hospital lists with actual bill discounts. Corporate HR teams administering group covers should ask third-party administrators how itemised advisories will look on the next renewal. Investors should watch whether the penalty triggers provisioning or management commentary on claim ratios. Follow IRDAI's next inspection cycle outcomes at other insurers, Star Health's compliance attestations in exchange filings, and whether ombudsman complaint volumes rise after the directive on contact details.",
+    ],
+  },
+  {
+    slug: "india-festive-smartphone-units-fell-22-november-2026",
+    title: "Festive smartphone units fell 22% while average prices climbed 28%",
+    summary:
+      "Counterpoint Research said on 20 November 2026 that India's smartphone unit sales fell about 22% year on year during the festive season as memory inflation lifted device prices and narrowed discounts, leaving value largely flat because shoppers who needed a phone still bought on EMI while many others delayed upgrades.",
+    category: "industry",
+    companyOrSector: "Consumer electronics / handsets",
+    publishedAt: "2026-11-20T20:31:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-festive-smartphone-units-fell-22-november-2026"),
+    keyTakeaways: [
+      "Counterpoint's 20 November 2026 note estimated festive-season smartphone volumes down 22% year on year, steeper than its pre-season 12% forecast.",
+      "Average selling prices rose 28% year on year, leaving market value roughly flat despite fewer boxes sold.",
+      "Festive discounts ran about 10-25% versus 35-40% a year earlier; roughly 48% of sales were finance-led.",
+    ],
+    body: [
+      "What's going on here?",
+      "Festive quarters are when Indian handset makers and online retailers expect a wave of upgrades tied to exchange bonuses and no-cost EMIs. Counterpoint Research tracks sell-through after major sale windows. On 20 November 2026 it said smartphone unit sales fell about 22% year on year during the 2026 festive season, worse than the 12% decline it feared before Navratri and Diwali events. Rising DRAM and NAND costs pushed average selling prices up 28%, which kept overall market value roughly flat even as fewer devices left stores. Discount depth shrank to about 10-25% from 35-40% in the prior year, and nearly half of purchases used financing. Samsung held a 21% unit share with a milder 8% volume drop, while several Chinese brands saw steeper declines; sub-Rs 20,000 models were hit hardest.",
+      "What does this mean?",
+      "When prices rise faster than promotions, need-based buyers still take EMIs but discretionary upgraders postpone, which shows up as volume pain without a revenue collapse. Brands with premium mix can defend rupee sales even when shipments fall, explaining Samsung's relative resilience against a weak market. Retailers that stockpiled pre-price-hike inventory reported better conversions, so channel planning matters as much as marketing spend. Memory inflation is squeezing specifications on budget phones, a theme desk has tracked in Chinese share shifts, and the festive data confirms consumers reacted at the checkout.",
+      "Why should I care?",
+      "If you planned a festive phone upgrade, compare whether waiting for post-season clearance beats today's EMI terms because discounts may not return to 2025 levels while chips stay expensive. Distributors and mall operators should expect thinner footfall in entry-level zones through December. Investors in handset supply chains should separate volume guidance from ASP-led revenue when reading OEM commentary. Watch November sell-through updates, year-end inventory disclosures from major brands, and memory price trends into the March quarter.",
+    ],
+  },
+  {
     slug: "ctrls-bihar-datacentre-november-2026",
     title: "CtrlS will build a 150 megawatt data centre in Bihar",
     summary:
@@ -13800,6 +13920,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "cert-in-payment-fraud-advisory-november-2026": "policy",
+  "india-unified-bharat-e-charge-november-2026": "policy",
+  "sebi-mii-tenure-limits-november-2026": "policy",
+  "irdai-star-health-claims-penalty-november-2026": "policy",
+  "india-festive-smartphone-units-fell-22-november-2026": "markets",
   "ctrls-bihar-datacentre-november-2026": "policy",
   "waaree-solapur-solar-storage-november-2026": "policy",
   "india-infrastructure-output-october-2026": "markets",
