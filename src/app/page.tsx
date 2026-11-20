@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = pageMetadata({
   path: "/",
   description:
-    "Indian markets news, company research memos, advisor directory, and free ETF and gold tools. Outthink the market on PocketEdge.",
+    "PocketEdge gives you a team of smart AI Agents that can help you with anything from mutual funds to complex options trading",
 });
 import { NewsMagazineCard, ResearchList } from "@/components/magazine/MagazineCards";
 import { ResearchMemoCard } from "@/components/research/ResearchMemoCard";

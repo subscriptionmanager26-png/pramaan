@@ -9,7 +9,7 @@ export function organizationJsonLd() {
     url,
     logo: `${url}/icon.png`,
     description:
-      "Indian markets news desk, company research, SEBI-registered advisors, and tools for investors.",
+      "PocketEdge gives you a team of smart AI Agents that can help you with anything from mutual funds to complex options trading",
   };
 }
 

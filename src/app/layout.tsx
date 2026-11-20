@@ -28,26 +28,26 @@ const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
-    default: "PocketEdge — Indian markets, research & tools",
+    default: "PocketEdge : Manage Money like a pro with AI",
     template: "%s · PocketEdge",
   },
   description:
-    "News desk, stock research, SEBI-registered advisors, and free market tools for Indian investors. Sign in for portfolio and AI on pocketedge.in.",
+    "PocketEdge gives you a team of smart AI Agents that can help you with anything from mutual funds to complex options trading",
   openGraph: {
     type: "website",
     siteName: "PocketEdge",
     locale: "en_IN",
     url: siteUrl(),
-    title: "PocketEdge — Indian markets, research & tools",
+    title: "PocketEdge : Manage Money like a pro with AI",
     description:
-      "Browse Indian stocks, mutual funds, and ETFs. Read research, track ideas, and chat with your AI assistant.",
+      "PocketEdge gives you a team of smart AI Agents that can help you with anything from mutual funds to complex options trading",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "PocketEdge" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PocketEdge — Indian markets, research & tools",
+    title: "PocketEdge : Manage Money like a pro with AI",
     description:
-      "Browse Indian stocks, mutual funds, and ETFs. Read research and chat with your AI assistant.",
+      "PocketEdge gives you a team of smart AI Agents that can help you with anything from mutual funds to complex options trading",
     images: ["/og-image.jpg"],
   },
   icons: {
