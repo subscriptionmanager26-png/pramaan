@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+import { AGENTS_CREDITS_BANNER_TEXT, agentsCreditsOutageActive } from "@/lib/agent/agents-credits-outage";
 import { ensureAgentUserSynced } from "@/lib/agent/ensure-agent-user";
 import { requireAgentUser } from "@/lib/agent/require-agent-user";
 import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
@@ -34,6 +35,12 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const t0 = Date.now();
+  if (agentsCreditsOutageActive()) {
+    return NextResponse.json(
+      { error: { code: "agents_credits_exhausted", message: AGENTS_CREDITS_BANNER_TEXT } },
+      { status: 503 },
+    );
+  }
   if (!personalAgentsConfigured()) {
     return NextResponse.json({ error: "agent_backend_unconfigured" }, { status: 503 });
   }

@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { PostHogIdentify } from "@/components/analytics/PostHogIdentify";
 import { BOTTOM_NAV_PAD, BottomNav } from "@/components/shell/BottomNav";
 import { PRODUCT_RAIL_WIDTH, ProductRail } from "@/components/shell/ProductRail";
+import { AgentsCreditsBanner } from "@/components/site/AgentsCreditsBanner";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
-
 function AppShellChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const agentArea = pathname?.startsWith("/ai") ?? false;
@@ -19,7 +19,10 @@ function AppShellChrome({ children }: { children: React.ReactNode }) {
     <div
       className={`flex flex-col bg-paper text-ink ${agentArea ? "h-dvh max-h-dvh min-h-0" : "min-h-screen"}`}
     >
-      <SiteHeader />
+      <div className="sticky top-0 z-40 shrink-0">
+        <SiteHeader />
+        <AgentsCreditsBanner />
+      </div>
       <div className={`flex min-h-0 flex-1 ${agentArea ? "overflow-hidden" : ""}`}>
         <Suspense
           fallback={

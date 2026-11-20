@@ -25,6 +25,10 @@ import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
 import { reportAgentClientEvent } from "@/lib/agent/client-telemetry";
 import { messageFromFailedResponse, parseJsonResponse } from "@/lib/agent/parse-json-response";
+import {
+  AGENTS_CREDITS_BANNER_TEXT,
+  isAgenticAdvisorChatPaused,
+} from "@/lib/agent/agents-credits-outage";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 import { usePocketedgeAuth } from "@/lib/pocketedge/use-pocketedge-auth";
 import { getPocketedgeSupabase } from "@/lib/pocketedge/supabase-browser";
@@ -47,6 +51,7 @@ export function PramaanAgentChat() {
   const auth = usePocketedgeAuth();
   const advisorId = activeAdvisorId ?? DEFAULT_ADVISOR_ID;
   const advisor = getAdvisor(advisorId);
+  const chatPaused = isAgenticAdvisorChatPaused(advisor);
   const durableId = durableAdvisorThreadId(advisorId);
   const threadParam = searchParams.get("t");
   const hasAgent = Boolean(activeAdvisorId);
@@ -399,6 +404,11 @@ export function PramaanAgentChat() {
       setError(`Unlock ${advisor.name} to chat with this advisor.`);
       return false;
     }
+    if (chatPaused) {
+      setBusy(false);
+      setError(AGENTS_CREDITS_BANNER_TEXT);
+      return false;
+    }
     const sendThreadId = threadId || durableId;
     const promotedFromDraft = isDraft || !threadParam;
     const optimisticId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
@@ -723,11 +733,15 @@ export function PramaanAgentChat() {
 
   const composer = (
     <AgentComposer
-      disabled={!chatActive || busy || advisor.status !== "unlocked"}
+      disabled={!chatActive || busy || advisor.status !== "unlocked" || chatPaused}
       getAuthHeaders={authHeaders}
       onSend={onSend}
-      placeholder={`Message ${advisor.name}…`}
-      suggestions={showEmptyHome && advisor.status === "unlocked" ? advisor.suggestions : undefined}
+      placeholder={
+        chatPaused ? "Agents are paused — back 25 Nov" : `Message ${advisor.name}…`
+      }
+      suggestions={
+        showEmptyHome && advisor.status === "unlocked" && !chatPaused ? advisor.suggestions : undefined
+      }
       hint={
         !showEmptyHome
           ? `PDF, CSV and Excel up to ${formatBytes(MAX_FILE_BYTES)}. Shift+Enter for a new line.`
@@ -740,7 +754,7 @@ export function PramaanAgentChat() {
     return null;
   }
 
-  if (showEmptyHome && advisor.status !== "unlocked") {
+  if (showEmptyHome && (advisor.status !== "unlocked" || chatPaused)) {
     return (
       <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-8 sm:px-6">
         <div className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center gap-6 pb-10 text-center">
@@ -753,11 +767,21 @@ export function PramaanAgentChat() {
           </div>
           <div className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-[13px] font-semibold text-ink-2 shadow-[3px_3px_0_rgba(11,11,11,0.06)]">
             <Lock className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
-            {advisor.status === "soon" ? "Coming soon" : "Locked"}
+            {chatPaused
+              ? "Paused"
+              : advisor.status === "soon"
+                ? "Coming soon"
+                : "Locked"}
           </div>
           <p className="max-w-sm text-[13px] text-ink-3">
-            Use <span className="font-semibold text-ink-2">More → Request an agent</span> if you want this
-            unlocked — specialists are curated, not created on the fly.
+            {chatPaused ? (
+              AGENTS_CREDITS_BANNER_TEXT
+            ) : (
+              <>
+                Use <span className="font-semibold text-ink-2">More → Request an agent</span> if you want this
+                unlocked — specialists are curated, not created on the fly.
+              </>
+            )}
           </p>
           <button type="button" className="btn-ghost text-sm lg:hidden" onClick={showAgentInbox}>
             Back to agents
@@ -784,7 +808,7 @@ export function PramaanAgentChat() {
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6">
             <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center gap-8 pb-8">
               <div className="flex flex-col items-center text-center">
-                <AdvisorAvatar advisor={advisor} size="lg" />
+                <AdvisorAvatar advisor={advisor} size="lg" surface="paper" mfPose={mfPose} />
                 <p className="text-section mt-4 text-ink">{advisor.name}</p>
                 <p className="mt-3 max-w-md text-[15px] leading-6 text-ink-2">
                   Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 17 ? "afternoon" : "evening"},{" "}
@@ -809,6 +833,7 @@ export function PramaanAgentChat() {
                   <ChatTurn
                     key={message.id}
                     message={message}
+                    advisor={advisor}
                     orders={orders}
                     onDecide={onDecide}
                     artifacts={artifactsByMessage[message.id]}

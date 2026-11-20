@@ -23,6 +23,7 @@ import {
   isAdvisorId,
   type AdvisorId,
 } from "@/lib/agent/advisors";
+import { agentsCreditsOutageActive, isAgenticAdvisorChatPaused } from "@/lib/agent/agents-credits-outage";
 import { aiTeamPreviewEnabled } from "@/lib/agent/ai-team-preview";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
@@ -175,10 +176,15 @@ export function ProductRail() {
     router.push(aiHref({ agent: id }));
   }
 
+  const creditsBanner = agentsCreditsOutageActive();
+  const railChrome = creditsBanner
+    ? "top-[calc(3.5rem+2.75rem)] h-[calc(100dvh-3.5rem-2.75rem)]"
+    : "top-14 h-[calc(100dvh-3.5rem)]";
+
   return (
     <>
       <aside
-        className={`sticky top-14 z-30 hidden h-[calc(100dvh-3.5rem)] self-start flex-col overflow-hidden border-r border-line bg-paper-2 lg:flex ${PRODUCT_RAIL_WIDTH}`}
+        className={`sticky z-30 hidden self-start flex-col overflow-hidden border-r border-line bg-paper-2 lg:flex ${railChrome} ${PRODUCT_RAIL_WIDTH}`}
       >
         <ProductNav aiHref={aiHref({ agent: activeId ?? DEFAULT_ADVISOR_ID })} />
 
@@ -190,7 +196,7 @@ export function ProductRail() {
           {ADVISORS.map((advisor) => {
             const active = advisor.id === activeId;
             const activity = getAdvisorActivity(advisor, threads);
-            const locked = advisor.status !== "unlocked";
+            const locked = advisor.status !== "unlocked" || isAgenticAdvisorChatPaused(advisor);
             return (
               <li key={advisor.id}>
                 <button

@@ -1,3 +1,4 @@
+import { isAgenticAdvisorChatPaused } from "@/lib/agent/agents-credits-outage";
 import type { Advisor, AdvisorId } from "@/lib/agent/advisors";
 import { durableAdvisorThreadId, threadBelongsToAdvisor } from "@/lib/agent/advisors";
 
@@ -57,6 +58,14 @@ export function getAdvisorActivity(
   }
   if (advisor.status === "soon") {
     return { state: "soon", preview: "Coming soon", updatedAt: null, unreadCount: 0 };
+  }
+  if (isAgenticAdvisorChatPaused(advisor)) {
+    return {
+      state: "locked",
+      preview: "Paused — back 25 Nov",
+      updatedAt: null,
+      unreadCount: 0,
+    };
   }
 
   const latest = latestThreadForAdvisor(threads, advisor.id);

@@ -40,7 +40,7 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur-md">
+    <header className="border-b border-line bg-white/95 backdrop-blur-md">
       <div className="flex h-14 w-full items-center">
         <div
           className={`hidden h-full shrink-0 items-center border-r border-line bg-paper-2 px-4 lg:flex ${PRODUCT_RAIL_WIDTH}`}

@@ -26,6 +26,7 @@ import {
   isAdvisorId,
   type AdvisorId,
 } from "@/lib/agent/advisors";
+import { isAgenticAdvisorChatPaused } from "@/lib/agent/agents-credits-outage";
 import { aiTeamPreviewEnabled } from "@/lib/agent/ai-team-preview";
 import { AGENT_OPEN_SIDEBAR_EVENT } from "@/lib/agent/open-sidebar";
 import { clearThreadsCache, readThreadsCache, writeThreadsCache } from "@/lib/agent/threads-cache";
@@ -81,7 +82,7 @@ function AgentInbox({
       <ul className="min-h-0 flex-1 divide-y divide-line overflow-y-auto bg-white">
         {ADVISORS.map((advisor) => {
           const activity = getAdvisorActivity(advisor, threads);
-          const locked = advisor.status !== "unlocked";
+          const locked = advisor.status !== "unlocked" || isAgenticAdvisorChatPaused(advisor);
           return (
             <li key={advisor.id}>
               <button
