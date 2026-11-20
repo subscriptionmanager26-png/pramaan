@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "ctrls-bihar-datacentre-november-2026",
+    title: "CtrlS will build a 150 megawatt data centre in Bihar",
+    summary:
+      "CtrlS Datacenters signed a memorandum of understanding with the Bihar government on 20 November 2026 to invest about Rs 10,000 crore in a 150 MW facility in Patna, with commercial operations targeted for 2029-30 as AI-driven demand pulls hyperscale capacity into states beyond the usual Mumbai and Hyderabad hubs.",
+    category: "industry",
+    companyOrSector: "Digital infrastructure / data centres",
+    publishedAt: "2026-11-20T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ctrls-bihar-datacentre-november-2026"),
+    keyTakeaways: [
+      "Reporting on 20 November 2026 said CtrlS Datacenters and the Bihar state government signed an MoU for roughly Rs 10,000 crore of investment in a 150 MW data centre at Patna.",
+      "The company expects the campus to be commercially operational by 2029-30 and to employ about 400 people directly.",
+      "CtrlS already runs a 12 MW Patna site opened in October 2026 and earlier pledged a similar Rs 10,000 crore project at Bodh Gaya.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian banks, retailers, and government departments want low-latency compute close to users, but most hyperscale capacity still clusters around western and southern metros with deep fibre backbones. State governments now pitch land, power, and tax sweeteners to pull cloud and AI hosting eastward. On 20 November 2026, market reporting said CtrlS Datacenters signed a memorandum of understanding with the Bihar government to invest about Rs 10,000 crore in a 150 megawatt data centre in Patna. The facility is slated to become commercially operational in 2029-30 and create roughly 400 direct jobs, according to company statements cited in the wires. Chief executive Sridhar Pinnapureddy framed the deal as bringing large-scale digital infrastructure into Bihar. CtrlS inaugurated a 12 megawatt Patna centre in October 2026 and had already announced a similar Rs 10,000 crore commitment for Bodh Gaya the prior month. Industry commentary tied the flurry of announcements to rising AI inference and storage demand across India, alongside rival capex from groups such as HCLTech and Larsen and Toubro.",
+      "What does this mean?",
+      "Hyperscale data centres need reliable grid power, water for cooling, and carrier-neutral fibre within reasonable distances. States that certify those inputs can convert rust-belt land banks into recurring property tax and electricity revenue, even when the operator is a private specialist rather than a global cloud brand. For CtrlS, stacking Patna capacity from 12 MW toward 150 MW is a bet that eastern enterprises and public-sector workloads will rent local racks instead of backhauling everything to Noida. The multi-year build timeline means revenue recognition sits years out; near-term impact is land acquisition, construction contracts, and power purchase agreements. Competitors scouting sites in Lucknow, Visakhapatnam, or smaller smart cities may accelerate their own state MoUs to keep pace.",
+      "Why should I care?",
+      "If you run IT for a company with large user bases in Bihar, Jharkhand, or eastern Uttar Pradesh, ask vendors whether Patna availability zones show up in their roadmaps and what latency gains justify any premium. Investors in power utilities and cooling-equipment makers should track grid spare capacity around Patna once earthworks begin. Job seekers in Patna should watch CtrlS and its EPC partners for facility-management and network operations roles closer to 2028. Monitor formal work orders beyond the MoU, state cabinet approvals on incentives, and whether national optic-fibre routes add redundant paths into the campus.",
+    ],
+  },
+  {
+    slug: "waaree-solapur-solar-storage-november-2026",
+    title: "Waaree tied up a 700 megawatt solar plant with four hours of batteries",
+    summary:
+      "Waaree Energies said on 20 November 2026 its unit Waaree Forever Energies signed a power purchase agreement with SECI for a 700 MW solar project and 700 MW/2,800 MWh battery storage in Solapur, Maharashtra, and won a 25-year authorization to build a 21 km transmission line linking the site to the grid.",
+    category: "industry",
+    companyOrSector: "Renewable power / grid storage",
+    publishedAt: "2026-11-20T16:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("waaree-solapur-solar-storage-november-2026"),
+    keyTakeaways: [
+      "Exchange filings on 20 November 2026 linked Waaree Forever Energies to a SECI-backed 700 MW solar project plus 700 MW/2,800 MWh energy storage in Solapur, Maharashtra.",
+      "The ministry of power granted a 25-year permit under the Electricity Act for a 21 km, 400 kV line from the plant switchyard to the RGESL grid point in Akkalkot taluka.",
+      "The solar and storage combination is meant to supply after-sunset power and reduce renewable curtailment on congested western corridors.",
+    ],
+    body: [
+      "What's going on here?",
+      "Solar farms in Maharashtra generate most of their electrons around midday, yet factories and cities still need power after dark. Pairing panels with large batteries lets developers promise SECI and state buyers a steadier profile instead of dumping excess daytime supply into a grid that sometimes cannot absorb it. On 20 November 2026, Waaree Energies Ltd told stock exchanges that its wholly owned unit Waaree Forever Energies entered a power purchase agreement with the Solar Energy Corporation of India for a 700 megawatt solar project and 700 MW/2,800 MWh of battery storage in Solapur district. The same update cited a ministry of power notification from 6 October 2026 authorising a 21 kilometre, 400 kilovolt transmission line on double-circuit towers from Salgar village to the RGESL PSS4 switchyard at Konhali, valid for 25 years subject to remaining clearances. Waaree is among the largest Indian module suppliers and has been expanding from equipment sales into generation and storage ownership.",
+      "What does this mean?",
+      "Four hours of storage on a 700 MW solar block implies the developer can discharge roughly the plant's peak output through early evening peaks, improving tariff competitiveness in auctions that reward firmed renewable supply. The separate transmission approval shows grid connectivity remains the gating item: without the 21 km line, stored energy cannot reach buyers even if cells are installed. Construction will pull modules, inverters, and lithium or alternative chemistry packs from Waaree's own factories and third parties, tying equipment margins to project returns. Maharashtra's discoms and large industrial consumers could see more predictable green power if commissioning stays on schedule, though execution risk sits with land, batteries, and right-of-way permissions along the corridor.",
+      "Why should I care?",
+      "Factory managers in western Maharashtra should track SECI delivery timelines if they buy renewable power through group captive or open-access routes tied to this cluster. Investors in Waaree should weigh how much balance sheet moves from manufacturing into long-dated generation and whether return targets justify the capex pile-up with other solar-storage bids. Rivals such as Adani Green and Tata Power are building similar solar-plus-storage stacks, so auction pricing may stay aggressive. Watch environmental and forest clearances on the transmission line, battery chemistry choice in detailed project reports, and quarterly disclosures on construction milestones.",
+    ],
+  },
+  {
+    slug: "india-infrastructure-output-october-2026",
+    title: "India's infrastructure output rose 10.9% in October",
+    summary:
+      "Government data on 20 November 2026 showed the composite infrastructure index, tracking nine core industries that feed roughly a third of industrial production, expanded 10.9% year on year in October from a revised 8.2% in September, signalling broad momentum in electricity, steel, cement, and refinery throughputs ahead of the festive quarter.",
+    category: "industry",
+    companyOrSector: "Infrastructure / industrial activity",
+    publishedAt: "2026-11-20T16:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-infrastructure-output-october-2026"),
+    keyTakeaways: [
+      "The infrastructure output index rose 10.9% in October 2026 from a year earlier, versus a revised 8.2% in September, per government releases cited on 20 November.",
+      "The gauge covers coal, crude oil, natural gas, refinery products, fertilisers, steel, cement, electricity, and steel-related activity.",
+      "October's print extends an acceleration from the 7.9% September reading that desk covered earlier in the rebased series.",
+    ],
+    body: [
+      "What's going on here?",
+      "Policymakers watch the infrastructure index because it moves before the wider industrial production numbers and hints at whether mines, power plants, and construction supply chains are busy. The commerce ministry publishes the series monthly, with activity across coal output, crude extraction, refinery runs, steel and cement, fertiliser, natural gas, and electricity generation. On 20 November 2026, wire services reported the October 2026 reading at 10.9% year on year, up from a revised 8.2% in September. That marks a second straight month of faster growth after officials rebased the index to 2022-23 in mid-2026. Robust electricity and refinery throughputs typically drive the headline when festive-season demand lifts fuel and power draw, while cement and steel additions point to construction pipelines still absorbing inputs.",
+      "What does this mean?",
+      "Double-digit infrastructure growth does not guarantee strong GDP by itself, but it suggests upstream sectors are not contracting before consumer-facing data arrives. Power utilities benefit when generation rises alongside industrial draw; cement and steel makers see volume support even if spot prices stay flat. The print lands the same week when equity investors rotated back into banks and capital goods, partly on hopes that credit and capex cycles are aligning. If momentum persists, the index reduces the odds of an immediate industrial slowdown scare, though maintenance shutdowns or monsoon-linked mining dips can reverse a single month quickly.",
+      "Why should I care?",
+      "If you allocate to mutual funds tilted toward industrials or commodities, compare this print with order-book commentary from capital goods and cement companies on their November calls. Businesses negotiating fuel or power contracts should note stronger refinery and electricity components when budgeting input costs for the December quarter. Watch the November infrastructure release in mid-December, November industrial production, and any revision to October's September base that could restate the acceleration.",
+    ],
+  },
+  {
+    slug: "sebi-fpi-consultation-simplify-november-2026",
+    title: "SEBI will consult on removing overseas-only rules for foreign investors",
+    summary:
+      "Securities and Exchange Board of India chairman Tuhin Kanta Pandey said on 20 November 2026 the regulator will soon release a consultation paper to drop India-specific constraints on foreign portfolio investors that major markets do not impose, alongside quicker digital onboarding and video-based know-your-customer for eligible non-resident Indians.",
+    category: "industry",
+    companyOrSector: "Capital markets / regulation",
+    publishedAt: "2026-11-20T16:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-fpi-consultation-simplify-november-2026"),
+    keyTakeaways: [
+      "Speaking at the CII Financing Summit on 20 November 2026, Pandey said SEBI will consult on simplifying foreign portfolio investor operations by removing constraints not found in peer jurisdictions.",
+      "He cited digitised registration, digitally signed powers of attorney, net settlement for lower funding costs, and onboarding targets as short as five business days.",
+      "Eligible NRIs may complete KYC through video verification without travelling to India under guidelines already issued.",
+    ],
+    body: [
+      "What's going on here?",
+      "Foreign portfolio investors route billions of dollars into Indian equities and bonds, but each year of heavy selling turns attention to how many forms, custodian layers, and India-only eligibility tests they must clear before trading again. SEBI has been trimming friction since the 2020 liquidity stress, including faster FPI registrations and relaxed concentration norms in intervals. On 20 November 2026, chairman Tuhin Kanta Pandey told the Confederation of Indian Industry Financing Summit that the board will release a consultation paper to simplify FPI operations by removing constraints that other large markets do not apply. He pointed to digitised applications, acceptance of digitally signed powers of attorney, net settlement to cut funding costs, and efforts to cut onboarding to as few as five business days. A joint working group with the Reserve Bank of India is slated to unify application forms further. Pandey also said eligible non-resident Indians can now complete know-your-customer through video verification without flying to India.",
+      "What does this mean?",
+      "Consultation papers do not change law overnight, but they signal which legacy rules SEBI thinks deter mandates. Removing redundant limits could shorten the path for global funds sitting in cash after two years of net selling to redeploy without restructuring entities. Quicker KYC for NRIs widens the retail pipeline for Indian brokers and depositories competing for overseas wealth. Net settlement and shorter onboarding shave carry costs that matter when investors compare Mumbai with other emerging hubs. Bond-market reform comments on the same stage, including work on corporate bond market making, sit alongside the FPI push as part of a broader financing-summit package rather than a single rule change.",
+      "Why should I care?",
+      "If you invest through foreign funds or P-notes, watch the consultation paper for concrete rule drops affecting category limits, local custodian requirements, or derivative access. Domestic brokerages and custodians should stress-test onboarding timelines against the five-day target. NRIs opening accounts should ask relationship managers whether video KYC is live for their jurisdiction. Track comment-period deadlines, RBI sign-off on unified forms, and November foreign portfolio investment flow data to see if easier access coincides with the recent equity inflow surge.",
+    ],
+  },
+  {
+    slug: "mobikwik-diwali-tier2-payments-november-2026",
+    title: "MobiKwik says Diwali payments surged fastest outside the big metros",
+    summary:
+      "One MobiKwik Systems reported on 20 November 2026 that gross merchandise value during the 6-9 November Diwali window jumped 80% year on year to Rs 3,018 crore, with tier-two cities and beyond accounting for more than 77% of user transactions on the peak festive day.",
+    category: "industry",
+    companyOrSector: "Consumer fintech / digital payments",
+    publishedAt: "2026-11-20T15:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("mobikwik-diwali-tier2-payments-november-2026"),
+    keyTakeaways: [
+      "MobiKwik said Diwali-period GMV reached Rs 3,018 crore in 2026 versus Rs 1,678 crore a year earlier, with consumer payments GMV up 108% to Rs 1,583 crore.",
+      "On 8 November 2026, tier-two cities and beyond contributed more than 77% of transactions and over 78% of location-tagged GMV.",
+      "Average consumer payment ticket size rose to Rs 1,272 from Rs 1,036 in the prior-year festive window.",
+    ],
+    body: [
+      "What's going on here?",
+      "Festive weeks stress-test whether digital wallets and UPI apps work beyond big-city early adopters, because families in smaller towns buy gifts, pay kirana bills, and send money home in the same few evenings. MobiKwik, founded in 2009 and listed in late 2025, publishes seasonal snapshots to show merchant and user depth. On 20 November 2026, the company said gross merchandise value across 6-9 November 2026 rose 80% year on year to Rs 3,018 crore from Rs 1,678 crore during the comparable Diwali stretch in 2025. Consumer payments GMV climbed 108% to Rs 1,583 crore, merchant payments GMV rose 93% to Rs 688 crore, and person-to-person gifts and transfers reached Rs 747 crore. Chief executive Bipin Preet Singh highlighted person-to-person traffic and merchant categories spanning fuel, groceries, liquor, electronics, and jewellery. On the peak day, 8 November, tier-two cities and beyond generated more than 77% of transactions and over 78% of location-tagged GMV, with average consumer ticket size rising to Rs 1,272 from Rs 1,036.",
+      "What does this mean?",
+      "When smaller cities dominate volume, payment apps compete on agent networks, soundboxes, and offline acceptance rather than only on metro marketing. Higher average tickets suggest users consolidated more festive spending into fewer, larger wallet debits instead of only micro recharges. The disclosure arrives months after the Reserve Bank penalised MobiKwik's prepaid payment instrument licence for compliance lapses, so management is under pressure to show user growth with cleaner controls. Rivals PhonePe, Paytm, and banks' UPI apps fight for the same merchant counters, but MobiKwik's numbers reinforce that non-metro adoption is no longer a niche storyline.",
+      "Why should I care?",
+      "Kirana and small-shop owners outside the metros should compare merchant discount rates, settlement speed, and device offers across MobiKwik, banks, and other aggregators before locking in soundboxes for the wedding season. Investors in listed fintech names should treat festive GMV as a usage proxy, not profit, and read the next quarterly update for unit economics. If you rely on wallet balances for bills, check whether PPI limits and KYC tiers changed after regulatory penalties. Watch December marketing spend, RBI compliance filings, and rival festive disclosures to see if tier-two share gains are platform-wide or company-specific.",
+    ],
+  },
+  {
     slug: "dilip-buildcon-gurugram-metro-order-november-2026",
     title: "Dilip Buildcon won a Rs 419 crore Gurugram metro corridor package",
     summary:
@@ -13680,6 +13800,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "ctrls-bihar-datacentre-november-2026": "policy",
+  "waaree-solapur-solar-storage-november-2026": "policy",
+  "india-infrastructure-output-october-2026": "markets",
+  "sebi-fpi-consultation-simplify-november-2026": "policy",
+  "mobikwik-diwali-tier2-payments-november-2026": "markets",
   "dilip-buildcon-gurugram-metro-order-november-2026": "policy",
   "paytm-cardup-singapore-stake-november-2026": "companies",
   "tips-films-voluntary-delisting-november-2026": "policy",

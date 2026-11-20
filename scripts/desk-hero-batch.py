@@ -2139,6 +2139,51 @@ def groww_ribbit_block(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([x, 560 - h, x + 50, 560], fill=[GOLD, BLUE, YELLOW][i])
 
 
+def ctrls_bihar_dc(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([80, 120, 180, 240]):
+        x = 120 + i * 55
+        d.rectangle([x, 560 - h, x + 40, 560], fill=[BLUE, RED, YELLOW, BLUE][i])
+    d.rectangle([720, 200, 900, 520], fill=BLUE)
+    for y in range(240, 500, 50):
+        d.rectangle([740, y, 880, y + 30], fill=CREAM)
+    d.line([(680, 560), (1120, 560)], fill=GOLD, width=3)
+    d.polygon([(1000, 160), (1080, 200), (1000, 240)], fill=RED)
+
+
+def waaree_solapur_storage(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 200, 340, 400], fill=YELLOW)
+    for i in range(4):
+        d.rectangle([380 + i * 60, 400, 430 + i * 60, 560], fill=BLUE)
+    d.rounded_rectangle([760, 320, 960, 520], radius=20, fill=RED)
+    d.line([(960, 420), (1120, 380)], fill=GOLD, width=4)
+    d.polygon([(800, 560), (880, 480), (960, 560)], fill=GOLD)
+
+
+def iip_october(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([180, 240, 220, 300, 280, 320]):
+        x = 80 + i * 55
+        d.rectangle([x, 560 - h, x + 45, 560], fill=[RED, BLUE, YELLOW, RED, BLUE, YELLOW][i])
+    d.rectangle([720, 280, 1120, 520], fill=BLUE)
+    d.ellipse([820, 360, 980, 460], fill=GOLD)
+
+
+def sebi_fpi_consult(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 180, 220, 560], fill=BLUE)
+    d.rectangle([280, 220, 380, 560], fill=RED)
+    d.rectangle([100, 560, 400, 580], fill=GOLD)
+    d.polygon([(720, 400), (820, 320), (920, 400), (820, 480)], fill=YELLOW)
+    d.line([(920, 400), (1120, 400)], fill=GOLD, width=4)
+    d.arc([1080, 340, 1160, 420], 270, 90, fill=RED, width=6)
+
+
+def mobikwik_diwali_tier2(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 300, 420, 540], radius=24, fill=BLUE)
+    d.ellipse([220, 360, 340, 480], fill=CREAM)
+    for idx, (cx, cy) in enumerate([(780, 240), (920, 320), (860, 440), (1020, 380), (740, 480)]):
+        d.ellipse([cx - 24, cy - 24, cx + 24, cy + 24], fill=[RED, YELLOW, BLUE, RED, YELLOW][idx])
+        d.line([(280, 420), (cx, cy)], fill=GOLD, width=2)
+
+
 def main() -> None:
     save("infosys-ntt-docomo-jv-november-2026", infosys_ntt_docomo_jv)
     save("india-psb-business-300-lakh-crore-november-2026", psb_business_300_lakh)
@@ -2342,6 +2387,11 @@ def main() -> None:
     save("india-refinery-throughput-october-2026", india_refinery_throughput_october)
     save("coal-india-rare-earth-magnet-loi-november-2026", coal_india_rare_earth_magnet_loi)
     save("ashoka-buildcon-diriyah-cancel-november-2026", ashoka_diriyah_cancel)
+    save("ctrls-bihar-datacentre-november-2026", ctrls_bihar_dc)
+    save("waaree-solapur-solar-storage-november-2026", waaree_solapur_storage)
+    save("india-infrastructure-output-october-2026", iip_october)
+    save("sebi-fpi-consultation-simplify-november-2026", sebi_fpi_consult)
+    save("mobikwik-diwali-tier2-payments-november-2026", mobikwik_diwali_tier2)
 
 
 if __name__ == "__main__":

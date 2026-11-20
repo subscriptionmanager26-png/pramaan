@@ -1450,6 +1450,46 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Elevated metro train silhouette |
 | Metaphor left | Rising construction chevrons + contract blocks |
 
+### `ctrls-bihar-datacentre-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | AI demand pulls hyperscale compute into eastern states |
+| Subject right | Server-rack silhouette |
+| Metaphor left | Power lines feeding rising capacity blocks |
+
+### `waaree-solapur-solar-storage-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Solar plus batteries firm evening power |
+| Subject right | Sun disc over panel grid |
+| Metaphor left | Battery blocks discharging into evening grid arc |
+
+### `india-infrastructure-output-october-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Core industries accelerate in one composite gauge |
+| Subject right | Factory / chimney silhouette |
+| Metaphor left | Rising bar chart stack |
+
+### `sebi-fpi-consultation-simplify-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Overseas investors face fewer India-only rules |
+| Subject right | Regulatory column architecture |
+| Metaphor left | Unlocked gate on capital flow path |
+
+### `mobikwik-diwali-tier2-payments-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Festive digital payments skew to smaller cities |
+| Subject right | Smartphone / QR motif |
+| Metaphor left | Map pins radiating from tier-two hub |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
