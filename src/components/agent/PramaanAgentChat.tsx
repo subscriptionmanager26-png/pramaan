@@ -833,7 +833,6 @@ export function PramaanAgentChat() {
                   <ChatTurn
                     key={message.id}
                     message={message}
-                    advisor={advisor}
                     orders={orders}
                     onDecide={onDecide}
                     artifacts={artifactsByMessage[message.id]}
