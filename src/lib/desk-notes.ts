@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-japan-unicorn-naval-mast-november-2026",
+    title: "Delhi will seek Acceptance of Necessity for Japan’s UNICORN naval mast by February",
+    summary:
+      "At the India–Japan 2+2 talks in Tokyo on 19 November 2026, ministers said the Defence Acquisition Council aims to issue an Acceptance of Necessity by February 2027 to buy co-developed UNICORN radio masts that fold into warship superstructures for stealth and electronic warfare.",
+    category: "industry",
+    companyOrSector: "Defence / naval systems",
+    publishedAt: "2026-11-20T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-japan-unicorn-naval-mast-november-2026"),
+    keyTakeaways: [
+      "UNICORN stands for unified complex radio antenna; Japan’s NEC has been co-developing the mast with Indian partners since agreements signed in July 2026.",
+      "The joint statement after the Tokyo meeting said India hopes to formalise purchase arrangements soon and target an AoN proposal by February 2027.",
+      "Ministers also signed a letter of intent allowing Japan Self-Defence Forces live-fire training at Indian ranges and pledged cooperation on mine countermeasures to protect undersea cables.",
+    ],
+    body: [
+      "What's going on here?",
+      "Modern destroyers and frigates pack dozens of antennas, radars and data links above the deck, but every protruding mast adds radar cross-section and complicates maintenance in salt air. Japan’s UNICORN mast folds sensors into a single composite structure so fewer external booms stick out, which helps both stealth shaping and electronic warfare management. India has watched the system for years as it deepens maritime ties with Tokyo. On 19 November 2026, reporting on the fourth India–Japan 2+2 foreign and defence ministerial meeting in Tokyo said both sides want to accelerate UNICORN procurement for Indian Navy vessels. Defence Minister Rajnath Singh, External Affairs Minister S. Jaishankar, and their Japanese counterparts said arrangements should move toward formal purchase after July 2026 co-development agreements. The joint statement cited an Acceptance of Necessity from the Defence Acquisition Council, chaired by Singh, by February 2027 as the next bureaucratic milestone before competitive or government-to-government contracting can begin. NEC Corporation remains the named Japanese industrial partner in earlier framework documents.",
+      "What does this mean?",
+      "An Acceptance of Necessity does not sign a cheque; it tells the services the project is worth funding and opens technical evaluation, offset discussions and financing plans under India’s defence procurement manual. Choosing a Japanese mast for frontline hulls signals how far Delhi is willing to import niche naval subsystems from a treaty partner even as Make-in-India rules tighten on simpler assemblies. Folded masts also interact with the navy’s own indigenisation goals for combat management software, so integration work may stay partly domestic even if the hardware shell arrives from overseas. The same Tokyo visit produced parallel agreements on mine countermeasure cooperation, undersea cable protection, and a letter of intent on Japanese live firing at Indian ranges, hinting at broader logistics trust beyond one SKU.",
+      "Why should I care?",
+      "Defence suppliers and shipyards should map whether UNICORN slots into upcoming Project 17B or destroyer refits, and what offset packages the acquisition wing demands. Investors in Indian defence electronics names should watch whether domestic radar houses partner on the Indian side of the co-development pact rather than cede integration margin abroad. Taxpayers tracking capital outflows should note an AoN is still months away and Parliament scrutiny can slip timelines, as with other foreign naval purchases. Watch Ministry of Defence press notes on the AoN filing, Public Accounts Committee questions on offsets, and whether Indian builders publish interface standards for the mast before yard contracts are bid.",
+    ],
+  },
+  {
+    slug: "diamond-power-hvdc-adani-order-november-2026",
+    title: "Diamond Power won a ₹708 crore contract to wire Adani’s Rajasthan HVDC corridor",
+    summary:
+      "Diamond Power Infrastructure Ltd said on 19 November 2026 it received a ₹707.80 crore purchase order from Adani Energy Solutions Ltd to supply 9,059 kilometres of AL-59 conductors for the ±800 kV Bhadla–Fatehpur HVDC link, with monthly prices indexed to London Metal Exchange aluminium and the rupee.",
+    category: "industry",
+    companyOrSector: "Power equipment / transmission",
+    publishedAt: "2026-11-20T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("diamond-power-hvdc-adani-order-november-2026"),
+    keyTakeaways: [
+      "The order covers design, manufacture, testing and delivered-at-place supply through December 2027, including an 18-month defect liability period per lot.",
+      "Pricing assumes LME aluminium at $2,550 per tonne, a $106 premium and a rupee rate of 87, with a formula resetting each dispatch month.",
+      "The Bhadla–Fatehpur project is a roughly 950 km, 6,000 MW corridor meant to move Rajasthan renewable power to demand centres in Uttar Pradesh.",
+    ],
+    body: [
+      "What's going on here?",
+      "Renewable parks in western Rajasthan generate electrons far from northern industrial load centres, so planners rely on high-voltage direct current lines that lose less power over long distances than alternating current towers. ±800 kV is the highest HVDC voltage class operating in India today, and each kilometre needs specialised aluminium alloy conductors rated for heat and sag. Vadodara-based Diamond Power Infrastructure Ltd, which historically sold lower-voltage ACSR and alloy lines, entered the HVDC tier with an order announced on 19 November 2026. Adani Energy Solutions Ltd placed a purchase order worth ₹707.80 crore including GST, or about ₹599.83 crore pre-tax, for 9,059.33 km of AL-59 conductors. Nearly all of the length is Lapwing grade with a smaller Moose batch. Deliveries run month by month on a delivered-at-place basis with completion scheduled by 31 December 2027. Diamond Power said the deal is its first major ±800 kV HVDC line and is not a related-party transaction.",
+      "What does this mean?",
+      "Large transmission awards usually split between incumbent cable majors and challengers; winning the conductor package lets Diamond Power amortise new testing rigs at its NABL-accredited plant while Adani Energy keeps EPC risk on its Bhadla–Fatehpur SPV. The commercial twist is commodity linkage. The headline value assumes LME aluminium at $2,550 per tonne, a $106 premium and an exchange rate of 87 rupees to the dollar, but actual invoices will follow a variation formula based on the prior month’s metal and currency averages. Diamond Power said that back-to-back structure passes aluminium and forex moves to the buyer after the pricing window, limiting its inventory risk on a metal-heavy order. For Rajasthan solar and wind developers, conductor contracts are an early sign that the evacuation spine is moving from bid stage toward physical build, though commissioning still sits years out.",
+      "Why should I care?",
+      "If you hold shares in power cable names, compare order books and working-capital needs on metal-indexed contracts versus fixed-price distribution orders. Renewable developers selling into the Bhadla cluster should track whether conductor deliveries slip, because delayed lines can cap merchant export even when generation is ready. Large industrial buyers in Uttar Pradesh may eventually see more stable access to western renewables if the corridor lands on time. Watch Adani Energy’s quarterly project spend, LME aluminium trends, rupee moves that reprice monthly dispatches, and Central Electricity Authority commissioning milestones for the HVDC link.",
+    ],
+  },
+  {
     slug: "gift-nifty-open-interest-record-november-2026",
     title: "GIFT Nifty open interest set a fresh record above $22 billion",
     summary:
@@ -13560,6 +13608,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-japan-unicorn-naval-mast-november-2026": "policy",
+  "diamond-power-hvdc-adani-order-november-2026": "companies",
   "gift-nifty-open-interest-record-november-2026": "markets",
   "fairfax-iifl-capital-majority-november-2026": "companies",
   "adani-energy-bihar-transmission-november-2026": "policy",
