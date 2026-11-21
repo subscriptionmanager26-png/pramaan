@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "noel-tata-board-recording-letter-november-2026",
+    title: "Noel Tata wrote again asking Tata Sons for a September board recording",
+    summary:
+      "Media on 20 November 2026 said Noel Tata sent another letter to the Tata Sons board requesting audio from the 17 September meeting that reappointed N Chandrasekaran as chairman, disputed whether Tata Trusts nominees formed a majority, and sought details on Hanno Warehousing links and the 3 September Nomination and Remuneration Committee session before the board meets on 26 November.",
+    category: "industry",
+    companyOrSector: "Conglomerate governance",
+    publishedAt: "2026-11-21T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("noel-tata-board-recording-letter-november-2026"),
+    keyTakeaways: [
+      "Reporting dated 20 November 2026 said Noel Tata's second letter asks for recordings from the 17 September Tata Sons board that approved Chandrasekaran's third term on a 4-1 vote with Noel Tata dissenting.",
+      "He argued the Tata Trusts nominee directors split 1-1, so a casting vote cannot substitute for the Articles of Association majority his side says is required.",
+      "Tata Sons had declined a 30 September request for recordings in a 9 November reply, and the fresh letter also seeks clarity on Hanno Warehousing and TVS Motor ties plus the 3 September NRC meeting.",
+    ],
+    body: [
+      "What's going on here?",
+      "Family-held trusts still control Tata Sons, the unlisted holding company behind listed Tata operating firms, so board votes on the chairman shape strategy, capital allocation, and succession across the group. On 17 September 2026 the Tata Sons board voted 4-1 to give N Chandrasekaran a third term as chairman; Chandrasekaran did not vote, Noel Tata voted against, and fellow Tata Trusts nominee Venu Srinivasan voted in favour. Noel Tata's camp says the Articles of Association require key resolutions to carry a majority of Tata Trusts nominee directors, which a 1-1 split cannot satisfy. Media on 20 November 2026 said he wrote to the board again on that date asking for the recording of the September meeting, ahead of a 26 November board session. He had first sought the recording and minutes on 30 September; Tata Sons replied on 9 November that the meeting was in person and neither law nor its articles obliged it to retain or share audio for directors. Coverage said he also attached a legal opinion from former Chief Justice of India DY Chandrachud arguing a casting vote does not manufacture a majority where none exists, and he asked for detail on Hanno Warehousing, a firm linked to Chandrasekaran's family, and its relationship to TVS Motor in the Venu Srinivasan-led TVS Group.",
+      "What does this mean?",
+      "When a Trusts nominee challenges procedure on a chairman vote, banks, regulators, and minority shareholders in listed Tata arms watch whether parent-level minutes withstand scrutiny. Recordings are uncommon in Indian board practice, so the fight is as much about disclosure norms as about the outcome of one resolution. If Trusts governance deadlocks persist into the November board, capital calls for electrification, defence, and retail bets could wait for clearer lines of authority. Separately, trustee Bhaskar Bhat reportedly urged fellow Sir Dorabji Tata Trust trustees to avoid public leaks the same day, signalling concern that airing disputes may dent the Tata brand while the recording request circulates.",
+      "Why should I care?",
+      "If you hold Tata listed stocks or lend to group firms, read upcoming Tata Sons and trust disclosures for any change to chairman tenure or board composition. Employees across Tata companies should expect strategy messaging to stay cautious while the procedural dispute is live. Governance researchers should compare Tata Sons' article language with the Trusts split vote pattern. Track the 26 November board outcome, any court or regulatory filing on minority protections, and whether Srinivasan's TVS affiliations draw fresh conflict questions in reply letters.",
+    ],
+  },
+  {
+    slug: "shriram-finance-sensex-replaces-trent-november-2026",
+    title: "Shriram Finance will enter the Sensex on 21 December as Trent exits",
+    summary:
+      "BSE Index Services said on 20 November 2026 that Shriram Finance will replace Trent in the 30-stock S&P BSE Sensex from the 21 December opening, while Divi's Laboratories replaces Wipro in the Sensex 50 and five names join the BSE 100 in a wider liquidity and free-float reshuffle.",
+    category: "industry",
+    companyOrSector: "Indices / asset management",
+    publishedAt: "2026-11-21T10:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("shriram-finance-sensex-replaces-trent-november-2026"),
+    keyTakeaways: [
+      "BSE announced on 20 November 2026 that Shriram Finance replaces Trent in the flagship Sensex effective 21 December.",
+      "Divi's Laboratories will replace Wipro in the Sensex 50; MCX, Vedanta Aluminium, Laurus Labs, BHEL, and GE Vernova T&D India enter the BSE 100.",
+      "Periodic reviews aim to align indices with market cap, liquidity, and free float, which forces index funds and ETFs to rebalance holdings.",
+    ],
+    body: [
+      "What's going on here?",
+      "Passive money in India tracks Sensex and sibling BSE indices through mutual funds and ETFs that must mirror official constituents. BSE Index Services reviews membership on a schedule tied to float, trading turnover, and sector representation. On 20 November 2026 it said Shriram Finance will replace Trent in the 30-stock Sensex from the opening of trade on 21 December. The release also moved Divi's Laboratories into the Sensex 50 in place of Wipro, refreshed the BSE 100 with five entrants including Multi Commodity Exchange of India, Bharat Heavy Electricals, and Laurus Labs, and adjusted the Sensex Next 50 and Next 30 baskets. Bankex was unchanged in the notice. Trent, a high-growth retailer, exits the flagship gauge while Shriram Finance, a large non-bank lender, gains a slot as its market footprint expanded.",
+      "What does this mean?",
+      "Inclusion does not certify that a stock is cheap; it schedules forced buyers. Index funds and ETFs tracking the Sensex need to buy Shriram Finance and sell Trent near the effective date, often concentrating volume in the final days of December. That flow can lift the entrant and weigh on the dropout even when earnings are unrelated. NBFCs in the index also change how foreign investors gain diversified exposure to vehicle finance and gold loans through a single tracker. Active managers who hug the benchmark must update risk models for consumer discretionary versus lending weights.",
+      "Why should I care?",
+      "If you hold Sensex index funds or futures, expect rebalancing trades and possible spread widening the week before 21 December. Trent shareholders may see passive selling pressure unrelated to store traffic. Shriram Finance borrowers and depositors face no direct product change, but higher passive ownership can increase daily volatility on results days. Watch December volume spikes, competitor NSE index moves, and whether AMCs pre-announce creation basket changes to avoid last-minute surprises.",
+    ],
+  },
+  {
+    slug: "indusind-kathpalia-clawback-november-2026",
+    title: "IndusInd Bank terminated its ex-CEO and may claw back pay to 2020",
+    summary:
+      "IndusInd Bank said on 20 November 2026 that a board disciplinary inquiry led it to terminate former chief executive Sumant Kathpalia and invoke malus and clawback on compensation back to his March 2020 appointment, following derivative accounting errors that earlier triggered a $230 million charge.",
+    category: "industry",
+    companyOrSector: "Banking / regulation",
+    publishedAt: "2026-11-21T09:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("indusind-kathpalia-clawback-november-2026"),
+    keyTakeaways: [
+      "The bank's 20 November 2026 statement said the board ended Kathpalia's employment after an inquiry report and applied clawback from his 2020 CEO start date.",
+      "Kathpalia resigned in April 2025 after mis-booked derivatives forced a $230 million accounting hit; he had been suspended since June 2025 pending the probe.",
+      "Reserve Bank of India rules since 2019 allow malus and clawback in bank employment contracts, though public recovery cases remain rare.",
+    ],
+    body: [
+      "What's going on here?",
+      "Private lenders live or die on whether traders and auditors agree on how derivative marks flow into published capital. IndusInd Bank Ltd disclosed in 2025 that incorrect accounting on structured trades led to a roughly $230 million charge, prompting leadership change and Reserve Bank of India scrutiny. Sumant Kathpalia resigned as chief executive in April 2025; the bank kept him in employment while running disciplinary proceedings, suspended him in June 2025, and on 20 November 2026 said the board terminated his employment after reviewing an inquiry report. The statement said it is invoking malus and clawback provisions on pay and bonuses from his initial appointment as CEO in March 2020. The bank did not publish the inquiry findings. Kathpalia could not be reached for comment in wire coverage. Media had earlier said the lender was also pursuing recovery from former deputy CEO Arun Khurana after an internal review flagged misconduct. Separately, the bank reported loans and deposits back in double-digit growth in the September 2026 quarter, the first such stretch since the accounting issues surfaced.",
+      "What does this mean?",
+      "Clawback is a behavioural tool: boards signal that bonus pools are not final if later audits uncover misreporting. Indian banking regulation has permitted clawback language since 2019, but visible enforcement has been uncommon, so a full-tenure recovery attempt at a listed private bank sets a sharper precedent for risk and compliance staff. Recovery can take years if former executives dispute sums or negotiate settlements. For shareholders, the announcement separates legal battles over past pay from the operating recovery in credit growth, though legal costs may appear in coming quarters. Regulators may watch whether other banks tighten derivative control narratives in board packs.",
+      "Why should I care?",
+      "If you bank with IndusInd or hold its shares, expect more disclosure on governance remediation and any quantified clawback targets in exchange filings. Senior bankers elsewhere should read employment contracts for malus triggers tied to restatements. Fixed-income investors should still monitor asset quality alongside headlines about former management. Follow court or arbitration updates if Kathpalia contests termination, Reserve Bank follow-up on the original accounting lapse, and whether Khurana faces a parallel recovery process.",
+    ],
+  },
+  {
     slug: "jlr-byd-defender-design-court-november-2026",
     title: "A Dutch court said BYD's Ti7 SUV copies the Defender look",
     summary:
@@ -13992,6 +14064,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "noel-tata-board-recording-letter-november-2026": "policy",
+  "shriram-finance-sensex-replaces-trent-november-2026": "markets",
+  "indusind-kathpalia-clawback-november-2026": "policy",
   "jlr-byd-defender-design-court-november-2026": "companies",
   "satsure-inspace-avcf-november-2026": "policy",
   "sebi-fpi-adf-scrap-november-2026": "policy",

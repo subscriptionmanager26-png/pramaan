@@ -2209,6 +2209,47 @@ def sebi_fpi_adf_scrap(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(640, 400), (600, 440), (640, 480), (680, 440)], fill=YELLOW)
 
 
+def indusind_kathpalia_clawback(d: ImageDraw.ImageDraw) -> None:
+    # bank facade + pay slips climbing back down
+    d.rectangle([100, 180, 460, 560], fill=BLUE)
+    d.rectangle([140, 220, 420, 280], fill=CREAM)
+    for i, h in enumerate([320, 260, 200, 140]):
+        y = 520 - h
+        d.rectangle([160, y, 400, y + 40], fill=[RED, YELLOW, RED, YELLOW][i])
+    d.polygon([(720, 200), (780, 140), (840, 200), (780, 260)], fill=GOLD)
+    d.line([(780, 260), (780, 560)], fill=GOLD, width=3)
+    for y in range(280, 520, 60):
+        d.polygon([(1080, y), (1120, y - 20), (1120, y + 20)], fill=RED)
+
+
+def shriram_sensex_rebalance(d: ImageDraw.ImageDraw) -> None:
+    # index ladder + swap between two blocks
+    for i, h in enumerate([180, 240, 300, 360]):
+        x = 120 + i * 70
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[BLUE, RED, YELLOW, BLUE][i])
+    d.line([(480, 560), (480, 160)], fill=GOLD, width=3)
+    d.rectangle([700, 240, 900, 400], fill=YELLOW)
+    d.rectangle([940, 320, 1140, 480], fill=RED)
+    d.polygon([(820, 300), (900, 240), (900, 360), (820, 300)], fill=BLUE)
+    d.polygon([(1080, 460), (1000, 520), (1000, 400)], fill=BLUE)
+
+
+def noel_tata_board_recording(d: ImageDraw.ImageDraw) -> None:
+    # board table + reel/mic motif
+    d.ellipse([120, 340, 480, 560], fill=BLUE)
+    d.rectangle([180, 380, 420, 420], fill=CREAM)
+    d.rectangle([180, 440, 420, 480], fill=CREAM)
+    d.ellipse([760, 220, 940, 400], outline=GOLD, width=6)
+    for i in range(6):
+        ang = i * 60
+        x1 = 850 + 70 * math.cos(math.radians(ang))
+        y1 = 310 + 70 * math.sin(math.radians(ang))
+        x2 = 850 + 90 * math.cos(math.radians(ang))
+        y2 = 310 + 90 * math.sin(math.radians(ang))
+        d.line([(x1, y1), (x2, y2)], fill=RED, width=4)
+    d.rounded_rectangle([980, 420, 1160, 520], radius=16, fill=YELLOW)
+
+
 def mobikwik_diwali_tier2(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([140, 300, 420, 540], radius=24, fill=BLUE)
     d.ellipse([220, 360, 340, 480], fill=CREAM)
@@ -2428,6 +2469,9 @@ def main() -> None:
     save("jlr-byd-defender-design-court-november-2026", jlr_byd_defender_court)
     save("satsure-inspace-avcf-november-2026", satsure_inspace_avcf)
     save("sebi-fpi-adf-scrap-november-2026", sebi_fpi_adf_scrap)
+    save("indusind-kathpalia-clawback-november-2026", indusind_kathpalia_clawback)
+    save("shriram-finance-sensex-replaces-trent-november-2026", shriram_sensex_rebalance)
+    save("noel-tata-board-recording-letter-november-2026", noel_tata_board_recording)
 
 
 if __name__ == "__main__":
