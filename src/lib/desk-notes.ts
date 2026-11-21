@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bwa-crypto-tax-budget-2027-november-2026",
+    title: "India's crypto lobby asked for lower TDS ahead of Budget 2027",
+    summary:
+      "On 21 November 2026, industry body Bharat Web3 Association told reporters it filed pre-budget proposals with the finance ministry calling for a cut in the 1% tax deducted at source on virtual digital asset transfers, permission to set off and carry forward crypto losses, a review of the 30% flat tax on gains, and tighter Indian rules on offshore exchanges that still serve domestic users.",
+    category: "industry",
+    companyOrSector: "Tax / digital assets",
+    publishedAt: "2026-11-21T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bwa-crypto-tax-budget-2027-november-2026"),
+    keyTakeaways: [
+      "Bharat Web3 Association said on 21 November 2026 that it submitted five recommendations for Union Budget 2027, centred on TDS, loss treatment, the headline tax rate, and offshore platform oversight.",
+      "Coverage cited a TIOL Knowledge Foundation estimate that about 95% of India's crypto trading volume moved to offshore venues in fiscal 2025-26 after the 1% TDS rule, with only 5.4% on domestic platforms.",
+      "The association also asked for clearer Foreign Exchange Management Act guidance when FIU-registered Indian exchanges source liquidity through overseas partners.",
+    ],
+    body: [
+      "What's going on here?",
+      "India taxes virtual digital asset profits at a flat 30% and withholds 1% TDS on many transfers, while losses generally cannot offset other income or roll forward. The Bharat Web3 Association, an industry grouping of crypto and Web3 firms, said on 21 November 2026 that it presented its pre-budget submission to the Ministry of Finance ahead of Union Budget 2027. The five-point list asks to reduce the 1% TDS, allow loss set-off and carry-forward, reconsider the 30% rate, apply Indian tax and TDS obligations more firmly to offshore exchanges serving Indian users, and publish consistent FEMA rules for domestic platforms that access global liquidity through overseas markets. Wire copy on the same day said the 2026-27 budget left crypto rules unchanged, so the association is pushing for movement before the next annual statement. It framed the request as keeping activity onshore rather than as a blanket rate cut.",
+      "What does this mean?",
+      "TDS is deducted before a trade settles, so active traders feel the pinch even when headline capital-gains tax is what debates focus on. Industry estimates, including a TIOL Knowledge Foundation report cited in coverage, suggest most rupee turnover migrated offshore after TDS arrived, which complicates collection and supervision. If the finance ministry trims TDS or allows loss offsets, domestic exchanges could see more two-way flow, but banks and regulators may demand sharper know-your-customer and travel-rule reporting in return. Offshore rules matter because Indian platforms face full registration and reporting while overseas apps can still market to the same phone numbers. Clarity on cross-border liquidity access affects whether compliant Indian venues can quote tight prices without breaching forex law.",
+      "Why should I care?",
+      "If you trade crypto only on Indian registered platforms, watch budget commentary in early 2027 for any TDS or loss-treatment tweak that changes your tax worksheet. If you use offshore apps, assume Indian enforcement and reporting standards may tighten even if headline rates fall. Founders building payment or treasury tools should model compliance cost, not only user growth. Track the formal budget memorandum, Financial Intelligence Unit registration updates, and any parliamentary questions on offshore exchange blocking.",
+    ],
+  },
+  {
+    slug: "adani-energy-wb-round-the-clock-power-november-2026",
+    title: "West Bengal picked Adani's trading arm for 1,750 MW of round-the-clock green power",
+    summary:
+      "Adani Energy Solutions said on 21 November 2026 that subsidiary Powerpulse Trading Solutions won a 25-year letter of award from West Bengal State Electricity Distribution Co Ltd to supply 1,750 MW of renewable round-the-clock power from July 2028, with a 750 MW greenshoe option that could lift the contract to 2,500 MW.",
+    category: "industry",
+    companyOrSector: "Power / renewables",
+    publishedAt: "2026-11-21T16:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-energy-wb-round-the-clock-power-november-2026"),
+    keyTakeaways: [
+      "The 21 November 2026 exchange filing said Powerpulse Trading Solutions secured the award after an e-reverse auction against WBSEDCL.",
+      "Supply for the base 1,750 MW is scheduled from 1 July 2028; greenshoe megawatts, if exercised, would start from 1 April 2029.",
+      "Adani Energy said the trader has tied up about 4.6 GW of solar and wind sourcing capacity and roughly 3.5 GWh of battery storage for such contracts.",
+    ],
+    body: [
+      "What's going on here?",
+      "State electricity distributors buy long-duration power contracts when they want predictable tariffs without building plants themselves. West Bengal State Electricity Distribution Co Ltd, the state's main discom, awarded a letter of intent to Powerpulse Trading Solutions Ltd, a wholly owned trading unit of Adani Energy Solutions Ltd, on 21 November 2026 for 1,750 MW of renewable round-the-clock supply over 25 years. Adani Energy said delivery for that tranche would begin on 1 July 2028. The award carries a 750 MW greenshoe that WBSEDCL may exercise later; if taken up, combined capacity reaches 2,500 MW with those megawatts starting 1 April 2029. The company said it prevailed in an e-reverse auction. It also disclosed sourcing arrangements of about 4.6 GW of solar and wind capacity and around 3.5 GWh of battery energy storage to back such renewable round-the-clock offers.",
+      "What does this mean?",
+      "Round-the-clock renewable deals bundle generation with storage or firming so discoms get flatter schedules than plain solar peaks. Winning them shifts balance-sheet risk toward the trader and its fuel-supply chain rather than the state utility's own books. For industrial consumers in Bengal, a large renewable block can eventually influence procurement costs and green-power purchase obligations, though tariff pass-through still depends on state regulatory orders years from now. For renewables developers, long-dated offtake with creditworthy buyers underpins project finance on new wind, solar, and battery sites tied to this auction.",
+      "Why should I care?",
+      "If you operate factories or data centres in West Bengal, track WBSEDCL tariff petitions once this contract nears commissioning for cues on renewable versus conventional energy charges. Investors in Adani Energy or rival integrated utilities should read how much storage and generation capacity is already committed to other buyers. Policymakers watching state climate targets can compare Bengal's approach with other discom-led renewable round-the-clock tenders. Follow greenshoe exercise dates, commissioning milestones in exchange filings, and regulatory approval of power purchase agreements.",
+    ],
+  },
+  {
+    slug: "jnpa-gateway-distriparks-dfc-yard-november-2026",
+    title: "JNPA gave Gateway Distriparks an eight-year contract to run its DFC rail yard",
+    summary:
+      "Jawaharlal Nehru Port Authority said on 21 November 2026 it awarded Gateway Distriparks an eight-year operation and maintenance deal, extendable by two years, for the Dedicated Freight Corridor-compliant common rail yard at Nhava Sheva that segregates long double-stack trains across five container terminals.",
+    category: "industry",
+    companyOrSector: "Ports / logistics",
+    publishedAt: "2026-11-21T15:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jnpa-gateway-distriparks-dfc-yard-november-2026"),
+    keyTakeaways: [
+      "The port authority's 21 November 2026 release said Gateway Distriparks will run rail lines T1 and T2 at the yard built for about ₹225 crore on 15.9 hectares with 1,500-metre DFC tracks.",
+      "The yard targets mixed trains that carry containers for multiple terminals, which today make up roughly 96% of rake arrivals at JNPA.",
+      "Gateway must mobilise equipment within one month of the work order and will use reach stackers and GPS-linked transfer vehicles tied to a terminal operating system.",
+    ],
+    body: [
+      "What's going on here?",
+      "Container ports lose time when one train carries boxes bound for several terminals and each leg needs separate shunting. Jawaharlal Nehru Port Authority at Nhava Sheva has built a Dedicated Freight Corridor-compliant common rail yard so long double-stack rakes can be split and sent to the right berth without repeating moves along the harbour line. On 21 November 2026 the authority said it awarded Gateway Distriparks Ltd an eight-year contract to operate and maintain the facility, with an option to extend two more years. The yard spans 15.9 hectares with two 1,500-metre lines and an engine escape line, backed by about ₹225 crore of investment. Gateway's scope covers train placement, loading and unloading, lashing, segregation of mixed rakes, stacking, and inter-terminal transfers. The operator must start within one month of receiving the work order.",
+      "What does this mean?",
+      "When DFC trains meet port gates, the bottleneck often shifts from rail speed to yard discipline. Centralising segregation should cut duplicate handling for the five container terminals that share JNPA's railhead and support the authority's goal of lifting rail's modal share from the northern hinterland. For exporters in Delhi, Punjab, and western Uttar Pradesh, faster yard turns can translate into shorter port dwell if drayage stays predictable. Logistics stocks tied to port services gain revenue visibility from multi-year operation contracts, though capital spending on reach stackers and IT integration sits with the operator upfront.",
+      "Why should I care?",
+      "If you ship containers through JNPA, ask freight forwarders whether new yard routines change expected gate-in times for DFC-linked bookings. Investors in Gateway Distriparks or rival inland operators should model utilisation assumptions against mixed-train percentages the port disclosed. Policymakers tracking Sagarmala and DFC integration can treat the award as a live test of whether common yards pull traffic from road. Watch mobilisation updates, monthly rail evacuation statistics from JNPA, and whether duplicate moves at individual terminals fall after operations stabilise.",
+    ],
+  },
+  {
+    slug: "india-bank-unions-idbi-strike-december-2026",
+    title: "Three bank unions called a nationwide strike on 3 December over the IDBI sale",
+    summary:
+      "Reporting on 21 November 2026 said the All India Bank Employees' Association, All India Bank Officers' Association, and Bank Employees Federation of India will mount a one-day nationwide strike on 3 December in support of IDBI Bank staff opposing Fairfax Financial's purchase of a 60% stake, with organisers expecting participation from about 2.5 lakh officers and employees.",
+    category: "industry",
+    companyOrSector: "Banking / labour",
+    publishedAt: "2026-11-21T15:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-bank-unions-idbi-strike-december-2026"),
+    keyTakeaways: [
+      "Wire copy on 21 November 2026 said AIBEA, AIBOA, and BEFI jointly called the 3 December 2026 strike to protest transferring a majority IDBI stake to Canada's Fairfax.",
+      "The unions argue the lender remains profitable, with deposits near ₹3.5 lakh crore and advances around ₹2.5 lakh crore, and oppose selling a public bank to foreign ownership.",
+      "The call follows IDBI employee protests on 2-3 November and sits ahead of Reserve Bank of India scrutiny on Fairfax's fit-and-proper approval for the ₹52,878 crore transaction.",
+    ],
+    body: [
+      "What's going on here?",
+      "The government's plan to sell a majority stake in IDBI Bank to Fairfax Financial has moved from cabinet clearance to street pressure. The Cabinet Committee on Economic Affairs approved Fairfax buying 60.72% for about ₹52,878 crore in October 2026, split between government and Life Insurance Corporation share sales at ₹81 per share. IDBI's in-house United Forum of Officers and Employees had already struck for two days in early November. On 21 November 2026, media said three nationwide bank unions, the All India Bank Employees' Association, the All India Bank Officers' Association, and the Bank Employees Federation of India, added a fresh one-day nationwide strike on 3 December 2026 backing the IDBI forum. Organisers estimate roughly 2.5 lakh members could join. The unions described the Fairfax deal as unwarranted privatisation to foreign ownership and reiterated demands that public sector banks stay in state hands.",
+      "What does this mean?",
+      "When industry federations join a single-lender protest, settlement talks often widen to finance ministry conciliation rather than staying inside one bank's HR channel. Strike calendars do not pause regulatory timelines, but they can delay branch normalisation and spotlight political opposition ahead of Parliament questions on valuation and process. For Fairfax, each labour headline raises the stakes on employee guarantees written into the share purchase agreement and on Reserve Bank fit-and-proper hearings. Depositors typically retain digital channels, yet cash and cheque services at public-sector branches may face queues on strike day even when IDBI is the named cause.",
+      "Why should I care?",
+      "If you bank with a public-sector lender, plan alternate channels around 3 December 2026 for withdrawals or drafts that cannot wait. Investors tracking PSU divestment should read whether the strike forces revised employee assurances before RBI sign-off. Fairfax and LIC stakeholders should model timing risk beyond the stated financial-year close target. Watch conciliation meeting outcomes, RBI communications on change-in-control, and whether Opposition parties escalate joint parliamentary scrutiny.",
+    ],
+  },
+  {
     slug: "noel-tata-board-recording-letter-november-2026",
     title: "Noel Tata wrote again asking Tata Sons for a September board recording",
     summary:
@@ -14064,6 +14160,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bwa-crypto-tax-budget-2027-november-2026": "policy",
+  "adani-energy-wb-round-the-clock-power-november-2026": "policy",
+  "jnpa-gateway-distriparks-dfc-yard-november-2026": "policy",
+  "india-bank-unions-idbi-strike-december-2026": "policy",
   "noel-tata-board-recording-letter-november-2026": "policy",
   "shriram-finance-sensex-replaces-trent-november-2026": "markets",
   "indusind-kathpalia-clawback-november-2026": "policy",

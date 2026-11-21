@@ -2234,6 +2234,57 @@ def shriram_sensex_rebalance(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(1080, 460), (1000, 520), (1000, 400)], fill=BLUE)
 
 
+def bwa_crypto_tax_budget(d: ImageDraw.ImageDraw) -> None:
+    # ledger blocks + split onshore/offshore paths
+    d.rectangle([100, 200, 420, 520], fill=BLUE)
+    for i, h in enumerate([80, 120, 160]):
+        d.rectangle([140, 480 - h, 380, 500 - h + 60], fill=[RED, YELLOW, RED][i])
+    d.ellipse([720, 260, 900, 440], outline=GOLD, width=5)
+    d.line([(810, 260), (620, 360), (420, 420)], fill=YELLOW, width=4)
+    d.line([(810, 440), (1050, 480)], fill=RED, width=4)
+    d.polygon([(1020, 440), (1120, 400), (1120, 520)], fill=BLUE)
+
+
+def adani_wb_re_rtc(d: ImageDraw.ImageDraw) -> None:
+    # sun/wind icons feeding a steady flat line
+    d.ellipse([120, 180, 280, 340], fill=YELLOW)
+    for ang in range(0, 360, 45):
+        x1 = 200 + 90 * math.cos(math.radians(ang))
+        y1 = 260 + 90 * math.sin(math.radians(ang))
+        x2 = 200 + 120 * math.cos(math.radians(ang))
+        y2 = 260 + 120 * math.sin(math.radians(ang))
+        d.line([(x1, y1), (x2, y2)], fill=GOLD, width=3)
+    d.polygon([(340, 480), (380, 320), (420, 480)], fill=BLUE)
+    d.line([(520, 400), (1180, 400)], fill=RED, width=6)
+    d.rectangle([900, 420, 1050, 560], fill=BLUE)
+    for y in range(430, 550, 24):
+        d.rectangle([910, y, 1040, y + 12], fill=YELLOW if y % 48 else CREAM)
+
+
+def jnpa_gateway_dfc_yard(d: ImageDraw.ImageDraw) -> None:
+    # parallel rail tracks splitting to terminals
+    d.line([(80, 360), (560, 360)], fill=INK, width=8)
+    d.line([(80, 420), (560, 420)], fill=INK, width=8)
+    for i, col in enumerate([RED, BLUE, YELLOW, RED, BLUE]):
+        x = 620 + i * 95
+        d.line([(560, 390), (x, 180 + i * 70)], fill=GOLD, width=3)
+        d.rectangle([x, 160 + i * 70, x + 60, 220 + i * 70], fill=col)
+    d.rectangle([800, 480, 1160, 560], fill=BLUE)
+    d.polygon([(900, 440), (980, 400), (1060, 440)], fill=YELLOW)
+
+
+def india_bank_unions_strike(d: ImageDraw.ImageDraw) -> None:
+    # many small bank facades + calendar strike marker
+    for i in range(5):
+        x = 100 + i * 95
+        d.rectangle([x, 300, x + 70, 520], fill=[RED, BLUE, YELLOW, RED, BLUE][i])
+        d.rectangle([x + 10, 340, x + 60, 380], fill=CREAM)
+    d.rounded_rectangle([720, 180, 1120, 520], radius=24, outline=GOLD, width=4)
+    d.rectangle([780, 240, 1060, 320], fill=RED)
+    d.rectangle([780, 360, 1060, 440], fill=BLUE)
+    d.rectangle([880, 450, 960, 510], fill=YELLOW)
+
+
 def noel_tata_board_recording(d: ImageDraw.ImageDraw) -> None:
     # board table + reel/mic motif
     d.ellipse([120, 340, 480, 560], fill=BLUE)
@@ -2469,6 +2520,10 @@ def main() -> None:
     save("jlr-byd-defender-design-court-november-2026", jlr_byd_defender_court)
     save("satsure-inspace-avcf-november-2026", satsure_inspace_avcf)
     save("sebi-fpi-adf-scrap-november-2026", sebi_fpi_adf_scrap)
+    save("bwa-crypto-tax-budget-2027-november-2026", bwa_crypto_tax_budget)
+    save("adani-energy-wb-round-the-clock-power-november-2026", adani_wb_re_rtc)
+    save("jnpa-gateway-distriparks-dfc-yard-november-2026", jnpa_gateway_dfc_yard)
+    save("india-bank-unions-idbi-strike-december-2026", india_bank_unions_strike)
     save("indusind-kathpalia-clawback-november-2026", indusind_kathpalia_clawback)
     save("shriram-finance-sensex-replaces-trent-november-2026", shriram_sensex_rebalance)
     save("noel-tata-board-recording-letter-november-2026", noel_tata_board_recording)
