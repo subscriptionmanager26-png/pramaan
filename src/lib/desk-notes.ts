@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "jlr-byd-defender-design-court-november-2026",
+    title: "A Dutch court said BYD's Ti7 SUV copies the Defender look",
+    summary:
+      "Wire copy on 20 November 2026 said a preliminary relief judge in The Hague ruled BYD's Fangchengbao Ti7 design infringes Jaguar Land Rover's European Union design rights for the Defender, ordered a one-week sales ban on EU placements, and noted the case involves Tata Motors passenger vehicles because JLR sits inside that listed group.",
+    category: "industry",
+    companyOrSector: "Automotive / intellectual property",
+    publishedAt: "2026-11-21T00:09:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jlr-byd-defender-design-court-november-2026"),
+    keyTakeaways: [
+      "Reporting on 20 November 2026 said the Dutch district court found characteristic Defender styling elements reflected in BYD's seven-seat Ti7 SUV.",
+      "The temporary injunction lasts one week because BYD had no imminent EU retail plan; JLR said intellectual property litigation continues.",
+      "BYD said it will appeal and that the Ti7 stemmed from in-house design work.",
+    ],
+    body: [
+      "What's going on here?",
+      "Chinese carmakers have scaled exports across Europe, while legacy brands argue some crossovers mirror protected shapes. Jaguar Land Rover, owned through Tata Motors' passenger vehicle listing, relies on design registrations to defend the boxy Defender silhouette that underpins a profitable slice of its sport-utility line-up. On 20 November 2026, media citing a ruling from the Dutch district court in The Hague reported that a preliminary relief judge concluded BYD's Fangchengbao Ti7 infringes JLR's European Union design for the Defender. The order blocked BYD from selling the model in the EU for one week, with judges noting no concrete near-term launch plan. JLR confirmed it protects intellectual property through court action. BYD said it disagrees with the outcome and will appeal, insisting the Ti7 was independently designed. Sales data cited in the same coverage showed BYD more than doubling European registrations in 2026 through September, intensifying competitive pressure on mass-market brands.",
+      "What does this mean?",
+      "Design wins at summary stage do not end a case, but they signal which shapes judges treat as distinctive enough to block look-alike imports before full trial. For Tata Motors shareholders, Defender royalties and brand equity sit in the premium portfolio that funds electrification elsewhere in the group, so credible enforcement in Europe supports pricing on high-margin trims even when volumes are modest. BYD can still sell the Ti7 in China and may redesign cues before any EU push, which could delay a segment where seven-seat electric utilities are scarce. Automakers rarely litigate body panels in European courts, so an early interim order may encourage other legacy groups to test similar filings against fast-growing Chinese nameplates.",
+      "Why should I care?",
+      "If you hold Tata Motors passenger vehicle stock, track JLR's quarterly commentary on legal costs and European product cadence alongside the core India truck and sport-utility business. Car buyers comparing imported electrics should not assume all models cleared for one market will sail through another if a domestic court finds design overlap. Policy watchers should note whether European regulators tighten design-enforcement cooperation with Asian exporters. Follow the full Dutch proceedings, BYD's appeal brief, and any EU launch rescheduling for the Ti7.",
+    ],
+  },
+  {
+    slug: "satsure-inspace-avcf-november-2026",
+    title: "India's space fund put Rs 60 crore into SatSure's Series B",
+    summary:
+      "Reporting on 20 November 2026 said the Antariksh Venture Capital Fund, backed by IN-SPACe and managed by SIDBI Venture Capital, invested Rs 60 crore in Bengaluru Earth-intelligence firm SatSure as the first close of a Rs 200 crore Series B round aimed at satellites, a large geospatial model, and bank crop-credit analytics.",
+    category: "industry",
+    companyOrSector: "Space economy / fintech",
+    publishedAt: "2026-11-21T00:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("satsure-inspace-avcf-november-2026"),
+    keyTakeaways: [
+      "Media on 20 November 2026 said AVCF deployed Rs 60 crore into SatSure, marking the fund's first downstream analytics bet beyond launch hardware.",
+      "The Rs 200 crore Series B targets optical payloads, an IN-SPACe Earth observation public-private partnership constellation, and scaling the Dhaarini large Earth observation model.",
+      "SatSure's SatSource stack already sits inside the Reserve Bank of India's Unified Lending Interface, with public-sector banks named among farm-credit users.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's private space economy has concentrated funding on rockets and spacecraft buses, while regulators want domestic data analytics that banks and ministries can trust for credit and disaster response. The Antariksh Venture Capital Fund pools state-backed capital with IN-SPACe, the government's single-window enabler for non-government space activity, and SIDBI Venture Capital runs the mandate. On 20 November 2026, wire coverage said AVCF invested Rs 60 crore in SatSure Analytics as the first close of a Rs 200 crore Series B that also includes venture debt and secondary sales expected to finish by December 2026. SatSure builds optical payloads through subsidiary KaleidEO and sells Earth-observation intelligence to lenders, insurers, and infrastructure operators. The round is meant to fund a proposed 2027 orbital flight, execute a multi-satellite mandate under IN-SPACe's Earth observation public-private partnership, and expand the Dhaarini foundation model after an earlier technology adoption grant. Company commentary tied cumulative institutional funding to Rs 427 crore before this close.",
+      "What does this mean?",
+      "When a policy-backed fund picks a downstream analytics company, it signals official comfort that satellite pictures can feed regulated credit rails, not only agritech dashboards. SatSure's banking footprint through SatSource inside the Unified Lending Interface means faster farm loan checks if orbital refresh rates improve, which could matter for lenders still digitising rural underwriting after uneven monsoon years. Competing downstream startups may need similar public-private partnership hooks to access institutional cheque sizes. Hardware plus model ownership in one group raises execution risk but also keeps margin from launch fees inside India rather than with foreign imagery brokers.",
+      "Why should I care?",
+      "If you lend to farmers or buy rural-focused mutual funds, ask whether portfolio companies cite domestic imagery providers in underwriting disclosures. Investors tracking space-themed portfolios should separate launch valuations from analytics businesses that book recurring software revenue. Founders pitching Earth data should read IN-SPACe partnership templates and AVCF sector caps before assuming rocket builders are the only fundable lane. Watch the remaining Series B closes, KaleidEO launch milestones, and RBI updates on unified lending pilots that reference satellite-derived fields.",
+    ],
+  },
+  {
+    slug: "sebi-fpi-adf-scrap-november-2026",
+    title: "SEBI proposed scrapping extra ownership filings for large foreign funds",
+    summary:
+      "A Securities and Exchange Board of India consultation paper issued on 20 November 2026 proposed removing the Additional Disclosure Framework for foreign portfolio investors, arguing that full look-through beneficial ownership rules introduced in August 2023 exceed global norms and may have contributed to sustained overseas selling in Indian equities.",
+    category: "industry",
+    companyOrSector: "Capital markets / regulation",
+    publishedAt: "2026-11-20T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-fpi-adf-scrap-november-2026"),
+    keyTakeaways: [
+      "The 20 November 2026 paper seeks comments until 11 December 2026 on withdrawing the August 2023 Additional Disclosure Framework for qualifying foreign portfolio investors.",
+      "The framework triggers detailed look-through reporting when funds concentrate in one corporate group or exceed Rs 50,000 crore in Indian equity holdings alongside their investor group.",
+      "SEBI said several jurisdictions use 25% beneficial ownership thresholds while India layered India-only forms on top of anti-money laundering rules.",
+    ],
+    body: [
+      "What's going on here?",
+      "Foreign portfolio investors register through custodians to buy Indian equities and bonds, but pooled vehicles with thousands of underlying beneficiaries struggle when a market demands full look-through paperwork that shifts whenever end investors trade. SEBI introduced the Additional Disclosure Framework in August 2023 after short-seller allegations about concentrated holdings, requiring extra ownership charts when funds breached group concentration or rupee exposure thresholds, with limits later raised to Rs 50,000 crore from Rs 25,000 crore in April 2025. On 20 November 2026 the regulator released a consultation paper proposing to remove that overlay entirely, keeping standard prevention of money laundering thresholds instead. The paper said India's extra layer may deter mandates compared with markets that typically identify controlling owners at 25% rather than compiling exhaustive natural-person lists for every pooled fund. Overseas managers told the board that some set up India-only feeders just to satisfy the forms. Comments are due by 11 December 2026.",
+      "What does this mean?",
+      "Dropping the framework would cut compliance staff time for large mandate holders and could lower the friction that pushed some global allocators to reduce India weights after net selling accelerated from late 2024, though flows react to many variables at once. Domestic brokers still face anti-money laundering checks; the change is not a blanket secrecy regime but a retreat from India-specific duplication. SEBI acknowledged that aligning prevention of money laundering ownership tests with global practice may need finance ministry input, so investors should not treat consultation text as immediate law. The proposal sits alongside other same-week easing signals, but this paper names a concrete rulebook section to delete.",
+      "Why should I care?",
+      "If you invest through international mutual funds or sovereign wealth mandates with Indian equity sleeves, ask your manager whether ADF filings featured in their 2025 de-risking decisions. Custodians and compliance vendors should model revenue if disclosure projects shrink. Local asset managers competing for foreign mandates may see shorter onboarding checklists if the rule goes. Track comment letters from asset manager associations, the post-11 December circular, and whether foreign portfolio investment statistics improve without new concentration scares.",
+    ],
+  },
+  {
     slug: "cert-in-payment-fraud-advisory-november-2026",
     title: "CERT-In warned payment firms about hijacked payout approvals",
     summary:
@@ -13920,6 +13992,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "jlr-byd-defender-design-court-november-2026": "companies",
+  "satsure-inspace-avcf-november-2026": "policy",
+  "sebi-fpi-adf-scrap-november-2026": "policy",
   "cert-in-payment-fraud-advisory-november-2026": "policy",
   "india-unified-bharat-e-charge-november-2026": "policy",
   "sebi-mii-tenure-limits-november-2026": "policy",

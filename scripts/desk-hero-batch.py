@@ -2176,6 +2176,39 @@ def sebi_fpi_consult(d: ImageDraw.ImageDraw) -> None:
     d.arc([1080, 340, 1160, 420], 270, 90, fill=RED, width=6)
 
 
+def jlr_byd_defender_court(d: ImageDraw.ImageDraw) -> None:
+  # boxy SUV silhouettes + gavel/wedge clash
+    d.rectangle([100, 280, 260, 480], fill=BLUE)
+    d.rectangle([120, 200, 240, 280], fill=BLUE)
+    d.rectangle([300, 300, 460, 480], fill=RED)
+    d.rectangle([320, 220, 440, 300], fill=RED)
+    d.polygon([(520, 520), (560, 360), (600, 520)], fill=GOLD)
+    d.rectangle([540, 300, 560, 360], fill=INK)
+    d.ellipse([800, 200, 1140, 560], outline=YELLOW, width=6)
+    d.line([(860, 380), (1080, 380)], fill=GOLD, width=3)
+
+
+def satsure_inspace_avcf(d: ImageDraw.ImageDraw) -> None:
+    # satellite arc + crop grid / credit pulse
+    d.polygon([(140, 520), (200, 200), (340, 240), (280, 520)], fill=BLUE)
+    d.ellipse([210, 180, 270, 240], fill=YELLOW)
+    for gx in range(700, 1100, 80):
+        for gy in range(220, 520, 80):
+            d.rectangle([gx, gy, gx + 50, gy + 50], outline=GOLD, width=2)
+    d.polygon([(720, 160), (800, 120), (880, 160), (800, 200)], fill=RED)
+    d.line([(800, 200), (800, 560)], fill=GOLD, width=2)
+
+
+def sebi_fpi_adf_scrap(d: ImageDraw.ImageDraw) -> None:
+    # shrinking form stack + open gate
+    for i in range(4):
+        y = 200 + i * 70
+        d.rectangle([120, y, 480, y + 50], fill=[BLUE, RED, YELLOW, BLUE][i])
+    d.line([(520, 200), (520, 580)], fill=GOLD, width=3)
+    d.arc([640, 260, 1120, 540], 270, 90, fill=RED, width=8)
+    d.polygon([(640, 400), (600, 440), (640, 480), (680, 440)], fill=YELLOW)
+
+
 def mobikwik_diwali_tier2(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([140, 300, 420, 540], radius=24, fill=BLUE)
     d.ellipse([220, 360, 340, 480], fill=CREAM)
@@ -2392,6 +2425,9 @@ def main() -> None:
     save("india-infrastructure-output-october-2026", iip_october)
     save("sebi-fpi-consultation-simplify-november-2026", sebi_fpi_consult)
     save("mobikwik-diwali-tier2-payments-november-2026", mobikwik_diwali_tier2)
+    save("jlr-byd-defender-design-court-november-2026", jlr_byd_defender_court)
+    save("satsure-inspace-avcf-november-2026", satsure_inspace_avcf)
+    save("sebi-fpi-adf-scrap-november-2026", sebi_fpi_adf_scrap)
 
 
 if __name__ == "__main__":
