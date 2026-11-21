@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "titan-helios-luxury-watch-stores-november-2026",
+    title: "Titan wants 500 Helios watch stores as shoppers spend more above ₹25,000",
+    summary:
+      "On 21 November 2026, Titan's watches leadership told reporters the company plans to grow its Helios and Helios Luxe retail chain to about 500 stores by 2030, adding 30–40 outlets a year, as sales in the above-₹25,000 segment outpace the wider watch market and Helios formats posted 35% growth in the first half of fiscal 2026-27.",
+    category: "industry",
+    companyOrSector: "Retail / watches",
+    publishedAt: "2026-11-21T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("titan-helios-luxury-watch-stores-november-2026"),
+    keyTakeaways: [
+      "Rahul Shukla, Titan's VP and chief sales and marketing officer for watches, said on 21 November 2026 the group targets roughly 500 Helios stores by 2030, with 40–50 of them in the Helios Luxe format.",
+      "Titan opened two Helios Luxe boutiques in Delhi-NCR the same day, taking the Luxe count to 16 nationwide, with 25–30 Luxe sites expected by March 2027.",
+      "Helios and Helios Luxe together grew 35% in the first half of fiscal 2026-27, while Titan said Helios format sales rose 51% and Helios Luxe 95% in that stretch.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian watch buyers have been trading up in the post-GST pricing reset, and Titan is putting more steel and glass behind premium counters. On 21 November 2026, Rahul Shukla, vice president and chief sales and marketing officer for Titan's watches division, told businessline the company intends to reach about 500 Helios stores by 2030, opening 30–40 a year. Helios covers roughly ₹25,000 to ₹1 lakh price points; Helios Luxe sits from about ₹50,000 to ₹5 lakh. Titan launched two Helios Luxe boutiques in Delhi-NCR that day, lifting the Luxe footprint to 16 stores across India and targeting 25–30 Luxe sites by fiscal year-end. Shukla said the premium band above ₹25,000 is growing faster than the overall watch market, and that Helios and Helios Luxe together rose 35% in the first half of fiscal 2026-27, with Helios up 51% and Helios Luxe 95%. Titan has signed exclusive partnerships with nine international brands for Luxe over the past two years.",
+      "What does this mean?",
+      "When a jeweller that already owns the mass market pushes format expansion in luxury watches, it is betting that uptrading survives after the festive bump. Dedicated boutiques let Titan keep high-margin imports away from crowded multi-brand counters and give foreign marques controlled storytelling. Faster growth in Helios Luxe than core Helios suggests the top end of the ladder is pulling harder, which helps margins even if unit volumes stay smaller. Rivals from regional chains to mall operators will feel shelf pressure in cities where Titan pre-empts prime frontage. For Swiss and Japanese licensors, deeper Titan doors mean India stops being only a distributor story and becomes a partner in retail capex.",
+      "Why should I care?",
+      "If you sell premium watches or lease mall space, map Titan's annual store opening run rate against your catchment before renewing exclusivity deals. Investors in Titan already watch jewellery; this expansion ties watches more tightly to the same affluent footfall the group courts in gold. Shoppers hunting imported pieces should expect more standalone try-on rooms and fewer back-of-store displays. Watch same-store growth disclosures each quarter, new Luxe city launches, and whether 51% and 95% format growth moderates as bases rise.",
+    ],
+  },
+  {
+    slug: "premier-explosives-defence-export-november-2026",
+    title: "Premier Explosives landed a ₹311 crore export order for defence explosives",
+    summary:
+      "Premier Explosives Ltd said in a 21 November 2026 exchange filing it received an export order worth about $33.6 million, or roughly ₹311 crore, from an overseas buyer for defence explosives to be manufactured and supplied within 12 months, with no promoter link to the counterparty.",
+    category: "industry",
+    companyOrSector: "Defence / industrials",
+    publishedAt: "2026-11-21T21:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("premier-explosives-defence-export-november-2026"),
+    keyTakeaways: [
+      "The Hyderabad-based maker of high-energy materials filed on 21 November 2026 that an international client placed a $33.603 million order, equivalent to about ₹311 crore, for defence explosives.",
+      "Premier Explosives must execute the contract within 12 months and stated the deal is not a related-party transaction.",
+      "Managing director T V Chowdhary had told CNBC-TV18 earlier the company is targeting ₹600–700 crore revenue in fiscal 2026-27.",
+    ],
+    body: [
+      "What's going on here?",
+      "Defence export orders give small-cap industrials revenue visibility without waiting on domestic tender calendars. Premier Explosives Ltd, based in Secunderabad, manufactures detonators, solid propellants and other high-energy products for defence and mining clients. In a regulatory filing on Saturday, 21 November 2026, the company said an international entity awarded it an export contract worth $33.603 million, about ₹311 crore, for the manufacture and supply of defence explosives. Delivery is due within 12 months. Premier Explosives confirmed neither promoters nor promoter-group companies hold an interest in the buyer, and the contract does not qualify as a related-party deal. Earlier, managing director T V Chowdhary told CNBC-TV18 the company is aiming for ₹600–700 crore in revenue during fiscal 2026-27, so this single award covers a large share of that ambition if execution stays on schedule.",
+      "What does this mean?",
+      "Export defence work typically demands longer qualification cycles but can carry better pricing than commodity blasting supplies. A one-year execution window concentrates plant loading and working-capital needs on raw materials and compliance checks. For a sub-thousand-crore revenue firm, a ₹311 crore export book underpins capacity utilisation at specialised lines and may justify follow-on capex if the client reorders. The government's push to raise defence manufacturing and exports means orders like this also act as reference wins when pitching to other foreign ministries or OEMs. Investors still need to watch execution risk, rupee movement on dollar billing, and any end-use licensing conditions that are not visible in the brief filing.",
+      "Why should I care?",
+      "Defence supply-chain investors should track whether Premier Explosives repeats similar awards or stumbles on timelines, since one large contract can swing annual profits. Competitors in explosives and propellants may face tighter skilled-labour markets if Hyderabad plants run nearer capacity. Policymakers counting defence export dollars will look for shipment milestones in coming quarterly filings. If you hold the stock, monitor progress disclosures before the 12-month deadline, any capacity bottlenecks, and Chowdhary's earlier ₹600–700 crore revenue guide against order-book roll-forward.",
+    ],
+  },
+  {
+    slug: "india-port-cargo-traffic-october-2026",
+    title: "India's port cargo traffic jumped 19% in October on stronger trade flows",
+    summary:
+      "JM Financial research cited in reporting on 21 November 2026 said aggregate cargo handled at India's major and minor ports rose 18.7% year on year in October, with major ports up 22.5% to 93.6 million tonnes, coastal shipments at a record 31.6 million tonnes, and core export-import trade expanding 32.7% amid heavier engineering, electronics and capital goods movement.",
+    category: "industry",
+    companyOrSector: "Trade / logistics",
+    publishedAt: "2026-11-21T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-port-cargo-traffic-october-2026"),
+    keyTakeaways: [
+      "October port cargo volumes grew 18.7% year on year versus 6.3% in September, according to JM Financial commentary cited on 21 November 2026.",
+      "Major ports moved 93.6 million tonnes, up 22.5%, while coastal cargo hit a record 31.6 million tonnes, an 80.8% jump that drove much of the monthly spike.",
+      "Core EXIM trade rose 32.7% in October, with capital goods imports up 36% and exports up 44%; container handling volumes rose 26.8% even as container tonnage grew only 11.8%.",
+    ],
+    body: [
+      "What's going on here?",
+      "Port throughput is a late but blunt read on how much stuff is moving in and out of the economy. Research by JM Financial, cited in market wires on 21 November 2026, said India's major and minor ports together handled cargo volumes 18.7% higher in October than a year earlier, accelerating from 6.3% growth in September. Major ports alone processed 93.6 million tonnes, up 22.5%. Coastal shipments surged to a record 31.6 million tonnes, an 80.8% year-on-year increase that explains much of the headline jump. Minor ports handled 68.4 million tonnes, up 13.8%, helped by petroleum, oil, lubricants and coal. Core export-import trade, stripping out items such as petroleum and precious metals, rose 32.7% in October. Capital goods imports climbed 36% and exports 44%. Container moves rose 26.8% while container tonnage grew only 11.8%, a gap the brokerage linked partly to transhipment and price inflation in engineering and electronic goods. Coal volumes rose 15.2% to 37.5 million tonnes and iron ore 7.8% to 9.4 million tonnes.",
+      "What does this mean?",
+      "When coastal and container counts outrun tonnage, more boxes are circling through hub ports even if average shipment weight is flat. That still signals busy cranes and higher stevedoring revenue for port operators and logistics firms. Strong capital goods trade fits factories and infrastructure projects pulling in machinery while shipping finished equipment abroad. Record coastal volumes show domestic manufacturers and refiners moving more product along the shoreline rather than road, which can cut landed cost for bulk commodities. The split between fiery EXIM value growth and softer tonnage gains warns against treating every percentage as physical demand; price and mix matter. For trade policy, sustained double-digit port growth supports the government's current-account narrative but also raises questions about shipping capacity and berth congestion if the pace continues.",
+      "Why should I care?",
+      "Exporters and importers should confirm whether October's rush reflects festive pull-forward or a steadier order book before locking freight contracts. Investors in port stocks, container logistics and coastal shipping can cross-check JM Financial's figures with official port trust data when released. Industrial buyers of imported machinery may face longer berth waits if transhipment stays elevated. Watch November cargo releases, rupee moves that affect landed import costs, and whether coastal records repeat without a monsoon-related base effect.",
+    ],
+  },
+  {
+    slug: "ashok-leyland-singur-truck-plant-november-2026",
+    title: "West Bengal says Ashok Leyland will build trucks at the old Singur site",
+    summary:
+      "Union minister Sukanta Majumdar said on 21 November 2026 that Ashok Leyland will set up a truck manufacturing plant at Singur, with work to begin soon, reviving industrial plans at the land where Tata Motors abandoned its Nano project in 2008 after a prolonged farmers' protest.",
+    category: "industry",
+    companyOrSector: "Automotive / West Bengal",
+    publishedAt: "2026-11-21T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ashok-leyland-singur-truck-plant-november-2026"),
+    keyTakeaways: [
+      "Majumdar told reporters after the prime minister's IIT Kharagpur programme on 21 November 2026 that Ashok Leyland is coming to Singur to manufacture heavy vehicles and that work would start soon.",
+      "West Bengal chief minister Suvendu Adhikari had said on 5 November that preliminary talks were held with Ashok Leyland for a heavy-vehicle plant, cautioning against announcements before terms firm up.",
+      "No investment figure, employment target or formal agreement details accompanied the 21 November statement; Singur remains politically symbolic since Tata Motors exited nearly 18 years ago.",
+    ],
+    body: [
+      "What's going on here?",
+      "Singur in West Bengal is still shorthand for an industrial project that never opened. The Left Front government acquired about 997 acres in the mid-2000s for Tata Motors' Nano small-car factory. Protests led by Mamata Banerjee, then in opposition, forced Tata to leave in 2008 and move the Nano plant to Gujarat. Banerjee's Trinamool Congress later returned farmland to unwilling growers after a Supreme Court judgment, and the shed infrastructure was dismantled. On 21 November 2026, Union minister of state for education Sukanta Majumdar told reporters, after Prime Minister Narendra Modi's event at IIT Kharagpur, that Ashok Leyland would set up a truck manufacturing plant at Singur and that work would begin soon. He framed the move as the Bharatiya Janata Party-led government's effort to bring industry back. Chief minister Suvendu Adhikari had said on 5 November that officials held preliminary discussions with Ashok Leyland on a heavy-vehicle unit but warned against premature publicity. Saturday's announcement did not cite capex, jobs or a signed pact.",
+      "What does this mean?",
+      "A commercial vehicle plant would differ sharply from the abandoned small-car project: heavier logistics, supplier parks tuned to trucks, and a political message that the site can host manufacturing again. For Ashok Leyland, a greenfield or brownfield Singur unit could extend eastern India footprint if land and incentives clear, though investors should wait for board-level disclosures. For the state, landing a listed OEM matters electorally, yet farmers and local leaders will watch land use after the bitter Nano episode. Until Earthmovers move and purchase agreements surface, the story remains intent rather than capacity. Truck demand cycles and the company's existing Tamil Nadu and pan-India plants will determine whether Singur is expansion or replacement.",
+      "Why should I care?",
+      "Auto component suppliers in eastern India should track whether Ashok Leyland issues a formal filing or state incentive package before retooling lines. Political risk watchers will compare Bengal's project delivery record with Gujarat or Tamil Nadu timelines. If you follow Ashok Leyland stock, treat ministerial remarks as signal only until exchange disclosures quantify investment. Watch for a company announcement, state cabinet approval, land allotment papers, and any Trinamool reaction that could slow clearances.",
+    ],
+  },
+  {
     slug: "bwa-crypto-tax-budget-2027-november-2026",
     title: "India's crypto lobby asked for lower TDS ahead of Budget 2027",
     summary:
@@ -14160,6 +14256,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "titan-helios-luxury-watch-stores-november-2026": "markets",
+  "premier-explosives-defence-export-november-2026": "companies",
+  "india-port-cargo-traffic-october-2026": "markets",
+  "ashok-leyland-singur-truck-plant-november-2026": "policy",
   "bwa-crypto-tax-budget-2027-november-2026": "policy",
   "adani-energy-wb-round-the-clock-power-november-2026": "policy",
   "jnpa-gateway-distriparks-dfc-yard-november-2026": "policy",

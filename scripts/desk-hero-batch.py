@@ -2234,6 +2234,48 @@ def shriram_sensex_rebalance(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(1080, 460), (1000, 520), (1000, 400)], fill=BLUE)
 
 
+def titan_helios_luxury_stores(d: ImageDraw.ImageDraw) -> None:
+    # storefront + ascending ticket steps
+    d.rounded_rectangle([100, 220, 460, 560], radius=20, fill=BLUE)
+    d.rectangle([160, 280, 400, 340], fill=GOLD)
+    for i, h in enumerate([100, 160, 240, 320]):
+        x = 620 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.ellipse([980, 200, 1120, 340], fill=YELLOW)
+    d.polygon([(1020, 360), (1100, 320), (1100, 400)], fill=GOLD)
+
+
+def premier_explosives_defence_export(d: ImageDraw.ImageDraw) -> None:
+    # shell silhouette + export arrow pipeline
+    d.polygon([(200, 520), (260, 200), (320, 520)], fill=RED)
+    d.rectangle([230, 280, 290, 440], fill=YELLOW)
+    for i, w in enumerate([760, 880, 1000]):
+        d.rectangle([w, 280 + i * 80, w + 120, 340 + i * 80], fill=[BLUE, RED, BLUE][i])
+        d.polygon([(w + 120, 300 + i * 80), (w + 160, 310 + i * 80), (w + 120, 320 + i * 80)], fill=GOLD)
+
+
+def india_port_cargo_traffic_oct(d: ImageDraw.ImageDraw) -> None:
+    # crane + stacked container bars
+    d.rectangle([140, 400, 200, 560], fill=BLUE)
+    d.rectangle([200, 360, 480, 400], fill=GOLD)
+    d.rectangle([220, 280, 260, 360], fill=RED)
+    for i in range(4):
+        d.rectangle([640 + i * 110, 480 - i * 50, 720 + i * 110, 560], fill=[YELLOW, RED, BLUE, YELLOW][i])
+    d.line([(80, 560), (1180, 560)], fill=INK, width=3)
+    d.polygon([(1050, 200), (1120, 240), (1050, 280)], fill=BLUE)
+
+
+def ashok_leyland_singur_plant(d: ImageDraw.ImageDraw) -> None:
+    # factory silhouette + fresh foundation blocks
+    d.rectangle([120, 320, 500, 560], fill=BLUE)
+    d.polygon([(200, 320), (310, 200), (420, 320)], fill=RED)
+    d.rectangle([260, 380, 360, 480], fill=CREAM)
+    for i in range(3):
+        x = 680 + i * 130
+        d.rectangle([x, 440, x + 90, 560], fill=[YELLOW, RED, BLUE][i])
+    d.line([(560, 500), (1180, 500)], fill=GOLD, width=4)
+
+
 def bwa_crypto_tax_budget(d: ImageDraw.ImageDraw) -> None:
     # ledger blocks + split onshore/offshore paths
     d.rectangle([100, 200, 420, 520], fill=BLUE)
@@ -2520,6 +2562,10 @@ def main() -> None:
     save("jlr-byd-defender-design-court-november-2026", jlr_byd_defender_court)
     save("satsure-inspace-avcf-november-2026", satsure_inspace_avcf)
     save("sebi-fpi-adf-scrap-november-2026", sebi_fpi_adf_scrap)
+    save("titan-helios-luxury-watch-stores-november-2026", titan_helios_luxury_stores)
+    save("premier-explosives-defence-export-november-2026", premier_explosives_defence_export)
+    save("india-port-cargo-traffic-october-2026", india_port_cargo_traffic_oct)
+    save("ashok-leyland-singur-truck-plant-november-2026", ashok_leyland_singur_plant)
     save("bwa-crypto-tax-budget-2027-november-2026", bwa_crypto_tax_budget)
     save("adani-energy-wb-round-the-clock-power-november-2026", adani_wb_re_rtc)
     save("jnpa-gateway-distriparks-dfc-yard-november-2026", jnpa_gateway_dfc_yard)
