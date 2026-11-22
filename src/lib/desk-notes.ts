@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tata-steel-apl-apollo-tubes-sale-november-2026",
+    title: "Tata Steel will sell its tubes businesses to APL Apollo for up to ₹28,000 crore",
+    summary:
+      "Tata Steel Ltd said on 22 November 2026 its board approved two linked cash deals to transfer its tubes unit and its entire stake in Tata Steel Colours to APL Apollo Tubes Ltd for up to ₹11,700 crore and ₹16,300 crore respectively, with closure targeted by 31 March 2028 subject to regulatory approvals.",
+    category: "industry",
+    companyOrSector: "Steel / Tata Steel / APL Apollo",
+    publishedAt: "2026-11-22T21:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-steel-apl-apollo-tubes-sale-november-2026"),
+    keyTakeaways: [
+      "Tata Steel's board approved a slump sale of its tubes business to APL Apollo for up to ₹11,700 crore, covering plants at Jamshedpur, Hosur, Khopoli and Sahibabad plus related Khopoli coated assets.",
+      "A separate deal values Tata Steel Colours, the colour-coated steel venture formerly known as Tata BlueScope Steel, at ₹16,300 crore, with ₹8,150 crore each to Tata Steel and subsidiary Tata Steel Downstream Products Ltd.",
+      "The tubes division reported about ₹11,375 crore of turnover in FY26, near 4.9% of Tata Steel consolidated revenue; both transactions are inter-conditional and neither has closed yet.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian steelmakers periodically shed downstream lines to free capital for core flat and long products. Tata Steel Ltd told exchanges on 22 November 2026 that its board approved two related divestments to APL Apollo Tubes Ltd, India's largest structural tubes player. The first is a slump sale of the tubes and pipes business for a lump sum of up to ₹11,700 crore. Scope includes manufacturing, marketing and distribution from company facilities at Jamshedpur, Hosur, Khopoli and Sahibabad, along with selected cold-rolling and coated lines at Khopoli. That unit posted roughly ₹11,375 crore of turnover in financial year 2026, about 4.9% of Tata Steel consolidated revenue, with net worth near ₹3,274 crore at March 2026. The second transaction sells the entire equity of Tata Steel Colours, the colour-coated sheets and building solutions arm, for ₹16,300 crore. Tata Steel receives half the cash directly and Tata Steel Downstream Products Ltd the other half. Tata Steel said the deals are inter-conditional, need shareholder and competition clearance, and may close together on or before 31 March 2028.",
+      "What does this mean?",
+      "APL Apollo gains domestic tube capacity and a coated-steel brand without greenfield spend, which can tighten its grip on building and infrastructure channels where tubes and roofing sheets move together. Tata Steel unlocks a large cash inflow from businesses that sat below 5% of group sales but tied management attention across four plants and a joint venture it only fully owned since early 2026. Proceeds can retire debt or fund upstream projects while the company focuses on bulk steel. Contractors and real estate developers may see one supplier span hollow sections and colour-coated panels if integration goes smoothly. Competition Commission scrutiny will hinge on market share in structural tubes and coated products. Media reports on 22 November, citing unnamed people, said Tata Steel could also seek a controlling stake in APL Apollo, with an announcement possible on 23 November; exchange filings so far cover only the asset sales, not equity control.",
+      "Why should I care?",
+      "If you buy steel tubes or colour-coated roofing for projects, watch whether APL Apollo harmonises brands, service centres and pricing after regulatory approval. Tata Steel shareholders should track how cash is deployed versus leverage targets and whether downstream EBIT dilution is offset by margin gains upstream. APL Apollo investors need clarity on funding for ₹28,000 crore of purchases and integration costs across plants and employees that transfer as going concerns. Rivals such as Jindal and SAIL tubes units will read the deal as a scale signal. Follow Competition Commission filings, shareholder meeting notices for both companies, any separate announcement on equity control, and closure timelines against the March 2028 long-stop date.",
+    ],
+  },
+  {
+    slug: "nse-retail-algo-static-ip-november-2026",
+    title: "NSE will fine brokers that give retail algo traders static IP access too freely",
+    summary:
+      "The National Stock Exchange said in a 20 November 2026 circular that only self-coding retail investors may use broker APIs from a whitelisted static IP, with penalties from ₹5,000 per client for members that enable the route for everyone else.",
+    category: "industry",
+    companyOrSector: "Market regulation / algorithmic trading",
+    publishedAt: "2026-11-22T21:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("nse-retail-algo-static-ip-november-2026"),
+    keyTakeaways: [
+      "NSE's Inspection Department circular of 20 November 2026 took effect immediately, telling trading members and algo vendors not to grant static IP algo access to retail clients outside the tech-savvy self-coder category.",
+      "The rule builds on Securities and Exchange Board of India guidelines from February 2025 and exchange norms that stockbrokers had to meet from 1 April 2026.",
+      "First-time broker breaches carry ₹5,000 per client capped at ₹1 lakh, with fines rising 50% on a second offence and 100% from the third; empanelled algo providers risk suspension for static IP misuse.",
+    ],
+    body: [
+      "What's going on here?",
+      "Regulators have been tightening how retail investors tap automated trading after volumes through broker application programming interfaces surged. The National Stock Exchange issued a circular on 20 November 2026 from its Inspection Department reiterating who may run strategies from a fixed internet address. Only retail traders who write their own code qualify as tech-savvy and may map strategies to a whitelisted static IP through a broker API. Everyone else who uses vendor-built algorithms must route orders via exchange-empanelled algo providers, with strategies hosted on the broker's servers so messages originate from broker infrastructure. The circular bars trading members and algo providers from granting static IP access to clients who do not meet the self-coder test under any circumstance, effective immediately. It references Securities and Exchange Board of India guidelines dated February 2025 and complementary exchange rules brokers had to implement from 1 April 2026.",
+      "What does this mean?",
+      "Brokers must collect undertakings and verify coding capability before flipping on static IP access, or pay automatic penalties. That pushes many discretionary retail users back toward packaged algos on broker servers, where the member retains risk checks and surveillance. Vendors who sold API plus static IP bundles to non-coders face product redesigns or client migration to empanelled hosts. Self-directed programmers keep a lower-latency path but shoulder compliance if they share login or code with third parties. The penalty ladder, starting at ₹5,000 per client up to ₹1 lakh on first breach, makes casual IP whitelisting expensive. For algo providers, losing empanelment removes exchange access entirely, a sharper threat than fines alone.",
+      "Why should I care?",
+      "If you trade through APIs, confirm with your broker whether you are classified as a self-coder before relying on a home IP whitelist; using a vendor strategy on that route can trigger member fines and account restrictions. Investors comparing brokers should ask how each firm onboards tech-savvy retail users and what documentation they demand. Fintech founders building retail algos need empanelment or partnerships with licensed hosts rather than static IP shortcuts. Compliance teams at brokers should audit existing API clients against the November circular this week. Watch Bombay Stock Exchange and Metropolitan Stock Exchange for parallel notices, member circulars on revised onboarding, and any Securities and Exchange Board of India follow-up on surveillance standards.",
+    ],
+  },
+  {
+    slug: "fssai-bisleri-water-court-november-2026",
+    title: "India's food regulator will take Bisleri to court over failed water tests",
+    summary:
+      "The Food Safety and Standards Authority of India said on 22 November 2026 it will pursue legal action against Bisleri International after laboratory tests on packaged drinking water from company premises failed limits on bromate and later on polynuclear aromatic hydrocarbons.",
+    category: "industry",
+    companyOrSector: "Packaged drinking water / FSSAI",
+    publishedAt: "2026-11-22T21:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-bisleri-water-court-november-2026"),
+    keyTakeaways: [
+      "FSSAI said in a Sunday social media post that a sample from Bisleri's premises breached prescribed bromate limits, a by-product of some disinfection steps.",
+      "After Bisleri challenged the initial result, a separate lab still deemed the sample unsafe, detecting polynuclear aromatic hydrocarbons, or PAHs.",
+      "Bisleri had not responded to media requests for comment outside business hours; FSSAI has pursued other major brands this year, including Nestle over a substandard infant food sample.",
+    ],
+    body: [
+      "What's going on here?",
+      "Packaged water brands live on trust because buyers cannot test each bottle at the kirana store. The Food Safety and Standards Authority of India, the national food regulator, said on 22 November 2026 that it will take Bisleri International Pvt Ltd, owner of one of the best-known bottled water labels, to court after safety tests failed. A sample collected at Bisleri premises did not meet limits on bromate, a chemical that can form during ozone or other disinfection used in treatment plants. When Bisleri appealed the first finding, another laboratory still classified the sample as unsafe, this time citing polynuclear aromatic hydrocarbons, sooty compounds linked to combustion residues. The regulator posted the update publicly on Sunday. Bisleri did not immediately comment when reporters sought a response outside regular hours. Rivals PepsiCo's Aquafina and Coca-Cola's Kinley compete in a domestic packaged drinking water market various research firms valued near $3.6 billion for 2025.",
+      "What does this mean?",
+      "Court action signals the regulator is willing to escalate beyond notices and recalls against large packaged food and beverage names, not only small producers. For Bisleri, a legal fight risks brand damage, possible penalties and stricter plant monitoring if courts uphold FSSAI's reading. Distributors and modern trade may demand fresh test certificates or slow reorders until clarity emerges. The case also reminds treatment teams that disinfection choices affect bromate, while storage, piping and source water quality influence PAH readings. Industry-wide, higher enforcement can raise compliance spending on lab audits and third-party testing. Affirming consumption still shows in bottled water volumes, but buyers may trade toward brands advertising recent safety clearances during disputes.",
+      "Why should I care?",
+      "If you stock or franchise Bisleri, plan alternative inventory and watch court filings for any interim sales restrictions. Institutional buyers such as hotels and airlines should review contract clauses on product recalls. Investors in beverage multinationals should note FSSAI's parallel actions against Nestle earlier in 2026 when assessing regulatory risk in India. Home consumers can check batch labels and store bottles away from heat and sunlight regardless of brand. Track FSSAI court petitions, Bisleri's eventual response, any plant inspection orders, and whether other states replicate the prosecution.",
+    ],
+  },
+  {
+    slug: "kitchenware-aluminium-costs-november-2026",
+    title: "Cooker makers warn kitchen prices may rise as metal costs bite",
+    summary:
+      "Stovekraft and TTK Prestige told analysts after recent quarters that aluminium and packaging costs remain elevated, with Stovekraft citing more than 50% aluminium inflation partly offset by only a 10% correction while shoppers shift toward stainless and triply cookware.",
+    category: "industry",
+    companyOrSector: "Kitchenware / consumer durables",
+    publishedAt: "2026-11-22T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("kitchenware-aluminium-costs-november-2026"),
+    keyTakeaways: [
+      "Stovekraft managing director Rajendra Gandhi said on a post-quarter call that aluminium prices rose more than 50% with only about a 10% reversal, leaving severe margin pressure on Pigeon and Gilma brands.",
+      "TTK Prestige said nearly 95% of input cost lines, from metals to packaging and rubber, moved higher; CEO Venkatesh Vijayaraghavan said industry price hikes were staggered and did not fully cover costs.",
+      "Triply cookware demand is growing faster than the category average, but triply metal circles are still imported, mainly from China; Stovekraft plans roughly ₹29-30 crore of China capex to start local circle output by December 2026 or January 2027.",
+    ],
+    body: [
+      "What's going on here?",
+      "Middle-class kitchens refresh pressure cookers and pans when festivals or weddings cluster, so small metal moves quickly show up in shelf prices. Reporting in the wire on 22 November 2026 distilled comments from Stovekraft Ltd and TTK Prestige Ltd after their recent earnings calls. Stovekraft managing director Rajendra Gandhi said aluminium prices climbed more than 50%, with only a partial correction near 10%, and that there was no meaningful cost relief yet. He described severe margin pressure and noted shoppers moving from aluminium cookers toward stainless steel and triply products that sandwich aluminium between steel layers. TTK Prestige said about 95% of its input lines, including packaging, handles, rubber parts and chemicals, cost more. Chief executive Venkatesh Vijayaraghavan said manufacturers raised prices in steps but have not fully passed through the surge and may need more increases. Triply is growing about 1.5 times the broader cookware pace, yet India still imports triply circles, with China a major source. Stovekraft plans to invest about 20 million yuan, roughly ₹29-30 crore, in a China brownfield plant to start manufacturing circles by late December 2026 or early January 2027.",
+      "What does this mean?",
+      "When metal inflation outruns list-price hikes, brands sacrifice margin or quietly shrink pack sizes. The shift toward triply shows consumers trading up for perceived durability even as bills rise, which helps average selling prices but raises bill-of-materials complexity. Dependence on imported circles leaves makers exposed to freight, currency and any trade friction with China, so Stovekraft's backward integration is a hedge, not a quick fix. Rivals Hawkins, Butterfly and private labels will watch whether Stovekraft and Prestige announce another catalogue-wide increase before the wedding season ends. Appliance retailers may push financing and combo offers to keep ticket sizes intact. Affirming consumption appears in premium triply growth, even as value aluminium lines slow.",
+      "Why should I care?",
+      "If you are outfitting a kitchen this quarter, compare triply versus aluminium total cost of ownership and buy before the next staggered price circular if your preferred brand warns of hikes. Retailers should monitor inventory mix toward higher-margin triply sets. Investors in Stovekraft and TTK Prestige should track gross margins, China circle plant commissioning, and management commentary on further price actions. Shoppers sensitive to bills can delay non-urgent upgrades until aluminium retreats or festival discounts return. Watch LME aluminium trends, company price lists, and whether domestic circle capacity draws policy interest on import dependence.",
+    ],
+  },
+  {
     slug: "maruti-select-model-price-hike-november-2026",
     title: "Maruti Suzuki raised prices on select cars again from Sunday",
     summary:
@@ -14400,6 +14496,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tata-steel-apl-apollo-tubes-sale-november-2026": "markets",
+  "nse-retail-algo-static-ip-november-2026": "policy",
+  "fssai-bisleri-water-court-november-2026": "policy",
+  "kitchenware-aluminium-costs-november-2026": "markets",
   "maruti-select-model-price-hike-november-2026": "markets",
   "railtel-andhra-legal-ai-platform-november-2026": "companies",
   "welspun-living-towel-capex-november-2026": "companies",

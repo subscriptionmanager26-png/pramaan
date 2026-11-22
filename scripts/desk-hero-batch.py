@@ -2289,6 +2289,54 @@ def ashok_leyland_ev_cement_trucks(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([1000, 360, 1080, 440], fill=GOLD)
 
 
+def tata_steel_apl_apollo_tubes_sale(d: ImageDraw.ImageDraw) -> None:
+    # hollow tubes merge into one downstream stack
+    for i in range(5):
+        d.rounded_rectangle([100 + i * 55, 260, 140 + i * 55, 520], radius=12, fill=[RED, BLUE, YELLOW, RED, BLUE][i])
+    d.rectangle([680, 180, 1140, 540], fill=BLUE)
+    d.rectangle([720, 220, 1100, 280], fill=YELLOW)
+    d.rectangle([720, 320, 1050, 380], fill=RED)
+    d.rectangle([720, 420, 980, 480], fill=YELLOW)
+    d.polygon([(600, 340), (660, 300), (660, 380)], fill=GOLD)
+
+
+def nse_retail_algo_static_ip(d: ImageDraw.ImageDraw) -> None:
+    # bracket code left, blocked IP padlock right
+    d.rectangle([100, 200, 480, 520], fill=BLUE)
+    for y in range(240, 480, 44):
+        d.rectangle([140, y, 200, y + 12], fill=YELLOW)
+        d.rectangle([220, y, 400, y + 12], fill=CREAM)
+    d.ellipse([780, 260, 940, 420], fill=RED)
+    d.rectangle([850, 340, 930, 520], fill=RED)
+    d.rectangle([820, 300, 900, 340], fill=GOLD)
+    d.line([(700, 280), (780, 340)], fill=INK, width=4)
+    d.line([(700, 400), (780, 340)], fill=INK, width=4)
+
+
+def fssai_bisleri_water_court(d: ImageDraw.ImageDraw) -> None:
+    # water bottle beside regulator scales
+    d.rounded_rectangle([140, 220, 260, 520], radius=30, fill=BLUE)
+    d.rectangle([180, 160, 220, 240], fill=BLUE)
+    d.ellipse([160, 500, 240, 560], fill=YELLOW)
+    d.line([(700, 180), (700, 440)], fill=GOLD, width=6)
+    d.line([(620, 260), (780, 260)], fill=GOLD, width=4)
+    d.ellipse([630, 200, 690, 260], fill=RED)
+    d.ellipse([710, 200, 770, 260], fill=BLUE)
+    d.rectangle([900, 320, 1120, 520], fill=RED)
+    d.polygon([(960, 320), (1040, 280), (1120, 320)], fill=GOLD)
+
+
+def kitchenware_aluminium_costs(d: ImageDraw.ImageDraw) -> None:
+    # pressure cooker beside rising cost bars
+    d.ellipse([180, 360, 360, 540], fill=RED)
+    d.rectangle([220, 220, 320, 360], fill=BLUE)
+    d.polygon([(240, 200), (300, 160), (360, 200)], fill=YELLOW)
+    for i, h in enumerate([100, 160, 220, 280, 340]):
+        x = 680 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, YELLOW, BLUE, RED, YELLOW][i])
+    d.line([(660, 560), (1180, 560)], fill=INK, width=2)
+
+
 def maruti_select_model_price_hike(d: ImageDraw.ImageDraw) -> None:
     # showroom sticker steps on small car silhouette
     d.rounded_rectangle([120, 320, 460, 420], radius=20, fill=BLUE)
@@ -2637,6 +2685,10 @@ def main() -> None:
     save("premier-explosives-defence-export-november-2026", premier_explosives_defence_export)
     save("india-port-cargo-traffic-october-2026", india_port_cargo_traffic_oct)
     save("ashok-leyland-singur-truck-plant-november-2026", ashok_leyland_singur_plant)
+    save("tata-steel-apl-apollo-tubes-sale-november-2026", tata_steel_apl_apollo_tubes_sale)
+    save("nse-retail-algo-static-ip-november-2026", nse_retail_algo_static_ip)
+    save("fssai-bisleri-water-court-november-2026", fssai_bisleri_water_court)
+    save("kitchenware-aluminium-costs-november-2026", kitchenware_aluminium_costs)
     save("maruti-select-model-price-hike-november-2026", maruti_select_model_price_hike)
     save("railtel-andhra-legal-ai-platform-november-2026", railtel_andhra_legal_ai_platform)
     save("welspun-living-towel-capex-november-2026", welspun_living_towel_capex)
