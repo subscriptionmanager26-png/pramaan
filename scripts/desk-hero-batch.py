@@ -2276,6 +2276,32 @@ def ashok_leyland_singur_plant(d: ImageDraw.ImageDraw) -> None:
     d.line([(560, 500), (1180, 500)], fill=GOLD, width=4)
 
 
+def ashok_leyland_ev_cement_trucks(d: ImageDraw.ImageDraw) -> None:
+    # electric truck silhouette + cement-bag payload blocks
+    d.rectangle([100, 360, 480, 480], fill=BLUE)
+    d.ellipse([130, 480, 210, 560], fill=INK)
+    d.ellipse([370, 480, 450, 560], fill=INK)
+    d.rectangle([240, 280, 340, 360], fill=CREAM)
+    d.polygon([(500, 320), (560, 280), (620, 320)], fill=YELLOW)
+    for i, h in enumerate([100, 140, 180, 220]):
+        x = 700 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.ellipse([1000, 360, 1080, 440], fill=GOLD)
+
+
+def bajaj_finance_agentic_ai_scale(d: ImageDraw.ImageDraw) -> None:
+    # call-centre arc replaced by bot nodes on a phone stack
+    d.rounded_rectangle([100, 200, 420, 560], radius=24, fill=BLUE)
+    d.rounded_rectangle([150, 280, 370, 520], radius=16, fill=CREAM)
+    for y in range(320, 480, 48):
+        d.ellipse([200, y, 260, y + 40], fill=[RED, YELLOW, BLUE][(y // 48) % 3])
+    for i, h in enumerate([80, 140, 200, 280, 340, 400]):
+        x = 620 + (i % 3) * 100
+        row = i // 3
+        d.rectangle([x, 520 - h - row * 20, x + 55, 520 - row * 20], fill=[RED, BLUE, YELLOW][i % 3])
+    d.polygon([(980, 240), (1100, 200), (1100, 320)], fill=GOLD)
+
+
 def bwa_crypto_tax_budget(d: ImageDraw.ImageDraw) -> None:
     # ledger blocks + split onshore/offshore paths
     d.rectangle([100, 200, 420, 520], fill=BLUE)
@@ -2566,6 +2592,8 @@ def main() -> None:
     save("premier-explosives-defence-export-november-2026", premier_explosives_defence_export)
     save("india-port-cargo-traffic-october-2026", india_port_cargo_traffic_oct)
     save("ashok-leyland-singur-truck-plant-november-2026", ashok_leyland_singur_plant)
+    save("ashok-leyland-ev-cement-trucks-november-2026", ashok_leyland_ev_cement_trucks)
+    save("bajaj-finance-agentic-ai-scale-november-2026", bajaj_finance_agentic_ai_scale)
     save("bwa-crypto-tax-budget-2027-november-2026", bwa_crypto_tax_budget)
     save("adani-energy-wb-round-the-clock-power-november-2026", adani_wb_re_rtc)
     save("jnpa-gateway-distriparks-dfc-yard-november-2026", jnpa_gateway_dfc_yard)

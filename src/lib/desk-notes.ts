@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "ashok-leyland-ev-cement-trucks-november-2026",
+    title: "Ashok Leyland will deploy 200 electric trucks on a cement route",
+    summary:
+      "On its Q2 FY27 earnings call, Ashok Leyland said its OHM Mobility unit has secured a freight mandate to run more than 200 electric trucks for cement distribution, while the company is designing new light commercial vehicle platforms to widen addressable share from about 55–60% toward 80–85%.",
+    category: "industry",
+    companyOrSector: "Commercial vehicles / electrification",
+    publishedAt: "2026-11-22T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ashok-leyland-ev-cement-trucks-november-2026"),
+    keyTakeaways: [
+      "Managing director and chief executive Shenu Agarwal said on the Q2 FY27 call that OHM Mobility, Ashok Leyland's mobility-as-a-service arm, won a cement-haul contract covering more than 200 electric trucks.",
+      "Agarwal said Ashok Leyland is developing fresh LCV platforms so its range can cover roughly 80–85% of the commercial vehicle market, up from about 55–60% today.",
+      "The order sits alongside the truck maker's wider push into battery power for fleet customers that run fixed routes and can charge at depots.",
+    ],
+    body: [
+      "What's going on here?",
+      "Cement makers move bulky loads on repeatable routes, which makes them early candidates for electric rigs that return to the same yard each night. Ashok Leyland Ltd discussed the shift on its Q2 FY27 earnings call with analysts. Managing director and chief executive Shenu Agarwal said the company's OHM Mobility subsidiary, which offers mobility-as-a-service for commercial fleets, has secured a freight transportation mandate to deploy more than 200 electric trucks for cement distribution. Separately, Agarwal said Ashok Leyland is working on new light commercial vehicle platforms so its combined portfolio can address about 80–85% of the domestic commercial vehicle market, compared with roughly 55–60% coverage today. The disclosures came as Ashok Leyland continues to talk up electric options alongside its conventional medium- and heavy-duty trucks.",
+      "What does this mean?",
+      "A 200-truck electric award is still a fleet contract, not a retail buyer story, but it signals where logistics customers will test total cost of ownership on a known loop. Cement companies can pencil in charging at plants and sites, compare diesel versus battery mileage on the same lanes, and scale if uptime holds. For Ashok Leyland, bundling trucks with OHM's operations service lets it sell kilometres rather than metal alone, which can smooth adoption when upfront EV prices stay high. Widening LCV platform coverage matters because last-mile and urban loads sit in segments where electrification rules and city access norms are tightening. Competitors from Tata Motors to newer EV truck entrants will watch whether this cement mandate leads to repeat orders or stays a one-off pilot.",
+      "Why should I care?",
+      "If you buy or finance commercial fleets, ask whether your routes look like cement haulage: predictable, depot-friendly, and high fuel spend. Ashok Leyland investors should track OHM Mobility disclosures, delivery timelines on the 200-truck program, and whether LCV launches close the stated market-coverage gap. Cement and construction investors can compare logistics cost guides once electric miles replace diesel on contracted lanes. Watch Q3 commentary on EV truck deployment, any named cement partner in filings, and whether other bulk industries copy the mobility-as-a-service structure.",
+    ],
+  },
+  {
+    slug: "bajaj-finance-agentic-ai-scale-november-2026",
+    title: "Bajaj Finance bots now handle three in four DIY customer queries",
+    summary:
+      "Bajaj Finance told analysts on its Q2 FY27 call that AI bots already resolve about 75% of questions on its do-it-yourself service channels, while it plans to expand from 129 AI agents and 65 agentic applications today to roughly 600 agents and 118 applications, backed by a 328-person FinAI team.",
+    category: "industry",
+    companyOrSector: "NBFC / consumer finance",
+    publishedAt: "2026-11-22T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bajaj-finance-agentic-ai-scale-november-2026"),
+    keyTakeaways: [
+      "Management said on the Q2 FY27 earnings call that artificial-intelligence bots currently handle around 75% of customer queries that arrive through Bajaj Finance's self-service channels.",
+      "The lender reported about 129 AI agents and 65 agentic applications in use, with a target of roughly 600 agents and 118 agentic applications within the year.",
+      "Bajaj Finance has built a 328-member FinAI unit that management said will push automation beyond customer service into wider enterprise workflows.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large consumer lenders field millions of payment, limit and document questions that do not need a human on the first touch. Bajaj Finance Ltd outlined how far it has shifted that work to software on its Q2 FY27 earnings call. Management said AI bots now handle about three-fourths of queries received through the company's do-it-yourself service channels, covering routine interactions with less staff involvement. The NBFC said it currently runs around 129 AI agents and 65 agentic applications, and aims to raise those counts to approximately 600 agents and 118 agentic applications during the year. A dedicated FinAI team of 328 people is leading the rollout. Management framed the next phase as enterprise-wide, with applications meant to support employees as well as customers, not just chat interfaces on the app.",
+      "What does this mean?",
+      "When a lender pushes three-quarters of DIY traffic to bots, it is betting that scripted answers and retrieval models are cheaper and faster than expanding call-centre headcount at the same pace as loan books. Agentic applications go a step further by chaining multiple steps, such as checking eligibility, surfacing documents or routing exceptions. That can shorten turnaround for standard requests but raises the stakes on monitoring errors and compliance language. Rivals in cards, personal loans and consumer durables finance face the same cost curve, so Bajaj Finance's scale targets will be a benchmark for the sector. The company has not said whether higher automation is reducing overall staff numbers, so the 328-person FinAI count measures dedicated capability rather than net job change.",
+      "Why should I care?",
+      "If you borrow from Bajaj Finance or similar lenders, expect more prompts to self-serve before you reach a human agent, and watch whether complex cases still escalate quickly. Investors in consumer NBFCs should compare bot-resolution rates, agent counts and complaint trends each quarter. Fintech vendors selling to banks and NBFCs may see larger enterprise deals if 600-agent roadmaps become common. Track whether management publishes mistake rates or audit findings on AI channels, how FinAI hiring trends versus collections growth, and whether other lenders disclose comparable DIY automation percentages.",
+    ],
+  },
+  {
     slug: "titan-helios-luxury-watch-stores-november-2026",
     title: "Titan wants 500 Helios watch stores as shoppers spend more above ₹25,000",
     summary:
@@ -14256,6 +14304,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "ashok-leyland-ev-cement-trucks-november-2026": "markets",
+  "bajaj-finance-agentic-ai-scale-november-2026": "companies",
   "titan-helios-luxury-watch-stores-november-2026": "markets",
   "premier-explosives-defence-export-november-2026": "companies",
   "india-port-cargo-traffic-october-2026": "markets",
