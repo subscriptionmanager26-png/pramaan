@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "maruti-select-model-price-hike-november-2026",
+    title: "Maruti Suzuki raised prices on select cars again from Sunday",
+    summary:
+      "Maruti Suzuki India Ltd said in a 22 November 2026 exchange filing it will lift prices on select models effective that day, with a volume-weighted average increase of about 0.31%, even after three smaller hikes in the first half of FY27 and strong quarterly wholesales.",
+    category: "industry",
+    companyOrSector: "Passenger vehicles",
+    publishedAt: "2026-11-22T13:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("maruti-select-model-price-hike-november-2026"),
+    keyTakeaways: [
+      "The automaker said in its 22 November 2026 filing that select model prices rise from Sunday amid sustained cost pressure despite internal cost-cut efforts.",
+      "The company estimated a volume-weighted average price increase of about 0.31% on affected variants.",
+      "Maruti had already implemented three rounds of increases in the first half of FY27 totalling a little over 1%, while Q2 profit fell on higher input costs even as vehicle sales hit a record.",
+    ],
+    body: [
+      "What's going on here?",
+      "Carmakers typically pass through metal, freight and currency moves in small steps so buyers absorb the change without a single sharp showroom shock. Maruti Suzuki India Ltd told exchanges on 22 November 2026 that it will increase prices on select models from that day. The company cited sustained cost pressures even after ongoing cost-reduction work. It estimated a volume-weighted average hike of about 0.31% across the affected portfolio. That follows three earlier price increases in the first half of financial year 2027 that together added a little more than 1%. The filing landed after Maruti reported record quarterly vehicle volumes but a steep drop in consolidated net profit for the September quarter as commodity and shipping bills climbed.",
+      "What does this mean?",
+      "A sub-one-percent average increase is a signalling exercise as much as a margin repair. Maruti is telling dealers and finance partners that list prices will drift up through the second half while it still chases double-digit volume growth off a festive backlog. Rivals Hyundai, Tata Motors and Mahindra & Mahindra face the same input curve, so calibrated hikes across the market can stick when loan rates stay stable and buyers upgrade rather than defer. The move also tests whether festive demand can carry modest sticker inflation after months of discounting. If buyers keep booking at higher on-road prices, it reinforces the affordability narrative management voiced on the investor call; if footfall slows, the next hike may wait until metals ease.",
+      "Why should I care?",
+      "If you are closing a car purchase this month, compare on-road quotes against quotes from early November because trims may reset silently. Fleet and ride-hail operators should rework per-kilometre economics on hatchbacks and small sedans first, where list prices move fastest. Investors in auto ancillaries and dealers should watch December retail registration data for volume elasticity after the Sunday change. Track Maruti's next price circulars, peer pricing actions, and whether management repeats calibrated hikes on the Q3 earnings call.",
+    ],
+  },
+  {
+    slug: "railtel-andhra-legal-ai-platform-november-2026",
+    title: "RailTel won a ₹27 crore Andhra Pradesh legal AI platform contract",
+    summary:
+      "RailTel Corporation of India Ltd said on 22 November 2026 it received a ₹27.03 crore letter of acceptance from Andhra Pradesh Technology Services to build and host a statewide legal AI assistant on Google Cloud, with delivery due by 9 May 2029.",
+    category: "industry",
+    companyOrSector: "Government IT / RailTel",
+    publishedAt: "2026-11-22T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("railtel-andhra-legal-ai-platform-november-2026"),
+    keyTakeaways: [
+      "The 22 November 2026 filing valued the domestic order at ₹27,02,56,350 including taxes, awarded by Andhra Pradesh Technology Services.",
+      "RailTel will design, develop, implement, host and manage the legal AI assistant on Google Cloud Platform through 9 May 2029.",
+      "The company said the customer has no promoter-group link and the contract is not a related-party transaction.",
+    ],
+    body: [
+      "What's going on here?",
+      "State governments are starting to buy production-grade AI systems the way they once bought tax portals or land-record digitisation. RailTel Corporation of India Ltd, the railway-linked telecom and IT services company, disclosed on 22 November 2026 that it received a letter of acceptance from Andhra Pradesh Technology Services for a statewide legal AI assistant platform. The estimated order value is ₹27.03 crore including taxes. Scope covers design, development, implementation, hosting and managed services on Google Cloud Platform, with execution scheduled by 9 May 2029. The letter was dated 21 November 2026. RailTel classified the work as a domestic order and said the awarding entity has no interest from its promoters.",
+      "What does this mean?",
+      "A three-year legal AI mandate shifts RailTel's revenue mix further toward state digital projects beyond fibre along rail corridors. Hosting on Google Cloud signals Andhra Pradesh wants elastic compute and managed security rather than an on-premise data centre build. For courts, law officers and land administrators, the platform could standardise research, drafting and case retrieval if adoption sticks, but timelines to 2029 imply phased rollouts and training budgets. Competitors from large IT services firms to niche legal-tech startups will watch whether other states copy the model. The ticket size is modest beside pan-India bandwidth contracts, yet it illustrates how PSU tech vendors pitch turnkey AI stacks to chief secretaries.",
+      "Why should I care?",
+      "If you sell cloud, cybersecurity or enterprise software into government accounts, treat legal departments as a new buyer centre alongside finance and police modernisation. RailTel investors should read upcoming quarterly filings for margin disclosure on project services versus annuity maintenance. Public-sector lawyers and compliance teams in other states should follow Andhra Pradesh's procurement templates when pitching similar pilots. Watch implementation milestones in exchange updates, any subcontractor announcements, and whether other states publish comparable legal AI tenders in the next two budget cycles.",
+    ],
+  },
+  {
+    slug: "welspun-living-towel-capex-november-2026",
+    title: "Welspun Living approved ₹3,200 crore of new towel and yarn capacity",
+    summary:
+      "Welspun Living Ltd said on 21 November 2026 its board approved up to ₹3,200 crore of capital spending through subsidiary Welspun Home Solutions by December 2028, adding roughly 29,000 tonnes a year of terry towel capacity plus spinning and weaving lines while group towel utilisation already runs at 83%.",
+    category: "industry",
+    companyOrSector: "Home textiles",
+    publishedAt: "2026-11-22T12:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("welspun-living-towel-capex-november-2026"),
+    keyTakeaways: [
+      "The board of Welspun Home Solutions approved capex of up to ₹3,200 crore, to be completed by 31 December 2028, per the 21 November 2026 exchange filing.",
+      "The plan adds about 29,000 metric tonnes per year of terry towel capacity on top of group capacity near 96,000 tonnes with 83% utilisation as of 30 September 2026.",
+      "Funding includes up to ₹800 crore from Welspun Living into the subsidiary and up to ₹2,400 crore of term loans, backed by a parent corporate guarantee.",
+    ],
+    body: [
+      "What's going on here?",
+      "Home textile exporters expand when order books stay firm and buyers want shorter lead times near spinning and weaving assets. Welspun Living Ltd said on 21 November 2026 that its wholly owned unit Welspun Home Solutions approved capital expenditure of up to ₹3,200 crore, targeted for completion by 31 December 2028. The plan adds about 29,000 metric tonnes of annual terry towel capacity and lifts weaving and yarn output, including coarse, fine and open-end counts. At the consolidated level Welspun already runs near 96,000 tonnes of towel capacity with utilisation at 83% as of 30 September 2026. The parent may invest up to ₹800 crore through optionally convertible instruments while the subsidiary borrows up to ₹2,400 crore from banks, with Welspun Living providing a corporate guarantee.",
+      "What does this mean?",
+      "High utilisation plus a 30% capacity bump signals management expects sustained bath-linen and hospitality demand from US and European retailers rather than a one-off festive spike. Backward integration into spinning and weaving can protect margins when cotton prices swing. The guarantee structure keeps expansion debt largely inside the subsidiary but leaves contingent liability on the parent balance sheet if repayment slips. Rivals in Tamil Nadu and Gujarat will match capacity announcements if private-label contracts shift. For Indian workers, the project implies multi-year plant jobs, though automation on newer lines may limit headcount growth per tonne.",
+      "Why should I care?",
+      "If you source towels for hotel or retail private labels, lock capacity allocations early because lead times may stretch once new lines ramp. Fixed-income investors should read covenant terms on the subsidiary loans and how the guarantee is disclosed. Equity holders need to weigh higher depreciation against export realisations when the dollar moves. Watch shareholder approval on 27 November for the preference or debenture tranche, construction milestones through 2028, and whether utilisation stays above 80% before the first new tonne ships.",
+    ],
+  },
+  {
+    slug: "chalet-hotels-taj-delhi-capex-november-2026",
+    title: "Chalet Hotels will spend ₹3,500 crore opening more luxury rooms",
+    summary:
+      "Chalet Hotels Ltd told reporters on 21 November 2026 it plans about ₹3,500 crore of capital spending over three years, including a 380-room Taj hotel at Delhi airport where it now expects to open nearly 200 keys in the April-June 2027 quarter instead of 70 this winter.",
+    category: "industry",
+    companyOrSector: "Hotels / Chalet Hotels",
+    publishedAt: "2026-11-22T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("chalet-hotels-taj-delhi-capex-november-2026"),
+    keyTakeaways: [
+      "Managing director and chief executive Shwetank Singh said Chalet Hotels targets roughly ₹3,500 crore of capex across the next three years in a 21 November 2026 interview.",
+      "The Delhi International Airport Taj property may bring nearly 200 rooms online in the first quarter of financial year 2027-28 after GRAP pollution curbs delayed an earlier 70-room winter launch.",
+      "Chalet operates about 3,300 keys today with another 2,036 rooms in the announced pipeline toward a 5,500-room goal by 2030.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian hotel developers are betting that premium rooms near airports and business districts will fill even when corporate travel recovers unevenly. Chalet Hotels Ltd, which develops and asset-manages properties under brands such as Taj and Hyatt, told PTI on 21 November 2026 that it expects to deploy about ₹3,500 crore of capital expenditure over the next three years. A flagship piece is a 380-room Taj hotel at Delhi International Airport Limited. Pollution-linked GRAP construction curbs pushed back an earlier plan to open about 70 rooms in the fourth quarter of the current fiscal year; Singh now expects nearly 200 rooms in the April-June quarter of 2027-28 as the build gets more time. Chalet currently runs about 3,300 rooms and has disclosed another 2,036 keys in the pipeline as it works toward 5,500 rooms by 2030.",
+      "What does this mean?",
+      "Opening two hundred keys at once at India's busiest airport changes competitive dynamics for layover and meeting demand in the capital region. Chalet's strategy stays anchored in luxury and upper-upscale formats rather than budget franchises, so average daily rates matter more than volume chases. Delaying the first tranche but accelerating the second suggests contractors used the slip to finish more floor plate in one go, which can lower per-key handover costs. Affirming ₹3,500 crore of spend while MICE groups were soft earlier in the year signals Singh sees foreign tourist and corporate group travel improving. Listed hotel peers Indian Hotels and Lemon Tree will watch Taj pricing on the airport campus.",
+      "Why should I care?",
+      "If you negotiate corporate hotel rates in Delhi, model new Taj supply at the airport from mid-2027 when benchmarking bids. Real-estate investors should compare Chalet's capex cadence with cash flows from existing Hyderabad, Pune and Udaipur projects scheduled through 2030. Travellers booking long layovers may get more full-service rooms without leaving the airport perimeter. Watch GRAP-related construction updates, Taj pre-opening marketing, and quarterly commentary on revenue per available room at Chalet's operating portfolio.",
+    ],
+  },
+  {
     slug: "ashok-leyland-ev-cement-trucks-november-2026",
     title: "Ashok Leyland will deploy 200 electric trucks on a cement route",
     summary:
@@ -14304,6 +14400,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "maruti-select-model-price-hike-november-2026": "markets",
+  "railtel-andhra-legal-ai-platform-november-2026": "companies",
+  "welspun-living-towel-capex-november-2026": "companies",
+  "chalet-hotels-taj-delhi-capex-november-2026": "markets",
   "ashok-leyland-ev-cement-trucks-november-2026": "markets",
   "bajaj-finance-agentic-ai-scale-november-2026": "companies",
   "titan-helios-luxury-watch-stores-november-2026": "markets",

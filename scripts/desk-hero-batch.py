@@ -2289,6 +2289,51 @@ def ashok_leyland_ev_cement_trucks(d: ImageDraw.ImageDraw) -> None:
     d.ellipse([1000, 360, 1080, 440], fill=GOLD)
 
 
+def maruti_select_model_price_hike(d: ImageDraw.ImageDraw) -> None:
+    # showroom sticker steps on small car silhouette
+    d.rounded_rectangle([120, 320, 460, 420], radius=20, fill=BLUE)
+    d.ellipse([160, 420, 240, 500], fill=INK)
+    d.ellipse([340, 420, 420, 500], fill=INK)
+    for i, h in enumerate([60, 100, 140, 180, 220]):
+        x = 640 + i * 85
+        d.rectangle([x, 560 - h, x + 55, 560], fill=[RED, YELLOW, BLUE, RED, YELLOW][i])
+    d.polygon([(860, 200), (940, 240), (860, 280)], fill=GOLD)
+
+
+def railtel_andhra_legal_ai_platform(d: ImageDraw.ImageDraw) -> None:
+    # law scales merge with cloud server stack
+    d.line([(200, 200), (200, 420)], fill=GOLD, width=6)
+    d.line([(120, 260), (280, 260)], fill=GOLD, width=4)
+    d.ellipse([130, 200, 190, 260], fill=RED)
+    d.ellipse([210, 200, 270, 260], fill=BLUE)
+    d.rectangle([700, 180, 1120, 520], fill=BLUE)
+    for y in range(220, 480, 56):
+        d.rectangle([740, y, 1080, y + 32], fill=CREAM if y % 112 else YELLOW)
+    d.ellipse([980, 140, 1040, 200], fill=GOLD)
+
+
+def welspun_living_towel_capex(d: ImageDraw.ImageDraw) -> None:
+    # rolled textile stacks beside expanding mill blocks
+    for i in range(4):
+        d.ellipse([100 + i * 70, 380, 200 + i * 70, 480], fill=[RED, BLUE, YELLOW, RED][i])
+    d.rectangle([650, 160, 1150, 560], fill=BLUE)
+    d.rectangle([690, 200, 1110, 240], fill=RED)
+    d.rectangle([690, 280, 1050, 320], fill=YELLOW)
+    d.rectangle([690, 360, 980, 400], fill=RED)
+    d.polygon([(1120, 300), (1160, 340), (1120, 380)], fill=GOLD)
+
+
+def chalet_hotels_taj_delhi_capex(d: ImageDraw.ImageDraw) -> None:
+    # hotel tower beside runway light strip
+    d.rectangle([140, 180, 380, 560], fill=BLUE)
+    for y in range(220, 520, 48):
+        d.rectangle([170, y, 350, y + 28], fill=YELLOW if y % 96 else CREAM)
+    d.rectangle([700, 480, 1180, 520], fill=INK)
+    for x in range(720, 1160, 80):
+        d.ellipse([x, 450, x + 24, 474], fill=GOLD)
+    d.polygon([(520, 120), (600, 160), (520, 200)], fill=RED)
+
+
 def bajaj_finance_agentic_ai_scale(d: ImageDraw.ImageDraw) -> None:
     # call-centre arc replaced by bot nodes on a phone stack
     d.rounded_rectangle([100, 200, 420, 560], radius=24, fill=BLUE)
@@ -2592,6 +2637,10 @@ def main() -> None:
     save("premier-explosives-defence-export-november-2026", premier_explosives_defence_export)
     save("india-port-cargo-traffic-october-2026", india_port_cargo_traffic_oct)
     save("ashok-leyland-singur-truck-plant-november-2026", ashok_leyland_singur_plant)
+    save("maruti-select-model-price-hike-november-2026", maruti_select_model_price_hike)
+    save("railtel-andhra-legal-ai-platform-november-2026", railtel_andhra_legal_ai_platform)
+    save("welspun-living-towel-capex-november-2026", welspun_living_towel_capex)
+    save("chalet-hotels-taj-delhi-capex-november-2026", chalet_hotels_taj_delhi_capex)
     save("ashok-leyland-ev-cement-trucks-november-2026", ashok_leyland_ev_cement_trucks)
     save("bajaj-finance-agentic-ai-scale-november-2026", bajaj_finance_agentic_ai_scale)
     save("bwa-crypto-tax-budget-2027-november-2026", bwa_crypto_tax_budget)
