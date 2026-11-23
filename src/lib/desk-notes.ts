@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-airport-holdings-equity-november-2026",
+    title: "Adani Airport Holdings raised $1.35 billion from global investors",
+    summary:
+      "Adani Enterprises said on 23 November 2026 that subsidiary Adani Airport Holdings closed a second primary equity round, with 360 ONE Alternates subscribing to ₹2,790 crore on the same terms as earlier investors, taking total fresh capital in the platform to about $1.35 billion at a roughly $18 billion pre-money valuation.",
+    category: "industry",
+    companyOrSector: "Aviation infrastructure / Adani",
+    publishedAt: "2026-11-23T17:07:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-airport-holdings-equity-november-2026"),
+    keyTakeaways: [
+      "360 ONE Alternates signed a share subscription agreement for up to 1.55% of Adani Airport Holdings for ₹2,790 crore, matching the valuation used when Alpha Wave, Premji Invest, Temasek and BlackRock-managed funds invested earlier.",
+      "After both tranches, outside investors would hold about 7.01% of the airport holding company, with completion subject to customary approvals.",
+      "Management said proceeds will fund network modernisation, non-aeronautical businesses and the shift from transit hubs toward larger airport-city developments targeting 200 million passengers a year.",
+    ],
+    body: [
+      "What's going on here?",
+      "Private airports in India need equity because terminal upgrades, land acquisition and metro links stretch balance sheets long before duty-free and real estate income catches up. On 23 November 2026, Adani Enterprises told the exchanges that Adani Airport Holdings, the group's airport operating company, signed a binding agreement for 360 ONE Alternates Asset Management to invest ₹2,790 crore, about $300 million, through a fresh issue of shares. The price matches an earlier primary round in which AAHL raised ₹9,825 crore from Alpha Wave Global, Premji Invest, Temasek and funds managed by BlackRock. Together the two raises total roughly $1.35 billion. The implied pre-money valuation is about $18 billion. The new investor also joined the shareholders' agreement signed with the first group. Jeet Adani, a non-executive director at AAHL, framed the deal as backing India's aviation growth story and the plan to build commercial districts around runways rather than operate check-in halls alone.",
+      "What does this mean?",
+      "Repeat cheques from large globals signal that institutional capital is willing to fund Indian airport capex even while listed Adani Enterprises shares swing on broader market mood. For airlines and passengers the money matters only if it speeds terminal work, baggage systems and road links at Mumbai, Delhi and other concessions without pushing landing charges up faster than traffic. The holding company has pitched a target of doubling historical passenger throughput toward 200 million a year, which implies years of construction risk. Minority equity also brings disclosure and governance expectations that a wholly owned platform would not face. Competitors such as GMR and the Airports Authority of India's own modernisation queue still depend on a mix of tariffs, city-side rentals and government grants rather than this scale of private equity.",
+      "Why should I care?",
+      "If you lease retail or parking space at a privatised airport, a well-funded landlord can accelerate refurbishment but may also push harder on minimum guarantees once passenger numbers recover. Travellers should watch whether non-aeronautical charges creep up after equity infusion, especially on parking and lounge access. Investors in Adani Enterprises need to separate the holding company's listed equity from AAHL's private cap table; value crystallisation at the airport unit may not map one-for-one to the parent's stock. Track regulatory clearances for the 360 ONE transaction, passenger statistics at Mumbai and Delhi, and any tariff petitions filed with the Airports Economic Regulatory Authority after major capex announcements.",
+    ],
+  },
+  {
+    slug: "ptc-industries-titanium-defence-order-november-2026",
+    title: "PTC Industries won a 400-tonne titanium order for defence use",
+    summary:
+      "Lucknow-based PTC Industries said on 23 November 2026 that it secured a confidential domestic defence contract to supply about 400 tonnes of titanium ingots, bars and rods within twelve months, with production handled through wholly owned subsidiary Aerolloy Technologies.",
+    category: "industry",
+    companyOrSector: "Defence materials / PTC Industries",
+    publishedAt: "2026-11-23T17:03:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("ptc-industries-titanium-defence-order-november-2026"),
+    keyTakeaways: [
+      "The buyer is described as an entity in the Indian defence sector; PTC did not disclose rupee value, citing strategic confidentiality.",
+      "Materials include high-strength titanium suited to corrosion-sensitive systems and are to be delivered over a twelve-month window.",
+      "Chairman Sachin Agarwal said the award tests integrated melting, forging and mill capacity built to reduce import dependence for critical alloys.",
+    ],
+    body: [
+      "What's going on here?",
+      "Fighter jets, missiles and naval systems need titanium alloys that tolerate heat and salt but for decades India imported much of the mill output. PTC Industries, a Lucknow manufacturer, said on 23 November 2026 that it won a contract from a domestic defence customer to supply roughly 400 tonnes of titanium ingots, bars and rods. Delivery is scheduled within twelve months. The company did not publish the contract value, citing confidentiality. Output will flow through Aerolloy Technologies, its wholly owned unit that runs melting, forging and finishing lines. Management said the order is unrelated to promoter entities. The disclosure landed the same day broader market headlines focused on profit-taking in bank stocks, so the strategic materials story sat outside the index narrative.",
+      "What does this mean?",
+      "A multi-hundred-tonne call-off suggests planners are willing to route more billet through private Indian forges instead of waiting on foreign mills and long shipping cycles. That fits the government's push for higher local content in defence platforms, though one order does not by itself close the import gap for aerospace grades. For PTC, the work tests whether recently added capacity can hold aerospace tolerances at scale and on time. Downstream machine shops and assemblers may see steadier input if similar contracts repeat. The absence of a disclosed price leaves investors to judge margin quality from future quarterly commentary rather than the headline alone.",
+      "Why should I care?",
+      "If you are a precision machining supplier to ordnance factories or defence public sector units, domestic titanium bar availability can shorten lead times and simplify audit trails for indigenous content certificates. Procurement officers should confirm grade specifications and inspection protocols match platform needs before assuming interchangeability with imported stock. Equity holders should treat the contract as execution risk until dispatch schedules show up in revenue: twelve months is long enough for feedstock or power shocks to bite. Watch follow-on awards from the same customer, Aerospace Development Agency or navy programmes, and any capacity expansion filings at Aerolloy's Uttar Pradesh sites.",
+    ],
+  },
+  {
+    slug: "physicswallah-digital-university-patiala-november-2026",
+    title: "Punjab notified Physicswallah's digital university in Patiala",
+    summary:
+      "Physicswallah Ltd said on 23 November 2026 that the Punjab government issued a notification establishing Physicswallah Digital University in Patiala, marking the ed-tech group's entry into degree-granting higher education under state rules.",
+    category: "industry",
+    companyOrSector: "Education / Physicswallah",
+    publishedAt: "2026-11-23T16:14:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("physicswallah-digital-university-patiala-november-2026"),
+    keyTakeaways: [
+      "The state notification creates a formal university entity in Patiala under Physicswallah's broader push beyond test-prep videos into credentialed programmes.",
+      "Listed parent Physicswallah had been expanding offline centres and school tie-ups; a digital university adds a regulated channel for online degrees.",
+      "Quality and job-market acceptance will depend on University Grants Commission-aligned frameworks and state higher-education oversight as details emerge.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's coaching giants are chasing recurring revenue that survives one exam cycle. Physicswallah, which went from YouTube explanations to a listed company, said on 23 November 2026 that Punjab's government notified Physicswallah Digital University in Patiala. The filing describes the step as an expansion into formal higher education rather than another coaching batch. States can enable private universities through legislation and notification; students care because a recognised degree opens access to scholarships, public-sector forms and overseas credit transfers in ways a certificate course may not. Physicswallah already runs hybrid classrooms and school partnerships; the Patiala university brand gives it a shell to mount online degree programmes under state supervision.",
+      "What does this mean?",
+      "Regulated higher education imposes capital, faculty and outcomes reporting that pure content businesses avoid. Physicswallah must invest in accreditation workflows, examination security and placement data if it wants employers to treat graduates like any other university stream. Competitors such as Sunstone, upGrad and Manipal's online arms already fight for the same working-professional learner. Punjab's choice of Patiala also signals political willingness to host digital-first institutions outside the NCR coaching belt. For households, more supply can mean cheaper online degrees but also more need to verify whether a new university's approvals cover the exact programme they want.",
+      "Why should I care?",
+      "If you are choosing between a coaching pack and a degree, check the notification's scope, which programmes are approved, and whether national regulators recognise the credits. Teachers and content creators may see hiring for academic rather than marketing roles. Investors in listed ed-tech names should watch how much capex shifts from ad-driven user acquisition to campus systems and compliance. Follow Punjab higher-education department circulars, any collaboration with industry for work-integrated degrees, and student intake numbers once the first admissions window opens.",
+    ],
+  },
+  {
+    slug: "jupiter-woojin-metro-coaches-november-2026",
+    title: "Jupiter Wagons tied up with Korea's Woojin to build metro coaches in India",
+    summary:
+      "Jupiter Wagons said on 23 November 2026 that it signed a framework agreement with South Korea's Woojin Industrial Systems to form an 80:20 joint venture that will bid for Indian metro tenders and manufacture coaches, propulsion kits and train-control gear locally.",
+    category: "industry",
+    companyOrSector: "Rail equipment / Jupiter Wagons",
+    publishedAt: "2026-11-23T15:54:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("jupiter-woojin-metro-coaches-november-2026"),
+    keyTakeaways: [
+      "Jupiter Wagons will fund land, plant and working capital as lead partner; Woojin contributes technology, core components and reference credentials for metro and EMU systems.",
+      "The scope includes propulsion, train control and maintenance know-how aimed at metro, Vande Bharat and other domestic rail projects.",
+      "Woojin is unrelated to Jupiter's promoters; management pitched the deal as completing a rail portfolio from wheels through traction motors.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian cities are still adding metro kilometres faster than local factories can supply stainless coaches and traction packages. Jupiter Wagons, historically known for freight wagons, said on 23 November 2026 it executed a framework agreement with Woojin Industrial Systems of South Korea. The companies plan an India joint venture with Jupiter holding 80% and Woojin 20%. They intend to bid together on metro rail tenders and manufacture coaches domestically, with technology transfer for propulsion systems, electric multiple units, train control and management systems and allied gear. Jupiter will provide land, plant, machinery and working capital and lead consortium bids; Woojin supplies design support and components. The filing stressed Woojin is independent of Jupiter's promoter group.",
+      "What does this mean?",
+      "Railway Board and urban transport authorities increasingly score bids on local value addition. A Korean technology partner helps Jupiter compete with Alstom, Siemens and BEML-led consortia that already localise assembly but still import critical electronics. If orders convert, downstream steel suppliers, wheel shops and cable makers gain a new OEM anchor. The arrangement also positions Jupiter for Vande Bharat and semi-high-speed coach specs that share traction and control stacks with metro trains. Until a tender win lands, the agreement is option value rather than booked revenue.",
+      "Why should I care?",
+      "Municipal commuters may eventually see shorter import-led delivery timelines on new metro lines if coaches are forged and fitted in India, though car quality still depends on inspection regimes. Subcontractors in Jharkhand and Uttar Pradesh, where Jupiter has plants, should monitor JV incorporation filings for supplier registration windows. Investors should pair the headline with Jupiter's historical cyclicality in wagon orders: metro builds are lumpy and front-loaded with capex. Watch the first competitive bid involving the JV, clarity on manufacturing site, and policy tweaks to domestic content thresholds in urban rail tenders.",
+    ],
+  },
+  {
     slug: "fada-festive-retail-record-november-2026",
     title: "India's festive season vehicle sales hit a record 55 lakh units",
     summary:
@@ -14592,6 +14688,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-airport-holdings-equity-november-2026": "companies",
+  "ptc-industries-titanium-defence-order-november-2026": "companies",
+  "physicswallah-digital-university-patiala-november-2026": "policy",
+  "jupiter-woojin-metro-coaches-november-2026": "companies",
   "fada-festive-retail-record-november-2026": "markets",
   "brookfield-pgp-glass-buy-november-2026": "companies",
   "lt-vyomai-nvidia-chennai-cluster-november-2026": "policy",

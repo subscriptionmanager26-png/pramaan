@@ -2702,6 +2702,56 @@ def main() -> None:
     save("indusind-kathpalia-clawback-november-2026", indusind_kathpalia_clawback)
     save("shriram-finance-sensex-replaces-trent-november-2026", shriram_sensex_rebalance)
     save("noel-tata-board-recording-letter-november-2026", noel_tata_board_recording)
+    save("adani-airport-holdings-equity-november-2026", adani_airport_holdings_equity)
+    save("ptc-industries-titanium-defence-order-november-2026", ptc_titanium_defence)
+    save("physicswallah-digital-university-patiala-november-2026", physicswallah_digital_univ)
+    save("jupiter-woojin-metro-coaches-november-2026", jupiter_woojin_metro)
+
+
+def adani_airport_holdings_equity(d: ImageDraw.ImageDraw) -> None:
+    # terminal silhouette + equity stack blocks
+    d.polygon([(160, 560), (160, 280), (280, 200), (400, 280), (400, 560)], fill=BLUE)
+    d.rectangle([220, 320, 340, 380], fill=YELLOW)
+    for i, h in enumerate([100, 160, 220, 280]):
+        x = 720 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, GOLD, BLUE, YELLOW][i])
+    d.line([(700, 560), (1150, 560)], fill=INK, width=2)
+    d.polygon([(320, 220), (280, 180), (360, 180)], fill=GOLD)
+
+
+def ptc_titanium_defence(d: ImageDraw.ImageDraw) -> None:
+    # ingot stack + shield outline
+    for i in range(3):
+        d.rounded_rectangle(
+            [140 + i * 50, 360 - i * 40, 320 + i * 50, 560],
+            radius=16,
+            fill=[(180, 185, 192), BLUE, RED][i],
+        )
+    d.polygon([(880, 220), (980, 280), (980, 480), (880, 540), (780, 480), (780, 280)], fill=YELLOW)
+    d.rectangle([820, 320, 940, 400], fill=BLUE)
+    d.line([(700, 560), (1100, 560)], fill=GOLD, width=3)
+
+
+def physicswallah_digital_univ(d: ImageDraw.ImageDraw) -> None:
+    # open book + connected nodes
+    d.polygon([(120, 320), (260, 240), (400, 320), (400, 520), (120, 520)], fill=RED)
+    d.polygon([(260, 240), (400, 320), (260, 400)], fill=BLUE)
+    d.line([(260, 400), (260, 520)], fill=GOLD, width=4)
+    for i, (x, y) in enumerate([(720, 300), (900, 220), (1080, 300), (900, 420)]):
+        d.ellipse([x - 40, y - 40, x + 40, y + 40], fill=[YELLOW, BLUE, RED, GOLD][i])
+        if i < 3:
+            d.line([(x + 40, y), (720 + (i + 1) * 180 - 40, [300, 220, 300][i])], fill=GOLD, width=2)
+
+
+def jupiter_woojin_metro(d: ImageDraw.ImageDraw) -> None:
+    # metro coach + rail chevrons
+    d.rounded_rectangle([100, 360, 500, 520], radius=24, fill=RED)
+    d.rectangle([140, 400, 220, 480], fill=YELLOW)
+    d.rectangle([300, 400, 380, 480], fill=BLUE)
+    d.ellipse([140, 500, 200, 560], fill=INK)
+    d.ellipse([400, 500, 460, 560], fill=INK)
+    for i in range(5):
+        d.polygon([(640 + i * 90, 520), (680 + i * 90, 440), (720 + i * 90, 520)], fill=[GOLD, RED, BLUE, YELLOW, GOLD][i])
 
 
 if __name__ == "__main__":
