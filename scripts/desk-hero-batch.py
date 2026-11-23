@@ -2706,6 +2706,63 @@ def main() -> None:
     save("ptc-industries-titanium-defence-order-november-2026", ptc_titanium_defence)
     save("physicswallah-digital-university-patiala-november-2026", physicswallah_digital_univ)
     save("jupiter-woojin-metro-coaches-november-2026", jupiter_woojin_metro)
+    save("sebi-ipo-grey-market-premium-november-2026", sebi_ipo_gmp)
+    save("rbi-micro-enterprise-credit-november-2026", rbi_micro_enterprise)
+    save("lupin-usfda-ferric-citrate-november-2026", lupin_ferric_citrate)
+    save("spicejet-alpa-dgca-oversight-november-2026", spicejet_alpa_dgca)
+    save("foodlink-fnb-ipo-band-november-2026", foodlink_ipo_band)
+
+
+def sebi_ipo_gmp(d: ImageDraw.ImageDraw) -> None:
+    # opaque market whisper vs lit exchange book
+    d.rectangle([100, 200, 480, 520], fill=BLUE)
+    for i in range(4):
+        d.rectangle([140 + i * 80, 260, 200 + i * 80, 460], fill=[YELLOW, RED, GOLD, YELLOW][i])
+    d.ellipse([820, 280, 1100, 560], fill=CREAM, outline=GOLD, width=4)
+    d.line([(900, 400), (1020, 400)], fill=RED, width=6)
+    d.line([(820, 420), (1100, 420)], fill=BLUE, width=3)
+    d.polygon([(720, 200), (760, 260), (720, 320)], fill=GOLD)
+
+
+def rbi_micro_enterprise(d: ImageDraw.ImageDraw) -> None:
+    # many small tiles vs one large block
+    for row in range(4):
+        for col in range(5):
+            x = 80 + col * 72
+            y = 200 + row * 72
+            d.rectangle([x, y, x + 56, y + 56], fill=[RED, BLUE, YELLOW, GOLD][(row + col) % 4])
+    d.rectangle([700, 240, 1120, 520], fill=BLUE)
+    d.rectangle([760, 300, 1060, 460], fill=RED)
+    d.line([(700, 520), (1120, 520)], fill=GOLD, width=3)
+
+
+def lupin_ferric_citrate(d: ImageDraw.ImageDraw) -> None:
+    # tablet stack + kidney curve motif
+    for i in range(5):
+        d.rounded_rectangle([120, 400 - i * 30, 280, 480 - i * 30], radius=12, fill=[RED, BLUE, YELLOW, GOLD, RED][i])
+    d.arc([760, 220, 1080, 540], 200, 340, fill=BLUE, width=16)
+    d.ellipse([880, 320, 960, 400], fill=YELLOW)
+
+
+def spicejet_alpa_dgca(d: ImageDraw.ImageDraw) -> None:
+    # runway + scale imbalance
+    d.rectangle([100, 420, 600, 480], fill=INK)
+    d.polygon([(100, 420), (600, 420), (560, 380)], fill=GOLD)
+    d.rectangle([720, 200, 780, 520], fill=BLUE)
+    d.rectangle([1020, 280, 1080, 520], fill=RED)
+    d.line([(780, 360), (1020, 360)], fill=GOLD, width=4)
+    d.ellipse([730, 180, 770, 220], fill=YELLOW)
+    d.ellipse([1030, 240, 1070, 280], fill=YELLOW)
+
+
+def foodlink_ipo_band(d: ImageDraw.ImageDraw) -> None:
+    # banquet hall + stepped price band
+    d.polygon([(120, 520), (120, 300), (320, 220), (520, 300), (520, 520)], fill=RED)
+    d.rectangle([200, 360, 440, 400], fill=GOLD)
+    for i, h in enumerate([80, 120, 160, 200, 240]):
+        x = 680 + i * 70
+        d.rectangle([x, 520 - h, x + 50, 520], fill=[BLUE, YELLOW, RED, GOLD, BLUE][i])
+    d.line([(660, 520), (1120, 520)], fill=INK, width=2)
 
 
 def adani_airport_holdings_equity(d: ImageDraw.ImageDraw) -> None:

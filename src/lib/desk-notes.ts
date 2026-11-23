@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sebi-ipo-grey-market-premium-november-2026",
+    title: "SEBI told brokers to stop publishing IPO grey market premiums",
+    summary:
+      "On 23 November 2026, the Securities and Exchange Board of India advised registered intermediaries and market participants to stop publishing grey market premium figures for upcoming IPOs, saying the unregulated quotes are not reliable signals of listing prices and leave investors without dispute redress.",
+    category: "industry",
+    companyOrSector: "Capital markets / SEBI",
+    publishedAt: "2026-11-23T21:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-ipo-grey-market-premium-november-2026"),
+    keyTakeaways: [
+      "SEBI said grey market premium trades happen outside the exchange framework, carry no settlement guarantee, and are portrayed as if they predict listing gains.",
+      "The advisory asks registered intermediaries not to broadcast GMP on websites, email, SMS, or social media, and tells investors to use only SEBI-registered channels for IPO bids.",
+      "Disputes tied to GMP transactions cannot be taken to exchange grievance cells or the smart ODR portal, the regulator said.",
+    ],
+    body: [
+      "What's going on here?",
+      "Retail investors often check grey market premium quotes before applying for a new share sale, treating informal numbers as a cheat sheet for listing day pops. On 23 November 2026, SEBI issued an advisory telling SEBI-registered intermediaries and other market participants to stop publishing, displaying, or broadcasting grey market premium figures for upcoming initial public offerings. The regulator said these pre-listing premiums are unofficial, unverified, and executed outside recognised exchanges. They therefore lack regulatory oversight, investor protection, and a formal price-discovery process. SEBI warned that circulating the figures may harm investors and cut against transparency in the securities market. It also asked the public not to treat GMP as a forecast of listing prices or assured returns and to avoid GMP-linked deals that sit entirely outside the regulatory perimeter.",
+      "What does this mean?",
+      "The notice is an advisory rather than a new penal rule, but it puts compliance teams at brokers and research shops on notice to scrub GMP widgets from client-facing pages. That may shrink the loudest signal many first-time subscribers use when sizing bids, even though informal WhatsApp markets could persist. SEBI's emphasis on no dispute redress for GMP trades reinforces that only applications through authorised ASBA routes carry exchange and ODR protections. The timing lands amid a busy IPO calendar, with issues such as Mahanadi Coalfields and Foodlink F&B in progress, so distribution platforms may need to rewrite education copy that once cited premium chatter.",
+      "Why should I care?",
+      "If you plan to bid for a new listing, base decisions on the red herring prospectus, financials, and price band, not on forwarded premium screenshots. Ask your broker whether its IPO page still shows GMP and what replaces it. Compliance officers at wealth platforms should archive the advisory and review social posts for banned displays. Watch whether SEBI follows with formal circulars or enforcement against repeat offenders, and whether subscription data for recent issues shifts after GMP publicity fades.",
+    ],
+  },
+  {
+    slug: "rbi-micro-enterprise-credit-november-2026",
+    title: "The RBI governor urged banks to spread credit across more micro businesses",
+    summary:
+      "Reserve Bank of India Governor Sanjay Malhotra said on 23 November 2026 that lending the same ₹1,000 crore to thousands of micro enterprises can support more households than concentrating it in a single large corporate loan, speaking at a financial inclusion camp in Maharashtra's Mawal taluka.",
+    category: "industry",
+    companyOrSector: "Banking / RBI",
+    publishedAt: "2026-11-23T21:08:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-micro-enterprise-credit-november-2026"),
+    keyTakeaways: [
+      "Malhotra contrasted one large corporate borrower with more than 10,000 families that could benefit if the same rupee pool were split into micro loans.",
+      "He asked banks to deepen rural reach and provide banking, credit, insurance, and pension access, not only account opening.",
+      "The governor also warned against digital fraud, high-return scams, and sharing one-time passwords while pushing wider participation of women in formal finance.",
+    ],
+    body: [
+      "What's going on here?",
+      "Public sector banks face pressure to grow books without letting a handful of conglomerate names swallow most new lending. On 23 November 2026, RBI Governor Sanjay Malhotra spoke at a financial inclusion camp in Mawal taluka and urged banks to increase credit to micro enterprises and smaller economic segments. He said ₹1,000 crore lent to one large corporate helps a single business, while the same amount spread among micro borrowers could reach more than 10,000 families. Malhotra asked lenders to strengthen rural access and extend banking, credit, insurance, and pension services beyond account openings. He highlighted women's participation in the formal system and repeated warnings on digital fraud, suspicious investment schemes, and sharing one-time passwords. Senior officials from Bank of Maharashtra, Bank of India, and State Bank of India attended the camp.",
+      "What does this mean?",
+      "The speech aligns with long-running priority-sector and micro, small, and medium enterprise norms but puts moral weight behind granular underwriting at a time when analysts track whether banks are chasing only top-rated corporates. Micro loans are costlier to originate and monitor; branches in talukas need staff that can assess cash-flow businesses without collateral stacks. If banks respond, village enterprises, street vendors, and small workshops may see more working-capital lines, though pricing and collateral rules still flow from board credit policies. The fraud warnings sit beside inclusion pushes because digitised accounts increase scam surfaces.",
+      "Why should I care?",
+      "If you run a small shop or contract business in a tier-three town, ask your branch whether new micro schemes carry lower documentation after the governor's push, and compare rates across two lenders. Bank investors should listen for quarterly commentary on micro book growth and slippage, not only corporate pipelines. Policy readers should watch RBI's next financial stability report for MSME stress and whether lead banks in districts report higher small-ticket sanctions after inclusion camps. Track SBI and Bank of Maharashtra rural credit data and any circulars tying priority-sector shortfalls to penalties.",
+    ],
+  },
+  {
+    slug: "lupin-usfda-ferric-citrate-november-2026",
+    title: "Lupin won US approval for a generic kidney-disease drug",
+    summary:
+      "Lupin Ltd said on 23 November 2026 that US regulators approved its abbreviated new drug application for Ferric Citrate Tablets, 210 mg, a generic version of Keryx Biopharmaceuticals' Auryxia used to manage phosphorus and iron deficiency in adults with chronic kidney disease.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / Lupin",
+    publishedAt: "2026-11-23T22:52:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lupin-usfda-ferric-citrate-november-2026"),
+    keyTakeaways: [
+      "The US Food and Drug Administration cleared Lupin's generic for dialysis patients who need serum phosphorus control and for non-dialysis adults with iron deficiency anaemia linked to chronic kidney disease.",
+      "IQVIA data cited in the filing put annual US sales for the reference product at about $58.1 million as of September 2026.",
+      "The approval lands the same day Lupin reported September-quarter revenue of ₹7,827 crore, with the United States still the largest geography at roughly 39% of sales.",
+    ],
+    body: [
+      "What's going on here?",
+      "US generic drugmakers earn margins by entering niches where reference brands still carry meaningful prescription revenue. On 23 November 2026, Lupin told Indian exchanges that the US Food and Drug Administration approved its abbreviated new drug application for Ferric Citrate Tablets, 210 mg, described as bioequivalent to Keryx Biopharmaceuticals' Auryxia. The label covers controlling serum phosphorus in adults with chronic kidney disease on dialysis and treating iron deficiency anaemia in adults with chronic kidney disease not on dialysis. Lupin cited IQVIA moving annual total data showing roughly $58.1 million in US sales for the category through September 2026. The news arrived alongside September-quarter results that showed revenue growth year on year but softer sequential profit, with the US contributing about 39% of group sales.",
+      "What does this mean?",
+      "Kidney-care generics require stable manufacturing and filing discipline; each FDA approval adds a product that hospital formularies and dialysis chains can switch to when patents allow. The addressable US revenue pool is modest in billionaire terms but fits Lupin's strategy of layering spec pharma and complex oral solids onto its core portfolio. Competition from other ANDA filers could erode price quickly, so launch execution and customer service matter as much as the approval letter. For patients, more approved generics can ease out-of-pocket costs if payers add them to preferred lists.",
+      "Why should I care?",
+      "Healthcare investors should track when Lupin books first US shipments and whether management mentions additional renal filings on the earnings call. Hospital procurement teams comparing phosphorus binders should verify therapeutic interchange policies. If you hold Indian pharma names, watch whether US revenue per filing rises in the December quarter and whether FDA inspection status at Lupin plants stays clear. Follow competitor launches, Medicare reimbursement updates for oral iron agents, and any price erosion signals in IQVIA data.",
+    ],
+  },
+  {
+    slug: "spicejet-alpa-dgca-oversight-november-2026",
+    title: "India's pilots union asked regulators to tighten oversight of SpiceJet",
+    summary:
+      "The Airline Pilots Association of India wrote to the civil aviation ministry on 23 November 2026 questioning why the Directorate General of Civil Aviation enforces pilot notice-period rules strictly while treating unpaid salaries as a contractual matter the regulator cannot touch, and sought stronger monitoring of SpiceJet operations.",
+    category: "industry",
+    companyOrSector: "Aviation / SpiceJet",
+    publishedAt: "2026-11-23T21:12:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("spicejet-alpa-dgca-oversight-november-2026"),
+    keyTakeaways: [
+      "ALPA said DGCA applies notice-period and no-objection rules when pilots resign but cites contractual limits when employees raise delayed wages.",
+      "The union tied financial distress at SpiceJet to safety risks and asked for enhanced oversight of the airline's operations.",
+      "The letter lands days after SpiceJet's board approved a plan to raise up to ₹5,500 crore, while travellers still faced cancellation clusters on key routes.",
+    ],
+    body: [
+      "What's going on here?",
+      "Cash-strapped airlines can keep aircraft in the sky only if crews, engineers, and vendors trust they will be paid. On 23 November 2026, the Airline Pilots Association of India said it wrote to the civil aviation ministry accusing the Directorate General of Civil Aviation of selective enforcement. The union noted that regulators strictly apply notice-period and no-objection certificate rules when pilots try to leave an airline, yet reportedly tell employees that unpaid salary disputes are contractual matters outside DGCA scope. ALPA linked SpiceJet's financial distress to operational safety concerns and called for heightened oversight of the carrier. The intervention follows a board approval earlier in the week for a potential ₹5,500 crore capital raise and continuing reports of schedule gaps at busy airports.",
+      "What does this mean?",
+      "Regulators balance commercial contract law with aviation safety duties; unions argue that unpaid wages affect fatigue, morale, and maintenance culture even before a formal incident. Enhanced oversight could mean more schedule audits, spare aircraft checks, or management meetings, none of which inject cash by themselves. Investors weighing the fundraising plan should treat labour relations and regulatory attention as parallel risks to dilution. Rivals may pick up traffic on routes where SpiceJet trims frequencies while DGCA reviews compliance.",
+      "Why should I care?",
+      "If you hold SpiceJet tickets through December, keep backup options until cancellations stay low for several weeks and crewing stabilises. Pilots weighing offers from the airline should read both employment contracts and DGCA circulars on notice periods. Aviation policy watchers should track ministry responses, any DGCA inspection findings, and whether capital raised is conditioned on salary backlogs clearing. Follow ALPA's correspondence, winter schedule adherence data, and exchange disclosures on the fundraising timeline.",
+    ],
+  },
+  {
+    slug: "foodlink-fnb-ipo-band-november-2026",
+    title: "Foodlink set a price band for its luxury catering IPO",
+    summary:
+      "Foodlink F&B Holdings, a Mumbai luxury catering and restaurant operator, fixed a price band of ₹181 to ₹191 per share for its initial public offering opening on 26 November 2026, aiming to raise about ₹361 crore at the upper end including a promoter offer for sale.",
+    category: "industry",
+    companyOrSector: "Consumer services / Foodlink",
+    publishedAt: "2026-11-23T21:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("foodlink-fnb-ipo-band-november-2026"),
+    keyTakeaways: [
+      "The issue combines a ₹192 crore fresh issue with an offer for sale of 88.35 lakh shares from the promoter and investors including Plutus Wealth's Arpit Khandelwal and Welspun Group Master Trust.",
+      "At the top of the band the company would be valued near ₹1,191 crore post listing, with proceeds earmarked for central kitchens, new banquets, casual dining, and debt repayment.",
+      "Events catering supplied 44% of revenue in the six months to September 2026, with casual dining at 30% and banquets at 25%.",
+    ],
+    body: [
+      "What's going on here?",
+      "High-end weddings and corporate events came back strongly after the pandemic, and specialised caterers are testing whether public markets will fund kitchen capacity. Foodlink F&B Holdings, which runs brands such as JADE Luxury Banquets and China Bistro, said on 23 November 2026 that its IPO price band is ₹181 to ₹191 per share. The offer opens on 26 November and closes on 30 November, with anchor bidding a day earlier. The deal includes a ₹192 crore fresh issue and an 88.35 lakh share offer for sale by the promoter Sanjay Manohar Vazirani and existing investors. At the upper band the company targets roughly ₹361 crore in total proceeds and a post-issue valuation near ₹1,191 crore. Foodlink plans to spend fresh money on a centralised kitchen, two new banquets, casual dining outlets through a subsidiary, and debt repayment.",
+      "What does this mean?",
+      "Luxury catering is capex heavy and working-capital hungry because events revenue spikes around festivals while fixed kitchen costs run year round. Foodlink reported a loss in the six months to September 2026 but higher full-year profit in fiscal 2026, so investors must decide whether the growth story is seasonal or structural. The offer for sale signals early backers taking partial liquidity while the company expands banquets and Dubai operations. Competing hotel chains and standalone restaurateurs may price listings against Foodlink's reception.",
+      "Why should I care?",
+      "If you subscribe to consumer IPOs, read how much revenue comes from events versus restaurants and whether debt repayment frees cash for expansion or simply refinances stress. Wedding planners and corporate event buyers may care if new banquet capacity in Mumbai changes pricing power. Investors should compare valuation with profitable peers in hospitality services and watch anchor investor participation. Track subscription data after the issue opens, listing performance on 3 December 2026, and utilisation updates on the new kitchens and banquets.",
+    ],
+  },
+  {
     slug: "adani-airport-holdings-equity-november-2026",
     title: "Adani Airport Holdings raised $1.35 billion from global investors",
     summary:
@@ -14688,6 +14808,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sebi-ipo-grey-market-premium-november-2026": "policy",
+  "rbi-micro-enterprise-credit-november-2026": "policy",
+  "lupin-usfda-ferric-citrate-november-2026": "companies",
+  "spicejet-alpa-dgca-oversight-november-2026": "policy",
+  "foodlink-fnb-ipo-band-november-2026": "markets",
   "adani-airport-holdings-equity-november-2026": "companies",
   "ptc-industries-titanium-defence-order-november-2026": "companies",
   "physicswallah-digital-university-patiala-november-2026": "policy",
