@@ -3,7 +3,7 @@ import { Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppShell } from "@/components/shell/AppShell";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { organizationJsonLd, websiteJsonLd } from "@/lib/seo/json-ld";
+import { organizationJsonLd, webApplicationJsonLd, websiteJsonLd } from "@/lib/seo/json-ld";
 import { siteUrl } from "@/lib/site-url";
 
 export const viewport: Viewport = {
@@ -61,7 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${outfit.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full bg-paper text-ink">
-        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd(), webApplicationJsonLd()]} />
         <AppShell>{children}</AppShell>
       </body>
     </html>

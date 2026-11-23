@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { pocketedgeTrustFooterLine } from "@/lib/seo/user-survey-rating";
 
 const links = [
   { href: "/news", label: "News" },
@@ -18,6 +19,12 @@ export function SiteFooter() {
           <p className="mt-4 max-w-sm text-[14px] leading-6 text-ink-2">
             Markets, research, advisors, and resources. Understand what is happening, and what to do
             next.
+          </p>
+          <p
+            className="mt-3 text-[13px] text-ink-3"
+            title="User survey average; core product is free, priced in Indian rupees"
+          >
+            {pocketedgeTrustFooterLine()}
           </p>
         </div>
         <div>

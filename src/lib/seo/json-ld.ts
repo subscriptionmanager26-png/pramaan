@@ -1,3 +1,4 @@
+import { POCKETEDGE_USER_SURVEY_RATING, POCKETEDGE_WEB_OFFER } from "@/lib/seo/user-survey-rating";
 import { siteUrl } from "@/lib/site-url";
 
 export function organizationJsonLd() {
@@ -20,6 +21,38 @@ export function websiteJsonLd() {
     name: "PocketEdge",
     url: siteUrl(),
     inLanguage: "en-IN",
+  };
+}
+
+/** Web product (pocketedge.in) — not a Play Store-only app card. */
+export function webApplicationJsonLd() {
+  const url = siteUrl();
+  const { ratingValue, ratingCount, bestRating, worstRating } = POCKETEDGE_USER_SURVEY_RATING;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "PocketEdge",
+    url,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    browserRequirements: "Requires JavaScript",
+    description:
+      "Free AI-powered finance tools for India (INR). PocketEdge gives you smart AI agents for mutual funds, markets, and research.",
+    isAccessibleForFree: true,
+    offers: {
+      "@type": "Offer",
+      price: String(POCKETEDGE_WEB_OFFER.price),
+      priceCurrency: POCKETEDGE_WEB_OFFER.priceCurrency,
+      description: "Free to use",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(ratingValue),
+      ratingCount,
+      bestRating: String(bestRating),
+      worstRating: String(worstRating),
+    },
   };
 }
 
