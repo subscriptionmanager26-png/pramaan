@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "fada-festive-retail-record-november-2026",
+    title: "India's festive season vehicle sales hit a record 55 lakh units",
+    summary:
+      "The Federation of Automobile Dealers Associations said on 23 November 2026 that retail sales across all vehicle types reached 55.25 lakh units during the 42-day festive window, up 2.2% on a tough year-earlier base, with electric vehicle retails crossing five lakh units for the first time in a single festive season.",
+    category: "industry",
+    companyOrSector: "Automobile retail / FADA",
+    publishedAt: "2026-11-23T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fada-festive-retail-record-november-2026"),
+    keyTakeaways: [
+      "FADA counted 55,25,490 vehicles retailed during the 42-day 2026 festive season, the highest ever for that window and 2.21% above the GST 2.0-boosted base of 2025.",
+      "Electric vehicle retails jumped 52.6% to more than five lakh units, with EVs making up close to one in ten vehicles sold in the period; two-wheeler EVs rose 61.1% and electric passenger vehicles 72.9%.",
+      "Passenger vehicle retails fell 7.2% to 7.49 lakh units while two-wheelers grew 3.7% to 43.1 lakh; commercial vehicles, tractors and construction equipment also posted gains.",
+    ],
+    body: [
+      "What's going on here?",
+      "Showroom footfall during Navratri through Diwali sets the tone for auto financiers, component makers and urban spending for months ahead. The Federation of Automobile Dealers Associations, the national dealer lobby, publishes retail tallies that count vehicles leaving franchised outlets rather than factory despatches. On 23 November 2026 it said total vehicle retail sales during the 42-day festive season of 2026 reached 55,25,490 units, a record for that calendar window. Volume still rose 2.21% year on year even though last year's period enjoyed an extraordinary GST 2.0 demand bump, a harder comparison than most categories face. Two-wheeler retails grew 3.67% to 43,13,276 units, commercial vehicles rose 7.13% to 1,55,761, tractors 2.24% to 1,03,809 and construction equipment surged 26.06% to 10,452. Passenger vehicle retails slipped 7.16% to 7,48,616 units versus 8,06,322 a year earlier. The standout line was electric adoption: EV retails jumped 52.62% to cross five lakh units for the first time in one festive stretch, with electric two-wheelers up 61.10%, electric cars 72.91% and electric commercial vehicles more than doubling. FADA said close to one in ten festive vehicles sold was electric.",
+      "What does this mean?",
+      "A record retail print on top of a strong base tells you middle India kept buying mobility even after tax-led pull-forward in 2025. The mix shift matters more than the headline. Two-wheelers and utility vehicles still carry volume, but faster EV growth shows buyers accepting higher upfront prices where running costs and subsidies help. The passenger car dip fits reports of memory-cost pressure on electronics and selective postponement among upgrade buyers, yet the overall tally did not crack. Dealer president Sai Giridhar said the season positions India to cross three crore vehicle retails in a calendar year for the first time. OEMs will read the data for inventory and discount plans into the wedding quarter, while banks watch approval rates on EV loans that are rising as a share of disbursals.",
+      "Why should I care?",
+      "If you planned to buy a scooter or car after Diwali, compare on-road quotes across brands because dealers may hold prices firmer after a record season. Fleet and logistics operators should note commercial vehicle and construction equipment strength as a sign of project and freight demand. Investors should pair FADA retails with SIAM wholesale numbers to avoid confusing shipment with showroom sell-through. Watch December retail updates, finance company delinquency trends on two-wheeler pools, and whether passenger vehicle discounts widen after the soft 7% festive dip.",
+    ],
+  },
+  {
+    slug: "brookfield-pgp-glass-buy-november-2026",
+    title: "Brookfield will pay $1.7 billion for Mumbai glass packager PGP Glass",
+    summary:
+      "Brookfield Asset Management agreed on 23 November 2026 to acquire PGP Glass, a Mumbai-based specialty glass packaging maker, from Blackstone private equity funds for $1.7 billion, with closure targeted in the first quarter of 2027.",
+    category: "industry",
+    companyOrSector: "Private equity / packaging",
+    publishedAt: "2026-11-23T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("brookfield-pgp-glass-buy-november-2026"),
+    keyTakeaways: [
+      "Brookfield will buy PGP Glass from Blackstone-managed funds for $1.7 billion, funding the deal through Brookfield Capital Partners and Brookfield Business Corporation.",
+      "PGP supplies glass packaging for cosmetics, food, beverage and pharma clients from three plants in India and Sri Lanka; customers include global names such as Bacardi and Nestle.",
+      "Both buyers cited cost pressures and capacity rationalisation in Europe and North America as opening share for Asian specialty glass producers.",
+    ],
+    body: [
+      "What's going on here?",
+      "Global private equity keeps rotating capital into Indian manufacturing niches that export into regulated consumer supply chains. Brookfield Asset Management, which oversees more than $1 trillion, said on 23 November 2026 it agreed to buy PGP Glass from funds managed by Blackstone Private Equity for $1.7 billion. PGP Glass is headquartered in Mumbai and moulds specialty glass packaging for cosmetics, food, beverages and pharmaceuticals. It operates three manufacturing facilities in India and Sri Lanka and counts brands such as Chloe, Bacardi and Nestle among customers listed on its website. Brookfield plans to fund the purchase through its flagship Brookfield Capital Partners strategy and affiliate Brookfield Business Corporation. The companies expect the transaction to close in the first quarter of 2027.",
+      "What does this mean?",
+      "The price tag signals confidence that Indian glassmakers can take share as European and North American plants curb capacity under energy and labour costs. For Brookfield, the deal adds a physical consumer-supply-chain asset in Asia to complement infrastructure and business services bets. Blackstone crystallises a multi-year build-out and frees capital for redeployment. PGP's buyer said it intends to use artificial intelligence in operations, a talking point that matters less than secured long-term contracts with global fast-moving consumer goods labels. Competition authorities in India and export markets will review any concentration in cosmetic and pharma vials, but the strategic logic is export-led growth rather than domestic volume alone.",
+      "Why should I care?",
+      "If you supply coatings, moulds or logistics to glass plants, a Brookfield balance sheet can mean steadier capex and longer vendor contracts after close. Fast-moving consumer goods procurement teams should watch whether service levels or specifications change under new ownership. Investors tracking listed packaging names such as Piramal Glass or HNG India can benchmark valuation against the $1.7 billion headline. Follow competition filings, employee transfer terms at the three plants, and Brookfield's disclosure on leverage at Brookfield Business Corporation when the deal nears closing.",
+    ],
+  },
+  {
+    slug: "lt-vyomai-nvidia-chennai-cluster-november-2026",
+    title: "L&T's Vyomai unit won a large order for more NVIDIA chips in Chennai",
+    summary:
+      "Larsen and Toubro said on 23 November 2026 that Vyomai.AI subsidiary LTN Compute secured a multi-year order classified as large, in the ₹2,500 crore to ₹5,000 crore band, to deploy additional NVIDIA B300 graphics processors at its Chennai data centre for an unnamed inference infrastructure provider.",
+    category: "industry",
+    companyOrSector: "AI infrastructure / Larsen & Toubro",
+    publishedAt: "2026-11-23T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lt-vyomai-nvidia-chennai-cluster-november-2026"),
+    keyTakeaways: [
+      "Vyomai.AI, through LTN Compute, won a multi-year engagement to add NVIDIA B300 GPU capacity at the Chennai campus for a client that builds AI-native inference platforms.",
+      "L&T classifies the contract as a large order, meaning between ₹2,500 crore and ₹5,000 crore by its internal disclosure bands.",
+      "Phase one of the Chennai AI factory targets 250 megawatts on a gigawatt-scale site with 150 megavolt-ampere power infrastructure already in preparation.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian conglomerates are pitching integrated data centre campuses as global AI workloads hunt for power, cooling and fibre beyond a handful of US sites. Larsen and Toubro told exchanges on 23 November 2026 that Vyomai.AI, through infrastructure arm LTN Compute, secured what it termed a large order. In L&T's disclosure taxonomy, large means between ₹2,500 crore and ₹5,000 crore. The client is an inference infrastructure provider that was not named. LTN Compute will deploy additional NVIDIA B300 graphics processors at the Chennai data centre so the customer can train, fine-tune and deploy specialised models for high-performance inference at commercial scale. The integrated facility combines hyperscale shells, accelerated computing, networking, storage and operations under one contract.",
+      "What does this mean?",
+      "Landing a B300 tranche ties L&T's Vyomai venture to the current generation of AI accelerators that global clouds are still rationing. Chennai becomes a credible node for export-oriented inference if power and connectivity keep pace with the 250 megawatt phase-one design on a gigawatt-scale master plan. For Indian policy watchers, the order supports the argument that compute demand can be met domestically rather than only through offshore capacity. Competitors such as Yotta, CtrlS and Adani-linked data centre projects face the same constraint: firm power purchase and import timelines for GPUs. Customers benefit from a single EPC plus operator handoff, but concentration risk rises if one campus hosts too many uncorrelated tenants.",
+      "Why should I care?",
+      "If you buy colocation or GPU-hours for a startup, compare Chennai quotes against Mumbai and Hyderabad once the cluster goes live, including latency to your user base. Investors in L&T should treat Vyomai as a long-cycle bet: revenue recognition may trail heavy upfront capex. Policymakers tracking semiconductor and AI missions should watch whether export controls on advanced chips affect fulfilment schedules. Follow exchange updates on customer identity, energisation milestones at the 150 MVA yard, and any parallel orders from cloud majors already named in earlier Vyomai announcements.",
+    ],
+  },
+  {
+    slug: "india-flash-pmi-november-2026",
+    title: "Indian factories hired faster in November while services firms cut jobs",
+    summary:
+      "HSBC's flash India composite purchasing managers' index compiled with S&P Global edged up to 56.3 in November 2026 from 56.2 in October, as manufacturing hit a nine-month high even as services employers trimmed staff for the first time in nearly a year.",
+    category: "industry",
+    companyOrSector: "Macro / business surveys",
+    publishedAt: "2026-11-23T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-flash-pmi-november-2026"),
+    keyTakeaways: [
+      "The flash composite PMI rose to 56.3 in November from 56.2 in October; readings above 50 indicate expansion.",
+      "Manufacturing PMI increased to 56.0 from 54.7 with faster orders, output and hiring at seven-month highs in factories.",
+      "Services PMI slipped to 55.3 from 55.8 and services firms cut jobs for the first time in nearly a year despite stable new business growth.",
+    ],
+    body: [
+      "What's going on here?",
+      "Purchasing managers' indices give an early read on orders and hiring before official industrial production and payroll statistics land. HSBC's flash India composite PMI, compiled with S&P Global, showed private sector activity barely accelerating in November 2026. The headline composite rose to 56.3 from 56.2 in October, still below the stronger pace seen in the first half of the year. Manufacturing drove the modest uptick. The factory PMI climbed to a nine-month high of 56.0 from 54.7 on stronger orders, production and recruitment. Services cooled slightly to 55.3 from 55.8; new business growth matched October, but employers in services trimmed payrolls for the first time in close to a year. Factories, by contrast, added staff at the fastest pace in seven months. Input cost pressures stayed mild even as firms raised selling prices a bit faster.",
+      "What does this mean?",
+      "The split picture fits anecdotes of resilient industrial and export-linked plants alongside cautious white-collar hiring after earlier tech and financial services layoffs. A modest composite print with divergent employment suggests growth is choppy rather than broad-based. That aligns with economist expectations of slower gross domestic product growth this quarter as GST-led consumption normalises and borrowing costs bite. Firms remained optimistic on the year ahead, though confidence sat under its long-run average. For the Reserve Bank of India, mild survey inflation alongside softer services jobs may not on its own block a widely expected rate move in early December, but it argues against overheating.",
+      "Why should I care?",
+      "If you run a factory supplier, the manufacturing hiring pace supports near-term order books; services vendors should verify client budgets before expanding headcount. Households seeking jobs may see more openings in industrial corridors than in large metro back offices this winter. Investors should read the flash release alongside October industrial production and forthcoming GDP estimates rather than treating one PMI tick as a cycle turn. Watch the final November PMI revision, sector breakdowns for exports versus domestic orders, and whether services payrolls stabilise in December flash data.",
+    ],
+  },
+  {
     slug: "tata-steel-apl-apollo-tubes-sale-november-2026",
     title: "Tata Steel will sell its tubes businesses to APL Apollo for up to ₹28,000 crore",
     summary:
@@ -14496,6 +14592,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "fada-festive-retail-record-november-2026": "markets",
+  "brookfield-pgp-glass-buy-november-2026": "companies",
+  "lt-vyomai-nvidia-chennai-cluster-november-2026": "policy",
+  "india-flash-pmi-november-2026": "policy",
   "tata-steel-apl-apollo-tubes-sale-november-2026": "markets",
   "nse-retail-algo-static-ip-november-2026": "policy",
   "fssai-bisleri-water-court-november-2026": "policy",
