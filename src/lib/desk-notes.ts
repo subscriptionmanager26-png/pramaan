@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "modi-india-inc-wages-policy-november-2026",
+    title: "Modi asked corporate India why tax cuts did not turn into more jobs and pay",
+    summary:
+      "Wire reports on 24 November 2026 recapped Prime Minister Narendra Modi's 19 November speech to industry, where he challenged companies to explain why lower corporate tax rates since 2014 had not translated into higher employee salaries or headcount even as factory profits outpaced wage bills between 2020-21 and 2024-25.",
+    category: "industry",
+    companyOrSector: "Corporate India / policy",
+    publishedAt: "2026-11-24T10:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("modi-india-inc-wages-policy-november-2026"),
+    keyTakeaways: [
+      "Modi told an industry gathering on 19 November 2026 that the basic corporate tax rate fell from 30% in 2014 to 22% yet asked whether firms raised salaries or hired more workers.",
+      "Official factory statistics cited in 24 November reporting show registered manufacturing profits growing about 17% a year on average between 2020-21 and 2024-25 while employee compensation rose near 13.5% and employment under 7%.",
+      "Government messaging has shifted toward GST cuts, income-tax relief, and cash transfers that put money directly in consumers' hands while economists warn such moves can crowd out infrastructure spending.",
+    ],
+    body: [
+      "What's going on here?",
+      "For a decade New Delhi marketed itself as pro-business, cutting tax rates and easing compliance so private capital would fund India's next growth leg. On 19 November 2026, Prime Minister Narendra Modi used an unusually blunt tone with corporate leaders, asking what happened to the bargain. He noted the headline corporate tax rate was cut from 30% in 2014 to 22% under the ease-of-doing-business agenda, then asked whether companies passed any of that relief into higher salaries or more hiring. Reporting circulated on 24 November placed his remarks inside a broader debate about India's growth model: profits at listed factories have run ahead of payrolls for several years, private investment stayed near 10% of gross domestic product by some estimates, and youth-led protests over jobs and corruption kept political pressure high. Modi framed the question weeks before official gross domestic product data for the July-September quarter and against a calendar that already saw sweeping goods and services tax cuts in September 2025.",
+      "What does this mean?",
+      "When a prime minister airs frustration in public, boards can expect tax and industrial policy to stay tied to employment optics, not just return on equity. Companies that hoarded margin gains from commodity deflation or GST-led demand may face reputational heat even without new levies. The speech also signals that consumption-boosting measures, from income-tax slabs to state-level cash transfers, are the government's preferred short-term answer while it waits for capex cycles to broaden. Deloitte and other researchers have argued excess capacity and weak demand made firms cautious, though private investment reportedly rose about 12% year on year in the April-June 2026 quarter. Citigroup data cited in the same wire cycle showed listed wage growth at 11.2% in the September 2026 quarter, the fastest in more than three years, which complicates a neat villain narrative but does not erase Modi's payroll gap statistics.",
+      "Why should I care?",
+      "If you run a listed company, prepare investor-relations talking points on hiring and median pay, not only earnings per share. HR and compliance teams may see more scrutiny on contract labour and wage inflation in factory states. Households should not assume tax cuts automatically flow into paychecks; track your employer's annual report on employee benefit expenses. Policy watchers should read the end-November GDP print and the Reserve Bank's early December rate decision as the next tests of whether consumption or investment is really accelerating. Follow any follow-up incentives tied to job creation, labour ministry surveys, and whether the February budget tilts further toward direct transfers versus capex.",
+    ],
+  },
+  {
+    slug: "irdai-ombudsman-advisory-panel-november-2026",
+    title: "IRDAI reconstituted the committee that reviews insurance ombudsmen",
+    summary:
+      "The Insurance Regulatory and Development Authority of India on 24 November 2026 reconstituted an advisory committee to review ombudsman performance and related grievance machinery, naming retired IAS officer Sriram Taranikanti as chairman for a two-year term alongside former IRDAI and insurer executives.",
+    category: "industry",
+    companyOrSector: "Insurance / regulation",
+    publishedAt: "2026-11-24T10:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("irdai-ombudsman-advisory-panel-november-2026"),
+    keyTakeaways: [
+      "IRDAI issued an order reconstituting the committee that assesses how insurance ombudsmen are performing and how the ombudsman institution can work more effectively.",
+      "Sriram Taranikanti, a retired IAS officer and former IRDAI executive director, chairs the panel; other members include a former New India Assurance chief, a consumer advocate, and a finance ministry insurance director.",
+      "The Policyholders' Protection and Grievance Redressal Department at IRDAI will convene the committee, which has a two-year tenure.",
+    ],
+    body: [
+      "What's going on here?",
+      "Policyholders in India can escalate disputes with insurers through an ombudsman network that sits outside ordinary courts, but satisfaction depends on how quickly offices work and whether awards stick. On 24 November 2026, IRDAI published an order reconstituting its advisory committee to review the performance of the insurance ombudsman system and related matters aimed at improving efficiency. Sriram Taranikanti, a retired Indian Administrative Service officer who previously served as an executive director at IRDAI, will chair the panel for two years. Members include Parmod Kumar Arora, a former IRDAI whole-time member; Atul Sahai, a former insurance ombudsman and ex-chairman of New India Assurance; consumer rights advocate Pushpa Girimaji; and Mandakini Balodhi, director for insurance at the Department of Financial Services. The head of IRDAI's Policyholders' Protection and Grievance Redressal Department will act as convener.",
+      "What does this mean?",
+      "A fresh committee roster usually precedes process tweaks: turnaround times, training standards, or digital filing for health and life claims that stall at the insurer stage. IRDAI has recently fined large insurers for claim handling and disclosure lapses, so the ombudsman layer faces pressure to stay credible with retail buyers. For insurers, more consistent ombudsman orders can speed settlements but also raise payout ratios if offices lean toward policyholders on ambiguous exclusions. Distribution partners should brief clients that ombudsman routes remain free but require documented complaints first at the company. The two-year clock gives the panel time to benchmark offices across cities before recommending structural change.",
+      "Why should I care?",
+      "If you hold life or health policies, keep rejection letters with clause citations so an ombudsman referral is clean if the insurer stonewalls. Corporate HR teams administering group covers should track whether the committee publishes model timelines you can cite in employee handbooks. Investors in listed insurers ought to watch combined claim ratios and ombudsman complaint statistics in annual reports after any committee recommendations land. Follow IRDAI circulars implementing the panel's suggestions, any budget for additional ombudsman centres, and whether health insurers change third-party administrator contracts in response.",
+    ],
+  },
+  {
+    slug: "adani-nashik-phata-toll-spv-november-2026",
+    title: "Adani set up a unit to build and toll an elevated Nashik highway stretch",
+    summary:
+      "Adani Enterprises told exchanges on 23 November 2026 that it incorporated Nashik Phata Road Limited, a wholly owned subsidiary that will develop, maintain, and toll an almost 30 km elevated and widened segment of National Highway 60 in Maharashtra on a build-operate-transfer basis.",
+    category: "industry",
+    companyOrSector: "Roads / Adani Enterprises",
+    publishedAt: "2026-11-24T10:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-nashik-phata-toll-spv-november-2026"),
+    keyTakeaways: [
+      "Nashik Phata Road Limited will handle the Nashik Phata to Khed section from Km 12.190 to Km 42.113 on NH-60 under a BOT toll contract.",
+      "The project includes an eight-lane elevated flyover on a single pier with widened carriageways and service roads beneath; authorised capital is ₹1 lakh paid in cash at face value.",
+      "Adani Enterprises subscribed to all equity on incorporation, with the certificate dated 23 November 2026 after filing on 12 November.",
+    ],
+    body: [
+      "What's going on here?",
+      "Maharashtra's highway links into Nashik carry industrial and commuter traffic toward Pune and the Mumbai-Nashik corridor. Adani Enterprises Ltd told stock exchanges on 23 November 2026 that it created Nashik Phata Road Limited as a wholly owned step-down company to build and operate an elevated highway package on National Highway 60. The concession covers roughly 29.9 kilometres from Nashik Phata to Khed between chainage 12.190 and 42.113. Under a build-operate-transfer model with tolling rights, the subsidiary will develop, maintain, and manage the road. Engineering scope includes an eight-lane elevated flyover on a single pier at the first tier while widening the existing corridor below to four or six lanes plus two-lane service roads on each side. Adani subscribed entirely to paid-up capital of ₹1 lakh in cash at ₹10 face value per share. The unit was incorporated on 12 November and received its certificate on 23 November; the filing said no separate government approval was needed for incorporation.",
+      "What does this mean?",
+      "Toll road special-purpose vehicles concentrate construction risk and long-dated cash flows away from the parent balance sheet while letting the group bid for National Highways Authority of India packages in a familiar template. Elevated single-pier designs can shorten land acquisition fights along busy stretches but raise engineering and lifecycle maintenance costs. Commuters should expect construction detours years before toll plates appear. For the state, a private operator finances upfront capex and recovers through user charges until hand-back. Competing concessionaires will watch traffic assumptions on this Nashik approach road because it feeds industrial belts and weekend getaways.",
+      "Why should I care?",
+      "If you drive Nashik-Pune regularly, bookmark concessionaire traffic advisories once earthworks begin. Logistics firms can model future toll lines into landed cost for goods moving via NH-60. Bond and equity investors in Adani Enterprises should treat the SPV as early-stage; meaningful revenue sits far out and depends on tariff notification and completion milestones. Watch National Highways Authority bid documents for actual concession length, tariff revision formula, and any state government support agreements not visible in the brief incorporation filing.",
+    ],
+  },
+  {
+    slug: "sbi-ecowrap-rbi-25bps-december-november-2026",
+    title: "State Bank of India argued the RBI should hike rates by 25 basis points not 50",
+    summary:
+      "A State Bank of India research report dated 24 November 2026 said the Reserve Bank of India should favour a 25 basis point increase at the 2-4 December monetary policy meeting rather than a 50 basis point jumbo move, warning aggressive tightening could hurt financial stability, the rupee, and growth.",
+    category: "industry",
+    companyOrSector: "Banking / monetary policy",
+    publishedAt: "2026-11-24T11:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-ecowrap-rbi-25bps-december-november-2026"),
+    keyTakeaways: [
+      "SBI's EcoWrap note said 25 basis points should be enough given the inflation path and urged the RBI to stay mindful of financial stability amid calls for a 50 basis point December hike.",
+      "The report cited stress in US housing markets, household debt burdens, and volatile global risk appetite as reasons not to overshoot tightening.",
+      "The next Monetary Policy Committee meeting is scheduled for 2-4 December 2026 with the decision due on 4 December.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's largest lender also functions as a bellwether for how public-sector banks see rate risk. On 24 November 2026, a State Bank of India research publication argued the Reserve Bank of India should lift policy rates by 25 basis points at the Monetary Policy Committee meeting set for 2-4 December, not the 50 basis points some market voices were demanding. The note said the central bank must weigh financial stability while managing inflation, especially with global uncertainty and rupee moves in the background. Authors pointed to elevated US mortgage and consumer borrowing costs, weak home sales, and flows into gold exchange-traded funds as signs households abroad are jittery. They drew parallels between today's artificial-intelligence boom and historical technology bubbles to caution that aggressive rate shocks can amplify capital outflows.",
+      "What does this mean?",
+      "When SBI's economics team publicly backs a smaller hike, it signals that PSU treasury desks fear a half-point move could tighten liquidity faster than borrowers adjust. Floating home loans, working-capital lines, and government securities mark-to-market books at big banks all reprice within weeks of a policy change. A 25 basis point step keeps the tightening cycle alive but leaves room if inflation surprises. Borrowers still awaiting pass-through from earlier hikes should not treat the note as a pause signal; it advocates continued tightening, only at a measured pace. Bond traders will compare this view with money-market pricing and the RBI's own liquidity operations.",
+      "Why should I care?",
+      "If you have a home loan linked to the repo rate, compare quotes across banks before the 4 December announcement and ask whether your lender still offers spread concessions. Fixed-income investors should note that a smaller hike might limit near-term yield spikes but does not rule out further moves. Small businesses on MCLR or EBLR loans should stress-test cash flows for another 25 basis points even if the jumbo scenario fades. Watch the MPC statement, governor comments on financial stability, and whether overnight rates drift before the meeting.",
+    ],
+  },
+  {
     slug: "videocon-personal-guarantee-bankruptcy-november-2026",
     title: "Lenders are invoking personal guarantees after Videocon's promoter was declared bankrupt",
     summary:
@@ -14856,6 +14952,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "modi-india-inc-wages-policy-november-2026": "policy",
+  "irdai-ombudsman-advisory-panel-november-2026": "policy",
+  "adani-nashik-phata-toll-spv-november-2026": "companies",
+  "sbi-ecowrap-rbi-25bps-december-november-2026": "policy",
   "videocon-personal-guarantee-bankruptcy-november-2026": "policy",
   "rvnl-nmdc-hospital-chhattisgarh-november-2026": "companies",
   "sebi-ipo-grey-market-premium-november-2026": "policy",

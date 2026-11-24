@@ -2811,5 +2811,43 @@ def jupiter_woojin_metro(d: ImageDraw.ImageDraw) -> None:
         d.polygon([(640 + i * 90, 520), (680 + i * 90, 440), (720 + i * 90, 520)], fill=[GOLD, RED, BLUE, YELLOW, GOLD][i])
 
 
+def modi_india_inc_wages(d: ImageDraw.ImageDraw) -> None:
+    for i in range(4):
+        d.rectangle([100 + i * 55, 420 - i * 25, 145 + i * 55, 520], fill=[BLUE, YELLOW, RED, GOLD][i])
+    d.rectangle([680, 280, 1120, 520], fill=RED)
+    d.rectangle([740, 340, 1060, 400], fill=GOLD)
+    for i, h in enumerate([60, 100, 140, 220]):
+        x = 720 + i * 90
+        d.rectangle([x, 520 - h, x + 55, 520], fill=[BLUE, YELLOW, BLUE, RED][i])
+
+
+def irdai_ombudsman_panel(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([200, 180, 260, 520], fill=BLUE)
+    d.rectangle([340, 180, 400, 520], fill=BLUE)
+    d.line([(100, 280), (500, 280)], fill=GOLD, width=4)
+    d.ellipse([220, 200, 380, 280], fill=YELLOW)
+    d.polygon([(900, 520), (900, 300), (1050, 260), (1050, 520)], fill=RED)
+    d.rectangle([780, 360, 860, 440], fill=BLUE)
+    d.rectangle([780, 460, 860, 540], fill=YELLOW)
+
+
+def adani_nashik_toll_road(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 320, 520, 380], fill=BLUE)
+    d.rectangle([180, 220, 220, 320], fill=GOLD)
+    d.rectangle([420, 220, 460, 320], fill=GOLD)
+    d.polygon([(520, 380), (620, 280), (720, 380)], fill=RED)
+    for i, h in enumerate([40, 70, 100, 130, 160]):
+        x = 780 + i * 65
+        d.rectangle([x, 520 - h, x + 45, 520], fill=[YELLOW, RED, BLUE, GOLD, YELLOW][i])
+
+
+def sbi_ecowrap_rbi_25bps(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 200, 440, 520], fill=CREAM, outline=GOLD, width=6)
+    d.line([(280, 360), (340, 260)], fill=RED, width=8)
+    d.ellipse([275, 255, 295, 275], fill=BLUE)
+    for i, y in enumerate([240, 300, 360, 420]):
+        d.rectangle([700, y, 1050, y + 24], fill=[BLUE, YELLOW, RED, GOLD][i])
+
+
 if __name__ == "__main__":
     main()

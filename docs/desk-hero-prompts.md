@@ -1530,6 +1530,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Smartphone silhouettes (no logos) |
 | Metaphor left | Falling unit bars, rising ASP curve |
 
+### `modi-india-inc-wages-policy-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Profits ahead of payroll growth |
+| Subject right | Factory / corporate skyline silhouette |
+| Metaphor left | Diverging wage vs profit bars |
+
+### `irdai-ombudsman-advisory-panel-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Grievance redress performance review |
+| Subject right | Policy / courthouse columns |
+| Metaphor left | Balanced scales over claim forms |
+
+### `adani-nashik-phata-toll-spv-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Toll financed elevated highway |
+| Subject right | Elevated viaduct silhouette |
+| Metaphor left | Stepped toll bars along carriageway |
+
+### `sbi-ecowrap-rbi-25bps-december-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Smaller rate step vs jumbo hike |
+| Subject right | Public-sector bank facade |
+| Metaphor left | Dial between 25 and 50 tick marks |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
