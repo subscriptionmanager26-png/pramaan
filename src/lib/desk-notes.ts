@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "videocon-personal-guarantee-bankruptcy-november-2026",
+    title: "Lenders are invoking personal guarantees after Videocon's promoter was declared bankrupt",
+    summary:
+      "Reporting on 23 November 2026 traced how banks are pursuing promoters' personal assets when corporate insolvency stalls, citing a November 5 National Company Law Tribunal order that declared Videocon founder Venugopal Dhoot bankrupt over guarantees on roughly ₹12,668 crore of loans and tighter Insolvency and Bankruptcy Code disclosure rules for guarantors' estates.",
+    category: "industry",
+    companyOrSector: "Banking / insolvency",
+    publishedAt: "2026-11-24T00:11:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("videocon-personal-guarantee-bankruptcy-november-2026"),
+    keyTakeaways: [
+      "Videocon's Venugopal Dhoot was declared bankrupt by NCLT Mumbai on 5 November 2026 after State Bank of India pursued personal guarantees on about ₹12,668 crore of loans to Videocon Industries and Videocon Telecommunications.",
+      "Insolvency filings against personal guarantors have risen, with thousands of applications over recent years but few approved repayment plans, while cases involving Anil Ambani, Subhash Chandra, and DHFL's Wadhawan brothers remain active.",
+      "The Reserve Bank of India has said personal guarantees from promoters should be taken only when necessary, while new disclosure norms require guarantors to list cash, property, digital assets, and indirect holdings when insolvency starts.",
+    ],
+    body: [
+      "What's going on here?",
+      "For years Indian promoters signed personal guarantees so banks would approve large corporate facilities. When the borrower fails and years pass inside corporate insolvency, lenders still hold those guarantees as a second pocket to tap. On 23 November 2026, business press recapped how that playbook is hardening. Mumbai's National Company Law Tribunal declared Videocon Industries founder Venugopal Dhoot bankrupt on 5 November 2026 after State Bank of India pursued him as personal guarantor on roughly ₹12,668 crore extended to Videocon Industries and Videocon Telecommunications in 2010-12. His proposed ₹600 crore settlement was rejected because it lacked upfront cash and hinged on a future project. The piece places his case alongside rising personal insolvency actions against other high-profile guarantors and notes that stricter Insolvency and Bankruptcy Code rules now force guarantors to disclose broad asset schedules when proceedings begin.",
+      "What does this mean?",
+      "A corporate resolution plan can still leave banks short if asset values fall during long tribunal timelines. Personal guarantees let lenders reach homes, portfolios, and other property outside the company estate, subject to court process and any caps written into the guarantee. Dhoot's bankruptcy declaration is not the same as an automatic wipeout of every guarantee claim; discharge and competing appeals can still run for years, as seen in Videocon's corporate side where Twin Star's plan was set aside. Still, boardrooms are likely to push back on unlimited guarantees and ask for liability caps or time limits, while credit committees weigh whether they relied too heavily on promoter pledges instead of collateral quality. The RBI's repeated message that guarantees should be exceptional, not routine, adds policy weight to those negotiations.",
+      "Why should I care?",
+      "If you lend to or invest in promoter-led groups, read guarantee language in annual reports and rating notes. A founder signature can outlive a stock price collapse. Entrepreneurs bidding for fresh bank lines should treat personal guarantees as a claim on family wealth, not a checkbox. Watch whether Dhoot's appeals change recovery math for SBI and whether more lenders mirror its strategy after long corporate delays. Track NCLT dockets on Ambani, Chandra, and Wadhawan cases for signals on haircuts versus personal estates, and monitor RBI inspection themes on when PSU banks insist on fresh guarantees.",
+    ],
+  },
+  {
+    slug: "rvnl-nmdc-hospital-chhattisgarh-november-2026",
+    title: "RVNL won an ₹87 crore NMDC hospital build in Chhattisgarh",
+    summary:
+      "Rail Vikas Nigam Ltd said on 23 November 2026 that NMDC awarded it a letter of intent to construct a super-speciality hospital for women and child care in Kirandul, Chhattisgarh, for about ₹86.58 crore including GST, with a 14-month execution timeline.",
+    category: "industry",
+    companyOrSector: "Rail Vikas Nigam / infrastructure",
+    publishedAt: "2026-11-23T23:43:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rvnl-nmdc-hospital-chhattisgarh-november-2026"),
+    keyTakeaways: [
+      "NMDC's letter of award covers a super-speciality women and child care hospital at Kirandul for ₹86.58 crore inclusive of GST.",
+      "RVNL said the contract is in the normal course of business, awarded by a domestic entity on general commercial terms.",
+      "The company set a 14-month completion window in its regulatory filing.",
+    ],
+    body: [
+      "What's going on here?",
+      "State-owned Rail Vikas Nigam Ltd built its name on rail projects, but it also bids civil works for other government clients. On 23 November 2026, RVNL told exchanges that NMDC Ltd issued a letter of award for a super-speciality hospital focused on women and child care in Kirandul, Chhattisgarh. The work is priced at about ₹86.58 crore including goods and services tax. RVNL described the order as part of its usual business mix, sourced from a domestic counterparty on standard contract terms, and flagged a 14-month delivery schedule.",
+      "What does this mean?",
+      "Mid-sized healthcare construction jobs add revenue diversification for a rail engineering company without changing its core franchise overnight. Kirandul sits in NMDC's mining belt, where specialized hospital capacity can support employees and surrounding communities rather than major city catchments. For RVNL, the ticket size is modest next to marquee rail corridors, but it pads the order book and uses the same project-management muscle as station and line jobs. Investors often track RVNL for national rail capex; hospital wins signal that management is willing to chase adjacent public-sector work when margins and timelines look acceptable.",
+      "Why should I care?",
+      "If you hold RVNL for rail capex exposure, skim quarterly filings for non-rail awards so you are not surprised by margin mix. Healthcare contractors may face competition on future bids in mining districts, but RVNL's PSU pedigree can matter in government tenders. Watch execution updates over the 14-month window and whether NMDC stages payments on milestones. On the same day RVNL also reported September-quarter earnings and a board-approved corporate guarantee for a joint venture's export credit line; treat those as separate events when you size the stock.",
+    ],
+  },
+  {
     slug: "sebi-ipo-grey-market-premium-november-2026",
     title: "SEBI told brokers to stop publishing IPO grey market premiums",
     summary:
@@ -14808,6 +14856,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "videocon-personal-guarantee-bankruptcy-november-2026": "policy",
+  "rvnl-nmdc-hospital-chhattisgarh-november-2026": "companies",
   "sebi-ipo-grey-market-premium-november-2026": "policy",
   "rbi-micro-enterprise-credit-november-2026": "policy",
   "lupin-usfda-ferric-citrate-november-2026": "companies",
