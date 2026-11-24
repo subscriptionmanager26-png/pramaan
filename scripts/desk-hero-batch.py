@@ -2849,5 +2849,65 @@ def sbi_ecowrap_rbi_25bps(d: ImageDraw.ImageDraw) -> None:
         d.rectangle([700, y, 1050, y + 24], fill=[BLUE, YELLOW, RED, GOLD][i])
 
 
+def rural_confidence_gram_panchayat(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 420, 480, 500], fill=BLUE)
+    d.rectangle([180, 360, 420, 420], fill=YELLOW)
+    for i, h in enumerate([140, 100, 80, 60]):
+        x = 140 + i * 70
+        d.rectangle([x, 520 - h, x + 50, 520], fill=[RED, GOLD, RED, BLUE][i])
+    d.ellipse([820, 240, 1100, 520], fill=CREAM, outline=GOLD, width=4)
+    d.rectangle([880, 400, 1040, 460], fill=RED)
+    d.ellipse([900, 460, 960, 520], fill=INK)
+    d.ellipse([1000, 460, 1060, 520], fill=INK)
+
+
+def india_aluminium_import_duty(d: ImageDraw.ImageDraw) -> None:
+    for i in range(4):
+        d.rounded_rectangle(
+            [100 + i * 45, 380 - i * 35, 240 + i * 45, 560],
+            radius=12,
+            fill=[(180, 185, 192), BLUE, RED, YELLOW][i],
+        )
+    d.rectangle([700, 200, 760, 520], fill=GOLD)
+    d.polygon([(760, 280), (1080, 240), (1080, 460), (760, 500)], fill=RED)
+    d.line([(820, 320), (1020, 320)], fill=BLUE, width=6)
+    d.line([(820, 400), (980, 400)], fill=YELLOW, width=6)
+
+
+def rbi_sbi_mf_south_indian_bank(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 200, 460, 520], fill=BLUE)
+    d.rectangle([200, 280, 400, 340], fill=GOLD)
+    d.rectangle([200, 380, 400, 440], fill=CREAM)
+    for i, h in enumerate([80, 110, 140, 170]):
+        x = 720 + i * 85
+        d.rectangle([x, 520 - h, x + 55, 520], fill=[RED, YELLOW, BLUE, GOLD][i])
+    d.ellipse([900, 220, 1060, 300], fill=YELLOW)
+
+
+def tata_motors_passenger_dec_prices(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 380, 520, 480], radius=28, fill=RED)
+    d.rectangle([180, 420, 260, 460], fill=YELLOW)
+    d.rectangle([360, 420, 440, 460], fill=BLUE)
+    d.ellipse([200, 480, 260, 540], fill=INK)
+    d.ellipse([400, 480, 460, 540], fill=INK)
+    for i, h in enumerate([50, 70, 90, 110, 130]):
+        x = 700 + i * 70
+        d.rectangle([x, 520 - h, x + 48, 520], fill=[GOLD, RED, BLUE, YELLOW, GOLD][i])
+
+
+def teamlease_epfo_demand(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([160, 260, 440, 520], fill=BLUE)
+    d.rectangle([220, 320, 380, 400], fill=CREAM)
+    d.rectangle([220, 440, 380, 500], fill=YELLOW)
+    d.polygon([(780, 520), (900, 200), (1020, 520)], fill=RED)
+    d.rectangle([820, 360, 980, 420], fill=GOLD)
+    d.line([(700, 520), (1100, 520)], fill=INK, width=3)
+
+
 if __name__ == "__main__":
     main()
+    save("rural-confidence-gram-panchayat-grants-november-2026", rural_confidence_gram_panchayat)
+    save("india-aluminium-import-duty-budget-ask-november-2026", india_aluminium_import_duty)
+    save("rbi-sbi-mf-south-indian-bank-stake-november-2026", rbi_sbi_mf_south_indian_bank)
+    save("tata-motors-passenger-prices-december-november-2026", tata_motors_passenger_dec_prices)
+    save("teamlease-epfo-provident-fund-demand-november-2026", teamlease_epfo_demand)

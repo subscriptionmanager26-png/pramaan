@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rural-confidence-gram-panchayat-grants-november-2026",
+    title: "Village confidence is slipping as gram panchayat grants shrink",
+    summary:
+      "Reporting on 24 November 2026 cited Reserve Bank of India survey data showing the rural Future Expectations Index fell to 112.8 in September from 129.3 in January, as central grants to gram panchayats dropped about 23% in 2024-25 and October demand for rural employment schemes and tractor finance softened.",
+    category: "industry",
+    companyOrSector: "Rural economy",
+    publishedAt: "2026-11-24T17:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rural-confidence-gram-panchayat-grants-november-2026"),
+    keyTakeaways: [
+      "More than half of 8,799 villagers surveyed in September expected the economy to stay flat or worsen over the next year, up from about 41% in January.",
+      "The RBI's gram panchayat finances report showed central grants to rural local bodies down roughly 23% in 2024-25, with panchayat revenue receipts weakening.",
+      "October data pointed to a sharp rise in households seeking MGNREGA work, softer tractor sales for two months, and Mahindra Finance commentary that tractor demand lagged other vehicle categories.",
+    ],
+    body: [
+      "What's going on here?",
+      "Rural India carried much of the consumption recovery after the pandemic, but high-frequency data now sketches a cooler village economy. Wire coverage on 24 November 2026 pulled together Reserve Bank of India survey and finance reports. The central bank's Future Expectations Index for villages slipped to 112.8 in September from 129.3 in January. In the same survey, 53% of 8,799 respondents said they expected conditions over the next year to remain unchanged or worsen, versus about 41% at the start of 2026. Separately, the RBI's report on gram panchayat finances recorded a roughly 23% decline in central government grants to rural local bodies in 2024-25 compared with the year before, with total revenue receipts at those panchayats down about 16%. Land revenue and local tax collections have weakened across several years. Labour-market signals added pressure: demand for work under the rural jobs guarantee scheme jumped 76.4% year on year in October, tractor sales contracted for two straight months, and fertiliser sales eased after an uneven monsoon. Mahindra Finance's leadership told analysts last month that tractor financing grew slower than other vehicle lines during the festive season.",
+      "What does this mean?",
+      "When panchayat grants shrink, village capex on drains, roads and small utilities waits, which feeds back into local contractor incomes and shop traffic. Weak tractor and fertiliser volumes usually arrive before FMCG distributors report slower wholesale offtake in interior districts. The survey slump does not automatically mean a national rural recession: several economists in the same articles noted urban and some packaged-goods demand still look resilient. It does mean the two-year rural outperformance narrative is fading and banks may tighten underwriting in drought-hit talukas even while metro personal loans grow.",
+      "Why should I care?",
+      "If you sell or distribute in rural belts, watch district-level credit disbursements and MGNREGA person-days before you extend kirana credit. Farmers planning equipment purchases should compare finance quotes early because NBFCs often slow fresh tractor loans when early delinquencies tick up. Investors in FMCG and two-wheeler names should read management commentary on rural mix separately from urban same-store trends. Policy watchers should track state finance commission awards, the winter kharif income data, and whether the February budget restores higher tied grants to panchayats.",
+    ],
+  },
+  {
+    slug: "india-aluminium-import-duty-budget-ask-november-2026",
+    title: "India's aluminium lobby asked for higher import duties ahead of the budget",
+    summary:
+      "The Aluminium Association of India on 24 November 2026 urged calibrated customs protection ahead of the February 2027 federal budget, proposing a 10% duty on primary metal and 15% on downstream products while tightening scrap quality rules to defend a domestic investment pipeline producers estimate at about ₹4 trillion.",
+    category: "industry",
+    companyOrSector: "Metals / trade policy",
+    publishedAt: "2026-11-24T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-aluminium-import-duty-budget-ask-november-2026"),
+    keyTakeaways: [
+      "The association asked for basic customs duty of 10% on primary aluminium and 15% on downstream imports, with scrap rules until quality controls arrive.",
+      "Hindalco and Vedanta are among producers expanding smelter and downstream capacity; Hindalco has committed about ₹210 billion toward Sambalpur.",
+      "The body projected domestic demand could reach 11.5 million tonnes by fiscal 2033 from about six million tonnes in fiscal 2026 and cited heavy import-related foreign exchange outflow.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's metal strategy balances affordable inputs for autos, packaging and construction against the cost of imported primary aluminium. On 24 November 2026, wire reports said the Aluminium Association of India submitted pre-budget proposals for fiscal 2028, due to be presented in February 2027. The industry body, independent of any single smelter, asked for a calibrated duty structure, quality standards on imported scrap, and support for downstream aluminium parks. Its tariff ask includes lifting basic customs duty on primary aluminium to 10% and on downstream products to 15%, while keeping or raising scrap duties until quality controls are in place. The pitch frames protection as necessary to sustain what it describes as roughly ₹4 trillion of planned domestic investment. Major producers Hindalco Industries and Vedanta are adding capacity; Hindalco has earmarked about ₹210 billion to expand its Sambalpur smelter. The association projected national demand could rise to 11.5 million metric tonnes by fiscal 2033 from about six million tonnes in fiscal 2026.",
+      "What does this mean?",
+      "If finance ministers adopt even part of the tariff menu, landed costs rise for foil makers, wheel suppliers and construction fabricators that today blend imported ingots with domestic metal. Downstream users may accelerate local sourcing contracts or pass input inflation into product prices. Smelters gain margin visibility but face pressure to commission new lines on time to justify protection. Scrap processors must invest in testing and grading if quality rules tighten, which can squeeze informal yards first. Exporters of aluminium-intensive goods should model duty scenarios before quoting long-term contracts.",
+      "Why should I care?",
+      "Procurement teams in autos, appliances and real estate should stress-test 2027 bills against a 10-15% duty path and negotiate indexation clauses with fabricators. Investors in Hindalco, Vedanta and downstream rollers should read budget annexes for scrap and primary rates together, not in isolation. Policy readers should watch whether the budget pairs tariffs with downstream park incentives or leaves users to absorb costs. Track the formal budget memorandum, directorate general of foreign trade scrap notifications, and commissioning dates at Sambalpur and other smelter expansions.",
+    ],
+  },
+  {
+    slug: "rbi-sbi-mf-south-indian-bank-stake-november-2026",
+    title: "The RBI let SBI Mutual Fund buy up to 9.99% of South Indian Bank",
+    summary:
+      "South Indian Bank said on 24 November 2026 the Reserve Bank of India approved SBI Mutual Fund to acquire as much as 9.99% of the private lender's paid-up capital or voting rights, subject to banking, foreign exchange and securities regulations.",
+    category: "industry",
+    companyOrSector: "Banking / mutual funds",
+    publishedAt: "2026-11-24T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-sbi-mf-south-indian-bank-stake-november-2026"),
+    keyTakeaways: [
+      "The Thrissur-headquartered bank disclosed RBI clearance for SBI MF to hold up to 9.99% of share capital or voting rights.",
+      "At September-end 2026, mutual funds collectively owned about 15.13% of the bank; SBI Banking and Financial Services Fund already held roughly 2.90%.",
+      "Approval is conditional on compliance with the Banking Regulation Act, RBI shareholding directions, FEMA and Sebi rules.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian regulators treat any large bank stake, even by a mutual fund complex, as a change that can affect control, governance and priority-sector behaviour. On 24 November 2026, South Indian Bank Ltd told exchanges the Reserve Bank of India approved SBI Mutual Fund to acquire an aggregate holding of up to 9.99% of the lender's paid-up share capital or voting rights. The approval sits under the central bank's directions on acquisition and holding of shares in commercial banks and must also comply with foreign exchange law and Securities and Exchange Board of India regulations. The filing attached a September-end shareholding pattern showing mutual funds at about 15.13% in aggregate, with Kotak Multicap Fund near 6.05%, Bandhan Small Cap Fund near 4.69% and SBI Banking and Financial Services Fund near 2.90%. Foreign portfolio investors in category one held about 24.16%. Public shareholders accounted for the full float.",
+      "What does this mean?",
+      "Mutual funds rarely seek double-digit bank stakes without a view on re-rating or a strategic distribution tie-up with the sponsor bank. Crossing toward 10% puts SBI MF's voting power in the same conversation as other top institutional holders and may require disclosures on board appointments and related-party transactions. For South Indian Bank, deeper alignment with India's largest fund house can lift retail deposit trust in Kerala and neighbouring states while increasing scrutiny on asset quality slides. Competing private lenders watch whether PSU-backed fund complexes concentrate capital in mid-sized banks as bond spreads tighten.",
+      "Why should I care?",
+      "If you bank with South Indian Bank or hold its shares, monitor subsequent exchange filings for actual purchase disclosures above 1% thresholds and any board observer requests. Other mid-cap lenders should prepare for similar RBI applications if large AMCs rebalance toward regional franchises. Depositors gain little day to day, but heavy mutual fund presence can support capital market access during qualified institutional placements. Watch SBI MF monthly portfolio factsheets, South Indian Bank investor presentations, and RBI fit-and-proper updates if the stake approaches the approved ceiling.",
+    ],
+  },
+  {
+    slug: "tata-motors-passenger-prices-december-november-2026",
+    title: "Tata Motors will raise car and SUV prices from 1 December",
+    summary:
+      "Tata Motors Passenger Vehicles Ltd said on 24 November 2026 it will increase prices across cars and SUVs from 1 December 2026, with a volume-weighted average hike of about 0.5%, to partly offset higher input costs after cost-control efforts.",
+    category: "industry",
+    companyOrSector: "Passenger vehicles",
+    publishedAt: "2026-11-24T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-motors-passenger-prices-december-november-2026"),
+    keyTakeaways: [
+      "The company said the revision applies from 1 December 2026 across its passenger car and SUV portfolio.",
+      "It estimated a volume-weighted average increase of about 0.5% after internal cost-reduction work.",
+      "Management linked the move to rising input costs, following Maruti Suzuki's select-model hikes and broader festive-season demand.",
+    ],
+    body: [
+      "What's going on here?",
+      "Carmakers have been nudging list prices in small steps so showrooms can absorb metal, logistics and currency moves without shocking buyers who already face tighter EMIs. Tata Motors Passenger Vehicles Ltd, the listed entity covering Tata's car and SUV business, informed exchanges on 24 November 2026 that prices will rise from 1 December 2026. The revision covers cars and SUVs in its portfolio. The company said it continues cost-reduction initiatives but still needs to partly offset higher input costs. It pegged the volume-weighted average increase at about 0.5%. The filing arrived in the same week Maruti Suzuki announced another select-model increase near 0.31% and as several OEMs reported record festive volumes alongside margin pressure from commodities.",
+      "What does this mean?",
+      "Half a percent on average is modest, yet it signals that Tata will not absorb the full input bill through discounts while chasing share in EVs and SUVs. Dealers must reprint price lists and refinance demo stock before month-end bookings close. Rivals may mirror the step if their commodity hedges are expiring into a quarter when borrowing costs remain elevated after successive rate hikes. For households, the practical effect shows up in on-road quotes and insurance declared values rather than in a single headline variant. Fleet buyers should refresh tenders because cumulative FY27 increases across brands are now moving past one percent.",
+      "Why should I care?",
+      "If you planned a December purchase, lock quotes before 1 December and compare finance offers because loan rates may not fall until after the next Reserve Bank meeting. Investors in auto dealers and ancillaries should watch retail registration data for elasticity after the hike. EV shoppers should check whether battery variants move in line with internal-combustion trims. Track Tata's next exchange circulars, Hyundai and Mahindra pricing responses, and management commentary on commodity pass-through at the December results season.",
+    ],
+  },
+  {
+    slug: "teamlease-epfo-provident-fund-demand-november-2026",
+    title: "TeamLease faces a ₹181 crore EPFO demand over provident fund exemptions",
+    summary:
+      "TeamLease Services Ltd said on 24 November 2026 the Employees' Provident Fund Organisation issued a demand for about ₹181 crore after a 20 November letter on surrender of provident fund exemptions, and the staffing firm is weighing legal remedies including a writ petition.",
+    category: "industry",
+    companyOrSector: "Staffing / labour regulation",
+    publishedAt: "2026-11-24T16:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("teamlease-epfo-provident-fund-demand-november-2026"),
+    keyTakeaways: [
+      "TeamLease received an EPFO letter on 20 November 2026 regarding surrender of provident fund exemption status.",
+      "The organisation followed with a demand letter for about ₹181 crore, according to the exchange filing.",
+      "The company said it is evaluating legal remedies, including a writ petition, while continuing operations.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large staffing and payroll outsourcers often operated under provident fund exemptions that let them manage contributions through in-house trusts, subject to periodic compliance reviews. TeamLease Services Ltd, one of India's listed human-resource services firms, told stock exchanges on 24 November 2026 that it received a letter from the Employees' Provident Fund Organisation on 20 November regarding surrender of provident fund exemption. EPFO then issued a demand for about ₹181 crore, according to the regulatory filing summarised on the wire. TeamLease said it is evaluating legal remedies against the demand, including a writ petition. The disclosure matters because payroll firms route millions of worker contributions; any exemption withdrawal can force process changes across client sites.",
+      "What does this mean?",
+      "Provident fund disputes can stretch for years in tribunals while clients demand uninterrupted salary and contribution processing. If EPFO's position holds, TeamLease may need to provision cash or bonds, revise pricing to corporate customers, and migrate accounts to the standard EPFO ledger faster than planned. Competitors with their own exemptions will audit files immediately. For enterprises using TeamLease for temp and contract staff, HR teams should ask for a client communication plan so onsite deduct-and-deposit cycles do not break during litigation.",
+      "Why should I care?",
+      "If you employ contract workers through TeamLease, confirm whether your cost-to-company quotes include any pass-through of compliance penalties and insist on audit certificates for November payrolls. Investors in HR services stocks should compare EPFO exposure across peers, not only headline revenue growth. Policy readers should watch whether the labour ministry clarifies exemption renewal norms after recent enforcement pushes. Track court filings on the writ, any interim stay on payment, EPFO circulars on exemption surrender, and TeamLease guidance on provisioning at the next results call.",
+    ],
+  },
+  {
     slug: "modi-india-inc-wages-policy-november-2026",
     title: "Modi asked corporate India why tax cuts did not turn into more jobs and pay",
     summary:
@@ -14952,6 +15072,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rural-confidence-gram-panchayat-grants-november-2026": "policy",
+  "india-aluminium-import-duty-budget-ask-november-2026": "policy",
+  "rbi-sbi-mf-south-indian-bank-stake-november-2026": "policy",
+  "tata-motors-passenger-prices-december-november-2026": "markets",
+  "teamlease-epfo-provident-fund-demand-november-2026": "policy",
   "modi-india-inc-wages-policy-november-2026": "policy",
   "irdai-ombudsman-advisory-panel-november-2026": "policy",
   "adani-nashik-phata-toll-spv-november-2026": "companies",
