@@ -2904,6 +2904,52 @@ def teamlease_epfo_demand(d: ImageDraw.ImageDraw) -> None:
     d.line([(700, 520), (1100, 520)], fill=INK, width=3)
 
 
+def auto_pli_disbursements_fy27(d: ImageDraw.ImageDraw) -> None:
+  for i, h in enumerate([60, 120, 200, 280, 340]):
+    x = 120 + i * 72
+    d.rectangle([x, 520 - h, x + 52, 520], fill=[BLUE, YELLOW, RED, GOLD, BLUE][i])
+  d.rounded_rectangle([640, 260, 1120, 480], radius=20, fill=RED)
+  d.line([(680, 360), (1080, 360)], fill=GOLD, width=5)
+  d.polygon([(900, 200), (980, 260), (900, 320)], fill=YELLOW)
+
+
+def tamil_nadu_chennai_investment(d: ImageDraw.ImageDraw) -> None:
+  d.rectangle([140, 220, 220, 520], fill=BLUE)
+  d.rectangle([300, 280, 380, 520], fill=BLUE)
+  d.line([(100, 400), (420, 400)], fill=GOLD, width=4)
+  for i in range(4):
+    d.rectangle([720 + i * 85, 500 - (80 + i * 35), 775 + i * 85, 500], fill=[RED, YELLOW, BLUE, GOLD][i])
+  d.ellipse([880, 240, 1100, 460], outline=GOLD, width=5)
+
+
+def india_alcobev_rtd_growth(d: ImageDraw.ImageDraw) -> None:
+  d.rounded_rectangle([140, 300, 220, 520], radius=36, fill=BLUE)
+  d.rounded_rectangle([260, 340, 340, 520], radius=36, fill=RED)
+  d.rectangle([180, 240, 300, 300], fill=YELLOW)
+  for i, x in enumerate([720, 840, 960, 1080]):
+    d.ellipse([x - 36, 360 - i * 20, x + 36, 432 - i * 20], fill=[GOLD, RED, BLUE, YELLOW][i])
+
+
+def bank_of_baroda_upi_mdr(d: ImageDraw.ImageDraw) -> None:
+  d.rounded_rectangle([120, 280, 480, 520], radius=28, fill=BLUE)
+  d.polygon([(260, 360), (340, 400), (260, 440), (180, 400)], fill=YELLOW)
+  d.line([(700, 520), (1100, 520)], fill=INK, width=2)
+  for i, h in enumerate([40, 80, 120, 160]):
+    x = 740 + i * 80
+    d.rectangle([x, 520 - h, x + 50, 520], fill=[RED, GOLD, BLUE, YELLOW][i])
+  d.polygon([(1020, 220), (1100, 280), (1020, 340)], fill=RED)
+
+
+def niif_infrastructure_bonds(d: ImageDraw.ImageDraw) -> None:
+  d.rectangle([140, 320, 480, 520], fill=RED)
+  d.rectangle([200, 260, 420, 320], fill=GOLD)
+  d.line([(200, 380), (420, 440)], fill=BLUE, width=6)
+  for i in range(5):
+    y = 300 + i * 36
+    d.rectangle([700, y, 1120, y + 20], fill=[BLUE, YELLOW, RED, GOLD, BLUE][i])
+  d.polygon([(820, 180), (900, 240), (820, 300)], fill=YELLOW)
+
+
 if __name__ == "__main__":
     main()
     save("rural-confidence-gram-panchayat-grants-november-2026", rural_confidence_gram_panchayat)
@@ -2911,3 +2957,8 @@ if __name__ == "__main__":
     save("rbi-sbi-mf-south-indian-bank-stake-november-2026", rbi_sbi_mf_south_indian_bank)
     save("tata-motors-passenger-prices-december-november-2026", tata_motors_passenger_dec_prices)
     save("teamlease-epfo-provident-fund-demand-november-2026", teamlease_epfo_demand)
+    save("auto-pli-disbursements-accelerate-fy27-november-2026", auto_pli_disbursements_fy27)
+    save("tamil-nadu-chennai-investment-mou-november-2026", tamil_nadu_chennai_investment)
+    save("india-alcobev-rtd-growth-november-2026", india_alcobev_rtd_growth)
+    save("bank-of-baroda-upi-mdr-reinvest-november-2026", bank_of_baroda_upi_mdr)
+    save("niif-infrastructure-bonds-november-2026", niif_infrastructure_bonds)

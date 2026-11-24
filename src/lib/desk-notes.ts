@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "auto-pli-disbursements-accelerate-fy27-november-2026",
+    title: "Auto PLI payouts doubled in seven months of this fiscal year",
+    summary:
+      "Reporting on 24 November 2026 said the Centre disbursed ₹4,364.75 crore under the automobile production-linked incentive scheme in the first seven months of FY27, against ₹1,999.94 crore in all of FY26, with October alone accounting for about ₹1,859.71 crore even as much of the ₹25,938-crore envelope remains unused.",
+    category: "industry",
+    companyOrSector: "Auto manufacturing / industrial policy",
+    publishedAt: "2026-11-24T19:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("auto-pli-disbursements-accelerate-fy27-november-2026"),
+    keyTakeaways: [
+      "Seven-month FY27 disbursements reached ₹4,364.75 crore, with October 2026 releases alone near ₹1,859.71 crore.",
+      "Cumulative payouts since the scheme began stood at about ₹6,751 crore by October-end, leaving roughly three-quarters of the approved outlay undisbursed.",
+      "Disclosed FY26 recipients included Bajaj Auto, Tata Motors, Ola Electric, TVS Motor and Mahindra, while NITI Aayog data flagged a gap between committed investments and incremental sales targets.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's production-linked incentive for automobiles and advanced components was meant to pull new capex and local value addition into EVs, flex-fuel and high-tech parts. Ministry of Heavy Industries documents cited in wire coverage on 24 November 2026 show disbursements accelerating sharply in FY27. In the April-October period the Centre paid out ₹4,364.75 crore, more than double the ₹1,999.94 crore paid across all of FY26. October 2026 alone saw roughly ₹1,859.71 crore released, close to an entire prior-year total. Cumulative payments since inception reached about ₹6,751.11 crore by month-end, still only a fraction of the ₹25,938-crore approved envelope with the performance window closing in roughly five months and final payouts scheduled into FY28. Applicant-wise FY26 disclosures named Bajaj Auto, Tata Motors, Ola Electric, TVS Motor and Mahindra among the largest cheques. A parallel NITI Aayog assessment through March 2026 said approved firms had invested about ₹44,326 crore, beating the investment target, but incremental sales and job creation lagged stated goals.",
+      "What does this mean?",
+      "Faster cash release tells suppliers and OEMs that compliance audits and sales documentation are clearing, which can ease working capital for plants that qualified on advanced technology lines. It does not automatically fix the volume shortfall NITI flagged: factories may be live while retail uptake or export mix still trails the scheme's sales hurdle. The concentration among a handful of two-wheeler and passenger vehicle winners in FY26 suggests component startups and newer EV names may need more time to hit thresholds, a point several industry voices raised in the same articles. With most outlay still unspent, the next two quarters become a race between eligible billings and the sunset of the performance period.",
+      "Why should I care?",
+      "If you run an auto or components business, pull your PLI tracker now: domestic value addition proofs and sales cut-offs matter more than headline capacity. Investors in listed OEMs should read incentive income separately from operating profit, because recognition can bunch in a single month like October. Policy watchers should compare February budget signals with the remaining ₹19,000 crore-plus envelope and whether the ministry widens the beneficiary base before FY28 payouts end. Track monthly MHI disbursement statements, applicant disclosures in annual reports, and NITI's next update on incremental sales versus targets.",
+    ],
+  },
+  {
+    slug: "tamil-nadu-chennai-investment-mou-november-2026",
+    title: "Tamil Nadu is lining up more than fifty thousand crore rupees of fresh investment deals",
+    summary:
+      "Reuters reported on 24 November 2026 that Tamil Nadu plans to announce about 70 investment pacts worth more than ₹50,000 crore ($5.38 billion) at a Chennai investor meeting on 25 November, with manufacturing anchors including Hyundai, Renault, Foxconn-linked electronics suppliers and Brazilian motor maker WEG.",
+    category: "industry",
+    companyOrSector: "Tamil Nadu / manufacturing",
+    publishedAt: "2026-11-24T19:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tamil-nadu-chennai-investment-mou-november-2026"),
+    keyTakeaways: [
+      "State officials were set to unveil roughly 70 deals exceeding ₹50,000 crore at a Chennai investor session on 25 November 2026.",
+      "Chennai and its industrial belt already host Hyundai, Renault, Apple supply-chain factories such as Foxconn and Tata Electronics sites.",
+      "Brazilian equipment maker WEG was among signatories cited ahead of the event, according to people briefed on the programme.",
+    ],
+    body: [
+      "What's going on here?",
+      "State governments compete for export-oriented factories because payrolls, power demand and supplier clusters follow large capex. Tamil Nadu, often called the Detroit of Asia for its auto density, is staging another capital-signing push. Two people with direct knowledge told Reuters on 24 November 2026 that the state will announce about 70 investment deals worth more than ₹50,000 crore, or about $5.38 billion, at an investor meeting in Chennai on 25 November. The package spans multiple sectors, with manufacturing a core theme. Existing anchors include Hyundai and Renault vehicle plants and electronics suppliers tied to Apple's India build-out, including Foxconn and Tata Electronics operations around Chennai. Brazilian industrial motor manufacturer WEG was among the companies expected to sign a fresh pact, the sources said. Officials and some companies declined comment ahead of the formal event.",
+      "What does this mean?",
+      "A headline MOU count does not equal immediate ground-breaking: many pacts unfold over years and depend on land, power tariffs and talent pipelines. Still, a ₹50,000-crore menu signals that Tamil Nadu is bidding to keep multi-sector flows even as other states court semiconductors and EV plants. Auto and electronics investors gain negotiating leverage on incentives but face pressure to localise suppliers quickly once lines go live. Competing states may answer with their own investor weeks, which matters for SMEs choosing where to site stamping, wiring harness or precision machining units.",
+      "Why should I care?",
+      "If you supply into southern auto or electronics chains, watch which sub-districts win new plots and whether state agencies fast-track environmental and factory licences. HR teams should map skill institutes tied to the announced sectors before wage inflation sets in around Sriperumbudur and Oragadam belts. Households in Chennai's industrial corridors should expect bus and rental demand shifts as construction phases start. Follow the 25 November announcement deck, individual company exchange filings for binding steps beyond MOUs, and Tamil Nadu industrial guidance on power and stamp duty.",
+    ],
+  },
+  {
+    slug: "india-alcobev-rtd-growth-november-2026",
+    title: "Drink makers are betting harder on ready-to-drink cans and bottles",
+    summary:
+      "Business reporting on 24 November 2026 described India's ready-to-drink alcoholic beverages segment drawing fresh portfolio launches, with IWSR data cited for 11% value growth in 2025 to above $200 million and alcobev firms pitching RTDs as an everyday format beyond party occasions.",
+    category: "industry",
+    companyOrSector: "Alcoholic beverages / consumer",
+    publishedAt: "2026-11-24T18:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-alcobev-rtd-growth-november-2026"),
+    keyTakeaways: [
+      "IWSR estimates cited in the coverage put India's RTD alcobev market at more than $200 million in value in 2025 after 11% growth.",
+      "Founders and marketers said consumers now ask for named RTD brands across occasions, building on India's long habit of mixing spirits.",
+      "Large alcobev companies are adding flavour-led and convenience formats as state excise rules and on-premise recovery reshape channel mix.",
+    ],
+    body: [
+      "What's going on here?",
+      "Ready-to-drink spirits and beer mixes sit at the intersection of excise law, urban convenience retail and younger social drinking habits. Coverage on 24 November 2026 portrayed India's RTD alcobev category as gaining serious corporate attention after years as a niche party shelf. Industry data provider IWSR was cited estimating 11% value growth in 2025 to a little above $200 million, with forecast volume growth of about 8% a year through 2030. Founders such as IndoBevs' Sam Mahandru described a shift from one-off trials to repeat orders by brand name across friend groups, noting India's historic preference for mixed drinks. Major alcobev houses are rolling out new flavours, smaller pack sizes for e-commerce and tie-ins with bars as on-trade volumes normalize post-pandemic disruptions. The push arrives as several states revisit alcohol-in-beverage tax models that changed beer and spirit relative pricing.",
+      "What does this mean?",
+      "When incumbents allocate marketing rupees to RTDs, they are buying shelf space in modern trade and quick commerce, not just festival gifting. Margins depend on glass versus can supply, import duties on neutral spirit bases and whether states classify RTDs under beer, wine or spirit slabs. Growth above double digits on a small base can still leave RTDs as a fraction of country liquor or bottled beer, so investors should separate narrative from profit pool. For consumers, more branded RTDs can mean predictable alcohol-by-volume labelling compared with ad hoc bar mixes, though price per millilitre of alcohol may stay premium.",
+      "Why should I care?",
+      "If you distribute beverages, negotiate refrigeration and age-verification logistics early because RTDs turn faster than case spirits. Bar and restaurant owners should watch excise circulars on premix taxation before listing new SKUs. Investors in listed alcobev names should track RTD revenue lines separately in management commentary rather than inferring from beer alone. Policy readers should compare Karnataka-style alcohol-in-beverage rules with states opening convenience formats. Watch new product filings, state excise notifications on RTD classification, and IWSR or company updates on repeat purchase rates.",
+    ],
+  },
+  {
+    slug: "bank-of-baroda-upi-mdr-reinvest-november-2026",
+    title: "Bank of Baroda will plough UPI merchant fees back into payments infrastructure",
+    summary:
+      "Bank of Baroda managing director Debadatta Chand said on 24 November 2026 that fee income from merchant discount rates on large UPI person-to-merchant transactions would be reinvested to improve UPI infrastructure and customer experience, framing NPCI's proposed charges as ecosystem spending rather than pure margin.",
+    category: "industry",
+    companyOrSector: "Payments / banking",
+    publishedAt: "2026-11-24T18:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bank-of-baroda-upi-mdr-reinvest-november-2026"),
+    keyTakeaways: [
+      "NPCI has proposed merchant discount rates of up to 0.4% on UPI P2M payments above ₹2,000, capped at ₹300 on transactions of ₹75,000 or more.",
+      "BoB's CEO said MDR revenue would be recycled into UPI infrastructure and customer experience upgrades rather than treated only as a cost to merchants.",
+      "UPI person-to-merchant payments were free for users and merchants for years before regulators began debating how to fund system scale.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's unified payments interface scaled on zero user fees and subsidised merchant acceptance, but banks and the National Payments Corporation of India now face rising switch, fraud and support costs as ticket sizes grow. In remarks reported on 24 November 2026, Bank of Baroda managing director and chief executive Debadatta Chand said income the bank earns from merchant discount rates on UPI would be reinvested to strengthen UPI infrastructure and customer experience. He characterised MDR as an opportunity to improve the digital payments stack, not solely a levy on shops. NPCI's proposal allows MDR of up to 0.4% on person-to-merchant UPI payments above ₹2,000, with a cap of ₹300 on transactions of ₹75,000 and above. MDR is the fee merchants pay to accept card or wallet payments; for years UPI P2M was treated as free at the point of sale, funded implicitly by banks and government promotion.",
+      "What does this mean?",
+      "If large public-sector banks recycle MDR into uptime, dispute resolution and onboarding tools, kirana and e-commerce merchants may see fewer outage complaints even while facing new line items on high-value bills. Small-ticket UPI, still the bulk of volume, may remain nominally free depending on final NPCI circulars, but electronics and jewellery shops crossing ₹2,000 routinely will need POS software updates. Competition among acquirers could shift from cashback wars to service-level guarantees. Households paying rent or tuition via UPI may notice slightly higher gross merchandise value charges passed through landlords or platforms.",
+      "Why should I care?",
+      "Merchants should model MDR on their average ticket before blaming banks for margin squeeze, and compare BoB's acquiring offer with private rivals on settlement speed. Finance teams at marketplaces must decide whether to absorb NPCI MDR or display it at checkout. Consumers making large UPI payments should read receipts for new fee lines. Watch the final NPCI board decision, other PSU bank statements on MDR use, and RBI commentary on payment system sustainability alongside the December monetary policy.",
+    ],
+  },
+  {
+    slug: "niif-infrastructure-bonds-november-2026",
+    title: "NIIF's infrastructure lender raised eight hundred crore rupees in fresh five-year bonds",
+    summary:
+      "NIIF Infrastructure Finance said on 24 November 2026 it raised ₹800 crore through five-year non-convertible debentures at 8.48% per annum, adding to a ₹1,800-crore bond sale earlier in November as infrastructure disbursements more than doubled in the first half of FY27.",
+    category: "industry",
+    companyOrSector: "Infrastructure finance",
+    publishedAt: "2026-11-24T18:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("niif-infrastructure-bonds-november-2026"),
+    keyTakeaways: [
+      "The NIIF-backed infrastructure debt financier priced ₹800 crore of five-year NCDs at 8.48% on 24 November 2026.",
+      "November bond fundraising totalled about ₹2,600 crore including an ₹1,800-crore issue earlier in the month.",
+      "Management said disbursements more than doubled in the first half of FY27 versus the year-earlier half as companies tapped bonds while bank loan rates climbed.",
+    ],
+    body: [
+      "What's going on here?",
+      "Infrastructure projects in India still lean on a mix of bank loans, bonds and government equity platforms. NIIF Infrastructure Finance, the infrastructure debt fund non-banking finance company anchored in the National Investment and Infrastructure Fund platform, told markets on 24 November 2026 it raised ₹800 crore via five-year non-convertible debentures at an 8.48% coupon. That followed an ₹1,800-crore bond issue earlier in November, taking the month's fundraising to about ₹2,600 crore. Chief executive Ajay Chaudhary said disbursements more than doubled in the first half of FY2026-27 compared with the same stretch of FY2025-26, linking the new liabilities to financing roads, renewables and utility assets as borrowing costs drift higher at banks after successive Reserve Bank of India rate actions.",
+      "What does this mean?",
+      "When IDFs print eight-handle coupons, project sponsors gain tenor and size that shorter bank lines may not offer, especially for brownfield assets with predictable cash flows. The rush to bonds this quarter mirrors wider corporate behaviour: as transmission banks passed policy hikes, issuers lock fixed rates before the December monetary policy committee. Doubling disbursements suggests the pipeline of bankable assets is moving, though it does not guarantee every greenfield toll road clears lenders' coverage tests. Pension and insurance buyers picking NIIF paper are betting on government-linked sponsorship and project selection discipline rather than retail deposit franchises.",
+      "Why should I care?",
+      "If you bid on PPP roads or power transmission, compare NIIF term sheets with bank syndicates on prepayment and covenant packages. Fixed-income investors should weigh 8.48% against similarly rated NBFC paper and liquidity in the secondary market. Macro readers can treat NIIF's pace as one real-time check on whether rate-sensitive infra finance is still open for business ahead of the fiscal year-end capex push. Watch NIIF's next disclosure on disbursement sectors, any RBI liquidity operations affecting bond demand, and the December policy rate decision's impact on new issue pricing.",
+    ],
+  },
+  {
     slug: "rural-confidence-gram-panchayat-grants-november-2026",
     title: "Village confidence is slipping as gram panchayat grants shrink",
     summary:
@@ -15072,6 +15192,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "auto-pli-disbursements-accelerate-fy27-november-2026": "policy",
+  "tamil-nadu-chennai-investment-mou-november-2026": "policy",
+  "india-alcobev-rtd-growth-november-2026": "markets",
+  "bank-of-baroda-upi-mdr-reinvest-november-2026": "policy",
+  "niif-infrastructure-bonds-november-2026": "markets",
   "rural-confidence-gram-panchayat-grants-november-2026": "policy",
   "india-aluminium-import-duty-budget-ask-november-2026": "policy",
   "rbi-sbi-mf-south-indian-bank-stake-november-2026": "policy",
