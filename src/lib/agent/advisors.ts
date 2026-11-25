@@ -172,8 +172,13 @@ export function newAdvisorThreadId(advisorId: AdvisorId) {
 export function aiHref(opts?: { agent?: AdvisorId; threadId?: string; inbox?: boolean }) {
   if (opts?.inbox) return "/ai";
   const params = new URLSearchParams();
-  if (opts?.agent) params.set("agent", opts.agent);
-  if (opts?.threadId) params.set("t", opts.threadId);
+  if (opts?.agent) {
+    params.set("agent", opts.agent);
+    // One durable thread per advisor — always pin ?t= so reload and server use the same id.
+    params.set("t", opts.threadId ?? durableAdvisorThreadId(opts.agent));
+  } else if (opts?.threadId) {
+    params.set("t", opts.threadId);
+  }
   const q = params.toString();
   return q ? `/ai?${q}` : "/ai";
 }

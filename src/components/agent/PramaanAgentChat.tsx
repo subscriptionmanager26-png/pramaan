@@ -67,18 +67,23 @@ export function PramaanAgentChat() {
   const isDraft = !hasAgent;
 
   const chatUrl = useCallback(
-    (tid: string) => aiHref({ agent: advisorId, threadId: tid === durableId ? undefined : tid }),
-    [advisorId, durableId],
+    (tid: string) => aiHref({ agent: advisorId, threadId: tid }),
+    [advisorId],
   );
 
   const authHeaders = useCallback(() => pocketedgeAuthHeaders(), []);
 
-  // Strip invalid / placeholder ?t=.
+  // Strip invalid / placeholder ?t=; bind one thread per advisor in the URL.
   useEffect(() => {
+    if (!hasAgent) return;
     if (threadParam === "new" || (threadParam && !isValidThreadId(threadParam))) {
-      router.replace(aiHref({ agent: hasAgent ? advisorId : undefined, inbox: !hasAgent }));
+      router.replace(aiHref({ agent: advisorId, threadId: durableId }));
+      return;
     }
-  }, [threadParam, router, hasAgent, advisorId]);
+    if (!threadParam) {
+      router.replace(aiHref({ agent: advisorId, threadId: durableId }));
+    }
+  }, [threadParam, router, hasAgent, advisorId, durableId]);
 
   const [ready, setReady] = useState(false);
   const [agentState, setAgentState] = useState<"unknown" | "active" | "disabled" | "error">("unknown");
@@ -509,7 +514,7 @@ export function PramaanAgentChat() {
       return false;
     }
     const sendThreadId = threadId || durableId;
-    const promotedFromDraft = isDraft || !threadParam;
+    const promotedFromDraft = isDraft;
     const optimisticId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
     const optimistic: AgentMessage = {
       id: optimisticId,

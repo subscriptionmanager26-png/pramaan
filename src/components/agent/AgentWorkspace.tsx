@@ -384,7 +384,7 @@ export function AgentWorkspace({ children }: { children: React.ReactNode }) {
       router.push(
         aiHref({
           agent: id,
-          threadId: latest?.id && latest.id !== durableAdvisorThreadId(id) ? latest.id : undefined,
+          threadId: latest?.id && latest.id !== durableAdvisorThreadId(id) ? latest.id : durableAdvisorThreadId(id),
         }),
       );
       setSidebarOpen(false);
