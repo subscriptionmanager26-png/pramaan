@@ -24,7 +24,7 @@ import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
 import { mergeChatMessages } from "@/lib/agent/merge-chat-messages";
-import { isTimeoutFailure, stripGhostTurns } from "@/lib/agent/sanitize-chat-messages";
+import { isGhostTurn, isTimeoutFailure, stripGhostTurns } from "@/lib/agent/sanitize-chat-messages";
 import { reportAgentClientEvent } from "@/lib/agent/client-telemetry";
 import { messageFromFailedResponse, parseJsonResponse } from "@/lib/agent/parse-json-response";
 import {
@@ -935,6 +935,7 @@ export function PramaanAgentChat() {
                   <ChatTurn
                     key={message.id}
                     message={message}
+                    advisor={advisor}
                     orders={orders}
                     onDecide={onDecide}
                     artifacts={artifactsByMessage[message.id]}
