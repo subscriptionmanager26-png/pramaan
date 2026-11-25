@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "phonepe-ipo-restart-november-2026",
+    title: "PhonePe put its IPO plans back on the table for early next year",
+    summary:
+      "Reporting on 25 November 2026 said Walmart-backed PhonePe restarted work toward a listing in the first quarter of calendar 2027, targeting a $12 billion to $15 billion valuation and a ₹13,000 crore to ₹15,000 crore offer-for-sale that would be entirely secondary.",
+    category: "industry",
+    companyOrSector: "Digital payments / fintech",
+    publishedAt: "2026-11-25T18:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("phonepe-ipo-restart-november-2026"),
+    keyTakeaways: [
+      "PhonePe paused its float in March 2026 after securing SEBI approval in January, citing global market volatility; sources on 25 November said filing could resume within 30 to 45 days.",
+      "The planned issue remains a secondary share sale of roughly ₹13,000 crore to ₹15,000 crore, with Walmart expected to trim its stake by about 12% while some financial backers exit.",
+      "PhonePe processed about 11.4 billion of India's 25.4 billion UPI transactions in October 2026, yet standard wallet transfers still carry no merchant fee under RBI rules.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's largest digital payments platform is returning to the IPO path it shelved earlier in the year. PhonePe Ltd, majority-owned by US retailer Walmart Inc, had won Securities and Exchange Board of India clearance in January 2026 but postponed a debut that March when geopolitical shocks rattled global equities. On 25 November 2026, Reuters and local business press cited people involved in the talks saying the Bengaluru company is again preparing draft papers, with a potential market listing in the first quarter of calendar 2027. The sources placed the intended valuation band at $12 billion to $15 billion and the offer size at ₹13,000 crore to ₹15,000 crore through an offer-for-sale of existing shares. Walmart had outlined an approximate 12% stake reduction in the earlier draft prospectus, while backers such as Tiger Global and Microsoft were flagged as full or partial sellers in that filing.",
+      "What does this mean?",
+      "A pure secondary IPO lets early investors cash out without PhonePe raising fresh equity for expansion, so the market will judge the price on future cash flow from payments, insurance distribution and lending referrals rather than on new capital deployment. PhonePe's scale in Unified Payments Interface remains central: it handled a large share of October's national transaction count while operating under rules that bar user fees on basic UPI transfers. Management has said profit at the group level turned positive in the first half excluding employee stock costs, but any final fee policy on large merchant UPI tickets stays politically sensitive. A successful float would reopen the window for other consumer fintech listings after Paytm's difficult post-2021 debut, while failure would push private holders to negotiate more trade sales.",
+      "Why should I care?",
+      "If you own consumer internet or bank shares, a PhonePe listing sets the next public benchmark for UPI economics and cross-sell margins. Merchants should not assume UPI pricing will change because of the IPO, but the prospectus will spell out reliance on government incentives and lending commissions. Employees at rival payment apps will watch whether bankers can clear the band without heavy anchor discounts in a month when foreign funds have been buying Indian equities again. Track an updated draft red herring prospectus on the SEBI site, Walmart's disclosed stake after listing, and whether regulators revive the deferred merchant fee proposal on high-value UPI payments.",
+    ],
+  },
+  {
+    slug: "shadowfax-wefast-borzo-acquisition-november-2026",
+    title: "Shadowfax bought WeFast and the Borzo brand to grow city deliveries",
+    summary:
+      "Shadowfax Technologies told exchanges on 24 November 2026 it will pay $2.5 million in cash for technology, trademarks and business assets behind the WeFast on-demand courier app, including the Borzo trademark in India.",
+    category: "industry",
+    companyOrSector: "Hyperlocal logistics",
+    publishedAt: "2026-11-25T17:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("shadowfax-wefast-borzo-acquisition-november-2026"),
+    keyTakeaways: [
+      "The deal covers Incrin's Indian software and intellectual property, a technology licence, the Borzo mark, and selected WeFast India contracts and equipment, without buying equity in the sellers.",
+      "Shadowfax described organised intra-city freight as growing 40% to 50% annually as shops and consumers demand tracked, priced deliveries.",
+      "Payments split across a $2.05 million Cyprus entity package, a rupee tranche for the WeFast trademark, and a $450,000 asset purchase by subsidiary Shadowfax Logistics.",
+    ],
+    body: [
+      "What's going on here?",
+      "Quick commerce and distributor deliveries are consolidating as burned-out apps sell code and brands instead of fighting alone for riders. Shadowfax Technologies Ltd, a Bengaluru logistics firm listed on Indian exchanges, filed on 24 November 2026 that its board approved two asset purchase agreements for the WeFast platform and related Borzo branding in India. The headline cash consideration is $2.5 million. Roughly $2.05 million goes to Incrin, registered in Cyprus, for Indian technology, software, intellectual property and a licence to remaining Incrin tech, including about $50,000 attributed to the Borzo trademark locally. A separate rupee payment buys the WeFast trademark from WeFast India, while wholly owned Shadowfax Logistics pays the rupee equivalent of $450,000 for operating assets such as contracts, equipment, domain names and databases, with named staff expected to move across.",
+      "What does this mean?",
+      "Buying assets rather than shares lets Shadowfax avoid inheriting legacy liabilities while still picking up an app user base of shopkeepers and individuals booking intra-city trips. Management framed the organised slice of urban goods transport as expanding at 40% to 50% a year, faster than long-haul trucking because small retailers digitise dispatch. Consolidation pressure is visible across the segment: rivals already appear on partner lists for larger platforms, and thin purchase prices signal distress sales after overseas-funded courier experiments retrenched. For Shadowfax shareholders, integration costs and rider overlap in the same pin codes will matter more than the headline dollar tag.",
+      "Why should I care?",
+      "If you run a neighbourhood store or pharmacy, more combined networks can mean steadier ETAs and sharper price competition on same-day runs. Investors in listed logistics names should compare organic rider growth with tuck-in trademarks that may not move revenue for several quarters. Gig workers should watch whether merged apps cut incentive stacks in cities where both brands once paid separately. Track exchange disclosures when the deals close, Shadowfax's rider count commentary on the next earnings call, and whether Borzo branding survives on consumer marketing or folds into the parent app.",
+    ],
+  },
+  {
+    slug: "wipro-bp-finance-operations-november-2026",
+    title: "Wipro will run finance operations for BP and absorb three thousand staff",
+    summary:
+      "Wipro Ltd said on 25 November 2026 it signed a partnership with BP PLC under which about 3,000 employees supporting the UK energy major's finance functions in India, Hungary and Malaysia will transfer to Wipro, with the new model targeted from 2027.",
+    category: "industry",
+    companyOrSector: "IT services / global capability centres",
+    publishedAt: "2026-11-25T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("wipro-bp-finance-operations-november-2026"),
+    keyTakeaways: [
+      "BP retains accountability for standards, controls, data and technology governance; PwC will provide controls oversight under the announced structure.",
+      "Wipro pledged artificial intelligence, automation and process redesign to lift efficiency across accounts payable, reporting and related workflows.",
+      "The switch is expected to take effect in 2027 subject to conditions, following a pattern of energy and industrial majors outsourcing captive finance teams to Indian IT vendors.",
+    ],
+    body: [
+      "What's going on here?",
+      "Global oil and gas producers are outsourcing back offices that used to sit entirely inside the corporation. Wipro Ltd, among India's largest IT services exporters, announced on 25 November 2026 a strategic supplier partnership with London-listed BP PLC to run a large slice of the client's finance operations. Roughly 3,000 BP employees who today support finance processes in India, Hungary and Malaysia are slated to join Wipro, which will apply automation and artificial intelligence tools to the work. BP's chief financial officer said the arrangement is meant to simplify processes and deepen technology use while BP keeps responsibility for governance standards. Professional services firm PwC was named as controls overseer. Wipro said the operating model should begin in 2027 once conditions are met.",
+      "What does this mean?",
+      "Employee transfer deals add headcount and long-cycle revenue to IT vendors without a traditional time-and-materials contract re-bid every year, but they also bind Wipro to service levels on regulated reporting. Finance shared-services centres already cluster in Indian cities; absorbing BP staff extends Wipro's bench in accounting robotics and enterprise resource planning integration. Clients save fixed overhead and convert wage bills into vendor fees that can flex with automation gains. For workers, the shift changes the employer of record while keeping desks in place, a model other European energy and mining firms have copied when margins tighten. Competitors Tata Consultancy Services, Infosys and HCLTech will pitch similar takeovers to multinationals reviewing captive costs after the AI wave.",
+      "Why should I care?",
+      "If you invest in Indian IT stocks, multi-year finance transfers support utilisation when discretionary software projects slow. Corporate finance leaders elsewhere should expect vendors to cite the BP deal when pricing bundled AI maintenance. Policy makers tracking employment should note that roles move across balance sheets rather than disappear, which still counts toward services exports. Watch Wipro's margin commentary on large deals, BP filings on restructuring charges, and whether regulators in Hungary or Malaysia sign off on the transfer timetable.",
+    ],
+  },
+  {
+    slug: "suzlon-thoothukudi-blade-factory-november-2026",
+    title: "Suzlon broke ground on a gigawatt wind blade plant in Tamil Nadu",
+    summary:
+      "Suzlon Energy said on 25 November 2026 that Tamil Nadu Chief Minister C Joseph Vijay laid the foundation stone for a ₹200 crore, one gigawatt smart blade factory at Thoothukudi that should employ more than a thousand people, mostly from nearby villages.",
+    category: "industry",
+    companyOrSector: "Wind manufacturing",
+    publishedAt: "2026-11-25T17:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("suzlon-thoothukudi-blade-factory-november-2026"),
+    keyTakeaways: [
+      "The site will build blades up to ninety-five metres for Suzlon's S175/5MW turbine class and is scheduled to finish within twelve months on renewable power.",
+      "Management ties the unit to a broader ₹550 crore plan for three artificial-intelligence-enabled blade factories across Tamil Nadu, Gujarat and Karnataka.",
+      "Suzlon's disclosed order book stood near six gigawatts as domestic wind installations pick up along India's coastline and industrial corridors.",
+    ],
+    body: [
+      "What's going on here?",
+      "Wind turbine makers are adding coastal capacity to match larger machines and state-level renewable targets. Suzlon Energy Ltd, a Pune-based wind equipment company, said on 25 November 2026 that Tamil Nadu's chief minister laid the foundation stone for a one gigawatt blade manufacturing plant in Thoothukudi district. The project budget is about ₹200 crore with a twelve-month construction timeline. Blades up to ninety-five metres long will feed Suzlon's five megawatt class turbines. The company plans to run the shop on renewable electricity and hire more than a thousand skilled workers, targeting eighty percent recruitment from rural communities around the site. The plant becomes Suzlon's third domestic blade facility alongside two existing units in Coimbatore.",
+      "What does this mean?",
+      "Longer blades lift energy capture per tower but need dedicated factories near ports and windy states to control logistics cost. Tamil Nadu ranks among India's largest wind markets, so local fabrication reduces the pain of hauling oversize loads on highways. Suzlon's co-founder has spoken about ₹550 crore of investment across three smart blade sites to clear a backlog near six gigawatts. States compete for such factories because they anchor suppliers, training institutes and service jobs beyond the assembly line. Rivals such as Siemens Gamesa and Inox Wind face the same pressure to localise critical components as tariffs and content rules tighten.",
+      "Why should I care?",
+      "If you develop wind projects in the south, shorter blade delivery routes can protect commissioning schedules. Investors in renewables should tie new factory announcements to actual order inflows rather than headline gigawatt plaques. Local communities gain payroll that is less cyclical than farm income when the monsoon fails. Track construction milestones in Thoothukudi, state transmission clearances for new wind parks, and whether Suzlon's next quarterly update shows blade capacity ramping in sync with turbine shipments.",
+    ],
+  },
+  {
+    slug: "pnb-deutsche-acquisition-financing-mou-november-2026",
+    title: "Punjab National Bank teamed up with Deutsche Bank on takeover loans",
+    summary:
+      "Punjab National Bank told exchanges on 25 November 2026 it signed a memorandum of understanding with Deutsche Bank AG to collaborate on acquisition financing in India through multiple lending structures.",
+    category: "industry",
+    companyOrSector: "Banking / M&A credit",
+    publishedAt: "2026-11-25T17:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pnb-deutsche-acquisition-financing-mou-november-2026"),
+    keyTakeaways: [
+      "The MoU covers cooperation on acquisition financing but does not by itself commit either bank to a specific deal or size.",
+      "Indian corporate activity has featured large control transactions and asset sales, including cross-border private equity exits that need syndicated rupee and foreign currency loans.",
+      "Public lenders such as PNB are pairing with global banks to share risk and bring offshore distribution to complex borrower packages.",
+    ],
+    body: [
+      "What's going on here?",
+      "Big Indian takeovers still need bank clubs that can stitch rupee term loans, guarantees and offshore tranches. Punjab National Bank, one of India's largest government-owned lenders, disclosed to stock exchanges on 25 November 2026 that it signed a memorandum of understanding with Germany's Deutsche Bank AG to work together on acquisition financing in India. The filing said the banks may cooperate through multiple modes but offered no deal list, fee split or lending cap. The announcement landed the same week Indian markets digested large asset transfers, including private equity exits and steel sector consolidation filings, that typically draw months of lender diligence before funds flow.",
+      "What does this mean?",
+      "MoUs are framework handshakes: they let relationship teams share pipelines and risk appetite before a borrower mandates a lead arranger. For PNB, tying up with a global house can help place foreign currency legs and satisfy borrowers who want a single coordination point across jurisdictions. Deutsche Bank gains distribution into state-owned lender balance sheets without opening every rural branch itself. In a year of heavy IPO and secondary supply, acquisition finance remains a separate lane where club sizes and covenant packages dictate whether promoters can close control deals on schedule. Until a term sheet emerges, the pact is a signalling move to corporate advisors hunting lenders for the next control change.",
+      "Why should I care?",
+      "If you advise on mergers or buyouts, a fresh PNB-Deutsche channel adds another syndicate option when pricing leverage loans. Investors in either bank should treat the news as relationship building, not immediate fee income. Borrowers waiting on regulatory approvals for announced conglomerate deals should expect lender engagement to intensify once definitive agreements are public. Watch for exchange intimations when the banks convert the MoU into a specific facility, RBI guidelines on consortium lending, and whether similar tie-ups appear among other public sector banks seeking offshore partners.",
+    ],
+  },
+  {
     slug: "lt-gujarat-bess-order-november-2026",
     title: "L&T landed a multibillion-rupee battery storage contract in Gujarat",
     summary:
@@ -15288,6 +15408,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "phonepe-ipo-restart-november-2026": "markets",
+  "shadowfax-wefast-borzo-acquisition-november-2026": "companies",
+  "wipro-bp-finance-operations-november-2026": "companies",
+  "suzlon-thoothukudi-blade-factory-november-2026": "companies",
+  "pnb-deutsche-acquisition-financing-mou-november-2026": "policy",
   "lt-gujarat-bess-order-november-2026": "companies",
   "brigade-autograph-floris-sales-november-2026": "markets",
   "rmc-switchgears-maharashtra-grid-loi-november-2026": "companies",

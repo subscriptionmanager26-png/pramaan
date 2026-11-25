@@ -2950,8 +2950,56 @@ def niif_infrastructure_bonds(d: ImageDraw.ImageDraw) -> None:
   d.polygon([(820, 180), (900, 240), (820, 300)], fill=YELLOW)
 
 
+def phonepe_ipo_restart(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 260, 460, 520], radius=32, fill=BLUE)
+    d.ellipse([220, 340, 360, 440], fill=YELLOW)
+    for i, h in enumerate([90, 140, 200, 260, 300]):
+        x = 700 + i * 75
+        d.rectangle([x, 520 - h, x + 52, 520], fill=[RED, GOLD, BLUE, YELLOW, RED][i])
+    d.polygon([(980, 200), (1060, 260), (980, 320)], fill=GOLD)
+
+
+def shadowfax_wefast_buy(d: ImageDraw.ImageDraw) -> None:
+    for i, x in enumerate([140, 260, 380]):
+        d.polygon([(x + 40, 520), (x, 420), (x + 80, 420)], fill=[RED, BLUE, YELLOW][i])
+    d.line([(640, 400), (1080, 400)], fill=GOLD, width=5)
+    for i in range(4):
+        d.ellipse([720 + i * 90, 280, 780 + i * 90, 340], fill=[BLUE, YELLOW, RED, GOLD][i])
+
+
+def wipro_bp_finance_ops(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 280, 480, 520], fill=BLUE)
+    for y in range(320, 480, 40):
+        d.rectangle([160, y, 440, y + 22], fill=[CREAM, YELLOW, CREAM, YELLOW][(y // 40) % 4])
+    d.rectangle([640, 300, 1100, 360], fill=RED)
+    d.rectangle([640, 400, 1050, 460], fill=YELLOW)
+    d.polygon([(900, 220), (1040, 260), (900, 300)], fill=GOLD)
+
+
+def suzlon_thoothukudi_blade(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(300, 520), (340, 180), (380, 520)], fill=BLUE)
+    d.polygon([(360, 520), (400, 200), (440, 520)], fill=RED)
+    d.rectangle([200, 480, 440, 520], fill=YELLOW)
+    for i, h in enumerate([100, 150, 200]):
+        x = 720 + i * 100
+        d.rectangle([x, 520 - h, x + 70, 520], fill=[GOLD, RED, BLUE][i])
+
+
+def pnb_deutsche_acquisition_financing(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 320, 460, 520], fill=RED)
+    d.rectangle([200, 260, 400, 320], fill=GOLD)
+    d.line([(700, 520), (700, 300)], fill=BLUE, width=8)
+    d.line([(700, 400), (1100, 400)], fill=GOLD, width=5)
+    d.polygon([(980, 340), (1100, 400), (980, 460)], fill=YELLOW)
+
+
 if __name__ == "__main__":
     main()
+    save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
+    save("shadowfax-wefast-borzo-acquisition-november-2026", shadowfax_wefast_buy)
+    save("wipro-bp-finance-operations-november-2026", wipro_bp_finance_ops)
+    save("suzlon-thoothukudi-blade-factory-november-2026", suzlon_thoothukudi_blade)
+    save("pnb-deutsche-acquisition-financing-mou-november-2026", pnb_deutsche_acquisition_financing)
     save("rural-confidence-gram-panchayat-grants-november-2026", rural_confidence_gram_panchayat)
     save("india-aluminium-import-duty-budget-ask-november-2026", india_aluminium_import_duty)
     save("rbi-sbi-mf-south-indian-bank-stake-november-2026", rbi_sbi_mf_south_indian_bank)
