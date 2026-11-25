@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "lt-gujarat-bess-order-november-2026",
+    title: "L&T landed a multibillion-rupee battery storage contract in Gujarat",
+    summary:
+      "Larsen & Toubro said on 25 November 2026 it won a significant domestic order to build a battery energy storage system in Gujarat, sized in the ₹1,000 crore to ₹2,500 crore band typical for its large power jobs.",
+    category: "industry",
+    companyOrSector: "Grid storage / power EPC",
+    publishedAt: "2026-11-25T11:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lt-gujarat-bess-order-november-2026"),
+    keyTakeaways: [
+      "The exchange intimation on 25 November 2026 placed the Gujarat BESS order in L&T's ₹1,000 crore to ₹2,500 crore category.",
+      "Utility-scale storage lets solar-heavy states shift daytime power into evening peaks without relying only on gas or imports.",
+      "L&T has been stacking renewable EPC and storage mandates as discoms chase round-the-clock supply and voltage stability.",
+    ],
+    body: [
+      "What's going on here?",
+      "States that add solar and wind quickly need batteries or fast-start thermal plants to keep lights on after sunset. Larsen & Toubro Ltd, India's largest engineering and construction house by market value, told stock exchanges on 25 November 2026 that it had received a significant order for a battery energy storage system in Gujarat. The company classifies such contracts in a ₹1,000 crore to ₹2,500 crore band, a bracket it uses when disclosing large domestic power jobs without naming the buyer or exact scope. The announcement arrived the same morning Indian grid operators were managing autumn peak loads and as several utilities were tendering storage alongside new solar parks.",
+      "What does this mean?",
+      "A gigawatt-scale BESS ticket changes the economics of renewable purchase obligations. Utilities can charge batteries when power is cheap and discharge when industrial tariffs spike, which can reduce reliance on spot purchases and diesel backup. For EPC firms, storage packages bundle civil works, power electronics, fire safety and long-term service contracts, so execution risk sits with a handful of integrators that can certify packs for grid codes. Gujarat already hosts large solar clusters; pairing fresh BESS capacity there lowers curtailment risk that developers complain about when transmission lags generation. Competitors such as Tata Power, Adani and standalone storage suppliers will watch whether this order is tied to a specific discom or a merchant storage park.",
+      "Why should I care?",
+      "If you run a factory on time-of-day tariffs in western India, more grid battery depth can smooth evening ramps and may eventually feed into tariff design. Renewable developers bidding into state tenders should check whether BESS is bundled with evacuation lines or sold separately, because that affects project returns. Investors in power EPC names should compare disclosed storage backlogs with transmission orders, not lump them into generic infra revenue. Track L&T's next segment disclosures, Gujarat utility storage tenders, and whether the ministry counts this capacity toward national storage targets.",
+    ],
+  },
+  {
+    slug: "brigade-autograph-floris-sales-november-2026",
+    title: "Brigade sold sixteen hundred crore rupees of homes in one launch weekend",
+    summary:
+      "Brigade Enterprises said on 25 November 2026 that the first residential phase of Brigade Autograph, branded Floris, booked about ₹1,600 crore of sales across its opening weekend, while a new Secunderabad land buy adds roughly ₹1,000 crore of revenue potential.",
+    category: "industry",
+    companyOrSector: "Residential real estate",
+    publishedAt: "2026-11-25T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("brigade-autograph-floris-sales-november-2026"),
+    keyTakeaways: [
+      "The Floris phase within Brigade Autograph reportedly generated about ₹1,600 crore of sales over its launch weekend, according to exchange disclosures cited in market reporting on 25 November 2026.",
+      "Brigade Autograph carries a gross development value of about ₹12,000 crore across roughly eight million square feet of planned commercial and residential space.",
+      "The developer also picked up a 2.25-acre Secunderabad parcel for about ₹180 crore, flagged at roughly ₹1,000 crore of saleable revenue potential.",
+    ],
+    body: [
+      "What's going on here?",
+      "Premium housing launches still clear large cheques when buyers believe the location and builder brand will hold value through higher loan rates. Brigade Enterprises Ltd, a Bangalore-based developer listed on the National Stock Exchange, updated investors on 25 November 2026 after the first residential slice of its Brigade Autograph project, marketed as Floris, went to market. Coverage tied to the filing said the opening weekend pulled about ₹1,600 crore of bookings. Brigade Autograph is a mixed-use programme with a gross development value of roughly ₹12,000 crore and close to eight million square feet of saleable commercial and residential area, to be released in phases over coming quarters. Separately, Brigade said it acquired about 2.25 acres in Secunderabad for close to ₹180 crore to seed another premium housing block with management citing roughly ₹1,000 crore of revenue potential.",
+      "What does this mean?",
+      "When a single weekend crosses a thousand crore rupees, it is a liquidity signal from high-income buyers and investors who can still stitch together down payments and home loans despite elevated borrowing costs. That is different from broad mortgage-led affordable demand, which remains sensitive to every Reserve Bank rate step. For developers, a strong launch de-risks construction finance and lets them stagger commercial wings inside the same master plan. Land purchases in Hyderabad's twin city show confidence that South Indian IT payrolls will keep absorbing upper-mid housing even as resale inventory lingers elsewhere. Rivals will watch whether Brigade converts allotments into registered sales without heavy post-booking cancellations.",
+      "Why should I care?",
+      "If you are buying an apartment in Bengaluru or Hyderabad, compare launch payment plans against ready inventory because aggressive weekend pricing sometimes leaves less room to negotiate on carpet rates later. Cement, tile and elevator suppliers benefit when a listed developer locks phase-one cash flows. Bank lending teams should watch how much of the ₹1,600 crore is financed versus self-funded, because that shapes disbursement timing. Track Brigade's quarterly sold-unsold tables, registration data in the project micro-market, and whether peer launches in the same ticket size match or lag this pace.",
+    ],
+  },
+  {
+    slug: "rmc-switchgears-maharashtra-grid-loi-november-2026",
+    title: "RMC Switchgears won a five-hundred-crore Maharashtra power grid letter of intent",
+    summary:
+      "RMC Switchgears Ltd said on 25 November 2026 it received a letter of intent worth an estimated ₹521.84 crore for turnkey distribution infrastructure in Maharashtra, covering new and upgraded substations and high-tension lines under an Asian Development Bank-funded programme.",
+    category: "industry",
+    companyOrSector: "Power distribution EPC",
+    publishedAt: "2026-11-25T11:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rmc-switchgears-maharashtra-grid-loi-november-2026"),
+    keyTakeaways: [
+      "The Jaipur-based EPC firm reported a ₹521.84 crore estimated basic order cost for distribution strengthening works on 25 November 2026.",
+      "Scope spans new substations, transformer additions, high-tension lines, civil works and performance guarantees across a utility-grade package.",
+      "Management linked the programme to Asian Development Bank funding and prior distribution jobs in Jalna and Satara.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's weakest power links are often the last mile: overloaded feeders, ageing transformers and substations that cannot take new factories or housing colonies. RMC Switchgears Ltd, a Jaipur-based electrical engineering and EPC company, announced on 25 November 2026 that it had received a letter of intent for distribution infrastructure and system-strengthening work in Maharashtra. The company pegged the basic order at about ₹521.84 crore. The package includes building and augmenting substations, adding power transformers, laying high-tension lines, civil construction, testing and commissioning, with performance guarantees on equipment. In its statement, RMC noted the programme sits under Asian Development Bank financing and builds on its earlier distribution assignments in Jalna and Satara.",
+      "What does this mean?",
+      "Letters of intent precede formal contracts but show regulators and multilateral lenders are still routing rural and semi-urban modernisation through mid-sized domestic EPC firms, not only the largest conglomerates. For Maharashtra's discoms, the work should cut technical losses and voltage complaints in the served circles once energised, though execution and right-of-way delays remain the usual risks. RMC must lock transformer lead times and subcontractor capacity; cost overruns on utility jobs often trace to late land possession or weather, not equipment prices alone. Investors should treat the headline number as aspirational until a signed contract and milestone billing schedule appear.",
+      "Why should I care?",
+      "If you run a plant or cold chain in the project geography, fewer unplanned outages directly protect throughput and perishable stock. Competitors in switchgear and substation EPC should expect tighter bidding on the next ADB tranche. Lenders to RMC will watch working capital once construction starts because distribution jobs pay on milestone certification, not upfront. Track the company's exchange filing when a definitive agreement is signed, Maharashtra discom progress reports, and whether ADB publishes independent reviews of the wider distribution reform programme.",
+    ],
+  },
+  {
+    slug: "hyundai-india-december-price-hike-november-2026",
+    title: "Hyundai will raise India car prices by up to eight thousand rupees in December",
+    summary:
+      "Hyundai Motor India Ltd said on 25 November 2026 it will increase prices by up to ₹8,000 across select models and trims from 1 December 2026, with the exact change varying by variant, following Tata Motors' modest December hike on cars and SUVs.",
+    category: "industry",
+    companyOrSector: "Passenger vehicles",
+    publishedAt: "2026-11-25T10:55:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hyundai-india-december-price-hike-november-2026"),
+    keyTakeaways: [
+      "The automaker said the revision applies from 1 December 2026 and could reach ₹8,000 depending on model and trim.",
+      "Hyundai reported record monthly wholesales earlier in November, indicating strong festive showroom traffic before the price reset.",
+      "Tata Motors had announced a volume-weighted average increase of about 0.5% from the same effective date a day earlier.",
+    ],
+    body: [
+      "What's going on here?",
+      "Carmakers are trying to recover metal, freight and currency costs without scaring buyers who already face stiff loan rates. Hyundai Motor India Ltd, the country's second-largest passenger vehicle seller, told exchanges and local media on 25 November 2026 that it will raise prices on select models and trims by up to ₹8,000, effective 1 December 2026. The company said the extent of the change will vary by vehicle. The move follows Tata Motors Passenger Vehicles' notice on 24 November of a small portfolio-wide increase averaging about half a percent from the same date. Hyundai had earlier reported strong October and festive wholesale numbers, suggesting dealers were clearing lots before the sticker reset.",
+      "What does this mean?",
+      "An ₹8,000 cap is meaningful on compact cars where discounts had already thinned during the festival rush, but it is still smaller than the commodity swings OEMs flagged in recent earnings calls. Dealers must update insurance quotes and loan calculators before December registrations. Rivals Maruti Suzuki and Mahindra & Mahindra may mirror the timing if their cost hedges roll off into the final quarter. For households, the practical impact is on on-road deals and exchange bonuses rather than a uniform list jump, because Hyundai's note applies by trim. Fleet buyers should re-tender leases that assumed November pricing.",
+      "Why should I care?",
+      "If you planned a year-end purchase, compare quotes this week against December on-road sheets and check whether finance subventions shrink after prices reset. Spare-part and accessory sellers tied to Hyundai volumes should expect a short booking spike before 1 December. Investors should read the hike alongside registration data, not share-price moves on announcement day. Watch Maruti and Mahindra circulars, Hyundai's December wholesale release, and commentary on discounting at the January results season.",
+    ],
+  },
+  {
     slug: "auto-pli-disbursements-accelerate-fy27-november-2026",
     title: "Auto PLI payouts doubled in seven months of this fiscal year",
     summary:
@@ -15192,6 +15288,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "lt-gujarat-bess-order-november-2026": "companies",
+  "brigade-autograph-floris-sales-november-2026": "markets",
+  "rmc-switchgears-maharashtra-grid-loi-november-2026": "companies",
+  "hyundai-india-december-price-hike-november-2026": "markets",
   "auto-pli-disbursements-accelerate-fy27-november-2026": "policy",
   "tamil-nadu-chennai-investment-mou-november-2026": "policy",
   "india-alcobev-rtd-growth-november-2026": "markets",
