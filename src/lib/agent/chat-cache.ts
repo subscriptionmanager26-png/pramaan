@@ -11,7 +11,7 @@ type CachePayload = {
 const memorySeeds = new Map<string, { updatedAt: number; messages: AgentMessage[] }>();
 
 function keyFor(userId: string, threadId: string) {
-  return `pe:agent-chat:v1:${userId}:${threadId}`;
+  return `pe:agent-chat:v2:${userId}:${threadId}`;
 }
 
 export function readChatCache(userId: string, threadId: string): AgentMessage[] | null {

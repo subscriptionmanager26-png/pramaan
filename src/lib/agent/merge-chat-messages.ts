@@ -1,12 +1,14 @@
 import type { AgentMessage } from "@/lib/agent/types";
+import { stripGhostTurns } from "@/lib/agent/sanitize-chat-messages";
 
 /**
  * Reconcile a server message list with local UI state.
  * Prevents optimistic / in-flight turns from disappearing when chat-state lags the POST.
  */
 export function mergeChatMessages(prev: AgentMessage[], server: AgentMessage[]): AgentMessage[] {
-  if (!server.length && prev.length) return prev;
-  if (!prev.length) return server;
+  const prevClean = stripGhostTurns(prev);
+  if (!server.length && prevClean.length) return prevClean;
+  if (!prevClean.length) return server;
 
   const serverById = new Map(server.map((m) => [m.id, m]));
   const serverClientIds = new Set(
@@ -15,7 +17,7 @@ export function mergeChatMessages(prev: AgentMessage[], server: AgentMessage[]):
 
   const localClientKey = (m: AgentMessage) => m.clientSendId || (m.id.startsWith("local-") ? m.id : "");
 
-  const carry = prev.filter((m) => {
+  const carry = prevClean.filter((m) => {
     if (serverById.has(m.id)) return false;
     const key = localClientKey(m);
     if (key && serverClientIds.has(key)) return false;
@@ -25,7 +27,7 @@ export function mergeChatMessages(prev: AgentMessage[], server: AgentMessage[]):
   });
 
   const merged = server.map((s) => {
-    const local = prev.find((p) => p.id === s.id);
+    const local = prevClean.find((p) => p.id === s.id);
     if (!local || local.status !== "working" || s.status !== "working") return s;
     const localSteps = local.steps?.length ?? 0;
     const serverSteps = s.steps?.length ?? 0;
