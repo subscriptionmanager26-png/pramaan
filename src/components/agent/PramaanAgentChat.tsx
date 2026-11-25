@@ -308,6 +308,121 @@ export function PramaanAgentChat() {
     }, 8000);
     return () => window.clearInterval(id);
   }, [working, authHeaders, loadThread, threadId]);
+
+  const streamResumeRef = useRef<Set<string>>(new Set());
+  const healFailedRef = useRef<Set<string>>(new Set());
+
+  /** Drop cached timeout failures and attach SSE for in-flight server jobs after refresh. */
+  useEffect(() => {
+    if (!threadId || !ready || isDraft) return;
+    if (pendingSendRef.current) return;
+
+    const failedTimeouts = messages.filter(
+      (m) =>
+        m.status === "failed" &&
+        !healFailedRef.current.has(m.id) &&
+        /send timed out|timed out/i.test(m.error ?? ""),
+    );
+    const resumeIds = messages.filter(
+      (m) => m.status === "working" && !m.id.startsWith("local-") && !streamResumeRef.current.has(m.id),
+    );
+    if (!failedTimeouts.length && !resumeIds.length) return;
+
+    void (async () => {
+      const headers = await authHeaders();
+      for (const stale of failedTimeouts) {
+        healFailedRef.current.add(stale.id);
+        const clientSendId =
+          stale.clientSendId || (stale.id.startsWith("local-") ? stale.id : "");
+        const match =
+          clientSendId.length > 0
+            ? await fetch(
+                `/api/agent/messages?threadId=${encodeURIComponent(threadId)}&clientSendId=${encodeURIComponent(clientSendId)}&limit=3`,
+                { headers, cache: "no-store" },
+              )
+                .then(async (r) =>
+                  r.ok ? (((await r.json()).messages as AgentMessage[]) || [])[0] : undefined,
+                )
+                .catch(() => undefined)
+            : undefined;
+        if (match) {
+          setError(null);
+          setMessages((m) => {
+            const next = [match, ...m.filter((x) => x.id !== stale.id && x.id !== match.id)];
+            persistMessages(threadId, next);
+            return next;
+          });
+          upsertThread({
+            id: threadId,
+            title:
+              threads.find((t) => t.id === threadId)?.title ??
+              (match.text.length > 72 ? `${match.text.slice(0, 72)}…` : match.text) ||
+              "Chat",
+            updatedAt: new Date().toISOString(),
+            working: match.status === "working",
+          });
+          if (match.status === "working") {
+            streamResumeRef.current.add(match.id);
+            try {
+              setBusy(true);
+              const final = await streamMessage(match.id, headers);
+              setMessages((m) => {
+                const next = m.map((x) => (x.id === final.id ? final : x));
+                persistMessages(threadId, next);
+                return next;
+              });
+            } catch {
+              // poll loop will keep reconciling
+            } finally {
+              setBusy(false);
+            }
+          }
+        } else {
+          setMessages((m) => {
+            const next = m.filter((x) => x.id !== stale.id);
+            persistMessages(threadId, next);
+            return next;
+          });
+          setError(null);
+        }
+      }
+
+      for (const msg of resumeIds) {
+        streamResumeRef.current.add(msg.id);
+        try {
+          setBusy(true);
+          const final = await streamMessage(msg.id, headers);
+          setMessages((m) => {
+            const next = m.map((x) => (x.id === final.id ? final : x));
+            persistMessages(threadId, next);
+            return next;
+          });
+          upsertThread({
+            id: threadId,
+            title:
+              threads.find((t) => t.id === threadId)?.title ??
+              (msg.text.length > 72 ? `${msg.text.slice(0, 72)}…` : msg.text) ||
+              "Chat",
+            updatedAt: new Date().toISOString(),
+            working: final.status === "working",
+          });
+        } catch {
+          // keep polling
+        } finally {
+          setBusy(false);
+        }
+      }
+    })();
+  }, [
+    messages,
+    threadId,
+    ready,
+    isDraft,
+    authHeaders,
+    persistMessages,
+    upsertThread,
+    threads,
+  ]);
   const updateMessage = useCallback((id: string, patch: Partial<AgentMessage>) => {
     setMessages((m) => m.map((x) => (x.id === id ? { ...x, ...patch } : x)));
   }, []);
@@ -422,6 +537,7 @@ export function PramaanAgentChat() {
     const optimisticId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
     const optimistic: AgentMessage = {
       id: optimisticId,
+      clientSendId: optimisticId,
       threadId: sendThreadId,
       text: q || (attachmentIds.length ? "Sent with attachment" : ""),
       attachments: attachmentIds.map((id, i) => ({

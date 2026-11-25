@@ -31,3 +31,28 @@ test("merge drops local when server has same clientSendId", () => {
     ["job-1"],
   );
 });
+
+test("merge drops failed local id when server echoes clientSendId", () => {
+  const local = base({
+    id: "local-1",
+    status: "failed",
+    error: "Send timed out.",
+    steps: [],
+  });
+  const server = [base({ id: "job-1", status: "working", clientSendId: "local-1", steps: ["Thinking…"] })];
+  const merged = mergeChatMessages([local], server);
+  assert.deepEqual(
+    merged.map((m) => m.id),
+    ["job-1"],
+  );
+});
+
+test("merge drops stale failed local without server match", () => {
+  const local = base({ id: "local-9", status: "failed", error: "Send timed out.", steps: [] });
+  const server = [base({ id: "older", text: "prior" })];
+  const merged = mergeChatMessages([local], server);
+  assert.deepEqual(
+    merged.map((m) => m.id),
+    ["older"],
+  );
+});

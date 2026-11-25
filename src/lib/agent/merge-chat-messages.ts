@@ -13,9 +13,14 @@ export function mergeChatMessages(prev: AgentMessage[], server: AgentMessage[]):
     server.map((m) => m.clientSendId).filter((id): id is string => Boolean(id)),
   );
 
+  const localClientKey = (m: AgentMessage) => m.clientSendId || (m.id.startsWith("local-") ? m.id : "");
+
   const carry = prev.filter((m) => {
     if (serverById.has(m.id)) return false;
-    if (m.clientSendId && serverClientIds.has(m.clientSendId)) return false;
+    const key = localClientKey(m);
+    if (key && serverClientIds.has(key)) return false;
+    // Never resurrect failed / timed-out ghosts — only true in-flight turns.
+    if (m.status !== "working") return false;
     return m.id.startsWith("local-") || m.status === "working";
   });
 
