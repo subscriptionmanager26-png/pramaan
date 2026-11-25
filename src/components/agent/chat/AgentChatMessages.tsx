@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 
+import { AdvisorAvatar } from "@/components/agent/AdvisorAvatar";
 import { AgentBlocks } from "@/components/agent/AgentBlocks";
 import { MessageArtifacts } from "@/components/agent/chat/MessageArtifacts";
 import type { AgentArtifact } from "@/lib/agent/artifacts";
+import type { Advisor } from "@/lib/agent/advisors";
 import type { AgentMessage, JobAttachment, OrderState } from "@/lib/agent/types";
 import { formatBytes } from "@/lib/agent/file-limits";
 
@@ -35,9 +37,13 @@ function AttachmentList({ attachments }: { attachments: JobAttachment[] }) {
 
 export function UserMessage({ text, attachments }: { text: string; attachments?: JobAttachment[] }) {
   return (
-    <div className="ml-auto max-w-[min(100%,36rem)] rounded-2xl border border-line bg-white px-4 py-3 shadow-[4px_4px_0_rgba(11,11,11,0.05)]">
-      <AttachmentList attachments={attachments ?? []} />
-      <p className="text-[15px] leading-7 whitespace-pre-wrap text-ink [overflow-wrap:anywhere]">{text}</p>
+    <div className="ml-auto w-full max-w-[min(100%,38rem)]">
+      <div className="rounded-2xl border-2 border-accent/35 bg-accent-2 px-4 py-3 shadow-[4px_4px_0_rgba(47,87,255,0.14)] ring-1 ring-accent/10">
+        <AttachmentList attachments={attachments ?? []} />
+        <p className="text-[15px] font-medium leading-7 whitespace-pre-wrap text-ink [overflow-wrap:anywhere]">
+          {text}
+        </p>
+      </div>
     </div>
   );
 }
@@ -111,12 +117,14 @@ function CopyReply({ message }: { message: AgentMessage }) {
 
 export function AssistantMessage({
   message,
+  advisor,
   orders,
   onDecide,
   artifacts,
   getAuthHeaders,
 }: {
   message: AgentMessage;
+  advisor: Advisor;
   orders?: Record<string, OrderState>;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
   artifacts?: AgentArtifact[];
@@ -125,9 +133,12 @@ export function AssistantMessage({
   const working = message.status === "working";
   const steps = message.steps ?? [];
   const showSteps = working || steps.length > 0;
-
   return (
-    <div className="max-w-[min(100%,42rem)] space-y-4">
+    <div className="mr-auto w-full max-w-[min(100%,42rem)] space-y-4">
+      <div className="flex items-end gap-2">
+        <AdvisorAvatar advisor={advisor} size="sm" />
+        <p className="text-[13px] font-semibold text-ink-2">{advisor.name}</p>
+      </div>
       {showSteps &&
         (working ? (
           <WorkingSteps steps={steps.length ? steps : ["Thinking…"]} startedAt={message.createdAt} />
@@ -158,22 +169,25 @@ export function AssistantMessage({
 
 export function ChatTurn({
   message,
+  advisor,
   orders,
   onDecide,
   artifacts,
   getAuthHeaders,
 }: {
   message: AgentMessage;
+  advisor: Advisor;
   orders?: Record<string, OrderState>;
   onDecide?: (orderId: string, decision: "confirm" | "reject") => void;
   artifacts?: AgentArtifact[];
   getAuthHeaders?: () => Promise<Record<string, string>>;
 }) {
   return (
-    <section className="flex flex-col gap-5">
+    <section className="flex flex-col gap-6 border-b border-line/70 pb-10 last:border-0 last:pb-4">
       <UserMessage text={message.text} attachments={message.attachments} />
       <AssistantMessage
         message={message}
+        advisor={advisor}
         orders={orders}
         onDecide={onDecide}
         artifacts={artifacts}
