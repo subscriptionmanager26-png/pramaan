@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "us-section-301-india-tariffs-november-2026",
+    title: "Washington opened a trade case that could add tariffs up to twenty-five percent on Indian goods",
+    summary:
+      "On 25 November 2026, wire reports said the United States Trade Representative proposed Section 301 tariffs of up to 25% on Indian products after finding that Indian industrial policies on manufacturing overcapacity are unreasonable and restrict US commerce.",
+    category: "industry",
+    companyOrSector: "Trade policy / manufacturing",
+    publishedAt: "2026-11-25T18:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("us-section-301-india-tariffs-november-2026"),
+    keyTakeaways: [
+      "The USTR determination points to Indian policies tied to excess manufacturing capacity as actionable under Section 301 of the US Trade Act of 1974.",
+      "Proposed duties of up to 25% would raise landed costs for exporters shipping into the United States if the process moves from findings toward implementation.",
+      "The move landed the same day Indian equities recovered on foreign fund buying, so corporate planners face a fresh policy risk alongside domestic market strength.",
+    ],
+    body: [
+      "What's going on here?",
+      "Trade friction between Washington and New Delhi is back on the front page. Coverage ahead of the 26 November 2026 Indian trading session said the United States Trade Representative moved on Section 301, the statute that allows punitive tariffs when a foreign country's policies are deemed to hurt American commerce. The Office of the USTR on 25 November determined that Indian policies related to manufacturing overcapacity are unreasonable and restrict US business. The proposed remedy includes additional tariffs of up to 25% on Indian goods. The framing in wire copy ties the action to US accusations that India's industrial incentives contribute to excess factory capacity that undercuts American producers.",
+      "What does this mean?",
+      "Section 301 is a unilateral trade tool: once a determination is published, the US can escalate through hearings, product lists and duty schedules unless negotiators find an off-ramp. For Indian exporters, the immediate pain is uncertainty. Apparel, engineering goods, chemicals and auto components that ride US retail shelves must rework pricing models before duties hit. Domestic manufacturers that import US inputs could face reciprocal political pressure if India retaliates. The episode does not by itself block capital flows, but it sits beside other global headlines on inflation and technology stocks that kept US markets volatile the same week.",
+      "Why should I care?",
+      "If you manage a plant that sells into US chains, ask compliance teams which harmonised tariff lines appear in past Section 301 lists and whether customers will share duty costs. Investors should separate companies with US revenue concentration from those that earn mostly at home. Policy watchers should track USTR hearing dates, any Indian commerce ministry response, and whether the dispute stays narrowly on industrial capacity or widens to services. A negotiated settlement can shrink the final duty list even after a harsh opening proposal.",
+    ],
+  },
+  {
+    slug: "airtel-assam-nxtra-datacentres-november-2026",
+    title: "Bharti Airtel pledged twelve hundred crore rupees for three data centres in Assam",
+    summary:
+      "Bharti Airtel said on 25 November 2026 it signed a pact with the Assam government to invest about ₹1,200 crore in three Nxtra data centre projects across Guwahati, Jorhat and Silchar, with completion targeted by 2028.",
+    category: "industry",
+    companyOrSector: "Telecom / digital infrastructure",
+    publishedAt: "2026-11-25T18:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("airtel-assam-nxtra-datacentres-november-2026"),
+    keyTakeaways: [
+      "Roughly ₹700 crore is earmarked for a Guwahati facility and about ₹500 crore for Jorhat and Silchar sites combined.",
+      "Nxtra, Airtel's data centre arm, is publicly targeting one gigawatt of AI-ready capacity across India after raising about $1 billion from global investors earlier in 2026.",
+      "The Jorhat and Silchar phase-one build is sized at 25 megawatts combined and is expected to employ about 164 people directly.",
+    ],
+    body: [
+      "What's going on here?",
+      "Cloud and AI workloads need electricity, fibre and land in places that used to sit off the metro data centre map. Bharti Airtel Ltd told reporters on 25 November 2026 that it signed an agreement with the Assam state government to spend around ₹1,200 crore, or about $130 million, on three data centres in the northeast. The telecom operator runs the facilities through Nxtra, its captive data centre business. Guwahati is slated for about ₹700 crore of investment. Jorhat and Silchar share the remaining roughly ₹500 crore, including a first-phase 15 megawatt Silchar project at about ₹255 crore and a 10 megawatt Jorhat unit near ₹200 crore. Management expects all three to be ready by 2028.",
+      "What does this mean?",
+      "State governments pitch northeastern hubs when latency to Southeast Asia and backup sites outside the Delhi-Mumbai corridor matter. For Airtel, Assam adds diversification to a capex plan that already includes AI-ready builds and a $1 billion capital injection into Nxtra from investors such as Alpha Wave Global, Carlyle and Anchorage Capital. Direct job counts in the hundreds are small against national telecom payrolls, but the facilities anchor power contracts, security staffing and fibre extensions that suppliers can bid on. Rivals such as AdaniConneX and Yotta will watch whether Assam's incentives close the total cost gap versus Maharashtra or Telangana.",
+      "Why should I care?",
+      "If you run enterprise software or banks serving the northeast, shorter in-region hosting can matter for disaster recovery contracts. Real estate and power developers should track land allotments and grid upgrades tied to each site. Investors in Airtel should read Nxtra as a capex line with long gestation, not next-quarter mobile average revenue per user. Follow Assam cabinet approvals, environmental clearances, and Nxtra's megawatt commissioning updates through 2028.",
+    ],
+  },
+  {
+    slug: "adani-ports-evos-acquisition-november-2026",
+    title: "Adani Ports moved to buy Europe's Evos liquid storage network through a global auction",
+    summary:
+      "Legal advisers confirmed on 25 November 2026 that Adani Ports and Special Economic Zone Ltd is acquiring 100% of Netherlands-based Evos B.V. after winning a competitive auction for the independent liquid storage operator.",
+    category: "industry",
+    companyOrSector: "Ports / energy logistics",
+    publishedAt: "2026-11-25T17:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-ports-evos-acquisition-november-2026"),
+    keyTakeaways: [
+      "Evos ranks as Europe's second-largest independent liquid storage business with eight port terminals in the Netherlands, Belgium, Germany, Spain and Malta.",
+      "The seller group includes F.S. Amelia and Evos Manco; Cyril Amarchand Mangaldas advised APSEZ on Indian regulatory and financing aspects.",
+      "The network spans 452 tanks and more than sixty vessel and barge berths with pipeline links into Amsterdam-Rotterdam-Antwerp and Mediterranean hubs.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian port operators are buying overseas storage and berth capacity instead of relying only on domestic volume growth. On 25 November 2026, Cyril Amarchand Mangaldas published a deal note stating that Adani Ports and Special Economic Zone Ltd will acquire all shares in Evos B.V., Europe's second-largest independent operator of liquid bulk storage, from sellers F.S. Amelia and Evos Manco after a competitive global auction. Evos runs eight terminals in the Netherlands, Belgium, Germany, Spain and Malta. The footprint covers major energy and industrial ports, including hubs in the Amsterdam-Rotterdam-Antwerp region and Hamburg, with 452 tanks, dozens of berths and integrated pipelines.",
+      "What does this mean?",
+      "Chemicals, fuels and edible oils need tank farms near deep-water ports. Owning Evos gives APSEZ revenue in euros, dollar-denominated contracts and regulated European assets that diversify away from Indian coal and container cycles. Competitive auctions usually mean multiple bidders tested price discipline, so integration and debt structure will matter more than headline patriotism. Global traders use independent storage when they want neutrality versus oil majors; APSEZ must keep that commercial credibility while linking the network to its stated goal of a diversified transport platform.",
+      "Why should I care?",
+      "If you import solvents or export refined products through northwest Europe, Adani's stewardship could change berth scheduling or capex on ageing tanks. Investors in APSEZ should model currency risk and competition authority filings alongside Indian port throughput. Policy makers tracking outward foreign direct investment should note another large Indian infrastructure house buying strategic European assets. Watch closing conditions, antitrust filings in Brussels and Frankfurt, and APSEZ leverage disclosures on the next results call.",
+    ],
+  },
+  {
+    slug: "juniper-ntpc-hybrid-ppa-november-2026",
+    title: "Juniper Green signed a hundred-and-fifty megawatt hybrid supply deal with NTPC",
+    summary:
+      "Juniper Green Energy Ltd said on 25 November 2026 its unit Juniper Green Gem signed a 25-year power purchase agreement with NTPC Ltd for a 150 megawatt wind-solar hybrid project expected to earn about ₹155 crore a year once supply begins in June 2028.",
+    category: "industry",
+    companyOrSector: "Renewable power",
+    publishedAt: "2026-11-25T17:40:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("juniper-ntpc-hybrid-ppa-november-2026"),
+    keyTakeaways: [
+      "Supply is scheduled from a scheduled commencement date of 30 June 2028 under the disclosed PPA terms.",
+      "Juniper Green Energy reported September-quarter revenue of about ₹345 crore, up 18.6% quarter on quarter, with EBITDA near 91% of revenue.",
+      "The filing said neither promoters nor group companies hold an interest in NTPC and the agreement is not a related-party transaction.",
+    ],
+    body: [
+      "What's going on here?",
+      "Utility-scale renewables in India still close on long power purchase agreements with central buyers. Juniper Green Energy Ltd, a renewable developer, told stock exchanges on 25 November 2026 that wholly owned Juniper Green Gem Pvt Ltd executed a PPA with NTPC Ltd for a 150 megawatt wind-solar hybrid plant. The company expects annual revenue of roughly ₹155 crore from the contract. The agreement runs 25 years from a scheduled supply start of 30 June 2028. Juniper Green also reiterated that the deal involves no related parties. In the same filing cycle the parent reported September-quarter revenue near ₹345 crore with strong EBITDA margins, though net profit slipped slightly quarter on quarter.",
+      "What does this mean?",
+      "Hybrid projects pair wind and solar to smooth generation across day and night, which can help NTPC meet renewable purchase obligations without overbuilding transmission for a single technology. For Juniper, a quarter-century PPA underwrites construction loans and turbine orders years before electrons flow. The 2028 commissioning date means equity investors are underwriting execution risk, land permissions and equipment supply chains now. NTPC's offtake adds a sovereign-backed counterparty compared with merchant exposure in some state tenders.",
+      "Why should I care?",
+      "If you bid equipment into hybrid parks, watch whether Juniper ties this block to a specific site state and interconnection timeline. Power traders should note another 150 megawatts locked away from the merchant market from 2028. Climate-focused debt investors can track whether project bonds reference the PPA cash flows. Follow construction milestones, tariff assumptions in the exchange filing, and NTPC's hybrid pipeline disclosures.",
+    ],
+  },
+  {
+    slug: "india-luxury-car-suv-demand-november-2026",
+    title: "India's luxury car buyers are spending more on big SUVs even when some brands stall",
+    summary:
+      "Industry reporting on 25 November 2026 described India's premium car market as growing unevenly in 2026, with Mercedes-Benz and BMW posting strong nine-month deliveries while Audi flagged product gaps, as SUVs and high-end trims take a larger share of sales.",
+    category: "industry",
+    companyOrSector: "Luxury autos / consumer demand",
+    publishedAt: "2026-11-25T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-luxury-car-suv-demand-november-2026"),
+    keyTakeaways: [
+      "Industry estimates cited about 38,000 luxury vehicles sold in January through September 2026, up roughly 10% year on year after a softer 2025.",
+      "BMW's India electric deliveries jumped about 78% in the first half of 2026 while SUVs made up about 65% of its volumes.",
+      "Audi's India leadership said 2026 could stay flat until refreshed models such as the new Q3 arrive, underscoring how product age shapes demand as much as macros.",
+    ],
+    body: [
+      "What's going on here?",
+      "Affluent Indian households are still upgrading wheels, but not every luxury badge is growing at the same pace. Wire and trade press on 25 November 2026 rounded up 2026 sales patterns across Mercedes-Benz, BMW, Audi, Jaguar Land Rover and Porsche. Estimates put January to September luxury registrations near 38,000 units, about 10% above the same period in 2025. Mercedes reported record nine-month India deliveries above 15,000 vehicles with strength in its top-end range. BMW posted double-digit growth with SUVs dominating volumes and a sharp rise in electric deliveries. Audi admitted 2026 may look flat until new models replace ageing lines, even as its freshly launched Q3 draws early interest.",
+      "What does this mean?",
+      "Luxury demand here is less about vanity plates and more about replacement cycles among entrepreneurs, executives and inheritors who want larger cabins, longer wheelbases and connected tech. SUVs win because bad roads and chauffeur use favour ground clearance. Rupee depreciation and pricier imported kits push entry-level luxury sedans out of reach, so carmakers chase high-margin trims instead. When one brand stalls on product freshness, others capture the same wallet, which is why BMW and Mercedes can grow in a year Audi calls transitional.",
+      "Why should I care?",
+      "If you run premium dealerships, allocation fights on SUVs and AMG-style trims matter more than floor traffic alone. Fleet and insurance brokers should expect higher average claim values as ticket sizes rise. Investors in listed auto ancillary firms can read luxury momentum as a belly-check on urban discretionary income even when mass-market festivals look mixed. Watch fourth-quarter launch calendars, Audi Q3 wait lists, and 2027 network expansion targets from German brands.",
+    ],
+  },
+  {
     slug: "phonepe-ipo-restart-november-2026",
     title: "PhonePe put its IPO plans back on the table for early next year",
     summary:
@@ -15408,6 +15528,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "us-section-301-india-tariffs-november-2026": "policy",
+  "airtel-assam-nxtra-datacentres-november-2026": "policy",
+  "adani-ports-evos-acquisition-november-2026": "companies",
+  "juniper-ntpc-hybrid-ppa-november-2026": "companies",
+  "india-luxury-car-suv-demand-november-2026": "markets",
   "phonepe-ipo-restart-november-2026": "markets",
   "shadowfax-wefast-borzo-acquisition-november-2026": "companies",
   "wipro-bp-finance-operations-november-2026": "companies",

@@ -2993,6 +2993,51 @@ def pnb_deutsche_acquisition_financing(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(980, 340), (1100, 400), (980, 460)], fill=YELLOW)
 
 
+def us_section_301_india_tariffs(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 340, 460, 520], fill=BLUE)
+    for i, h in enumerate([60, 110, 160]):
+        x = 200 + i * 70
+        d.rectangle([x, 520 - h, x + 45, 520], fill=YELLOW)
+    d.polygon([(750, 520), (950, 320), (1150, 520)], fill=RED)
+    d.line([(900, 320), (900, 180)], fill=GOLD, width=6)
+    d.polygon([(870, 200), (900, 150), (930, 200)], fill=GOLD)
+
+
+def airtel_assam_nxtra_datacentres(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 280, 500, 520], fill=BLUE)
+    for y in range(300, 480, 50):
+        d.rectangle([160, y, 460, y + 28], fill=[YELLOW, RED, CREAM, GOLD][(y // 50) % 4])
+    d.ellipse([760, 320, 1120, 500], outline=RED, width=8)
+    d.rectangle([820, 360, 1060, 420], fill=GOLD)
+    d.rectangle([820, 440, 1060, 470], fill=YELLOW)
+
+
+def adani_ports_evos_acquisition(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 360, 440, 520], fill=BLUE)
+    d.rectangle([240, 400, 340, 480], fill=YELLOW)
+    for i in range(3):
+        d.rectangle([720 + i * 110, 420 - i * 40, 790 + i * 110, 520], fill=[RED, GOLD, BLUE][i])
+    d.line([(180, 440), (620, 440)], fill=GOLD, width=4)
+    d.polygon([(1050, 360), (1130, 400), (1050, 440)], fill=RED)
+
+
+def juniper_ntpc_hybrid_ppa(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(260, 520), (300, 200), (340, 520)], fill=BLUE)
+    d.polygon([(320, 520), (360, 160), (400, 520)], fill=RED)
+    d.rectangle([760, 260, 1120, 520], fill=YELLOW)
+    d.ellipse([840, 320, 1040, 460], fill=CREAM)
+    d.line([(940, 280), (940, 220)], fill=GOLD, width=5)
+
+
+def india_luxury_car_suv_demand(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 520), (220, 420), (420, 420), (480, 520)], fill=RED)
+    for x in [260, 380]:
+        d.ellipse([x, 460, x + 60, 520], fill=INK)
+    d.rectangle([700, 360, 1100, 520], fill=BLUE)
+    d.polygon([(820, 520), (900, 380), (980, 520)], fill=GOLD)
+    d.rectangle([740, 320, 1060, 360], fill=YELLOW)
+
+
 if __name__ == "__main__":
     main()
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
