@@ -23,6 +23,7 @@ import { isValidThreadId } from "@/lib/agent/thread-id";
 import { applyStreamEvent } from "@/lib/agent/apply-stream-event";
 import { parseSseFrame, parseStreamEvent } from "@/lib/agent/sse";
 import { readChatCache, writeChatCache } from "@/lib/agent/chat-cache";
+import { mergeChatMessages } from "@/lib/agent/merge-chat-messages";
 import { reportAgentClientEvent } from "@/lib/agent/client-telemetry";
 import { messageFromFailedResponse, parseJsonResponse } from "@/lib/agent/parse-json-response";
 import {
@@ -121,9 +122,9 @@ export function PramaanAgentChat() {
   const applyServerMessages = useCallback(
     (tid: string, next: AgentMessage[]) => {
       setMessages((prev) => {
-        if (!next.length && prev.length) return prev;
-        persistMessages(tid, next.length ? next : prev);
-        return next.length ? next : prev;
+        const merged = mergeChatMessages(prev, next);
+        persistMessages(tid, merged);
+        return merged;
       });
     },
     [persistMessages],
@@ -241,16 +242,23 @@ export function PramaanAgentChat() {
     setReady(true);
     setAgentState("active");
 
-    // Keep optimistic/cached turns visible while we revalidate — never skip the fetch.
-    if (!promoted) {
-      libraryLoaded.current = false;
-      setOrders({});
-      setFileLibrary([]);
-      setError(null);
-      // Memory seed is keyed by threadId only; session cache needs uid (async below).
-      const seeded = readChatCache("", threadId);
-      setMessages(seeded?.length ? seeded : []);
+    // First send already promotes the URL — onSend owns messages + stream until settled.
+    if (promoted) {
+      loadedThreadRef.current = threadId;
+      return () => {
+        if (loadGenRef.current === gen) loadGenRef.current += 1;
+      };
     }
+
+    libraryLoaded.current = false;
+    setOrders({});
+    setFileLibrary([]);
+    setError(null);
+    const seeded = readChatCache("", threadId);
+    setMessages((prev) => {
+      if (prev.some((m) => m.status === "working" || m.id.startsWith("local-"))) return prev;
+      return seeded?.length ? seeded : [];
+    });
 
     const controller = new AbortController();
     let timedOut = false;
@@ -260,16 +268,16 @@ export function PramaanAgentChat() {
     }, 20_000);
 
     void (async () => {
-      if (!promoted) {
-        try {
-          const { data } = await getPocketedgeSupabase().auth.getSession();
-          if (loadGenRef.current !== gen) return;
-          const uid = data.session?.user?.id || "";
-          const cached = readChatCache(uid, threadId);
-          if (cached?.length) setMessages(cached);
-        } catch {
-          // keep seed / empty
+      try {
+        const { data } = await getPocketedgeSupabase().auth.getSession();
+        if (loadGenRef.current !== gen) return;
+        const uid = data.session?.user?.id || "";
+        const cached = readChatCache(uid, threadId);
+        if (cached?.length) {
+          setMessages((prev) => mergeChatMessages(prev, cached));
         }
+      } catch {
+        // keep seed / empty
       }
       if (loadGenRef.current !== gen) return;
       await reloadChat({
@@ -487,6 +495,82 @@ export function PramaanAgentChat() {
       setError(errText);
     };
 
+    const adoptServerMessage = async (match: AgentMessage, headers: Record<string, string>, recovered: boolean) => {
+      reportAgentClientEvent("chat_send_ok", {
+        threadId: sendThreadId,
+        clientSendId: optimisticId,
+        messageId: match.id,
+        fromDraft: promotedFromDraft,
+        durationMs: Date.now() - sendStartedAt,
+        recovered,
+      });
+      sentId = match.id;
+      if (pendingSendRef.current?.optimisticId === optimisticId) pendingSendRef.current = null;
+      const working = { ...match, status: "working" as const, steps: match.steps?.length ? match.steps : ["Thinking…"] };
+      setMessages((m) => {
+        const next = [working, ...m.filter((x) => x.id !== optimisticId && x.id !== match.id)];
+        persistMessages(sendThreadId, next);
+        return next;
+      });
+      if (promotedFromDraft) {
+        draftSendIdRef.current = sendThreadId;
+        loadedThreadRef.current = sendThreadId;
+        router.replace(chatUrl(sendThreadId));
+      }
+      refreshThreads();
+      const final = await streamMessage(match.id, headers);
+      setMessages((m) => {
+        const next = m.map((x) => (x.id === final.id ? final : x));
+        persistMessages(sendThreadId, next);
+        return next;
+      });
+      await fetch(
+        `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=50&scope=messages`,
+        { headers, cache: "no-store" },
+      )
+        .then(async (r) => {
+          if (!r.ok) return;
+          const body = await r.json();
+          applyServerMessages(sendThreadId, (body.messages as AgentMessage[]) || []);
+        })
+        .catch(() => undefined);
+      await refreshArtifacts();
+      refreshThreads();
+    };
+
+    const recoverEnqueuedMessage = async (headers: Record<string, string>): Promise<boolean> => {
+      const deadline = Date.now() + 45_000;
+      while (Date.now() < deadline) {
+        const byKey = await fetch(
+          `/api/agent/messages?threadId=${encodeURIComponent(sendThreadId)}&clientSendId=${encodeURIComponent(optimisticId)}&limit=5`,
+          { headers, cache: "no-store" },
+        )
+          .then(async (r) => (r.ok ? ((await r.json()).messages as AgentMessage[]) || [] : []))
+          .catch(() => [] as AgentMessage[]);
+        const recoveredList =
+          byKey.length > 0
+            ? byKey
+            : await fetch(
+                `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=10&scope=messages`,
+                { headers, cache: "no-store" },
+              )
+                .then(async (r) => (r.ok ? ((await r.json()).messages as AgentMessage[]) || [] : []))
+                .catch(() => [] as AgentMessage[]);
+        const match =
+          recoveredList.find((m) => m.clientSendId === optimisticId) ||
+          recoveredList.find((m) => m.id === optimisticId) ||
+          recoveredList.find(
+            (m) => (m.text || "").trim() === q.trim() && Date.parse(m.createdAt) >= sendStartedAt - 5_000,
+          );
+        if (match) {
+          await adoptServerMessage(match, headers, true);
+          return true;
+        }
+        await new Promise((r) => setTimeout(r, 1500));
+      }
+      return false;
+    };
+
     try {
       const headers = await authHeaders();
       const res = await fetch("/api/agent/messages", {
@@ -512,6 +596,16 @@ export function PramaanAgentChat() {
             ? (json.error as { code?: string; message?: string })
             : null;
         const agentBusy = parsed.status === 409 || errObj?.code === "agent_busy";
+        const upstreamTimeout = parsed.status === 504 || errObj?.code === "upstream_timeout";
+        if (upstreamTimeout) {
+          setMessages((m) =>
+            m.map((x) =>
+              x.id === optimisticId ? { ...x, steps: ["Still connecting to the agent…"] } : x,
+            ),
+          );
+          const recovered = await recoverEnqueuedMessage(headers);
+          if (recovered) return true;
+        }
         const errText = agentBusy
           ? "Still finishing the last reply. Give it a few seconds, then try again."
           : messageFromFailedResponse(parsed);
@@ -532,45 +626,11 @@ export function PramaanAgentChat() {
         });
         return false;
       }
-      const msg = { ...(json.message as AgentMessage), steps: [`Starting ${advisor.name}…`] };
-      sentId = msg.id;
-      reportAgentClientEvent("chat_send_ok", {
-        threadId: sendThreadId,
-        clientSendId: optimisticId,
-        messageId: msg.id,
-        fromDraft: promotedFromDraft,
-        durationMs: Date.now() - sendStartedAt,
-      });
-      if (pendingSendRef.current?.optimisticId === optimisticId) pendingSendRef.current = null;
-      setMessages((m) => {
-        const next = [msg, ...m.filter((x) => x.id !== optimisticId)];
-        persistMessages(sendThreadId, next);
-        return next;
-      });
-      if (promotedFromDraft) {
-        draftSendIdRef.current = sendThreadId;
-        loadedThreadRef.current = sendThreadId;
-        router.replace(chatUrl(sendThreadId));
-      }
-      refreshThreads();
-      const final = await streamMessage(msg.id, headers);
-      setMessages((m) => {
-        const next = m.map((x) => (x.id === final.id ? final : x));
-        persistMessages(sendThreadId, next);
-        return next;
-      });
-      await fetch(
-        `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=50&scope=messages`,
-        { headers, cache: "no-store" },
-      )
-        .then(async (r) => {
-          if (!r.ok) return;
-          const body = await r.json();
-          applyServerMessages(sendThreadId, (body.messages as AgentMessage[]) || []);
-        })
-        .catch(() => undefined);
-      await refreshArtifacts();
-      refreshThreads();
+      const msg = {
+        ...(json.message as AgentMessage),
+        steps: [`Starting ${advisor.name}…`],
+      };
+      await adoptServerMessage(msg, headers, false);
       return true;
     } catch (e) {
       if (sentId) {
@@ -597,62 +657,9 @@ export function PramaanAgentChat() {
           markFailed(e instanceof Error ? e.message : "Something went wrong.");
         }
       } else {
-        // POST may have succeeded server-side while the browser aborted (Load failed).
-        // Recover before marking the optimistic bubble failed.
         try {
           const headers = await authHeaders();
-          const byKey = await fetch(
-            `/api/agent/messages?threadId=${encodeURIComponent(sendThreadId)}&clientSendId=${encodeURIComponent(optimisticId)}&limit=5`,
-            { headers, cache: "no-store" },
-          )
-            .then(async (r) => (r.ok ? ((await r.json()).messages as AgentMessage[]) || [] : []))
-            .catch(() => [] as AgentMessage[]);
-          const recovered =
-            byKey.length > 0
-              ? byKey
-              : await fetch(
-                  `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=10&scope=messages`,
-                  { headers, cache: "no-store" },
-                )
-                  .then(async (r) => (r.ok ? ((await r.json()).messages as AgentMessage[]) || [] : []))
-                  .catch(() => [] as AgentMessage[]);
-          const match =
-            recovered.find((m) => m.clientSendId === optimisticId) ||
-            recovered.find((m) => m.id === optimisticId) ||
-            recovered.find(
-              (m) =>
-                (m.text || "").trim() === q.trim() &&
-                Date.parse(m.createdAt) >= sendStartedAt - 5_000,
-            );
-          if (match) {
-            reportAgentClientEvent("chat_send_ok", {
-              threadId: sendThreadId,
-              clientSendId: optimisticId,
-              messageId: match.id,
-              fromDraft: promotedFromDraft,
-              durationMs: Date.now() - sendStartedAt,
-              recovered: true,
-            });
-            if (pendingSendRef.current?.optimisticId === optimisticId) pendingSendRef.current = null;
-            setMessages((m) => {
-              const next = [match, ...m.filter((x) => x.id !== optimisticId && x.id !== match.id)];
-              persistMessages(sendThreadId, next);
-              return next;
-            });
-            if (promotedFromDraft) {
-              draftSendIdRef.current = sendThreadId;
-              loadedThreadRef.current = sendThreadId;
-              router.replace(chatUrl(sendThreadId));
-            }
-            refreshThreads();
-            const final = await streamMessage(match.id, headers);
-            setMessages((m) => {
-              const next = m.map((x) => (x.id === final.id ? final : x));
-              persistMessages(sendThreadId, next);
-              return next;
-            });
-            return true;
-          }
+          if (await recoverEnqueuedMessage(headers)) return true;
         } catch {
           // fall through to markFailed
         }
@@ -701,8 +708,8 @@ export function PramaanAgentChat() {
   );
 
   const hasConversation = thread.length > 0;
-  /** Greeting only for a true draft — never flash "new chat" while on ?t=. */
-  const showEmptyHome = hasAgent && !hasConversation;
+  /** Greeting only for a true draft — never flash "new chat" while on ?t= or mid-send. */
+  const showEmptyHome = hasAgent && !hasConversation && !busy;
   const greetName = auth.displayName?.split(/\s+/)[0] || "there";
 
   if (!ready) {
