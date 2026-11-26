@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
 import { openZerodhaLoginTab } from "@/lib/portfolio/zerodha-start";
@@ -40,8 +40,6 @@ export function AgentConnections() {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [operatorEmail, setOperatorEmail] = useState<string | null>(null);
-
-  const adminOAuthHref = useMemo(() => "/api/agent/kite-mcp/oauth-start?returnTo=/ai/connections", []);
 
   const load = useCallback(async () => {
     setError(null);
@@ -104,6 +102,42 @@ export function AgentConnections() {
     window.addEventListener("focus", onFocus);
     return () => window.removeEventListener("focus", onFocus);
   }, [load]);
+
+  async function authorizeKiteServer() {
+    setBusy(true);
+    setError(null);
+    try {
+      const headers = await authHeaders();
+      const res = await fetch("/api/agent/kite-mcp/oauth-start", {
+        method: "GET",
+        headers,
+        redirect: "manual",
+        credentials: "same-origin",
+      });
+      const loc = res.headers.get("Location");
+      if (loc && res.status >= 300 && res.status < 400) {
+        window.location.assign(loc);
+        return;
+      }
+      if (res.status === 401) {
+        setError("Session expired — sign in again, then tap Authorize Zerodha server.");
+        return;
+      }
+      const json = (await res.json().catch(() => ({}))) as {
+        error?: { message?: string } | string;
+      };
+      const err = json.error;
+      const msg =
+        (typeof err === "object" && err?.message) ||
+        (typeof err === "string" ? err : null) ||
+        "Could not start Zerodha server authorization. Try again in a minute.";
+      setError(msg);
+    } catch {
+      setError("Could not reach the server. Check your network and try again.");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function zerodhaAction(action: "connect" | "disconnect" | "login") {
     setBusy(true);
@@ -184,10 +218,15 @@ export function AgentConnections() {
               <p className="font-semibold">Zerodha server not authorized yet</p>
               <p className="mt-1 text-[13px] leading-relaxed">{z.mcpBackendMessage}</p>
               <p className="mt-2 flex flex-wrap items-center gap-2">
-                <a href={adminOAuthHref} className="btn-primary text-sm no-underline">
-                  Authorize Zerodha server
-                </a>
-                <span className="text-xs text-amber-900/80">Signed-in PocketEdge user · ~1 minute · auto-renews when possible</span>
+                <button
+                  type="button"
+                  className="btn-primary text-sm"
+                  disabled={busy}
+                  onClick={() => void authorizeKiteServer()}
+                >
+                  {busy ? "Opening Kite…" : "Authorize Zerodha server"}
+                </button>
+                <span className="text-xs text-amber-900/80">One-time · ~1 minute · auto-renews when possible</span>
               </p>
               {operatorEmail ? (
                 <p className="mt-2 text-[11px] text-amber-900/70">Signed in as {operatorEmail}</p>
