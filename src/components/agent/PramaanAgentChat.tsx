@@ -428,7 +428,7 @@ export function PramaanAgentChat() {
         msg = await fetchMessage(messageId, headers);
         if (msg) updateMessage(messageId, msg);
         if (!msg || msg.status !== "working" || Date.now() >= deadline) return msg;
-        await new Promise((r) => setTimeout(r, 2000));
+        await new Promise((r) => setTimeout(r, 1000));
       }
     },
     [fetchMessage, updateMessage],

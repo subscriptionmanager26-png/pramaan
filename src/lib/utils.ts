@@ -8,6 +8,21 @@ export function formatDate(iso: string) {
   }).format(new Date(iso));
 }
 
+/** Chat and activity timestamps (India local). */
+export function formatDateTime(iso: string) {
+  const d = Date.parse(iso);
+  if (!Number.isFinite(d)) return "";
+  return new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Kolkata",
+  }).format(d);
+}
+
 export function formatDay(iso: string) {
   return new Intl.DateTimeFormat("en-IN", {
     day: "2-digit",
