@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "royal-enfield-tamil-nadu-ev-investment-november-2026",
+    title: "Royal Enfield signed a thousand-crore electric manufacturing plan in Tamil Nadu",
+    summary:
+      "Eicher Motors said on 25 November 2026 that Royal Enfield entered a non-binding memorandum with the Tamil Nadu government to invest about ₹1,000 crore over seven years in electric development, technology and manufacturing tied to its Flying Flea brand.",
+    category: "industry",
+    companyOrSector: "Two-wheelers / electric mobility",
+    publishedAt: "2026-11-26T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("royal-enfield-tamil-nadu-ev-investment-november-2026"),
+    keyTakeaways: [
+      "The proposed spend covers EV development and plant work and could support up to 500 direct and indirect jobs, according to company statements quoted in trade press.",
+      "Royal Enfield already runs an EV innovation lab and manufacturing site at Vallam Vadagal in Tamil Nadu under the Flying Flea label.",
+      "The MoU sits alongside Eicher’s separate ₹958 crore capacity expansion at Cheyyar, which targets two million annual motorcycle units.",
+    ],
+    body: [
+      "What's going on here?",
+      "Premium motorcycle buyers still run on petrol today, but Royal Enfield is locking land and capital for electric production in the state where it already builds most bikes. On 25 November 2026, reporting on Eicher Motors Ltd said Royal Enfield signed a non-binding memorandum of understanding with the Tamil Nadu government to invest roughly ₹1,000 crore over seven years in electric vehicle development, technology and manufacturing. Chief executive B. Govindarajan said the spend underscores a long manufacturing footprint in the state. The plan is meant to add to Flying Flea, Royal Enfield's electric mobility brand, and to facilities that already include an EV lab and plant at Vallam Vadagal near Chennai.",
+      "What does this mean?",
+      "State MoUs rarely bind cheque amounts on day one, but they signal where permitting, power and supplier parks will line up when prototypes move to serial production. Royal Enfield sells globally on heritage petrol bikes; electric lines need different tooling, battery contracts and after-sales networks. Anchoring that work in Tamil Nadu keeps engineering, stamping and export logistics near existing Enfield plants in Chennai, Cheyyar and Vallam. The ₹1,000 crore headline also sits beside an earlier ₹958 crore Cheyyar expansion aimed at conventional capacity toward two million units a year, so Eicher is funding both ICE scale and a parallel EV runway.",
+      "Why should I care?",
+      "If you supply components into two-wheelers, watch tender calendars for battery packs, motors and lightweight castings tied to Flying Flea pilots. Dealership investors should track how soon Enfield allocates service bays and charger partnerships versus petrol models. Policy readers should compare Tamil Nadu's incentive stack with Gujarat and Maharashtra, where other OEMs pitched EV plants this year. Follow binding investment agreements, prototype launches and hiring at Vallam Vadagal before treating the MoU as committed capex.",
+    ],
+  },
+  {
+    slug: "tata-autocomp-sanand-plants-november-2026",
+    title: "Tata AutoComp opened three more plants in Sanand and made Gujarat its biggest hub",
+    summary:
+      "Tata AutoComp Systems Ltd inaugurated three manufacturing units in Sanand on 25 November 2026, lifting its plant count in the Gujarat automotive corridor to ten and making Sanand the company's largest cluster outside Pune.",
+    category: "industry",
+    companyOrSector: "Auto components",
+    publishedAt: "2026-11-26T05:20:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-autocomp-sanand-plants-november-2026"),
+    keyTakeaways: [
+      "The new facilities house TMRP Autotrims, TMWB Foam and Automotive Stampings and Assemblies operations serving OEM programmes from Sanand.",
+      "Tata Motors passenger vehicle purchasing chief Sudhir Chikhle and Tata AutoComp vice chairman Arvind Goel led the inauguration.",
+      "Tata AutoComp cites more than 74 manufacturing sites globally across 22 business units, including eleven joint ventures with overseas partners.",
+    ],
+    body: [
+      "What's going on here?",
+      "When carmakers expand Gujarat lines, component vendors follow within the same industrial belt. Tata AutoComp Systems Ltd said on 25 November 2026 it commissioned three new plants in Sanand, taking its Gujarat footprint to ten factories. The units host TMRP Autotrims Pvt Ltd, TMWB Foam Pvt Ltd and Automotive Stampings and Assemblies Ltd. Management said Sanand is now Tata AutoComp's largest manufacturing cluster outside Pune. Tata Motors Passenger Vehicles purchasing head Sudhir Chikhle joined vice chairman Arvind Goel for the opening, underscoring how tightly the supplier sits on Tata Motors' localization calendar.",
+      "What does this mean?",
+      "Interior trims, foam seating and stamped body parts must sit close to OEM assembly to cut freight and inventory days. Sanand's corridor links Tata Motors, Ford heritage suppliers and export-oriented component parks, so incremental capacity here is less speculative greenfield and more bolt-on lines tied to existing vehicle programmes. Tata AutoComp also flagged a network of about fifty suppliers focused on export markets, which suggests part of the new output may ride container routes rather than domestic OEM call-offs alone. Across India the group runs more than seventy plants through twenty-two units; adding three in one inauguration is a chunky share of near-term capex.",
+      "Why should I care?",
+      "If you bid into automotive Tier-2 contracts, expect RFQs on foam formulations, weld lines and trim colour matching tied to Sanand vehicle mixes. Investors tracking unlisted Tata group suppliers should note how passenger vehicle volumes at Sanand drive utilization of these new bays. Job seekers in Gujarat industrial estates should watch hiring at the three entities named in the release. Follow Tata Motors production schedules, export shipment data from Kandla and Mundra, and whether Tata AutoComp discloses revenue attributable to the Sanand cluster in coming annual reports.",
+    ],
+  },
+  {
+    slug: "lupin-fda-dalbavancin-november-2026",
+    title: "US regulators cleared Lupin's single-dose dalbavancin injection",
+    summary:
+      "Lupin Ltd said on 25 November 2026 that the US Food and Drug Administration approved its dalbavancin injection for a single-dose regimen, adding another regulated sterile product to its hospital antibiotics portfolio.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / US generics",
+    publishedAt: "2026-11-26T05:10:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lupin-fda-dalbavancin-november-2026"),
+    keyTakeaways: [
+      "Dalbavancin is a long-acting glycopeptide antibiotic used against serious gram-positive infections, including certain skin and bloodstream cases.",
+      "FDA approval for a single-dose presentation can simplify hospital dosing compared with multi-day infusion schedules for some regimens.",
+      "Lupin has been building US revenue through complex injectables and inhalation products alongside oral generics.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian pharma exporters still earn a large share of profit from United States scripts, and sterile injectables sit higher on the margin ladder than commodity tablets. Lupin Ltd told the market on 25 November 2026 that the US Food and Drug Administration approved its dalbavancin injection for single-dose use. The exchange headline was brief, but dalbavancin is already prescribed in US hospitals for selected serious bacterial infections where a long half-life can shorten the number of administrations. For Lupin, the clearance is another brick in its injectable franchise, which includes oncology and anti-infective lines that face tighter FDA inspection standards than oral plants.",
+      "What does this mean?",
+      "US buyers often switch to approved generics when patents lapse or when new dosage forms offer hospital cost savings. A single-dose vial can reduce nursing time and infusion chair use versus older multi-day schedules, which matters for pharmacy and therapeutics committees even before they compare per-milligram prices. Lupin must still launch commercially: contracts with group purchasing organisations, wholesaler stocking and Medicare/Medicaid coding follow months after the approval letter. Competitors with existing dalbavancin licences will defend share through rebates and bundled hospital contracts.",
+      "Why should I care?",
+      "If you manage hospital procurement in India, this US approval does not by itself change local formularies, but it signals Lupin's continued R&D bet on complex sterile products that eventually feed emerging-market licences. Investors in Indian pharma should track US launch timing, average selling price disclosures and whether Lupin adds capacity at its Nagpur or other injectable sites. Doctors and patients should rely on local regulators for available brands; US approval is a manufacturing quality signal, not an automatic import. Watch Lupin's next exchange update on launch plans and any FDA inspection outcomes on the filing site.",
+    ],
+  },
+  {
+    slug: "bikewo-green-drive-mobility-november-2026",
+    title: "BikeWo agreed to pay fifteen crore rupees for a quarter stake in Green Drive Mobility",
+    summary:
+      "BikeWo Green Tech Ltd said on 25 November 2026 its board approved an initial ₹15 crore investment for a 25% equity stake in Green Drive Auto Services Pvt Ltd, operator of Green Drive Mobility, with a longer roadmap to deploy up to ₹150 crore.",
+    category: "industry",
+    companyOrSector: "Electric two-wheelers / logistics",
+    publishedAt: "2026-11-26T05:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bikewo-green-drive-mobility-november-2026"),
+    keyTakeaways: [
+      "The companies outlined ambitions for about 10,000 electric two-wheelers and 5,000 electric trucks over coming years, subject to execution and funding.",
+      "BikeWo trades as a listed EV play; Green Drive Mobility operates in the fleet and mobility services space.",
+      "Initial capital is a minority stake, so governance and follow-on funding tranches will shape how fast assets hit the road.",
+    ],
+    body: [
+      "What's going on here?",
+      "Electric two-wheeler listings on Indian exchanges still chase scale through partnerships instead of building every fleet in-house. BikeWo Green Tech Ltd reported on 25 November 2026 that its board cleared an approximate ₹15 crore investment to buy 25% of Green Drive Auto Services Pvt Ltd, which runs Green Drive Mobility. Filings quoted a longer-term plan to deploy up to ₹150 crore and target roughly 10,000 electric two-wheelers plus 5,000 electric trucks. The first cheque buys a minority stake, not control, so product rollout depends on how the partners split capex, financing and operating contracts after signing.",
+      "What does this mean?",
+      "Fleet operators need vehicles, charging depots and maintenance crews; manufacturers need assured offtake to amortize battery and motor lines. A 25% stake lets BikeWo book exposure to Green Drive's mobility revenue without consolidating every balance sheet item on day one. The truck target in particular moves the story beyond commuter scooters into last-mile and light commercial segments where total cost of ownership hinges on duty cycles and state permits. Listed EV names remain sensitive to subsidy changes and metal prices, so staged funding rather than a single ₹150 crore drawdown spreads execution risk across years.",
+      "Why should I care?",
+      "If you lease commercial EVs, compare Green Drive's eventual spec sheets with incumbent logistics fleets on range, swap networks and residual values. Investors in BikeWo should read the next exchange filings for closing dates, board seats and whether the ₹150 crore plan requires fresh equity or debt. Municipal buyers watching noise and fuel savings should track whether truck deployments land in cities with workable charging rules. Follow BikeWo’s capitalization table, Green Drive order announcements and FAME or state EV policy tweaks that affect commercial vehicles.",
+    ],
+  },
+  {
+    slug: "tata-motors-jamshedpur-labour-dispute-november-2026",
+    title: "A worker's death sparked a four-day protest that blocked gates at Tata Motors' Jamshedpur plant",
+    summary:
+      "Reporting on 25 November 2026 said relatives of deceased Tata Motors employee Subodh Patro blocked all seven plant gates for four days, demanding injury-on-duty recognition and a compassionate job for his son after a March workplace slip.",
+    category: "industry",
+    companyOrSector: "Commercial vehicles / labour relations",
+    publishedAt: "2026-11-26T04:50:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-motors-jamshedpur-labour-dispute-november-2026"),
+    keyTakeaways: [
+      "Patro died on 21 November 2026 after treatment following a 16 March incident his family says involved a slip on oil in the engine division.",
+      "The company attributed the death to severe diabetes complications; the family disputes that explanation and wants formal injury-on-duty status.",
+      "Management offered about ₹77 lakh in retirement and provident fund dues; protesters said that is separate from their demands.",
+    ],
+    body: [
+      "What's going on here?",
+      "Production lines keep moving only when gates stay open. Wire reports on 25 November 2026 described a labour standoff at Tata Motors Ltd's Jamshedpur commercial vehicle plant after 59-year-old employee Subodh Patro died on 21 November. His family says he slipped on oil while working in the engine division on 16 March 2026, suffered head and shoulder injuries, and remained in intensive care for months. Relatives and supporters blocked all seven plant gates for four days, including on 24 November, after talks with management and labour officials failed. They want the incident recorded as injury on duty and a permanent job for Patro's son on compassionate grounds.",
+      "What does this mean?",
+      "Factories record statutory retirement and provident fund payouts separately from injury compensation and compassionate appointments. Tata Motors told reporters Patro's death followed complications from severe diabetes, while the family argues workplace injuries worsened his health. Management cited roughly ₹77 lakh in retirement and PF benefits already due, including about ₹72 lakh in retirement payouts and ₹5 lakh in remaining PF after earlier withdrawals. Union and political backers, including Jharkhand Mukti Morcha figures, joined the protest, which raises reputational risk even when the company says output was not disrupted.",
+      "Why should I care?",
+      "If you operate plants with large unionised workforces, revisit oil spill protocols, injury reporting timelines and how HR communicates with families during long medical leaves. Investors in Tata Motors should treat the episode as operational and social risk at one site, not necessarily a nationwide stoppage, unless sympathy strikes spread. Workers should know the difference between statutory retirement benefits and injury-on-duty claims under applicable labour law. Watch whether the labour department brokers a settlement, if gates stay fully open this week, and any exchange disclosure if production metrics shift materially.",
+    ],
+  },
+  {
     slug: "us-section-301-india-tariffs-november-2026",
     title: "Washington opened a trade case that could add tariffs up to twenty-five percent on Indian goods",
     summary:
@@ -15528,6 +15648,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "royal-enfield-tamil-nadu-ev-investment-november-2026": "companies",
+  "tata-autocomp-sanand-plants-november-2026": "companies",
+  "lupin-fda-dalbavancin-november-2026": "companies",
+  "bikewo-green-drive-mobility-november-2026": "companies",
+  "tata-motors-jamshedpur-labour-dispute-november-2026": "policy",
   "us-section-301-india-tariffs-november-2026": "policy",
   "airtel-assam-nxtra-datacentres-november-2026": "policy",
   "adani-ports-evos-acquisition-november-2026": "companies",

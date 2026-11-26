@@ -3038,6 +3038,48 @@ def india_luxury_car_suv_demand(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([740, 320, 1060, 360], fill=YELLOW)
 
 
+def royal_enfield_tamil_nadu_ev(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(200, 520), (280, 360), (360, 520)], fill=RED)
+    d.ellipse([300, 300, 360, 360], fill=GOLD)
+    d.rectangle([720, 280, 1120, 520], fill=BLUE)
+    d.rectangle([780, 340, 840, 460], fill=YELLOW)
+    d.line([(900, 520), (900, 200)], fill=GOLD, width=5)
+    d.polygon([(870, 220), (900, 160), (930, 220)], fill=RED)
+
+
+def tata_autocomp_sanand(d: ImageDraw.ImageDraw) -> None:
+    for i, x in enumerate([120, 280, 440]):
+        d.rectangle([x, 320, x + 120, 520], fill=[RED, BLUE, YELLOW][i])
+        d.rectangle([x + 20, 360, x + 100, 400], fill=GOLD)
+    d.line([(620, 520), (1180, 520)], fill=INK, width=3)
+    d.polygon([(900, 520), (1000, 240), (1100, 520)], fill=BLUE)
+
+
+def lupin_fda_dalbavancin(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 240, 280, 520], radius=60, fill=RED)
+    d.line([(210, 280), (210, 480)], fill=CREAM, width=20)
+    d.ellipse([760, 300, 920, 460], fill=BLUE)
+    d.rectangle([800, 360, 880, 400], fill=YELLOW)
+    d.polygon([(1000, 520), (1080, 360), (1160, 520)], fill=GOLD)
+
+
+def bikewo_green_drive(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([180, 420, 260, 500], fill=INK)
+    d.ellipse([380, 420, 460, 500], fill=INK)
+    d.line([(220, 420), (340, 300), (420, 420)], fill=RED, width=8)
+    d.rectangle([720, 380, 1100, 480], fill=BLUE)
+    for x in range(750, 1080, 80):
+        d.rectangle([x, 400, x + 40, 460], fill=YELLOW)
+
+
+def tata_motors_jamshedpur_labour(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 200, 500, 520], fill=BLUE)
+    for y in range(240, 480, 60):
+        d.rectangle([180, y, 460, y + 30], fill=YELLOW if y % 120 else RED)
+    d.line([(620, 520), (620, 180)], fill=GOLD, width=8)
+    d.polygon([(580, 200), (620, 140), (660, 200)], fill=GOLD)
+
+
 if __name__ == "__main__":
     main()
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
@@ -3055,3 +3097,8 @@ if __name__ == "__main__":
     save("india-alcobev-rtd-growth-november-2026", india_alcobev_rtd_growth)
     save("bank-of-baroda-upi-mdr-reinvest-november-2026", bank_of_baroda_upi_mdr)
     save("niif-infrastructure-bonds-november-2026", niif_infrastructure_bonds)
+    save("royal-enfield-tamil-nadu-ev-investment-november-2026", royal_enfield_tamil_nadu_ev)
+    save("tata-autocomp-sanand-plants-november-2026", tata_autocomp_sanand)
+    save("lupin-fda-dalbavancin-november-2026", lupin_fda_dalbavancin)
+    save("bikewo-green-drive-mobility-november-2026", bikewo_green_drive)
+    save("tata-motors-jamshedpur-labour-dispute-november-2026", tata_motors_jamshedpur_labour)
