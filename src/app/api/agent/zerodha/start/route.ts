@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-import { requireAgentUser } from "@/lib/agent/require-agent-user";
-import { personalAgentsConfigured } from "@/lib/personal-agents";
+import { requirePocketedgeAgentUser } from "@/lib/agent/require-pocketedge-user";
+import { zerodhaStoreConfigured } from "@/lib/zerodha/supabase";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -91,8 +91,8 @@ a{color:#0b6e4f}#err{display:none;color:#a11}
  * then the tab fetches the Kite URL (does not block the form response on mcp.kite.trade).
  */
 export async function POST(request: Request) {
-  if (!personalAgentsConfigured()) {
-    return tabPage("Zerodha", "<p>Agent backend is not configured.</p>", 503);
+  if (!zerodhaStoreConfigured()) {
+    return tabPage("Zerodha", "<p>Zerodha is not configured on PocketEdge.</p>", 503);
   }
   const form = await request.formData().catch(() => null);
   const action = String(form?.get("action") || "connect");
@@ -109,7 +109,7 @@ export async function POST(request: Request) {
   if (cookie) authHeaders.set("cookie", cookie);
   const bearer = request.headers.get("authorization") || (formToken ? `Bearer ${formToken}` : null);
   if (bearer) authHeaders.set("authorization", bearer);
-  const auth = await requireAgentUser(new Request(request.url, { headers: authHeaders }));
+  const auth = await requirePocketedgeAgentUser(new Request(request.url, { headers: authHeaders }));
   if ("response" in auth) {
     return tabPage(
       "Sign in required",

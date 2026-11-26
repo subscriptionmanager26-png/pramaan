@@ -1,66 +1,53 @@
 import { NextResponse } from "next/server";
 
-import { requireAgentUser } from "@/lib/agent/require-agent-user";
-import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
+import { requirePocketedgeAgentUser } from "@/lib/agent/require-pocketedge-user";
+import { beginKiteMcpOAuth, kiteMcpBearer } from "@/lib/zerodha/kite-mcp-oauth";
+import { zerodhaStoreConfigured } from "@/lib/zerodha/supabase";
 
 export const dynamic = "force-dynamic";
 
 function wantsJsonResponse(request: Request) {
   const url = new URL(request.url);
   if (url.searchParams.get("format") === "json") return true;
-  const accept = request.headers.get("accept") || "";
-  return accept.includes("application/json");
+  return (request.headers.get("accept") || "").includes("application/json");
 }
 
 function authRequestFrom(request: Request, formToken?: string) {
   const headers = new Headers(request.headers);
   const token = formToken?.trim();
-  if (token && !headers.get("authorization")) {
-    headers.set("authorization", `Bearer ${token}`);
-  }
+  if (token && !headers.get("authorization")) headers.set("authorization", `Bearer ${token}`);
   return new Request(request.url, { headers, method: "GET" });
 }
 
 async function startKiteMcpOAuth(request: Request) {
   const jsonOut = wantsJsonResponse(request);
-  if (!personalAgentsConfigured()) {
-    return NextResponse.json({ error: "agent_backend_unconfigured" }, { status: 503 });
+  if (!zerodhaStoreConfigured()) {
+    return NextResponse.json({ error: "zerodha_store_unconfigured" }, { status: 503 });
   }
-  const auth = await requireAgentUser(request);
+  const auth = await requirePocketedgeAgentUser(request);
   if ("response" in auth) return auth.response;
 
-  const callback = new URL("/api/agent/kite-mcp/oauth-callback", request.url).toString();
-  const res = await paFetch(
-    `/api/v1/kite-mcp/oauth-url?redirect_uri=${encodeURIComponent(callback)}`,
-    { signal: AbortSignal.timeout(20_000) },
-  );
-  const body = (await res.json().catch(() => ({}))) as { ready?: boolean; url?: string; error?: { message?: string } };
-  if (!res.ok) {
-    return NextResponse.json(body, { status: res.status });
-  }
-  if (body.ready) {
+  const bearer = await kiteMcpBearer();
+  if (bearer) {
     if (jsonOut) return NextResponse.json({ ready: true });
     return NextResponse.redirect(new URL("/ai/connections?kiteMcp=ready", request.url));
   }
-  if (typeof body.url === "string" && body.url.startsWith("http")) {
-    if (jsonOut) return NextResponse.json({ ready: false, url: body.url });
-    return NextResponse.redirect(body.url);
+
+  const callback = new URL("/api/agent/kite-mcp/oauth-callback", request.url).toString();
+  try {
+    const { url } = await beginKiteMcpOAuth({ redirectUri: callback });
+    if (jsonOut) return NextResponse.json({ ready: false, url });
+    return NextResponse.redirect(url);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Could not start Kite MCP OAuth.";
+    return NextResponse.json({ error: { message } }, { status: 502 });
   }
-  return NextResponse.json(
-    { error: { code: "oauth_url_missing", message: "Personal-agents did not return an OAuth URL." } },
-    { status: 502 },
-  );
 }
 
-/**
- * Start hosted mcp.kite.trade operator OAuth.
- * Callback returns to pocketedge.in (not personal-agents.vercel.app).
- */
 export async function GET(request: Request) {
   return startKiteMcpOAuth(request);
 }
 
-/** Same as GET but accepts `access_token` in form body (browser auth is often localStorage-only). */
 export async function POST(request: Request) {
   const form = await request.formData().catch(() => null);
   const formToken = String(form?.get("access_token") || "");

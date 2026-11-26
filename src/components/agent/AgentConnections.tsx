@@ -222,8 +222,8 @@ export function AgentConnections() {
             <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
               <p className="font-semibold">Step 1: Authorize PocketEdge on Kite (one time)</p>
               <p className="mt-1 text-[13px] leading-relaxed">
-                Kite requires a one-minute server login before Connect Zerodha works. You will see Kite’s consent screen, then your
-                Zerodha user ID and password. After login you return here automatically.
+                One-time Kite consent on PocketEdge (not a separate studio site). Then your Zerodha user ID and password. You return
+                here automatically.
               </p>
               <p className="mt-2 flex flex-wrap items-center gap-2">
                 <button
