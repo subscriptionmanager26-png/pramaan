@@ -3170,6 +3170,41 @@ def urban_company_native_ac_launch(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(700, 240), (760, 200), (820, 240)], fill=GOLD)
 
 
+def india_meta_it_automated_takedown(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 180, 480, 580], fill=BLUE)
+    for y in range(220, 520, 70):
+        d.rectangle([140, y, 440, y + 40], fill=CREAM if y % 140 else YELLOW)
+        d.line([(460, y + 20), (620, y + 20)], fill=GOLD, width=2)
+    d.polygon([(780, 560), (900, 320), (1020, 560)], fill=RED)
+    d.rectangle([860, 380, 940, 480], outline=GOLD, width=4)
+
+
+def india_kharif_foodgrain_output(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 280, 360, 520], fill=YELLOW)
+    d.polygon([(300, 400), (380, 320), (460, 400), (380, 480)], fill=RED)
+    for i, h in enumerate([180, 140, 200, 120]):
+        x = 640 + i * 80
+        d.rectangle([x, 560 - h, x + 50, 560], fill=[BLUE, RED, YELLOW, BLUE][i])
+    d.line([(600, 560), (1180, 560)], fill=INK, width=2)
+
+
+def india_mining_law_states_jharkhand(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(200, 180), (400, 140), (520, 280), (320, 360)], fill=BLUE)
+    d.rectangle([240, 400, 480, 560], fill=RED)
+    d.line([(640, 200), (640, 560)], fill=GOLD, width=3)
+    d.polygon([(900, 220), (1100, 220), (1120, 520), (880, 520)], fill=YELLOW)
+    d.rectangle([940, 300, 1060, 340], fill=BLUE)
+
+
+def flipkart_ceo_exit_quick_commerce(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 200, 420, 560], radius=20, fill=BLUE)
+    d.ellipse([200, 280, 340, 420], fill=CREAM)
+    for i in range(3):
+        d.rectangle([520 + i * 100, 520 - (i + 2) * 60, 580 + i * 100, 520], fill=[RED, YELLOW, BLUE][i])
+    d.polygon([(950, 560), (1040, 380), (1130, 560)], fill=RED)
+    d.line([(700, 360), (950, 460)], fill=GOLD, width=4)
+
+
 if __name__ == "__main__":
     main()
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
@@ -3201,3 +3236,7 @@ if __name__ == "__main__":
     save("rbi-first-state-debt-switch-november-2026", rbi_first_state_debt_switch)
     save("acme-odisha-green-ammonia-fid-november-2026", acme_odisha_green_ammonia_fid)
     save("urban-company-native-ac-launch-november-2026", urban_company_native_ac_launch)
+    save("india-meta-it-automated-takedown-november-2026", india_meta_it_automated_takedown)
+    save("india-kharif-foodgrain-output-november-2026", india_kharif_foodgrain_output)
+    save("india-mining-law-states-jharkhand-november-2026", india_mining_law_states_jharkhand)
+    save("flipkart-ceo-exit-quick-commerce-november-2026", flipkart_ceo_exit_quick_commerce)

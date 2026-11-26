@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-meta-it-automated-takedown-november-2026",
+    title: "Congress asked a court to stop Meta's mass blocking under India's new IT rules",
+    summary:
+      "On 26 November 2026 the Indian National Congress filed a Delhi High Court petition against Meta and the Union government, saying mandatory automated takedowns under February 2026 IT rule changes have restricted opposition posts on Facebook and Instagram while compliance filings show restrictions on more than 5.4 million items in the first half of 2026.",
+    category: "industry",
+    companyOrSector: "Social media / digital policy",
+    publishedAt: "2026-11-26T23:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-meta-it-automated-takedown-november-2026"),
+    keyTakeaways: [
+      "February 2026 amendments made proactive automated blocking of duplicate unlawful content mandatory for large platforms, cutting response time on government orders to three hours.",
+      "Congress alleged over-broad filters hit birthday posts and wedding invites mentioning Rahul Gandhi; youth workers protested outside Meta offices in several cities this week.",
+      "Meta transparency figures cited in reporting showed India restrictions jumping from about 70,000 items in 2025 to more than 5.4 million in the first half of 2026.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large social platforms in India now face tighter deadlines and automated compliance duties under amended Information Technology rules that took effect in February 2026. Reporting on 26 November 2026 said the Congress party filed a petition in the Delhi High Court against Meta and the Union government, alleging systematic censorship of opposition voices on Facebook and Instagram. The immediate flashpoint was restriction of accounts linked to senior Indian Youth Congress officials, including national president Uday Bhanu Chib. Congress argued that Meta's systems were blocking content beyond what courts or ministries actually ordered, citing examples such as birthday greetings and wedding invitations that mention opposition leader Rahul Gandhi. Youth Congress workers had already demonstrated outside Meta offices in Hyderabad, Mumbai, Gurugram, Bengaluru and Delhi. Meta says it is matching identical copies of previously removed material to meet the new mandate and is still refining automated tools on a scale it had not faced before.",
+      "What does this mean?",
+      "When takedown windows shrink from 36 hours to three and proactive matching becomes compulsory, platforms often cast a wide net to avoid losing safe-harbour protection. A post that mirrors wording from an earlier government-flagged item can disappear even if a human moderator might have left it up. For political marketers and news pages, that raises the cost of recycling campaign material and increases false positives ahead of state elections due in early 2027. Advertisers and creators who depend on Meta's India user base must track whether account restrictions trace to a specific legal order or to an automated duplicate hit. The court petition asks for disclosure of blocking logic, restoration of affected posts, and a rethink of the automated mandate. Whatever the judges decide, compliance teams at other large platforms will watch because similar rule language applies across the category.",
+      "Why should I care?",
+      "If you run a brand, NGO or regional media page on Instagram or Facebook, audit whether your creatives reuse phrases that were taken down elsewhere in India. Keep screenshots and appeal references because recovery can lag. If you work in policy or legal teams at a consumer internet firm, model how duplicate-detection thresholds interact with your Indian user volume. Voters and readers should note that platform neutrality claims now sit beside a sharp rise in restriction counts in official transparency reports. Watch the Delhi High Court's next hearing, any ministry clarification on automated tools, and whether Meta publishes an India-specific error-rate review.",
+    ],
+  },
+  {
+    slug: "india-kharif-foodgrain-output-november-2026",
+    title: "India's first Kharif estimate shows weaker foodgrain output after a patchy monsoon",
+    summary:
+      "Market wires on 26 November 2026 cited the Union government's first advance estimate for 2026-27 Kharif, projecting lower production of major foodgrains, pulses and oilseeds after deficient rainfall in several states, at a time when food inflation had already reached 8.94% in October.",
+    category: "industry",
+    companyOrSector: "Agriculture / food prices",
+    publishedAt: "2026-11-26T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-kharif-foodgrain-output-november-2026"),
+    keyTakeaways: [
+      "The first advance Kharif estimate for 2026-27 flagged declining output across key foodgrains, pulses and oilseeds as drought stress showed up in sowing areas.",
+      "Consumer price data already had food inflation at 8.94% in October 2026 versus 7.74% in September, before the crop numbers landed.",
+      "Analysts quoted in the same briefing warned grocery pressure could persist for several more months if procurement and import steps lag the shortfall.",
+    ],
+    body: [
+      "What's going on here?",
+      "Grocery bills in India often trace back to the Kharif harvest that fills mandis between October and December. On 26 November 2026, market preview wires ahead of the 27 November session cited the Union government's first advance estimate for the 2026-27 Kharif season. The release pointed to lower projected output for major foodgrains, pulses and oilseeds after deficient rainfall and drought stress across several growing states. That landed while official data already showed food inflation accelerating to 8.94% in October 2026 from 7.74% in September. Specialists quoted in the same market pulse said the weaker crop picture could keep food prices firm for months unless buffer releases, imports or state-level procurement respond quickly.",
+      "What does this mean?",
+      "Advance estimates are revised, but they still steer how traders price dal, edible oil and cereals before the rabi crop arrives. A softer Kharif print pushes up mandi quotes, which feed into wholesale indices and then into kirana shelves with a short lag. Processors of pulses and oilseeds face higher input costs or slimmer margins if they cannot pass prices through to packaged foods. The government may lean on open-market sales, tariff tweaks or targeted imports for sensitive items such as tur and masur. Rural incomes can suffer in districts that lost yield, even as urban shoppers pay more at checkout. The story is not a single commodity spike; it is a broad harvest miss meeting an already heated food CPI line.",
+      "Why should I care?",
+      "Households should plan pantry stocking knowing dal and cooking oil may not ease as fast as last year. Kirana owners and small restaurateurs should watch state mandi arrivals and consider shorter inventory cycles. If you follow FMCG or agri-input stocks, read company commentary on raw-material inflation separately from volume growth. Policy watchers should track revised Kharif estimates, Food Corporation procurement tenders, and any emergency import windows for pulses. Budget planners in states hit by drought will be under pressure to expand relief schemes without blowing fiscal targets.",
+    ],
+  },
+  {
+    slug: "india-mining-law-states-jharkhand-november-2026",
+    title: "Jharkhand asked Parliament to withdraw the mining law that limits state levies",
+    summary:
+      "On 26 November 2026 Jharkhand Chief Minister Hemant Soren moved an assembly resolution seeking withdrawal of the 2026 amendment to the Mines and Minerals Act, warning the state could lose nearly ₹13,000 crore a year in cess revenue on mineral rights after the Centre restricted new state-level taxes on mining.",
+    category: "industry",
+    companyOrSector: "Mining / federal finance",
+    publishedAt: "2026-11-26T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-mining-law-states-jharkhand-november-2026"),
+    keyTakeaways: [
+      "Parliament passed the Mines and Minerals (Development and Regulation) Amendment in August 2026, barring states from imposing most new taxes on mineral rights and mineral-bearing land unless the Centre permits conditions.",
+      "Jharkhand estimates it collects about ₹13,000 crore annually through cesses that the amendment would block.",
+      "Kerala, Karnataka and Odisha have also objected, reopening a federalism fight two years after the Supreme Court affirmed states' power to tax mineral rights.",
+    ],
+    body: [
+      "What's going on here?",
+      "Mineral-rich states fund welfare and infrastructure partly through levies on ore extraction. On 26 November 2026, reporting said Jharkhand Chief Minister Hemant Soren introduced a resolution in the state assembly asking the Union government to withdraw the Mines and Minerals (Development and Regulation) Amendment passed by Parliament in August 2026. He estimated Jharkhand could forgo nearly ₹13,000 crore each year if it can no longer impose cesses on mineral rights and mineral-bearing land under the new Section 9D framework. The dispute follows a July 2024 Supreme Court judgment that recognised states' constitutional authority to tax mineral rights. The Centre argues overlapping levies make mining unviable and that royalties, auction premiums and GST shares still leave states with most sector revenue. Kerala, Karnataka and Odisha have raised similar objections, turning the law into a Centre-state showdown.",
+      "What does this mean?",
+      "If state cesses are capped, mine developers see a clearer fiscal menu, which may attract investment in coal, iron ore and critical minerals. States that hosted the pits and bore environmental costs lose a discretionary revenue knob they used when output or prices rose. Jharkhand's ₹13,000 crore figure is the state's own estimate of revenue at risk, not a neutral fiscal scorecard, but it shows why welfare budgets feel threatened. Legal challenges may hinge on whether Parliament can condition taxes on mineral-bearing land after the court separated land and mineral-rights powers. Steel mills and power plants could benefit from more predictable input taxes, while local governments in mining belts may face tighter capital spending.",
+      "Why should I care?",
+      "If you work in mining, EPC or heavy industry, map how proposed projects priced state levies and whether feasibility changes under a uniform regime. Investors in state-backed bonds should watch whether mineral-dependent states widen deficits or cut capex. Rural residents in mining districts should track district mineral foundation spends, which often tie to cess flows. Watch Supreme Court or high court petitions, the Union mines ministry's consultations, and whether Jharkhand's resolution prompts a parliamentary review committee.",
+    ],
+  },
+  {
+    slug: "flipkart-ceo-exit-quick-commerce-november-2026",
+    title: "Flipkart is changing CEOs while quick-commerce apps eat into its core aisles",
+    summary:
+      "Reporting on 26 November 2026 described Kalyan Krishnamurthy stepping down as Flipkart Group CEO at a moment when Blinkit, Instamart and Zepto push into electronics and high-ticket categories, complicating Walmart-owned Flipkart's delayed IPO path and portfolio bets from Shopsy to PhonePe.",
+    category: "industry",
+    companyOrSector: "E-commerce / quick commerce",
+    publishedAt: "2026-11-26T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("flipkart-ceo-exit-quick-commerce-november-2026"),
+    keyTakeaways: [
+      "Quick-commerce operators are expanding beyond groceries into smartphones and electronics, categories that traditionally sat with large marketplaces.",
+      "Flipkart entered quick delivery through Minutes after rivals had already built scale, leaving it to defend core GMV while catching up on speed.",
+      "Leadership change arrives with delayed listing plans, ESOP liquidity pressure and mixed results from expansions such as Shopsy, Cleartrip and pharmacy bets.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian shoppers now split baskets between next-day marketplace carts and ten-minute grocery apps that increasingly list phones and appliances. Reporting on 26 November 2026 said Kalyan Krishnamurthy will exit as Flipkart Group CEO after scaling the Walmart-owned marketplace since 2018, including the Big Billion Days sale template. The transition comes as Blinkit, Swiggy Instamart and Zepto move upmarket into electronics and other high-value SKUs that Flipkart built its franchise on. Flipkart responded with its Minutes quick-commerce offering, but rivals entered earlier. The same coverage noted a delayed IPO timeline, employee stock liquidity constraints, and uneven traction from side bets such as Shopsy, Cleartrip and pharmacy plays. At least a dozen senior vice-presidents have left over the past year, according to the wire summary.",
+      "What does this mean?",
+      "Leadership swaps at a dominant marketplace usually signal a strategy reset, not a routine succession. The incoming CEO must decide whether to fund Minutes and food-delivery ambition or narrow focus to profitable core categories while quick-commerce chips away at impulse electronics demand. Every quarter of IPO delay extends ESOP lock-in for senior staff, which can fuel attrition just when execution matters. Walmart's long India bet still depends on Flipkart holding share against Amazon and Meesho on one flank and speed players on another. Consolidating underperforming verticals could free capital, but it also risks conceding categories where startups already have shopper habit.",
+      "Why should I care?",
+      "If you sell on Flipkart or run a brand store, ask your account team how Minutes allocation and ad pricing will shift during the CEO transition. Shoppers comparing phone prices should check whether delivery speed, return policies and wallet offers differ between marketplace and quick-commerce listings. Employees holding unlisted ESOPs should clarify refresh and buyback policy with HR. Investors watching the consumer internet space should track announcement of Krishnamurthy's successor, any refreshed listing timeline, and whether Flipkart thins its subsidiary portfolio.",
+    ],
+  },
+  {
     slug: "india-sc-subvention-prosecution-sanctions-november-2026",
     title: "The Supreme Court gave lenders one week to approve prosecuting staff in builder subvention cases",
     summary:
@@ -15864,6 +15960,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-meta-it-automated-takedown-november-2026": "policy",
+  "india-kharif-foodgrain-output-november-2026": "markets",
+  "india-mining-law-states-jharkhand-november-2026": "policy",
+  "flipkart-ceo-exit-quick-commerce-november-2026": "companies",
   "india-sc-subvention-prosecution-sanctions-november-2026": "policy",
   "rbi-first-state-debt-switch-november-2026": "policy",
   "acme-odisha-green-ammonia-fid-november-2026": "companies",
