@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
 import { openZerodhaLoginTab } from "@/lib/portfolio/zerodha-start";
@@ -20,6 +20,7 @@ type ConnectionsView = {
     sessionActive: boolean;
     mcpBackendReady?: boolean;
     mcpBackendMessage?: string | null;
+    mcpBackendPublicUrl?: string | null;
   };
   mcp: McpRow[];
   vaultCount: number;
@@ -38,6 +39,9 @@ export function AgentConnections() {
   const [view, setView] = useState<ConnectionsView | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [operatorEmail, setOperatorEmail] = useState<string | null>(null);
+
+  const adminOAuthHref = useMemo(() => "/api/agent/kite-mcp/oauth-start?returnTo=/ai/connections", []);
 
   const load = useCallback(async () => {
     setError(null);
@@ -66,6 +70,10 @@ export function AgentConnections() {
         return;
       }
       setView(json as ConnectionsView);
+      const {
+        data: { user },
+      } = await getPocketedgeSupabase().auth.getUser();
+      setOperatorEmail(user?.email ?? null);
     } catch {
       setError("Could not load connections. Check your network and try again.");
     }
@@ -73,6 +81,13 @@ export function AgentConnections() {
 
   useEffect(() => {
     void load();
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("kiteMcp") === "ready") {
+      setError(null);
+      params.delete("kiteMcp");
+      const path = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
+      window.history.replaceState({}, "", path);
+    }
   }, [load]);
 
   // After Kite login tab closes / user returns, refresh session status.
@@ -158,12 +173,19 @@ export function AgentConnections() {
           )}
           {z && z.mcpBackendReady === false && z.mcpBackendMessage ? (
             <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
-              <p className="font-semibold">Zerodha connector is not live on the server</p>
+              <p className="font-semibold">Zerodha server not authorized yet</p>
               <p className="mt-1 text-[13px] leading-relaxed">{z.mcpBackendMessage}</p>
-              <p className="mt-2 text-xs text-amber-900/80">
-                This is a one-time operator step on the personal-agents deployment (Kite MCP OAuth ~24h). User Connect
-                buttons will fail until it is done.
+              <p className="mt-2 flex flex-wrap items-center gap-2">
+                <a href={adminOAuthHref} className="btn-primary text-sm no-underline">
+                  Authorize Zerodha server
+                </a>
+                <span className="text-xs text-amber-900/80">
+                  Operator PocketEdge login · ~1 minute · renew every ~24h
+                </span>
               </p>
+              {operatorEmail ? (
+                <p className="mt-2 text-[11px] text-amber-900/70">Signed in as {operatorEmail}</p>
+              ) : null}
             </div>
           ) : null}
           <div className="mt-4 flex flex-wrap gap-2">
