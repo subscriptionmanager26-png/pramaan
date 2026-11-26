@@ -29,10 +29,13 @@ export async function GET(request: Request) {
     if (!res.ok || !(body as { ok?: boolean }).ok) {
       const msg =
         (body as { error?: { message?: string } })?.error?.message || "token_exchange_failed";
+      console.error("[kite-mcp-oauth-callback] token exchange failed", { status: res.status, msg });
       return NextResponse.redirect(new URL(`/ai/connections?kiteMcp=error&msg=${encodeURIComponent(msg)}`, request.url));
     }
+    console.info("[kite-mcp-oauth-callback] server bearer stored");
     return NextResponse.redirect(new URL("/ai/connections?kiteMcp=ready", request.url));
-  } catch {
+  } catch (err) {
+    console.error("[kite-mcp-oauth-callback] upstream failed", err);
     return NextResponse.redirect(new URL("/ai/connections?kiteMcp=error&msg=upstream_timeout", request.url));
   }
 }

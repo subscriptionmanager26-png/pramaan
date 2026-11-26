@@ -108,28 +108,33 @@ export function AgentConnections() {
     setError(null);
     try {
       const headers = await authHeaders();
-      const res = await fetch("/api/agent/kite-mcp/oauth-start", {
+      const res = await fetch("/api/agent/kite-mcp/oauth-start?format=json", {
         method: "GET",
-        headers,
-        redirect: "manual",
+        headers: { ...headers, Accept: "application/json" },
         credentials: "same-origin",
       });
-      const loc = res.headers.get("Location");
-      if (loc && res.status >= 300 && res.status < 400) {
-        window.location.assign(loc);
-        return;
-      }
+      const json = (await res.json().catch(() => ({}))) as {
+        ready?: boolean;
+        url?: string;
+        error?: { message?: string } | string;
+      };
       if (res.status === 401) {
         setError("Session expired — sign in again, then tap Authorize Zerodha server.");
         return;
       }
-      const json = (await res.json().catch(() => ({}))) as {
-        error?: { message?: string } | string;
-      };
+      if (json.ready) {
+        void load();
+        return;
+      }
+      if (typeof json.url === "string" && json.url.startsWith("http")) {
+        window.location.assign(json.url);
+        return;
+      }
       const err = json.error;
       const msg =
         (typeof err === "object" && err?.message) ||
         (typeof err === "string" ? err : null) ||
+        (!res.ok ? `Could not start authorization (HTTP ${res.status}).` : null) ||
         "Could not start Zerodha server authorization. Try again in a minute.";
       setError(msg);
     } catch {
@@ -213,10 +218,13 @@ export function AgentConnections() {
           {z?.connected && z.loggedInAs && (
             <p className="mt-3 text-sm text-ink">Logged in as {z.loggedInAs}</p>
           )}
-          {z && z.mcpBackendReady === false && z.mcpBackendMessage ? (
+          {z && z.mcpBackendReady === false ? (
             <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
-              <p className="font-semibold">Zerodha server not authorized yet</p>
-              <p className="mt-1 text-[13px] leading-relaxed">{z.mcpBackendMessage}</p>
+              <p className="font-semibold">Step 1: Authorize PocketEdge on Kite (one time)</p>
+              <p className="mt-1 text-[13px] leading-relaxed">
+                Kite requires a one-minute server login before Connect Zerodha works. You will see Kite’s consent screen, then your
+                Zerodha user ID and password. After login you return here automatically.
+              </p>
               <p className="mt-2 flex flex-wrap items-center gap-2">
                 <button
                   type="button"

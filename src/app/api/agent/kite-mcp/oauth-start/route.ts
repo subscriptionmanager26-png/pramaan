@@ -5,6 +5,13 @@ import { paFetch, personalAgentsConfigured } from "@/lib/personal-agents";
 
 export const dynamic = "force-dynamic";
 
+function wantsJsonResponse(request: Request) {
+  const url = new URL(request.url);
+  if (url.searchParams.get("format") === "json") return true;
+  const accept = request.headers.get("accept") || "";
+  return accept.includes("application/json");
+}
+
 function authRequestFrom(request: Request, formToken?: string) {
   const headers = new Headers(request.headers);
   const token = formToken?.trim();
@@ -15,6 +22,7 @@ function authRequestFrom(request: Request, formToken?: string) {
 }
 
 async function startKiteMcpOAuth(request: Request) {
+  const jsonOut = wantsJsonResponse(request);
   if (!personalAgentsConfigured()) {
     return NextResponse.json({ error: "agent_backend_unconfigured" }, { status: 503 });
   }
@@ -31,9 +39,11 @@ async function startKiteMcpOAuth(request: Request) {
     return NextResponse.json(body, { status: res.status });
   }
   if (body.ready) {
+    if (jsonOut) return NextResponse.json({ ready: true });
     return NextResponse.redirect(new URL("/ai/connections?kiteMcp=ready", request.url));
   }
   if (typeof body.url === "string" && body.url.startsWith("http")) {
+    if (jsonOut) return NextResponse.json({ ready: false, url: body.url });
     return NextResponse.redirect(body.url);
   }
   return NextResponse.json(
