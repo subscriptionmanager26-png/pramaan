@@ -405,8 +405,10 @@ export function PramaanAgentChat() {
       messageId: string,
       headers: Record<string, string>,
       timeoutMs = 20_000,
+      opts?: { snapshot?: boolean },
     ): Promise<AgentMessage | null> => {
-      const res = await fetch(`/api/agent/messages/${messageId}`, {
+      const q = opts?.snapshot ? "?deep=0" : "";
+      const res = await fetch(`/api/agent/messages/${messageId}${q}`, {
         headers,
         cache: "no-store",
         signal: AbortSignal.timeout(timeoutMs),
@@ -454,8 +456,8 @@ export function PramaanAgentChat() {
       );
     };
 
-    const pullFull = async () => {
-      const msg = await fetchMessage(messageId, headers);
+    const pullFull = async (snapshot = false) => {
+      const msg = await fetchMessage(messageId, headers, 20_000, { snapshot });
       if (!msg) return;
       track.latest = msg;
       setMessages((list) => list.map((m) => (m.id === messageId ? msg : m)));
@@ -478,7 +480,7 @@ export function PramaanAgentChat() {
           const event = parseStreamEvent(frame);
           apply(event);
           if (event?.type === "done" || event?.type === "error") {
-            await pullFull();
+            await pullFull(true);
             if (track.latest) return track.latest;
           }
         }
@@ -486,7 +488,7 @@ export function PramaanAgentChat() {
       }
     }
 
-    await pullFull();
+    await pullFull(true);
     const snapshot = track.latest;
     if (snapshot && snapshot.status === "working") {
       const settled = await reconcileMessage(messageId, headers, 45_000);
@@ -614,14 +616,14 @@ export function PramaanAgentChat() {
         loadedThreadRef.current = sendThreadId;
         router.replace(chatUrl(sendThreadId));
       }
-      refreshThreads();
+      void refreshThreads();
       const final = await streamMessage(match.id, headers);
       setMessages((m) => {
         const next = m.map((x) => (x.id === final.id ? final : x));
         persistMessages(sendThreadId, next);
         return next;
       });
-      await fetch(
+      void fetch(
         `/api/agent/chat-state?threadId=${encodeURIComponent(sendThreadId)}&limit=50&scope=messages`,
         { headers, cache: "no-store" },
       )
@@ -631,8 +633,8 @@ export function PramaanAgentChat() {
           applyServerMessages(sendThreadId, (body.messages as AgentMessage[]) || []);
         })
         .catch(() => undefined);
-      await refreshArtifacts();
-      refreshThreads();
+      void refreshArtifacts();
+      void refreshThreads();
     };
 
     const recoverEnqueuedMessage = async (headers: Record<string, string>): Promise<boolean> => {

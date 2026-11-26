@@ -19,10 +19,23 @@ export function applyStreamEvent(message: AgentMessage, event: AgentStreamEvent)
       };
     case "block":
       if (!event.block) return message;
+      const blocks = [...(message.blocks ?? [])];
+      const last = blocks[blocks.length - 1];
+      if (
+        event.block.kind === "markdown" &&
+        last &&
+        last.kind === "markdown" &&
+        typeof last.text === "string" &&
+        "text" in event.block
+      ) {
+        blocks[blocks.length - 1] = event.block;
+      } else {
+        blocks.push(event.block);
+      }
       return {
         ...message,
         status: "working",
-        blocks: [...message.blocks, event.block],
+        blocks,
       };
     case "action_required":
       if (!event.action) return message;

@@ -19,7 +19,13 @@ export async function GET(request: Request, { params }: Params) {
     return NextResponse.json({ error: "agent_not_enabled" }, { status: 403 });
   }
   const { id } = await params;
-  const res = await paFetch(`/api/v1/users/${encodeURIComponent(user.id)}/messages/${encodeURIComponent(id)}`);
+  const url = new URL(request.url);
+  const deep = url.searchParams.get("deep");
+  const qs = deep != null ? `?deep=${encodeURIComponent(deep)}` : "";
+  const res = await paFetch(
+    `/api/v1/users/${encodeURIComponent(user.id)}/messages/${encodeURIComponent(id)}${qs}`,
+    { signal: AbortSignal.timeout(12_000) },
+  );
   const body = await res.json().catch(() => ({}));
   return NextResponse.json(body, { status: res.status });
 }
