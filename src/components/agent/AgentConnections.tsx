@@ -82,9 +82,17 @@ export function AgentConnections() {
   useEffect(() => {
     void load();
     const params = new URLSearchParams(window.location.search);
-    if (params.get("kiteMcp") === "ready") {
+    const kiteMcp = params.get("kiteMcp");
+    if (kiteMcp === "ready") {
       setError(null);
+      void load();
+    } else if (kiteMcp === "error") {
+      const msg = params.get("msg") || "Server authorization failed.";
+      setError(msg);
+    }
+    if (kiteMcp) {
       params.delete("kiteMcp");
+      params.delete("msg");
       const path = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
       window.history.replaceState({}, "", path);
     }
@@ -179,9 +187,7 @@ export function AgentConnections() {
                 <a href={adminOAuthHref} className="btn-primary text-sm no-underline">
                   Authorize Zerodha server
                 </a>
-                <span className="text-xs text-amber-900/80">
-                  Operator PocketEdge login · ~1 minute · renew every ~24h
-                </span>
+                <span className="text-xs text-amber-900/80">Signed-in PocketEdge user · ~1 minute · auto-renews when possible</span>
               </p>
               {operatorEmail ? (
                 <p className="mt-2 text-[11px] text-amber-900/70">Signed in as {operatorEmail}</p>
