@@ -5,7 +5,6 @@ import { pocketedgeTrustFooterLine } from "@/lib/seo/user-survey-rating";
 const links = [
   { href: "/news", label: "News" },
   { href: "/research", label: "Research" },
-  { href: "/advisors", label: "Advisors" },
   { href: "/resources", label: "Resources" },
   { href: "/ai", label: "Ask AI" },
 ] as const;

@@ -1,20 +1,6 @@
-import type { Metadata } from "next";
-import { AdvisorsExplorer } from "@/components/advisors/AdvisorsExplorer";
-import { pageMetadata } from "@/lib/seo/metadata";
-import { Page, PageHeader } from "@/components/shell/Page";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = pageMetadata({
-  path: "/advisors",
-  title: "Advisors",
-  description:
-    "Browse SEBI-registered research analysts, RIAs, and PMS managers, including global investing and advisory listings.",
-});
-
+/** Advisor directory lives under Resources. */
 export default function AdvisorsPage() {
-  return (
-    <Page>
-      <PageHeader title="Advisors" />
-      <AdvisorsExplorer />
-    </Page>
-  );
+  redirect("/resources#advisors");
 }

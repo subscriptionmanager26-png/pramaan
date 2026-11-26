@@ -68,7 +68,7 @@ function AdvisorRow({ advisor }: { advisor: SebiAdvisor }) {
   );
 }
 
-export function AdvisorsExplorer() {
+export function AdvisorsExplorer({ embedded = false }: { embedded?: boolean }) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatFilter>("all");
   const [scope, setScope] = useState<ScopeFilter>("all");
@@ -214,7 +214,7 @@ export function AdvisorsExplorer() {
   );
 
   return (
-    <div className="mt-8">
+    <div className={embedded ? "mt-0" : "mt-8"}>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <label className="relative block min-w-0 flex-1">
           <span className="sr-only">Search advisors</span>

@@ -27,7 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/", undefined, "daily", 1),
     entry("/news", undefined, "hourly", 0.9),
     entry("/research", undefined, "daily", 0.9),
-    entry("/advisors", undefined, "weekly", 0.7),
     entry("/resources", undefined, "weekly", 0.8),
     entry("/disclosures", undefined, "yearly", 0.3),
     entry("/etf-tracker", undefined, "daily", 0.85),

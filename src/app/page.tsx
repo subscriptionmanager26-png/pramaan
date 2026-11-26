@@ -238,7 +238,7 @@ export default function HomePage() {
                 <p className="mt-2 text-[15px] font-bold leading-snug text-ink">
                   Find advisors by type. Global advisory marked separately.
                 </p>
-                <Link href="/advisors" className="btn-secondary mt-4 text-[13px]">
+                <Link href="/resources#advisors" className="btn-secondary mt-4 text-[13px]">
                   Browse advisors
                 </Link>
               </div>

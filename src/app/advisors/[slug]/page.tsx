@@ -54,7 +54,7 @@ export default async function AdvisorPage({
 
   return (
     <Page width="content">
-      <Link href="/advisors" className="text-[13px] font-semibold text-accent hover:underline">
+      <Link href="/resources#advisors" className="text-[13px] font-semibold text-accent hover:underline">
         ← All advisors
       </Link>
 

@@ -5,6 +5,7 @@ import { BookOpen, Briefcase, Newspaper, ScanSearch } from "lucide-react";
 
 import { AskAiIcon } from "@/components/icons/AskAiIcon";
 import { AppNavLink } from "@/components/shell/AppNavLink";
+import { isResourcesRoute } from "@/lib/resources-nav";
 
 /** Primary mobile destinations — Ask AI centered (old Pocketedge Shell sizing). */
 const tabs = [
@@ -18,16 +19,7 @@ const tabs = [
 function tabActive(pathname: string | null, href: string) {
   if (!pathname) return false;
   if (href === "/ai") return pathname.startsWith("/ai");
-  if (href === "/resources") {
-    return (
-      pathname === "/resources" ||
-      pathname.startsWith("/resources/") ||
-      pathname === "/guides" ||
-      pathname.startsWith("/guides/") ||
-      pathname === "/tools" ||
-      pathname.startsWith("/tools/")
-    );
-  }
+  if (href === "/resources") return isResourcesRoute(pathname);
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 

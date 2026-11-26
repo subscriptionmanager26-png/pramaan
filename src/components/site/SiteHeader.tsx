@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import { PRODUCT_RAIL_WIDTH } from "@/components/shell/ProductRail";
 import { SiteAccountMenu } from "@/components/site/SiteAccountMenu";
+import { isResourcesRoute } from "@/lib/resources-nav";
 
 function sectionTitle(pathname: string | null) {
   if (!pathname || pathname === "/") return "Home";
@@ -11,17 +12,7 @@ function sectionTitle(pathname: string | null) {
   if (pathname.startsWith("/news")) return "News";
   if (pathname.startsWith("/research") || pathname.startsWith("/content")) return "Research";
   if (pathname.startsWith("/portfolio")) return "Portfolio";
-  if (pathname.startsWith("/advisors") || pathname.startsWith("/for-advisors")) return "Advisors";
-  if (
-    pathname.startsWith("/resources") ||
-    pathname.startsWith("/guides") ||
-    pathname.startsWith("/tools") ||
-    pathname.startsWith("/gold-tracker") ||
-    pathname.startsWith("/etf-tracker") ||
-    pathname.startsWith("/market-holidays")
-  ) {
-    return "Resources";
-  }
+  if (isResourcesRoute(pathname) || pathname.startsWith("/for-advisors")) return "Resources";
   if (pathname.startsWith("/account")) return "Account";
   if (pathname.startsWith("/search")) return "Search";
   if (pathname.startsWith("/discover")) return "Discover";

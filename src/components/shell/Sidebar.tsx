@@ -3,12 +3,12 @@
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/Logo";
+import { isResourcesRoute } from "@/lib/resources-nav";
 
 const nav = [
   { href: "/news", label: "News", icon: "news" },
   { href: "/research", label: "Research", icon: "research" },
   { href: "/portfolio", label: "Portfolio", icon: "portfolio" },
-  { href: "/advisors", label: "Advisors", icon: "user" },
   { href: "/resources", label: "Resources", icon: "guides" },
 ];
 
@@ -65,16 +65,7 @@ export function Sidebar({ mobile = false }: { mobile?: boolean }) {
   }
 
   function isActive(href: string) {
-    if (href === "/resources") {
-      return (
-        pathname === "/resources" ||
-        pathname.startsWith("/resources/") ||
-        pathname === "/guides" ||
-        pathname.startsWith("/guides/") ||
-        pathname === "/tools" ||
-        pathname.startsWith("/tools/")
-      );
-    }
+    if (href === "/resources") return isResourcesRoute(pathname);
     return pathname === href || pathname.startsWith(`${href}/`);
   }
 

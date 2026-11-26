@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { BookOpen, Briefcase, Lock, Newspaper, ScanSearch, Settings, Users } from "lucide-react";
+import { BookOpen, Briefcase, Lock, Newspaper, ScanSearch, Settings } from "lucide-react";
 import Link from "next/link";
 
 import { AdvisorAvatar } from "@/components/agent/AdvisorAvatar";
@@ -25,6 +25,7 @@ import {
 } from "@/lib/agent/advisors";
 import { agentsCreditsOutageActive, isAgenticAdvisorChatPaused } from "@/lib/agent/agents-credits-outage";
 import { aiTeamPreviewEnabled } from "@/lib/agent/ai-team-preview";
+import { isResourcesRoute } from "@/lib/resources-nav";
 import { pocketedgeAuthHeaders } from "@/lib/pocketedge/auth-headers";
 
 /** Same destinations as the header logo column. */
@@ -35,26 +36,13 @@ const PRODUCT_NAV = [
   { href: "/research", label: "Research", Icon: ScanSearch },
   { href: "/ai", label: "Ask AI", Icon: null },
   { href: "/portfolio", label: "Portfolio", Icon: Briefcase },
-  { href: "/advisors", label: "Advisors", Icon: Users },
   { href: "/resources", label: "Resources", Icon: BookOpen },
 ] as const;
 
 function productNavActive(pathname: string | null, href: string) {
   if (!pathname) return false;
   if (href === "/ai") return pathname.startsWith("/ai");
-  if (href === "/resources") {
-    return (
-      pathname === "/resources" ||
-      pathname.startsWith("/resources/") ||
-      pathname === "/guides" ||
-      pathname.startsWith("/guides/") ||
-      pathname === "/tools" ||
-      pathname.startsWith("/tools/") ||
-      pathname.startsWith("/gold-tracker") ||
-      pathname.startsWith("/etf-tracker") ||
-      pathname.startsWith("/market-holidays")
-    );
-  }
+  if (href === "/resources") return isResourcesRoute(pathname);
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
