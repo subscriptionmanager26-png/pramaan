@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "india-sc-subvention-prosecution-sanctions-november-2026",
+    title: "The Supreme Court gave lenders one week to approve prosecuting staff in builder subvention cases",
+    summary:
+      "On 26 November 2026 India's top court directed HDFC Bank, ICICI Bank, Sammaan Capital and PNB Housing Finance to grant unconditional prosecution sanction within seven days in alleged subvention frauds where builders stopped paying EMIs but banks still chased homebuyers.",
+    category: "industry",
+    companyOrSector: "Home loans / real estate finance",
+    publishedAt: "2026-11-26T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-sc-subvention-prosecution-sanctions-november-2026"),
+    keyTakeaways: [
+      "A bench led by Chief Justice Surya Kant warned bank chairmen must appear personally if sanctions are not issued within a week.",
+      "The CBI told the court it completed probes in 25 of 55 registered cases and filed 22 chargesheets in the NCR subvention fraud batch.",
+      "Under typical subvention deals banks pay builders directly and builders pay EMIs until possession; defaults often leave buyers facing recovery calls.",
+    ],
+    body: [
+      "What's going on here?",
+      "Subvention home-loan schemes promised buyers they would not pay instalments until flats were ready, with builders footing EMIs in the interim. When developers defaulted, many lenders still pursued homebuyers for repayment. On 26 November 2026 the Supreme Court directed HDFC Bank, ICICI Bank, Sammaan Capital and PNB Housing Finance to issue unconditional prosecution sanction against their officials within one week in cases tied to those alleged frauds. A bench of Chief Justice Surya Kant and Justices Joymalya Bagchi and V Mohana said chairmen and managing directors must show cause in person if banks fail to comply. Additional Solicitor General Aishwaya Bhati, for the CBI, said the agency struggled to obtain sanctions under the Prevention of Corruption Act, including conditional approvals from HDFC Bank. The CBI reported investigations complete in 25 of 55 cases, with 22 chargesheets filed and three closure reports.",
+      "What does this mean?",
+      "Prosecution sanction is the gate that keeps bank staff from facing corruption trials while investigators try to map builder-bank collusion. Unconditional approval within a week removes a delay tactic that homebuyer petitions have complained about for years. If chargesheets now move to trial on fixed timelines, lenders may tighten underwriting on builder subvention products and document tripartite agreements more aggressively. Developers still marketing possession-linked payment plans may face harder questions at registration desks. The order does not erase existing EMIs on legacy loans, but it signals courts want banks to own staff accountability rather than route recovery only toward flat buyers.",
+      "Why should I care?",
+      "If you booked an under-construction flat with a subvention clause, pull your loan agreement and check who remains liable when the builder misses EMI deposits. Before signing new schemes, ask whether the lender still offers subvention and what happens on builder default. If you work in project finance or mortgage sales, expect compliance teams to revisit sanction workflows this week. Watch whether each named bank publishes sanction letters, CBI trial calendars for the remaining open probes, and any RBI guidance on discontinuing subvention-style disbursements.",
+    ],
+  },
+  {
+    slug: "rbi-first-state-debt-switch-november-2026",
+    title: "India ran its first state-government bond switch and lenders almost filled the book",
+    summary:
+      "On 26 November 2026 the Reserve Bank of India completed its maiden switch auction for state development loans, with banks swapping near-term maturities for fresh longer paper from Madhya Pradesh, Punjab, Rajasthan, Tamil Nadu and Uttar Pradesh in a ₹80–83 crore exchange that traders expect to repeat.",
+    category: "industry",
+    companyOrSector: "State government debt",
+    publishedAt: "2026-11-26T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-first-state-debt-switch-november-2026"),
+    keyTakeaways: [
+      "States sold about ₹80 billion of new securities and bought back roughly ₹83 billion of shorter-dated notes in the maiden switch, the RBI said.",
+      "Madhya Pradesh, Punjab, Rajasthan, Tamil Nadu and Uttar Pradesh participated; the Centre already runs monthly switch auctions for its own bonds.",
+      "Market participants quoted by Reuters said near-full subscription opens room for more state switches before the March quarter borrowing ends.",
+    ],
+    body: [
+      "What's going on here?",
+      "State governments borrow heavily through SDL auctions each quarter, but until now only the Union government used switch auctions to roll maturing debt into fresh longer tenors without lifting gross supply. On 26 November 2026 the Reserve Bank of India ran the first switch for state development loans. Reporting citing RBI data said states sold around ₹80 billion of new bonds and bought back nearly ₹83 billion of shorter-dated paper. Participating states included Madhya Pradesh, Punjab, Rajasthan, Tamil Nadu and Uttar Pradesh. A switch lets issuers retire near-term maturities while placing new bonds in the same operation, smoothing redemption walls. Traders told Reuters some banks used the auction to shed out-of-the-money holdings and pick up more liquid replacement notes, and that more such switches could follow in the rest of fiscal 2027.",
+      "What does this mean?",
+      "States planned to borrow ₹2.78 trillion via bonds in the October-December quarter; switches give treasuries a tool to manage maturity clusters without surprising the market with separate buybacks. For banks holding SDL inventory, a regular switch window can improve tradability and reduce forced sales when a small state line matures. Yield levels on the new paper still price credit and duration risk, but the mechanism mirrors a practice investors already understand from central government switch calendars. If switches become routine, mutual funds and insurers may hold state paper longer knowing rolloff risk can be managed through RBI auctions rather than only secondary sales.",
+      "Why should I care?",
+      "If you buy state bond funds or insurers' gilt-plus portfolios, ask whether managers participated in the maiden switch and how it changed average maturity. Corporate treasuries parking cash in SDLs should note whether liquidity improves as switches repeat. State finance officials beyond the first five participants may push for inclusion in the next auction calendar. Watch the RBI's next switch notice, subscription ratios, and whether Punjab or Tamil Nadu borrowing calendars adjust gross issuance after the buyback.",
+    ],
+  },
+  {
+    slug: "acme-odisha-green-ammonia-fid-november-2026",
+    title: "ACME took final investment decision on a 3.6 billion dollar green ammonia plant in Odisha",
+    summary:
+      "ACME Group said on 26 November 2026 it approved a USD 3.6 billion Odisha project to produce 760,000 tonnes of green ammonia yearly by 2029, backed by SECI and Japan offtake plus Brookfield capital after electrolysis and Thyssenkrupp Uhde technology selection.",
+    category: "industry",
+    companyOrSector: "Green hydrogen / fertiliser",
+    publishedAt: "2026-11-26T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("acme-odisha-green-ammonia-fid-november-2026"),
+    keyTakeaways: [
+      "The plant targets 760,000 tonnes per year of green ammonia from renewable-powered electrolysis, with commissioning aimed at 2029.",
+      "ACME pledged 370,000 tonnes to Indian fertiliser buyers via SECI under the SIGHT scheme and 83,000 tonnes to Japan's IHI Corporation.",
+      "Brookfield committed up to USD 600 million to ACME's green ammonia platform in September 2026 alongside developer equity.",
+    ],
+    body: [
+      "What's going on here?",
+      "Green ammonia projects only move from slides to steel when offtake and capital line up together. On 26 November 2026 reporting said ACME Group took final investment decision on a USD 3.6 billion facility in Odisha to produce about 760,000 tonnes of green ammonia annually, with commissioning targeted for 2029. The plant would run a 2,200-tonne-per-day ammonia loop using hydrogen from renewable-powered electrolysis, with Thyssenkrupp Uhde named as technology partner. ACME said it contracted 370,000 tonnes for domestic fertiliser companies through the Solar Energy Corporation of India under the SIGHT green-hydrogen scheme and another 83,000 tonnes to Japan's IHI Corporation. The site is also being designed for European renewable-fuel rules, with CertifHy reviewing electricity sourcing. Brookfield had joined the platform in September 2026 with up to USD 600 million to fund more than 1.5 million tonnes per annum of green molecules over time.",
+      "What does this mean?",
+      "Fertiliser importers and co-ops get a domestic green ammonia lane if execution holds, which matters as gas-linked ammonia prices stay volatile. Long-dated PPAs and export tickets help ACME borrow against predictable cash flows instead of merchant hydrogen bets. For Odisha, the project adds industrial power demand and port-linked logistics needs years before output ships. Competing developers must match certified renewable sourcing and multi-year offtake to reach FID, not announce capacity alone. Delays in electrolyser supply or grid connections remain the main risks between investment decision and 2029 startup.",
+      "Why should I care?",
+      "If you source crop nutrients or run an ammonia-consuming chemical plant, track SECI allocation rules for the 370,000-tonne domestic tranche. Infrastructure lenders and green-bond investors can benchmark ACME's financing stack against Brookfield's equity pipe. Policy watchers should compare Odisha progress with ACME's smaller Duqm, Oman plant nearing first output. Follow construction milestones, EU certification audits, and state power purchase agreements that feed the electrolysers.",
+    ],
+  },
+  {
+    slug: "urban-company-native-ac-launch-november-2026",
+    title: "Urban Company started selling its own air conditioners with five years of free gas refills",
+    summary:
+      "Urban Company opened pre-bookings on 26 November 2026 for Native Ultra air conditioners priced from ₹55,499, promising a five-year unconditional warranty including gas refills and a ten-year compressor cover after board approval to add ACs to its Native hardware line.",
+    category: "industry",
+    companyOrSector: "Home services / appliances",
+    publishedAt: "2026-11-26T16:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("urban-company-native-ac-launch-november-2026"),
+    keyTakeaways: [
+      "Pre-bookings for Native Ultra and Native Ultra Air began exclusively on the Urban Company app from 26 November 2026 with assisted buying support.",
+      "The company cited more than 18 million AC service jobs as research, noting one in three units needs a gas refill within five years in Indian homes.",
+      "Models are rated for cooling up to 47°C ambient and some trims bundle HEPA H13 filtration, per the exchange disclosure.",
+    ],
+    body: [
+      "What's going on here?",
+      "Urban Company built its brand dispatching technicians to fix other companies' appliances; it now wants to own the box on the wall. On 26 November 2026 the listed platform opened pre-bookings for Native Ultra and Native Ultra Air residential units, with prices starting at ₹55,499 through its app. The board had approved adding air conditioners to the Native portfolio on 19 November. The launch bundles a five-year unconditional warranty that includes gas refills and a ten-year compressor warranty. Management said insights from more than 18 million AC repair and service jobs shaped the lineup, highlighting chronic gas leaks and weak cooling above 42°C summer peaks as pain points. Selected models advertise cooling to 47°C, app-linked gas and energy monitoring, rapid room drop times, and optional built-in HEPA H13 air purification.",
+      "What does this mean?",
+      "When a service marketplace sells hardware, it can price the after-sales bundle into the upfront ticket because it already owns the technician network. Free gas refills attack the refill cycle that drives repeat service revenue for incumbents, trading margin on parts for customer lifetime value and brand stickiness. Established AC makers rely on dealer networks and seasonal discounting; Urban Company's app-only preorder path mirrors its beauty and cleaning playbooks. Success still depends on contract manufacturing quality, installation capacity in peak summer, and whether the warranty economics survive real-world leak rates.",
+      "Why should I care?",
+      "If you plan a summer AC purchase, compare Urban Company's bundled service promise against extended warranties from Voltas, Daikin or Blue Star and check who installs in your pin code. Kirana and large-format retailers should watch whether app-only preorders siphon premium buyers before peak season. Investors in the stock already tracking Native monetisation should model hardware gross margins separately from service take rates. Watch December delivery timelines, customer reviews on cooling at extreme heat, and competitor warranty responses before the March quarter.",
+    ],
+  },
+  {
     slug: "tata-trusts-chandrasekaran-hc-november-2026",
     title: "Tata Trusts will ask Bombay High Court to void Chandrasekaran's chairmanship vote",
     summary:
@@ -15768,6 +15864,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "india-sc-subvention-prosecution-sanctions-november-2026": "policy",
+  "rbi-first-state-debt-switch-november-2026": "policy",
+  "acme-odisha-green-ammonia-fid-november-2026": "companies",
+  "urban-company-native-ac-launch-november-2026": "companies",
   "tata-trusts-chandrasekaran-hc-november-2026": "policy",
   "fssai-packaged-water-surveillance-november-2026": "policy",
   "india-supreme-court-food-warning-labels-november-2026": "policy",

@@ -3129,6 +3129,47 @@ def hetero_lenacapavir_global(d: ImageDraw.ImageDraw) -> None:
         d.polygon([(1000 + i * 35, 520), (1020 + i * 35, 440), (1040 + i * 35, 520)], fill=GOLD if i % 2 else YELLOW)
 
 
+def india_sc_subvention_prosecution(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 200, 420, 560], fill=BLUE)
+    d.rectangle([180, 280, 360, 420], fill=CREAM)
+    d.line([(270, 420), (270, 520)], fill=RED, width=8)
+    d.ellipse([700, 320, 900, 520], fill=YELLOW)
+    d.polygon([(960, 360), (1040, 400), (960, 440)], fill=GOLD)
+    for i, w in enumerate([1080, 1140]):
+        d.rectangle([w, 480 - i * 80, w + 30, 480], fill=RED if i else BLUE)
+
+
+def rbi_first_state_debt_switch(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 240, 480, 540], fill=BLUE)
+    for y in range(280, 500, 60):
+        d.rectangle([180, y, 440, y + 30], fill=GOLD if y % 120 else CREAM)
+    d.polygon([(720, 520), (840, 420), (960, 520)], fill=RED)
+    d.polygon([(840, 420), (880, 360), (920, 420)], fill=YELLOW)
+    for x in range(1020, 1160, 50):
+        d.rectangle([x, 300, x + 25, 520], fill=[RED, BLUE, YELLOW][(x // 50) % 3])
+
+
+def acme_odisha_green_ammonia_fid(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([120, 200, 280, 360], fill=YELLOW)
+    for i in range(3):
+        d.rectangle([380 + i * 90, 400, 440 + i * 90, 560], fill=BLUE)
+    d.polygon([(900, 560), (1020, 320), (1140, 560)], fill=RED)
+    d.rectangle([960, 360, 1080, 420], fill=GOLD)
+    d.line([(600, 480), (900, 400)], fill=GOLD, width=4)
+
+
+def urban_company_native_ac_launch(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 260, 420, 520], fill=BLUE)
+    d.rectangle([200, 320, 360, 460], fill=CREAM)
+    for i in range(4):
+        d.line([(220, 340 + i * 25), (340, 340 + i * 25)], fill=GOLD, width=3)
+    d.ellipse([780, 380, 860, 460], fill=YELLOW)
+    for h in range(4):
+        x = 920 + h * 55
+        d.rectangle([x, 520 - (h + 1) * 40, x + 35, 520], fill=[RED, BLUE, YELLOW, RED][h])
+    d.polygon([(700, 240), (760, 200), (820, 240)], fill=GOLD)
+
+
 if __name__ == "__main__":
     main()
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
@@ -3156,3 +3197,7 @@ if __name__ == "__main__":
     save("india-supreme-court-food-warning-labels-november-2026", india_supreme_court_food_warnings)
     save("india-sugar-output-below-demand-november-2026", india_sugar_output_below_demand)
     save("hetero-lenacapavir-global-launch-november-2026", hetero_lenacapavir_global)
+    save("india-sc-subvention-prosecution-sanctions-november-2026", india_sc_subvention_prosecution)
+    save("rbi-first-state-debt-switch-november-2026", rbi_first_state_debt_switch)
+    save("acme-odisha-green-ammonia-fid-november-2026", acme_odisha_green_ammonia_fid)
+    save("urban-company-native-ac-launch-november-2026", urban_company_native_ac_launch)
