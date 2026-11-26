@@ -26,6 +26,126 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "tata-trusts-chandrasekaran-hc-november-2026",
+    title: "Tata Trusts will ask Bombay High Court to void Chandrasekaran's chairmanship vote",
+    summary:
+      "Charitable trusts that control Tata Sons resolved on 25 November 2026 to sue in Bombay High Court over N Chandrasekaran's reappointment, arguing that when their two nominee directors split, the chairman could not use a casting vote to approve a third term ahead of a 30 November board meeting.",
+    category: "industry",
+    companyOrSector: "Tata group governance",
+    publishedAt: "2026-11-26T11:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-trusts-chandrasekaran-hc-november-2026"),
+    keyTakeaways: [
+      "Sir Dorabji Tata Trust and R.D. Tata Trust reportedly seek ₹50 crore and ₹15 crore in damages alongside declaratory relief on Article 121 of Tata Sons' articles.",
+      "On 17 September 2026 Noel Tata voted against and Venu Srinivasan voted for Chandrasekaran's renewal; chair Harish Manwani's casting vote carried the resolution.",
+      "Trust sources told wire reporters they want interim court relief before the 30 November Tata Sons board convenes.",
+    ],
+    body: [
+      "What's going on here?",
+      "Who chairs Tata Sons still decides capital allocation across India's largest salt-to-software conglomerate. On 25 November 2026, reporters citing trust sources said the Sir Dorabji Tata Trust and R.D. Tata Trust resolved to file suit in Bombay High Court challenging N Chandrasekaran's reappointment as executive chairman. Coverage said the trusts argue that Article 121 of Tata Sons' articles requires key decisions to win support from a majority of Tata Trusts nominee directors present. On 17 September 2026 Noel Tata, a trust nominee, voted against giving Chandrasekaran another term while fellow nominee Venu Srinivasan voted in favour. Board chair Harish Manwani then exercised a casting vote and the resolution passed. The trusts contend that procedure is invalid and are seeking declaratory relief plus damages of ₹50 crore and ₹15 crore respectively, according to the reporting. They also want interim orders before Tata Sons meets again on 30 November 2026.",
+      "What does this mean?",
+      "Casting votes are common on deadlocked boards, but unlisted holding companies can embed shareholder-class rules that limit when the chair may break a tie. If courts agree with the trusts, Chandrasekaran's third term could face a legal cloud even while he continues day-to-day duties, which unsettles lenders, employees and minority investors in listed Tata operating companies. The dispute is not only about personality. It intersects with parallel fights over audio records of the September meeting, Tata Sons listing plans, and how Noel Tata and Venu Srinivasan align inside the trusts themselves. A quick interim order could restrain certain resolutions at the 30 November session; a long trial would prolong governance headlines into 2027 deal-making.",
+      "Why should I care?",
+      "If you hold Tata group shares or bonds, treat board process risk as distinct from operating performance at TCS, Tata Motors or Titan. Banks with group exposure will read court filings for any injunction language. Employees awaiting bonus or project approvals should expect slower sign-offs while lawyers brief directors. Watch the petition when it lands in Bombay High Court, any interim hearing dates before 30 November, Tata Sons' counter-affidavit on Article 121, and whether Noel Tata's separate 25 November letter on meeting agendas becomes part of the same case.",
+    ],
+  },
+  {
+    slug: "fssai-packaged-water-surveillance-november-2026",
+    title: "India ordered every state to step up packaged drinking water checks",
+    summary:
+      "After flagging an unsafe Bisleri sample, the national food regulator sent states a confidential 25 November 2026 directive to intensify risk-based sampling of bottled drinking and mineral water, widening scrutiny beyond one brand to the whole ₹3.5 billion packaged water trade.",
+    category: "industry",
+    companyOrSector: "Packaged water / FSSAI",
+    publishedAt: "2026-11-26T11:35:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("fssai-packaged-water-surveillance-november-2026"),
+    keyTakeaways: [
+      "The Food Safety and Standards Authority of India told state commissioners to hold regular inspections and sampling after a Bisleri plant sample failed chemical safety limits.",
+      "Reuters reported the letter also covers mineral water lines that sell at premium prices to health-conscious urban buyers.",
+      "Major marketers including PepsiCo, Coca-Cola, Tata Consumer and Reliance Consumer compete in the category alongside Bisleri.",
+    ],
+    body: [
+      "What's going on here?",
+      "Urban shoppers buy bottled water because tap quality is uneven, so one failed plant sample can spook an entire aisle. On 25 November 2026 the Food Safety and Standards Authority of India circulated a confidential directive to state food commissioners ordering stronger oversight of packaged drinking water and mineral water, according to Reuters, which reviewed the letter. The move follows FSSAI's public statement this week that a Bisleri sample breached prescribed limits on bromate, with prosecutors planned. Bisleri says its product is safe. The regulator's new instruction tells states to carry out regular inspections and risk-based sampling and to initiate action when plants fall short. The same enforcement wave is already touching global beverage majors that bet on India's roughly $3.5 billion packaged water market, including PepsiCo, Coca-Cola, Tata Consumer Products and Reliance Consumer.",
+      "What does this mean?",
+      "State-level execution decides whether a Delhi order becomes more lab visits in Maharashtra or Gujarat bottling hubs. FSSAI sets standards, but commissioners deploy inspectors and collectors pull lots from trucks. Tighter surveillance raises testing cost for every label, not only the brand named in court papers. Premium mineral water lines, which charge more for origin claims, face the same chain-of-custody rules as the twenty-rupee bottle at the railway stall. Retailers may ask distributors for fresher batch certificates during disputes. The Bisleri prosecution and the surveillance letter together signal a stretch of harder enforcement after separate actions on infant foods, quick-commerce kitchens and liquor labelling.",
+      "Why should I care?",
+      "If you run a restaurant, cafe or airline galley, keep supplier audit trails for water SKUs and be ready to swap brands if a state recall hits one lot. Households can rotate stock, avoid leaving bottles in heat, and watch for official recall notices rather than social rumour. Investors in listed beverage names should model higher compliance spend without assuming revenue stops. Track state inspection tallies in November and December, any PepsiCo or Kinley sample results, Bisleri's court response, and whether modern trade slows reorders until clarity returns.",
+    ],
+  },
+  {
+    slug: "india-supreme-court-food-warning-labels-november-2026",
+    title: "India's top court backed front-of-pack warning hexagons on junk food",
+    summary:
+      "The Supreme Court on 26 November 2026 said FSSAI's rollout schedule for high-fat, sugar and salt warning labels is reasonable and told the regulator to print a separate hexagon for each nutrient of concern on packs, affirming a policy shift food companies have contested for years.",
+    category: "industry",
+    companyOrSector: "Packaged foods / labelling",
+    publishedAt: "2026-11-26T11:25:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-supreme-court-food-warning-labels-november-2026"),
+    keyTakeaways: [
+      "The court agreed FSSAI may revisit threshold levels used to decide when a product triggers a warning hexagon.",
+      "Each nutrient of concern must get its own hexagon symbol on the pack front under the court's reading.",
+      "Industry groups had challenged timelines and design; the judgment keeps implementation on track.",
+    ],
+    body: [
+      "What's going on here?",
+      "Front-of-pack labels try to make junk food as legible as a cigarette warning without forcing shoppers to read fine print. On 26 November 2026, exchange and wire headlines said India's Supreme Court upheld the Food Safety and Standards Authority of India's plan to phase in warning labels on packaged foods high in fat, sugar or salt. The court called the proposed timelines reasonable and directed FSSAI to ensure a separate hexagon appears for each nutrient of concern on packs. Regulators may revisit the numeric thresholds that trigger those symbols. Food and beverage companies have argued in court for slower rollouts and simpler graphics; the judgment keeps the policy path alive.",
+      "What does this mean?",
+      "Brand managers must redesign sleeves for chips, beverages, biscuits and ready meals sold in modern trade and e-commerce. Separate hexagons per nutrient can make crowded packs look punitive, which is exactly what health advocates want for impulse categories. Reformulation teams get a deadline driver: shaving sugar or sodium may remove a symbol and avoid shelf stigma. Small regional brands with weaker R&D budgets face higher redesign cost than national players that already run global label templates. Retailers will need planogram updates and staff training so consumers understand the new icons.",
+      "Why should I care?",
+      "If you buy packaged snacks for children or office pantries, expect louder visual cues on salt and sugar before you reach the ingredient list. Kirana owners should plan label inventory turnover so old stock does not sit beside new warning packs. Investors in FMCG names should watch reformulation capex and whether premium lines escape thresholds. Track FSSAI's revised threshold notification, first category rollouts, state enforcement on expired designs, and any fresh industry petitions after the Supreme Court ruling.",
+    ],
+  },
+  {
+    slug: "india-sugar-output-below-demand-november-2026",
+    title: "India may produce less sugar this season than households usually buy",
+    summary:
+      "The Indian Sugar and Bio-Energy Manufacturers Association on 25 November 2026 pegged 2026-27 gross output at about 26.5 million tonnes against domestic demand near 28 million tonnes, after poor monsoon rains cut cane acreage roughly three percent nationwide.",
+    category: "industry",
+    companyOrSector: "Sugar / agri policy",
+    publishedAt: "2026-11-26T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-sugar-output-below-demand-november-2026"),
+    keyTakeaways: [
+      "ISMA's preliminary estimate puts Maharashtra output at 8.7 million tonnes versus 11.2 million tonnes last season.",
+      "No ethanol diversion is assumed in 2026-27, so gross and net production numbers match.",
+      "Cane area is estimated at 5.55 million hectares, down about 3.2% from the prior year.",
+    ],
+    body: [
+      "What's going on here?",
+      "Kitchen sugar prices matter to voters long before they show up in equity screens. On 25 November 2026 the Indian Sugar and Bio-Energy Manufacturers Association released a preliminary 2026-27 production estimate of about 26.5 million tonnes of gross sugar, down from roughly 27.9 million tonnes of net output in 2025-26. The association said domestic demand runs around 28-28.5 million tonnes a year, so this season's crop may fall short. Maharashtra, the largest producer, could slide to about 8.7 million tonnes from 11.2 million tonnes. Total cane acreage is pegged at 5.55 million hectares, about 3.2% below last year, after uneven monsoon rain left some districts dry and others waterlogged. ISMA said it used satellite imagery, mill surveys and field checks through November.",
+      "What does this mean?",
+      "When output trails consumption, the government must choose among export curbs, import tolerance and retail price caps. Mills earn from sugar sales and ethanol diversion; ISMA noted no ethanol diversion is baked into the 2026-27 number, so every tonne crushed should land in the sweetener pile. Tighter supply usually lifts wholesale rates and encourages hoarding ahead of festivals. Bakeries, beverage makers and confectioners pass input costs into MRPs with a lag. Farmer payments depend on crushing pace; weak cane yields hurt rural cash flow in Uttar Pradesh and Maharashtra belts even if Delhi intervenes on MSP arrears.",
+      "Why should I care?",
+      "If you run a food business, lock supply contracts early and watch government export quota announcements. Households should expect gradual retail price pressure rather than overnight shortages unless policy flips. Investors saw sugar mill shares rally on 26 November, but the durable story is the demand-supply gap, not one session's percentage move. Track weekly crushing data, government's ethanol policy updates, retail sugar MRP in major cities, and any food ministry import window.",
+    ],
+  },
+  {
+    slug: "hetero-lenacapavir-global-launch-november-2026",
+    title: "Hetero began shipping generic HIV prevention medicine to Africa",
+    summary:
+      "Hetero said on 26 November 2026 it is among the first generic makers to deliver lenacapavir vials for HIV prevention, with an initial 300,000-vial tranche planned for Zambia, Uganda and Zimbabwe and an India launch over the coming months.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / public health",
+    publishedAt: "2026-11-26T11:05:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("hetero-lenacapavir-global-launch-november-2026"),
+    keyTakeaways: [
+      "Lenacapavir is a long-acting medicine used in HIV prevention and treatment regimens under clinician oversight.",
+      "Hetero expects oral initiation tablets by January 2027 and wider supply across low- and middle-income countries in 2027.",
+      "The company plans early-2027 shipments to ten additional African countries beyond the first three.",
+    ],
+    body: [
+      "What's going on here?",
+      "Long-acting HIV drugs can cut dosing days for patients who struggle with daily pills, but only if generic suppliers scale fast. Hyderabad-based Hetero said in a 26 November 2026 statement that it is among the first generic manufacturers globally to launch lenacapavir for HIV prevention and has started phased shipments to Africa. The initial plan covers about 300,000 vials for Zambia, Uganda and Zimbabwe, with ten more African countries slated for early 2027. Hetero also said it intends to introduce the product in India over the coming months and to add generic oral initiation tablets by January 2027. Wider volumes across low- and middle-income markets are targeted through 2027.",
+      "What does this mean?",
+      "Originator medicines for lenacapavir reached regulators first; Indian generic entrants compete on price and cold-chain reach in countries that fund prevention through donors and ministries. Vial shipments suit clinic settings where nurses administer injections on a schedule measured in months rather than days. Domestic launch later this season would put Indian HIV programmes on the same procurement calendar as African ministries, subject to National AIDS Control Organisation formularies and state tender rules. Competitors with Gilead licences will fight on volume commitments and pharmacovigilance data.",
+      "Why should I care?",
+      "If you work in health policy or NGO procurement, track which tenders list Hetero and at what price per vial. Indian pharma investors should read this as complex injectable revenue, not a spot equity catalyst. Clinicians should wait for local regulator approvals before expecting pharmacy availability. Watch Indian drug controller filings, WHO prequalification steps, shipment confirmations from the first three African countries, and rival generic launch statements from other Indian manufacturers.",
+    ],
+  },
+  {
     slug: "royal-enfield-tamil-nadu-ev-investment-november-2026",
     title: "Royal Enfield signed a thousand-crore electric manufacturing plan in Tamil Nadu",
     summary:
@@ -15648,6 +15768,11 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "tata-trusts-chandrasekaran-hc-november-2026": "policy",
+  "fssai-packaged-water-surveillance-november-2026": "policy",
+  "india-supreme-court-food-warning-labels-november-2026": "policy",
+  "india-sugar-output-below-demand-november-2026": "markets",
+  "hetero-lenacapavir-global-launch-november-2026": "companies",
   "royal-enfield-tamil-nadu-ev-investment-november-2026": "companies",
   "tata-autocomp-sanand-plants-november-2026": "companies",
   "lupin-fda-dalbavancin-november-2026": "companies",

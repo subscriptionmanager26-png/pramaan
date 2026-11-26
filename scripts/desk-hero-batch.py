@@ -3080,6 +3080,55 @@ def tata_motors_jamshedpur_labour(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(580, 200), (620, 140), (660, 200)], fill=GOLD)
 
 
+def tata_trusts_chandrasekaran_hc(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 160, 480, 560], fill=BLUE)
+    d.rectangle([160, 220, 440, 500], outline=GOLD, width=4)
+    d.line([(280, 520), (280, 200)], fill=RED, width=6)
+    d.polygon([(240, 240), (280, 180), (320, 240)], fill=GOLD)
+    for x in range(700, 1100, 90):
+        d.rectangle([x, 180, x + 40, 560], fill=YELLOW if x % 180 else RED)
+    d.arc([900, 120, 1080, 220], 180, 0, fill=GOLD, width=5)
+
+
+def fssai_packaged_water_surveillance(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 280, 220, 520], radius=24, fill=BLUE)
+    d.ellipse([140, 320, 200, 380], fill=CREAM)
+    for x in range(620, 1140, 130):
+        d.rectangle([x, 360, x + 80, 480], fill=[RED, BLUE, YELLOW][(x // 130) % 3])
+    d.line([(560, 400), (620, 400)], fill=GOLD, width=4)
+    d.polygon([(900, 260), (960, 200), (1020, 260)], fill=GOLD)
+
+
+def india_supreme_court_food_warnings(d: ImageDraw.ImageDraw) -> None:
+    for i, color in enumerate([RED, YELLOW, BLUE]):
+        cx = 200 + i * 140
+        d.polygon(
+            [(cx, 280), (cx + 60, 320), (cx + 60, 400), (cx, 440), (cx - 60, 400), (cx - 60, 320)],
+            fill=color,
+        )
+    d.rectangle([640, 220, 1120, 520], fill=BLUE)
+    d.rectangle([700, 300, 1060, 360], fill=GOLD)
+    d.rectangle([700, 400, 980, 460], fill=CREAM)
+
+
+def india_sugar_output_below_demand(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(200, 520), (320, 360), (420, 520)], fill=YELLOW)
+    d.rectangle([160, 520, 460, 560], fill=GOLD)
+    for i, h in enumerate([140, 220, 180]):
+        x = 720 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, BLUE, YELLOW][i])
+    d.line([(700, 560), (1100, 560)], fill=INK, width=2)
+    d.line([(700, 420), (1100, 500)], fill=RED, width=3)
+
+
+def hetero_lenacapavir_global(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 260, 260, 520], radius=50, fill=RED)
+    d.line([(200, 300), (200, 480)], fill=CREAM, width=16)
+    d.ellipse([760, 300, 920, 460], fill=BLUE)
+    for i in range(4):
+        d.polygon([(1000 + i * 35, 520), (1020 + i * 35, 440), (1040 + i * 35, 520)], fill=GOLD if i % 2 else YELLOW)
+
+
 if __name__ == "__main__":
     main()
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
@@ -3102,3 +3151,8 @@ if __name__ == "__main__":
     save("lupin-fda-dalbavancin-november-2026", lupin_fda_dalbavancin)
     save("bikewo-green-drive-mobility-november-2026", bikewo_green_drive)
     save("tata-motors-jamshedpur-labour-dispute-november-2026", tata_motors_jamshedpur_labour)
+    save("tata-trusts-chandrasekaran-hc-november-2026", tata_trusts_chandrasekaran_hc)
+    save("fssai-packaged-water-surveillance-november-2026", fssai_packaged_water_surveillance)
+    save("india-supreme-court-food-warning-labels-november-2026", india_supreme_court_food_warnings)
+    save("india-sugar-output-below-demand-november-2026", india_sugar_output_below_demand)
+    save("hetero-lenacapavir-global-launch-november-2026", hetero_lenacapavir_global)
