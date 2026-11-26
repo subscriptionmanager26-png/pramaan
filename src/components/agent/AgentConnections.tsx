@@ -18,6 +18,8 @@ type ConnectionsView = {
     connected: boolean;
     loggedInAs: string | null;
     sessionActive: boolean;
+    mcpBackendReady?: boolean;
+    mcpBackendMessage?: string | null;
   };
   mcp: McpRow[];
   vaultCount: number;
@@ -154,9 +156,24 @@ export function AgentConnections() {
           {z?.connected && z.loggedInAs && (
             <p className="mt-3 text-sm text-ink">Logged in as {z.loggedInAs}</p>
           )}
+          {z && z.mcpBackendReady === false && z.mcpBackendMessage ? (
+            <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+              <p className="font-semibold">Zerodha connector is not live on the server</p>
+              <p className="mt-1 text-[13px] leading-relaxed">{z.mcpBackendMessage}</p>
+              <p className="mt-2 text-xs text-amber-900/80">
+                This is a one-time operator step on the personal-agents deployment (Kite MCP OAuth ~24h). User Connect
+                buttons will fail until it is done.
+              </p>
+            </div>
+          ) : null}
           <div className="mt-4 flex flex-wrap gap-2">
             {!z?.connected ? (
-              <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => void zerodhaAction("connect")}>
+              <button
+                type="button"
+                className="btn-primary text-sm"
+                disabled={busy || z?.mcpBackendReady === false}
+                onClick={() => void zerodhaAction("connect")}
+              >
                 {busy ? "Opening Zerodha…" : "Connect Zerodha"}
               </button>
             ) : (

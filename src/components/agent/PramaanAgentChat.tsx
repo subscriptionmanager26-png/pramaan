@@ -301,6 +301,19 @@ export function PramaanAgentChat() {
       if (loadGenRef.current === gen) loadGenRef.current += 1;
     };
   }, [isDraft, threadId, reloadChat, draftNonce, advisorId]);
+
+  useEffect(() => {
+    if (!threadId || isDraft) return;
+    void authHeaders().then((headers) =>
+      fetch("/api/agent/warm", {
+        method: "POST",
+        headers: { ...headers, "Content-Type": "application/json" },
+        body: JSON.stringify({ threadId }),
+        cache: "no-store",
+      }).catch(() => undefined),
+    );
+  }, [threadId, isDraft, authHeaders]);
+
   // Lazy-load files/orders when the Files panel opens.
   useEffect(() => {
     if (!filesOpen || !threadId || !isExistingThread || libraryLoaded.current) return;
@@ -312,7 +325,7 @@ export function PramaanAgentChat() {
     if (!working || !threadId) return;
     const id = window.setInterval(() => {
       void authHeaders().then((headers) => loadThread(headers, { includeLibrary: false }));
-    }, 8000);
+    }, 4000);
     return () => window.clearInterval(id);
   }, [working, authHeaders, loadThread, threadId]);
 
@@ -617,6 +630,11 @@ export function PramaanAgentChat() {
         router.replace(chatUrl(sendThreadId));
       }
       void refreshThreads();
+      void fetch(`/api/agent/messages/${encodeURIComponent(match.id)}/kick`, {
+        method: "POST",
+        headers,
+        cache: "no-store",
+      }).catch(() => undefined);
       const final = await streamMessage(match.id, headers);
       setMessages((m) => {
         const next = m.map((x) => (x.id === final.id ? final : x));
