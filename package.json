@@ -13,6 +13,7 @@
     "af:ingest": "tsx scripts/af-ingest.ts"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.117.2",
     "lucide-react": "^1.61.0",

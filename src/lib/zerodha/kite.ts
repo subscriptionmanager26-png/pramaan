@@ -1,126 +1,16 @@
-import { kiteMcpAuthErrorMessage, kiteMcpBearer } from "@/lib/zerodha/kite-mcp-oauth";
+import { kiteMcpBearer } from "@/lib/zerodha/kite-mcp-oauth";
+import { kiteSdkCall, kiteSdkListTools, type ToolResult } from "@/lib/zerodha/kite-mcp-client";
 import {
   connectKite,
   disconnectKite,
   getKiteConnection,
-  readKiteSession,
   readKiteSessionEnc,
-  saveKiteSession,
 } from "@/lib/zerodha/user-store";
 
-export type ToolResult = { content?: { text?: string }[]; isError?: boolean };
-
-const PROTOCOL = "2025-03-26";
-const SESSION_MAX_MS = 11 * 3600_000;
-const POST_MS = 30_000;
-const SESSION_POST_MS = 12_000;
 const LOGIN_HOSTS = new Set(["kite.zerodha.com", "kite.trade", "mcp.kite.trade", "www.kite.trade"]);
 
 function kiteUrl() {
   return process.env.KITE_MCP_URL?.trim() || "https://mcp.kite.trade/mcp";
-}
-
-type RpcReply = { result?: unknown; error?: { code: number; message: string } };
-
-async function post(sessionId: string | undefined, payload: Record<string, unknown>, timeoutMs = POST_MS) {
-  // wealth-web style: Zerodha is auth "login" — optional env/shared bearer, not a user-facing server OAuth step.
-  const bearer = await kiteMcpBearer().catch(() => undefined);
-  const res = await fetch(kiteUrl(), {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json, text/event-stream",
-      "Mcp-Protocol-Version": PROTOCOL,
-      ...(bearer ? { Authorization: `Bearer ${bearer}` } : {}),
-      ...(sessionId ? { "Mcp-Session-Id": sessionId } : {}),
-    },
-    body: JSON.stringify(payload),
-    cache: "no-store",
-    signal: AbortSignal.timeout(timeoutMs),
-  });
-  const text = await res.text();
-  const json = res.headers.get("content-type")?.includes("text/event-stream")
-    ? text
-        .split("\n")
-        .filter((l) => l.startsWith("data:"))
-        .map((l) => l.slice(5).trim())
-        .filter(Boolean)
-        .pop()
-    : text;
-  let body: RpcReply | undefined;
-  try {
-    body = json ? (JSON.parse(json) as RpcReply) : undefined;
-  } catch {
-    body = undefined;
-  }
-  if (res.status === 401 && kiteUrl().includes("mcp.kite.trade")) {
-    const storeMsg = await kiteMcpAuthErrorMessage();
-    if (!bearer) {
-      throw new Error(storeMsg || "Complete Connect Zerodha to allow PocketEdge to reach Kite.");
-    }
-    throw new Error(
-      storeMsg || "Your Zerodha session may have expired. Log in on Zerodha again, then retry.",
-    );
-  }
-  return { status: res.status, body, sessionId: res.headers.get("mcp-session-id") ?? undefined };
-}
-
-async function openSession() {
-  const init = await post(
-    undefined,
-    {
-      jsonrpc: "2.0",
-      id: 1,
-      method: "initialize",
-      params: {
-        protocolVersion: PROTOCOL,
-        capabilities: {},
-        clientInfo: { name: "pocketedge", version: "1.0.0" },
-      },
-    },
-    SESSION_POST_MS,
-  );
-  if (init.status !== 200 || !init.sessionId) {
-    throw new Error(`Zerodha is not reachable right now (HTTP ${init.status}).`);
-  }
-  await post(init.sessionId, { jsonrpc: "2.0", method: "notifications/initialized" }, SESSION_POST_MS).catch(
-    () => undefined,
-  );
-  return init.sessionId;
-}
-
-async function sessionFor(userId: string, fresh: boolean) {
-  if (!(await getKiteConnection(userId))) throw new Error("Zerodha is not connected.");
-  if (!fresh) {
-    const cached = await readKiteSession(userId, SESSION_MAX_MS);
-    if (cached) return cached;
-  }
-  const sessionId = await openSession();
-  await saveKiteSession(userId, sessionId);
-  return sessionId;
-}
-
-async function kiteRequest(
-  userId: string,
-  method: string,
-  params?: Record<string, unknown>,
-  opts?: { preferFresh?: boolean; timeoutMs?: number },
-) {
-  const sessionId = await sessionFor(userId, Boolean(opts?.preferFresh));
-  const res = await post(
-    sessionId,
-    { jsonrpc: "2.0", id: 1, method, params },
-    opts?.timeoutMs ?? POST_MS,
-  );
-  if (res.status >= 200 && res.status < 300 && res.body) {
-    if (res.body.error) throw new Error(`Zerodha: ${res.body.error.message}`);
-    return res.body.result;
-  }
-  throw new Error(`Zerodha request failed (HTTP ${res.status}).`);
-}
-
-async function kiteCall(userId: string, name: string, args: Record<string, unknown> = {}) {
-  return ((await kiteRequest(userId, "tools/call", { name, arguments: args })) ?? { content: [] }) as ToolResult;
 }
 
 function toolResultText(result: ToolResult) {
@@ -152,19 +42,13 @@ function extractKiteLoginUrl(text: string): string | undefined {
 }
 
 export { connectKite, disconnectKite, getKiteConnection };
+export type { ToolResult };
 
 export async function kiteLogin(userId: string): Promise<{ loggedInAs: string } | { url: string }> {
   const loggedIn = await kiteLoggedInAs(userId).catch(() => undefined);
   if (loggedIn) return { loggedInAs: loggedIn };
 
-  // Fresh MCP session only for the signed Zerodha login redirect — reuse stored session after that.
-  const raw = await kiteRequest(
-    userId,
-    "tools/call",
-    { name: "login", arguments: {} },
-    { preferFresh: true, timeoutMs: SESSION_POST_MS },
-  );
-  const result = (raw ?? { content: [] }) as ToolResult;
+  const result = await kiteSdkCall(userId, "login", {}, { freshSession: true });
   const text = toolResultText(result);
   const already = text.match(/already logged in as (.+)$/im);
   if (already) return { loggedInAs: already[1].trim() };
@@ -174,7 +58,7 @@ export async function kiteLogin(userId: string): Promise<{ loggedInAs: string } 
 }
 
 export async function kiteLoggedInAs(userId: string) {
-  const result = await kiteCall(userId, "get_profile");
+  const result = await kiteSdkCall(userId, "get_profile", {});
   if (result.isError) return undefined;
   const text = toolResultText(result);
   try {
@@ -187,11 +71,6 @@ export async function kiteLoggedInAs(userId: string) {
 
 const NEEDS_LOGIN =
   /log ?in first|login required|not logged in|session (has )?expired|invalid (access )?token|failed to execute\s+get_|unknown tool/i;
-
-async function kiteListedTools(userId: string): Promise<Set<string>> {
-  const raw = (await kiteRequest(userId, "tools/list")) as { tools?: { name?: string }[] } | undefined;
-  return new Set((raw?.tools ?? []).map((t) => t.name).filter((n): n is string => Boolean(n)));
-}
 
 export type KiteHoldingDraft = {
   ticker: string;
@@ -273,29 +152,21 @@ export async function kiteHoldings(
 
   let tools: Set<string> | undefined;
   try {
-    tools = await kiteListedTools(userId);
+    tools = await kiteSdkListTools(userId);
   } catch {
     tools = undefined;
   }
-  const equityTool = tools?.has("get_holdings")
-    ? "get_holdings"
-    : tools?.has("holdings")
-      ? "holdings"
-      : "get_holdings";
-  const mfTool = tools?.has("get_mf_holdings")
-    ? "get_mf_holdings"
-    : tools?.has("mf_holdings")
-      ? "mf_holdings"
-      : "get_mf_holdings";
+  const equityTool = tools?.has("get_holdings") ? "get_holdings" : "get_holdings";
+  const mfTool = tools?.has("get_mf_holdings") ? "get_mf_holdings" : "get_mf_holdings";
 
   let equityResult: ToolResult;
   let equityText: string;
   try {
-    equityResult = await kiteCall(userId, equityTool, {});
+    equityResult = await kiteSdkCall(userId, equityTool, {});
     equityText = toolResultText(equityResult);
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    if (NEEDS_LOGIN.test(msg) || /unknown tool/i.test(msg)) {
+    if (NEEDS_LOGIN.test(msg)) {
       return {
         needsLogin: true,
         message: "Log in on Zerodha first, then fetch holdings again.",
@@ -303,7 +174,7 @@ export async function kiteHoldings(
     }
     throw err;
   }
-  if (callNeedsLogin(equityResult, equityText) || /unknown tool/i.test(equityText)) {
+  if (callNeedsLogin(equityResult, equityText)) {
     return {
       needsLogin: true,
       message: "Your Zerodha session expired. Log in again, then fetch holdings.",
@@ -315,7 +186,7 @@ export async function kiteHoldings(
     if (draft) byKey.set(draft.ticker, draft);
   }
   try {
-    const mfResult = await kiteCall(userId, mfTool, {});
+    const mfResult = await kiteSdkCall(userId, mfTool, {});
     const mfText = toolResultText(mfResult);
     if (!callNeedsLogin(mfResult, mfText)) {
       for (const raw of parseHoldingsJson(mfText)) {
