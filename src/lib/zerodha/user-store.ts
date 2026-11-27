@@ -79,3 +79,11 @@ export async function readKiteSessionEnc(userId: string) {
   if (!conn?.sessionEnc) return undefined;
   return decryptSecret(conn.sessionEnc, SESSION_PURPOSE, userId);
 }
+
+export async function clearKiteSession(userId: string) {
+  const conn = await readConn(userId);
+  if (!conn) return;
+  delete conn.sessionEnc;
+  delete conn.sessionStartedAt;
+  await writeConn(userId, conn);
+}

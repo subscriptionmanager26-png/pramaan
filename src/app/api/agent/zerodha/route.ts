@@ -41,7 +41,7 @@ export async function POST(request: Request) {
         throw err;
       }
       await connectKite(userId);
-      const login = await kiteLogin(userId);
+      const login = await kiteLogin(userId, { skipProfileCheck: true });
       if ("url" in login) return NextResponse.json({ ok: true, url: login.url });
       return NextResponse.json({ ok: true, loggedInAs: login.loggedInAs });
     }

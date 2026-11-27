@@ -1,5 +1,5 @@
 import { kiteMcpBearer } from "@/lib/zerodha/kite-mcp-oauth";
-import { kiteSdkCall, kiteSdkListTools, type ToolResult } from "@/lib/zerodha/kite-mcp-client";
+import { clearKiteSession, kiteHttpCall, kiteHttpLoginTool, type ToolResult } from "@/lib/zerodha/kite-mcp-http";
 import {
   connectKite,
   disconnectKite,
@@ -31,6 +31,8 @@ function extractKiteLoginUrl(text: string): string | undefined {
   const candidates = [
     text.match(/\]\((https:\/\/mcp\.kite\.trade\/authorize[^)\s]*)\)/i)?.[1],
     text.match(/https:\/\/mcp\.kite\.trade\/authorize[^\s)\]"'<>]+/i)?.[0],
+    text.match(/\]\((https:\/\/kite\.zerodha\.com\/connect\/login[^)\s]*)\)/i)?.[1],
+    text.match(/https:\/\/kite\.zerodha\.com\/connect\/login[^\s)\]"'<>]+/i)?.[0],
     text.match(/\]\((https:[^)\s]+)\)/)?.[1],
     text.match(/https:\/\/[^\s)\]"'<>]+/i)?.[0],
   ];
@@ -44,11 +46,16 @@ function extractKiteLoginUrl(text: string): string | undefined {
 export { connectKite, disconnectKite, getKiteConnection };
 export type { ToolResult };
 
-export async function kiteLogin(userId: string): Promise<{ loggedInAs: string } | { url: string }> {
-  const loggedIn = await kiteLoggedInAs(userId).catch(() => undefined);
-  if (loggedIn) return { loggedInAs: loggedIn };
+export async function kiteLogin(
+  userId: string,
+  opts?: { skipProfileCheck?: boolean },
+): Promise<{ loggedInAs: string } | { url: string }> {
+  if (!opts?.skipProfileCheck) {
+    const loggedIn = await kiteLoggedInAs(userId).catch(() => undefined);
+    if (loggedIn) return { loggedInAs: loggedIn };
+  }
 
-  const result = await kiteSdkCall(userId, "login", {}, { freshSession: true });
+  const result = await kiteHttpLoginTool(userId);
   const text = toolResultText(result);
   const already = text.match(/already logged in as (.+)$/im);
   if (already) return { loggedInAs: already[1].trim() };
@@ -58,7 +65,7 @@ export async function kiteLogin(userId: string): Promise<{ loggedInAs: string } 
 }
 
 export async function kiteLoggedInAs(userId: string) {
-  const result = await kiteSdkCall(userId, "get_profile", {});
+  const result = await kiteHttpCall(userId, "get_profile", {});
   if (result.isError) return undefined;
   const text = toolResultText(result);
   try {
@@ -150,35 +157,20 @@ export async function kiteHoldings(
     };
   }
 
-  let tools: Set<string> | undefined;
-  try {
-    tools = await kiteSdkListTools(userId);
-  } catch {
-    tools = undefined;
-  }
-  const equityTool = tools?.has("get_holdings") ? "get_holdings" : "get_holdings";
-  const mfTool = tools?.has("get_mf_holdings") ? "get_mf_holdings" : "get_mf_holdings";
-
   let equityResult: ToolResult;
   let equityText: string;
   try {
-    equityResult = await kiteSdkCall(userId, equityTool, {});
+    equityResult = await kiteHttpCall(userId, "get_holdings", {});
     equityText = toolResultText(equityResult);
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     if (NEEDS_LOGIN.test(msg)) {
-      return {
-        needsLogin: true,
-        message: "Log in on Zerodha first, then fetch holdings again.",
-      };
+      return { needsLogin: true, message: "Log in on Zerodha first, then fetch holdings again." };
     }
     throw err;
   }
   if (callNeedsLogin(equityResult, equityText)) {
-    return {
-      needsLogin: true,
-      message: "Your Zerodha session expired. Log in again, then fetch holdings.",
-    };
+    return { needsLogin: true, message: "Your Zerodha session expired. Log in again, then fetch holdings." };
   }
   const byKey = new Map<string, KiteHoldingDraft>();
   for (const raw of parseHoldingsJson(equityText)) {
@@ -186,7 +178,7 @@ export async function kiteHoldings(
     if (draft) byKey.set(draft.ticker, draft);
   }
   try {
-    const mfResult = await kiteSdkCall(userId, mfTool, {});
+    const mfResult = await kiteHttpCall(userId, "get_mf_holdings", {});
     const mfText = toolResultText(mfResult);
     if (!callNeedsLogin(mfResult, mfText)) {
       for (const raw of parseHoldingsJson(mfText)) {
@@ -214,5 +206,6 @@ export async function disconnectKiteWithSession(userId: string) {
       signal: AbortSignal.timeout(10_000),
     }).catch(() => undefined);
   }
+  await clearKiteSession(userId);
   await disconnectKite(userId);
 }
