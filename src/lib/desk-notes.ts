@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "rbi-crr-daily-floor-december-2026",
+    title: "RBI eased its daily cash reserve rule after tightening liquidity six weeks ago",
+    summary:
+      "On 27 November 2026 the Reserve Bank of India said banks may again keep only 90% of required cash reserves on any single day, down from the 99% minimum enforced from late October, with the change effective for the fortnight starting 1 December 2026.",
+    category: "industry",
+    companyOrSector: "Banking / monetary policy",
+    publishedAt: "2026-11-27T17:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("rbi-crr-daily-floor-december-2026"),
+    keyTakeaways: [
+      "The minimum daily cash reserve ratio maintenance falls to 90% from 99% for the fortnight beginning 1 December 2026; the headline CRR rate itself was unchanged in the 27 November circular.",
+      "The RBI had raised the daily floor to 99% from 90% effective late October 2026 to drain excess banking-system liquidity after heavy foreign-currency deposit inflows.",
+      "Treasury desks said softer daily compliance can free intraday lendable balances even when overnight rates stay elevated ahead of the 4 December policy meeting.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian lenders must park a slice of customer deposits at the Reserve Bank of India as cash reserves. Regulators set the percentage and also police whether banks meet it smoothly across each fortnight. On 27 November 2026 the RBI said it will cut the minimum daily cash reserve ratio maintenance requirement back to 90% from 99%, with effect from the fortnight starting 1 December 2026. The headline CRR rate was not changed in the same notice. The reversal arrives roughly six weeks after the central bank tightened the daily rule in October, when it lifted the floor to 99% from 90% to mop up excess liquidity that had built after strong foreign-currency deposit inflows.",
+      "What does this mean?",
+      "The October tweak forced banks to hold more cash at the RBI on ordinary days, which nudged short-term borrowing costs higher even though policy rates had not moved. Rolling the daily floor back to 90% gives treasury teams a little more room to deploy balances early in a reporting fortnight without scrambling to top up reserves at the end. It does not by itself signal an easing cycle; traders were already pricing a possible rate hike at the 4 December monetary policy review amid firm food inflation and higher oil. Still, the step shows officials are willing to fine-tune liquidity tools rather than leave the stricter October setting in place indefinitely.",
+      "Why should I care?",
+      "If you track fixed deposits or short-term debt funds, watch call-money and treasury-bill rates over the next fortnight for any dip tied to easier daily compliance. Corporate CFOs may see slightly cheaper overnight parking costs when drawing working-capital lines. Home loan shoppers should not treat this as a substitute for the main policy decision next week. Watch the December policy statement, subsequent liquidity operations, and whether the RBI revisits the daily floor again after festival-season deposit flows settle.",
+    ],
+  },
+  {
+    slug: "india-parliament-delimitation-womens-quota-november-2026",
+    title: "Modi's cabinet sent a revived bill to expand parliament and reserve a third of seats for women",
+    summary:
+      "Government sources told Reuters on 27 November 2026 that the Union cabinet approved a second attempt to pass legislation that would enlarge India's parliament and state assemblies while locking in one-third reservation for women lawmakers, after an April vote fell short of the required two-thirds majority.",
+    category: "industry",
+    companyOrSector: "Legislative / electoral policy",
+    publishedAt: "2026-11-27T17:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-parliament-delimitation-womens-quota-november-2026"),
+    keyTakeaways: [
+      "The bill would raise lower-house membership by about 50% before the parliamentary election due in 2029 and extend a similar expansion to state assemblies, according to briefings cited on 27 November.",
+      "A one-third women's quota was enacted in 2023 but tied to the next census; this package is framed as accelerating that reservation alongside constituency boundary changes.",
+      "Sources said the redraw of constituencies would remain frozen until 2051, addressing opposition claims that population shifts could be used to redraw maps for political gain.",
+    ],
+    body: [
+      "What's going on here?",
+      "India has not reserved national parliamentary seats for women in the past, though several states run their own quotas in local bodies. In 2023 parliament passed a constitutional amendment promising one-third of seats for women, but linked its start to census completion, which would have pushed practical effect past the 2029 general election. On 27 November 2026 government sources told Reuters the Union cabinet approved a fresh bill that pairs that women's reservation with a major expansion of the Lok Sabha and state assemblies, increasing the lower-house seat count by about half by 2029. The same briefings said constituency delimitation would be frozen until 2051, a concession to parties that blocked an April 2026 attempt by arguing mass boundary changes would let the ruling side reshape electorates after the 1971 census baseline.",
+      "What does this mean?",
+      "Passing the package still needs a two-thirds majority in both houses, so the numbers game in the winter session that opens on 1 December matters as much as the policy text. More seats mean longer ballots, heavier campaign logistics for parties, and new opportunities for first-time women candidates if the quota bites on the 2029 timeline. Businesses that lobby on labour, tax or sector bills should expect a crowded legislative calendar if delimitation debates run alongside routine finance work. Frozen boundaries until 2051 reduce near-term uncertainty for incumbents in fast-growing states, but also postpone a full national headcount-based reset that demographers have wanted since the last fixed census year.",
+      "Why should I care?",
+      "If you work in policy advocacy, map which party statements shifted since the failed April vote and which regional allies now sound supportive. Investors in media, polling or event management should note that a larger parliament usually means more constituency-level spending cycles, though timing still hinges on passage. Citizens tracking women's representation should read the fine print on when reserved seats start relative to the census. Watch the winter session's opening days, opposition floor strategy, and Election Commission commentary on how constituency freezes interact with existing voter rolls.",
+    ],
+  },
+  {
+    slug: "volkswagen-india-import-duty-rivals-november-2026",
+    title: "Volkswagen told an Indian court Mercedes and BMW import car parts on the same tax rate it uses",
+    summary:
+      "A November court filing reported on 27 November 2026 said Volkswagen's Indian unit argued tax authorities wrongly singled it out over how it imports components at a 10% tariff instead of roughly 30% on car kits, attaching shipment counts for Mercedes-Benz, BMW, Kia and other rivals facing a record $1.2 billion demand.",
+    category: "industry",
+    companyOrSector: "Autos / customs policy",
+    publishedAt: "2026-11-27T17:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("volkswagen-india-import-duty-rivals-november-2026"),
+    keyTakeaways: [
+      "India's tax office alleges Volkswagen deliberately split near-complete Audi, Skoda and VW models into parts consignments to pay the lower duty rate; the carmaker has denied fraud and called the case existential for its India investments.",
+      "The November 10 filing attached a table of rival import volumes, citing hundreds of thousands of BMW component shipments and tens of thousands for Mercedes, all under the 10% category per Volkswagen's submission.",
+      "A Mumbai court is scheduled to hear Volkswagen's challenge on 1 December 2026, with much of the dispute focused on whether authorities can scrutinise imports going back 12 years.",
+    ],
+    body: [
+      "What's going on here?",
+      "Foreign carmakers in India often ship kits or components and assemble vehicles locally. Customs treats complete car kits at a higher tariff than many individual parts. Tax authorities have pursued Volkswagen since 2024 with a demand put at about $1.2 billion, alleging the German group imported near-finished Audi, Skoda and Volkswagen models as separate parts to pay roughly a 10% duty instead of near 30% on kits. Volkswagen has denied wrongdoing and said the fight threatens its modest 2% market share operations. Reporting on 27 November 2026 described a November 10 court filing in which the Indian unit argued every comparable manufacturer uses the same parts model, attaching shipment statistics for Mercedes-Benz, BMW, Kia, Isuzu and MG Motor imports to support the claim that it alone was targeted.",
+      "What does this mean?",
+      "Tariff investigations in India can run for years and freeze investment decisions while lawyers argue over product classification. If Volkswagen persuades the court that rivals' high-volume part shipments are economically similar, other brands could face questions even though the filing does not by itself prove those imports became road-ready cars. Authorities have called Volkswagen's conduct fraudulent; the company says equal treatment requires quashing a penalty that would not apply if peers paid the same rate. The Monday hearing may initially rule on procedural limits such as how far back audits can reach, but either outcome keeps tariff clarity at the top of every new plant proposal in the world's third-largest car market.",
+      "Why should I care?",
+      "If you supply auto components or run bonded warehouses, watch for any customs circular that tightens how kits versus parts are declared. Fleet buyers and dealers should not expect immediate price moves, but prolonged litigation can delay model launches when engineers wait for clearance on import routes. Investors in listed suppliers tied to German or Korean OEMs should treat the case as a sector-wide classification risk, not a single-stock curiosity. Track the 1 December court order, any tax department response to the rival-import table, and whether other manufacturers issue their own compliance statements.",
+    ],
+  },
+  {
+    slug: "swiggy-instamart-layoffs-november-2026",
+    title: "Swiggy will cut 340 Instamart jobs as quick-commerce rivals keep burning cash to grow",
+    summary:
+      "Reuters reported on 27 November 2026, citing a person familiar with the matter, that Swiggy Ltd will eliminate 340 roles at its Instamart quick-commerce arm in a restructuring package that includes severance and extended health cover, while the unit's adjusted core loss widened in the September quarter despite higher gross order value.",
+    category: "industry",
+    companyOrSector: "Quick commerce / consumer internet",
+    publishedAt: "2026-11-27T17:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("swiggy-instamart-layoffs-november-2026"),
+    keyTakeaways: [
+      "Instamart's adjusted core loss reached about ₹8.95 billion in the September 2026 quarter versus about ₹8.49 billion a year earlier even as gross order value grew, according to company disclosures cited in the same reporting cycle.",
+      "Swiggy told the market it believes quick-commerce losses have peaked and forecast roughly 100 basis points of sequential margin improvement in the December quarter while slowing new-city store additions.",
+      "Blinkit, Zepto and Swiggy continue to open dark stores and discount baskets; Flipkart's leadership change this week underscored how profitability timelines keep slipping across the sector.",
+    ],
+    body: [
+      "What's going on here?",
+      "Ten-minute grocery delivery in India is still a land grab. Rivals Blinkit, Zepto and Swiggy's Instamart pour capital into neighbourhood warehouses, rider incentives and discounts to win habit-forming shoppers. On 27 November 2026 Reuters reported that Swiggy will cut about 340 roles at Instamart as part of a restructuring to streamline operations, quoting a person briefed on the plan who was not authorised to speak publicly. Swiggy did not comment in the wire story. The source said affected staff would receive severance, statutory payouts and health insurance extensions into May 2027. The report landed days after Flipkart Group said its long-serving chief executive would step down amid the same quick-commerce arms race. Swiggy's own filings already showed Instamart's adjusted core loss widening in the September quarter while gross order value rose, and management guiding for modestly better unit economics in the December quarter without promising a profit date.",
+      "What does this mean?",
+      "When a listed platform trims headquarters and warehouse support roles while competitors keep adding stores, it is betting that margin per order matters more than headcount growth. Layoffs can free operating expenditure for subsidies on select SKUs or for technology that routes riders faster, but they also signal that earlier hiring plans overshot the revenue each dark store generates. Shoppers may still see cheap delivery fees until at least one player backs off discounts, because Blinkit and Zepto are not matching Swiggy's restraint on new cities. Restaurant partners on Swiggy's core food app are less directly affected, though investors often treat one segment's burn as funding the other's promotions.",
+      "Why should I care?",
+      "If you work in quick-commerce operations or last-mile logistics, compare severance packages and hiring freezes across apps before switching employers. Kirana owners should watch whether Instamart pulls back from certain pin codes even as rivals expand. Investors in Eternal, Swiggy or private Zepto should read restructuring news alongside contribution margin trends, not gross merchandise value alone. Track Swiggy's next results call for Instamart store count, any formal employee communication, and whether competitors announce their own efficiency programs in response.",
+    ],
+  },
+  {
     slug: "axis-bank-credit-cards-apple-pay-october-2026",
     title: "Axis Bank opened one in five new Indian credit cards during Apple Pay's first full month",
     summary:
@@ -16008,6 +16104,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "rbi-crr-daily-floor-december-2026": "policy",
+  "india-parliament-delimitation-womens-quota-november-2026": "policy",
+  "volkswagen-india-import-duty-rivals-november-2026": "policy",
+  "swiggy-instamart-layoffs-november-2026": "companies",
   "axis-bank-credit-cards-apple-pay-october-2026": "markets",
   "msci-india-asm-smallcap-exclusion-november-2026": "policy",
   "india-meta-it-automated-takedown-november-2026": "policy",

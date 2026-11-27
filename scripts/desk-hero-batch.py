@@ -3205,6 +3205,47 @@ def flipkart_ceo_exit_quick_commerce(d: ImageDraw.ImageDraw) -> None:
     d.line([(700, 360), (950, 460)], fill=GOLD, width=4)
 
 
+def rbi_crr_daily_floor_december(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([140, 200, 460, 560], fill=BLUE)
+    for i, h in enumerate([320, 260, 380, 300]):
+        d.rectangle([180 + i * 60, 560 - h, 220 + i * 60, 560], fill=[RED, YELLOW, RED, YELLOW][i])
+    d.line([(500, 560), (500, 180)], fill=GOLD, width=4)
+    for i in range(4):
+        x = 620 + i * 90
+        d.rectangle([x, 560 - (i + 1) * 50, x + 50, 560], fill=BLUE)
+    d.polygon([(1020, 360), (1120, 280), (1120, 440)], fill=RED)
+
+
+def india_parliament_delimitation_womens_quota(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(160, 560), (160, 220), (400, 140), (440, 560)], fill=BLUE)
+    for i in range(5):
+        d.rectangle([520 + i * 55, 280 + (i % 2) * 40, 560 + i * 55, 560], fill=[RED, YELLOW, BLUE, RED, YELLOW][i])
+    d.ellipse([900, 300, 1100, 500], outline=GOLD, width=6)
+    d.line([(900, 400), (1100, 400)], fill=GOLD, width=3)
+
+
+def volkswagen_india_import_duty_rivals(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 380, 480, 560], fill=RED)
+    d.polygon([(120, 380), (280, 280), (440, 380)], fill=BLUE)
+    d.ellipse([200, 420, 380, 520], fill=YELLOW)
+    d.line([(520, 560), (520, 200)], fill=GOLD, width=3)
+    for i in range(3):
+        d.rectangle([600 + i * 120, 520 - (i + 2) * 80, 680 + i * 120, 520], fill=[BLUE, RED, YELLOW][i])
+    d.polygon([(1000, 560), (1080, 420), (1160, 560)], fill=BLUE)
+
+
+def swiggy_instamart_layoffs(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 240, 400, 560], radius=24, fill=BLUE)
+    for i in range(4):
+        y = 300 + i * 55
+        d.rectangle([160, y, 360, y + 35], fill=CREAM if i % 2 else YELLOW)
+    for i, h in enumerate([100, 140, 80]):
+        x = 520 + i * 100
+        d.rectangle([x, 560 - h, x + 70, 560], fill=[RED, YELLOW, BLUE][i])
+    d.line([(700, 200), (1100, 280)], fill=GOLD, width=4)
+    d.ellipse([1040, 240, 1120, 320], fill=RED)
+
+
 if __name__ == "__main__":
     main()
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
