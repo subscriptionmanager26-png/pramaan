@@ -14,13 +14,10 @@ export async function GET(request: Request) {
 
   const zerodha = zerodhaStoreConfigured()
     ? await zerodhaConnectionsView(auth.user.id)
-  : {
+    : {
         connected: false,
         loggedInAs: null,
         sessionActive: false,
-        mcpBackendReady: false,
-        mcpBackendMessage: "Zerodha is not configured on PocketEdge.",
-        mcpBackendPublicUrl: null,
       };
 
   if (!personalAgentsConfigured()) {

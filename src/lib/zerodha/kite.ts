@@ -23,10 +23,8 @@ function kiteUrl() {
 type RpcReply = { result?: unknown; error?: { code: number; message: string } };
 
 async function post(sessionId: string | undefined, payload: Record<string, unknown>, timeoutMs = POST_MS) {
-  const bearer = await kiteMcpBearer();
-  if (!bearer && kiteUrl().includes("mcp.kite.trade")) {
-    throw new Error((await kiteMcpAuthErrorMessage()) || "Kite MCP bearer token is missing.");
-  }
+  // wealth-web style: Zerodha is auth "login" — optional env/shared bearer, not a user-facing server OAuth step.
+  const bearer = await kiteMcpBearer().catch(() => undefined);
   const res = await fetch(kiteUrl(), {
     method: "POST",
     headers: {
@@ -56,7 +54,10 @@ async function post(sessionId: string | undefined, payload: Record<string, unkno
     body = undefined;
   }
   if (res.status === 401 && kiteUrl().includes("mcp.kite.trade")) {
-    throw new Error((await kiteMcpAuthErrorMessage()) || "Kite MCP rejected the bearer token.");
+    throw new Error(
+      (await kiteMcpAuthErrorMessage()) ||
+        "Kite rejected the request. Connect Zerodha, log in on Zerodha, then try again.",
+    );
   }
   return { status: res.status, body, sessionId: res.headers.get("mcp-session-id") ?? undefined };
 }

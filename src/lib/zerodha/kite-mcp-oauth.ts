@@ -271,9 +271,8 @@ export async function completeKiteMcpOAuth(input: { code: string; state: string 
 }
 
 export async function kiteMcpAuthErrorMessage() {
-  if (await kiteMcpBearer()) return undefined;
   if (!zerodhaStoreConfigured()) {
     return "Zerodha is not configured (missing Supabase store on PocketEdge).";
   }
-  return "Authorize the Kite server once on Connections, then use Connect Zerodha.";
+  return undefined;
 }

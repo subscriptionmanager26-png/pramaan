@@ -1,12 +1,8 @@
-import { kiteMcpAuthErrorMessage, kiteMcpBearer } from "@/lib/zerodha/kite-mcp-oauth";
 import { getKiteConnection, kiteLoggedInAs } from "@/lib/zerodha/kite";
 
+/** Connections slice — wealth-web style: no deployment-wide "authorize server" gate for Zerodha. */
 export async function zerodhaConnectionsView(userId: string) {
-  const [mcpBearer, kiteConn, mcpBackendMessage] = await Promise.all([
-    kiteMcpBearer(),
-    getKiteConnection(userId),
-    kiteMcpAuthErrorMessage(),
-  ]);
+  const kiteConn = await getKiteConnection(userId);
   let loggedInAs: string | null = null;
   if (kiteConn) {
     const timeout = new Promise<null>((resolve) => setTimeout(() => resolve(null), 15_000));
@@ -16,8 +12,5 @@ export async function zerodhaConnectionsView(userId: string) {
     connected: Boolean(kiteConn),
     loggedInAs,
     sessionActive: Boolean(loggedInAs),
-    mcpBackendReady: Boolean(mcpBearer),
-    mcpBackendMessage: mcpBearer ? null : mcpBackendMessage,
-    mcpBackendPublicUrl: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || null,
   };
 }
