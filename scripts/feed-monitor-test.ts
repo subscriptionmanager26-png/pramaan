@@ -4,7 +4,7 @@
  *   npx tsx scripts/feed-monitor-test.ts
  *
  * Samples the first N advisors with usable Twitter / Substack links,
- * fetches via guest GraphQL → twitter-viewer.com → twitterviewer.net + Substack RSS,
+ * fetches via guest GraphQL → twitter-viewer.com → Cloudflare syndication (if configured) → twitterviewer.net + Substack RSS,
  * writes JSON under tmp/feed-monitor/.
  * Does not commit.
  */
@@ -79,7 +79,7 @@ async function main() {
         advisorSlug: row.advisor.slug,
         platform: "twitter",
         urlOrHandle: `@${row.handle}`,
-        helper: "fetchTwitterTimeline (guest → twitter-viewer.com → twitterviewer.net)",
+        helper: "fetchTwitterTimeline (guest → twitter-viewer.com → Cloudflare syndication → twitterviewer.net)",
         success: true,
         postCount: posts.length,
         posts,
@@ -92,7 +92,7 @@ async function main() {
         advisorSlug: row.advisor.slug,
         platform: "twitter",
         urlOrHandle: `@${row.handle}`,
-        helper: "fetchTwitterTimeline (guest → twitter-viewer.com → twitterviewer.net)",
+        helper: "fetchTwitterTimeline (guest → twitter-viewer.com → Cloudflare syndication → twitterviewer.net)",
         success: false,
         error: err instanceof Error ? err.message : String(err),
         postCount: 0,
@@ -144,7 +144,7 @@ async function main() {
       startedAt,
       finishedAt,
       helpers: {
-        twitter: "fetchTwitterTimeline — guest GraphQL → twitter-viewer.com → twitterviewer.net",
+        twitter: "fetchTwitterTimeline — guest GraphQL → twitter-viewer.com → Cloudflare syndication → twitterviewer.net",
         substack: "fetchSubstack / RSS",
       },
       selection: {
