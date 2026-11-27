@@ -75,12 +75,12 @@ export function AgentFilesPanel({
           ) : null}
 
           <section>
-            <p className="text-meta uppercase tracking-[0.14em]">Connections</p>
+            <p className="text-meta uppercase tracking-[0.14em]">Zerodha</p>
             <Link
               href="/ai/connections"
               className="mt-2 flex items-center justify-between rounded-2xl border border-line bg-accent-2 px-3 py-3 text-[13px] font-semibold text-ink hover:border-accent"
             >
-              <span>Manage connectors</span>
+              <span>Link Zerodha account</span>
               <span className="text-accent">→</span>
             </Link>
           </section>

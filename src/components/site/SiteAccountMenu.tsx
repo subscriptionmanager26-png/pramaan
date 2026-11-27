@@ -140,7 +140,7 @@ export function SiteAccountMenu({ onNavigate }: { onNavigate?: () => void }) {
                 onNavigate?.();
               }}
             >
-              Connections
+              Zerodha
             </Link>
             <Link
               href="/ai"

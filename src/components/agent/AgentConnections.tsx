@@ -91,7 +91,6 @@ export function AgentConnections() {
     }
   }, [load]);
 
-  // After Kite login tab closes / user returns, refresh session status.
   useEffect(() => {
     const onFocus = () => void load();
     window.addEventListener("focus", onFocus);
@@ -135,13 +134,22 @@ export function AgentConnections() {
   }
 
   const z = view?.zerodha;
+  const customMcp = view?.mcp ?? [];
+
+  const primaryLabel = !z?.connected
+    ? "Connect Zerodha"
+    : z.sessionActive
+      ? "Refresh Zerodha login"
+      : "Log in on Zerodha";
+  const primaryAction = !z?.connected ? "connect" : "login";
 
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
       <header className="border-b border-line px-4 py-5 sm:px-6">
-        <h1 className="text-section text-xl sm:text-2xl">Connections</h1>
+        <h1 className="text-section text-xl sm:text-2xl">Zerodha</h1>
         <p className="mt-1 max-w-2xl text-sm text-ink-2">
-          Link brokers and tools your agent can use. Credentials stay encrypted; the agent never sees your password.
+          Link your account to import holdings and let the agent read quotes and positions. You confirm any trades in
+          chat.
         </p>
       </header>
 
@@ -153,9 +161,13 @@ export function AgentConnections() {
         <section className="rounded-2xl border border-line bg-white p-5 shadow-sm">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
-              <h2 className="text-headline text-base">Zerodha</h2>
+              <h2 className="text-headline text-base">Kite link</h2>
               <p className="mt-1 text-sm text-ink-2">
-                Read holdings, positions, and prices through Kite. Orders still need your confirmation in chat.
+                {z?.sessionActive
+                  ? "Your Zerodha session is active. Portfolio import and agent queries can use live data."
+                  : z?.connected
+                    ? "Account linked — log in on Zerodha to refresh today’s session."
+                    : "Not linked yet. Connect once, then log in when prompted."}
               </p>
             </div>
             {z?.connected && (
@@ -173,67 +185,50 @@ export function AgentConnections() {
           )}
           {kiteConsentDone && !z?.sessionActive ? (
             <div className="mt-4 rounded-xl border border-accent-2 bg-accent-2/40 px-4 py-3 text-sm text-ink">
-              <p className="font-medium">Kite permission saved.</p>
+              <p className="font-medium">PocketEdge can reach Kite.</p>
               <p className="mt-1 text-[13px] text-ink-2">
-                Tap Connect below once (opens a new tab — avoid popup blockers). Finish Zerodha login there, then return
-                here.
+                Tap <strong>{primaryLabel}</strong> below (opens a new tab). Finish Zerodha login, then return here.
               </p>
             </div>
           ) : null}
           <div className="mt-4 flex flex-wrap gap-2">
-            {!z?.connected ? (
+            <button
+              type="button"
+              className="btn-primary text-sm"
+              disabled={busy}
+              onClick={() => void zerodhaAction(primaryAction)}
+            >
+              {busy ? "Opening Zerodha…" : primaryLabel}
+            </button>
+            {z?.connected ? (
               <button
                 type="button"
-                className="btn-primary text-sm"
+                className="btn-secondary text-sm"
                 disabled={busy}
-                onClick={() => void zerodhaAction("connect")}
+                onClick={() => void zerodhaAction("disconnect")}
               >
-                {busy ? "Opening Zerodha…" : "Connect Zerodha"}
+                Disconnect
               </button>
-            ) : (
-              <>
-                <button type="button" className="btn-primary text-sm" disabled={busy} onClick={() => void zerodhaAction("login")}>
-                  {busy ? "Opening Zerodha…" : z.sessionActive ? "Refresh login" : "Log in on Zerodha"}
-                </button>
-                <button
-                  type="button"
-                  className="btn-secondary text-sm"
-                  disabled={busy}
-                  onClick={() => void zerodhaAction("disconnect")}
-                >
-                  Disconnect
-                </button>
-              </>
-            )}
+            ) : null}
           </div>
           <p className="mt-3 text-xs text-ink-3">
-            Opens Zerodha in a new tab. Finish login there, then come back. Status refreshes when this window is focused.
+            Finish steps in the Zerodha tab, then come back. Status updates when this window is focused.
           </p>
         </section>
 
-        <section className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-          <h2 className="text-headline text-base">MCP integrations</h2>
-          <p className="mt-1 text-sm text-ink-2">Custom MCP servers you have added for this agent.</p>
-          {!view ? (
-            <p className="mt-4 text-sm text-ink-3">Loading…</p>
-          ) : !view.mcp.length ? (
-            <p className="mt-4 text-sm text-ink-3">
-              No custom MCP servers yet. Ask your agent to help add one, or use the Pocketedge studio for advanced setup.
-            </p>
-          ) : (
+        {customMcp.length > 0 ? (
+          <section className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+            <h2 className="text-headline text-base">Other agent tools</h2>
+            <p className="mt-1 text-sm text-ink-2">Extra MCP servers on your account (advanced).</p>
             <ul className="mt-4 space-y-2">
-              {view.mcp.map((c) => (
+              {customMcp.map((c) => (
                 <li key={c.id} className="rounded-xl border border-line px-3 py-2 text-sm">
                   <p className="font-medium text-ink">{c.name}</p>
                   <p className="truncate text-ink-3">{c.url}</p>
                 </li>
               ))}
             </ul>
-          )}
-        </section>
-
-        {view ? (
-          <p className="text-sm text-ink-3">{view.vaultCount} vault item{view.vaultCount === 1 ? "" : "s"} stored.</p>
+          </section>
         ) : null}
       </div>
     </div>

@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = pageMetadata({
   path: "/ai/connections",
-  title: "Agent connections",
-  description: "Connect Zerodha and tools for your PocketEdge agent.",
+  title: "Zerodha",
+  description: "Link your Zerodha account on PocketEdge for holdings and portfolio import.",
 });
 
 export default function AgentConnectionsPage() {

@@ -222,7 +222,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         err instanceof Error && (err.name === "TimeoutError" || /signal timed out|timeout/i.test(err.message));
       throw new Error(
         timedOut
-          ? "Zerodha status check timed out. If you’re already logged in via Connections, tap import."
+          ? "Zerodha status check timed out. If you’re already logged in on Zerodha, tap import."
           : "Could not check Zerodha connection.",
       );
     }
@@ -235,7 +235,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       const code = typeof err === "object" ? err?.code : typeof err === "string" ? err : undefined;
       const message = typeof err === "object" ? err?.message : undefined;
       if (res.status === 403 || code === "agent_not_enabled") {
-        throw new Error("Agent access is required for Zerodha. Open AI → Connections, then try again.");
+        throw new Error("Agent access is required for Zerodha. Sign in and link Zerodha under AI → Zerodha.");
       }
       if (res.status === 401 || code === "unauthorized") {
         throw new Error("Sign in again to connect Zerodha.");
@@ -246,7 +246,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       throw new Error(message || code || `Could not check Zerodha connection (${res.status}).`);
     }
     if (!json.zerodha) {
-      throw new Error("Connections response was missing Zerodha status.");
+      throw new Error("Could not read Zerodha link status. Try again in a minute.");
     }
     return json.zerodha;
   }, []);
@@ -311,7 +311,7 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         setLoginUrl(result.url);
         setZerodhaGate("need_login");
         setError(
-          "Your browser blocked the Zerodha tab. Use the Open Zerodha login link below (same as Connections — form open, not popup).",
+          "Your browser blocked the Zerodha tab. Use the Continue to Zerodha link below instead.",
         );
         return;
       }
@@ -517,15 +517,12 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
         {zerodhaGate === "need_connect" ? (
           <div className="space-y-3 rounded-2xl border border-line bg-white p-5">
             <p className="text-[14px] text-ink-2">
-              Link Zerodha once under Connections (profile menu), or start Kite login here.
+              Link Zerodha once. We open Kite in a new tab — finish login there, then return here to import.
             </p>
             <div className="flex flex-wrap gap-2">
-              <Link href="/ai/connections" className="btn-primary text-[13px]">
-                Open Connections
-              </Link>
               <button
                 type="button"
-                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30 disabled:opacity-50"
+                className="btn-primary text-[13px] disabled:opacity-50"
                 disabled={zerodhaBusy}
                 onClick={() => void startZerodhaLogin("connect")}
               >
@@ -573,12 +570,6 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
               >
                 {busy ? "Importing…" : "Import holdings"}
               </button>
-              <Link
-                href="/ai/connections"
-                className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink hover:border-ink/30"
-              >
-                Connections
-              </Link>
             </div>
           </div>
         ) : null}
