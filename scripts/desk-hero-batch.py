@@ -3205,6 +3205,44 @@ def flipkart_ceo_exit_quick_commerce(d: ImageDraw.ImageDraw) -> None:
     d.line([(700, 360), (950, 460)], fill=GOLD, width=4)
 
 
+def adani_group_airline_capital(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(140, 560), (200, 200), (440, 160), (500, 560)], fill=BLUE)
+    d.line([(200, 320), (380, 260), (560, 300)], fill=GOLD, width=4)
+    d.ellipse([1000, 280, 1140, 360], fill=RED)
+    for i in range(3):
+        d.rectangle([620 + i * 100, 520 - (i + 2) * 70, 690 + i * 100, 520], fill=[YELLOW, RED, BLUE][i])
+
+
+def eighth_pay_commission_fiscal_cost(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 220, 460, 560], fill=BLUE)
+    for i, h in enumerate([280, 340, 420, 380]):
+        d.rectangle([180 + i * 65, 560 - h, 230 + i * 65, 560], fill=[RED, YELLOW, RED, YELLOW][i])
+    d.line([(500, 560), (500, 180)], fill=GOLD, width=3)
+    d.ellipse([880, 300, 1120, 500], outline=RED, width=8)
+    d.rectangle([920, 380, 1080, 420], fill=YELLOW)
+
+
+def gail_gnfc_petrochemical_mou(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 300, 280, 560], fill=RED)
+    d.rectangle([300, 360, 480, 560], fill=BLUE)
+    d.line([(280, 430), (300, 430)], fill=GOLD, width=6)
+    d.polygon([(620, 560), (760, 320), (900, 560)], fill=YELLOW)
+    for i in range(4):
+        x = 640 + i * 90
+        d.rectangle([x, 560 - (i + 1) * 55, x + 50, 560], fill=[BLUE, RED, YELLOW, BLUE][i])
+
+
+def shriram_msme_credit_risk(d: ImageDraw.ImageDraw) -> None:
+    d.ellipse([140, 320, 340, 520], fill=YELLOW)
+    d.rectangle([160, 400, 320, 440], fill=GOLD)
+    d.line([(520, 560), (520, 200)], fill=GOLD, width=3)
+    for i in range(4):
+        h = [160, 220, 140, 200][i]
+        x = 600 + i * 95
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, RED, YELLOW][i])
+    d.polygon([(1020, 560), (1100, 400), (1180, 560)], fill=BLUE)
+
+
 def rbi_crr_daily_floor_december(d: ImageDraw.ImageDraw) -> None:
     d.rectangle([140, 200, 460, 560], fill=BLUE)
     for i, h in enumerate([320, 260, 380, 300]):
@@ -3281,3 +3319,7 @@ if __name__ == "__main__":
     save("india-kharif-foodgrain-output-november-2026", india_kharif_foodgrain_output)
     save("india-mining-law-states-jharkhand-november-2026", india_mining_law_states_jharkhand)
     save("flipkart-ceo-exit-quick-commerce-november-2026", flipkart_ceo_exit_quick_commerce)
+    save("adani-group-airline-capital-november-2026", adani_group_airline_capital)
+    save("eighth-pay-commission-fiscal-cost-november-2026", eighth_pay_commission_fiscal_cost)
+    save("gail-gnfc-petrochemical-mou-november-2026", gail_gnfc_petrochemical_mou)
+    save("shriram-msme-credit-risk-november-2026", shriram_msme_credit_risk)

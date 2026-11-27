@@ -1562,6 +1562,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject right | Public-sector bank facade |
 | Metaphor left | Dial between 25 and 50 tick marks |
 
+### `adani-group-airline-capital-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Infrastructure capital seeking a path into airline capacity |
+| Subject right | Airport terminal silhouette |
+| Metaphor left | Capital pipe feeding flight-path chevrons |
+
+### `eighth-pay-commission-fiscal-cost-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Public wage bill step-up versus fiscal consolidation |
+| Subject left | Government ledger / pay envelope |
+| Metaphor right | Rising expenditure bars beside deficit dial |
+
+### `gail-gnfc-petrochemical-mou-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | PSU partners exploring downstream petrochemical value chain |
+| Subject left | Pipeline / gas motif |
+| Metaphor right | Twin stacks converging into polymer blocks |
+
+### `shriram-msme-credit-risk-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | MSME loan stress outweighs gold collateral volatility |
+| Subject left | Gold ingot stack (small ticket) |
+| Metaphor right | Diverging stress bars on MSME factory blocks |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.

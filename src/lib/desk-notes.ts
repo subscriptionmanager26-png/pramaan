@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "adani-group-airline-capital-november-2026",
+    title: "Adani asked the government to let it fund airlines, not just airports",
+    summary:
+      "Group CFO Jugeshinder Singh told reporters on 27 November 2026 that Adani wants official permission to invest capital in existing carriers or back entrepreneurs launching new airlines, arguing India's roughly 3,300 daily flights must scale toward 30,000 as untapped passenger demand grows.",
+    category: "industry",
+    companyOrSector: "Aviation / infrastructure policy",
+    publishedAt: "2026-11-27T23:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("adani-group-airline-capital-november-2026"),
+    keyTakeaways: [
+      "Singh spoke on the sidelines of the India Debt Capital Market Summit in Mumbai on 27 November, framing the request as a way to align airline capacity with airport assets Adani already operates.",
+      "He said the group would prefer to remain a financial backer and let entrepreneurs run flying operations rather than necessarily operating a carrier itself.",
+      "No investment size, airline partner or timeline was disclosed; the comment is a policy ask rather than a firm deal announcement.",
+    ],
+    body: [
+      "What's going on here?",
+      "Private airport operators earn from landing charges, retail rents and city-side property, but those assets only fill when airlines add aircraft and routes. Adani Group already runs several Indian airports and is preparing a possible listing of that business as soon as FY28. On 27 November 2026 group chief financial officer Jugeshinder Singh told reporters at the India Debt Capital Market Summit in Mumbai that the conglomerate has asked the government to create a route for it to put capital into airlines. Singh said India flies about 3,200 to 3,300 departures a day while latent demand could support far more scale, and that backing either an existing carrier or a new entrant could help close the gap. He stressed Adani would rather fund an entrepreneur than necessarily operate flights itself, and did not name partners or cheque sizes.",
+      "What does this mean?",
+      "India's aviation policy historically caps how closely airport owners and airlines can be linked, partly to avoid conflicts over charges and slot access. A fresh capital channel from a large infrastructure player could speed fleet and network expansion if regulators agree, but it would also invite scrutiny on whether airport concessions and airline investments sit at arm's length. Singh tied the pitch to passenger numbers Adani expects across its hubs, including Mumbai and Navi Mumbai, where schedule fights over terminal rebuilds have already strained carrier relations. Competing groups such as GMR fund airports without controlling domestic airlines, while IndiGo and Air India dominate seats. Any Adani airline stake would therefore compete in a concentrated market rather than open a greenfield duopoly.",
+      "Why should I care?",
+      "If you fly frequently through Adani airports, watch whether the capital-markets summit comments turn into formal applications to the aviation ministry or competition watchdog. Corporate travel desks should not change bookings yet, but airline procurement and lessor teams may study whether a well-funded entrant or recapitalised rival shifts lease rates. Investors in airport and airline stocks should pair Singh's remarks with the separate FY28 airport listing preparation he outlined the same day. Track ministry responses, foreign investment rules for scheduled airlines, and whether any listed carrier discloses talks with the group.",
+    ],
+  },
+  {
+    slug: "eighth-pay-commission-fiscal-cost-november-2026",
+    title: "Deutsche Bank says the 8th Pay Commission could add at least ₹3 lakh crore to Centre spending",
+    summary:
+      "A 27 November 2026 Deutsche Bank Research note estimated implementing the next central government pay revision could lift Union expenditure by at least ₹3 lakh crore, complicating fiscal consolidation even as higher salaries may support household consumption.",
+    category: "industry",
+    companyOrSector: "Fiscal policy / public wages",
+    publishedAt: "2026-11-27T23:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("eighth-pay-commission-fiscal-cost-november-2026"),
+    keyTakeaways: [
+      "The bank's Great Expectations world outlook pegged the incremental Centre cost above ₹3 lakh crore, marginally above the ₹2.9 lakh crore RBI dividend it expects the government to receive in FY27.",
+      "Deutsche Bank still projects India's central fiscal deficit at 4.3% of GDP in FY28, the same level as FY27, but warned pay, oil, subsidies and lower RBI transfers could tighten the arithmetic.",
+      "The report said implementation from 2027 would raise disposable incomes for central employees and pensioners, supporting consumption, while delaying could build larger arrears.",
+    ],
+    body: [
+      "What's going on here?",
+      "Every decade or so India resets salaries and pensions for central government staff through a Pay Commission. The last round fed through budgets with a lag, and states often mirror the awards. On 27 November 2026 Deutsche Bank Research published its 2027 world outlook, estimating that the 8th Pay Commission could add at least ₹3 lakh crore to Centre spending when implemented. That figure is slightly above the ₹2.9 lakh crore RBI dividend the bank expects New Delhi to book in FY27, though the two items fall in different budget years and do not automatically offset each other. The note argued that higher crude bills, rising subsidy needs and potentially smaller central bank transfers could make FY28 consolidation harder even if FY27 ends near the 4.3% of GDP deficit target.",
+      "What does this mean?",
+      "Pay revisions work like a recurring shock: wages and pensions jump, then ripple into consumption taxes and state government payrolls that follow the Centre's template. Deutsche Bank expects awards to take effect from 2027, which would lift take-home pay for millions of employees and retirees and can support discretionary spending on vehicles, housing EMIs and travel. The same line item squeezes room for capital expenditure or subsidy reform unless growth or privatisation receipts surprise on the upside. Postponing implementation might ease one year's deficit print but can store arrears that balloon later. For bond markets the trade-off is familiar: richer household cash flows versus heavier sovereign borrowing needs.",
+      "Why should I care?",
+      "If you are a central government employee or pensioner, monitor the winter session and budget signals on when the commission's recommendations become payable. Home loan and consumer durable sellers in Delhi and other government towns may see demand swell once arrears land. Fixed-income investors should weigh Deutsche Bank's unchanged 4.3% FY28 deficit call against pay timing, oil imports and RBI dividend normalisation after the FY27 windfall. Watch the formal notification of the 8th Pay Commission panel's report, Union Budget 2027-28 assumptions, and whether states announce parallel hikes that widen their own deficits.",
+    ],
+  },
+  {
+    slug: "gail-gnfc-petrochemical-mou-november-2026",
+    title: "GAIL and GNFC signed an MoU to scout downstream petrochemical projects together",
+    summary:
+      "On 27 November 2026 GAIL (India) and Gujarat Narmada Valley Fertilisers & Chemicals signed a memorandum of understanding in New Delhi to jointly study downstream petrochemical investments using each company's gas infrastructure and chemicals manufacturing base.",
+    category: "industry",
+    companyOrSector: "Petrochemicals / PSUs",
+    publishedAt: "2026-11-27T23:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("gail-gnfc-petrochemical-mou-november-2026"),
+    keyTakeaways: [
+      "The MoU covers feasibility work only; neither PSU announced project costs, locations, capacities or commissioning dates on 27 November.",
+      "GAIL brings gas gathering, pipelines and existing petrochemical units; GNFC contributes fertiliser and industrial chemical plants in Gujarat.",
+      "Downstream petrochemicals convert basic feedstock into plastics, fibres and packaging inputs used across autos, textiles and construction.",
+    ],
+    body: [
+      "What's going on here?",
+      "India imports large volumes of polymer grades while public sector firms sit on gas molecules and chemical parks. GAIL (India) pipelines gas and already runs petrochemical assets; Gujarat Narmada Valley Fertilisers & Chemicals (GNFC) manufactures fertilisers and industrial chemicals. On 27 November 2026 the two state-owned companies signed a memorandum of understanding in New Delhi to explore joint downstream petrochemical projects. Senior executives from both sides attended the signing. The release said the partnership would assess opportunities that combine GAIL's infrastructure with GNFC's manufacturing experience, but it did not commit capital, name a site or set timelines.",
+      "What does this mean?",
+      "Downstream plants turn feedstock such as ethane or naphtha into polyethylene, polypropylene and other intermediates that feed packaging, automotive and textile supply chains. Domestic value addition can trim import bills when crackers and derivatives sit near gas sources and ports. A GAIL-GNFC study partnership signals intent to pool licences and execution skills before either board approves billions of rupees in capex. Competing private refiners and global majors are also expanding chemical complexes on India's west coast, so feedstock allocation and environmental clearance timelines will matter as much as technology choice. Until a specific project emerges, the MoU is a planning step rather than an order book event.",
+      "Why should I care?",
+      "If you supply equipment, catalysts or EPC services to India's chemical sector, watch for joint feasibility reports and budgetary support requests in coming quarters. Packaging and auto component buyers may eventually see more local resin supply, but only after investment decisions and years of construction. Investors in GAIL or GNFC should treat the MoU as option value, not immediate earnings. Track board approvals, environmental filings, gas allocation policy from the petroleum ministry, and whether either company ties the study to a named industrial corridor in Gujarat.",
+    ],
+  },
+  {
+    slug: "shriram-msme-credit-risk-november-2026",
+    title: "Shriram Finance says MSME stress matters more than gold price swings for lenders",
+    summary:
+      "Chief financial officer Parag Sharma told the India Debt Capital Market Summit on 27 November 2026 that granular gold loans are less worrying than pockets of strain in small-business credit, even as other panelists flagged collateral and liquidity risks across loan books.",
+    category: "industry",
+    companyOrSector: "NBFC lending / credit risk",
+    publishedAt: "2026-11-27T22:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("shriram-msme-credit-risk-november-2026"),
+    keyTakeaways: [
+      "Sharma said small-ticket gold borrowers typically redeem jewellery before lenders need margin calls, making gold portfolios relatively insulated despite volatile bullion prices.",
+      "He flagged MSME loans as the segment lenders should watch because local economic shocks show up unevenly across geographies and industries.",
+      "Fellow panelists from Piramal Finance, Karur Vysya Bank and ICICI Prudential AMC stressed liquidity, collateral values and a possible growth slowdown as broader risks.",
+    ],
+    body: [
+      "What's going on here?",
+      "Non-bank lenders and banks rebuilt unsecured and small-business books after pandemic-era stress, while gold loans boomed as households pledged jewellery for quick cash. At the India Debt Capital Market Summit on 27 November 2026 Shriram Finance chief financial officer Parag Sharma said his priority watch list tilts toward micro, small and medium enterprise credit rather than bullion-backed portfolios. He argued that tiny gold tickets give borrowers strong incentive to repay and reclaim ornaments, so price dips rarely force large margin calls. MSME loans, by contrast, can suffer when local demand or input costs turn abruptly, leaving stress concentrated in certain towns or trades. Other panelists raised liquidity mismatches, falling collateral values on secured loans and vulnerabilities that appear only when GDP and income growth slow.",
+      "What does this mean?",
+      "Gold lending spreads are visible in listed NBFC results and attract attention whenever bullion sells off, but Sharma's point is that loan size and borrower behaviour can matter more than the spot price chart. MSME exposures span trading, light manufacturing and services tied to regional cycles, so one lender's Gujarat book can look fine while another's Maharashtra exposure deteriorates. Risk teams therefore need segment maps, not just aggregate non-performing asset ratios. Tighter RBI rules already pushed several microfinance lenders to diversify into secured products; Sharma's comments echo that MSME remains the swing factor for asset quality headlines through 2027.",
+      "Why should I care?",
+      "If you run a small business with bank or NBFC credit, keep documentation current and watch renewal terms when working-capital limits come up for review. Gold borrowers should still track loan-to-value notices, even if margin calls are rare on small tickets. Equity investors in Shriram Finance, other NBFCs and public-sector banks should read quarterly commentary for MSME slippage by geography rather than only gold auction data. Watch the next round of earnings calls, RBI's macroprudential MSME surveys, and any festival-season repayment data that shows whether stress stays localised or broadens.",
+    ],
+  },
+  {
     slug: "rbi-crr-daily-floor-december-2026",
     title: "RBI eased its daily cash reserve rule after tightening liquidity six weeks ago",
     summary:
@@ -16104,6 +16200,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "adani-group-airline-capital-november-2026": "policy",
+  "eighth-pay-commission-fiscal-cost-november-2026": "policy",
+  "gail-gnfc-petrochemical-mou-november-2026": "companies",
+  "shriram-msme-credit-risk-november-2026": "markets",
   "rbi-crr-daily-floor-december-2026": "policy",
   "india-parliament-delimitation-womens-quota-november-2026": "policy",
   "volkswagen-india-import-duty-rivals-november-2026": "policy",
