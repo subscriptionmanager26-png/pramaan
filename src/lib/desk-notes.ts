@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "axis-bank-credit-cards-apple-pay-october-2026",
+    title: "Axis Bank opened one in five new Indian credit cards during Apple Pay's first full month",
+    summary:
+      "Reserve Bank of India card statistics published on 20 November 2026 showed Indian banks added a net 1.4 million credit cards in October, with Axis Bank putting on 281,705 cards in the same month Apple Pay listed only its Visa and Mastercard credit products in the wallet.",
+    category: "industry",
+    companyOrSector: "Banking / consumer credit",
+    publishedAt: "2026-11-27T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("axis-bank-credit-cards-apple-pay-october-2026"),
+    keyTakeaways: [
+      "Total credit cards in issue reached 126.72 million at end-October 2026, a net addition of 1,400,814 in one month, the largest monthly rise in at least thirteen months per RBI tables.",
+      "Axis Bank added 281,705 cards and accounted for about a fifth of industry net growth, while market leader HDFC Bank added only 52,478 after averaging well above 200,000 in prior months.",
+      "Total card spending hit ₹2.45 trillion in October, up 20.1% month on month and 14.4% year on year, with the festive season opening later than in 2025.",
+    ],
+    body: [
+      "What's going on here?",
+      "Monthly credit card data is one of the clearest gauges of how freely middle-class Indians borrow for shopping. The Reserve Bank of India released bank-wise card statistics on 20 November 2026 covering October 2026. The industry had 126.72 million cards in circulation, a net gain of 1,400,814 in the month, more than double the additions seen in October 2025. Card spending at points of sale, online and other channels reached ₹2.45 trillion, up 20.1% from September and 14.4% from a year earlier. Axis Bank led issuance with 281,705 net new cards, taking its base to 16.84 million. That expansion arrived in the first full month after Apple made India wallet tap-to-pay live on 30 September 2026 with only Axis Bank Visa and Mastercard credit cards eligible, though HDFC Bank, ICICI Bank and SBI Card were still negotiating terms reported in late September.",
+      "What does this mean?",
+      "Apple Pay exclusivity gave Axis a marketing hook, but the bank was already accelerating before the wallet switch: it had added 259,525 cards in September versus 79,842 in October 2025. Still, owning the only major-bank cards inside Apple Wallet likely helped capture iPhone users who want tap-to-pay without re-entering card numbers online. HDFC Bank, the largest issuer with 27.43 million cards, added just 52,478 in October after putting on 280,353 in September, its slowest month since March. Its share of national card spending edged down to 28.6%. When one issuer pauses and another surges, competition shifts to rewards, credit limits and checkout friction at e-commerce checkouts that now accept phone taps.",
+      "Why should I care?",
+      "If you use credit for festive shopping, compare reward rates and annual fees because issuers are fighting for share again after two years of tighter RBI risk weights on card books. iPhone users with Axis cards should confirm Wallet setup before peak December buying. Merchants should expect more NFC taps alongside UPI. If you hold bank stocks, read card growth as a high-margin fee line, not just a lending metric. Watch November RBI data after Diwali, which banks Apple adds to Pay, and whether HDFC re-accelerates issuance.",
+    ],
+  },
+  {
+    slug: "msci-india-asm-smallcap-exclusion-november-2026",
+    title: "MSCI dropped two Indian small caps from its review after exchange surveillance kicked in",
+    summary:
+      "Index provider MSCI said on 27 November 2026 that SG Mart and E2E Networks will not join its global small-cap index this cycle because both sit under Stage 1 of India's long-term Additional Surveillance Measure framework, which automatically disqualifies flagged stocks under MSCI methodology.",
+    category: "industry",
+    companyOrSector: "Market regulation / index investing",
+    publishedAt: "2026-11-27T11:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("msci-india-asm-smallcap-exclusion-november-2026"),
+    keyTakeaways: [
+      "SG Mart and E2E Networks had been flagged for addition before MSCI placed them on its ineligible alert board once domestic exchanges moved the names into long-term surveillance.",
+      "Securities and Exchange Board of India and exchange rules treat ASM placement as an investor warning; MSCI's own appendix bars new index entries for surveilled names until they exit the framework.",
+      "Missing the 30 November 2026 rebalance blocks passive ETF and mandate-driven buying that often follows index inclusion, after sharp volatility across promoter-linked names tied to the Tata Steel and APL Apollo deal debate.",
+    ],
+    body: [
+      "What's going on here?",
+      "Passive funds copy published index rules more closely than they chase headlines. On 27 November 2026, market wires reported that MSCI would skip adding SG Mart Ltd and E2E Networks Ltd in its November global small-cap review, with changes effective from 1 December 2026 after the month-end rebalance. Both had been on the potential-addition list. MSCI said they landed on its ineligible alert board because India's exchanges had placed each under Stage 1 of the long-term Additional Surveillance Measure framework introduced jointly by the Securities and Exchange Board of India and the National Stock Exchange and Bombay Stock Exchange to flag unusual price or volume patterns. Under MSCI's methodology appendix, such surveillance status blocks fresh index inclusions during the review window.",
+      "What does this mean?",
+      "ASM is a warning label, not a trading halt, but global index compilers treat it as a governance red flag. Inclusion typically pulls mechanical buying from ETFs and funds that track MSCI weights; losing the slot removes that bid just as volatility hit promoter-linked names after investor scrutiny of related-party deals in the steel and tubes chain. SG Mart shares had hit lower circuits during the week before a partial rebound, while E2E Networks trades in the same small-cap cloud-compute niche. Until each company exits surveillance and qualifies again in a future quarterly review, foreign passive money that would have bought on inclusion must stay on the sidelines. Active managers can still trade the stocks, but mandate-driven flows matter most around index events.",
+      "Why should I care?",
+      "If you own global emerging-market ETFs, check whether your fund tracks MSCI and whether it held pending buys for these names. Retail investors chasing inclusion rumors should understand that domestic surveillance can veto the trade before it happens. Founders planning listings or QIPs should model ASM risk if their share price is thin or promoter-linked. Watch exchange notices for ASM exit, the next MSCI consultation cycle, and whether other small caps in the same promoter orbit face similar surveillance.",
+    ],
+  },
+  {
     slug: "india-meta-it-automated-takedown-november-2026",
     title: "Congress asked a court to stop Meta's mass blocking under India's new IT rules",
     summary:
@@ -15960,6 +16008,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "axis-bank-credit-cards-apple-pay-october-2026": "markets",
+  "msci-india-asm-smallcap-exclusion-november-2026": "policy",
   "india-meta-it-automated-takedown-november-2026": "policy",
   "india-kharif-foodgrain-output-november-2026": "markets",
   "india-mining-law-states-jharkhand-november-2026": "policy",
