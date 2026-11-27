@@ -17,7 +17,7 @@ export async function GET(request: Request) {
   }
   try {
     await completeKiteMcpOAuth({ code, state });
-    return NextResponse.redirect(new URL("/ai/connections?kiteMcp=ready", request.url));
+    return NextResponse.redirect(new URL("/ai/connections?kiteMcp=ready&resumeZerodha=connect", request.url));
   } catch (err) {
     const msg = err instanceof Error ? err.message : "token_exchange_failed";
     return NextResponse.redirect(new URL(`/ai/connections?kiteMcp=error&msg=${encodeURIComponent(msg)}`, request.url));

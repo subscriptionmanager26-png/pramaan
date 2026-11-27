@@ -276,3 +276,23 @@ export async function kiteMcpAuthErrorMessage() {
   }
   return undefined;
 }
+
+/** Thrown when mcp.kite.trade needs one-time app consent — handler should return `url` to the client. */
+export class KiteMcpConsentRequired extends Error {
+  readonly code = "kite_mcp_consent_required" as const;
+
+  constructor(readonly url: string) {
+    super("Kite app consent required");
+    this.name = "KiteMcpConsentRequired";
+  }
+}
+
+export function kiteMcpOAuthCallbackUrl(request: Request) {
+  return new URL("/api/agent/kite-mcp/oauth-callback", request.url).toString();
+}
+
+export async function assertKiteMcpBearerOrConsent(request: Request): Promise<void> {
+  if (await kiteMcpBearer()) return;
+  const { url } = await beginKiteMcpOAuth({ redirectUri: kiteMcpOAuthCallbackUrl(request) });
+  throw new KiteMcpConsentRequired(url);
+}

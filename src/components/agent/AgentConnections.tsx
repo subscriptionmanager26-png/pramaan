@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
 import { openZerodhaLoginTab } from "@/lib/portfolio/zerodha-start";
@@ -36,6 +36,7 @@ export function AgentConnections() {
   const [view, setView] = useState<ConnectionsView | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const resumeConnectRef = useRef(false);
 
   const load = useCallback(async () => {
     setError(null);
@@ -71,6 +72,25 @@ export function AgentConnections() {
 
   useEffect(() => {
     void load();
+    const params = new URLSearchParams(window.location.search);
+    const kiteMcp = params.get("kiteMcp");
+    if (kiteMcp === "error") {
+      const msg = params.get("msg") || "Kite permission could not be completed.";
+      setError(msg);
+    }
+    if (kiteMcp === "ready" && params.get("resumeZerodha") === "connect" && !resumeConnectRef.current) {
+      resumeConnectRef.current = true;
+      void openZerodhaLoginTab("connect").then((result) => {
+        if (!result.ok) setError(result.error);
+      });
+    }
+    if (kiteMcp) {
+      params.delete("kiteMcp");
+      params.delete("msg");
+      params.delete("resumeZerodha");
+      const path = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
+      window.history.replaceState({}, "", path);
+    }
   }, [load]);
 
   // After Kite login tab closes / user returns, refresh session status.

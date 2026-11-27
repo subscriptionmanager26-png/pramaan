@@ -8,7 +8,12 @@ import {
   kiteHoldings,
   kiteLogin,
 } from "@/lib/zerodha/kite";
+import { assertKiteMcpBearerOrConsent, KiteMcpConsentRequired } from "@/lib/zerodha/kite-mcp-oauth";
 import { zerodhaStoreConfigured } from "@/lib/zerodha/supabase";
+
+function kiteConsentResponse(url: string) {
+  return NextResponse.json({ ok: true, url, consentRequired: true });
+}
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -29,6 +34,12 @@ export async function POST(request: Request) {
 
   try {
     if (action === "connect") {
+      try {
+        await assertKiteMcpBearerOrConsent(request);
+      } catch (err) {
+        if (err instanceof KiteMcpConsentRequired) return kiteConsentResponse(err.url);
+        throw err;
+      }
       await connectKite(userId);
       const login = await kiteLogin(userId);
       if ("url" in login) return NextResponse.json({ ok: true, url: login.url });
@@ -39,6 +50,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true });
     }
     if (action === "login") {
+      try {
+        await assertKiteMcpBearerOrConsent(request);
+      } catch (err) {
+        if (err instanceof KiteMcpConsentRequired) return kiteConsentResponse(err.url);
+        throw err;
+      }
       const login = await kiteLogin(userId);
       if ("url" in login) return NextResponse.json({ url: login.url });
       return NextResponse.json({ loggedInAs: login.loggedInAs });
@@ -49,6 +66,12 @@ export async function POST(request: Request) {
           { error: { code: "zerodha_not_connected", message: "Connect Zerodha first." } },
           { status: 404 },
         );
+      }
+      try {
+        await assertKiteMcpBearerOrConsent(request);
+      } catch (err) {
+        if (err instanceof KiteMcpConsentRequired) return kiteConsentResponse(err.url);
+        throw err;
       }
       const result = await kiteHoldings(userId);
       if ("needsLogin" in result) {

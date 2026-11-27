@@ -54,9 +54,12 @@ async function post(sessionId: string | undefined, payload: Record<string, unkno
     body = undefined;
   }
   if (res.status === 401 && kiteUrl().includes("mcp.kite.trade")) {
+    const storeMsg = await kiteMcpAuthErrorMessage();
+    if (!bearer) {
+      throw new Error(storeMsg || "Complete Connect Zerodha to allow PocketEdge to reach Kite.");
+    }
     throw new Error(
-      (await kiteMcpAuthErrorMessage()) ||
-        "Kite rejected the request. Connect Zerodha, log in on Zerodha, then try again.",
+      storeMsg || "Your Zerodha session may have expired. Log in on Zerodha again, then retry.",
     );
   }
   return { status: res.status, body, sessionId: res.headers.get("mcp-session-id") ?? undefined };
