@@ -154,6 +154,10 @@ function extractKiteLoginUrl(text: string): string | undefined {
 export { connectKite, disconnectKite, getKiteConnection };
 
 export async function kiteLogin(userId: string): Promise<{ loggedInAs: string } | { url: string }> {
+  const loggedIn = await kiteLoggedInAs(userId).catch(() => undefined);
+  if (loggedIn) return { loggedInAs: loggedIn };
+
+  // Fresh MCP session only for the signed Zerodha login redirect — reuse stored session after that.
   const raw = await kiteRequest(
     userId,
     "tools/call",
@@ -182,7 +186,12 @@ export async function kiteLoggedInAs(userId: string) {
 }
 
 const NEEDS_LOGIN =
-  /log ?in first|login required|not logged in|session (has )?expired|invalid (access )?token|failed to execute\s+get_/i;
+  /log ?in first|login required|not logged in|session (has )?expired|invalid (access )?token|failed to execute\s+get_|unknown tool/i;
+
+async function kiteListedTools(userId: string): Promise<Set<string>> {
+  const raw = (await kiteRequest(userId, "tools/list")) as { tools?: { name?: string }[] } | undefined;
+  return new Set((raw?.tools ?? []).map((t) => t.name).filter((n): n is string => Boolean(n)));
+}
 
 export type KiteHoldingDraft = {
   ticker: string;
@@ -254,9 +263,47 @@ export async function kiteHoldings(
   if (!(await getKiteConnection(userId))) {
     throw new Error("Zerodha is not connected.");
   }
-  const equityResult = await kiteCall(userId, "get_holdings", {});
-  const equityText = toolResultText(equityResult);
-  if (callNeedsLogin(equityResult, equityText)) {
+  const loggedIn = await kiteLoggedInAs(userId).catch(() => undefined);
+  if (!loggedIn) {
+    return {
+      needsLogin: true,
+      message: "Log in on Zerodha first, then fetch holdings again.",
+    };
+  }
+
+  let tools: Set<string> | undefined;
+  try {
+    tools = await kiteListedTools(userId);
+  } catch {
+    tools = undefined;
+  }
+  const equityTool = tools?.has("get_holdings")
+    ? "get_holdings"
+    : tools?.has("holdings")
+      ? "holdings"
+      : "get_holdings";
+  const mfTool = tools?.has("get_mf_holdings")
+    ? "get_mf_holdings"
+    : tools?.has("mf_holdings")
+      ? "mf_holdings"
+      : "get_mf_holdings";
+
+  let equityResult: ToolResult;
+  let equityText: string;
+  try {
+    equityResult = await kiteCall(userId, equityTool, {});
+    equityText = toolResultText(equityResult);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    if (NEEDS_LOGIN.test(msg) || /unknown tool/i.test(msg)) {
+      return {
+        needsLogin: true,
+        message: "Log in on Zerodha first, then fetch holdings again.",
+      };
+    }
+    throw err;
+  }
+  if (callNeedsLogin(equityResult, equityText) || /unknown tool/i.test(equityText)) {
     return {
       needsLogin: true,
       message: "Your Zerodha session expired. Log in again, then fetch holdings.",
@@ -268,7 +315,7 @@ export async function kiteHoldings(
     if (draft) byKey.set(draft.ticker, draft);
   }
   try {
-    const mfResult = await kiteCall(userId, "get_mf_holdings", {});
+    const mfResult = await kiteCall(userId, mfTool, {});
     const mfText = toolResultText(mfResult);
     if (!callNeedsLogin(mfResult, mfText)) {
       for (const raw of parseHoldingsJson(mfText)) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { useAgentShell } from "@/components/agent/agent-shell-context";
 import { openZerodhaLoginTab } from "@/lib/portfolio/zerodha-start";
@@ -36,7 +36,7 @@ export function AgentConnections() {
   const [view, setView] = useState<ConnectionsView | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const resumeConnectRef = useRef(false);
+  const [kiteConsentDone, setKiteConsentDone] = useState(false);
 
   const load = useCallback(async () => {
     setError(null);
@@ -64,7 +64,9 @@ export function AgentConnections() {
         );
         return;
       }
-      setView(json as ConnectionsView);
+      const next = json as ConnectionsView;
+      setView(next);
+      if (next.zerodha?.sessionActive) setKiteConsentDone(false);
     } catch {
       setError("Could not load connections. Check your network and try again.");
     }
@@ -78,16 +80,12 @@ export function AgentConnections() {
       const msg = params.get("msg") || "Kite permission could not be completed.";
       setError(msg);
     }
-    if (kiteMcp === "ready" && params.get("resumeZerodha") === "connect" && !resumeConnectRef.current) {
-      resumeConnectRef.current = true;
-      void openZerodhaLoginTab("connect").then((result) => {
-        if (!result.ok) setError(result.error);
-      });
+    if (kiteMcp === "ready") {
+      setKiteConsentDone(true);
     }
     if (kiteMcp) {
       params.delete("kiteMcp");
       params.delete("msg");
-      params.delete("resumeZerodha");
       const path = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
       window.history.replaceState({}, "", path);
     }
@@ -173,6 +171,15 @@ export function AgentConnections() {
           {z?.connected && z.loggedInAs && (
             <p className="mt-3 text-sm text-ink">Logged in as {z.loggedInAs}</p>
           )}
+          {kiteConsentDone && !z?.sessionActive ? (
+            <div className="mt-4 rounded-xl border border-accent-2 bg-accent-2/40 px-4 py-3 text-sm text-ink">
+              <p className="font-medium">Kite permission saved.</p>
+              <p className="mt-1 text-[13px] text-ink-2">
+                Tap Connect below once (opens a new tab — avoid popup blockers). Finish Zerodha login there, then return
+                here.
+              </p>
+            </div>
+          ) : null}
           <div className="mt-4 flex flex-wrap gap-2">
             {!z?.connected ? (
               <button

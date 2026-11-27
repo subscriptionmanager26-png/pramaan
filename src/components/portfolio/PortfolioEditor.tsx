@@ -310,7 +310,9 @@ export function PortfolioEditor({ portfolio, onSaved, onCancel, preview = false 
       if ("url" in result) {
         setLoginUrl(result.url);
         setZerodhaGate("need_login");
-        window.open(result.url, "_blank", "noopener,noreferrer");
+        setError(
+          "Your browser blocked the Zerodha tab. Use the Open Zerodha login link below (same as Connections — form open, not popup).",
+        );
         return;
       }
       setZerodhaGate("ready");
