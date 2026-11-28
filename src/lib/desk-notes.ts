@@ -26,6 +26,54 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sp-tata-motors-jlr-downgrade-november-2026",
+    title: "S&P cut Tata Motors Passenger Vehicles after Jaguar Land Rover's cash burn worsened",
+    summary:
+      "On 27 November 2026 S&P Global Ratings lowered Tata Motors Passenger Vehicles and key units to BBB- from BBB, and Jaguar Land Rover to BB+, citing weaker luxury margins, negative free cash flow and a delayed recovery as China sales fell and restructuring charges weighed on the listed parent.",
+    category: "industry",
+    companyOrSector: "Autos / credit ratings",
+    publishedAt: "2026-11-28T05:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sp-tata-motors-jlr-downgrade-november-2026"),
+    keyTakeaways: [
+      "S&P cut the long-term issuer rating on Tata Motors Passenger Vehicles and TML Holdings to BBB- from BBB while moving the outlook to stable from negative; Jaguar Land Rover fell to BB+ from BBB- with a stable outlook.",
+      "The agency said JLR contributes roughly four-fifths of consolidated revenue and that imported-vehicle sales in China dropped about 35% year on year in the first half of FY27.",
+      "S&P now expects JLR to turn free operating cash flow positive in FY28 rather than FY27, with adjusted negative free cash flow of about GBP 1.4 billion in FY27 as capex stays near GBP 3.3 billion to GBP 3.4 billion.",
+    ],
+    body: [
+      "What's going on here?",
+      "Credit agencies revisit Indian auto listings when an overseas luxury unit misses profit and cash targets. Tata Motors Passenger Vehicles, the listed entity that houses Jaguar Land Rover, had already absorbed large UK restructuring charges in the September 2026 quarter. On 27 November 2026 S&P Global Ratings downgraded the passenger vehicle issuer and its wholly owned financing units to BBB- from BBB, shifting the outlook to stable from negative. It cut Jaguar Land Rover itself to BB+ from BBB-, also with a stable outlook. S&P said weak profitability and negative free operating cash flow at JLR will likely delay financial recovery at the parent. It estimated consolidated adjusted EBITDA margin of only about 0.4% in FY27, marginally better than the prior year's 0.2%, because the luxury unit still drags group earnings despite growth in domestic sport-utility volumes.",
+      "What does this mean?",
+      "A rating cut does not by itself change showroom prices, but it raises borrowing costs for a heavily levered subsidiary and tightens covenant headroom on bonds and bank lines. S&P pointed to softer Chinese demand for imported vehicles and a product refresh that keeps capital expenditure and research spending elevated around GBP 3.3 billion to GBP 3.4 billion across FY27 and FY28. The agency pushed back its expectation for JLR to post positive free operating cash flow to FY28 from FY27, citing the weaker operating environment. Management had already lowered margin guidance and booked about GBP 530 million of exceptional items in the September quarter tied to redundancies and write-downs. Stable outlook language suggests S&P sees the downgrade as catching up to disclosed stress rather than foreseeing another immediate step.",
+      "Why should I care?",
+      "If you reserved a Jaguar or Land Rover in India, dealer financing and fleet lease rates can inch up when the parent's offshore credit steps down, even though domestic SUV demand remains separate. Bondholders and banks holding Tata Motors Passenger Vehicles paper should read the stable outlook against net debt that ballooned after the JLR charges. Equity investors must keep splitting India passenger momentum from UK cash drainage until restructuring costs roll off. Watch JLR quarterly free cash flow, China registration data, any new group funding to deleverage, and whether other agencies mirror S&P's calendar.",
+    ],
+  },
+  {
+    slug: "lupin-fda-sitagliptin-november-2026",
+    title: "US regulators cleared Lupin's generic version of the diabetes pill sitagliptin",
+    summary:
+      "Lupin Ltd said on 27 November 2026 that the US Food and Drug Administration approved and launched its sitagliptin tablets, a widely prescribed type 2 diabetes treatment, extending the Mumbai-based generic maker's US oral portfolio.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / US generics",
+    publishedAt: "2026-11-28T05:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("lupin-fda-sitagliptin-november-2026"),
+    keyTakeaways: [
+      "Sitagliptin belongs to the DPP-4 inhibitor class used alongside diet changes to control blood sugar in type 2 diabetes patients.",
+      "Lupin's 27 November exchange filing announced both FDA approval and commercial launch of its USP tablets, not just a laboratory clearance.",
+      "US market reports have pegged annual brand sales for sitagliptin-based products above $400 million, making the molecule a meaningful wallet for generic suppliers that win pharmacy contracts.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian pharma companies still chase US prescriptions because a single complex oral generic can diversify revenue beyond commodity antibiotics. Lupin Ltd told the National Stock Exchange on 27 November 2026 that the US Food and Drug Administration approved and launched its sitagliptin tablets USP. Sitagliptin is a staple in American formularies for type 2 diabetes, often combined with metformin, and patent cliffs have opened the category to multiple Indian filers over the past decade. Lupin already markets other diabetes and cardiovascular generics in the United States, so the approval slots into an existing wholesaler and sales-force footprint rather than a greenfield category entry.",
+      "What does this mean?",
+      "Launch matters as much as approval: pharmacy benefit managers decide which generic house gets shelf space through rebates and supply reliability. A crowded sitagliptin field can compress prices quickly, so Lupin's edge depends on plant quality scores, litigation freedom and tender wins with large buying groups. Because the filing cited an immediate launch, investors should look for US revenue mix commentary in upcoming results rather than treating the news as distant option value. Domestic patients will not automatically see the Indian branded version; local labels follow separate Drug Controller General filings. For Lupin's balance sheet, oral US generics throw off cash that funds complex injectable R&D highlighted in other recent approvals.",
+      "Why should I care?",
+      "If you invest in Indian pharma exporters, compare Lupin's US diabetes shelf against Sun Pharma, Zydus and other sitagliptin filers when reading quarterly North America growth. Hospital and pharmacy managers in the United States should verify which ANDA holders their wholesaler stocks before switching patients off brands. Indian type 2 diabetes patients should rely on physicians and CDSCO approvals for available generics rather than US launch headlines. Watch Lupin's next investor update for launch scale, any price erosion guidance, FDA inspection status at the filing site, and competitor launches that could split market share.",
+    ],
+  },
+  {
     slug: "adani-group-airline-capital-november-2026",
     title: "Adani asked the government to let it fund airlines, not just airports",
     summary:
@@ -16200,6 +16248,8 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sp-tata-motors-jlr-downgrade-november-2026": "companies",
+  "lupin-fda-sitagliptin-november-2026": "companies",
   "adani-group-airline-capital-november-2026": "policy",
   "eighth-pay-commission-fiscal-cost-november-2026": "policy",
   "gail-gnfc-petrochemical-mou-november-2026": "companies",

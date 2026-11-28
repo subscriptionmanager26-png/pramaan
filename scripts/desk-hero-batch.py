@@ -3272,6 +3272,25 @@ def volkswagen_india_import_duty_rivals(d: ImageDraw.ImageDraw) -> None:
     d.polygon([(1000, 560), (1080, 420), (1160, 560)], fill=BLUE)
 
 
+def sp_tata_motors_jlr_downgrade(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(140, 560), (200, 200), (420, 180), (480, 560)], fill=BLUE)
+    d.line([(200, 320), (380, 280)], fill=GOLD, width=4)
+    for i, h in enumerate([300, 220, 160, 100]):
+        x = 620 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.ellipse([980, 280, 1140, 420], fill=YELLOW)
+    d.line([(700, 200), (980, 360)], fill=GOLD, width=3)
+
+
+def lupin_fda_sitagliptin(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([140, 320, 420, 520], radius=30, fill=RED)
+    d.line([(280, 340), (280, 500)], fill=CREAM, width=14)
+    d.ellipse([200, 200, 360, 360], fill=BLUE)
+    d.arc([620, 240, 1100, 520], 200, 340, fill=GOLD, width=5)
+    for i in range(4):
+        d.rectangle([680 + i * 80, 560 - (i + 2) * 55, 740 + i * 80, 560], fill=[YELLOW, BLUE, RED, YELLOW][i])
+
+
 def swiggy_instamart_layoffs(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([120, 240, 400, 560], radius=24, fill=BLUE)
     for i in range(4):
@@ -3319,6 +3338,8 @@ if __name__ == "__main__":
     save("india-kharif-foodgrain-output-november-2026", india_kharif_foodgrain_output)
     save("india-mining-law-states-jharkhand-november-2026", india_mining_law_states_jharkhand)
     save("flipkart-ceo-exit-quick-commerce-november-2026", flipkart_ceo_exit_quick_commerce)
+    save("sp-tata-motors-jlr-downgrade-november-2026", sp_tata_motors_jlr_downgrade)
+    save("lupin-fda-sitagliptin-november-2026", lupin_fda_sitagliptin)
     save("adani-group-airline-capital-november-2026", adani_group_airline_capital)
     save("eighth-pay-commission-fiscal-cost-november-2026", eighth_pay_commission_fiscal_cost)
     save("gail-gnfc-petrochemical-mou-november-2026", gail_gnfc_petrochemical_mou)
