@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "bpcl-andhra-refinery-board-november-2026",
+    title: "BPCL's board cleared a ₹1.27 lakh crore refinery in Andhra Pradesh",
+    summary:
+      "Bharat Petroleum Corporation Ltd said on 28 November 2026 that directors approved a greenfield refinery and petrochemical complex at Ramayapatnam with gross capital expenditure of about ₹1,26,656 crore, targeting commercial operations in July 2032 subject to government and regulatory clearances.",
+    category: "industry",
+    companyOrSector: "Oil refining / petrochemicals",
+    publishedAt: "2026-11-28T15:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("bpcl-andhra-refinery-board-november-2026"),
+    keyTakeaways: [
+      "The project will add 9 MMTPA of crude capacity plus a 1.5 MMTPA mixed-feed ethylene cracker through a wholly owned subsidiary, with combined throughput of 10.5 MMTPA.",
+      "BPCL said its existing 35.3 MMTPA refining system ran at 116.6% utilisation in FY26, underscoring a domestic fuels deficit the complex is meant to help close.",
+      "The board also approved up to ₹44,330 crore of equity for the subsidiary, including a prior ₹4,900 crore tranche, with balance funding from debt arrangements still being finalised.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian state refiners still chase integrated sites where transport fuels and petrochemical feedstock rise together instead of importing polymers at dollar prices. Bharat Petroleum Corporation Ltd filed with stock exchanges on 28 November 2026 that its board approved a greenfield refinery and petrochemical complex at Ramayapatnam in Andhra Pradesh. Estimated gross capital expenditure is ₹1,26,656 crore within a plus or minus 20% band. The build runs through a wholly owned subsidiary and adds 9 million metric tonnes per annum of crude processing together with a 1.5 MMTPA mixed-feed ethylene cracker and downstream units, for 10.5 MMTPA combined throughput. Management scheduled commercial operation for July 2032, pending applicable government, statutory and regulatory approvals. The filing said petrochemical intensity would be roughly 34% and that the layout targets India's widening gap in transport fuels and key polymers.",
+      "What does this mean?",
+      "A refinery-petrochemical merger lets a marketer capture margin on naphtha and LPG it would otherwise export as bulk commodities, while plastic and fibre customers inland get shorter supply chains. BPCL already runs existing coastal capacity hard, so a southern greenfield also spreads geographic risk away from overloaded western clusters. Equity of up to ₹44,330 crore into the subsidiary signals how much of the cheque taxpayers and minority shareholders will fund before lenders step in. Rivals such as Indian Oil, HPCL and private players are expanding chemical intensity too, so feedstock allocation, gas pricing and environmental clearance timelines will decide execution pace. Until cabinet and petroleum ministry sign-offs land, the announcement is a capital commitment frame rather than steel in the ground.",
+      "Why should I care?",
+      "If you buy packaging, textiles or auto components tied to domestic polymer prices, track whether this complex gains environmental and land clearances on schedule. Engineering and catalyst suppliers should watch tender calendars after CCEA approval. Bond investors in oil PSUs need to model higher capex cycles even as marketing margins swing with crude. Andhra Pradesh residents and local industry groups should follow employment and port linkage plans at Ramayapatnam. Watch CCEA equity clearance, lender term sheets, crude sourcing agreements and quarterly updates on BPCL's petrochemical import bill.",
+    ],
+  },
+  {
+    slug: "pnc-infratech-nhai-appeal-november-2026",
+    title: "A Delhi High Court bench set aside the stay on NHAI's PNC debarment",
+    summary:
+      "PNC Infratech said on 28 November 2026 that a Delhi High Court division bench, by consent of parties on 26 November, vacated an earlier interim stay on National Highways Authority of India debarment orders and sent the dispute back to a single judge for a fresh hearing on interim relief.",
+    category: "industry",
+    companyOrSector: "Roads / NHAI",
+    publishedAt: "2026-11-28T14:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("pnc-infratech-nhai-appeal-november-2026"),
+    keyTakeaways: [
+      "NHAI had debarred PNC Infratech and its Awadh Expressway special purpose vehicle; an October single-judge stay paused the orders until appeals were heard.",
+      "Acting Chief Justice Nitin Wasudeo Sambre and Justice Sanjay Sharma set aside that stay on 26 November without deciding the merits, leaving interim protection open at the single-judge stage.",
+      "The division bench also cautioned NHAI leadership over how the underlying proceedings were handled and asked the authority's top officer to examine officer conduct.",
+    ],
+    body: [
+      "What's going on here?",
+      "Highway contractors and NHAI often fight in court when performance disputes turn into multi-year bidding bans. PNC Infratech Ltd said on 28 November 2026 that a Delhi High Court division bench passed orders on 26 November in appeals filed by the National Highways Authority of India. The bench set aside, with consent of the parties, an earlier interim stay that had paused NHAI debarment orders affecting PNC Infratech and Awadh Expressway Private Ltd. The matter goes back to a single judge for arguments afresh, including on interim relief. The court stressed that vacating the stay is not a final ruling on whether the debarment is valid. In the same hearing, the division bench said records suggested the proceedings leading to the October interim order were not conducted with sufficient care and directed NHAI's highest officer to look into officer conduct.",
+      "What does this mean?",
+      "Removing a division-bench stay restores legal risk that NHAI can enforce a ban while litigation continues, unless the single judge grants new protection quickly. Debarment blocks fresh bids and can stall cash on existing concessions, so lenders repricing project finance often move faster than equity holders. NHAI's internal reprimand signal may slow future debarment letters even when contractors miss milestones. Other EPC firms read these appeals for clues on how courts balance public infrastructure timelines against contractor remedies. For Awadh Expressway inside the group, the dispute still sits in special purpose vehicle silos, so consolidated disclosures matter for anyone holding the parent stock.",
+      "Why should I care?",
+      "If you finance toll roads or hold infrastructure mutual funds, read the next single-judge dates before assuming PNC can bid on new packages. Subcontractors on affected projects should confirm payment security while the debarment question is relitigated. Policy watchers should track whether NHAI tightens dispute documentation after the court's caution. Watch fresh interim applications, NHAI replies on Awadh Expressway performance, and any highway ministry commentary on debarment guidelines.",
+    ],
+  },
+  {
+    slug: "india-apparel-bangladesh-order-shift-november-2026",
+    title: "Western fashion brands are shifting garment orders toward Indian factories",
+    summary:
+      "Reuters reporting on 28 November 2026, citing factory owners, said global retailers including Zara and H&M diverted roughly $254 million of Bangladesh production into the first half of November, with India the largest recipient as unrest and higher costs disrupted Dhaka supply lines.",
+    category: "industry",
+    companyOrSector: "Textiles / apparel exports",
+    publishedAt: "2026-11-28T13:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-apparel-bangladesh-order-shift-november-2026"),
+    keyTakeaways: [
+      "Three Bangladesh factory owners told Reuters that about a tenth of monthly orders moved to other Asian hubs between 1 and 18 November, mostly to India.",
+      "The Bangladesh Garment Manufacturers and Exporters Association estimated more than $400 million of production losses from protests in an industry that supplies over 80% of the country's exports.",
+      "Indian listed exporters such as Gokaldas Exports, Trident, Welspun Living, KPR Mill and Vardhman Textiles rose on the report as investors priced a potential order fill.",
+    ],
+    body: [
+      "What's going on here?",
+      "Apparel buyers prize reliable delivery over the lowest wage quote when shelves carry fashion cycles measured in weeks. Labour unrest, energy shortages and political uncertainty have disrupted Bangladesh garment hubs that grew as the world's second-largest apparel exporter after China. Reuters copy published 28 November 2026 quoted three factory owners saying global brands including Zara, H&M, Marks and Spencer and Celio diverted about $254 million of orders in the first half of November, with most volume landing in India. The Bangladesh Garment Manufacturers and Exporters Association estimated more than $400 million of output lost to protests in a sector that accounts for over 80% of national export earnings. Brands did not universally confirm the shifts on the record. Reporting the same day noted Indian apparel shares such as Gokaldas Exports, Trident, Welspun Living, KPR Mill and Vardhman Textiles firming as investors weighed a near-term export tailwind.",
+      "What does this mean?",
+      "Order diversion is tactical when Dhaka lines stand idle, but buyers can keep capacity in India, Vietnam or Cambodia if South Asian lead times stay shorter than Bangladesh's roughly 120-day cycle even after minimum wages rose 36%. Indian plants that already export to Europe and the United States can absorb overflow without new greenfield capex if spinning and stitching utilisation has slack. Permanent share gains depend on whether Bangladesh restores uninterrupted production before buyers normalise dual-sourcing. Smaller manufacturers may see spot orders before large exporters with existing compliance audits. Workers in Tamil Nadu and Karnataka clusters may see overtime before investors see margin expansion, because pricing stays competitive while buyers demand discounts.",
+      "Why should I care?",
+      "If you manage an export-oriented garment unit, expect sourcing managers to request capacity declarations and compliance certificates on short notice. Investors should separate one-month order spikes from long-term contract wins backed by multi-season POs. Retail shoppers in India may not feel price changes immediately, but sourcing shifts influence employment in textile towns. Watch November export data, management commentary from large listed exporters, Bangladesh wage negotiations, and whether diverted orders revert once Dhaka plants reopen steadily.",
+    ],
+  },
+  {
+    slug: "sebi-fno-pre-ipo-market-november-2026",
+    title: "SEBI's chairman wants deeper derivatives and a formal pre-IPO market",
+    summary:
+      "Securities and Exchange Board of India chairman Tuhin Kanta Pandey said on 27 November 2026 at CNBC Awaaz's Market Mahakumbh that regulators should deepen the futures and options market rather than force closures, and that work continues on long-term contracts and a structured pre-IPO segment.",
+    category: "industry",
+    companyOrSector: "Capital markets / regulation",
+    publishedAt: "2026-11-28T12:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sebi-fno-pre-ipo-market-november-2026"),
+    keyTakeaways: [
+      "Pandey argued against forcibly shutting F&O segments and said liquidity should deepen with caution, not blanket bans.",
+      "He said SEBI is actively working on pre-IPO market frameworks and that long-term futures and options should be available to investors.",
+      "On the same platform, BSE managing director Sundararaman Ramamurthy said the exchange is focusing on index futures while rebuilding cash-market share.",
+    ],
+    body: [
+      "What's going on here?",
+      "India's retail participation boom turned derivatives volumes into a regulatory flashpoint after sharp corrections in 2025 and 2026. On 27 November 2026, Securities and Exchange Board of India chairman Tuhin Kanta Pandey spoke at CNBC Awaaz's Market Mahakumbh summit in Mumbai. He said there is a need to deepen the futures and options market and that forcibly shutting a segment is not the right approach. Pandey added that the regulator is working on a pre-IPO market and that long-term futures and options should be available. He framed market oversight as promoting caution while still allowing growth. Bombay Stock Exchange managing director Sundararaman Ramamurthy, at the same event, said the exchange is focusing on index futures while trying to lift cash equity market share from roughly 8% toward a higher baseline. The comments land as NSE's recent listing renews debate on competition between the two exchanges.",
+      "What does this mean?",
+      "Deeper derivatives require more market makers, clearer surveillance on position limits and education on leverage rather than binary product bans. A structured pre-IPO venue would let investors trade claims before listing day, shifting price discovery earlier and adding compliance tasks for bankers and exchanges. Long-dated contracts would change hedging for promoters and portfolio managers who today rely on informal grey-market quotes. Brokers and clearing members would need capital and risk systems sized for stickier open interest. Competing exchanges may race to launch products Pandey describes, which can compress fees for active traders while raising technology spend.",
+      "Why should I care?",
+      "If you trade F&O or chase IPO allotments, watch consultation papers for pre-IPO rules and any new position-limit circulars before sizing leverage. Mutual fund investors face indirect effects through bank-owned brokers that cross-subsidise from derivatives revenue. Corporate issuers eyeing 2027 listings should plan disclosure timelines assuming earlier secondary trading in regulated venues. Track SEBI board agendas, BSE and NSE product filings, and parliamentary answers on investor protection after the summit remarks.",
+    ],
+  },
+  {
     slug: "sbi-msme-dream-limit-november-2026",
     title: "SBI will raise its digital small-business loan cap to ₹50 crore",
     summary:
@@ -16320,6 +16416,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "bpcl-andhra-refinery-board-november-2026": "companies",
+  "pnc-infratech-nhai-appeal-november-2026": "policy",
+  "india-apparel-bangladesh-order-shift-november-2026": "companies",
+  "sebi-fno-pre-ipo-market-november-2026": "markets",
   "sbi-msme-dream-limit-november-2026": "policy",
   "tata-sons-trusts-court-no-relief-november-2026": "policy",
   "india-urea-import-tender-november-2026": "policy",

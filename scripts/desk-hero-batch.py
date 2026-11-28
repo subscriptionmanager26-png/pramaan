@@ -3282,6 +3282,44 @@ def sp_tata_motors_jlr_downgrade(d: ImageDraw.ImageDraw) -> None:
     d.line([(700, 200), (980, 360)], fill=GOLD, width=3)
 
 
+def bpcl_andhra_refinery_board(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 300, 460, 560], fill=BLUE)
+    d.polygon([(160, 300), (400, 200), (440, 300)], fill=RED)
+    for i in range(3):
+        d.ellipse([180 + i * 80, 360, 240 + i * 80, 420], fill=YELLOW)
+    d.rectangle([560, 220, 1120, 280], fill=RED)
+    d.rectangle([560, 340, 1050, 400], fill=YELLOW)
+    d.line([(520, 560), (1180, 400)], fill=GOLD, width=4)
+
+
+def pnc_infratech_nhai_appeal(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([80, 180, 500, 560], fill=BLUE)
+    d.line([(500, 200), (500, 540)], fill=GOLD, width=4)
+    d.polygon([(720, 520), (900, 240), (1080, 520)], fill=RED)
+    d.rectangle([600, 420, 1180, 480], fill=YELLOW)
+    for i, w in enumerate([1100, 980, 860]):
+        d.line([(w, 480), (w + 30, 400)], fill=GOLD, width=3)
+
+
+def india_apparel_bangladesh_order_shift(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([120, 260, 380, 560], fill=RED)
+    d.rectangle([140, 300, 360, 520], fill=CREAM)
+    for y in range(320, 520, 50):
+        d.line([(160, y), (340, y)], fill=BLUE, width=2)
+    d.polygon([(600, 560), (760, 320), (920, 560)], fill=BLUE)
+    d.line([(760, 320), (1100, 200)], fill=GOLD, width=4)
+    d.ellipse([1040, 160, 1160, 280], fill=YELLOW)
+
+
+def sebi_fno_pre_ipo_market(d: ImageDraw.ImageDraw) -> None:
+    for i, h in enumerate([120, 200, 280, 360]):
+        x = 120 + i * 90
+        d.rectangle([x, 560 - h, x + 60, 560], fill=[RED, BLUE, YELLOW, RED][i])
+    d.arc([560, 200, 1100, 560], 200, 340, fill=GOLD, width=5)
+    d.ellipse([700, 280, 900, 480], outline=BLUE, width=6)
+    d.line([(700, 380), (900, 380)], fill=BLUE, width=3)
+
+
 def sbi_msme_dream_limit(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([120, 260, 440, 540], radius=28, fill=BLUE)
     d.rectangle([160, 320, 400, 480], fill=CREAM)
@@ -3330,6 +3368,10 @@ def swiggy_instamart_layoffs(d: ImageDraw.ImageDraw) -> None:
 
 if __name__ == "__main__":
     main()
+    save("bpcl-andhra-refinery-board-november-2026", bpcl_andhra_refinery_board)
+    save("pnc-infratech-nhai-appeal-november-2026", pnc_infratech_nhai_appeal)
+    save("india-apparel-bangladesh-order-shift-november-2026", india_apparel_bangladesh_order_shift)
+    save("sebi-fno-pre-ipo-market-november-2026", sebi_fno_pre_ipo_market)
     save("sbi-msme-dream-limit-november-2026", sbi_msme_dream_limit)
     save("tata-sons-trusts-court-no-relief-november-2026", tata_sons_trusts_court_no_relief)
     save("india-urea-import-tender-november-2026", india_urea_import_tender)
