@@ -26,6 +26,102 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "honda-alpha-ev-charging-network-november-2026",
+    title: "Honda will let Alpha buyers pay at rival chargers from one app",
+    summary:
+      "Honda Cars India said on 27 November 2026 that Adani TotalEnergies E-mobility, Jio-bp, Tata Power and GO EC charging networks will plug into Honda Connect before the made-in-India Alpha electric SUV debuts on 2 December, with ElectreeFi handling integration.",
+    category: "industry",
+    companyOrSector: "Automobiles / EV charging",
+    publishedAt: "2026-11-28T22:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("honda-alpha-ev-charging-network-november-2026"),
+    keyTakeaways: [
+      "Honda paired with four public charging operators plus ElectreeFi as technology partner so Alpha owners can locate chargers, start sessions and pay through Honda Connect.",
+      "The Alpha is Honda's first electric SUV built in India; the company plans to disclose full network scale at the 2 December 2026 launch.",
+      "The tie-up stitches together competing infrastructure brands rather than asking buyers to juggle separate apps for each operator.",
+    ],
+    body: [
+      "What's going on here?",
+      "Range anxiety in India is less about kilowatt-hours on paper and more about whether a driver can find a working plug and pay without fumbling between apps. Honda Cars India Ltd announced on 27 November 2026 partnerships with Adani TotalEnergies E-mobility Ltd, Reliance bp Mobility Ltd (Jio-bp), Tata Power Co Ltd and GO EC, alongside technology provider ElectreeFi, ahead of its first made-in-India electric sport utility vehicle, the Honda ALPHA. The arrangement is meant to give upcoming EV customers access to public chargers across cities, highways and tourist corridors. Through Honda Connect, buyers should be able to see charger availability, start a session and pay at supported stations. Honda said it would spell out how large the combined network is when it launches the Alpha on 2 December 2026.",
+      "What does this mean?",
+      "Global automakers entering India's battery market rarely build nationwide chargers alone. Pooling Adani, Reliance, Tata Power and GO EC routes traffic to networks those groups already operate, while ElectreeFi acts as the middleware that keeps one customer interface. For Honda, the model mirrors what incumbents such as Tata Motors and Hyundai have pursued: reduce friction before the first retail deliveries. For charging operators, OEM tie-ins bring predictable utilisation without surrendering brand identity on the hardware. The test is whether session success rates and billing disputes stay low when multiple back-end systems feed one app.",
+      "Why should I care?",
+      "If you plan to buy a family EV, compare not just battery size and price but also which apps and payment rails each brand bundles before delivery day. Fleet operators along highway corridors should check whether Honda's map covers their routes on day one or only after a phased rollout. Investors in charging and power utilities should watch utilisation data once Alpha registrations begin, not just headline partnership counts. Watch the 2 December launch disclosures, early owner feedback on Honda Connect payments, and whether rival OEMs widen their own multi-network deals.",
+    ],
+  },
+  {
+    slug: "india-aluminium-scrap-duty-eu-november-2026",
+    title: "Metal recyclers want zero duty on aluminium scrap before the EU tightens exports",
+    summary:
+      "Industry bodies said on 28 November 2026 that recyclers are lobbying to remove India's 2.5% import duty on aluminium scrap, citing a European Union proposal to restrict scrap shipments to countries including India at the same time the mines ministry has backed a duty cut.",
+    category: "industry",
+    companyOrSector: "Metals / recycling",
+    publishedAt: "2026-11-28T21:15:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-aluminium-scrap-duty-eu-november-2026"),
+    keyTakeaways: [
+      "The Material Recycling Association of India argues the existing 2.5% scrap duty disadvantages domestic recyclers against countries that allow duty-free scrap imports.",
+      "The European Union is weighing revised waste-shipment rules that could restrict exports of aluminium scrap toward destinations such as India.",
+      "India's Ministry of Mines has reportedly recommended removing the 2.5% duty to the finance ministry, according to statements cited in wire copy.",
+    ],
+    body: [
+      "What's going on here?",
+      "Secondary aluminium plants melt imported scrap and domestic dross instead of smelting fresh metal, so raw-material access and customs lines directly set conversion margins. Reporting on 28 November 2026 said India's recycling industry is pressing the government to drop the 2.5% import duty on aluminium scrap. The Material Recycling Association of India said the levy leaves smaller recyclers at a cost disadvantage versus competitors in regions that tax scrap imports at zero. Industry groups also asked for a broader framework to recover critical minerals from recycled feedstock. Parallel risk sits overseas: the European Union is discussing tighter waste-shipment rules that could limit exports of metal scrap, including aluminium, toward markets such as India. Wire copy added that India's Ministry of Mines has already recommended scrapping the 2.5% duty to the federal finance ministry ahead of budget talks.",
+      "What does this mean?",
+      "Primary aluminium producers and scrap-based recyclers do not always want the same tariff map. Smelters campaigning for higher duties on ingots want protection for new capacity; recyclers want cheaper scrap even if that softens the import barrier on feedstock. If Europe curtails scrap outflows while India keeps a levy on inbound scrap, die-casters and auto suppliers could see tighter spreads and more volatile secondary alloy prices. A finance ministry concession would show Delhi prioritising circular-economy metal over purely primary-metal protection in this budget cycle. The policy choice also interacts with quality norms importers already face on contaminated scrap loads.",
+      "Why should I care?",
+      "If you buy castings, wheels or packaging sheet tied to secondary alloy contracts, watch scrap landed costs and EU shipping schedules before locking annual prices. Smelter investors should read budget fine print to see whether scrap and primary duties move in opposite directions. Smaller recycling units should model working capital needs if Europe slows scrap sailings yet domestic demand stays firm. Watch the February 2027 budget, EU waste-shipment final rules, and any Aluminium Association of India response to the recyclers' pitch.",
+    ],
+  },
+  {
+    slug: "infosys-h1b-approvals-texas-november-2026",
+    title: "Infosys won far more new H-1B slots in Texas even as the state eyes tighter rules",
+    summary:
+      "US Citizenship and Immigration Services data cited on 28 November 2026 show Infosys approvals for new H-1B employment in fiscal 2026 jumped to about 2,088 from 257 a year earlier, while Texas Governor-elect Gina Hinojosa said she plans to rescind a directive that tightened state-agency hiring of foreign workers.",
+    category: "industry",
+    companyOrSector: "IT services / US immigration",
+    publishedAt: "2026-11-28T20:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("infosys-h1b-approvals-texas-november-2026"),
+    keyTakeaways: [
+      "Infosys listed Richardson, Texas, as petitioner location in federal data showing new H-1B employment approvals rebounding to 2,088 in FY26 from 257 in FY25, still below 2,489 in FY24.",
+      "Overall Infosys H-1B approvals, including continuing employment, rose about 47% to 4,206 in FY26 from 2,856 in FY25, per USCIS figures reviewed in reporting.",
+      "Texas outgoing Governor Greg Abbott's January 2026 directive requires some state agencies and public universities to seek workforce commission approval before new H-1B petitions through May 2027, but Governor-elect Hinojosa told media on 18 November she intends to rescind it.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian IT services revenue still hinges on placing engineers at US client sites under skilled-worker visas when projects cannot be fully staffed from offshore centres. Federal immigration statistics reviewed in reporting published 28 November 2026 showed Infosys Ltd among employers with a sharp rise in US Citizenship and Immigration Services approvals for new H-1B employment in fiscal year 2026. New-employment approvals for Infosys climbed to about 2,088 from 257 in fiscal 2025, though they remained below the 2,489 level recorded in fiscal 2024. Richardson, Texas, appeared as a petitioner location in the dataset, without every approved worker necessarily being based there. Total H-1B approvals covering both new and continuing employment for Infosys increased roughly 47% to 4,206 in FY26 from 2,856 in FY25. The same period brought political friction in Texas: outgoing Governor Greg Abbott issued a January 2026 directive requiring certain state agencies and public universities to obtain Texas Workforce Commission sign-off before filing new H-1B petitions and to document local hiring efforts, with rules scheduled through May 2027. Governor-elect Gina Hinojosa, due to take office on 19 January 2027, told The Texas Tribune on 18 November that she plans to rescind that directive while acknowledging misuse concerns.",
+      "What does this mean?",
+      "New H-1B approvals measure fresh visa slots employers secured, not every onsite consultant headcount, but a rebound signals clients still want Indian vendors physically present for specialised work. Private employers such as Infosys were never covered by Abbott's state-agency directive, yet Texas politics shapes where universities and agencies hire, which feeds the broader debate on foreign talent. A rescission would remove one layer of friction for public institutions, even as federal PERM and fee debates continue to reshape long-term residency paths for technology workers. Competitors including KPMG, Texas Instruments and American Airlines also saw higher new H-1B counts in the same FY26 window, underscoring that demand is sector-wide.",
+      "Why should I care?",
+      "If you build a career in IT services or study computer science with US plans, track both visa lottery odds and state-level hiring rules at public-sector clients. Investors should treat approval trends as a staffing input for US revenue, not a quarterly earnings line. Employers competing for the same talent pool need to watch whether Texas policy stabilises after the handover. Watch USCIS FY27 data releases, whether Hinojosa follows through on rescission, and client commentary on onsite versus offshore mix in FY27 guidance.",
+    ],
+  },
+  {
+    slug: "dr-reddys-ap-licence-suspension-november-2026",
+    title: "Andhra Pradesh halted production at a Dr Reddy's plant for two days",
+    summary:
+      "Dr Reddy's Laboratories Ltd said on 28 November 2026 that state drug regulators suspended the manufacturing licence at its CTO-SEZ Process Unit-01 in Srikakulam for two days from 24 November after responses to a June inspection were deemed unsatisfactory.",
+    category: "industry",
+    companyOrSector: "Pharmaceuticals / regulation",
+    publishedAt: "2026-11-28T19:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("dr-reddys-ap-licence-suspension-november-2026"),
+    keyTakeaways: [
+      "The Drugs Control Administration, Vijayawada, issued the suspension on 24 November 2026; Dr Reddy's received the order on 27 November.",
+      "The action followed a June 2026 inspection at Devunipalavalasa in Srikakulam district after which the company filed clarifications regulators rejected.",
+      "Dr Reddy's said it does not expect a material financial impact and is evaluating an appeal and corrective steps.",
+    ],
+    body: [
+      "What's going on here?",
+      "A single plant stoppage rarely shutters a large pharma company's books, but state licences still gate what can ship from that site each week. Dr Reddy's Laboratories Ltd disclosed on 28 November 2026 that the Andhra Pradesh Drugs Control Administration suspended the manufacturing licence for two days at its CTO-SEZ Process Unit-01 facility at Devunipalavalasa village in Srikakulam district. The suspension order dated 24 November 2026 reached the company on 27 November. Regulators had inspected the unit in June 2026, recorded observations, and later found Dr Reddy's clarifications inadequate. A brief suspension stops production at that line until compliance paperwork satisfies the licensing authority.",
+      "What does this mean?",
+      "Indian drug makers juggle multiple inspectors: US Food and Drug Administration visits for exports and state drugs controllers for domestic manufacturing licences. A clean US inspection at another Srikakulam unit does not immunise sister plants from local action. Two-day suspensions signal regulators want process fixes documented quickly rather than issuing long shutdowns. Dr Reddy's assessed no material financial impact, which usually implies alternate capacity or low single-site revenue share, but investors still watch whether repeated state actions cluster at the same campus.",
+      "Why should I care?",
+      "If you hold pharma shares, treat state licence events as plant-specific risk unless management ties them to revenue guidance. Hospital buyers and distributors should confirm which stock keeping units originate from the affected unit before tightening safety stock. Compliance teams at other manufacturers should review how quickly they close observation loops after joint inspections. Watch the outcome of any appeal, follow-up state inspection reports, and whether Dr Reddy's cites the unit in export or domestic filing updates.",
+    ],
+  },
+  {
     slug: "bpcl-andhra-refinery-board-november-2026",
     title: "BPCL's board cleared a ₹1.27 lakh crore refinery in Andhra Pradesh",
     summary:
@@ -16416,6 +16512,10 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "honda-alpha-ev-charging-network-november-2026": "companies",
+  "india-aluminium-scrap-duty-eu-november-2026": "policy",
+  "infosys-h1b-approvals-texas-november-2026": "companies",
+  "dr-reddys-ap-licence-suspension-november-2026": "policy",
   "bpcl-andhra-refinery-board-november-2026": "companies",
   "pnc-infratech-nhai-appeal-november-2026": "policy",
   "india-apparel-bangladesh-order-shift-november-2026": "companies",

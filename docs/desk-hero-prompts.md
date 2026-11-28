@@ -1594,6 +1594,38 @@ No written text, no clutter, no generic stock-market clichés. 16:9 landscape.
 | Subject left | Gold ingot stack (small ticket) |
 | Metaphor right | Diverging stress bars on MSME factory blocks |
 
+### `honda-alpha-ev-charging-network-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | One OEM app reaches rival charging networks |
+| Subject right | Generic EV charging canopy |
+| Metaphor left | Converging network lines into phone motif |
+
+### `india-aluminium-scrap-duty-eu-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Scrap feedstock blocked by tariffs and EU export rules |
+| Subject right | Scrap ingot stack |
+| Metaphor left | Split pipeline with EU gate |
+
+### `infosys-h1b-approvals-texas-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | Visa approvals rebound while state rules shift |
+| Subject right | Abstract services workflow |
+| Metaphor left | Visa stamp blocks + map outline |
+
+### `dr-reddys-ap-licence-suspension-november-2026`
+
+| Field | Value |
+|-------|--------|
+| Core idea | State licence pause after failed compliance responses |
+| Subject right | Bioreactor / lab motif |
+| Metaphor left | Pause gate on production line |
+
 ## File
 
 `public/desk/{slug}.jpg` + `deskHeroImage("{slug}")` in `src/lib/desk-notes.ts`.
