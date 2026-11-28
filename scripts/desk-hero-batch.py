@@ -3282,6 +3282,31 @@ def sp_tata_motors_jlr_downgrade(d: ImageDraw.ImageDraw) -> None:
     d.line([(700, 200), (980, 360)], fill=GOLD, width=3)
 
 
+def sbi_msme_dream_limit(d: ImageDraw.ImageDraw) -> None:
+    d.rounded_rectangle([120, 260, 440, 540], radius=28, fill=BLUE)
+    d.rectangle([160, 320, 400, 480], fill=CREAM)
+    for i, h in enumerate([80, 130, 180, 260]):
+        x = 560 + i * 90
+        d.rectangle([x, 560 - h, x + 65, 560], fill=[RED, YELLOW, BLUE, RED][i])
+    d.polygon([(1000, 200), (1120, 280), (1000, 360)], fill=GOLD)
+
+
+def tata_sons_trusts_court_no_relief(d: ImageDraw.ImageDraw) -> None:
+    d.rectangle([100, 180, 480, 560], fill=BLUE)
+    d.line([(500, 200), (500, 540)], fill=GOLD, width=4)
+    d.rectangle([540, 220, 1150, 300], fill=RED)
+    d.rectangle([540, 340, 1050, 400], fill=YELLOW)
+    d.ellipse([900, 420, 1100, 560], fill=BLUE)
+
+
+def india_urea_import_tender(d: ImageDraw.ImageDraw) -> None:
+    d.polygon([(200, 520), (320, 200), (440, 520)], fill=YELLOW)
+    d.rectangle([640, 200, 1140, 260], fill=BLUE)
+    d.rectangle([640, 300, 1080, 360], fill=RED)
+    d.rectangle([680, 400, 1180, 520], fill=YELLOW)
+    d.line([(180, 520), (1180, 520)], fill=GOLD, width=3)
+
+
 def lupin_fda_sitagliptin(d: ImageDraw.ImageDraw) -> None:
     d.rounded_rectangle([140, 320, 420, 520], radius=30, fill=RED)
     d.line([(280, 340), (280, 500)], fill=CREAM, width=14)
@@ -3305,6 +3330,9 @@ def swiggy_instamart_layoffs(d: ImageDraw.ImageDraw) -> None:
 
 if __name__ == "__main__":
     main()
+    save("sbi-msme-dream-limit-november-2026", sbi_msme_dream_limit)
+    save("tata-sons-trusts-court-no-relief-november-2026", tata_sons_trusts_court_no_relief)
+    save("india-urea-import-tender-november-2026", india_urea_import_tender)
     save("phonepe-ipo-restart-november-2026", phonepe_ipo_restart)
     save("shadowfax-wefast-borzo-acquisition-november-2026", shadowfax_wefast_buy)
     save("wipro-bp-finance-operations-november-2026", wipro_bp_finance_ops)

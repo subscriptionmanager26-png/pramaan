@@ -26,6 +26,78 @@ export function getDeskNote(slug: string) {
  */
 export const deskNotes: ResearchArticle[] = [
   {
+    slug: "sbi-msme-dream-limit-november-2026",
+    title: "SBI will raise its digital small-business loan cap to ₹50 crore",
+    summary:
+      "State Bank of India told reporters on 27 November 2026 that its MSME Dream platform will lift the per-borrower ceiling from ₹5 crore to about ₹10 crore by 30 November and toward ₹50 crore across branches by March 2027, while keeping gross bad loans on the programme below 0.50%.",
+    category: "industry",
+    companyOrSector: "Banking / MSME credit",
+    publishedAt: "2026-11-28T11:30:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("sbi-msme-dream-limit-november-2026"),
+    keyTakeaways: [
+      "MSME Dream launched in December 2023 and has sanctioned roughly ₹2.25 lakh crore through digital underwriting, according to the bank official quoted by PTI.",
+      "The first step raises the cap to ₹10 crore by end-November 2026 before the wider ₹50 crore rollout completes by March 2027.",
+      "SBI said gross NPAs on MSME Dream sit below 0.50%, against more than 1.50% for its overall MSME book.",
+    ],
+    body: [
+      "What's going on here?",
+      "Large banks still win MSME share when they can size loans without sending every file through a branch committee for weeks. State Bank of India rolled out MSME Dream in December 2023 as a fully digital path for micro, small and medium enterprises to apply and get assessed. On 27 November 2026 a senior bank official told PTI the lender will expand how much each borrower can draw: the ceiling moves from ₹5 crore today to about ₹10 crore by 30 November 2026, then up to ₹50 crore by March 2027 across its branch network. The official said roughly ₹2.25 lakh crore has already been sanctioned on the platform since launch. The Economic Survey 2025-26 cited MSMEs at about 31% of GDP and nearly half of exports, so the limit change is aimed at firms that outgrow five-crore tickets but still want quick digital turnaround.",
+      "What does this mean?",
+      "A higher cap lets SBI keep mid-sized manufacturers, exporters and distributors on one workflow instead of pushing them to consortium loans or rival private banks once they cross the old ₹5 crore guardrail. The bank still markets in-principle approval within 30 to 45 minutes and disbursement in about a week, which matters when working-capital needs spike ahead of festivals or import shipments. Credit quality is the constraint: management highlighted MSME Dream gross NPAs below 0.50% versus above 1.50% for the wider MSME portfolio, suggesting the data-led model screens better than legacy branch files. Rivals such as HDFC Bank, ICICI Bank and NBFCs already chase larger ticket MSME credit; SBI's move signals it will not cede that slice without a fight.",
+      "Why should I care?",
+      "If you run a growing factory or trading house, compare whether your next capex or inventory line fits the expanded MSME Dream limits before negotiating with a private lender. Chartered accountants should refresh eligibility worksheets because digital footprints and GST data still drive scoring. Other state-run banks may echo the cap if SBI's asset quality holds. Watch November branch circulars for the ₹10 crore step, March 2027 completion updates, quarterly MSME NPA disclosures, and whether RBI's tight liquidity stance changes pricing on floating-rate MSME Dream lines.",
+    ],
+  },
+  {
+    slug: "tata-sons-trusts-court-no-relief-november-2026",
+    title: "Bombay High Court let Tata Sons hold its 30 November board meeting",
+    summary:
+      "Justice Abhay Ahuja declined interim orders on 27 November 2026 that would have stalled Tata Sons' scheduled 30 November session, telling the Tata charitable trusts any board outcome stays subject to final court adjudication while Tata Sons filed caveats in the High Court and Supreme Court.",
+    category: "industry",
+    companyOrSector: "Tata group governance",
+    publishedAt: "2026-11-28T10:00:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("tata-sons-trusts-court-no-relief-november-2026"),
+    keyTakeaways: [
+      "Sir Dorabji Tata Trust and R.D. Tata Trust challenged N Chandrasekaran's September reappointment, arguing Article 121 blocks a casting vote when their two nominee directors split.",
+      "The court said the 30 November meeting may proceed on schedule but that resolutions passed there would remain subject to later final orders; the next hearing is set for 21 January 2027.",
+      "Tata Sons filed caveats so no ex-parte order can be passed on appeals without hearing the company first, according to exchange headlines on 28 November.",
+    ],
+    body: [
+      "What's going on here?",
+      "Governance fights at India's largest conglomerate often hinge on whether a board can meet while litigation is pending. The Sir Dorabji Tata Trust and R.D. Tata Trust sued in Bombay High Court over N Chandrasekaran's September 2026 reappointment as executive chairman of Tata Sons, saying trust nominee Noel Tata's no vote and fellow nominee Venu Srinivasan's yes vote should have blocked chair Harish Manwani from using a casting vote under Article 121 of the articles. On 27 November 2026 Justice Abhay Ahuja heard interim arguments and declined to freeze the company's calendar. Reporting from the hearing quotes the court telling the trusts that the 30 November board may go ahead as planned while any decisions remain subject to final orders later. The judge listed the matter again on 21 January 2027 and gave Tata Sons time to file replies. Headlines on 28 November said Tata Sons also lodged caveats in the High Court and Supreme Court so challenges to the 27 November order cannot be decided without hearing the company.",
+      "What does this mean?",
+      "A caveat does not settle who wins on Article 121, but it reduces surprise injunction risk before the next trust maneuver. Chandrasekaran can therefore chair the 30 November session, yet every resolution passed there carries a legal asterisk until the court rules, which keeps lenders and minority investors cautious. Lawyers for both sides debated whether trust nominees hold a veto or a majority rule, cited the 2021 Tata-Mistry Supreme Court language on trust-appointed directors, and argued over Charity Commissioner consent under Maharashtra public trust law. The trusts are also seeking damages; Tata Sons counsel Harish Salve portrayed the deadlock as self-inflicted by trust appointments. The procedural win for management is calendar certainty; the substantive fight shifts to affidavits over the winter.",
+      "Why should I care?",
+      "If you hold listed Tata operating companies, expect headline noise without immediate operating changes, but watch whether the 30 November board touches dividends, capital calls or Tata Sons listing timelines. Banks with group exposure will parse caveat filings for wording on Chandrasekaran's authority. Employees awaiting year-end approvals should assume meetings proceed but signatures may face later review if courts intervene. Track January 21 hearing dates, trust replies on Article 121, any Supreme Court motion against the interim posture, and Tata Sons disclosures after the 30 November session.",
+    ],
+  },
+  {
+    slug: "india-urea-import-tender-november-2026",
+    title: "Delhi opened a urea import tender ahead of the next sowing season",
+    summary:
+      "National Fertilizers issued a 27 November 2026 import tender on behalf of the fertiliser ministry, asking suppliers to load urea at foreign ports by 31 January 2027 and submit bids by 8 December 2026, as rabi planting keeps nutrient demand high.",
+    category: "industry",
+    companyOrSector: "Fertilisers / farm policy",
+    publishedAt: "2026-11-28T09:45:00+05:30",
+    readMinutes: 2,
+    image: deskHeroImage("india-urea-import-tender-november-2026"),
+    keyTakeaways: [
+      "The Department of Fertilizers notice invites bids with preference for the earliest arrivals into India, a standard tool when domestic plants and pipelines need topping up before peak application.",
+      "Shipment loading at origin must finish by 31 January 2027 under the tender terms reported on 27 November.",
+      "Urea remains the most subsidised nutrient in India; imports are booked through central PSUs when local production and stocks fall short of seasonal drawdown.",
+    ],
+    body: [
+      "What's going on here?",
+      "Indian farmers apply urea heavily during the rabi season, and the government keeps retail bags cheap by reimbursing companies for the difference between import or production cost and the subsidised shelf price. When stocks tighten, New Delhi routes purchases through public-sector marketers rather than letting the open market spike. On 27 November 2026 National Fertilizers published a tender on behalf of the Department of Fertilizers seeking imported urea, with bids due on 8 December 2026. The notice calls for loading at foreign ports to be completed by 31 January 2027 and favours offers that can reach Indian ports soonest. The move lands as state agencies watch West Asia energy disruptions, domestic gas costs and uneven monsoon recovery that influence how quickly local plants can refill pipelines.",
+      "What does this mean?",
+      "An import tender is a supply signal, not an instant price cut at the village cooperative. Freight rates, currency moves and Gulf gas benchmarks still set the landed cost Delhi will subsidise away. Early-arrival preference pushes traders to line up vessels now so bags reach hinterland depots before late-winter top dressing. Listed names such as National Fertilizers, Chambal Fertilisers and Rashtriya Chemicals and Fertilizers follow these awards because they handle logistics and subsidy settlements even when molecules are imported. Failure to land cargoes on time would show up later as stock alerts in Punjab, Maharashtra or Uttar Pradesh mandis.",
+      "Why should I care?",
+      "If you farm or advise farmer producer organisations, plan rabi top dressing assuming government stocks are being topped up, but keep receipts in case local shortages appear despite the tender. Agri-input dealers should track December bid results and February discharge ports to schedule truck dispatches. Investors in fertiliser PSUs should separate import-margin accounting from domestic production spreads. Watch bid opening on 8 December 2026, awarded quantities and ports, weekly government urea stock reports, and any parallel moves on nano or complex fertilisers that shift farmer application patterns.",
+    ],
+  },
+  {
     slug: "sp-tata-motors-jlr-downgrade-november-2026",
     title: "S&P cut Tata Motors Passenger Vehicles after Jaguar Land Rover's cash burn worsened",
     summary:
@@ -16248,6 +16320,9 @@ export const deskNotes: ResearchArticle[] = [
 ];
 
 const deskTopics: Record<string, NewsItem["topic"]> = {
+  "sbi-msme-dream-limit-november-2026": "policy",
+  "tata-sons-trusts-court-no-relief-november-2026": "policy",
+  "india-urea-import-tender-november-2026": "policy",
   "sp-tata-motors-jlr-downgrade-november-2026": "companies",
   "lupin-fda-sitagliptin-november-2026": "companies",
   "adani-group-airline-capital-november-2026": "policy",
